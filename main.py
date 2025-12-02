@@ -1,7 +1,8 @@
 # main.py
 import os
 import json
-from typing import TypedDict, List, Dict, Literal
+from pathlib import Path
+from typing import TypedDict, List, Dict, Literal, Optional
 from uuid import uuid4
 
 import boto3
@@ -10,13 +11,14 @@ from langgraph.graph import StateGraph, START, END
 from langgraph.checkpoint.memory import MemorySaver
 
 # ----------------- Config & AWS client -----------------
+
 load_dotenv()  # loads .env if present
 
 AWS_REGION = os.getenv("AWS_REGION", "us-west-2")
 MODEL_ID = os.getenv("BEDROCK_MODEL_ID", "anthropic.claude-3-5-sonnet-20240620-v1:0")
 AWS_PROFILE = os.getenv("AWS_PROFILE")  # e.g., "tb-aws" (optional)
 
-# Create a Bedrock client (uses named profile if provided)
+# Bedrock client
 if AWS_PROFILE:
     session = boto3.Session(profile_name=AWS_PROFILE, region_name=AWS_REGION)
     bedrock = session.client("bedrock-runtime", region_name=AWS_REGION)
@@ -56,104 +58,200 @@ def bedrock_chat(
     return text.strip()
 
 
-# ----------------- DBT micro-coach prompts -----------------
-PROMPTS: Dict[str, str] = {
-    "mindfulness": (
-        "You are a brief DBT Mindfulness coach. Keep replies ~6–8 sentences. "
-        "Offer one in-the-moment grounding skill and a 60-second practice prompt."
-    ),
-    "distress": (
-        "You are a brief DBT Distress Tolerance coach. Give 1–2 immediate skills "
-        "(TIP, STOP, self-soothe, ACCEPTS). Focus on safety and short, actionable steps."
-    ),
-    "emotion": (
-        "You are a brief DBT Emotion Regulation coach. Help name the emotion, check facts, "
-        "propose opposite action, and one small experiment for the next hour."
-    ),
-    "interpersonal": (
-        "You are a brief DBT Interpersonal Effectiveness coach. Help craft a short "
-        "DEAR MAN or GIVE script. Provide one example sentence and a boundary variant."
-    ),
-}
+# ----------------- Prompt loading -----------------
 
-AgentKey = Literal["mindfulness", "distress", "emotion", "interpersonal"]
+BASE_DIR = Path(__file__).parent
+PROMPTS_DIR = BASE_DIR / "prompts"
 
 
-# ----------------- LangGraph state & nodes -----------------
+def load_prompt(name: str) -> str:
+    """Load a prompt text file from prompts/ by stem name."""
+    path = PROMPTS_DIR / f"{name}.txt"
+    try:
+        return path.read_text(encoding="utf-8")
+    except FileNotFoundError:
+        # Fail loudly but in a way that's easy to debug
+        raise RuntimeError(f"Missing prompt file: {path}")
+
+
+# System prompts (files you will create in prompts/)
+SAFETY_SYSTEM_PROMPT = load_prompt("safety_classifier")
+CRISIS_SYSTEM_PROMPT = load_prompt("crisis_response")
+OK_SYSTEM_PROMPT = load_prompt("ok_response")
+
+# ----------------- State definition -----------------
+
+RiskLevel = Literal["high", "ok"]
+
+
 class State(TypedDict, total=False):
-    messages: List[Dict[str, str]]  # [{"role": "...", "content": "..."}]
-    route: AgentKey                 # set by router
+    # Full conversation so far
+    messages: List[Dict[str, str]]
+    # Safety routing
+    risk_level: RiskLevel          # "high" or "ok"
+    # For future routing (FAQ vs DBT etc.)
+    path: Optional[str]            # "crisis" | "normal" | later: "faq", "dbt", ...
 
 
-def router(state: State) -> AgentKey:
-    """Naive keyword router that picks a DBT micro-coach."""
-    text = state["messages"][-1]["content"].lower()
+# ----------------- Safety: rules + LLM -----------------
 
-    if any(k in text for k in ["panic", "crisis", "overwhelmed", "urge", "unsafe", "shut down", "self-harm", "self harm"]):
-        state["route"] = "distress"
-        return "distress"
+CRISIS_KEYWORDS = [
+    # English
+    "kill myself",
+    "killing myself",
+    "end my life",
+    "suicide",
+    "suicidal",
+    "take my life",
+    "don't want to live",
+    "dont want to live",
+    "hurt myself",
+    "self-harm",
+    "self harm",
+    # Spanish
+    "no quiero vivir",
+    "matarme",
+    "hacerme daño",
+]
 
-    if any(k in text for k in ["argument", "ask", "boundary", "conflict", "conversation", "negotiate", "script"]):
-        state["route"] = "interpersonal"
-        return "interpersonal"
 
-    if any(k in text for k in ["sad", "angry", "anger", "fear", "anxious", "guilt", "ashamed", "emotion", "feel"]):
-        state["route"] = "emotion"
-        return "emotion"
-
-    state["route"] = "mindfulness"
-    return "mindfulness"
+def rule_based_high_risk(text: str) -> bool:
+    """Hard-rule check for obvious crisis phrases."""
+    t = text.lower()
+    return any(kw in t for kw in CRISIS_KEYWORDS)
 
 
-def make_agent_node(domain: AgentKey):
-    """Creates a node that calls Bedrock with the domain-specific system prompt."""
-    def node(state: State) -> State:
-        sys_prompt = PROMPTS[domain]
-        msgs = [{"role": "system", "content": sys_prompt}] + state["messages"]
-        reply = bedrock_chat(msgs, max_tokens=220, temperature=0.2)
-        state["messages"].append({"role": "assistant", "content": reply})
+def safety_node(state: State) -> State:
+    """
+    Hybrid safety gate:
+      1) If clear crisis keywords → high risk.
+      2) Else, LLM safety classifier → 'high' or 'ok'.
+    """
+    if not state.get("messages"):
+        state["risk_level"] = "ok"
         return state
-    return node
 
+    last_msg = state["messages"][-1]["content"]
+
+    # 1) Rule-based layer
+    if rule_based_high_risk(last_msg):
+        state["risk_level"] = "high"
+        return state
+
+    # 2) LLM classifier for subtler cases
+    msgs = [
+        {"role": "system", "content": SAFETY_SYSTEM_PROMPT},
+        {"role": "user", "content": last_msg},
+    ]
+    verdict = bedrock_chat(msgs, max_tokens=3, temperature=0.0).strip().lower()
+
+    if "high" in verdict:
+        state["risk_level"] = "high"
+    else:
+        state["risk_level"] = "ok"
+
+    return state
+
+
+def safety_branch(state: State) -> str:
+    """
+    Conditional router after safety_node.
+    Returns the name of the next node: 'crisis' or 'normal'.
+    """
+    level: RiskLevel = state.get("risk_level", "ok")
+    return "crisis" if level == "high" else "normal"
+
+
+# ----------------- Ingress & response nodes -----------------
+
+def ingress_node(state: State) -> State:
+    """
+    Ingress node.
+    For now this is a no-op that could later:
+      - enforce global response rules,
+      - normalize messages, language detection, etc.
+    """
+    # You could add things like: trim history, tag turn_id, etc.
+    return state
+
+
+def crisis_node(state: State) -> State:
+    """
+    Crisis responder.
+    Uses CRISIS_SYSTEM_PROMPT and the last user message.
+    """
+    last_msg = state["messages"][-1]["content"]
+    msgs = [
+        {"role": "system", "content": CRISIS_SYSTEM_PROMPT},
+        {"role": "user", "content": last_msg},
+    ]
+    reply = bedrock_chat(msgs, max_tokens=260, temperature=0.2)
+    state["messages"].append({"role": "assistant", "content": reply})
+    state["path"] = "crisis"
+    return state
+
+
+def normal_node(state: State) -> State:
+    """
+    Non-crisis responder for this MVP.
+
+    Currently: uses OK_SYSTEM_PROMPT as a simple supportive assistant.
+    Later: this node can become your 'router' to FAQ vs DBT skills paths.
+    """
+    last_msg = state["messages"][-1]["content"]
+    msgs = [
+        {"role": "system", "content": OK_SYSTEM_PROMPT},
+        {"role": "user", "content": last_msg},
+    ]
+    reply = bedrock_chat(msgs, max_tokens=260, temperature=0.2)
+    state["messages"].append({"role": "assistant", "content": reply})
+    state["path"] = "normal"
+    return state
+
+
+# ----------------- Build LangGraph graph -----------------
 
 def build_graph():
     g = StateGraph(State)
 
-    # Add four agent nodes
-    g.add_node("mindfulness", make_agent_node("mindfulness"))
-    g.add_node("distress", make_agent_node("distress"))
-    g.add_node("emotion", make_agent_node("emotion"))
-    g.add_node("interpersonal", make_agent_node("interpersonal"))
+    # Nodes
+    g.add_node("ingress", ingress_node)
+    g.add_node("safety", safety_node)
+    g.add_node("crisis", crisis_node)
+    g.add_node("normal", normal_node)
 
-    # Route from START → one of the agent nodes using the router function
+    # Edges
+    g.add_edge(START, "ingress")
+    g.add_edge("ingress", "safety")
+
+    # Conditional: crisis vs normal
     g.add_conditional_edges(
-        START,
-        router,
+        "safety",
+        safety_branch,
         {
-            "mindfulness": "mindfulness",
-            "distress": "distress",
-            "emotion": "emotion",
-            "interpersonal": "interpersonal",
+            "crisis": "crisis",
+            "normal": "normal",
         },
     )
 
-    # Each agent ends the flow
-    for n in ("mindfulness", "distress", "emotion", "interpersonal"):
-        g.add_edge(n, END)
+    # Both end the flow
+    g.add_edge("crisis", END)
+    g.add_edge("normal", END)
 
-    # Use MemorySaver (requires a thread_id when invoking)
+    # MemorySaver so we can use persistent threads later if we want
     return g.compile(checkpointer=MemorySaver())
 
 
 graph = build_graph()
 
-# A stable thread id for the CLI session (so MemorySaver is happy)
+# Stable thread id for the CLI session (for MemorySaver)
 THREAD_ID = os.getenv("THREAD_ID", f"cli-{uuid4().hex[:8]}")
 
 
 # ----------------- Simple REPL -----------------
-BANNER = """DBT Helper Bot (LangGraph + AWS Bedrock)
-Routes: mindfulness | distress | emotion | interpersonal
+
+BANNER = """DBT / TB Helper Bot (LangGraph + AWS Bedrock)
+Flow: START → ingress → safety → (crisis | normal) → END
 Type 'quit' to exit.
 """
 
@@ -161,22 +259,33 @@ Type 'quit' to exit.
 def main():
     print(f"[config] region={AWS_REGION}, model={MODEL_ID}, profile={AWS_PROFILE or 'default'}, thread_id={THREAD_ID}")
     print(BANNER)
+
     state: State = {"messages": []}
+
     while True:
         try:
             user = input("you: ").strip()
         except (EOFError, KeyboardInterrupt):
             print("\nbye.")
             return
+
         if user.lower() in {"q", "quit", "exit"}:
             print("bye.")
             return
         if not user:
             continue
+
         state["messages"].append({"role": "user", "content": user})
-        # Pass a thread_id so the MemorySaver checkpointer works
-        final = graph.invoke(state, config={"configurable": {"thread_id": THREAD_ID}})
-        print("\nbot:", final["messages"][-1]["content"], "\n")
+
+        final = graph.invoke(
+            state,
+            config={"configurable": {"thread_id": THREAD_ID}},
+        )
+        reply = final["messages"][-1]["content"]
+        print("\nbot:", reply, "\n")
+
+        # Update local state with the returned one, in case nodes mutated it
+        state = final
 
 
 if __name__ == "__main__":

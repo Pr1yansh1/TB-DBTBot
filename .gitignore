@@ -1,0 +1,25 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+# Environment & secrets
+.env
+*.env
+
+# uv / Python
+.venv/
+__pycache__/
+.pytype/
+.pytest_cache/
+*.pyc
+
+# macOS & OS cruft
+.DS_Store
+Thumbs.db
+
