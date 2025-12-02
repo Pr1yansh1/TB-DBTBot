@@ -38,7 +38,17 @@ class State(TypedDict, total=False):
 
 
 def ingress_node(state: State) -> State:
-    """Placeholder for any preprocessing / normalization."""
+    """Preprocess / normalize, and inject global system prompt once."""
+    messages = state.get("messages", [])
+
+    # Only prepend if we have a global prompt AND we haven't already added
+    # a system message at the top of the conversation.
+    global_prompt = PROMPTS.get("global_system_prompt")
+    if global_prompt:
+        if not messages or messages[0].get("role") != "system":
+            messages = [{"role": "system", "content": global_prompt}] + messages
+
+    state["messages"] = messages
     return state
 
 
