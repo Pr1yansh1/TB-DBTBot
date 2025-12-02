@@ -8,7 +8,6 @@ from app.state import ConversationState
 
 graph = build_graph()
 
-
 BANNER = """TB DBT Helper Bot (LangGraph + AWS Bedrock)
 Paths: crisis | faq | dbt | psycho
 Type 'quit' to exit.

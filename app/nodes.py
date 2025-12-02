@@ -18,6 +18,11 @@ from .prompts import (
 from .keywords import (
     SAFETY_CRISIS_PHRASES,
     SAFETY_INTENSIFIERS,
+    SAFETY_PASSIVE_PHRASES,
+    SAFETY_ACTIVE_PHRASES,
+    SAFETY_BEHAVIOR_PHRASES,
+    SAFETY_MEANS_PHRASES,
+    SAFETY_TIME_URGENCY_PHRASES,
     FAQ_KEYWORDS,
     DBT_KEYWORDS,
 )
@@ -48,79 +53,247 @@ def ingress_node(state: ConversationState) -> ConversationState:
 
 # ---------- Safety gate ----------
 
-def _check_crisis_keywords(text: str) -> bool:
-    """
-    Simple keyword-based heuristic for acute risk.
-    - Direct crisis phrases
-    - Combination of high-risk terms + intensifiers
-    """
-    t = text.lower()
-    if any(phrase in t for phrase in SAFETY_CRISIS_PHRASES):
-        return True
+_RISK_ORDER = ["none", "low", "moderate", "high", "imminent"]
+_RISK_RANK = {lvl: i for i, lvl in enumerate(_RISK_ORDER)}
 
-    if SAFETY_INTENSIFIERS:
-        # If we have intensifiers configured, check for co-occurrence
-        has_intensifier = any(word in t for word in SAFETY_INTENSIFIERS)
-        has_risky_term = any(word in t for word in ["die", "kill myself", "hurt myself", "self-harm"])
-        if has_intensifier and has_risky_term:
-            return True
 
-    return False
+def _max_risk_level(a: str, b: str) -> str:
+    """Return the more severe of two textual risk levels."""
+    a_norm = (a or "none").lower()
+    b_norm = (b or "none").lower()
+    return a_norm if _RISK_RANK.get(a_norm, 0) >= _RISK_RANK.get(b_norm, 0) else b_norm
+
+
+def _keyword_suicide_screen(text: str) -> Dict[str, Any]:
+    """
+    Keyword-based screen, inspired by:
+      - Linguistic features review (intensifiers, pronouns, death refs, etc.)
+      - C-SSRS distinctions between passive vs active ideation + behavior
+      - PHQ-9 item 9 (thoughts of being better off dead or self-harm)
+
+    It distinguishes:
+      ideation: "none" | "passive" | "active"
+      behavior: "none" | "self_harm_or_attempt"
+      timeframe: "unspecified" | "imminent"
+      risk_level: "none" | "low" | "moderate" | "high" | "imminent"
+    """
+    t = (text or "").lower()
+    flags: List[str] = []
+
+    ideation = "none"
+    behavior = "none"
+    timeframe = "unspecified"
+    risk_level = "low"  # default for “no obvious risk language”
+    keyword_hit = False
+
+    if not t.strip():
+        return {
+            "keyword_hit": False,
+            "risk_level": "none",
+            "ideation": "none",
+            "behavior": "none",
+            "timeframe": "unspecified",
+            "flags": [],
+        }
+
+    # Passive ideation (“better off dead”, “don’t want to be here”)
+    if SAFETY_PASSIVE_PHRASES and any(p in t for p in SAFETY_PASSIVE_PHRASES):
+        ideation = "passive"
+        flags.append("kw_passive_ideation")
+        keyword_hit = True
+
+    # Active ideation (“kill myself”, “end my life”, etc.)
+    if SAFETY_ACTIVE_PHRASES and any(p in t for p in SAFETY_ACTIVE_PHRASES):
+        ideation = "active"
+        flags.append("kw_active_ideation")
+        keyword_hit = True
+
+    # Explicit behavior / attempts (“cut last night”, “overdosed”, etc.)
+    if SAFETY_BEHAVIOR_PHRASES and any(p in t for p in SAFETY_BEHAVIOR_PHRASES):
+        behavior = "self_harm_or_attempt"
+        flags.append("kw_behavior")
+        keyword_hit = True
+
+    # Mentions of means / preparation
+    has_means = bool(
+        SAFETY_MEANS_PHRASES and any(p in t for p in SAFETY_MEANS_PHRASES)
+    )
+    if has_means:
+        flags.append("kw_means_access")
+        keyword_hit = True
+
+    # Time-urgency / imminence (“right now”, “tonight”, etc.)
+    has_urgency = bool(
+        SAFETY_TIME_URGENCY_PHRASES and any(p in t for p in SAFETY_TIME_URGENCY_PHRASES)
+    )
+    if has_urgency:
+        timeframe = "imminent"
+        flags.append("kw_time_urgency")
+        keyword_hit = True
+
+    # Explicit crisis phrases (“I am going to kill myself now”, etc.)
+    if SAFETY_CRISIS_PHRASES and any(p in t for p in SAFETY_CRISIS_PHRASES):
+        flags.append("kw_explicit_crisis_phrase")
+        keyword_hit = True
+        if ideation == "none":
+            ideation = "active"
+
+    # Intensifiers & superlatives around risk language
+    has_intensifier = bool(
+        SAFETY_INTENSIFIERS and any(p in t for p in SAFETY_INTENSIFIERS)
+    )
+    if has_intensifier:
+        flags.append("kw_intensifier")
+        keyword_hit = True
+
+    # Derive risk level:
+    # - Any behavior ⇒ high
+    # - Active ideation ⇒ high
+    # - Passive ideation ⇒ moderate
+    # - Active + (intensifier or urgency or means or explicit crisis) ⇒ imminent
+    if behavior != "none":
+        risk_level = "high"
+    elif ideation == "active":
+        risk_level = "high"
+    elif ideation == "passive":
+        risk_level = "moderate"
+    else:
+        risk_level = "low" if keyword_hit else "none"
+
+    if ideation == "active" and (has_intensifier or has_urgency or has_means or "kw_explicit_crisis_phrase" in flags):
+        risk_level = "imminent"
+
+    return {
+        "keyword_hit": keyword_hit,
+        "risk_level": risk_level,
+        "ideation": ideation,
+        "behavior": behavior,
+        "timeframe": timeframe,
+        "flags": flags,
+    }
 
 
 def safety_node(state: ConversationState) -> ConversationState:
     """
     Classify safety level for the latest user message using:
-      1) Keyword heuristic
-      2) LLM classifier (JSON output)
+      1) Keyword-based heuristics (review + C-SSRS-inspired categories)
+      2) LLM classifier (JSON output) using SAFETY_SYSTEM_PROMPT
+
+    Expected (ideal) LLM JSON format (you can enforce this in the prompt):
+    {
+      "risk_level": "none|low|moderate|high|imminent",
+      "ideation": "none|passive|active_no_plan|active_with_plan|active_with_intent",
+      "behavior": "none|self_harm_no_suicidal_intent|self_harm_with_intent|suicide_attempt",
+      "timeframe": "none|lifetime|past_year|past_month|past_48h|imminent",
+      "reason": "...",
+      "flags": ["phq9_item9_positive", "cssrs_passive", ...]
+    }
+
+    But we also remain backward compatible with a simpler:
+    {"level": "high|low", "reason": "...", "flags": [...]}
     """
     text = _latest_user_text(state)
-    keyword_hit = _check_crisis_keywords(text)
 
-    # LLM classification
+    # --- 1) Keyword-based heuristics ---
+    kw = _keyword_suicide_screen(text)
+    kw_level = kw.get("risk_level", "none")
+
+    # --- 2) LLM classification ---
     messages = [
         {"role": "system", "content": SAFETY_SYSTEM_PROMPT},
         {"role": "user", "content": text},
     ]
     raw = bedrock_chat(messages, max_tokens=220, temperature=0.0)
 
-    level = "low"
-    flags: List[str] = []
-    reason = "no_reason"
+    llm_level = "none"
+    llm_ideation = "none"
+    llm_behavior = "none"
+    llm_timeframe = "unspecified"
+    llm_reason = "no_reason"
+    llm_flags: List[str] = []
     parse_error: str | None = None
 
     try:
         data = json.loads(raw)
         if isinstance(data, dict):
-            level = str(data.get("level", "low")).lower()
-            reason = str(data.get("reason", "") or "no_reason")
-            if isinstance(data.get("flags"), list):
-                flags = [str(f) for f in data["flags"]]
+            # Prefer 'risk_level', fall back to 'level'
+            llm_level = str(
+                data.get("risk_level", data.get("level", "none"))
+            ).lower()
+
+            llm_ideation = str(
+                data.get("ideation", data.get("ideation_type", "none"))
+            ).lower()
+
+            llm_behavior = str(
+                data.get("behavior", data.get("behavior_type", "none"))
+            ).lower()
+
+            llm_timeframe = str(
+                data.get("timeframe", data.get("time_window", "unspecified"))
+            ).lower()
+
+            llm_reason = str(data.get("reason", "") or "no_reason")
+
+            flags_val = data.get("flags")
+            if isinstance(flags_val, list):
+                llm_flags = [str(f) for f in flags_val]
     except Exception as e:  # noqa: BLE001
         parse_error = f"{type(e).__name__}: {e}"
-        # Fall back to keyword + conservative default
 
+    # --- Combine keyword and LLM signals conservatively ---
+    # If parsing failed, fall back to keywords + “low” (or higher) risk.
     if parse_error:
-        if keyword_hit:
-            level = "high"
-            reason = f"fallback_parse_error_and_keyword_hit: {parse_error}"
-        else:
-            level = "low"
-            reason = f"fallback_parse_error: {parse_error}"
+        combined_level = _max_risk_level(kw_level, "low")
+        combined_reason = f"fallback_parse_error: {parse_error}"
+    else:
+        combined_level = _max_risk_level(kw_level, llm_level)
+        combined_reason = llm_reason
 
-    is_crisis = keyword_hit or (level == "high")
+    # For backwards compatibility, map "none" → "low" in the simple 'level' field
+    level_for_state = combined_level if combined_level != "none" else "low"
+
+    # Crisis routing threshold:
+    # - high or imminent combined level
+    # - OR keyword behavior mentions (attempt / self-harm)
+    # - OR explicit crisis / imminent timeframe
+    is_crisis = False
+    if _RISK_RANK.get(combined_level, 0) >= _RISK_RANK["high"]:
+        is_crisis = True
+    if kw.get("behavior") != "none":
+        is_crisis = True
+    if kw.get("timeframe") == "imminent":
+        is_crisis = True
+    if "kw_explicit_crisis_phrase" in kw.get("flags", []):
+        is_crisis = True
+
+    # Merge flags
+    all_flags = list({*kw.get("flags", []), *llm_flags})
 
     safety_info: Dict[str, Any] = {
-        "level": level,
+        # Backwards-compatible fields:
+        "level": level_for_state,
         "is_crisis": is_crisis,
-        "reason": reason,
-        "flags": flags,
-        "keyword_hit": keyword_hit,
+        "reason": combined_reason,
+        "flags": all_flags,
+        "keyword_hit": bool(kw.get("keyword_hit")),
         "raw_classifier_output": raw,
+        # Richer, research-aligned structure:
+        "risk_level": combined_level,
+        "keyword_assessment": kw,
+        "classifier": {
+            "risk_level": llm_level,
+            "ideation": llm_ideation,
+            "behavior": llm_behavior,
+            "timeframe": llm_timeframe,
+            "reason": llm_reason,
+            "flags": llm_flags,
+            "parse_error": parse_error,
+        },
     }
 
     state["safety"] = safety_info
-    # For debugging
+
     meta = state.get("meta") or {}
     meta["safety_seen"] = True
     state["meta"] = meta
@@ -139,6 +312,7 @@ def safety_route(state: ConversationState) -> str:
     if safety.get("is_crisis"):
         state["route"] = "crisis"
         return "crisis"
+    state["route"] = "non_crisis"
     return "non_crisis"
 
 
