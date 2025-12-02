@@ -1,0 +1,89 @@
+[
+  {
+    "id": "general_facts",
+    "question": "What are some general facts about tuberculosis (TB)?",
+    "answer": "GENERAL FACTS ABOUT TB\n\n• Tuberculosis, or TB for short, is one of the world’s leading infectious disease killers and continues to be a major global health challenge.\n• About one quarter of the world’s population is infected with TB (also called latent or dormant TB).\n• About 10.8 million people each year get active TB disease, and about 1.5 million die each year.\n• Anyone can get TB.\n• TB is an infection, most commonly of the lungs, caused by the bacterium Mycobacterium tuberculosis.\n• TB is spread through the air from person to person when someone with active TB in their lungs coughs, speaks, or sneezes.\n• TB bacteria can stay in the air for several hours in some environments, especially indoors or in poorly ventilated spaces.\n• TB is treatable with antibiotics when taken correctly.\n• There are multi-drug-resistant strains of TB that are resistant to one or more of the drugs and are called drug-resistant or multi-drug-resistant TB. Treatment for these infections is typically longer and more difficult.\n• Not taking the full course of treatment can lead to the development of drug resistance, so adherence to antibiotic therapy is very important.",
+    "tags": [
+      "general",
+      "what is tb",
+      "facts",
+      "latent tb",
+      "active tb",
+      "drug resistant tb"
+    ]
+  },
+  {
+    "id": "signs_symptoms",
+    "question": "What are the common signs and symptoms of active TB disease?",
+    "answer": "SIGNS AND SYMPTOMS OF ACTIVE TB\n\nCommon symptoms of active TB disease can include:\n• Cough lasting three weeks or more\n• Chest pain\n• Coughing up blood or sputum (phlegm from deep in the lungs)\n• Weakness or fatigue\n• Weight loss (particularly without a known cause)\n• Loss of appetite\n• Chills\n• Fever\n• Night sweats\n\nNot everyone has all of these symptoms. Some symptoms can also be caused by other illnesses, so testing is important if TB is suspected.",
+    "tags": [
+      "symptoms",
+      "signs",
+      "cough",
+      "weight loss",
+      "night sweats",
+      "fever"
+    ]
+  },
+  {
+    "id": "diagnosis_overview",
+    "question": "How do healthcare providers test and diagnose TB?",
+    "answer": "DIAGNOSIS\n\nPeople at increased risk of having TB, or who are suspected of having TB infection, usually undergo testing in two steps.\n\nSTEP ONE: SKIN TEST OR BLOOD TESTING\n• TB Skin Test:\n  – A healthcare provider puts some testing material under the skin using a small needle.\n  – The person returns to the healthcare provider in two to three days to see if there is a reaction.\n  – If a reaction is present, further testing is needed to determine if there is active TB disease.\n• TB Blood Test (also called an interferon-gamma release assay or IGRA):\n  – Often used for people who have ever been vaccinated for TB.\n  – The blood test measures how the immune system reacts to the germs that cause TB.\n  – If the blood test is positive, further testing is needed to confirm active TB infection.\n\nSTEP TWO: CHEST X-RAY AND SPUTUM TESTING\n• A chest X-ray can show TB infection in the lungs.\n• Sputum (phlegm) from a deep cough is tested for the presence of TB bacteria.\n• A positive sputum test confirms active TB disease and that the person is currently able to spread the bacteria to others.",
+    "tags": [
+      "diagnosis",
+      "testing",
+      "skin test",
+      "blood test",
+      "x-ray",
+      "sputum"
+    ]
+  },
+  {
+    "id": "treatment_overview",
+    "question": "How is TB treated and how long does treatment usually take?",
+    "answer": "TREATMENT OVERVIEW\n\n• TB treatment can take four, six, or nine months depending on the treatment plan.\n• Treatment typically involves taking multiple antibiotics.\n• Sputum (phlegm) testing is done during treatment to make sure that the antibiotics are working and that the person is no longer infectious. This testing is done at different intervals depending on the treatment plan decided by the healthcare provider.\n• Commonly used TB drugs include:\n  – Isoniazid\n  – Rifampin\n  – Ethambutol\n  – Moxifloxacin\n  – Rifapentine\n  – Pyrazinamide\n• Treatment may be done by directly observed therapy (DOT), on your own, or a combination of both.\n• In DOT, a healthcare worker meets with you every day or several times a week in person or virtually (through a smartphone, tablet, or computer), watches you take your TB medications, and monitors your progress.\n\nKey safety points:\n• Keep all medicine out of reach of children.\n• Take all TB medicines exactly as prescribed.\n• Don’t miss any doses and do not stop treatment early.\n• It can be very dangerous to stop taking your medicines or not to take them regularly, because this can lead to drug-resistant TB.",
+    "tags": [
+      "treatment",
+      "duration",
+      "medications",
+      "dot",
+      "antibiotics"
+    ]
+  },
+  {
+    "id": "treatment_side_effects",
+    "question": "What are common and serious side effects of TB medicines?",
+    "answer": "TB MEDICINES: COMMON AND SERIOUS SIDE EFFECTS\n\nCommon side effects (usually mild; continue taking your medication but tell your provider):\n• Skin rash\n• Upset stomach\n• Nausea\n• Rifampin or rifapentine can cause some body fluids to turn an orange color. This is normal and harmless and usually fades over time. Affected body fluids can include:\n  – Urine (pee)\n  – Saliva\n  – Tears\n  – Sweat\n  – Breastmilk\n• Because of this discoloration, your healthcare provider might recommend avoiding soft contact lenses to prevent permanent staining.\n\nSerious side effects (call your healthcare provider immediately):\n• Signs of liver injury\n• Abdominal pain\n• Nausea and vomiting that is severe or persistent\n• Skin and eyes turning yellow (jaundice)\n• Dizziness or lightheadedness\n• Loss of appetite\n• Flu-like symptoms\n• Tingling or numbness in your hands or feet\n\nIf you are taking isoniazid, you may experience tingling or numbness in your hands and feet. Your healthcare provider may add vitamin B6 to your treatment plan to help prevent this.",
+    "tags": [
+      "side effects",
+      "rifampin",
+      "orange urine",
+      "liver injury",
+      "numbness"
+    ]
+  },
+  {
+    "id": "treatment_adherence_tips",
+    "question": "Do you have practical tips to help me remember to take my TB medicines?",
+    "answer": "PRACTICAL TIPS FOR TAKING TB MEDICINES\n\nMany people take TB medicines on their own (sometimes alongside directly observed therapy). These strategies can help with adherence:\n• Take your pills at the same time every day (for example, before breakfast, during a regular coffee break, or after brushing your teeth).\n• Set an alarm for the time that you need to take your medicine.\n• Write yourself a reminder note and put it where you can see it (for example, on your bathroom mirror or refrigerator).\n• Ask a family member or friend to remind you to take your pills.\n• Mark each day on a calendar as you take your medicine. You can also write down any symptoms you notice on the calendar.\n• Put your pills in a weekly pill dispenser that you keep in a consistent place, such as by your bed, in your bag, or in your pocket.\n\nIf you miss doses or are having trouble taking your medication, contact your TB care team so they can help you problem-solve.",
+    "tags": [
+      "adherence",
+      "remember pills",
+      "tips",
+      "missed doses"
+    ]
+  },
+  {
+    "id": "prevention_overview",
+    "question": "How can TB be prevented from spreading to others?",
+    "answer": "PREVENTION\n\n• TB is more likely to spread indoors or in places with poor air circulation (for example, a closed vehicle). Outdoor areas or areas with good air circulation have a lower risk of spreading the bacteria through the air.\n• People with active TB disease are most likely to spread TB germs to people they spend time with every day (such as family members or close contacts).\n• Completing TB treatment exactly as prescribed by your medical provider is one of the most important ways to prevent further spread of TB to loved ones or the community.\n• Local TB programs may also recommend specific infection-control steps (for example, wearing a mask in certain settings until you are no longer infectious). Follow the guidance from your TB care team.",
+    "tags": [
+      "prevention",
+      "spread",
+      "contagious",
+      "family",
+      "contacts"
+    ]
+  }
+]
+

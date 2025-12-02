@@ -1,0 +1,174 @@
+{
+  "mindfulness": [
+    {
+      "id": "mindful_breathing_1min",
+      "name": "Mindful breathing (1–2 minutes)",
+      "module": "mindfulness",
+      "description": "A brief breathing exercise to notice the present moment and give your mind a small rest from worries.",
+      "when_to_use": "Use when you feel anxious, restless, or caught in racing thoughts and want a short pause without needing any special tools.",
+      "steps": [
+        "Sit or stand in a comfortable position. If you like, gently lower your gaze or close your eyes.",
+        "Notice where you feel your breath most clearly (at your nose, chest, or belly).",
+        "Inhale slowly through your nose for a count that feels comfortable. Exhale slowly through your mouth or nose.",
+        "As thoughts or worries appear, silently say to yourself \"thinking\" and gently bring your attention back to the feeling of the breath.",
+        "Continue for about 1–2 minutes, or a few breaths if that is all you can manage right now."
+      ]
+    },
+    {
+      "id": "observe_5_senses",
+      "name": "5-senses observing",
+      "module": "mindfulness",
+      "description": "A short grounding practice using sight, sound, touch, smell, and taste to bring attention back to the present.",
+      "when_to_use": "Use when you feel spaced out, stuck in worry, or disconnected from your surroundings.",
+      "steps": [
+        "Look around and name (silently or out loud) 5 things you can see.",
+        "Notice 4 things you can feel through touch (your clothes, chair, floor, air on your skin).",
+        "Listen for 3 sounds, near or far.",
+        "Notice 2 things you can smell, or remember a smell you like if none are obvious.",
+        "Notice 1 thing you can taste right now, or briefly sip water and pay attention to the taste.",
+        "If your mind wanders, gently bring it back to the sense you are using."
+      ]
+    },
+    {
+      "id": "wise_mind_checkin",
+      "name": "Wise mind check-in",
+      "module": "mindfulness",
+      "description": "A brief pause to notice emotional and logical views, then choose a balanced next step.",
+      "when_to_use": "Use when you are unsure what to do or feel pulled between strong feelings and practical concerns.",
+      "steps": [
+        "Take a slow breath and notice what your \"emotional mind\" is saying (for example, \"I can’t take this\" or \"I want to quit\").",
+        "Then notice what your \"reasonable mind\" is saying (for example, facts about the situation, your responsibilities, or options).",
+        "Imagine a third voice, your \"wise mind\", that cares about both reality and your wellbeing. Ask: \"Given both sides, what is one small next step that is safe and kind to myself?\"",
+        "Choose one small action from that wise mind answer, even if it is very simple (for example, drink water, send one message, write one sentence)."
+      ]
+    }
+  ],
+  "distress": [
+    {
+      "id": "tipp_cool_and_breathe",
+      "name": "Cool down and breathe (TIPP-inspired)",
+      "module": "distress",
+      "description": "A short crisis skill using temperature and breathing to lower intense emotions enough to think more clearly.",
+      "when_to_use": "Use when your emotions feel very strong (for example, 7/10 or higher) and you are afraid you might act on an urge you will regret.",
+      "steps": [
+        "If it is safe and possible, change your body temperature briefly (for example, splash cool water on your face, hold something cool, or step to a cooler space).",
+        "Sit down and place your feet on the floor.",
+        "Inhale gently through your nose for about 4 seconds, then exhale a bit more slowly for about 6 seconds.",
+        "Repeat this paced breathing for 1–3 minutes, focusing on the feeling of air leaving your body.",
+        "Remind yourself: \"My goal right now is not to solve everything. My goal is to ride out this wave without making things worse.\""
+      ]
+    },
+    {
+      "id": "grounding_describe_room",
+      "name": "Describe the room grounding",
+      "module": "distress",
+      "description": "A grounding skill to pull attention away from intense thoughts by describing your surroundings in detail.",
+      "when_to_use": "Use when you feel overwhelmed, panicky, or stuck in upsetting images or thoughts.",
+      "steps": [
+        "Look around and slowly describe your surroundings as if you were explaining them to someone on the phone who cannot see them.",
+        "Include neutral details: colors, shapes, objects, light, and textures.",
+        "If intense thoughts interrupt, say to yourself \"I notice that thought\" and gently return to describing the room.",
+        "Continue for 1–3 minutes, or until your emotions feel a little less sharp.",
+        "Afterward, notice if your distress has gone down even a small amount (for example, from 9/10 to 7/10)."
+      ]
+    },
+    {
+      "id": "brief_distraction_activity",
+      "name": "10-minute healthy distraction",
+      "module": "distress",
+      "description": "A short activity to give your mind and body a break from overwhelming feelings without making the situation worse.",
+      "when_to_use": "Use when you feel like you might say or do something impulsive and need a safe delay.",
+      "steps": [
+        "Choose a simple, safe activity that does not create new problems (for example, a short walk, washing dishes, a brief stretch, listening to one song, or doing a small household task).",
+        "Set a timer for 10 minutes.",
+        "During the activity, try to put your full attention on what you are doing (movements, sounds, textures).",
+        "When the timer ends, pause and check in with yourself: \"Has my urge changed even a little?\"",
+        "Decide your next step after this check-in. You can repeat another 10-minute block if it is still helpful and safe."
+      ]
+    }
+  ],
+  "emotion": [
+    {
+      "id": "name_and_rate_emotion",
+      "name": "Name and rate the emotion",
+      "module": "emotion",
+      "description": "A quick skill to identify what you are feeling and how strong it is, which is the first step in emotion regulation.",
+      "when_to_use": "Use when you feel overwhelmed, numb, or confused about what you are feeling.",
+      "steps": [
+        "Pause and ask yourself: \"What am I feeling right now?\" Choose one or two words (for example, sad, angry, scared, ashamed, guilty, lonely).",
+        "Rate the intensity from 0 to 10, where 0 is none and 10 is the strongest you can imagine.",
+        "Notice where you feel this emotion in your body (for example, chest, stomach, throat).",
+        "Write down or say to yourself: \"Right now I feel [emotion] at about [number]/10.\"",
+        "Remind yourself that emotions rise and fall like waves, and this wave will also change over time."
+      ]
+    },
+    {
+      "id": "check_the_facts_simple",
+      "name": "Check the facts (simple)",
+      "module": "emotion",
+      "description": "A brief check to see whether your emotion fits the facts of the situation, or if it is partly based on assumptions.",
+      "when_to_use": "Use when your emotion feels strong and you are not sure if it fully matches what is happening.",
+      "steps": [
+        "Describe the situation in one or two factual sentences, as if a camera were recording it.",
+        "List what you know for sure versus what you are guessing (for example, \"I know they cancelled our meeting\" vs. \"I am guessing they hate me\").",
+        "Ask yourself: \"If a friend told me this story, would I think their emotion was the same intensity I feel now?\"",
+        "If the emotion does not fully fit the facts, consider gently lowering your intensity or trying an opposite-action step (for example, staying in contact instead of withdrawing completely)."
+      ]
+    },
+    {
+      "id": "opposite_action_small_step",
+      "name": "Opposite action (small step)",
+      "module": "emotion",
+      "description": "A tiny behavior that goes in the opposite direction of an emotion that is stronger than the situation requires.",
+      "when_to_use": "Use when you notice that an emotion is pushing you toward an action that may not help (for example, hiding, stopping all treatment, or attacking someone).",
+      "steps": [
+        "Identify the emotion and the action urge it brings (for example, \"I feel ashamed and want to hide from everyone\").",
+        "Ask if the emotion and urge fully fit the facts. If not, choose one very small opposite action that is safe (for example, sending one supportive message, attending one appointment, making brief eye contact).",
+        "Do the small opposite action gently, not harshly. You do not need to go to the extreme opposite.",
+        "Afterward, notice how your emotion changed, even if only slightly."
+      ]
+    }
+  ],
+  "interpersonal": [
+    {
+      "id": "internal_boundary_statement",
+      "name": "Internal boundary statement",
+      "module": "interpersonal",
+      "description": "A private sentence you tell yourself to protect your self-respect when others are critical or unfair.",
+      "when_to_use": "Use when someone’s words or behavior feel shaming, blaming, or dismissive, and you cannot or do not want to confront them directly.",
+      "steps": [
+        "Notice the critical or unfair message you are receiving (for example, \"You are weak\" or \"This is your fault\").",
+        "Silently answer with an internal boundary statement such as: \"Their reaction is about their fears or beliefs, not my worth,\" or \"I know the truth about my effort and professionalism.\"",
+        "Repeat this statement to yourself when you feel their words start to stick.",
+        "If helpful, pair it with a small physical gesture (for example, a slow breath, standing a bit taller) to reinforce the boundary."
+      ]
+    },
+    {
+      "id": "simple_limit_setting_script",
+      "name": "Simple limit-setting script",
+      "module": "interpersonal",
+      "description": "A short script to say that a topic or way of speaking is not okay for you, without inviting a long argument.",
+      "when_to_use": "Use when it feels reasonably safe to speak up and you want to set a small limit with someone close to you or at work.",
+      "steps": [
+        "Begin with a neutral statement if you want (for example, \"I’m focusing on my recovery and doing what my care team recommends\").",
+        "State your limit in simple language (for example, \"I’d rather not discuss this in that way\" or \"I don’t want to be spoken to like that\").",
+        "If they push back, repeat your main sentence once or twice without adding new arguments (a \"broken record\").",
+        "If the conversation becomes unsafe or too heated, end it if possible (for example, \"I’m going to step away now\"), and return your attention to your own wellbeing."
+      ]
+    },
+    {
+      "id": "identify_one_ally",
+      "name": "Identify and lean on one ally",
+      "module": "interpersonal",
+      "description": "A relationship-building skill that focuses on finding one person who can offer some support, instead of trying to change everyone.",
+      "when_to_use": "Use when you feel isolated, judged, or gossiped about and changing the whole group feels impossible.",
+      "steps": [
+        "Think about people in your life (at home, work, clinic, or community). Identify one person who feels neutral or somewhat supportive, even if they are not perfect.",
+        "Ask yourself: \"What is one small way this person could support me?\" (for example, listening for a few minutes, sitting with you at lunch, going to an appointment with you).",
+        "Plan a simple, specific request (for example, \"Could we talk for 10 minutes after work?\" or \"Would you sit with me in the waiting room?\").",
+        "Make the request in a calm moment. If they cannot do it, remember that asking was a step toward connection, and you can consider another person or another time."
+      ]
+    }
+  ]
+}
+
