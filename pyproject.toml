@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "boto3>=1.34",
+    "chainlit>=2.9.2",
     "langgraph>=0.2.33",
     "python-dotenv>=1.0",
 ]
