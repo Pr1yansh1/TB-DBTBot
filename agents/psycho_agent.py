@@ -10,9 +10,18 @@ PROMPTS = load_system_prompts()
 def psycho_agent_node(state: Dict) -> Dict:
     """
     Misc / psychoeducation agent.
+
+    IMPORTANT:
+    - Do not mutate state["messages"].
+    - Return only the delta assistant message.
     """
-    messages: List[Dict[str, str]] = state["messages"]
-    user_text = messages[-1]["content"]
+    messages: List[Dict[str, str]] = state.get("messages", [])
+
+    user_text = ""
+    for m in reversed(messages):
+        if m.get("role") == "user":
+            user_text = m.get("content", "")
+            break
 
     system_prompt = PROMPTS["psychoed_system"]
     user_template = PROMPTS["psychoed_user_template"]
@@ -27,10 +36,9 @@ def psycho_agent_node(state: Dict) -> Dict:
         temperature=0.25,
     )
 
-    messages.append({"role": "assistant", "content": reply})
     return {
         **state,
-        "messages": messages,
+        "messages": [{"role": "assistant", "content": reply}],
         "route": "psychoed",
     }
 

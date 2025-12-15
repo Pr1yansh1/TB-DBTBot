@@ -108,9 +108,29 @@ def safety_gate_node(state: Dict) -> Dict:
     - Route:
         * 'crisis' if LLM/heuristics say passive/active/uncertain
         * 'ok' otherwise.
+
+    IMPORTANT (LangGraph best practice):
+    - Do not mutate state["messages"].
+    - Read messages, compute labels, return only metadata updates.
     """
-    messages: List[Dict[str, str]] = state["messages"]
-    user_text = messages[-1]["content"]
+    messages: List[Dict[str, str]] = state.get("messages", [])
+
+    # Find latest user message robustly
+    user_text = ""
+    for m in reversed(messages):
+        if m.get("role") == "user":
+            user_text = m.get("content", "")
+            break
+
+    # If somehow no user text, default safe
+    if not user_text.strip():
+        return {
+            **state,
+            "risk_level": "none",
+            "risk_triggers": [],
+            "has_protective": False,
+            "safety_route": "ok",
+        }
 
     heuristic = _heuristic_assess(user_text)
     level: RiskLevel = heuristic["risk_level"]
@@ -121,17 +141,13 @@ def safety_gate_node(state: Dict) -> Dict:
     if level == "uncertain":
         llm_result = _llm_assess(user_text)
         level = llm_result["risk_level"]  # may still be 'uncertain'
-        # merge triggers conservatively
         if llm_result.get("triggers"):
             triggers = list(set(triggers + llm_result["triggers"]))
         has_protective = has_protective or llm_result.get("has_protective", False)
         llm_info = {"safety_llm_raw": llm_result.get("llm_raw")}
 
     safety_route: Literal["ok", "crisis"]
-    if level in ("active_no_plan", "active_with_plan", "passive", "uncertain"):
-        safety_route = "crisis"
-    else:
-        safety_route = "ok"
+    safety_route = "crisis" if level in ("active_no_plan", "active_with_plan", "passive", "uncertain") else "ok"
 
     return {
         **state,

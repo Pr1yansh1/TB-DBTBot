@@ -10,6 +10,11 @@ DomainRoute = Literal["faq", "dbt", "psychoed"]
 KW = load_routing_keywords()
 PROMPTS = load_system_prompts()
 
+def _latest_user_text(messages: list[dict[str, str]]) -> str:
+    for m in reversed(messages or []):
+        if m.get("role") == "user":
+            return m.get("content", "") or ""
+    return ""
 
 def _heuristic_route(text: str) -> DomainRoute | None:
     t = text.lower()
@@ -68,7 +73,16 @@ def domain_router_node(state: Dict) -> Dict:
     - First attempt: keyword-based routing (cheap).
     - On tie/low-signal: LLM-based router.
     """
-    text = state["messages"][-1]["content"]
+    messages = state.get("messages", [])
+    text = _latest_user_text(messages)
+
+    if not text.strip():
+        return {
+            **state,
+            "route": "psychoed",
+            "route_source": "empty_input_default",
+        }
+
     heuristic = _heuristic_route(text)
     if heuristic is not None:
         route: DomainRoute = heuristic

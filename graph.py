@@ -1,10 +1,11 @@
 # graph.py
 import os
-from typing import Dict, List, TypedDict, Literal
+from typing import Dict, List, TypedDict, Literal, Annotated 
 from uuid import uuid4
 
 from langgraph.graph import StateGraph, START, END
 from langgraph.checkpoint.memory import MemorySaver
+from langgraph.graph.message import add_messages
 
 from safety import safety_gate_node
 from routing import domain_router_node
@@ -18,7 +19,7 @@ PROMPTS = load_system_prompts()
 
 class State(TypedDict, total=False):
     # conversation
-    messages: List[Dict[str, str]]
+    messages: Annotated[List[Dict[str, str]], add_messages]
 
     # safety
     risk_level: str
@@ -36,35 +37,27 @@ class State(TypedDict, total=False):
     kb_question: str
     dbt_mode: str
 
-
 def ingress_node(state: State) -> State:
-    """Preprocess / normalize, and inject global system prompt once."""
-    messages = state.get("messages", [])
-
-    # Only prepend if we have a global prompt AND we haven't already added
-    # a system message at the top of the conversation.
-    global_prompt = PROMPTS.get("global_system_prompt")
-    if global_prompt:
-        if not messages or messages[0].get("role") != "system":
-            messages = [{"role": "system", "content": global_prompt}] + messages
-
-    state["messages"] = messages
+    """
+    Best practice: don't inject a system message into state['messages'].
+    Keep messages as user/assistant turns only; system prompts belong in each LLM call.
+    """
     return state
-
 
 def crisis_node(state: State) -> State:
     """
     Crisis node: deterministic crisis message from system_prompts.json.
     No LLM call here to avoid hallucinated safety advice.
     """
-    messages = state["messages"]
     template = PROMPTS["crisis_message_template"]
-    # We allow templates to interpolate risk level if desired
     msg_text = template.format(risk_level=state.get("risk_level", "uncertain"))
-    messages.append({"role": "assistant", "content": msg_text})
-    state["messages"] = messages
-    state["route"] = "crisis"
-    return state
+
+    # Return ONLY the new assistant message; add_messages will append it.
+    return {
+        **state,
+        "messages": [{"role": "assistant", "content": msg_text}],
+        "route": "crisis",
+    }
 
 
 def safety_branch(state: State) -> Literal["crisis", "router"]:

@@ -1,0 +1,7 @@
+
+
+1. fix single turn/memory issue with langgraph 
+2.flexible routing 
+3. debug any issues that would cause weird bheaviour 
+
+

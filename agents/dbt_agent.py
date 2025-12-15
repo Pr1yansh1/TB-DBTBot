@@ -54,18 +54,25 @@ def _llm_dbt_mode(text: str) -> DBTMode:
         mode = "mindfulness"
     return mode  # type: ignore[return-value]
 
-
 def dbt_agent_node(state: Dict) -> Dict:
     """
     DBT agent:
 
-    - Selects a DBT mode (mindfulness / distress / emotion / interpersonal)
-      via heuristic + LLM fallback.
-    - Feeds DBT skills mini-KB into a mode-specific system prompt.
-    - Uses a single Bedrock call to generate the micro-coach response.
+    - Selects a DBT mode via heuristic + LLM fallback.
+    - Injects DBT skills mini-KB into mode-specific prompt.
+    - Generates micro-coach response.
+
+    IMPORTANT:
+    - Do not mutate state["messages"].
+    - Return only the delta assistant message.
     """
-    messages: List[Dict[str, str]] = state["messages"]
-    user_text = messages[-1]["content"]
+    messages: List[Dict[str, str]] = state.get("messages", [])
+
+    user_text = ""
+    for m in reversed(messages):
+        if m.get("role") == "user":
+            user_text = m.get("content", "")
+            break
 
     mode = _heuristic_dbt_mode(user_text) or _llm_dbt_mode(user_text)
 
@@ -73,7 +80,6 @@ def dbt_agent_node(state: Dict) -> Dict:
     system_prompt = dbt_prompts["system_prompt"]
     user_template = dbt_prompts["user_template"]
 
-    # Optional: provide skill snippets for this mode
     skills_for_mode: Any = DBT_SKILLS_KB.get(mode, {})
 
     user_msg = user_template.format(
@@ -90,10 +96,9 @@ def dbt_agent_node(state: Dict) -> Dict:
         temperature=0.2,
     )
 
-    messages.append({"role": "assistant", "content": reply})
     return {
         **state,
-        "messages": messages,
+        "messages": [{"role": "assistant", "content": reply}],
         "route": "dbt",
         "dbt_mode": mode,
     }

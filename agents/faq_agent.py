@@ -40,7 +40,6 @@ def _retrieve_best_faq(user_text: str) -> FAQItem | None:
     # If nothing scores, we treat as no-match and let LLM handle more freely
     return best_item if best_score > 0 else None
 
-
 def faq_agent_node(state: Dict) -> Dict:
     """
     FAQ agent:
@@ -49,9 +48,19 @@ def faq_agent_node(state: Dict) -> Dict:
     - Always uses an LLM to generate the final answer:
         * If KB match exists: LLM rewrites / adapts that answer.
         * Otherwise: LLM answers directly in a cautious FAQ style.
+
+    IMPORTANT (LangGraph best practice):
+    - Do not mutate state["messages"].
+    - Return only the delta message; add_messages will append it.
     """
-    messages: List[Dict[str, str]] = state["messages"]
-    user_text = messages[-1]["content"]
+    messages: List[Dict[str, str]] = state.get("messages", [])
+
+    # Latest user text robustly
+    user_text = ""
+    for m in reversed(messages):
+        if m.get("role") == "user":
+            user_text = m.get("content", "")
+            break
 
     system_prompt = PROMPTS["faq_system"]
     kb_item = _retrieve_best_faq(user_text)
@@ -67,9 +76,7 @@ def faq_agent_node(state: Dict) -> Dict:
             "kb_question": kb_item["question"],
         }
     else:
-        user_prompt = PROMPTS["faq_no_kb_user_template"].format(
-            user_text=user_text
-        )
+        user_prompt = PROMPTS["faq_no_kb_user_template"].format(user_text=user_text)
         kb_meta = {}
 
     reply = bedrock_chat(
@@ -81,10 +88,9 @@ def faq_agent_node(state: Dict) -> Dict:
         temperature=0.2,
     )
 
-    messages.append({"role": "assistant", "content": reply})
     return {
         **state,
-        "messages": messages,
+        "messages": [{"role": "assistant", "content": reply}],
         "route": "faq",
         **kb_meta,
     }
