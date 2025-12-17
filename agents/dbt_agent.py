@@ -2,7 +2,9 @@
 import json
 from typing import Dict, List, Literal, Any
 
-from config import bedrock_chat
+from langchain_core.messages import AnyMessage
+
+from config import bedrock_text
 from resources_loader import load_system_prompts, load_dbt_skills_kb
 
 PROMPTS = load_system_prompts()
@@ -11,11 +13,15 @@ DBT_SKILLS_KB = load_dbt_skills_kb()
 DBTMode = Literal["mindfulness", "distress", "emotion", "interpersonal"]
 
 
+def _last_user_text(messages: list[AnyMessage]) -> str:
+    for m in reversed(messages or []):
+        if getattr(m, "type", None) == "human":
+            return m.content
+    return ""
+
+
 def _heuristic_dbt_mode(text: str) -> DBTMode | None:
     t = text.lower()
-    # These keyword lists should be provided via system_prompts.json if you
-    # want to move them fully out of code; here we just use logical buckets
-    # based on the router keywords you already defined.
     if any(k in t for k in PROMPTS.get("dbt_distress_keywords", [])):
         return "distress"
     if any(k in t for k in PROMPTS.get("dbt_interpersonal_keywords", [])):
@@ -28,22 +34,19 @@ def _heuristic_dbt_mode(text: str) -> DBTMode | None:
 
 
 def _llm_dbt_mode(text: str) -> DBTMode:
-    """
-    Backup LLM classifier for DBT mode.
-    Expected JSON output: {"mode": "mindfulness" | "distress" | ...}
-    """
     system_prompt = PROMPTS["dbt_mode_router_system"]
     user_template = PROMPTS["dbt_mode_router_user_template"]
     user_msg = user_template.format(user_text=text)
 
-    raw = bedrock_chat(
+    raw = bedrock_text(
         [
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": user_msg},
+            {"type": "system", "content": system_prompt},
+            {"type": "human", "content": user_msg},
         ],
         max_tokens=120,
         temperature=0.0,
     )
+
     try:
         parsed: Dict[str, Any] = json.loads(raw)
         mode = parsed.get("mode", "mindfulness")
@@ -54,51 +57,34 @@ def _llm_dbt_mode(text: str) -> DBTMode:
         mode = "mindfulness"
     return mode  # type: ignore[return-value]
 
+
 def dbt_agent_node(state: Dict) -> Dict:
-    """
-    DBT agent:
+    messages: list[AnyMessage] = state.get("messages", [])
+    user_text = _last_user_text(messages)
 
-    - Selects a DBT mode via heuristic + LLM fallback.
-    - Injects DBT skills mini-KB into mode-specific prompt.
-    - Generates micro-coach response.
-
-    IMPORTANT:
-    - Do not mutate state["messages"].
-    - Return only the delta assistant message.
-    """
-    messages: List[Dict[str, str]] = state.get("messages", [])
-
-    user_text = ""
-    for m in reversed(messages):
-        if m.get("role") == "user":
-            user_text = m.get("content", "")
-            break
-
-    mode = _heuristic_dbt_mode(user_text) or _llm_dbt_mode(user_text)
+    mode: DBTMode = _heuristic_dbt_mode(user_text) or _llm_dbt_mode(user_text)
 
     dbt_prompts = PROMPTS["dbt_modes"][mode]
     system_prompt = dbt_prompts["system_prompt"]
     user_template = dbt_prompts["user_template"]
 
-    skills_for_mode: Any = DBT_SKILLS_KB.get(mode, {})
-
+    skills_for_mode: Any = DBT_SKILLS_KB.get(mode, [])
     user_msg = user_template.format(
         user_text=user_text,
         skills_json=json.dumps(skills_for_mode, ensure_ascii=False),
     )
 
-    reply = bedrock_chat(
+    reply = bedrock_text(
         [
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": user_msg},
+            {"type": "system", "content": system_prompt},
+            {"type": "human", "content": user_msg},
         ],
-        max_tokens=260,
+        max_tokens=300,
         temperature=0.2,
     )
 
     return {
-        **state,
-        "messages": [{"role": "assistant", "content": reply}],
+        "messages": [{"type": "ai", "content": reply}],
         "route": "dbt",
         "dbt_mode": mode,
     }

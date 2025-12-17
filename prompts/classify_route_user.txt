@@ -1,0 +1,6 @@
+Latest patient message:
+"""{user_text}"""
+
+Return STRICT JSON only:
+{"safety_risk_level":"none|passive|active_no_plan|active_with_plan|uncertain","safety_triggers":["..."],"has_protective":true|false,"route":"faq|dbt|psychoed"}
+

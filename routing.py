@@ -1,6 +1,8 @@
 # routing.py
 import json
-from typing import Dict, Literal, Any
+from typing import Any, Dict, Literal
+
+from langchain_core.messages import BaseMessage, HumanMessage
 
 from config import bedrock_chat
 from resources_loader import load_routing_keywords, load_system_prompts
@@ -10,14 +12,16 @@ DomainRoute = Literal["faq", "dbt", "psychoed"]
 KW = load_routing_keywords()
 PROMPTS = load_system_prompts()
 
-def _latest_user_text(messages: list[dict[str, str]]) -> str:
+
+def _latest_user_text(messages: list[BaseMessage]) -> str:
     for m in reversed(messages or []):
-        if m.get("role") == "user":
-            return m.get("content", "") or ""
+        if isinstance(m, HumanMessage):
+            return m.content or ""
     return ""
 
+
 def _heuristic_route(text: str) -> DomainRoute | None:
-    t = text.lower()
+    t = (text or "").lower()
 
     def count_hits(words: list[str]) -> int:
         return sum(1 for kw in words if kw in t)
@@ -29,6 +33,7 @@ def _heuristic_route(text: str) -> DomainRoute | None:
     scores = {"faq": faq_hits, "dbt": dbt_hits, "psychoed": psycho_hits}
     best_label = max(scores, key=scores.get)
     best_score = scores[best_label]
+
     # If everything is 0 or ties, we treat as ambiguous
     if best_score == 0 or list(scores.values()).count(best_score) > 1:
         return None
@@ -38,8 +43,6 @@ def _heuristic_route(text: str) -> DomainRoute | None:
 def _llm_route(text: str) -> DomainRoute:
     """
     Backup LLM router used for ambiguous inputs.
-    Prompts from system_prompts.json.
-
     Expected LLM output: JSON with `route` ∈ {"faq","dbt","psychoed"}.
     """
     system_prompt = PROMPTS["domain_router_system"]
@@ -66,14 +69,13 @@ def _llm_route(text: str) -> DomainRoute:
     return route  # type: ignore[return-value]
 
 
-def domain_router_node(state: Dict) -> Dict:
+def domain_router_node(state: Dict[str, Any]) -> Dict[str, Any]:
     """
     Domain router node.
-
     - First attempt: keyword-based routing (cheap).
     - On tie/low-signal: LLM-based router.
     """
-    messages = state.get("messages", [])
+    messages: list[BaseMessage] = state.get("messages", [])
     text = _latest_user_text(messages)
 
     if not text.strip():

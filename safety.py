@@ -2,23 +2,26 @@
 import json
 from typing import Dict, List, Literal, Any
 
-from config import bedrock_chat
+from langchain_core.messages import AnyMessage
+
+from config import bedrock_text
 from resources_loader import load_safety_keywords, load_system_prompts
 
 RiskLevel = Literal["none", "passive", "active_no_plan", "active_with_plan", "uncertain"]
-
 
 KW = load_safety_keywords()
 PROMPTS = load_system_prompts()
 
 
-def _heuristic_assess(text: str) -> Dict[str, Any]:
-    """
-    Rule-based pass inspired by clinical screeners; final labels are *not*
-    diagnoses, just routing hints for the chatbot.
-    """
-    t = text.lower()
+def _last_user_text(messages: list[AnyMessage]) -> str:
+    for m in reversed(messages or []):
+        if getattr(m, "type", None) == "human":
+            return m.content
+    return ""
 
+
+def _heuristic_assess(text: str) -> Dict[str, Any]:
+    t = text.lower()
     crisis_hard = [kw for kw in KW.get("crisis_hard", []) if kw in t]
     passive = [kw for kw in KW.get("passive_ideation", []) if kw in t]
     self_harm = [kw for kw in KW.get("self_harm_non_suicidal", []) if kw in t]
@@ -45,31 +48,21 @@ def _heuristic_assess(text: str) -> Dict[str, Any]:
         triggers.extend(intent)
 
     if (crisis_hard or passive or self_harm) and not intent and not protective:
-        # ambiguous, treat conservatively
         if level == "none":
             level = "uncertain"
 
-    return {
-        "risk_level": level,
-        "triggers": list(set(triggers)),
-        "has_protective": bool(protective),
-    }
+    return {"risk_level": level, "triggers": list(set(triggers)), "has_protective": bool(protective)}
 
 
 def _llm_assess(text: str) -> Dict[str, Any]:
-    """
-    Backup LLM classifier, used when heuristics are ambiguous.
-    Prompts come from `system_prompts.json`.
-    Expected LLM output: a JSON object with at least `risk_level`.
-    """
     system_prompt = PROMPTS["safety_classifier_system"]
     user_template = PROMPTS["safety_classifier_user_template"]
     user_msg = user_template.format(user_text=text)
 
-    raw = bedrock_chat(
+    raw = bedrock_text(
         [
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": user_msg},
+            {"type": "system", "content": system_prompt},
+            {"type": "human", "content": user_msg},
         ],
         max_tokens=200,
         temperature=0.0,
@@ -78,15 +71,8 @@ def _llm_assess(text: str) -> Dict[str, Any]:
     try:
         parsed = json.loads(raw)
     except json.JSONDecodeError:
-        # fall back conservatively if LLM doesn't respond with JSON
-        return {
-            "risk_level": "uncertain",
-            "triggers": [],
-            "has_protective": False,
-            "llm_raw": raw,
-        }
+        return {"risk_level": "uncertain", "triggers": [], "has_protective": False, "llm_raw": raw}
 
-    # normalize result
     level = parsed.get("risk_level", "uncertain")
     if level not in ["none", "passive", "active_no_plan", "active_with_plan", "uncertain"]:
         level = "uncertain"
@@ -100,37 +86,8 @@ def _llm_assess(text: str) -> Dict[str, Any]:
 
 
 def safety_gate_node(state: Dict) -> Dict:
-    """
-    Safety node for LangGraph:
-
-    - Always run heuristic pass.
-    - If heuristic returns 'uncertain', back off to an LLM classifier.
-    - Route:
-        * 'crisis' if LLM/heuristics say passive/active/uncertain
-        * 'ok' otherwise.
-
-    IMPORTANT (LangGraph best practice):
-    - Do not mutate state["messages"].
-    - Read messages, compute labels, return only metadata updates.
-    """
-    messages: List[Dict[str, str]] = state.get("messages", [])
-
-    # Find latest user message robustly
-    user_text = ""
-    for m in reversed(messages):
-        if m.get("role") == "user":
-            user_text = m.get("content", "")
-            break
-
-    # If somehow no user text, default safe
-    if not user_text.strip():
-        return {
-            **state,
-            "risk_level": "none",
-            "risk_triggers": [],
-            "has_protective": False,
-            "safety_route": "ok",
-        }
+    messages = state.get("messages", [])
+    user_text = _last_user_text(messages)
 
     heuristic = _heuristic_assess(user_text)
     level: RiskLevel = heuristic["risk_level"]
@@ -140,17 +97,17 @@ def safety_gate_node(state: Dict) -> Dict:
 
     if level == "uncertain":
         llm_result = _llm_assess(user_text)
-        level = llm_result["risk_level"]  # may still be 'uncertain'
+        level = llm_result["risk_level"]
         if llm_result.get("triggers"):
             triggers = list(set(triggers + llm_result["triggers"]))
         has_protective = has_protective or llm_result.get("has_protective", False)
         llm_info = {"safety_llm_raw": llm_result.get("llm_raw")}
 
-    safety_route: Literal["ok", "crisis"]
-    safety_route = "crisis" if level in ("active_no_plan", "active_with_plan", "passive", "uncertain") else "ok"
+    safety_route: Literal["ok", "crisis"] = (
+        "crisis" if level in ("active_no_plan", "active_with_plan", "passive", "uncertain") else "ok"
+    )
 
     return {
-        **state,
         "risk_level": level,
         "risk_triggers": triggers,
         "has_protective": has_protective,

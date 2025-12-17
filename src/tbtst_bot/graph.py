@@ -1,20 +1,17 @@
-# graph.py
 from __future__ import annotations
 
 import json
 import os
 from uuid import uuid4
-from typing import Any, Dict, List, Literal
+from typing import Any, Dict, List, Literal, Optional
 
-from langchain_core.messages import BaseMessage, HumanMessage
-from langchain_core.tools import tool
+from langchain_core.messages import AIMessage, BaseMessage, HumanMessage, SystemMessage
 
 from langgraph.graph import StateGraph, START, END, MessagesState
 from langgraph.checkpoint.memory import MemorySaver
-from langgraph.prebuilt import create_react_agent
 
-from config import model
-from prompts import load_prompt
+from .config import bedrock_chat
+from .prompts import load_prompt
 
 
 # -------------------------
@@ -22,21 +19,26 @@ from prompts import load_prompt
 # -------------------------
 CLASSIFY_SYSTEM = load_prompt("classify_route.txt")
 CLASSIFY_USER_TMPL = load_prompt("classify_route_user.txt")
-SUPERVISOR_SYSTEM = load_prompt("supervisor_system.txt")
+CRISIS_TEXT = load_prompt("crisis.txt")
+
 FAQ_SYSTEM = load_prompt("faq_system.txt")
 DBT_SYSTEM = load_prompt("dbt_system.txt")
-CRISIS_TEXT = load_prompt("crisis.txt")
 
 
 # -------------------------
 # State
 # -------------------------
+RiskLevel = Literal["none", "passive", "active_no_plan", "active_with_plan", "uncertain"]
+Route = Literal["faq", "dbt"]
+
 class State(MessagesState, total=False):
-    safety_risk_level: str
+    safety_risk_level: RiskLevel
     safety_triggers: List[str]
     has_protective: bool
     safety_route: Literal["ok", "crisis"]
-    suggested_route: Literal["faq", "dbt"]
+    route: Route
+    route_source: str
+    classifier_raw: str
 
 
 # -------------------------
@@ -50,11 +52,16 @@ def _latest_user_text(messages: List[BaseMessage]) -> str:
 
 
 def _safe_fill_user_text(template: str, user_text: str) -> str:
-    # only replace the exact token, avoid .format() brace issues
+    # Avoid Python .format() because template contains JSON braces
     return template.replace("{user_text}", user_text)
 
 
 def _parse_classifier_json(raw: str) -> Dict[str, Any]:
+    """
+    Expected keys (from classify prompt):
+      {"safety_risk_level": "...", "safety_triggers": [...], "has_protective": true/false, "route": "faq|dbt|psychoed"}
+    We map psychoed -> faq (since only faq+dbt specialists exist right now).
+    """
     try:
         data = json.loads(raw)
     except json.JSONDecodeError:
@@ -92,27 +99,13 @@ def _parse_classifier_json(raw: str) -> Dict[str, Any]:
 
 
 # -------------------------
-# Tools
-# -------------------------
-@tool("faq_tool", description="TB information specialist. Use for factual TB questions: symptoms, meds, side effects, contagiousness, testing, treatment timeline.")
-def faq_tool(request: str) -> str:
-    resp = model.invoke([("system", FAQ_SYSTEM), ("user", request)])
-    return resp.content or ""
-
-
-@tool("dbt_tool", description="DBT + emotional support specialist. Use for distress, loneliness, shame, stigma, overwhelm, panic, coping skills. Provide one targeted DBT skill with steps.")
-def dbt_tool(request: str) -> str:
-    resp = model.invoke([("system", DBT_SYSTEM), ("user", request)])
-    return resp.content or ""
-
-
-TOOLS = [faq_tool, dbt_tool]
-
-
-# -------------------------
 # Nodes
 # -------------------------
 def classify_node(state: State) -> Dict[str, Any]:
+    """
+    Single Bedrock call: safety + routing.
+    Returns metadata only (no messages added).
+    """
     user_text = _latest_user_text(state.get("messages", []))
     if not user_text.strip():
         return {
@@ -120,56 +113,82 @@ def classify_node(state: State) -> Dict[str, Any]:
             "safety_triggers": [],
             "has_protective": False,
             "safety_route": "ok",
-            "suggested_route": "faq",
+            "route": "faq",
+            "route_source": "empty_input_default",
+            "classifier_raw": "",
         }
 
     user_prompt = _safe_fill_user_text(CLASSIFY_USER_TMPL, user_text)
 
-    raw = model.invoke([("system", CLASSIFY_SYSTEM), ("user", user_prompt)]).content or ""
-    parsed = _parse_classifier_json(raw)
-
-    risk = parsed["safety_risk_level"]
-    suggested = parsed["route"]
-
-    safety_route: Literal["ok", "crisis"] = (
-        "crisis" if risk in ("passive", "active_no_plan", "active_with_plan", "uncertain") else "ok"
+    raw = bedrock_chat(
+        [
+            SystemMessage(content=CLASSIFY_SYSTEM),
+            HumanMessage(content=user_prompt),
+        ],
+        max_tokens=220,
+        temperature=0.0,
     )
+
+    parsed = _parse_classifier_json(raw)
+    risk: RiskLevel = parsed["safety_risk_level"]
+    route: Route = parsed["route"]
+
+    safety_route: Literal["ok", "crisis"]
+    safety_route = "crisis" if risk in ("passive", "active_no_plan", "active_with_plan", "uncertain") else "ok"
 
     return {
         "safety_risk_level": risk,
         "safety_triggers": parsed["safety_triggers"],
         "has_protective": parsed["has_protective"],
         "safety_route": safety_route,
-        "suggested_route": suggested,  # faq|dbt
+        "route": route,
+        "route_source": "llm",
+        "classifier_raw": raw,
     }
 
 
 def crisis_node(state: State) -> Dict[str, Any]:
-    return {"messages": [{"role": "assistant", "content": CRISIS_TEXT}]}
+    # Static crisis message; no LLM call.
+    return {"messages": [AIMessage(content=CRISIS_TEXT)]}
 
 
-def supervisor_node(state: State) -> Dict[str, Any]:
-    hint = state.get("suggested_route", "faq")
-    route_hint = (
-        "\n\n[Internal hint: classifier suggests "
-        f"'{hint}'. Use it unless the conversation clearly needs the other specialist.]\n"
+def faq_node(state: State) -> Dict[str, Any]:
+    """
+    FAQ specialist.
+    Uses full conversation history (messages state) but injects system prompt only for this call.
+    """
+    messages: List[BaseMessage] = state.get("messages", [])
+    # Keep only human+ai from history, prepend system
+    llm_msgs: List[BaseMessage] = [SystemMessage(content=FAQ_SYSTEM), *messages]
+
+    reply = bedrock_chat(
+        llm_msgs,
+        max_tokens=320,
+        temperature=0.2,
     )
+    return {"messages": [AIMessage(content=reply)]}
 
-    # IMPORTANT: your langgraph version expects `prompt=...`, not `state_modifier=...`
-    agent = create_react_agent(
-        model=model,
-        tools=TOOLS,
-        prompt=SUPERVISOR_SYSTEM + route_hint,
+
+def dbt_node(state: State) -> Dict[str, Any]:
+    """
+    DBT specialist.
+    Uses full conversation history (messages state) but injects system prompt only for this call.
+    """
+    messages: List[BaseMessage] = state.get("messages", [])
+    llm_msgs: List[BaseMessage] = [SystemMessage(content=DBT_SYSTEM), *messages]
+
+    reply = bedrock_chat(
+        llm_msgs,
+        max_tokens=420,
+        temperature=0.25,
     )
-
-    result = agent.invoke({"messages": state.get("messages", [])})
-    last_msg = result["messages"][-1]
-    content = getattr(last_msg, "content", "") or ""
-    return {"messages": [{"role": "assistant", "content": content}]}
+    return {"messages": [AIMessage(content=reply)]}
 
 
-def branch_after_classify(state: State) -> Literal["crisis", "supervisor"]:
-    return "crisis" if state.get("safety_route") == "crisis" else "supervisor"
+def branch_after_classify(state: State) -> Literal["crisis", "faq", "dbt"]:
+    if state.get("safety_route") == "crisis":
+        return "crisis"
+    return state.get("route", "faq")
 
 
 # -------------------------
@@ -179,12 +198,19 @@ def build_graph():
     g = StateGraph(State)
     g.add_node("classify", classify_node)
     g.add_node("crisis", crisis_node)
-    g.add_node("supervisor", supervisor_node)
+    g.add_node("faq", faq_node)
+    g.add_node("dbt", dbt_node)
 
     g.add_edge(START, "classify")
-    g.add_conditional_edges("classify", branch_after_classify, {"crisis": "crisis", "supervisor": "supervisor"})
+    g.add_conditional_edges(
+        "classify",
+        branch_after_classify,
+        {"crisis": "crisis", "faq": "faq", "dbt": "dbt"},
+    )
+
     g.add_edge("crisis", END)
-    g.add_edge("supervisor", END)
+    g.add_edge("faq", END)
+    g.add_edge("dbt", END)
 
     return g.compile(checkpointer=MemorySaver())
 
