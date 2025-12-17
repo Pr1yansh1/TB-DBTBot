@@ -24,6 +24,10 @@ package-dir = {"" = "src"}
 
 [tool.setuptools.packages.find]
 where = ["src"]
+[tool.pytest.ini_options]
+markers = [
+  "integration: calls real Bedrock; costs money; run with RUN_BEDROCK_TESTS=1"
+]
 
 [dependency-groups]
 dev = [
