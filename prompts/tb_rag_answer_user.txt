@@ -1,0 +1,8 @@
+User question:
+{user_text}
+
+Retrieved sources:
+{sources_block}
+
+Return JSON only:
+

@@ -1,78 +1,37 @@
+# config.py
 from __future__ import annotations
 
-import json
 import os
-from typing import Any, Dict, List, Sequence
-
-import boto3
 from dotenv import load_dotenv
-from langchain_core.messages import AIMessage, BaseMessage, HumanMessage, SystemMessage
+from langchain_aws import ChatBedrockConverse
 
 load_dotenv()
 
 AWS_REGION = os.getenv("AWS_REGION", "us-west-2")
 MODEL_ID = os.getenv("BEDROCK_MODEL_ID", "anthropic.claude-3-5-sonnet-20240620-v1:0")
-AWS_PROFILE = os.getenv("AWS_PROFILE")  # optional named profile
+
+# Optional: fine-grained tool streaming on newer Claude models (only if you need it)
+ANTHROPIC_BETA_FINE_GRAINED = os.getenv("ANTHROPIC_BETA_FINE_GRAINED", "").strip()
 
 
-def _bedrock_client():
-    if AWS_PROFILE:
-        session = boto3.Session(profile_name=AWS_PROFILE, region_name=AWS_REGION)
-        return session.client("bedrock-runtime", region_name=AWS_REGION)
-    return boto3.client("bedrock-runtime", region_name=AWS_REGION)
-
-
-client = _bedrock_client()
-
-
-def bedrock_chat(
-    messages: Sequence[BaseMessage],
-    max_tokens: int = 350,
+def get_llm(
+    *,
     temperature: float = 0.2,
-) -> str:
-    """
-    Bedrock Anthropic Messages API call using LangChain BaseMessage objects.
+    max_tokens: int = 512,
+) -> ChatBedrockConverse:
+    additional_fields = None
+    if ANTHROPIC_BETA_FINE_GRAINED:
+        additional_fields = {"anthropic_beta": [ANTHROPIC_BETA_FINE_GRAINED]}
 
-    IMPORTANT:
-    - system prompt must be top-level "system"
-    - messages list must include ONLY roles "user" and "assistant"
-    """
-    system_parts: List[str] = []
-    convo: List[Dict[str, str]] = []
-
-    for m in messages:
-        if isinstance(m, SystemMessage):
-            system_parts.append(m.content or "")
-        elif isinstance(m, HumanMessage):
-            convo.append({"role": "user", "content": m.content or ""})
-        elif isinstance(m, AIMessage):
-            convo.append({"role": "assistant", "content": m.content or ""})
-        else:
-            # fallback: treat unknown as assistant text
-            convo.append({"role": "assistant", "content": getattr(m, "content", str(m))})
-
-    system_text = "\n".join([s for s in system_parts if s.strip()]).strip()
-
-    body: Dict[str, Any] = {
-        "anthropic_version": "bedrock-2023-05-31",
-        "max_tokens": max_tokens,
-        "temperature": temperature,
-        "messages": convo,
-    }
-    if system_text:
-        body["system"] = system_text
-
-    resp = client.invoke_model(
-        modelId=MODEL_ID,
-        accept="application/json",
-        contentType="application/json",
-        body=json.dumps(body),
+    return ChatBedrockConverse(
+        model_id=MODEL_ID,
+        region_name=AWS_REGION,
+        temperature=temperature,
+        max_tokens=max_tokens,
+        additional_model_request_fields=additional_fields,
     )
-    data = json.loads(resp["body"].read())
 
-    out = []
-    for block in data.get("content", []):
-        if block.get("type") == "text":
-            out.append(block.get("text", ""))
-    return "".join(out).strip()
+
+# Convenience default (still safe to override per-node via get_llm(...))
+bedrock_llm = get_llm()
 
