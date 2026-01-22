@@ -1,0 +1,9 @@
+TITLE: FICHA GENERAL 4 — Supuestos del entrenamiento
+MODULE: interpersonal_effectiveness
+SKILL_TAG: FICHA_GENERAL_4_SUPUESTOS_DEL_ENTRENAMIENTO
+SOURCE_PDF: Manual-2023-enumerado-.pdf
+PAGES: 65-66
+CHUNK_ID: 00011-001
+UNIT_ID: 00011
+
+Supuestos del entrenamiento Un supuesto es una creencia que no se puede probar, pero de todos modos aceptamos cumplir.

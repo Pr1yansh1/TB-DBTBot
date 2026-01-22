@@ -1,0 +1,17 @@
+TITLE: FICHA DE TOLERANCIA AL MALESTAR 16 — Descripción general:
+MODULE: distress_tolerance
+SKILL_TAG: FICHA_DE_TOLERANCIA_AL_MALESTAR_16_DESCRIPCION_GENERAL
+SOURCE_PDF: Manual-2023-enumerado-.pdf
+PAGES: 624-624
+CHUNK_ID: 00172-001
+UNIT_ID: 00172
+
+(Hojas de trabajo de tolerancia al malestar 13–18) Descripción general: cuando la crisis es una adicción
+
+1 Abstinencia dialéctica
+
+2 Mente clara Refuerzo comunitario
+
+3 Quemando puentes y construyendo nuevos
+
+4 Rebelión alternativa Negación adaptativa

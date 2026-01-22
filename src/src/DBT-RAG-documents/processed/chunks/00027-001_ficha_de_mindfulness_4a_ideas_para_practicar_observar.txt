@@ -1,0 +1,9 @@
+TITLE: FICHA DE MINDFULNESS 4A — Ideas para practicar observar
+MODULE: mindfulness
+SKILL_TAG: FICHA_DE_MINDFULNESS_4A_IDEAS_PARA_PRACTICAR_OBSERVAR
+SOURCE_PDF: Manual-2023-enumerado-.pdf
+PAGES: 123-132
+CHUNK_ID: 00027-001
+UNIT_ID: 00027
+
+Ideas para practicar observar A través de tus sentidos

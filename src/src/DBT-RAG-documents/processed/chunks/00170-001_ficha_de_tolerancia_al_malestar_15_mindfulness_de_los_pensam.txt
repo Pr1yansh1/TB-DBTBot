@@ -1,0 +1,9 @@
+TITLE: FICHA DE TOLERANCIA AL MALESTAR 15 — Mindfulness de los pensamientos actuales
+MODULE: mindfulness
+SKILL_TAG: FICHA_DE_TOLERANCIA_AL_MALESTAR_15_MINDFULNESS_DE_LOS_PENSAM
+SOURCE_PDF: Manual-2023-enumerado-.pdf
+PAGES: 616-618
+CHUNK_ID: 00170-001
+UNIT_ID: 00170
+
+(Hojas de trabajo de tolerancia al malestar 8, 8a, 12) Mindfulness de los pensamientos actuales

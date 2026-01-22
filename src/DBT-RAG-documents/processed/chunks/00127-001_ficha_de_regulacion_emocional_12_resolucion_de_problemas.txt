@@ -1,0 +1,13 @@
+TITLE: FICHA DE REGULACIÓN EMOCIONAL 12 — Resolución de problemas
+MODULE: emotion_regulation
+SKILL_TAG: FICHA_DE_REGULACION_EMOCIONAL_12_RESOLUCION_DE_PROBLEMAS
+SOURCE_PDF: Manual-2023-enumerado-.pdf
+PAGES: 442-443
+CHUNK_ID: 00127-001
+UNIT_ID: 00127
+
+(Hoja de trabajo de regulación emocional 8) Resolución de problemas
+
+Paso 1. Descubre y describe la situación problemática. Paso 2. Verifica los hechos (todos) para asegurarte de que tienes la situación problemática correcta.
+
+Si tus datos son correctos y la situación es el problema, continúa con el paso 3. Si tus datos no son correctos, regresa y repite el paso 1.

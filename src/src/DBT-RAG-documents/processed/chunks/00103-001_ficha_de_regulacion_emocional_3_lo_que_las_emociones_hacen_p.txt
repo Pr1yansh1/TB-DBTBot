@@ -1,0 +1,9 @@
+TITLE: FICHA DE REGULACIÓN EMOCIONAL 3 — Lo que las emociones hacen por ti
+MODULE: emotion_regulation
+SKILL_TAG: CHECK_THE_FACTS
+SOURCE_PDF: Manual-2023-enumerado-.pdf
+PAGES: 379-381
+CHUNK_ID: 00103-001
+UNIT_ID: 00103
+
+(Hojas de trabajo de regulación emocional 2, 2a-c) Lo que las emociones hacen por ti Las emociones nos motivan (y organizan) para la acción

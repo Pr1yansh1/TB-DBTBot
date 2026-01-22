@@ -1,0 +1,9 @@
+TITLE: FICHA DE TOLERANCIA AL MALESTAR 14A — Practicar media sonrisa y manos dispuestas
+MODULE: emotion_regulation
+SKILL_TAG: FICHA_DE_TOLERANCIA_AL_MALESTAR_14A_PRACTICAR_MEDIA_SONRISA_
+SOURCE_PDF: Manual-2023-enumerado-.pdf
+PAGES: 612-615
+CHUNK_ID: 00169-001
+UNIT_ID: 00169
+
+(Hoja de trabajo de tolerancia al malestar 10) Practicar media sonrisa y manos dispuestas

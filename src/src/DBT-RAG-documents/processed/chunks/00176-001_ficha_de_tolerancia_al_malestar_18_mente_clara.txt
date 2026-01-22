@@ -1,0 +1,9 @@
+TITLE: FICHA DE TOLERANCIA AL MALESTAR 18 — Mente clara
+MODULE: distress_tolerance
+SKILL_TAG: FICHA_DE_TOLERANCIA_AL_MALESTAR_18_MENTE_CLARA
+SOURCE_PDF: Manual-2023-enumerado-.pdf
+PAGES: 633-634
+CHUNK_ID: 00176-001
+UNIT_ID: 00176
+
+(Hoja de trabajo de tolerancia al malestar 15) Mente clara

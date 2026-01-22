@@ -1,0 +1,9 @@
+TITLE: FICHA DE REGULACIÓN EMOCIONAL 5 — Modelo para describir las emociones
+MODULE: mindfulness
+SKILL_TAG: FICHA_DE_REGULACION_EMOCIONAL_5_MODELO_PARA_DESCRIBIR_LAS_EM
+SOURCE_PDF: Manual-2023-enumerado-.pdf
+PAGES: 386-386
+CHUNK_ID: 00119-001
+UNIT_ID: 00119
+
+(Hojas de trabajo de regulación emocional 4, 4a) Modelo para describir las emociones
