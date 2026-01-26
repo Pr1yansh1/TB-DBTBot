@@ -1,9 +1,0 @@
-TITLE: HOJA DE TRABAJO DE MINDFULNESS 7 — Hoha de trabajo de mindfullness 7A
-MODULE: mindfulness
-SKILL_TAG: HOJA_DE_TRABAJO_DE_MINDFULNESS_7_HOHA_DE_TRABAJO_DE_MINDFULL
-SOURCE_PDF: Manual-2023-enumerado-.pdf
-PAGES: 24-24
-CHUNK_ID: 00002-001
-UNIT_ID: 00002
-
-Hoha de trabajo de mindfullness 7A Hoha de trabajo de mindfulness 8

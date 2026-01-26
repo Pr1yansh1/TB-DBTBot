@@ -1,0 +1,2109 @@
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                               1
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+
+Guías de diagnóstico, tratamiento
+y prevención de la tuberculosis
+HOSPITAL MUÑIZ - INSTITUTO VACCAREZZA
+
+
+
+Coordinadores:
+Domingo Palmero - Jefe de División Tisioneumonología, Hospital de Infecciosas Dr. Francisco J. Muñiz (HIFJM)
+Graciela Cragnolini de Casado - Directora del Instituto de Tisioneumonología Prof. Dr. Raúl Vaccarezza UBA (ITRV)
+Jorge Castagnino - Jefe de Unidad Tisioneumonología (HIFJM)
+Rosa M. Musella - Jefe de Unidad Tisioneumonología (HIFJM)
+
+
+
+Autores:
+Omar Aidar - Médico de Planta Tisioneumonología (HIFJM)
+Marta Ambroggi - Jefa de Departamento Bacteriología de la Tuberculosis (ITRV)
+Arévalo Jave José - Médico de planta del Servicio de Cirugía (HIFJM)
+Maria C. Brian - Programa de Control de Tuberculosis, Gobierno de la Ciudad de Buenos Aires
+Ethel Canedo - Servicio de Kinesiología (HIFJM)
+Mónica Cufré - Médico de Planta Tisioneumonología (HIFJM)
+Verónica Curras - Farmacéutica de planta (HIFJM)
+Pablo González Montaner - Médico de Planta Tisioneumonología (HIFJM)
+Silvia Krugliansky - Jefa de División Farmacia (HIFJM)
+Nilda Leidi - Jefa del Servicio de Kinesiología (HIFJM)
+Eduardo Moraña - Médico de planta del Servicio de Cirugía (HIFJM)
+Graciela Pizzariello - Jefa del Departamento Medicina (HIFJM)
+José L. Reggiani - Laboratorio Fisiopatología Respiratoria (HIFJM)
+Christian Rizzo - Jefe del Departamento Radiología (ITRV)
+Marisa Vescovo - Jefa del Departamento Internación (ITRV)
+
+
+
+
+Trabajo elaborado en el marco del
+Curso 2010 de Actualizaciones para la Calidad de la gestión Clínica.
+
+Directores:
+Dra. Margarita Belda Montero
+Dr. Domingo Palmero
+
+
+
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                                               2
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+
+Indice
+
+Introducción
+                                                                    4
+Diagnóstico clínico
+                                                                    5
+Diagnóstico de laboratorio
+                                                                    6
+Diagnóstico por imágenes
+                                                                    9
+Tratamiento de la tuberculosis fármacosensible
+                                                                    11
+Tratamiento de la tuberculosis fármacorresistente
+                                                                    17
+Tratamiento de la tuberculosis pediátrica
+                                                                    19
+Tratamiento quirúrgico                                              22
+Tratamiento kinésico en tuberculosis
+                                                                    23
+Dispensa de fármacos antituberculosis
+                                                                    25
+Criterios de internación en tuberculosis
+                                                                    27
+Prevención
+                                                                    28
+Control de infecciones
+                                                                    33
+Tuberculosis cutánea
+                                                                    35
+Bibliografía
+                                                                    39
+
+
+
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                3
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+
+Introducción
+
+
+
+
+Argentina es un país de mediana incidencia de tuberculosis (TB), con un informe oficial de 10.452 nue-
+vos casos en 2008, que representa una tasa de incidencia de 26,3/100.000 habitantes1. La red de TB de
+la Ciudad de Buenos Aires con una incidencia superior a la media del país (36,5/100.000) diagnosticó
+en 2009 1.095 casos de los cuales el 55% corresponde a personas nacidas en el extranjero, fundamen-
+talmente Bolivia, Perú y Paraguay2.
+
+El Hospital de Infecciosas Dr. Francisco Javier Muñiz (Ministerio de Salud, Gobierno de la Ciudad de
+Buenos Aires) y el Instituto de Tisineumonología Prof. Dr. Raúl Vaccarezza (Universidad de Buenos
+Aires) informaron en el mismo período 723 casos, cifra solamente superada en el país por las notifica-
+ciones de la Provincia de Buenos Aires, constituyendo el centro de referencia más importante en TB
+de la República Argentina. Un grupo de expertos en TB ha consensuado y redactado estas Guías, que
+reflejan la experiencia de ambas Instituciones en el diagnóstico y tratamiento de la enfermedad.
+
+
+
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                               4
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+
+Diagnóstico Clínico
+Tuberculosis pulmonar:
+La localización pulmonar de la TB es la más frecuente pero puede observarse en cualquier órgano.
+El cuadro clínico es de comienzo insidioso y naturaleza crónica. Esto dificulta el diagnóstico precoz.
+El síndrome de impregnación bacilar está constituido por síntomas generales como astenia, adina-
+mia, hiporexia, pérdida de peso, febrícula vespertina y sudoración nocturna asociada a signo sintoma-
+tología respiratoria (tos, expectoración, disnea). En aproximadamente 20 % de los casos los síntomas
+constitucionales son el único hallazgo de enfermedad3, 4.
+
+Si bien el paciente puede presentar disnea, dolor torácico, hemoptisis, la tos es por mucho el síntoma
+pulmonar más frecuente; al inicio puede ser seca y a medida que avanza la enfermedad se transforma
+en productiva, con expectoración mucosa, mucopurulenta o hemoptoica.
+
+Es importante evaluar con baciloscopía de esputo a todos los pacientes con tos y expectoración de más
+de 2 semanas de evolución (sintomático respiratorio), especialmente si se asocia a fiebre y pérdida de
+peso3,5,6.
+
+Otras formas de presentación son la pseudoneumónica, la hemoptisis franca y un cuadro febril que
+puede simular un estado gripal. Las manifestaciones clínicas de la TB se ven influenciadas por la edad
+y el estado de la inmunidad.
+
+En pacientes mayores de 65 años los síntomas inespecíficos son los más frecuentes como por ejemplo
+la fiebre de origen desconocido. Este tipo de presentación debe ser tenida en cuenta en el momento
+de la evaluación, dado que el diagnóstico tardío conduce a un aumento de la morbimortalidad7. Los
+hallazgos clínicos de la TB en el paciente infectado con el VIH dependen de la severidad de la inmuno-
+depresión. Las personas con niveles de linfocitos T CD4+ > 200/mm3 presentan síntomas similares al
+inmunocompetente, y la TB queda circunscripta al pulmón. En los individuos con recuentos por debajo
+de esa cifra es más frecuente el compromiso extrapulmonar y las formas diseminadas.
+
+
+
+
+Tuberculosis extrapulmonar:
+Afecta cualquier órgano que no sea el pulmón. Incluye formas que están ubicadas parcial o totalmente
+dentro del tórax y son también consideradas extrapulmonares como la TB pleural, adenopatías hiliares
+o mediastinales.
+La incidencia de localizaciones extrapulmonares es del 15 al 20% en pacientes inmunocompetentes,
+observándose hasta el 70% en inmunosuprimidos3. La sintomatología depende de la localización.
+Las más comunes son la pleural y la ganglionar. Otras localizaciones son: laríngea, abdominal, geni-
+tourinaria, osteoarticular, meníngea y cutánea pero el bacilo puede afectar cualquier órgano. Tanto por
+su morbilidad como por su mortalidad la meningitis tuberculosa es la de mayor gravedad encuadrán-
+dosela para su diagnóstico dentro de las meningitis a líquido claro.
+
+
+
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                                5
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+
+Tuberculosis diseminada:
+Compromete más de 2 órganos. Hay gran deterioro del estado general, hipertermia, disnea, astenia
+e incluye signos clínicos de aquellos órganos que pueden estar afectados: derrame pleural, trastornos
+digestivos, hematológicos (anemia, linfopenia, trombocitopenia) hepatoesplenomegalia y a veces si-
+gnos meníngeos8. En las evoluciones crónicas se observa compromiso del estado general y fiebre de
+origen desconocido9. En las formas agudas puede presentarse como síndrome del distrés respiratorio
+del adulto. La naturaleza no específica de la presentación es probablemente la causa más frecuente del
+retraso diagnóstico.
+
+
+
+
+Diagnóstico de laboratorio
+El pilar del diagnóstico de la TB se basa en la identificación del agente causal: el Complejo Mycobacte-
+rium tuberculosis (M. tuberculosis, M. bovis, M. bovis var BCG, M. canetti, M. africanum, M. pinnipeda,
+M. microti, M. mungi).
+
+Las muestras a analizar pueden ser de origen respiratorio (esputo normal o inducido, contenido gástri-
+co, lavado bronquial y broncoalveolar, biopsias endoscópicas o quirúrgicas,) o no respiratorias (orina,
+LCR, sangre y médula ósea en inmunodeprimidos, punciones aspirativas y biopsias).
+
+
+
+
+Métodos bacteriológicos clásicos:
+Baciloscopía10: examen microscópico de extendido de esputo, líquidos de punción, material purulen-
+to, homogeneizados de tejidos. Las dos técnicas más comunes son la tinción de Ziehl Neelsen, que
+muestra la ácido alcohol resistencia, y la microscopía de fluorescencia con fluorocromo auramina-
+rodamina B y microscopios LED (light emision diode) donde se aprecian los bacilos como puntos bril-
+lantes sobre fondo negro.
+La baciloscopía se cuantifica en cruces luego de la lectura de por lo menos 100 campos microscópicos:
++++: más de 10 baar x campo.
+++: 1-10 baar x campo.
++: 1-10 baar x 10 campos
+Número de baar en 100 campos (1-10)
+
+Se considera positiva la baciloscopía con más de 5 bacilos por 100 campos. Menor cantidad puede
+informarse y el médico la considerará en el contexto clínico.
+
+La baciloscopía de la primera muestra arroja el 80% del rendimiento en los pacientes con lesiones mod-
+eradas .Aunque se aconsejan como mínimo efectuar dos baciloscopías (esputo seriado), una primer
+muestra positiva analizada estrictamente es altamente sugestiva de TB11 y no es necesario efectuar una
+segunda .
+
+Cultivo3: permite la identificación de género y especie a través de pruebas bioquímicas (catalasa, niaci-
+
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                                  6
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+na y nitrato reductasa) o moleculares, confirmando el diagnóstico de enfermedad. En el estado del arte
+actual del diagnóstico de la TB es conveniente contar con la identificación del complejo M. tuberculosis
+y una prueba de sensibilidad como mínimo a R o a H y R.
+
+Existen dos tipos de medio de cultivo, sólidos y líquidos. En los primeros el desarrollo es más lento
+(mínimo 20 días a partir de baciloscopías ++ o +++) pero puede visualizarse la morfología de las co-
+lonias. Se considera positivo un cultivo con más de 10 colonias aunque los de menor número deben
+considerarse en el contexto clínico. Los medios líquidos permiten un desarrollo más rápido de las mi-
+cobacterias (son la base de los métodos denominados rápidos) pero no se aprecia la morfología de las
+colonias. Previo a la siembra el material debe decontaminarse (por ejemplo con el método de Petroff,
+NaHO al 4%).
+
+Los medios sólidos usualmente empleados son el Lowenstein Jensen y Stonebrink en base a huevo y
+el Middlebrook 7H10 en base a agar. Existen varios medios líquidos en base a caldo, entre ellos el de
+Dubos y el Middlebrook 7H12.
+
+Los métodos automatizados como el BACTEC MGIT 960 (en la actualidad el método rápido de referen-
+cia), utilizan medio líquido y un revelado de desarrollo bacteriano por fluorescencia permitiendo en
+10-13 días obtener resultados positivos. Los negativos se observan hasta 42 días.
+
+Por último existe la posibilidad de identificación del complejo M. tuberculosis sin necesidad de cultivo
+a través de la amplificación de material genético bacilar de las muestras por PCR e identificación por
+hibridación de sondas de ADN. La altísima sensibilidad de la PCR exige para evitar falsos positivos
+trabajar solamente con muestras que tengan baciloscopías positivas.
+
+Pruebas de sensibilidad: se aconseja el estudio como mínimo de la resistencia a R o mejor a H y R en
+todos los casos de TB pulmonar bacilífera.
+
+El estándar de oro es el método de las proporciones de Canetti, Rist y Grosset (1963)12, en el que se
+mide el desarrollo micobacteriano en tubos con concentraciones estandarizadas de las drogas de 1ª. y
+2ª. línea. El mínimo desarrollo para efectuar este método es de 20 colonias. Un desarrollo de más del
+1% del tubo control indica resistencia bacteriana. El inconveniente del método es la lentitud del de-
+sarrollo micobacteriano, dado que para la obtención de resultados requiere desde 60 hasta 120 días. La
+siembra directa en los tubos con y sin drogas de las baciloscopías ++ o +++ puede llegar a la obtención
+de resultados de resistencia bacteriana en 20 días.
+
+La detección de resistencia a Z se efectúa mediante la prueba de la pirazinamidasa (Wayne) o por mé-
+todos rápidos en medio líquido. La interpretación de los resultados resulta controversial13.
+
+La interpretación de las pruebas de sensibilidad en TB es discutida. Se acepta que la detección de re-
+sistencia a H y a R es altamente concordante con la clínica del paciente, la concordancia es menor para
+S y Z y variable en el caso del E. Respecto de las pruebas para drogas de segunda línea (DSL), la Red
+Supranacional de Laboratorios (OMS) considera que deben efectuarse para una fluoroquinolona (ha-
+bitualmente ofloxacina) y un aminoglucósido (habitualmente kanamicina) a fin de detectar TBXDR. Los
+resultados de las pruebas de sensibilidad para el resto de las DSL deben interpretarse en el contexto
+clínico14.
+
+El Laboratorio Abel Cetrángolo del Hospital Muñiz/UBA efectúa pruebas de sensibilidad por método de
+las proporciones y métodos rápidos (MGIT 960) para las siguientes drogas: H, R, S, E, PAS, Cs, Km y
+para Z por el método de Wayne.
+
+
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                                 7
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+El Hospital F. J. Muñiz efectúa tamizaje mediante baciloscopía por laboratorio de guardia a todos los
+ingresos que son sospechosos de TB.
+
+
+
+
+Métodos rápidos económicos:
+Recientemente OMS aprobó tres métodos rápidos económicos para detectar farmacorresistencia: Ni-
+tratasa (Griess)15, Rezasurina y el MODS (observación microscópica directa y prueba de sensibilidad).
+Los tres permiten detectar resistencia a H y R en lapsos desde 7 hasta 30 días. Su costo es mínimo.
+
+
+
+
+Métodos moleculares:
+Las pruebas de amplificación de ácidos nucleicos son caras, de alta especificidad y de exagerada sen-
+sibilidad, por lo que para evitar falsos positivos solamente se analizan esputos BAAR positivos.
+Se basan en la amplificación de material genético bacilar por algún tipo de PCR, la hibridación con
+sondas que detecten genes específicos del complejo M. tuberculosis y de resistencia a R (rpoB) y a H
+(katG e inhA) y un posterior revelado. Un prototipo es la prueba de Hain.
+La correlación con el método de las proporciones es excelente en muestras con baciloscopías posi-
+tivas. Recientemente ha comenzado a utilizarse un método totalmente automatizado basado en PCR
+asociada a la prueba de “faros moleculares” que en menos de 2 horas y a partir del esputo brinda
+diagnóstico de M. tuberculosis y sensibilidad o resistencia a R (GeneXpert)16.
+
+
+
+
+Recursos diagnósticos no bacteriológicos:
+Anatomía patológica: en muestras de biopsias (pleural, ganglionar, transbronquial, dérmica, etc) el
+hallazgo microscópico del granuloma caseificante característico de la TB es altamente sugestivo de la
+enfermedad. Aunque las tinciones para BAAR sean positivas, no confirman en forma absoluta la en-
+fermedad. Parte del material obtenido debe enviarse en solución fisiológica al laboratorio de TB para
+homogeneización y cultivo.
+
+Adenosín deaminasa (ADA): marcador de actividad linfocitaria, se encuentra elevada en TB de las
+serosas y en la meningitis TB. De acuerdo a la Red Nacional de Bacteriología de la TB, en pleuresías
+serofibrinosas, un valor de ADA ≥ 60U/l tiene una sensibilidad de 84% y una especificidad de 94% para
+el diagnóstico de TB17. En pericarditis, ascitis y meningitis el valor diagnóstico y la línea de corte para
+determinar positividad son controversiales.
+
+Detección serológica: ELISA
+• Detecta anticuerpos circulantes
+• La sensibilidad varia con el antígeno utilizado
+• Baja sensibilidad en niños; en TBC extrapulmonares; en pacientes HIV+.
+• Es una técnica de tamizaje.
+
+T-SPOT.TB (o ELISPOT) y QuantiferonTB Gold in tube18: son técnicas modernas de detección de infec-
+ción latente. Consisten en la exposición de los linfomonocitos del sujeto durante 6 – 24 horas a antíg-
+enos del M. tuberculosis (ESAT-6, CFP 10 y TB 7.7) midiendo la respuesta inmunitaria celular a través
+de la producción de gamma interferon.
+
+
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                                    8
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+Las pruebas pueden dar resultado positivo, negativo o indeterminado, con independencia de la vacu-
+nación BCG o infección micobacteriana en general (hay reacciones cruzadas con M. Kansasii, szulgai
+y marinum). Son de poca utilidad para detectar infección latente en pacientes HIV/Sida con inmuno-
+depresión avanzada19, 11.
+
+Estudios sanguíneos: tienen solamente un valor de orientación y seguimiento en el paciente con TB.
+
+1. Hemograma: se observa principalmente anemia hipocrómica ferropénica en pacientes con larga
+evolución y desnutrición asociada. El hematocrito disminuye francamente luego de hemoptisis mod-
+eradas a graves.
+Las formas avanzadas de TB, así como las diseminadas presentan leucocitosis neutrofílica (inclusive
+con granulaciones tóxicas), al mejorar la enfermedad con el tratamiento, la fórmula blanca vira a una
+linfocitosis relativa.
+
+2. Eritrosedimentación: suele elevarse moderadamente, disminuyendo con el curso del tratamiento
+anti-TB. En pacientes VIH/Sida suele estar por encima de los 100 mm en la primera hora debido a la
+hipergammaglobulinemia policlonal asociada a la anemia.
+
+3. Proteinograma electroforético: se aprecia en formas avanzadas, especialmente de larga evolución,
+hipoalbuminemia con elevación de gamma globulina.
+
+Examen de orina: la piuria ácida abacteriana es un clásico indicador de sospecha de TB renal, pudién-
+dose observar también hematuria y proteinuria. Frente a un cuadro clínico compatible se debe solicitar
+urocultivo seriado para micobacterias.
+
+Líquido cefalorraquídeo: la meningitis TB es a líquido claro, con hipoglucorraquia e hiperproteinor-
+raquia. La presencia de más de 2 g/dl de proteinorraquia hace sospechar existencia de bloqueo a la
+circulación del LCR. La celularidad es baja (usualmente menos de 300 elementos) a predominio neu-
+trofílico en los primeros días de la meningitis y luego linfomononuclear.
+
+
+
+
+Diagnóstico por imágenes
+Radiografía de tórax:
+La radiografía (Rx) de tórax es el primer método de diagnóstico por imágenes y en la mayoría de los
+casos el único. El primer estudio debe incluir las proyecciones póstero-anterior y látero-lateral (frente
+y perfil). Una Rx de tórax normal tiene un alto valor predictivo negativo especialmente en pacientes
+inmunocompetentes, la frecuencia de falsos negativos es de 1%20. Este porcentaje se incrementa a
+un 7-15% en pacientes HIV positivos21. Las manifestaciones radiológicas dependen de factores del
+huésped: edad, inmunosupresión, TB previa y varían en la TB primaria y extraprimaria.
+
+Radiografía en la tuberculosis primaria:
+Pueden observarse:
+1- Linfoadenopatias hiliares hasta un 96% en niños, siendo también observable en adultos con HIV.
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                                  9
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+Más frecuentes unilaterales y del lado derecho.
+2- Opacidades parenquimatosas de espacio aéreo: consolidación localizada más frecuentemente en
+los lóbulos inferiores, y en el pulmón derecho. En niños menores de dos años se observan atelectasias
+lobares o segmentarias, sobre todo en segmentos anteriores de lóbulos superiores y lóbulo medio. En
+los 2/3 de los casos el foco parenquimatoso resuelve sin secuelas en la Rx de tórax. Esta resolución
+puede llevar hasta 2 años. En el resto de los casos la cicatriz radiológica persiste y puede calcificar. La
+combinación de las adenopatías hiliares, linfadenitis y el foco parenquimatoso de Ghon se denomina
+complejo de Ranke (1917).
+3.Opacidades parenquimatosas del intersticio: la forma miliar es la mas común. Se ve usualmente en
+niños e inmunocomprometidos. En general la Rx de tórax es normal al principio de los síntomas y la
+hiperinsuflación puede ser un signo precoz. El hallazgo radiográfico clásico corresponde a nódulos de
+entre 2-3 mm de distribución homogénea, con gradiente ápico basal y ligero predominio en las bases
+. Pueden resolver entre los 2 a 6 meses con tratamiento. Pueden coalescer y formar consolidaciones
+focales y difusas
+4. Enfermedad traqueobronquial: atelectasias e hiperinsuflación
+5. Derrame pleural: puede ser la única manifestación de tuberculosis. Es infrecuente en niños y en gen-
+eral se presenta en forma unilateral. Las complicaciones (empiema, fístula y erosión ósea) son raras. El
+engrosamiento pleural y la calcificación pueden observarse como secuelas de la enfermedad.
+
+Radiografía en la TB extraprimaria:
+El hallazgo más temprano es la consolidación del espacio aéreo, habitualmente pobremente definida,
+localizada en segmentos apicales y posteriores de los lóbulos superiores. Con el progreso de la en-
+fermedad podemos observar compromiso lobar superior, habitualmente excavado: lobitis superior ex-
+cavada.
+
+La cavitación se observa en un 50% de los pacientes22. En las formas avanzadas las cavidades son
+múltiples y se localizan en cualquier campo, siendo la ubicación más frecuente los campos superiores,
+segmentos apical y posterior del lóbulo superior derecho y apicoposterior del izquierdo y en segundo
+lugar en el segmento apical del lóbulo inferior. Las características que definen una cavidad son: a) im-
+agen anular hiperclara, sin parénquima en su interior b) anillo opaco c) bronquio de avenamiento d)
+nivel hidroaéreo. No es necesario que esten presentes los cuatro ítems, ya que con la observación de
+la imagen anular hiperclara y la presencia de ¾ partes de anillo opaco podemos hacer diagnóstico de
+cavidad. Cuando se observa el bronquio de avenamiento constituye junto a la imagen anular el “signo
+de la raqueta”.
+
+Linfadenopatías y neumotórax solo se ve en el 5% de los enfermos23.
+
+La estenosis bronquial se observa entre un 10% y 40 % de los pacientes con TB activa24.
+Las diseminaciones hematógenas, se caracterizan por presentar nodulillos de distribución uniforme,
+de vértice a base, con un tamaño y densidad variables, pudiendo ser de grano fino o grano grueso.
+
+El derrame pleural se observa en un 18% de los pacientes, pudiendo ser libres en la cavidad pleural o
+tabicados. Pueden resultar en un empiema tuberculoso y fístula broncopleural.
+
+En pacientes con larga evolución de la TB puede reconocerse: desviación de la tráquea con distorsión
+de la anatomía (tráquea en bayoneta), retracción de la cisura menor con pleura fija (signo de De Marko),
+elevación del hemidiafragma con imagen en tienda de campaña, elevación del hilio (hilio en lluvia).
+
+Radiografía descentrada de vértice:
+Está indicada en lesiones mínimas apicales, no concluyentes en la Rx de tórax habitual.
+
+
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                                   10
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+
+Utilidad de la tomografia axial computada (TAC):
+Si bien la mayor parte de los casos de TB pueden seguirse solo con Rx simple de tórax, existen cir-
+cunstancias en las que es necesario el uso de la TAC. La misma permite detectar lesiones mínimas,
+enfermedad de la vía aérea y diseminación endobronquial observándose el denominado patrón de
+árbol en brote, que no es específico de la TB y corresponde al llenado de bronquios centrilobulillares
+con exudado inflamatorio.
+En el caso de adenopatías hiliares puede demostrar la hipodensidad central de los ganglios secundaria
+a necrosis, hallazgo altamente sugestivo de enfermedad activa.
+
+
+
+
+Ultrasonografía en el diagnóstico de la tuberculosis:
+La ecografía o ultrasonografía es un método auxiliar importante a indicar en determinadas localiza-
+ciones de la TB:
+1 - Estudio de colecciones en serosas: líquido en cavidad libre, tabicaciones, engrosamiento (pleura,
+pericardio, peritoneo).
+2 - Determinación del contenido sólido o líquido de adenopatías.
+3 - En abdomen es altamente sugestivo de enfermedad granulomatosa diseminada (especialmente TB
+pero no es un patrón específico) en inmunocomprometidos (HIV/Sida, por ejemplo) la presencia de
+imágenes hipoecoicas a nivel hepático y esplénico asociado a múltiples adenopatías, frecuentemente
+hipoecoicas, abdominales y retroperitoneales25.
+
+
+
+
+Tratamiento de la tuberculosis fármacosensible
+Fármacos antituberculosis 26, 27, 28, 29, 30, 31, 32, 33: la Organización Mundial de la Salud clasifica a los fárma-
+cos anti-TB en cinco grupos:
+I - Drogas de primera línea orales: isoniacida (H), rifampicina (R), pirazinamida (Z), etambutol (E) y ri-
+fabutina (no disponible esta última en Argentina).
+II - Drogas inyectables: kanamicina (Km), amikacina (Am), capreomicina (Cm) y estreptomicina (Sm).
+III - Fluoroquinolonas: levofloxacina (Lfx), moxifloxacina (Mfx), gatifloxacina (Gfx).
+IV - Drogas de segunda línea orales: cicloserina (Cs)/terizidona (Tz), etionamida (Eto)/protionamida (Pt),
+ácido p-amino salicílico (PAS).
+V - Miscelánea de fármacos con distintos niveles de actividad sobre M. tuberculosis: clofazimina, lin-
+ezolid, amoxicilina-clavulánico, imipenem/cilastatina, isoniacida en altas dosis (15-20 mg/kg/día), tioa-
+cetazona, claritromicina.
+
+En la tabla 1 se muestran las dosis y efectos adversos de los fármacos de primera línea orales disponi-
+bles en Argentina y la estreptomicina.
+
+Tratamiento original:
+Es el tratamiento que se aplica a los casos de TB sin tratamiento previo o con tratamiento previo menor
+a un mes.
+
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                                            11
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+Esquemas de tratamiento26, 28, 29, 34, 35, 36, 37, 38, 39:
+El esquema de tratamiento en adultos y niños está constituido por la triple asociación bactericida
+compuesta por H, R y Z. Se agrega un cuarto fármaco como el E ya que la resistencia inicial a H y S
+es elevada en muchos países y se podría estar realizando una monoterapia encubierta. Si bien la S es
+bactericida, se prefiere asociar como cuarta droga el E (excepto en meningitis TB donde se utiliza S)
+de baja resistencia inicial y administración oral. Los regímenes farmacológicos son bien tolerados, de
+baja toxicidad y se administran en 2 fases:
+
+a) Fase intensiva o esterilizante: dos meses de H R Z E en forma diaria que incluye 60 tomas.
+
+b) Fase de consolidación: cuatro meses de H R en forma diaria que corresponde a 120 tomas, o en
+forma intermitente (3 veces por semana), que corresponde a 48 tomas.
+
+La fase intensiva suele extenderse empíricamente hasta 3 meses si la enfermedad es grave y la bacilo-
+scopía persiste positiva al segundo mes. Se recomienda una fase de consolidación más prolongada,
+de 7-10 meses con H R diaria para los pacientes con formas graves de TB pulmonar, extrapulmonar y
+diseminada. En la forma extrapulmonar pleural y en pulmonares mínimas y moderadas se utiliza el
+esquema de 6 meses (2HRZE/4HR). Estos esquemas terapéuticos logran la curación de casi el 100 % de
+los enfermos, con 1 a 2 % de recaídas.
+
+Esquemas alternativos34:
+En caso de no poder utilizar algún fármaco de primera línea (por toxicidad o monorresistencia), se ac-
+onsejan los siguientes esquemas alternativos:
+Sin H: 2 REZS / 7 RE (9-12 meses según extensión lesional).
+Sin R: 2 HEZS / 10 HE (12 meses)
+Sin Z: 2 HRES / 7 HR (9 meses)
+Sin E: 2 HRZS / 4 HR (6 meses)
+
+Fármacos en dosis fijas:
+Existen diferentes presentaciones farmacológicas que asocian 2 (H 150 mg + R 300 mg), 3 (H 75mg +
+R 150mg + Z 400mg) y 4 fármacos (H75mg + R 150 mg + Z 400 mg + E 275 mg) en dosis fijas40, 41. Estas
+asociaciones son muy útiles ya que facilitan la toma de la medicación cuando el tratamiento no se su-
+pervisa, evitando el abandono parcial de los fármacos, no generándose así resistencias.
+
+Uso de corticoides:
+Están indicados en la pericarditis y en la meningitis. Se recomienda una dosis de meprednisona 0,5 a 1
+mg/kg/d por 30 días. En la meningitis TB se ha demostrado que el uso inicial de corticoides disminuye
+la mortalidad, no así las secuelas de la enfermedad42, 43. En pediatría44, 45, 46 se añade la indicación de
+corticoides en pacientes con masas ganglionares que compriman la vía aérea, distrés respiratorio,
+enfisema o enfermedad parenquimatosa grave que no se resuelve, y también en el granuloma endo-
+bronquial que ocasiona patología enfisematosa por acción valvular. En las formas miliares es contro-
+vertido, pero se indica en aquellas formas con mala evolución e insuficiencia respiratoria. Se utiliza
+meprednisona 0,5 a 1 mg/kg /día durante 6-8 semanas y luego se quita con reducción gradual.
+
+
+
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                                   12
+                                        Tabla 1- Fármacos de primera línea para el tratamiento de la tuberculosis en adultos:
+
+
+
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA
+                                                                                                                                                                          Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+
+                                        * Su aparición implica la suspensión definitiva de la R.
+                                        **La R es un potente inductor del citocromo P450 (isoenzima CYP3A4) por lo que presenta numerosas interacciones farmacológicas.
+
+
+
+
+13
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+
+Tratamiento de la tuberculosis
+en situaciones especiales:
+Diabetes: es la asociación morbosa más frecuente. Los pacientes con diabetes tienen mayor riesgo de
+tener TB, especialmente cuando la diabetes es severa y de difícil control. Dada la inmunodepresión que
+produce la diabetes, se recomienda la prolongación del esquema terapéutico a 9 meses (2HREZ/7HR).
+Debe recordarse que R reduce los niveles séricos de hipoglucemiantes como las sulfonilureas y bigua-
+nidas, por lo que debe realizarse el estricto seguimiento para mantener niveles aceptables de glucemia
+o indicar insulina. También es mayor el riesgo de polineuritis por H, por lo que se debe administrar
+como prevención piridoxina (25mg/d).
+
+HIV/Sida47, 48, 49: el tratamiento de la TB es prioritario en estos pacientes respecto de la terapia antirre-
+troviral de gran actividad (TARGA), la que se indica en lo posible a las 2 semanas de tratamiento antitu-
+berculosis cuando los CD4+ sean inferiores a 100 céls/µL, entre 4 y 8 semanas con recuentos entre 100
+y 200 y a partir de las 8 semanas cuando los recuentos oscilen entre 200 y 350 céls/µL
+Siempre debe incluir R, dado que existe un aumento de la mortalidad en regímenes sin esta droga. No
+deben emplearse regímenes intermitentes en pacientes con niveles de CD4 inferiores a 200/µL (o si se
+desconocen).
+La duración del tratamiento se extiende a 9 meses a expensas de la segunda fase.
+El uso de TARGA en pacientes con TB/Sida se ve limitado por la superposición de efectos tóxicos, las
+interacciones farmacológicas y las reacciones paradojales al tratamiento en lo que se ha denominado
+síndrome inflamatorio de reconstitución inmune (SIRI).
+La R es un potente inductor del sistema citocromo P-450 hepático CYP3A por lo que interactúa con
+todos los inhibidores de la proteasa (impide su uso concomitante) y los inhibidores de la transcriptasa
+reversa no nucleósidos (ITRNN: nevirapina y delarvidine) provocando niveles subterapéuticos . Esto
+se asocia con incompleta supresión de la replicación viral y aparición de mutantes resistentes del HIV.
+Algunos efectos adversos, como la polineuropatía periférica asociada con la H, pueden verse potencia-
+dos por el uso de TARGA incluyendo inhibidores de la transcriptasa reversa nucleosídicos (ITRN) como
+estavudina (d4T), didanosina (ddI) o zalcitabina (ddC), también la hepatotoxicidad relacionada con la H,
+R y Z puede favorecerse con el uso de IP o ITRNN.
+
+Por esta razón, la administración concomitante de R con estos fármacos antirretrovirales obliga a mo-
+dificar sus dosis. Por ejemplo, R reduce los niveles plasmáticos de efavirenz en un 13% a 37%, por lo
+que se sugiere incrementar la dosis de este a 800 mg/diarios si es tolerada. Se prefiere como esquema
+inicial efavirenz asociado a dos ITRN o a un ITRN (emtricitabina) y un ITRNucleosídico (tenofovir) en el
+TARGA concomitante a la administración de R. Existe la posibilidad de emplear regímenes de 3 ITRN
+(zidovudina, lamivudina, abacavir) cuando se usa concomitantemente R, pero su eficacia antirretroviral
+es menor. Respecto de los nuevos fármacos antirretrovirales: raltegravir (inhibidor de la integrasa) y
+el maraviroc (antagonista de correceptores CCR5) interactuan con la R, por lo que se aconseja vigilar
+su dosificación.
+El inicio de la TARGA en pacientes con por HIV suele acompañarse de un incremento en los valores
+de linfocitos T CD4 + y de una reconstitución inmunológica parcial. El síndrome inflamatorio de re-
+constitución inmune (SIRI) asociado con la TARGA en pacientes con TB suele presentarse entre 1 y 3
+meses después del inicio de los antirretrovirales bajo la forma de una adenitis mediastinal, periaórtica,
+mesentérica o periférica, en especial de localización supraclavicular acompañada de fiebre y leucocito-
+sis. También se ha descrito esta respuesta bajo la forma de una pleuresía con derrame y granulomas
+tuberculoides en la biopsia pleural. Tiene una frecuencia de aparición del 30%.
+El tratamiento del SIRI se basa en el mantenimiento de la terapia específica y de TARGA, más el agrega-
+do de antiinflamatorios no esteroideos. Si las manifestaciones persisten puede agregarse prednisona
+a la dosis de 20 a 40 mg/día durante 4 a 8 semanas. Eventualmente puede requerirse el drenaje quirúr-
+
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                                     14
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+gico de las lesiones focales.
+
+Insuficiencia renal: R e H son metabolizadas a nivel hepático, por lo que sus dosis no se modifican en
+insuficiencia renal ni en pacientes en diálisis. La Z se metaboliza al mismo nivel, pero sus metabolitos
+(ácidos pirazinoico e hidroxi pirazinoico) se eliminan por orina, por lo que requiere ajustes de dosis. El
+E es metabolizado en un 80% a nivel renal. Solamente Z es removida significativamente por la hemo-
+diálisis, aunque es preferible la administración de Z, E, y S post-hemodiálisis (ver tabla 2).
+
+Tabla 2 - Dosis recomendadas para adultos con función renal reducida o pacientes en hemodiálisis
+
+
+
+
+Fármacos antituberculosis y hepatopatia28: en caso de hepatopatía severa o evolutiva es aconsejable
+un régimen que no incluya fármacos hepatotóxicos Indicar E, S, fluoroquinolona (Lfx) y Cs. Dicho es-
+quema deberá extenderse como mínimo 18 meses, con la S en una fase inicial de 6 meses (aplicada de
+lunes a viernes por dos meses y luego intermitente).
+
+Embarazo y lactancia26, 29: en el embarazo se recomienda el esquema estándar de tratamiento. Todos
+los fármacos de primera línea pueden ser indicados excepto la S que puede provocar sordera congé-
+nita. Se recomienda indicar piridoxina 25mg/día en las embarazadas que reciben H. Los fármacos an-
+tituberculosis pueden estar presentes en pequeñas concentraciones en la leche materna, sin embargo
+estos niveles son bien tolerados por los lactantes.
+
+Silicosis28: dada la alteración inmunológica de los macrófagos provocada por el sílice en estos enfer-
+mos se recomienda extender la duración del tratamiento a 9 meses a expensas de la segunda fase.
+
+
+
+Reacciones adversas a farmacos antituberculosis
+(RAFAs):
+Las toxicidades individuales de los fármacos antituberculosis de primera línea se reseñan en las tablas
+1. El tratamiento de la TB es una poliquimioterapia, la identificación del fármaco incriminado en una
+RAFA suele ser dificultosa. Se describen a continuación las conductas frente a las toxicidades más co-
+munes en el tratamiento combinado.
+
+Hepatotoxicidad28, 29, 34: todos los pacientes deben tener un hepatograma antes de iniciar el tratamiento
+y se les debe informar sobre posibles RAFAs, si es posible por escrito, con la advertencia de suspender
+el tratamiento y consultar de inmediato al médico si aparecen náuseas y vómitos persistentes, dolor
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                                  15
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+abdominal y/o ictericia.
+En pacientes con antecedentes de enfermedades hepáticas, hepatograma anormal antes del tratamien-
+to, alcoholismo, embarazo o HIV/Sida, es necesario el monitoreo regular de la función hepática; sema-
+nalmente el primer mes y quincenalmente el segundo.
+Hasta un 20% de los pacientes tratados con los cuatro fármacos principales tienen elevaciones leves
+(menor a 2 Valores Máximos Normales o VMN), asintomáticas y transitorias de las transaminasas. En
+estos casos, el tratamiento no debe ser interrumpido porque se resuelve espontáneamente. Sin embar-
+go, los controles clínicos y de laboratorio deben ser más frecuentes.
+Cuando las transaminasas aumentan más de cinco veces el VMN con o sin síntomas, o más de tres
+veces el VMN con síntomas, o hay aumento de la bilirrubina, los fármacos deben suspenderse y el
+paciente debe ser evaluado con: exhaustivo interrogatorio sobre enfermedades hepáticas y/o biliares
+preexistentes, alcoholismo, ingesta de medicamentos; debe solicitarse serología para hepatitis virales
+y ecografía hepática y de vías biliares.
+Hasta que el paciente mejore es conveniente administrar por lo menos tres fármacos no hepatotóxicos
+(E, fluoroquinolona y aminoglucósido). Cuando el hepatograma se normaliza, se administran nueva-
+mente los fármacos en forma secuencial comenzando con R. Si no hay aumento de transaminasas,
+luego de una semana se continúa con H y luego de otra semana se agrega Z (la de mayor frecuencia
+de hepatotoxicidad). Si aparecen síntomas o aumentan las transaminasas, se debe suspender la última
+droga administrada. Si la tolerancia es buena, se continúa con el esquema estándar y se suspenden los
+fármacos alternativos.
+
+Reacciones cutaneas y de hipersensibilidad28,29, 34, 50: la conducta ante un rash o erupción cutánea de-
+pende de la gravedad de la misma. Si es leve se puede administrar un antihistamínico y continuar con
+el tratamiento. Si hay petequias, solicitar recuento de plaquetas y si éstas están bajas, probablemente
+se deba a trombocitopenia por R. En este caso se debe suspender definitivamente el fármaco controlar
+las plaquetas hasta su normalización.
+Si el rash es generalizado y está acompañado de fiebre y/o compromiso de mucosas, todas las fárma-
+cos deben ser suspendidos inmediatamente y en algunos casos es necesario administrar corticoides
+sistémicos. Es importante destacar que cuando un paciente presenta hipersensibilidad a una droga,
+frecuentemente se vuelve hipersensible a todos los fármacos dados. Cuando desaparece la reacción
+cutánea, los fármacos se administran cada uno por separado y en dosis de prueba progresivas, co-
+menzando por R, luego H, E y Z con intervalos de dos o tres días. Si el rash reaparece, se suspende la
+última droga agregada. Las dosis de prueba de cada medicamento se administran según el esquema
+aconsejado en la tabla 4.
+
+Tabla 3 - Dosis de prueba para detectar hipersensibilidad cutánea
+
+
+
+
+Si no aparece ninguna reacción a las dosis de prueba, se puede continuar hasta las dosis plenas. Si la
+reacción inicial fue grave, la dosis de prueba debe ser más baja que la del día 1 (aproximadamente 1/10
+de la dosis indicada para el día 1).
+
+
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                                16
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+DRESS: El síndrome DRESS, así llamado por las iniciales en inglés (Drug Rash with Eosinophilia and
+Systemic Symptoms) fue descrito por primera vez por Bocquet y col. en 199651. Es una farmacodermia
+grave, potencialmente fatal caracterizada por fiebre, exantema, adenopatías, alteraciones hematológi-
+cas y afectación visceral. El órgano más frecuentemente afectado es el hígado, seguido por riñones y
+pulmones. Es característica la intensa eosinofilia. Suele ser producido por anticonvulsivantes, sulfona-
+midas y algunos antivirales. Los fármacos antituberculosis de primera y segunda línea también pueden
+producirlo. La mortalidad es del 8 al 10 % y ocurre en pacientes con severo compromiso multiorgáni-
+co52.
+
+Intolerancia digestiva: cuando aparecen náuseas, vómitos, dolor abdominal, hiporexia, hay que soli-
+citar un hepatograma. Si las transaminasas están por debajo de tres veces el límite superior normal
+puede continuarse el tratamiento administrando los fármacos con las comidas o asociando tratamiento
+sintomático y control semanal del hepatograma.
+
+Polineuropatia: es producida fundamentalmente por H en pacientes predispuestos (diabetes, alcoholis-
+mo, desnutrición, embarazo, HIV). Se aconseja adicionar al tratamiento piridoxina 25 mg/d como dosis
+preventiva y 100 mg/d como dosis terapéutica.
+
+Reacciones adversas en pacientes HIV/Sida: la frecuencia de RAFAs graves que obligan a suspender
+el tratamiento en pacientes TBC/HIV es variable. En un estudio retrospectivo, 21% tuvieron RAFA y la R
+fue la responsable más frecuente53.
+Hay que recordar que puede haber superposición de RAFA y antirretrovirales, lo cual dificulta la iden-
+tificación de las mismas. Por lo tanto, se recomienda iniciar el tratamiento antiretroviral, después del
+antituberculosis (ver HIV/Sida arriba).
+
+
+
+
+Tratamiento de la tuberculosis fármacorresistente
+Definiciones:
+a) TB monorresistente es aquella forma de la enfermedad en que el Mycobacterium tuberculosis es
+resistente a un solo fármaco antituberculosis (habitualmente H o S).
+b) TB polirresistente es aquella en la que el M. tuberculosis es resistente a dos o más fármacos pero no
+a la H y R simultáneamente: por ejemplo a S e H.
+c) TB multirresistente (TBMR) es aquella en que el M. tuberculosis es resistente simultáneamente a H
+y R con o sin el agregado de resistencia a otros fármacos.
+d) TB extensamente resistente (TBXDR) involucra a la enfermedad provocada por cepas de M. tubercu-
+losis resistentes como mínimo a H y R con resistencia adicional a por lo menos una fluoroquinolona
+antituberculosis y a un inyectable de segunda línea.
+
+Fármacos a emplear en tuberculosis fármacorresistente:
+Los fármacos de segunda línea, sus dosis y efectos adversos se exponen en la tabla 4.
+
+Tratamiento de la tuberculosis monorresistente y polirresistente (a H y S):
+Ver capítulo anterior, tratamientos alternativos.
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                                17
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+Tratamiento de la tuberculosis multirresistente27, 54, 55:
+Los pacientes con tuberculosis multirresistente deben tratarse con esquemas que incluyan una fase
+inicial no menor a 6 meses (o hasta obtener como mínimo la conversión bacteriológica sostenida del
+esputo: 2 cultivos mensuales consecutivos negativos) que incluya un inyectable de segunda línea (Km,
+Am o Cm), una fluoroquinolona antituberculosis (levofloxacina o moxifloxacina), Z o E si en el anti-
+biograma aparecen sensibles y no menos de 2 drogas del grupo 4 (Cs, Eto y/o PAS). Superada la fase
+inicial del tratamiento, la fase de continuación se hace con los mismos fármacos orales, suspendiendo
+el inyectable, con una duración de 12 a 18 meses según la forma clínica y evolución del paciente.
+
+Tabla 4- Principales fármacos alternativos a los de primera línea a utilizar en tuberculosis fármacorre-
+sistente27, 56, 57
+
+
+
+
+*Capreomicina es un antibiótico polipeptídico, pero sus dosis y efectos adversos son iguales a los aminoglucósidos.
+**Los pacientes que reciben cicloserina deben tomar piridoxina en dosis de 50 mg por cada 250 mg del fármaco para atenuar la
+toxicidad neurológica.
+
+
+
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                                                    18
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+Al planificar un esquema de tratamiento de tuberculosis multirresistente hay que tener en cuenta:
+1 - Nunca debe agregarse un solo fármaco a un régimen que está fallando.
+2 - Cuando se inicia o revisa un esquema terapéutico, siempre hay que tratar de emplear al menos 3
+drogas no utilizadas previamente a las cuales hay sensibilidad demostrada in vitro. Una de esas drogas
+debe ser un agente inyectable.
+3 - Incluir al menos 5 drogas. Asegurar que el régimen es adecuado una vez que se suspenda el agente
+inyectable lo que ocurre a los 6 meses.
+4 - No debe realizarse tratamiento intermitente en los pacientes con tuberculosis multirresistente a
+excepción de los agentes inyectables después de un periodo inicial (usualmente 2 a 3 meses) de tra-
+tamiento diario.
+5 - No es conveniente utilizar S como inyectable si existe disponibilidad de Km. Existe fuerte resisten-
+cia cruzada entre amikacina y kanamicina. En cepas resistentes a Km es útil la utilización de Cm.
+6 - Agregar una fluoroquinolona. Ciprofloxacina no es considerada un fármaco antituberculosis. Ofloxa-
+cina en dosis de 800 mg/d es una droga de menor actividad respecto de las fluoroquinolonas más mo-
+dernas que se indican usualmente en TBMR: Lfx y Mfx.
+
+Tratamiento de la tuberculosis extensamente resistente24, 56, 57:
+1 - Utilizar toda droga de primera línea si preserva la sensibilidad
+2 - Utilizar un inyectable al cual la cepa sea susceptible y considerar la posibilidad
+de extender su uso (12 meses o quizás todo el tratamiento).
+3 - Usar siempre una fluoroquinolona de cuarta generación como la Mfx o en su defecto Lfx
+en alta dosis (1000 mg/d)58, 59.
+4 - Utilizar todos los fármacos del grupo 4 no usados previamente y que probablemente
+puedan ser efectivos.
+5 - Utilizar 2 o más agentes del grupo 5.
+6 - Considerar la posibilidad de cirugía adyuvante si la enfermedad es localizada
+
+Tratamiento de la TB fármacorresistente en situaciones especiales:
+El embarazo no es una contraindicación para el tratamiento de la TBMR.
+Hay que discutir los riesgos y beneficios del tratamiento con la madre y realizar un consentimiento
+informado.
+Están contraindicados en la embarazada los inyectables y la etionamida.
+En pacientes HIV/Sida, no existe el problema de las interacciones farmacológicas de antirretrovirales y
+rifampicina. No se han descrito interacciones importantes para fármacos de los grupos 2 al 5.
+
+
+
+
+Tratamiento de la tuberculosis infantil                                       60, 61, 62, 63, 64, 65, 66
+
+
+
+
+Los objetivos del tratamiento son curar al niño, evitando la muerte o secuelas, prevenir las recaídas o
+desarrollo de resistencia a las drogas y reducir la transmisión de la enfermedad.
+El tratamiento de la TB infantil es el mismo que en los adultos, con esquemas similares y utilizando las
+mismas drogas adecuando la dosis al peso del paciente (ver tabla 5).
+
+Las TB primarias en todas sus manifestaciones son tratadas con HRZ 2 meses y 4 meses de HR.
+Las formas graves como miliares, pulmonares extensas, cavitarias, extrapulmonares graves y multi-
+
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                                      19
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+focales requieren 4 drogas, agregando al esquema anterior E durante la fase de ataque y luego conti-
+nuando con HR. El tiempo de duración del tratamiento dependerá de la extensión de la lesión, la carga
+bacilar y la respuesta a la terapia indicada; en algunos casos puede extenderse de 9 a 12 meses.
+Existen escasos datos disponibles sobre la farmacocinética y biodisponibilidad de las drogas en la in-
+fancia, se reconoce en general los niños toleran dosis mayores y desarrollan menos efectos adversos
+que los adultos.
+
+
+
+
+Dosis y esquemas:
+Los esquemas en retratamientos son los mismos que en los adultos.
+En resistencias se requieren drogas de segunda línea, el beneficio que brindan las quinolonas en estos
+regímenes de tratamiento supera el riesgo de su uso en niños. Si se confirma resistencia solo a H el
+tratamiento deberá prologarse a 9 meses y solo a R 12 a 18 meses.
+En cuanto a las indicaciones de hospitalización e interacciones de las drogas antituberculosas con otros
+medicamentos, son las mismas que en los pacientes adultos.
+
+Tabla 5- Fármacos antituberculosis con su dosificación Pediátrica.
+
+
+
+
+* Los niños de menos de 10 kg requieren dosis más altas.
+** Dos o tres dosis diarias.
+
+
+Indicación de corticoides:
+Se recomiendan por importante acción antinflamatoria:
+• Meprednisona 0,5 a 1 mg/kg/día
+Se indicarán durante 3 a 6 semanas con disminución gradual hasta la suspensión en 2 a 4 semanas.
+Las indicaciones son las mismas que en el adulto.
+
+
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                                20
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+Indicación de piridoxina:
+• Niños alimentados con pecho, sobre todo si su madre está en tratamiento tomando H o Cs.
+• Niños y adolescentes en la fase de crecimiento rápido.
+• Adolescentes embarazadas
+• Desnutridos que presenten dietas con deficiencia de proteínas
+• Pacientes neurológicos (parestesias o polineuropatías periféricas)
+La dosis de piridoxina es de 25 mg/día
+
+Indicación quirúrgica: las mismas que en el adulto
+
+
+
+
+Monitoreo del tratamiento:
+Se debe controlar por el médico el tratamiento cada 15 días en la fase intensiva y mensualmente en la
+de consolidación, se deberá evaluar la evolución de la signo-sintomatología, el progreso de peso y la
+tolerancia a la medicación.
+La situación ideal es que todos los pacientes reciban tratamiento acortado estrictamente supervisado
+(TAES/DOTS).
+Sin excepción y dentro de las posibilidades existentes deben recibir esta supervisión del tratamiento :
+
+• los enfermos bacilíferos,
+
+• pacientes TB adolescentes,
+
+• los que reciben retratamientos,
+
+• los enfermos multirresistentes
+
+• pacientes con abandonos previos,
+
+• adictos a diferentes tipos de drogas,
+
+• los enfermos que presenten HIV/sida
+
+• enfermos con migraciones frecuentes
+
+• pacientes en situación de calle.
+
+Los grupos citados son los que tienen el mayor riesgo de interrupciones en el tratamiento.
+
+En cuanto a la normalización de las imágenes radiográficas, es importante saber que estas requieren
+varios meses en involucionar y que pueden permanecer como lesiones calcificaciones o cicatrices al
+finalizar el tratamiento.
+
+Por lo tanto si no se presentan complicaciones, los controles radiológicos pueden pautarse cada 2 o 3
+meses.
+
+Los efectos adversos son poco frecuentes en los niños, pero pueden manifestarse como:
+• Elevación asintomática de las transaminasas en 3-10%
+• Hepatotoxicidad en 1%.
+La función hepática debe ser monitoreada al inicio del tratamiento, a los 15 o 20 días y luego cada 2
+
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                               21
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+meses si no se presentan alteraciones.
+Los controles hematológicos, endocrinos, oftalmológicos, audiométricos y de función renal depende-
+rán de las drogas en uso y las comorbilidades que presente el paciente.
+
+
+
+
+Tratamiento quirúrgico                              7
+
+
+
+
+La cirugía de la TB pulmonar fue objeto de replanteo estratégico desde el advenimiento de los fárma-
+cos antifímicos. Actualmente la tisiocirugía es complementaria del tratamiento médico.
+En los años 40 se curaba el paciente que llegaba a cirugía. Actualmente se opera el que no se cura con
+medicación (casos de TBMR), y la indicación quirúrgica se reserva para el tratamiento de las secuelas.
+En este sentido las secuelas pueden ser a) pleurales, las cuales libradas a su evolución producen paqui-
+pleura y pulmón emparedado y b) parenquimatosas, de las cuales las cavitarias tienen especialmente
+indicación quirúrgica. En general se traducen clínicamente por hemóptisis, o bien por sobre infeccio-
+nes a gérmenes comunes y hongos oportunistas.
+
+Los procedimientos quirúrgicos a considerar son: 1) colapsantes: neumotórax terapéutico, toracoplas-
+tias, plombajes; 2) de exéresis (lobectomías, pleuroneumonectomías; 3) combinados (toracocavernos-
+tomía + mioplastía con músculo de dorsal ancho y exéresis + toracoplastía); 4) tratamiento del empie-
+ma pleural y drenajes.
+
+Neumotórax terapéutico: se ha abandonado como tratamiento colapsante al igual que el neumoperi-
+toneo.
+
+Toracoplastía: Está indicada en cavernas de los vértices pulmonares, cuando el examen funcional res-
+piratorio no permite la resección parenquimatosa. Se realiza como complementaria de las exéresis pul-
+monares en el mismo tiempo operatorio (contemporánea). También se indica en los post operatorios
+más o menos alejados para tratar la falta de reexpansión pulmonar, fístula broncopleural, empiema
+como segundo tiempo operatorio.
+
+Plombaje: tratamiento colapsante que se indica en pacientes con parámetros fisiológicos similares a
+los indicados de toracoplastías.
+
+Exéresis: Indicadas en primer término para tratar las secuelas pleuropulmonares de la tuberculosis
+pulmonar (lobectomías, pleuroneumonectomías).
+La toracocavernostomía con mioplastias del dorsal ancho se han utilizado en pacientes en mal estado
+general con secuelas pleuropulmonares que no permitían la resección y los tratamientos colapsantes.
+
+Empiema pleural: según estadio se realiza drenaje a lo Bulau, pleurotomía con resección costal, tora-
+coplastia, decorticación, pleuroneumonectomía, ventana pleurocutánea.
+
+Derrames pleurales tuberculosos no empiemáticos: En aquellos pacientes con derrame pleural tuber-
+culoso de reciente comienzo en el cual se constata mediante ecografia o tomografía, tabicamientos, se
+realiza videotoracoscopía con excelentes resultados evitando de esta manera posteriores decorticacio-
+nes.
+
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                                22
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+
+Tratamiento kinésico en tuberculosis
+El tratamiento kinésico respiratorio (TKR) está orientado hacia la resolución favorable de la patología
+ayudando a prevenir complicaciones asociadas con la misma.
+
+
+
+
+Kinesiología crítica en tuberculosis
+La TB produce disminución de la capacidad residual funcional (CRF) y disminución de la compliance,
+desplaza hacia la derecha y provoca descenso de la pendiente de la curva presión/volumen, disminuye
+la ventilación alveolar, aumenta el shunt y desarrolla hipoxemia. Favorece el desarrollo de un patrón
+rápido y superficial durante la respiración espontánea, con frecuencias respiratorias elevadas y volú-
+menes corrientes pequeños, aumentando el trabajo respiratorio, pudiendo llegar a la fatiga muscular
+respiratoria y a la necesidad de ventilación mecánica. El objetivo del TKR será, en primer lugar intentar
+evitar la intubación del paciente, en caso de insuficiencia respiratoria aguda (IRA), secundaria a dismi-
+nución de la distensibilidad pulmonar, evento que empeorará su pronóstico.
+
+Cuando el paciente se encuentra en una Unidad de Cuidados Críticos se coloca en posición semiincor-
+porada optimizando la función de los músculos respiratorios con la posibilidad de colocar CPAP (con-
+tinuous positive airway pressure) cuyo objetivo es aumentar la CRF, previniendo el colapso alveolar
+durante la espiración, favoreciendo el reclutamiento de unidades alveolares efectivas. De esta manera
+mejora el intercambio gaseoso con disminución del gradiente alvéolo arterial (a/A), disminuyendo el
+shunt y el consumo de oxígeno (VO2).
+
+Cambio de decúbito: el paciente debe cambiar cada dos (2) horas, decúbito lateral derecho e izquierdo,
+decúbito supino, posición semiincorporada, sedentación al borde de la cama de acuerdo a tolerancia
+hemodinámica.
+
+Movilización de miembros superiores e inferiores: son realizadas para evitar las complicaciones aso-
+ciadas a la estadía prolongada en cama.
+
+
+
+Kinesiología en la etapa subaguda
+Los objetivos del tratamiento son:
+• Fluidificar o hidratar las secreciones bronquiales (ingesta previa de líquidos, vaporizaciones, nebuli-
+zadores, etc.
+• Estimular la cinética del sistema bronquial (cilios), para disminuir la obstrucción (a través de los dre-
+najes posturales).
+• Aumentar la expansión de la caja torácica.
+• Reeducación funcional muscular para disminuir la hipotonía y fortalecer la musculatura mediante la
+realización de ejercicios generales.
+• Reeducación funcional respiratoria, mediante los ejercicios diafragmáticos abdominales.
+
+Los ejercicios basados en técnicas de respiración autocontrolada son parte del tratamiento no farma-
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                                   23
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+cológico en los pacientes con enfermedades pulmonares.
+El objetivo es disminuir la disnea y mejorar la eficiencia de los músculos respiratorios, la movilización y
+eliminación de secreciones. Todo ello, requiere la instrucción y control periódico por parte de personal
+especializado.
+Estas modalidades de terapia respiratoria pueden ser activas o pasivas, es decir, con la participación
+activa del paciente, o mediante la aplicación de maniobras por parte del kinesiólogo.
+
+También los pacientes pueden ser tratados en forma combinada con maniobras desobtructivas o ex-
+pansivas y presión positiva intermitente (PPI) con el clásico ventilador a presión y piezas bucales o
+máscaras herméticas para su suministro.
+En lo que respecta a las técnicas de respiración autocontrolada existe el pursed lip (ejercicios caracteri-
+zados por una inspiración nasal y una espiración lenta a través de los labios entrecerrados en posición
+de silbido, también llamado freno labial). El sistema de chisteo o chistido espiratorio (freno dental) es
+mejor tolerado y más efectivo para algunos pacientes porque evita la excesiva actividad muscular bu-
+cal (actividad accesoria de músculos buccinadores), turbulencia espiratoria y una desigual eliminación
+del volumen aéreo pulmonar.
+
+El drenaje postural es la técnica fisiológica respiratoria basada en la adopción de diferentes posiciones
+por parte del paciente, capaces de facilitar mediante la acción de la gravedad, la salida de las secrecio-
+nes afectadas del árbol bronquial.
+
+Las posiciones de drenaje postural deben tener una duración entre 5 y 20 minutos.
+
+La colocación del paciente en distintos decúbitos selectivos acorde a la dificultad respiratoria y a la
+fisiopatogenia del proceso pulmonar mejora la disnea, la actividad muscular diafragmática y facilita
+la vehiculización de secreciones.
+
+
+
+
+Patrones ventilatorios terapéuticos
+de la reeducación respiratoria:
+a) Patrón ventilatorio diafragmatico (PVD)
+Su técnica se caracteriza por la realización de una inspiración nasal lenta con volúmenes constantes,
+con protrusión abdominal inspiratoria por acción diafragmática sin la actividad accesoria de los mús-
+culos escalenos o esternocleidooccipitomastoideo; con chistido o seseo espiratorio sin participación
+de la musculatura abdominal
+
+b) Patrón ventilatorio de sollozos inspiratorios diafragmáticos
+Esta técnica consiste en producir sucesivas y breves inspiraciones hasta llegar a capacidad pulmonar
+total (CPT), luego espiración bucal seseando o chistando. .
+
+c) Patrón respiratorio intercostal
+La técnica para activar la musculatura intercostal consiste en realizar una inspiración nasal movilizan-
+do la región torácica medio-lateral, y luego una espiración nasal sin participación de la musculatura
+abdominal con relación I:E 1:2, con volumen de aire inhalado suficiente (no forzado y sin actividad
+inspiratoria prolongada) y con una espiración tranquila (sin trabajo espiratorio activo). Se recomienda
+su realización por vía nasal en los dos tiempos del ciclo total, para así no provocar la mencionada par-
+ticipación de los músculos abdominales en la espiración y del diafragma en la inspiración.
+
+
+
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                                   24
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+
+Rehabilitación respiratoria en la etapa crónica:
+La rehabilitación respiratoria (RR) es el conjunto de procedimientos dirigidos a ayudar a una persona
+a alcanzar el más completo potencial respiratorio y físico compatible con su deficiencia fisiológica o
+anatómicas, intentando restablecer o restaurar la salud, producida por una discapacidad o secuelas
+de una enfermedad, para aumentar la función perdida y así la calidad de vida.
+
+Los objetivos de la RR son:
+• Contribuir a la desobstrucción de las zonas pulmonares colapsadas.
+• Ayudar a mejorar el intercambio gaseoso.
+• Intervenir en la eliminación de procesos infecciosos y en la absorción de exudados pleurales.
+• Mejorar la circulación y perfusión pulmonar.
+• Aliviar las algias producidas por posturas defectuosas.
+
+
+
+
+Reeducación al esfuerzo:
+Una vez que el enfermo interioriza los parámetros ventilatorios normales, y tiene despejada su vía
+aérea de secreciones nocivas, se le instruye y adiestra en un protocolo de ejercicios terapéuticos espe-
+cíficos para volver a reeducarlo al esfuerzo, esto es, para que pueda realizar las actividades de su vida
+diaria y otras demandas externas cursando con la menor fatiga y esfuerzo.
+Los objetivos de la reeducación al esfuerzo son: reducir los síntomas, mejorar la tolerancia al ejercicio
+físico y la calidad de vida.
+
+Se recomienda el entrenamiento de los miembros superiores e inferiores, complementando el entre-
+namiento de fuerza. Se fijan también objetivos educativos para los programas de rehabilitación que
+incluyen la cesación de fumar, aspectos nutricionales y apoyo psicológico.
+
+
+
+
+Dispensa de fármacos antituberculosis
+La organización de la dispensa de medicamentos tuberculostáticos es fundamental para el tratamiento
+oportuno y eficaz de los pacientes con TB. Es necesario asegurar continuidad , calidad y dosis ade-
+cuadas a los mismos, para ello es necesario planificar y fortalecer el sector mediante pautas claras de
+administración. El tratamiento antituberculosis se administrará en la modalidad supervisada en los
+pacientes internados y se harán todos los esfuerzos para seguir la misma modalidad con los ambula-
+torios.
+
+
+
+
+Ejes de la organización:
+1-Farmacéutico responsable: es el profesional encargado de interactuar con el Jefe de la Red de Tu-
+berculosis del Gobierno de la Ciudad a fin de garantizar el abastecimiento de medicamentos en tiempo
+y forma.
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                                 25
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+Responsabilidades:
+a) Conocer detalladamente la cantidad de pacientes con TB internados en el Hospital Muñiz y los re-
+querimientos de medicación
+b) Conocer la cantidad de pacientes con TB en tratamiento ambulatorio en los consultorios externos del
+Hospital Muñiz y del Instituto de Tisioneumonología “Prof. Dr. Raúl Vaccarezza” y sus requerimientos.
+c) Estar informado de los pacientes en su asociación HIV/Sida/TB inscriptos en el Programa de Sida a
+fin de evitar duplicaciones.
+
+2-Farmacéuticos responsables de la dispensa: los profesionales responsables de la dispensa deberán
+tener una ficha que permita corroborar la entrega de medicación, así como los cambios de la misma
+(toxicidad, embarazo, multirresistencia).
+
+En pacientes ambulatorios:
+a) El paciente deberá ser registrado en la ficha correspondiente.
+b) La administración de la medicación al encargado de supervisar el tratamiento se realizará quince-
+nalmente
+c) Para que la medicación sea adjudicada al paciente deberá constar en la receta correspondiente por
+parte del médico tratante
+d) Cualquier cambio de medicación, reducción de dosis o prolongación del tratamiento debe constar
+en la ficha del paciente
+e) Se deberá contar con un soporte informático adecuado que permita observar abandonos, a fin de
+trabajar conjuntamente con servicio social para que haga el seguimiento de los mismos.
+
+Responsabilidades:
+a) Registrar a todos los pacientes con TB a los que se dispensa medicación
+b) Mantener al día el registro de tuberculosis
+c) Procurar que la ficha del paciente se complete en forma correcta
+d) Cerciorarse que se indiquen las pautas y dosis correctas
+
+En pacientes internados la entrega de la medicación se realizará contra entrega de la planilla de solici-
+tud firmada oportunamente por el Jefe de Unidad, División o Departamento según corresponda
+
+Control de gestión: El Jefe de Farmacia es el responsable del control de gestión tanto de la provisión
+como de la dispensa al encargado de supervisión del tratamiento, por lo que se utilizarán indicadores
+que permitan evaluar la misma.
+
+Responsabilidades:
+a) Controlar y garantizar el correcto funcionamiento de la Farmacia
+b) Informar a las autoridades correspondientes ante la falta de medicamentos tuberculostáticos
+c) Realizar informes de la unidad de gestión a su cargo en forma anual o cuando sea requerida por las
+autoridades hospitalarias
+d) Establecer un mecanismo de farmacovigilancia de drogas tuberculostáticas a fin de establecer estra-
+tegias de optimización de los medicamentos
+
+
+
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                                 26
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+
+Criterios de internación en tuberculosis                                      7, 56, 67
+
+
+
+
+El tratamiento de la TB en la mayor parte de los casos debe ser ambulatorio, pero existen situaciones
+en las que es necesaria la internación. Cuando ello ocurre es necesario disponer de las medidas de
+bioseguridad hospitalarias adecuadas.
+
+Las indicaciones de internación son:
+
+1. Formas avanzadas de TB con repercusión grave en el estado general del paciente,
+como por ejemplo:
+• TB miliar
+• TB meníngea
+• TB peritoneal
+• Mal de Pott con compromiso neurológico.
+
+2. Complicaciones de la TB:
+• Hemoptisis
+• Insuficiencia respiratoria
+• Desnutrición severa
+
+3. Asociación morbosa:
+• Diabetes descompensada
+• Inmunosupresión grave con patología multiorgánica y/o plurietiológica.
+• Trastornos psiquiátricos que impidan tratamiento ambulatorio.
+
+4. Abandono de tratamiento en forma reiterada.
+
+5. Reacciones adversas graves a fármacos tuberculostáticos.
+
+6. Causas sociales.
+
+
+
+Requeriran internacion en Terapia Intensiva:
+
+1. Hemoptisis grave o cataclísmica
+
+2. Insuficiencia respiratoria
+
+3. Insuficiencia renal
+
+4. Insuficiencia hepática
+
+5. Alteración del sensorio
+
+6. Descompensación hemodinámica
+
+
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                             27
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+
+Prevención
+Estudio de contactos:
+La fuente de infección es el enfermo con TB pulmonar o laríngea, que elimina bacilos en sus secrecio-
+nes. El mayor riesgo de contagio lo representan los pacientes con examen directo de esputo positivo.
+Aquellos con baciloscopía de esputo negativa pero con crecimiento bacilar en el cultivo también con-
+tagian, aunque en menor medida, deben ser estudiados también.
+Contactos son todas las personas expuestas ó relacionadas con el caso índice o inicial que se define
+como el primer caso conocido de TB de cada grupo, y que da comienzo a la evaluación de los contac-
+tos.
+
+Los contactos se clasifican como de:
+
+Alto riesgo: conviviente en vivienda, institución cerrada, sección laboral o educativa con contacto dia-
+rio de 6 ó más horas diarias y permanente o con inmunodeficiencia68.
+
+Mediano riesgo: iguales condiciones pero de duración diaria menor de 6 h.
+
+Bajo riesgo: contactos esporádicos.
+
+Las personas inmunocomprometidas son consideradas como de alto riesgo, independientemente de
+la frecuencia del contacto.
+
+Es impostergable el estudio de todos los contactos de alto y mediano riesgo de pacientes bacilíferos,
+y deseable el de los no bacilíferos.
+
+Todo estudio de foco debe incluir:
+1. Registro de todos los contactos a estudiar.
+2. Examen clínico exhaustivo.
+3. Prueba tuberculínica.
+4. Examen radiológico de tórax.
+5. Examen bacteriológico en sintomáticos respiratorios.
+6. Laboratorio de rutina.
+
+Examen clínico exhaustivo:
+En niños se debe prestar atención sobre la vacunación BCG, observación del carné de inmunizaciones
+y presencia de cicatrices y/o nódulos vaccinales. Tanto en niños como en adultos, se debe investigar la
+presencia de manifestaciones respiratorias y extrarrespiratorias como eritema nodoso y queratocon-
+juntivitis flictenular, búsqueda de ganglios periféricos, lesiones cutáneas y mucosas.
+
+Prueba tuberculínica:
+Se aplica según la técnica de Mantoux, por vía intradérmica en la cara externa del antebrazo izquierdo
+y se mide la presencia de la induración (pápula) en el lugar de la aplicación entre las 48-72 hs. de la ino-
+culación. La lectura debe hacerse con regla, midiéndose la induración en forma perpendicular al brazo
+según el siguiente nivel de corte:
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                                    28
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+0-4 mm.: prueba negativa.
+
+5-9 mm.: prueba dudosa.
+
+≥ 10 mm.: prueba positiva
+
+En pacientes inmunodeprimidos, se fija el valor de corte para reacción positiva en 5 mm[69]. Se pro-
+pone también el mismo valor para los contactos estrechos de pacientes bacilíferos, con el objeto de
+priorizar la detección de individuos infectados con respuestas débiles a la tuberculina que se encuen-
+tran en un grupo de alto riesgo de contagio.
+Para todos los demás casos, se mantiene el valor de positividad en ≥ 10 mm.
+
+Las reacciones falsas negativas pueden observarse en estados de disminución de la inmunidad transi-
+toria o permanente (desnutrición, diabetes, HIV, TB grave, etc.) y también dependen de la potencia del
+reactivo utilizado y fallas en la técnica de aplicación y lectura. Las reacciones falsas positivas pueden
+deberse a técnica deficiente y reacciones cruzadas con micobacterias y vacunación BCG (aunque son
+poco frecuente respuestas ≥ 10 mm por ésta última causa).
+
+Indicaciones de la prueba tuberculínica69, 70
+• Diagnóstico de infección TB en contactos.
+• Estimación de tasas de prevalencia e incidencia en diferentes comunidades, especialmente las cerra-
+das: habitantes de cárceles, hospitales, escuelas, hogares, neuropsiquiátricos, geriátricos, comunida-
+des de inmigrantes de regiones con alta prevalencia de TB, etc.).
+• Detección de infección TB en personas con mayor riesgo conocido de enfermar: niños, especialmente
+los menores de cinco años, pacientes con inmunocompromiso, adictos endovenosos, personas con
+secuelas radiológicas no tratadas, etc.
+
+Virada o viraje tuberculínico y efecto de reforzamiento (efecto booster)
+Se denomina virada o viraje tuberculínico71 a la variación mayor de 10 mm. (en contactos de pacientes
+bacilíferos puede considerarse 5 mm), en el diámetro de dos pruebas tuberculínicas realizadas con un
+intervalo entre 2 meses a 2 años. Refleja infección reciente y es indicación en poblaciones susceptibles
+de quimioprofilaxis (QP).
+El efecto reforzador o booster72 es la amplificación del diámetro de la reacción en un paciente previa-
+mente infectado, inducida por la repetición de la prueba tuberculínica. Es provocado por la activación
+de los linfocitos T de memoria sin mediar nueva infección. Puede distinguirse de la virada o viraje tu-
+berculínico aplicando una segunda inyección de PPD entre la 1ª y 3ª semana de la primera, que de ser
+positiva indicaría que se trata de un efecto booster y no de una verdadera reacción positiva (prueba
+tuberculínica en dos etapas).
+
+
+
+
+Quimioprofilaxis                 73, 74
+
+
+
+
+Definición
+Es la administración de uno o más fármacos antituberculosis a una persona expuesta al riesgo
+de la enfermedad para evitar el desarrollo de la misma, o para evitar la recaída en pacientes con
+TB no tratada y aparentemente curados.
+
+Antes de indicar quimioprofilaxis (QP) debe descartarse la presencia de enfermedad, luego deberá
+evaluarse la conveniencia de realizarla, analizando la situación epidemiológica, las características y
+sensibilidad a H del caso índice y las eventuales comorbilidades, especialmente hepatopatía previa y
+
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                                 29
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+medicación concomitante.
+
+Hay que solicitar hepatograma al inicio del tratamiento y advertir al paciente sobre posibles síntomas
+de hepatotoxicidad (náuseas, vómitos. dolor abdominal, ictericia). Se aconseja hepatograma por lo
+menos bimestralmente.
+
+El riesgo de desarrollar hepatitis es de 0,3% en pacientes jóvenes sin hepatopatía previa. En mayores
+de 35 años este riesgo aumenta. Puede ocurrir elevación transitoria de enzimas hepáticas de poca
+magnitud que se resuelve sin tratamiento. La hepatitis grave puede ocurrir en 1 por mil de los casos y
+puede ser fatal.
+
+La medicación debe suspenderse si el paciente presenta aumento de las transaminasas por 3 veces el
+valor máximo normal con síntomas o 5 veces sin síntomas.
+
+La QP es eficiente cuando se dirige hacia grupos individualizados por su mayor riesgo de enfermar.
+Su impacto sobre el control de la TB es menor al de otras intervenciones, como la detección precoz de
+casos abiertos, la implementación de la estrategia DOTS y el mejoramiento de las condiciones de vida
+de la población.
+
+I) Quimioprofilaxis primaria:
+Es la administración de medicamentos específicos con el objeto de evitar la infección por M. tubercu-
+losis.
+
+II) Quimioprofilaxis secundaria ó tratamiento de la infección tuberculosa latente:
+Es la administración de medicamentos antituberculosos con el objeto de evitar el desarrollo de la en-
+fermedad.
+
+Fármaco utilizado habitualmente: isoniacida ( H )
+
+• Dosis: 5 mg/kg/d. En niños y adultos la dosis no varía
+
+• Dosis Máxima: 300 mg/d. Toma única por vía oral
+
+• Tiempo de administración: 6 meses
+
+Indicaciones de quimioprofilaxis:
+
+• A todo contacto de alto o mediano riesgo menor de 35 años.
+
+• Virada o viraje tuberculínico.
+
+• Niños <5 años con solamente PPD + y sin BCG.
+
+• Grupos de riesgo con PPD +: HIV/Sida, renales crónicos, corticoterapia, uso de fármacos anti TNF, pre-
+transplante, silicosis, residentes de comunidades cerradas, adictos EV, secuelas de una probable TB).
+
+• Quimioprofilaxis para evitar recaídas: evaluar riesgo versus beneficio.
+
+Quimioprofilaxis en situaciones especiales:
+
+• Intolerancia o resistencia conocida a isoniacida del caso índice: rifampicina: 10 mg/Kg./d: 4 meses.
+
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                                30
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+• Contactos con pacientes con TB fármacorresistente (TBFR): no existen en la actualidad estudios pros-
+pectivos ni consenso de expertos que avalen determinado tratamiento. En contactos de TBMR se ha-
+cen controles periódicos con seguimiento mínimo de 2 años.
+
+• En los casos en que conserve sensibilidad a fármacos de primera línea y el contacto presente alto
+riesgo de enfermar (niños, inmunodeprimidos, contacto prolongado, virada tuberculínica) se puede
+administrar por 6-12 meses (no hay evidencia de su utilidad):
+- Pirazinamida-etambutol
+- Pirazinamida-fluoroquinolona
+
+• HIV/Sida:
+- H: 9 meses.
+
+A los convivientes y contactos PPD negativos (no infectados) se les realizará un nuevo control a los
+3 meses (ya que existe un período de ventana entre la infección y la virada o viraje tuberculínico que
+oscila entre 3 y 8 semanas, llamado período prealérgico). Si se produjo (infección) debe completarse el
+esquema durante 6 meses con H.
+
+Si al cabo de 3 meses de ser tratado con QP los contactos de un paciente bacilífero siguen teniendo
+PPD (-) y habiéndose controlado todos los contactos del foco estudiados, se puede suspender la QP a
+los 3 meses de iniciada.
+
+
+
+
+Vacuna BCG
+La cepa BCG (bacilo de Calmette y Guerin) a una variedad de subcepas derivadas del Mycobacterium
+bovis aislado en Francia en 1902 por Nocard y atenuado en su virulencia por Calmette y Guerin.
+
+Técnica de aplicación:
+Se inyecta en forma intradérmica 0,1 ml de vacuna en la piel de la región póstero-externa del brazo
+derecho, en la unión del tercio superior con el tercio medio, ligeramente por debajo y por detrás de la
+V deltoidea75, 76.
+
+Evolución de la lesión vaccinal:
+A los 18 a 25 días de la inoculación aparece en el lugar de la vacunación un pequeño nódulo, que se
+endurece, aumenta de tamaño y mantiene su base indurada, con piel roja y fina, que luego se torna
+violácea, se pustuliza y forma un pequeño orificio por el que mana una gota de serosidad, hacia la 6ª
+semana. La supuración en general es mínima y en 1 a 3 semanas se forma una pequeña costra de 4 a
+7 mm de diámetro, rodeada de una zona roja. Algunas semanas más tarde la costra cae, dejando una
+zona definida que persiste hasta el 6° mes. Al cabo de un año la cicatriz vaccinal se torna menos visible,
+quedando una pequeña zona pálida76, 77.
+
+Reacciones indeseables:
+Se entiende por complicaciones las manifestaciones debidas exclusivamente al BCG mismo. Entre un
+1 a 2 % de los niños desarrollan complicaciones a la vacunación con BCG75, 77, 78, 79, 80.
+
+Complicaciones del BCG:
+
+1) Complicaciones en el sitio de aplicación de la vacuna (no requieren tratamiento específico de TB):
+a) Lentitud en la cicatrización: puede tardar alrededor de 4 meses en cicatrizar
+
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                                  31
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+b) Tendencia extensiva de la ulceración
+c) Infección de la lesión local, generando piodermitis.
+d) Abscesos locales: son muy raros y se producen por defectos de técnica.
+e) Reacciones pseudo-eczematosas: producidas en general por curas locales.
+f) Cicatrices queloides: en personas con tendencia a esa de cicatrización
+g) Lupus vulgar.
+
+2) Complicaciones regionales:
+Las adenitis constituyen las complicaciones más frecuentes.
+a) Adenitis inflamatoria simple: pequeños ganglios que aparecen entre la 3ª a 5ª semana después de
+la vacunación, duras, movibles, que retrotraen en uno a tres meses.
+b) Adenitis supurada: aparecen entre 2 a 9 meses luego de la vacunación.
+
+3) Complicaciones sistémicas:
+a) Generalización de la BCG: se observa entre 0.2-2/1.000.000 de vacunados, atribuible a síndromes de
+inmunodeficiencia hereditario, congénito ó adquirido. Requieren tratamiento con cuatro drogas antitu-
+berculosas excluyendo Z a la que el M. bovis es naturalmente resistente.
+b) Reacciones anafilactoides al dextrán contenido en las preparaciones.
+c) Osteítis ú osteomielitis alejadas del foco de aplicación. Requieren tratamiento como a).
+
+Protección conferida por la vacuna BCG:
+Protege frente a la TB diseminada y las formas graves que ocurren después de la primoinfección.
+La protección del BCG para formas pulmonares es muy variable, entre el 0 y 80%, dependiendo del
+estado clínico y nutricional del niño, así como del tipo de vacuna utilizada. El efecto protector sobre
+meningitis es del 64% y contra formas diseminadas78, 77, 78, 81, 82.
+
+Indicaciones de vacunación83
+a) Todo recién nacido con peso mayor a 2.000 gramos, debe ser vacunado antes de egresar de la
+maternidad (en recién nacidos con peso inferior al mencionado se debe posponer la vacunación hasta
+alcanzarlo)
+b) El Comité Nacional de Infectología según resolución ministerial Nº195/07 ha discontinuado la vacu-
+nación a los 6 años. Solo se administra una única dosis al nacer ó hasta los seis años si el niño no tiene
+certificado de vacunación ni cicatriz
+
+Contraindicaciones de la vacunación78, 79
+a) En pacientes con inmunocompromiso comprobado se contraindica la vacunación BCG. Se insiste en
+la no vacunación de hijos nacidos de madres HIV positivas, hasta la evaluación definitiva de la serolo-
+gía HIV y estado inmunológico.
+b) Enfermedades con grave compromiso del estado general.
+c) Afecciones generales de la piel, como infecciones y quemaduras.
+d) En enfermedades infecciosas (especialmente sarampión y varicela): debe esperarse un mes de trans-
+curridas para aplicar la vacunación.
+e) Tratamiento prolongado con esteroides ó inmumosupresores: debe vacunarse 2 a 4 semanas poste-
+riores a la suspensión.
+f) Otras vacunas pueden ser administradas simultáneamente con la BCG, pero en otra zona corporal.
+
+Nuevas vacunas contra la tuberculosis
+Se trabaja actualmente en vacunas que no desarrollan fenómenos de hipersensibilidad y, por lo tanto,
+no son capaces de modificar la reacción al PPD y también en otras del tipo recombinante que expresan
+antígenos como el Ag 85A, Ag 85B y ESAT-6 del M. tuberculosis, que podrían inducir mejores respues-
+tas con altos niveles de inmunidad celular84, 85, 86.
+
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                                  32
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+
+Control de infecciones                            87, 88, 89, 90, 91
+
+
+
+
+La TB/TBMR es una enfermedad de transmisión aerógena a través de los aerosoles generados en la vía
+respiratoria alta y los núcleos deshidratados de las microgotas expelidas al toser, estornudar, hablar,
+reír o llorar, que contienen bacilos virulentos y pueden persistir más de un día en ambientes no venti-
+lados.
+
+Las medidas de control de infecciones (CI) en lugares de alto o mediano riesgo de transmisión de TB/
+TBMR abarcan procedimientos 1) administrativos, 2) de ingeniería y 3) protección respiratoria personal.
+
+Es imprescindible la capacitación y supervisión periódica del personal de salud en el uso de estas me-
+didas de CI. Dichas actividades estarán a cargo del Comité de Control de Infecciones del hospital.
+
+
+
+Procedimientos administrativos:
+Tienen por objeto reducir la exposición de personal de salud y pacientes a la TB/TBMR.
+
+Incluyen diversas medidas
+a) Detección precoz del paciente bacilífero: a todo sintomático respiratorio (tos y expectoración muco-
+purulenta de más de 15 días) deberá efectuarse Rx tórax y baciloscopía a la mayor brevedad posible
+(por guardia si es un ingreso hospitalario).
+
+b) Pacientes a internar: si la baciloscopía es positiva el paciente deberá ser internado en habitaciones o
+salas de aislamiento para TB. La muestra de esputo deberá ser cultivada en métodos rápidos (BACTEC
+MGIT 960) para determinar sensibilidad como mínimo a H y R. Son preferibles aunque de mayor costo
+para el tamizado de resistencias los métodos moleculares (PCR+hibridación de sondas de ADN por
+ejemplo) que acortan el tiempo de detección en caso de baciloscopías positivas de 21 días a 1.
+
+c) Las habitaciones de aislamiento: deben ser individuales o en caso de pabellones, destinarlos a TB
+sensible, TB resistente, HIV positivos o HIV negativos por separado. Los pacientes permanecerán en
+aislamiento hasta presentar baciloscopía negativa.
+Si el paciente debe deambular por el hospital (procedimientos diagnósticos por ejemplo) lo hará con
+máscara quirúrgica correctamente colocada.
+
+d) Pacientes ambulatorios con baciloscopía positiva: utilizarán máscara quirúrgica mientras persistan
+bacilíferos durante su permanencia en el hospital (consultas, retiro de medicación, procedimientos);
+deben ser instruidos cuidadosamente al respecto.
+
+e) Control del personal de salud: el personal de salud debe someterse a control periódico (anual) con-
+sistente en Rx de tórax, PPD 2 UT y baciloscopía y cultivo de esputo a los sintomáticos respiratorios. En
+caso de positividad de la PPD, es decir 10 mm o más, se tomará como infección latente (con Rx normal
+y baciloscopía y cultivo de esputo negativos) y se ofrecerá quimioprofilaxis con H 6 meses a efectuar
+por única vez; los PPD negativos repetirán la prueba anualmente, los positivos no.
+El personal de salud afectado por TB/TBMR no volverá a trabajar en contacto con pacientes bacilíferos,
+asignándoseles otras tareas en el hospital.
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                                  33
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+Tampoco podrá trabajar en contacto con enfermos bacilíferos el personal de salud en situaciones de
+inmunodepresión (diabetes, HIV, tratamientos inmunosupresores, etc).
+
+
+
+
+Medidas de ingeniería:
+Tienen por objeto reducir el número de partículas infectantes en el ambiente. Los procedimientos inclu-
+yen: ventilación, filtrado del aire, luz UV germicida. El Ingeniero Bioambiental del hospital debe estar
+a cargo de su instalación y mantenimiento. Las medidas son aplicables tanto a ámbitos de internación
+en modalidad aislamiento como a habitaciones donde se realizan procedimientos generadores de ae-
+rosoles (broncoscopía por ej.).
+
+La ventilación podrá ser:
+a) Natural: la ventilación cruzada (es decir ventanas opuestas abiertas) es la más eficiente; la ventana
+simple abierta lo es menos. Tiene el inconveniente de no poder utilizarse en épocas frías y la ventaja
+de ser la más económica.
+
+b) Forzada: mediante dispositivos de extracción forzada de aire (extractores) que aseguren un recam-
+bio mínimo de 12 cambios/hora. Un extractor de cocina promedio es suficiente para una habitación
+individual. En pabellones se utilizarán extractores industriales. El aire extraído deberá estar dirigido a
+sectores donde no circulen ni habiten personas.
+
+Filtrado del aire: mediante filtros de alta eficiencia (HEPA) que eliminan > 99% de las partículas > a 0,3
+mm. Pueden colocarse filtros portátiles en habitaciones individuales o sistemas de filtrado central en
+pabellones. Requieren mantenimiento y validación periódicos por personal especializado.
+Luz UV germicida: opera en 253 nm. Es una medida complementaria. Los dispositivos deben instalarse
+y mantenerse por personal especializado.
+
+
+
+
+Medidas de protección respiratoria personal:
+El objetivo es filtrar el aire inspirado por el personal de salud en contacto con pacientes bacilíferos y, en
+los pacientes bacilíferos, prevenir la eliminación al ambiente de aerosoles/microgotas infectantes. Su
+uso no reemplaza los otros niveles de CI.
+La máscara quirúrgica (“barbijo”) deberá colocarse a los pacientes bacilíferos cuando no estén en las
+habitaciones/pabellones de aislamiento.
+Los filtros de partículas N-95 (filtrado del 95% de las partículas > 0,3 mm) deberán utilizarse adecuada-
+mente por el personal de salud en contacto con pacientes bacilíferos. Su uso y conservación requiere
+capacitación periódica. Pueden reutilizarse hasta un máximo de 15 días. Su capacidad filtrante no dis-
+minuye con el uso (siempre y cuando no se resquebrajen), sino que se van obstruyendo los poros y es
+más difícil respirar a través de ellos, lo que requiere su reemplazo.
+
+
+
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                                     34
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+
+Tuberculosis cutánea
+La TB cutánea (TBc) es la infección crónica de la piel producida por el Mycobacterium tuberculosis,
+Mycobacterium bovis y, en ciertas ocasiones, por el BCG.
+
+Epidemiología
+La TBc representa el 1 al 2% de las formas extrapulmonares92. Su asociación con TB visceral se observa
+en alrededor de un 28% de los casos[93]. El conocimiento de la TBc permite, muchas veces, descubrir
+una forma visceral hasta ese momento ignorada.
+Las lesiones se pueden producir por extensión de un foco tuberculoso subyacente ya sea ganglionar,
+óseo, o articular o bien, por diseminación hematógena o linfática desde un foco visceral.
+
+
+
+Clasificación de las tuberculosis cutáneas
+Se clasifica de acuerdo con la vía de infección (Beyt y colab.)94.
+
+
+ » Tuberculosis:
+ Infección exógena: complejo primario cutáneo; TB verrugosa.
+ Diseminación endógena: lupus vulgar; TB colicuativa (escrofuloderma,         absceso tuberculoso
+ metastásico); TB orificial; TB aguda miliar diseminada.
+ » Tubercúlides: no se consideraran en esta guía, pues son de patogenia poco conocida. Com-
+ prenden: líquen escrofuloso y tubercúlide papulonecrótica. Tubercúlides facultativas: eritema
+ indurado de Bazin y eritema nudoso.
+ » Tuberculosis causada por vacunación BCG.
+
+a) TUBERCULOSIS PRIMARIA:
+El complejo primario cutáneo es el resultado de la infección de piel o mucosas, en un huésped no
+infectado, cuando la integridad de la barrera cutánea se encuentra alterada. El agente penetra por vía
+exógena. Se presenta en niños y adolescentes, en sitios descubiertos. En un tercio de los casos puede
+comprometer mucosas. La lesión aparece 2 a 4 semanas después de la infección. Se trata de una pápu-
+la pequeña o herida que tiende a persistir y se ulcera. La infección luego se disemina a los ganglios
+linfáticos regionales, aparece la adenitis con periadenitis, adherencia a la piel, reblandecimiento y fis-
+tulización. En alrededor del 50% de los casos los ganglios se calcifican.
+El chancro y la adenitis constituyen el complejo primario. Cura de manera espontánea en menos de
+un año, dejando una cicatriz. En coincidencia con la adenitis se produce la virada tuberculínica95, 96, 97.
+
+b) TUBERCULOSIS POSPRIMARIA (extraprimaria):
+Tuberculosis verrugosa: es el resultado de la inoculación exógena, accidental o profesional, de baci-
+los procedentes de pacientes o animales infectados, o bien, por autoinoculación. La localización más
+frecuente es el dorso de las manos; también puede comprometer plantas, región perianal y nalgas. Se
+observa en la edad media de la vida. La lesión elemental es una pápula queratósica, grisácea, rodeada
+por un halo eritematoso que da lugar a una placa verrugosa, bien delimitada, que progresa por un ex-
+tremo y cicatriza por el opuesto. A la palpación su base es infiltrada y al comprimirla permite la salida
+de gotas de pus. En general, no hay afectación de los ganglios regionales. Rara vez involuciona en
+
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                                   35
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+forma espontánea. La PPD es positiva95, 96.
+
+Lupus vulgar: es una lesión extremadamente crónica, progresiva y destructiva. Se presenta en jóvenes
+y dada su cronicidad puede observarse en cualquier etapa de la vida. Predomina en el sexo femenino.
+La localización preferencial es la extremidad cefálica (pirámide nasal, pabellón auricular) y, en menor
+proporción, extremidades y tronco. Puede afectar mucosas (nasal, bucal o conjuntival) desde su inicio
+o por extensión de las lesiones cutáneas. La lesión elemental es el tubérculo o “lupoma”. Los lupomas
+se agminan para constituir una placa tórpida, con sectores atróficos, sobre la que asientan tubérculos
+en actividad (signo patognomónico). La evolución es crónica, con períodos de acalmia que alternan
+con otros de actividad. Existen formas no destructivas, de crecimiento lento, y otras destructivas, en las
+que la ulceración domina el cuadro. La PPD es positiva95, 96.
+
+Tuberculosis colicuativa: es un proceso subcutáneo, que da lugar a la formación de abscesos fríos que
+se fistulizan al exterior. Se distinguen tres formas clínicas: escrofuloderma, goma y seudomicetoma.
+
+Escrofuloderma: es la forma de TB cutánea más frecuente en nuestro medio. Es el resultado de la par-
+ticipación contigua de la piel a partir de un foco tuberculoso subyacente (ganglionar, óseo, articular o
+epididimario). Se presenta en jóvenes y ancianos. Suele ser unilateral; la localización preferencial es la
+secundaria a una adenitis cervical. La lesión elemental es un nódulo que se reblandece (goma), fistuliza
+y repara con una cicatriz estrellada, de aspecto queloideano, con puentes interlesionales, sembrada de
+comedones, que sugiere el diagnóstico retrospectivo. La PPD es positiva.
+
+Goma: es la consecuencia de la diseminación hemática de M. tuberculosis, a partir de un foco prima-
+rio. Se presenta en pacientes graves con inmunidad alterada. Suele observarse en miembros. Por lo
+general, se trata de gomas múltiples, asimétricos, que no guardan relación con procesos tuberculosos
+vecinos. La PPD es negativa95,96,97.
+
+Seudomicetoma: es una forma descripta en nuestro hospital por Cabrera y colaboradores, en 1972 y
+aún no reconocida internacionalmente. Se caracteriza por ser una tumoración inflamatoria, de con-
+sistencia duro leñosa, con gomas que se fistulizan y drenan material sin granos. Se localiza en extre-
+midades y puede, o no, haber compromiso óseo. De acuerdo a ello, es su pronóstico. Sería de origen
+exógeno98.
+
+Tuberculosis orificial: es la TB de la piel y las mucosas de los orificios naturales, producida por autoi-
+noculación, en un individuo afectado por TB visceral activa. Se presenta, en especial, en el sexo mas-
+culino.
+La localización más frecuente es la boca (punta y bordes laterales de la lengua, paladar y labios), le
+siguen los márgenes del ano y la vulva. La lesión elemental es una úlcera única o múltiple, intensa-
+mente dolorosa (rasgo patognomónico). En los estadios terminales la PPD es negativa.
+
+Tuberculosis aguda miliar diseminada: es una forma grave, muy rara de TB cutánea. Aparece en pa-
+cientes inmunodeprimidos como resultado de la diseminación hemática del bacilo a partir de un foco
+primario. Se caracteriza por pápulas, algunas centradas por vesículas, otras purpúricas distribuidas en
+toda la superficie corporal, asociadas al compromiso de numerosos órganos por TB. La PPD es nega-
+tiva95, 96, 97.
+
+Diagnóstico
+El tejido afectado responde a la infección mediante una reacción inflamatoria inespecífica. Luego,
+cuando aparecen los macrófagos, el infiltrado adquiere una estructura específica. Se constituye el
+granuloma folicular tuberculoide compuesto por células epitelioides (macrófagos), células gigantes y
+linfocitos.
+
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                                  36
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+El granuloma, además, puede presentar necrosis de caseificación. Si bien el granuloma folicular tuber-
+culoide es un signo patognomónico, su ausencia no invalida el diagnóstico, pues depende del estado
+inmunitario del paciente.
+
+De acuerdo con la forma clínica que se analice, se presentan aspectos particulares. La forma verrugosa
+se caracteriza por cambios epidérmicos; la TB orificial, por la ulceración; la necrosis de caseificación es
+característica del complejo primario y de la TB colicuativa96, 97, 98.
+
+El diagnóstico de confirmación requiere la evidencia del bacilo en las secreciones o en las muestras de
+biopsia de las lesiones cutáneas o su aislamiento en el cultivo, hecho muy poco frecuente en las TBc
+dado que, al igual que las restantes formas extrapulmonares, son en su mayoría formas paucibacilares.
+Por ello, es difícil el aislamiento del agente por lo cual se han empleado otros criterios diagnósticos.
+
+
+
+
+Criterios diagnósticos de tuberculosis cutánea:
+Criterios absolutos:
+            - Cultivo positivo para M. tuberculosis
+            - Reacción en cadena de Polimerasa (PCR) para M. tuberculosis positiva
+
+Criterios relativos:
+             - Historia clínica y exploración compatibles
+             - TB activa en otra localización
+             - PPD positiva
+             - Histología compatible (granuloma folicular tuberculoide con necrosis
+               de caseificación o sin ella)
+             - BAAR presente en la lesión
+             - Respuesta al tratamiento específico99, 100.
+
+Para establecer el diagnóstico no es indispensable que todos estos criterios estén presentes. La ma-
+yoría de las TBc son formas de alta o mediana resistencia. Este hecho hace que, la baciloscopía sea
+negativa y, la sensibilidad a la tuberculina, positiva. El escrofuloderma, la TB orificial, la TB gomosa en
+la fase terminal y la aguda miliar diseminada, por ser variedades de mediana a muy baja resistencia,
+la baciloscopía suele ser positiva y la sensibilidad a la tuberculina negativa. Cuando en la adenitis tu-
+berculosa no se rescata el agente, es útil realizar la punción aspiración con aguja fina (PAAF). Si no ha
+sido posible llegar al diagnóstico con este procedimiento, está indicada la biopsia ganglionar de tipo
+escisional y no, la incisional pues, tiene como riesgo el producir trayectos fistulosos99.
+
+Sin embargo y, pese a todo lo señalado, en la mayoría de las TBc para arribar al diagnóstico es nece-
+sario realizar la prueba terapéutica.
+
+
+
+
+Tratamiento
+Local: en algunas formas como la TB verrugosa, el lupus vulgar, el escrofuloderma y el seudomicetoma
+con compromiso óseo deben emplearse medidas complementarias del tratamiento sistémico, tales
+como: cirugía95,98, criocirugía, electrocoagulación y radioterapia.
+
+Sistémico: es el mismo régimen que para el Complejo M. tuberculosis95, 96 98.
+
+
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                                   37
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+Tuberculosis consecutiva a vacunación con BCG
+Las complicaciones son raras y pueden ser:
+a) Inespecíficas: abscesos en el sitio de inoculación; eritema multiforme; eritema nudoso y urticaria.
+b) Específicas: escrofuloderma; lupus vulgar; tubercúlides y, en casos excepcionales, TB por BCG ge-
+neralizada95.
+
+
+
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                              38
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+
+Bibliografía
+[1] Instituto Nacional de Enfermedades Respiratorias E. Coni. PRO.TB.Doc.Téc. N° 16/09.
+[2] Red de Tuberculosis de la Ciudad de Buenos Aires. Informe anual 2009.
+[3] Programa Nacional de Control de la Tuberculosis. Normas Técnicas 2008.
+[4] Hoeppner DD, Marciniuk BD, McNab W et al. Tuberculosis in patients with a normal chest radiography. Chest 1999; 115: 445-
+52.
+[5] English R, Bachmann MO, Bateman ED et al. Diagnostic accuracy of an integrated respiratory guidelines in identifying patients
+with respiratory symptoms requiring screening for pulmonary tuberculosis: a cross- sectional study. BMC Pulmonary Medicine
+2006; 6:22.
+[6] Van den Brande P, Demedts M. Pulmonary Tuberculosis in the elderly: diagnostic difficulties. Eur J Med 1992;1(4): 224.
+[7] Abbate E, Ballester D, Barrera L, Brian MC, Echazarreta A, Gaitán C, González C, Nahabedian S, Palmero D, Pelaya E, Sáenz C
+y Participantes del Consenso de Tuberculosis. Consenso Argentino de tuberculosis. Rev Arg Med Resp 2009; 9 (2): 61-99.
+[8] Mert A, Bilir M, Tabak F et al. Miliary tuberculosis: clinical manifestations, diagnosis and outcome in 38 adults. Respirology.
+2001; 6(3):217-24.
+[9] Cunha BA, Krakakis J, McDermott BP. Fever of unknown origin (FUO) caused by miliary tuberculosis: diagnostic significance
+of morning temperature spikes. Heart Lung 2009; 38(1):77-82.
+[10] Ministerio de Salud y Acción Social. ANLIS “Dr. Carlos G. Malbran” Programa Nacional de Control de Tuberculosis . Normas
+Técnicas 2002. Santa Fe 2002
+[11] Van Deun A, Hamid Salim A, Cooreman E. Scanty AFB smears: what´s in a name? Int J Tuberc Lung Dis. 2004; 6: 816-23.
+[12] Canetti G, Rist N, Grosset J. Measurement of sensitivity of the tuberculous bacillus to antibacillary drugs by the method of
+proportions. Methodology, resistance criteria, results and interpretation. Rev Tuberc Pneumol (Paris) 1963; 27:217-72.
+[13] Miller MA, Thibert L, Desjardins F, Siddiqi SH, Dascal A. Testing of susceptibility of Mycobacterium tuberculosis to
+pyrazinamide: comparison of Bactec method with pyrazinamidase assay. J Clin Microbiol 1995; 33:2468-70.
+[14] World Health Organization (WHO). Policy guidance on TB drug susceptibility testing (DST) of second-line drugs (SLD),
+Geneva, 2007.
+[15] Lemus D, Montoro E, Echemendía M, Martín A, Portaels F, Palomino JC. Nitrate reductase assay for detection of drug
+resistance in Mycobacterium tuberculosis: simple and inexpensive method for low-resource laboratories. J Med Microbiol 2006;
+55:861-3.
+[16] Boehme CC, Nabeta P, Hillemann D et al. Rapid molecular detection of tuberculosis and rifampin resistance. N Eng J Med
+2010; 363: 1005-15.
+[17] Zerbini E, Imaz MS, R. Franco R y col. Utilidad de la determinación de la actividad de adenosín deaminasa en el diagnóstico
+de la tuberculosis extrapulmonar. Libro de resúmenes. IX Congreso Argentino de Microbiología, 2001.
+[18] Menzies D, Pai M, Comstock G. Meta-analysis: new tests for the diagnosis of latent tuberculosis infection: areas of uncertainty
+and recommendations for research. Ann Intern Med 2007;146 (5):340-54.
+[19] Luetkemeyer AF, Charlebois ED, Flores LL et al. Comparison of an interferon-gamma release assay with tuberculin skin
+testing in HIV-infected individuals. Am J Respir Crit Care Med 2007; 175(7):737-42.
+[20] Korzeniewska-Kosela M, Krysl J, Muller N et al. Tuberculosis in young adults and the elderly: a prospective comparison
+study. Chest 1994; 106: 28-32
+[21] Leung AN, Brauner MW, Gamsu G, et al. Pulmonary tuberculosis: comparison of CT findings in HIV-seropositive and
+HIVseronegative patients. Radiology 1996; 198: 687-91.
+[22] Burrill, J, Williams , C,Bain, G et al. Tuberculosis: a radiology rewiew. Radiographics 2007;27: 1255-73.
+[23] MacAdams HP, Erasmus J, Winter JA. Radiological manifestations of pulmonary tuberculosis. Radiol Clin North Am 1995,
+33 (4): 655-78.
+[24] Curvo Semedo L, Teixeira L, Caseira Alves, F. Eur J Radiol 2005; 55 (2):158-72.
+[25] Méndez N, Di Lonardo M, Sawicki M, Gancedo E, Rasgido A, Fainboim H. La ultrasonografía abdominal como método
+diagnóstico orientador en tuberculosis y/o micobacteriosis en pacientes HIV. Rev Argent Radiol 1995; 59(2): 87-91.
+[26]WHO. Treatment of tuberculosis. Guidelines. Fourth Edition, Geneva, 2003. WHO/HTM/TB/2009.420.
+[27] WHO. Guidelines for the programmatic management of drug-resistant tuberculosis. Emergency update. WHO/HTM/TB
+2008.402.
+[28] American Thoracic Society/Centers for Disease Control and Prevention/ Infectious Diseases Society of America: Treatment of
+Tuberculosis. Am J Resp Crit Care Med. 2003; 167: 603-62.
+[29] Programa Nacional de Control de la Tuberculosis. Normas técnicas. Tercera edición, 2008. INER E. Coni, Santa Fe.
+[30] Goodman and Gilman’s. The pharmacological basis of therapeutics. 2001, Mc Graw Hill New York, 10th Ed, chapter 48.
+[31] Peloquin C. y col. Pharmacology of the Antimycobacterial Drugs. Medical Clinics of North America. Tuberculosis. 1993; 77 (6).
+[32] Palmero D J, Waisman JL. Tratamiento de la tuberculosis Multirresistente. En: González Montaner LJ, Palmero DJ y col.
+Tuberculosis Multirresistente. Ed. Hoechst Marion Roussel, Buenos Aires 1998, capítulo 10.
+[33] Nau R, Sorgel F, Prange HW. Pharmacokinetic optimisation of the treatment of bacterial central nervous system infections.
+
+
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                                                            39
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+Clinical Pharmacokinetics. 1998; 35 (3): 223-246.
+[34] Caminero Luna J A. Guía de la Tuberculosis para Médicos Especialistas. Unión Internacional Contra la Tuberculosis y
+Enfermedades Respiratorias (UICTER), París 2003. Cap. 9.
+[35] WHO. Guidance for national tuberculosis programmes on the management of tuberculosis in children. WHO/HTM/
+TB/2006.371.
+[36] Kabra SK, Lodha R, Seth V. Category based treatment of tuberculosis in children. Indian Pediatrics 2004; 41:927- 37.
+[37] American Academy of Pediatrics. Tuberculosis. In: Pickering LK, editor. Red book: 2003 report of the Committee on Infectious
+Diseases. 25th edition. Elk Grove Village. 2003. p. 642–60.
+[38] Sociedad Argentina de Pediatría. Consenso sobre tuberculosis infantil. Arch Argent Pediatr 2002; 100(2):159.
+[39] Feja K, Saiman L. Tuberculosis in Children. Clin Chest Med 2005; 26:295–312.
+[40] Moulding T. Et al. Fixed-dose combinations of antituberculous medications to prevent drug resistance. Ann. Intern Med.
+1995; 122: 951-54.
+[41] Danckwerts M. P., et al. Pharmaceutical formulation of a fixed-dose anti-tuberculosis combination. Int J Tuberc Lung Dis.
+2003; 7 (3): 289-297.
+[42] Thwaites GE, Duc Bang N, Dung NH, et al. Dexamethasone for the Treatment of Tuberculosis Meningitis in Adolescents and
+Adults. N Eng J Med. 2004; 351(17):1741-51.
+[43] Schoeman JF, Van Zyl LE, Laubscher JA, Donald PR. Effect of corticosteroids on intracranial pressure, computed tomographic
+findings, and clinical outcome in young children with tuberculous meningitis. Pediatrics 1997; 99(2):226– 231.
+[44] Schaaf HS, Shean K, Donald PR. Culture confirmed multidrug resistant tuberculosis: diagnostic delay, clinical features and
+outcome. Arch Dis Child 2003; 88: 1106-11.
+[45] Lobato JC, Mohle Boetani JC, Royce SE. Missed opportunities for preventing tuberculosis among children than five years of
+age. Pediatrics 2000; 106: e 75.
+[46] Drobniewski F, Eltringham I, Graham C, Magee JG, Smith EG, Watt B. A National study of clinical and laboratory factors
+affecting the survival of patients with multiple drug resistant in UK. Thorax 2002; 57:810-816.
+[47] Corti M, Palmero D. Tratamiento antirretroviral en pacientes con SIDA y micobacteriosis. Medicina (Buenos Aires). 2005;
+65(4): 353-60.
+[48] Bartlett JG. Terapéutica de las Enfermedades Infecciosas. Waverly Hispánica SA, Buenos Aires, Argentina, 2000. p: 36-52.
+[49] Corti M, Wainstein C, Metta H. Tratamiento antituberculosis en pacientes con infección por el virus de la inmunodeficiencia
+humana. En: Sancineto AE y col. Tuberculosis: diagnóstico y tratamiento. Ed Lajouane, Buenos Aires, 2009; 286-291.
+[50] Abbate EH, Chertcoff J, Musella RM.: Anemia hemolítica provocada por rifampicina. Anales de la Cátedra de Tisioneumonología
+UBA. 1980; 39: 5-7.i
+[51] Bocquet H, Bagot M, Roujeau JC. Drug induced pseudolymphoma and drug hypersensitivity syndrome (Drug Rash with
+Eosinphilia and Systemic Symptoms: DRESS). Semin Cutan Med Surg 1996; 1: 250-7.
+[52] Walsh SA, Creamer D. “Drug reaction with eosinophilia and systemic symptoms (DRESS): a clinical update and review of
+current thinking”. Clinical and Experimental Dermatology 2011, 36: 6-11.
+[53] González Montaner LJ, Castagnino JP, Musella RM: The nature and frequency of serious adverse drugs reactions to
+antituberculous therapy among HIV infected patients. Am Rev Respir Dis. 1991; 143 (S): A116.
+[54] WHO Management of MDR-TB: A field guide. A companion document to Guidelines for the programmatic management of
+drug-resistant tuberculosis. “WHO/HTM/TB/2008.402a”.
+[55] Palmero DJ, Ambroggi M, Brea A y col. Treatment and follow-up of HIV-negative multidrug-resistant tuberculosis patients in
+an infectious diseases reference hospital, Buenos Aires, Argentina. Int J Tuberc Lung Dis 2004; 8(6): 778-84.
+[56] Palmero D y Grupo de Trabajo latinoamericano en tuberculosis fármacorresistente. Pautas latinoamericanas de
+diagnóstico y tratamiento de la tuberculosis fármacorresistente. Salud (i)Ciencia 2008; 16(1):1366-1375. www.siicsalud.com/des/
+des050/06904004.htm
+[57]Palmero D, Cruz V, Museli T, Pavlovsky H, Fernández J, Waisman J. Adverse drug reactions in multidrug-resistant tuberculosis.
+Medicina (B Aires). 2010; 70(5):427-33.
+[58] Mitnick CD, Shin SS, Seung KJ et al. Comprehensive Treatment of Extensively Drug-Resistant Tuberculosis. N Engl J Med
+2008; 359(6):563-574.
+[59] Kam KM, Yip CW, Cheung TL, Tang HS, Leung OC, Chan MY. Stepwise decrease in moxifloxacin susceptibility amongs clinical
+isolates of multidrug- resistant Mycobacterium tuberculosis: correlation with ofloxacin susceptibility. Microb Drug Resistance
+2006; 12: 7–11.
+[60] Stop TB Department and Department of Child and Adolescent Health and Development of the World Health Organization. A
+research agenda for childhood TB. 3. Treatment. WHO/HTM/TB/2007.381.
+[61] Stop TB Partnership Childhood TB Subgroup. World Health Organization, Geneva, Switzerland. Chapter 2: Anti-tuberculous
+treatment in children. Int J Tuberc Lung Dis 2006; 10: 1205-11.
+[62] WHO, Geneva, Switzerland. Implementing the WHO Stop TB Strategy: a handbook for national tuberculosis control
+programmes. WHO/HTM/TB/2008.401.
+[63] Grupo de trabajo de Tuberculosis de la SEIP. Documento de consenso sobre el tratamiento de la tuberculosis pulmonar en
+niños. An Pediatr (Barc). 2007; 66:597-602.
+
+
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                                                         40
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+[64] Sociedad Argentina de Pediatría. Comité Nacional de Neumonología y Comité Nacional de Infectología. Tuberculosis infantil.
+Modificaciones a los criterios de diagnóstico y tratamiento de la tuberculosis infantil Arch Argent Pediatr 2007; 105 (1):54-5.
+[65] Marais BJ, Gie RP, Schaaf HS, Beyers N, Donald PR, Starke JR. Childhood Pulmonary Tuberculosis. Old Wisdom and New
+Challenges. Am J Respir Crit Care Med 2006; 173: 1078-90.
+[66] Sancineto Antonio E y col. Tuberculosis : Diagnóstico y Tratamiento. Edit Lajouane. Bs.As 2009; 7: 169-175.
+[67] Iseman MD. Tuberculosis therapy: past, present and future. Eur Respir J 2002; 20: 87-95.
+[68] WHO. Control Mundial de la Tuberculosis 2008; p 1-2.
+[69]American Thoracic Society and Centers for Disease Control and Prevention. Targeted tuberculin testing and treatment of
+latent tuberculosis infection. Am. J Respir Crit Care Med. 2000; 161:S221-S47.
+[70]Grupo de Trabajo de Tuberculosis de la Sociedad Española de Infectología Pediátrica (SEIP) Documento de consenso sobre
+tratamiento de la exposición a tuberculosis y de la infección tuberculosa latente en niños. An Pediatr (Barc) 2006; 64:59-65.
+[71]Grupo de Estudio de Contactos de la Unidad de Investigación Tuberculosis de Barcelona (UITB). Documento de consenso
+sobre el estudio de los contactos en los pacientes tuberculosos. Med Clin (Barc). 1999;112:151.
+[72] Thompson NJ, Glassroth JL, Snider DE Jr., Farer LS. The booster phenomenom in serial tuberculin testing. Am Rev Respir
+Dis 1979; 119:587-597
+[73] An Official ATS Statement: Hepatotoxicity of Antituberculosis Therapy. Am J Respir Crit Care Med 2006; 174: 935- 952.
+[74] Centers for Disease Control and Prevention (CDC). Guidelines for Preventing the Transmission of Mycobacterium tuberculosis
+in Health-Care Settings, 2005, CDC. MMWR 2005; 1- 269.
+[75] Barreto ML, Pereira SM, Ferreira AA. BCG vaccine: efficacy and indications for vaccination and revaccination. J Pediatr (Rio
+J) 2006; 82:S45-54.
+[76]WHO. BCG in Immunization Programmes. Wkly Epidemiol Rec (WER) 2001; 76(5):33-39. Web access: ww.who.int/docstore/
+wer/pdf/2001/wer7605.pdf.
+[77]González Montaner LJ; González Montaner PJ. Tuberculosis. Biblioteca virtual www.dic.org.ar Cap 17: 578-600.
+[78]Caminero Luna JA. Vacunación BCG. En Guía de la Tuberculosis para Médicos Especialistas. Unión Internacional Contra la
+Tuberculosis y Enfermedades Respiratorias (UICTER) París - Francia. 2003; 273-290.
+[79]WHO. BCG in Immunization Programmes. Wkly Epidemiol Rec (WER) 2001; 76(5):33-39. Web access: ww.who.int/docstore/
+wer/pdf/2001/wer7605.pdf
+[80]Greppi Quezada D, Guzmán Meléndez MA. Tuberculosis vaccines. AAIC (Archivos Alergia Inmunología Clínica) 2007;
+38(4):148-154.
+[81] Bonifachich E, Chort M, Astigarraga A, Diaz N, Brunet B, Pezzotto SM, Bottasso O. Protective effect of BCG vaccination in
+children with extra-pulmonary tuberculosis, but not the pulmonary disease. A case-control study in Rosario, Argentina. Vaccine
+2006; 24:2894-9.
+[82] Rodrigues LC, Diwan VK, Wheeler JG. Protective effect of BCG against tuberculous meningitis and miliary tuberculosis: A
+meta-analysis. Int. J. Epidemiol. 1993; 22: 1154-58.
+[83] WHO. Guidance for national tuberculosis programmes on the management of tuberculosis in children. WHO/HTM/
+TB/2006.371 WHO/FCH/CAH/2006.7
+[84]García LF, Barrera LF. Perspectivas para nuevas vacunas antituberculosas en la era postgenómica Biomédica 2004; 24
+(Supl):228-3.
+[85] López M, Mallorquin P, Pardo R, Vega M. Vacunas humanas de nueva generación. Genoma España/CIBT-FGUAM Informe de
+Vigilancia tecnológica. www.gen-es.org 2004; 16-24.
+[86]Martín C, Bigi F, Gicquel B. New Vaccines against Tuberculosis. En: Palomino Leão Ritacco Tuberculosis From basic science
+to patient care. First Edition www.Tuberculosis Textbook.com. 2007; Cap. 10: 341-460.
+[87] Centers for Disease Control and Prevention (CDC). Guidelines for preventing the transmission of Mycobacterium tuberculosis
+in health-care facilities, 1994. MMWR 1994; 43 (RR-13): 1-132.
+[88] WHO. Guidelines for the prevention of tuberculosis in health care facilities in resource-limited settings. WHO/CDS/TB/99.269.i
+[89] CDC. Guidelines for preventing the transmisión of Mycobacterium tuberculosis in health care settings, 2005. MMWR 2005;
+54 (RR-17): 1-141.
+[90] Palmero D. Bioseguridad y tuberculosis. En: Durlach R, Del Castillo M. Epidemiología y control de infecciones en el hospital.
+Ediciones de la Guadalupe, Buenos Aires, 2006. p: 465-474.
+[91] WHO. WHO policy on TB infection control in health-care facilities, congregate settings and households. WHO/HTM/
+TB/2009.419.
+[92] García-Rodríguez JF, Monteagudo-Sánchez B, Mariño-Callejo A. Tuberculosis cutánea: estudio descriptivo de 15 años.
+Enferm Infecc Microbiol Clin 2008; 26(4):205-11.
+[93] Pérez B, Pifarre R, Vera CV, García JM, Baradad M, Vilà M, Egido R. Tuberculosis cutánea por Mycobacterium tuberculosis:
+una patología muy poco frecuente. An Med Interna (Madrid) 2006; 23 (11).
+[94] Beyt BE, Ortbals DW, Santa Cruz DJ, Kobayashi GS, Eisen AZ, Medoff G. Cutaneous mycobacteriosis: analysis of 34 cases
+with a new classification of the disease. Medicine (Baltimore) 1980; 60: 95-109.
+[95]Tappeiner G, Wolff K. Tuberculosis and other mycobacterial infections. En: Freedberg IM, Eisen AZ, Wolff K, Austen KF,
+Glodsmith LA, Katz SI, editors. Fitzpatrick’s Dermatology in General Medicine. 6th ed. EE.UU: Mc Graw-Hill; 2003.p.1933-49.
+
+
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                                                           41
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+[96]García-Salcés I, de Diego V, Carapeto FJ. Infecciones cutáneas por M. tuberculosis. Monogr Dermatol 2007; 20: 141-152.
+[97]Tincopa-Wong OW, Valverde-López JC, Plasencia-Angulo W, Llerena-Castro KL. Tuberculosis cutánea: Rasgos clínicos,
+histopatológicos y epidemiológicos en un Hospital General de Trujillo, Perú. Dermatol Perú; 2006; 16(3): 220-32.
+[98]Cabrera HN, Gatti JC, Ávila JJ, Bianchi O. Tuberculosis exóticas. Rev Arg Dermat 1972; 56: 17.
+[99]Fanlo P, Tiberio G. Tuberculosis extrapulmonar. An Sist Sanit Navar 2007: 30 (Supl. 2): 143-162.
+[100]Almaguer-Chávez J, Ocampo-Candiani J, Rendón A. Panorama actual en el diagnóstico de la tuberculosis cutánea. Actas
+Dermosifilogr 2009; 100: 562-70
+
+
+
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                                                                  42
+Guías de diagnóstico, tratamiento y prevención de la tuberculosis
+
+
+
+
+                  Guías de diagnóstico, tratamiento
+                   y prevención de la tuberculosis
+                              HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA
+
+
+
+
+                                                    Realización:
+
+
+
+
+HOSPITAL MUÑIZ / INSTITUTO VACCAREZZA                                 43
+

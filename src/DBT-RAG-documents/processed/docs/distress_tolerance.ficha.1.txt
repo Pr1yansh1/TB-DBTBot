@@ -1,0 +1,18 @@
+DOC_ID: distress_tolerance.ficha.1
+TYPE: ficha
+MODULE: distress_tolerance
+NUMBER: 1
+TITLE: Objetivos de tolerancia al malestar
+PAGES: 560-562
+MAJOR_SECTION: Fichas de tolerancia al malestar
+REFS_OUT: 
+
+Objetivos de tolerancia al malestar
+
+SOBREVIVE SITUACIONES DE CRISIS Sin empeorarlas
+
+ACEPTA LA REALIDAD Reemplazar el sufrimiento y el estar atascado/a por el dolor y la posibilidad de seguir adelante
+
+LIBÉRATE De tener que satisfacer las demandas de tus propios deseos, impulsos y emociones intensas OTRO: _______
+
+Fichas de supervivencia a la crisis

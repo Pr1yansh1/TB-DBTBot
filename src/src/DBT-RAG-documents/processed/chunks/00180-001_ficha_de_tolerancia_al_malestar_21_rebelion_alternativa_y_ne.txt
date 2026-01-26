@@ -1,9 +1,0 @@
-TITLE: FICHA DE TOLERANCIA AL MALESTAR 21 — Rebelión alternativa y negación adaptativa
-MODULE: distress_tolerance
-SKILL_TAG: FICHA_DE_TOLERANCIA_AL_MALESTAR_21_REBELION_ALTERNATIVA_Y_NE
-SOURCE_PDF: Manual-2023-enumerado-.pdf
-PAGES: 643-647
-CHUNK_ID: 00180-001
-UNIT_ID: 00180
-
-(Hoja de trabajo de tolerancia al malestar 18) Rebelión alternativa y negación adaptativa Rebelión alternativa Cuando las conductas adictivas son una forma de rebelarse contra la autoridad, las convenciones y el aburrimiento de no romper las reglas, intenta una rebelión alternativa. Esta reemplaza a la rebelión destructiva y te mantiene en el camino hacia tus objetivos. Ejemplos:

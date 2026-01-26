@@ -1,638 +1,645 @@
-# scripts/preprocess_dbt_pdf.py
+#!/usr/bin/env python3
+"""
+Preprocess DBT skills manual PDF into a simple RAG-friendly structure:
+
+processed/
+  overview/
+    book_overview.txt
+    fichas/
+      ficha_general_01.txt
+      ficha_general_01a.txt
+      ...
+  mindfulness/
+    intro.txt
+    fichas/
+      ficha_01.txt
+      ficha_01a.txt
+      ...
+  interpersonal_effectiveness/
+    intro.txt
+    fichas/
+      ficha_01.txt
+      ...
+  emotion_regulation/
+    intro.txt
+    fichas/
+      ficha_01.txt
+      ...
+  distress_tolerance/
+    intro.txt
+    fichas/
+      ficha_01.txt
+      ...
+  index.json
+
+- Extracts ONLY "Fichas" (skips "Hojas de trabajo").
+- Also writes "intro.txt" per module (text between module heading and first ficha).
+- Writes overview/book_overview.txt (front matter + general section, excluding most TOC noise).
+- Uses PyMuPDF (fitz) and regex + heuristics to handle:
+  - hyphenation across line breaks
+  - broken line wraps
+  - duplicated headers/footers/page numbers
+  - ficha titles split onto the next line
+"""
+
 from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
-import unicodedata
 from dataclasses import dataclass, asdict
 from pathlib import Path
-from typing import Iterable, List, Optional, Tuple
+from typing import Dict, List, Optional, Tuple
 
-from pypdf import PdfReader
+import fitz  # PyMuPDF
 
 
 # ----------------------------
-# Config / constants (V1)
+# Config / Regex
 # ----------------------------
 
-# Major section headings (module context). Keep conservative, but allow more variants.
-SECTION_HEADING_RE = re.compile(
-    r"^(HABILIDADES\s+DE\s+MINDFULNESS|HABILIDADES\s+DE\s+EFECTIVIDAD\s+INTERPERSONAL|"
-    r"HABILIDADES\s+DE\s+REGULACI[ÓO]N\s+EMOCIONAL|HABILIDADES\s+DE\s+TOLERANCIA\s+AL\s+MALESTAR|"
-    r"HABILIDADES\s+GENERALES.*|FICHAS\s+DE\s+MINDFULNESS|FICHAS\s+DE\s+TOLERANCIA\s+AL\s+MALESTAR|"
-    r"FICHAS\s+DE\s+REGULACI[ÓO]N\s+EMOCIONAL|FICHAS\s+DE\s+EFECTIVIDAD\s+INTERPERSONAL|"
-    r"HOJAS\s+DE\s+TRABAJO\s+DE\s+MINDFULNESS|HOJAS\s+DE\s+TRABAJO\s+DE\s+TOLERANCIA\s+AL\s+MALESTAR|"
-    r"HOJAS\s+DE\s+TRABAJO\s+DE\s+REGULACI[ÓO]N\s+EMOCIONAL|HOJAS\s+DE\s+TRABAJO\s+DE\s+EFECTIVIDAD\s+INTERPERSONAL)\s*$",
-    flags=re.IGNORECASE,
+MODULES = {
+    # canonical_slug: (display name fragments we might see)
+    "mindfulness": [
+        r"mindfulness",
+    ],
+    "interpersonal_effectiveness": [
+        r"efectividad\s+interpersonal",
+    ],
+    "emotion_regulation": [
+        r"regulación\s+emocional",
+    ],
+    "distress_tolerance": [
+        r"tolerancia\s+al\s+malestar",
+    ],
+    "general": [
+        r"general(?:es)?",
+    ],
+}
+
+# Headings that often mark module starts
+MODULE_HEADING_RES: Dict[str, re.Pattern] = {
+    slug: re.compile(rf"^\s*Habilidades\s+de\s+({alt})\s*$", re.IGNORECASE)
+    for slug, alts in MODULES.items()
+    for alt in alts
+}
+# Special "general skills" heading in TOC/front matter
+GENERAL_SKILLS_HEADING_RE = re.compile(
+    r"^\s*Habilidades\s+generales\s*:\s*orientación\s+y\s+análisis\s+conductual\s*$",
+    re.IGNORECASE,
 )
 
-# Unit starts. Must tolerate:
-#  - trailing parenthetical references: "(Fichas ...)"
-#  - trailing subtitles on the same line
-#  - line breaks between pieces of the header (handled by lookahead logic)
-#
-# We match a "header core" with an optional suffix we ignore.
-UNIT_HEADER_CORE_RE = re.compile(
-    r"^(?P<prefix>FICHA(?:\s+GENERAL)?|FICHA\s+DE|HOJA\s+DE\s+TRABAJO(?:\s+GENERAL)?|HOJA\s+DE\s+TRABAJO\s+DE)"
-    r"\s+"
-    r"(?P<category>[A-ZÁÉÍÓÚÜÑ0-9\s]+?)"
-    r"\s+"
-    r"(?P<number>[0-9]{1,3}(?:[A-Z])?(?:[a-z])?)"
-    r"(?P<suffix>\s*(?:\(|—|-).*)?$",
-    flags=re.IGNORECASE,
+# "Fichas de <module>" headings
+FICHAS_SECTION_RE = re.compile(r"^\s*Fichas\s+de\s+.+\s*$", re.IGNORECASE)
+
+# Worksheet headings (we skip these docs entirely)
+HOJA_RE = re.compile(r"^\s*Hoja(?:s)?\s+de\s+trabajo\b", re.IGNORECASE)
+
+# Ficha header line
+# Examples:
+#  - "Ficha general 1: Objetivos ..."
+#  - "Ficha general 1A. Opciones ..."
+#  - "Ficha de mindfulness 4c: Ideas ..."
+#  - "Ficha de tolerancia al malestar 11b: Práctica ..."
+FICHA_HEADER_RE = re.compile(
+    r"^\s*Ficha\s+"
+    r"(?:(?:de)\s+)?"
+    r"(?P<category>general|mindfulness|efectividad\s+interpersonal|regulación\s+emocional|tolerancia\s+al\s+malestar)\s+"
+    r"(?P<num>\d+)\s*(?P<suffix>[A-Za-z])?\s*"
+    r"(?P<punct>[:\.])?\s*"
+    r"(?P<title>.*)\s*$",
+    re.IGNORECASE,
 )
 
-# Common noise: single page numbers, repeated headers/footers.
-PAGE_NUM_RE = re.compile(r"^\s*\d{1,4}\s*$")
+# Lines that are almost certainly just page numbers
+PAGE_NUM_ONLY_RE = re.compile(r"^\s*\d{1,4}\s*$")
 
-# Keywords for module inference.
-MODULE_KEYWORDS = [
-    ("mindfulness", ["MINDFULNESS", "MENTE SABIA", "OBSERVAR", "DESCRIBIR", "PARTICIPAR"]),
-    ("interpersonal_effectiveness", ["EFECTIVIDAD INTERPERSONAL", "DEAR MAN", "AVES", "VIDA", "VALIDACIÓN"]),
-    ("emotion_regulation", ["REGULACIÓN EMOCIONAL", "ACCIÓN OPUESTA", "VERIFICAR LOS HECHOS", "EMOCIONES"]),
-    ("distress_tolerance", ["TOLERANCIA AL MALESTAR", "STOP", "TIP", "ACEPTACIÓN RADICAL", "MEJORAR EL MOMENTO"]),
-    ("general", ["HABILIDADES GENERALES", "ANÁLISIS CONDUCTUAL", "TEORÍA BIOSOCIAL"]),
-]
+# Common footer/header junk patterns (tune as needed)
+LIKERT_RE = re.compile(r"\b1\s+2\s+3\s+4\s+5\b")
+UNDERLINE_HEAVY_RE = re.compile(r"^[\s_]{6,}$")
 
-# Skill tags (help retrieval be precise).
-SKILL_TAG_PATTERNS: List[Tuple[str, re.Pattern]] = [
-    ("STOP", re.compile(r"\bSTOP\b", re.IGNORECASE)),
-    ("TIP", re.compile(r"\bTIP\b", re.IGNORECASE)),
-    ("DEAR_MAN", re.compile(r"\bDEAR\s+MAN\b", re.IGNORECASE)),
-    ("CHECK_THE_FACTS", re.compile(r"VERIFICAR\s+LOS\s+HECHOS", re.IGNORECASE)),
-    ("OPPOSITE_ACTION", re.compile(r"ACCIÓN\s+OPUESTA", re.IGNORECASE)),
-    ("RADICAL_ACCEPTANCE", re.compile(r"ACEPTACIÓN\s+RADICAL", re.IGNORECASE)),
-    ("WISE_MIND", re.compile(r"MENTE\s+SABIA", re.IGNORECASE)),
-    ("VALIDATION", re.compile(r"\bVALIDACIÓN\b", re.IGNORECASE)),
-    ("SELF_SOOTHE", re.compile(r"CALMA(?:RTE)?\s+CON\s+LOS\s+CINCO\s+SENTIDOS", re.IGNORECASE)),
-    ("DISTRACT_ACCEPTS", re.compile(r"\bACEPTAS\b", re.IGNORECASE)),
-]
-
-
-@dataclass(frozen=True)
-class Unit:
-    unit_id: str
-    unit_type: str  # FICHA or HOJA DE TRABAJO
-    category: str
-    number: str
-    title_line: str
-    major_section: str
-    module: str
-    skill_tag: str
-    start_page: int  # 1-indexed
-    end_page: int    # 1-indexed, inclusive
-    source_pdf: str
-    text: str
-
-
-@dataclass(frozen=True)
-class Chunk:
-    chunk_id: str
-    unit_id: str
-    module: str
-    skill_tag: str
-    title_line: str
-    source_pdf: str
-    start_page: int
-    end_page: int
-    text: str
+# TOC-ish lines
+TOC_START_RE = re.compile(r"^\s*Índice\s*$", re.IGNORECASE)
+TOC_EXIT_HINT_RE = re.compile(
+    r"^\s*(Introducción\s+a\s+este\s+libro|Cómo\s+está\s+organizado\s+este\s+libro|Habilidades\s+generales)\b",
+    re.IGNORECASE,
+)
 
 
 # ----------------------------
-# Text normalization utilities
+# Data models
 # ----------------------------
 
-def _strip_weird_spaces(s: str) -> str:
-    s = unicodedata.normalize("NFKC", s)
-    s = s.replace("\u00ad", "")  # soft hyphen
-    s = s.replace("\ufb01", "fi").replace("\ufb02", "fl")
-    s = re.sub(r"[ \t]+", " ", s)
-    return s.strip()
+@dataclass
+class DocMeta:
+    doc_id: str
+    module: str                 # one of MODULES slugs, including "general"
+    number: str                 # like "1", "1a", "11b"
+    title: str
+    start_page: int             # 1-indexed (human)
+    end_page: int               # 1-indexed (human)
+    out_path: str               # relative to processed/
 
 
-def _is_probable_header_footer(line: str) -> bool:
-    l = line.strip()
-    if not l:
+# ----------------------------
+# Text normalization helpers
+# ----------------------------
+
+def dehyphenate(text: str) -> str:
+    # Join words split by hyphen at line break: "adapta-\ntiva" => "adaptativa"
+    return re.sub(r"(\w)-\n(\w)", r"\1\2", text)
+
+def normalize_whitespace(text: str) -> str:
+    # Normalize weird whitespace without destroying paragraph breaks too much
+    text = text.replace("\r\n", "\n").replace("\r", "\n")
+    # Collapse trailing spaces
+    text = re.sub(r"[ \t]+\n", "\n", text)
+    # Collapse >2 blank lines
+    text = re.sub(r"\n{3,}", "\n\n", text)
+    return text
+
+def looks_like_heading(line: str) -> bool:
+    s = line.strip()
+    if not s:
         return False
-    if PAGE_NUM_RE.match(l):
+    # Section headings are often short and not ending with punctuation.
+    if len(s) <= 70 and not s.endswith((".", ":", ";")):
+        # Many headings are Title Case or ALL CAPS-ish; we keep it simple:
+        if sum(c.isalpha() for c in s) >= 5 and (s.isupper() or s.istitle()):
+            return True
+    # Module headings / "Fichas de ..." / worksheets headings
+    if GENERAL_SKILLS_HEADING_RE.match(s):
+        return True
+    if any(p.match(s) for p in MODULE_HEADING_RES.values()):
+        return True
+    if FICHAS_SECTION_RE.match(s) or HOJA_RE.match(s):
         return True
     return False
 
-
-_FORM_FIELD_RE = re.compile(
-    r"(^\s*(fecha|nombre|firma|día|lunes|martes|miércoles|jueves|viernes|sábado|domingo)\b)|"
-    r"(_{3,})|"
-    r"(/ ?/ ?/)|"
-    r"(\b\d{1,3}\s+\d{1,3}\s+\d{1,3}\b)",  # e.g., "1 2 3 4 5" scales, but keep only if not too dominant
-    flags=re.IGNORECASE,
-)
-
-
-def _is_low_value_form_line(line: str) -> bool:
-    """
-    Drop lines that are basically worksheet boilerplate / fill-in templates.
-    Keep it deterministic and conservative.
-    """
-    l = line.strip()
-    if not l:
+def should_drop_line(line: str) -> bool:
+    s = line.strip()
+    if not s:
         return False
-
-    # lots of underscores or slashes placeholders
-    if re.search(r"_{5,}", l):
+    if PAGE_NUM_ONLY_RE.match(s):
         return True
-    if re.search(r"(?:/ ?){6,}", l):  # "/ / / / / /"
+    if UNDERLINE_HEAVY_RE.match(s):
         return True
-
-    # lines that are mostly punctuation + blanks
-    alnum = sum(ch.isalnum() for ch in l)
-    if alnum <= 3 and len(l) >= 8:
+    # Likert scales and repeated rating lines are high-noise for fichas too
+    if LIKERT_RE.search(s) and ("Nada" in s or "Algo" in s or "Muy" in s):
         return True
-
-    # very common field prompts that add little semantic value
-    if re.match(r"^(fecha\s+de\s+|nombre\s*:|fecha\s*:)", l, flags=re.IGNORECASE):
+    # Common form fields
+    if re.search(r"\b(Nombre|Fecha)\s*:\s*$", s, re.IGNORECASE):
         return True
-
     return False
 
-
-def _normalize_lines(raw_text: str) -> List[str]:
+def join_wrapped_lines(lines: List[str]) -> List[str]:
+    """
+    Heuristic line joining:
+    - Preserve blank lines as paragraph breaks.
+    - Join a line with the next if it's a soft wrap (no punctuation, next line starts lowercase).
+    - Do NOT join if current/next looks like a heading or a ficha header.
+    """
     out: List[str] = []
-    for line in raw_text.splitlines():
-        line = _strip_weird_spaces(line)
-        if not line:
+    i = 0
+    while i < len(lines):
+        cur = lines[i].rstrip()
+        if not cur.strip():
             out.append("")
+            i += 1
             continue
-        if _is_probable_header_footer(line):
-            continue
-        # Keep form lines out (V1). This makes retrieval much cleaner.
-        if _is_low_value_form_line(line):
-            continue
-        out.append(line)
 
-    # collapse blank runs to max 2
-    collapsed: List[str] = []
-    blank_run = 0
+        # Skip junk lines early
+        if should_drop_line(cur):
+            i += 1
+            continue
+
+        # If this is a ficha header, keep as-is
+        if FICHA_HEADER_RE.match(cur) or looks_like_heading(cur):
+            out.append(cur.strip())
+            i += 1
+            continue
+
+        # Try merge with next if it looks like a hard wrap
+        if i + 1 < len(lines):
+            nxt = lines[i + 1].rstrip()
+            if nxt.strip() and not should_drop_line(nxt):
+                if not FICHA_HEADER_RE.match(nxt) and not looks_like_heading(nxt):
+                    cur_ends = cur.strip()[-1:]
+                    nxt_starts = nxt.strip()[:1]
+                    # If cur doesn't end with sentence-ish punctuation and next starts lowercase, likely wrap
+                    if cur_ends not in ".:;!?" and nxt_starts.islower():
+                        merged = cur.strip() + " " + nxt.strip()
+                        out.append(merged)
+                        i += 2
+                        continue
+
+        out.append(cur.strip())
+        i += 1
+
+    # Collapse multiple blank lines
+    cleaned: List[str] = []
+    prev_blank = False
     for l in out:
-        if l == "":
-            blank_run += 1
-            if blank_run <= 2:
-                collapsed.append("")
-        else:
-            blank_run = 0
-            collapsed.append(l)
-    return collapsed
-
-
-def _join_wrapped_lines(lines: List[str]) -> str:
-    paragraphs: List[str] = []
-    buf: List[str] = []
-
-    def flush():
-        nonlocal buf
-        if buf:
-            paragraphs.append(" ".join(buf).strip())
-            buf = []
-
-    for line in lines:
-        if line == "":
-            flush()
+        is_blank = (l.strip() == "")
+        if is_blank and prev_blank:
             continue
-        if buf and buf[-1].endswith("-") and len(buf[-1]) > 1:
-            buf[-1] = buf[-1][:-1] + line
-        else:
-            buf.append(line)
-
-    flush()
-    return "\n\n".join(p for p in paragraphs if p.strip())
-
-
-def _slugify(s: str) -> str:
-    s = unicodedata.normalize("NFKD", s)
-    s = "".join(c for c in s if not unicodedata.combining(c))
-    s = s.lower()
-    s = re.sub(r"[^a-z0-9]+", "_", s)
-    s = re.sub(r"_+", "_", s).strip("_")
-    return s or "unit"
+        cleaned.append(l)
+        prev_blank = is_blank
+    return cleaned
 
 
 # ----------------------------
-# PDF extraction
+# Extraction
 # ----------------------------
 
 def extract_pages(pdf_path: Path) -> List[str]:
-    reader = PdfReader(str(pdf_path))
+    doc = fitz.open(pdf_path)
     pages: List[str] = []
-    for p in reader.pages:
-        text = p.extract_text() or ""
+    for p in range(doc.page_count):
+        text = doc.load_page(p).get_text("text")
+        text = dehyphenate(text)
+        text = normalize_whitespace(text)
         pages.append(text)
+    doc.close()
     return pages
 
-
-def detect_module(major_section: str, category: str, title_line: str, unit_text: str) -> str:
-    hay = " ".join([major_section, category, title_line, unit_text[:2000]]).upper()
-    for module, keys in MODULE_KEYWORDS:
-        for k in keys:
-            if k.upper() in hay:
-                return module
+def classify_category_to_module(category_raw: str) -> str:
+    c = category_raw.strip().lower()
+    if c.startswith("general"):
+        return "general"
+    if "mindfulness" in c:
+        return "mindfulness"
+    if "efectividad" in c:
+        return "interpersonal_effectiveness"
+    if "regulación" in c or "regulacion" in c:
+        return "emotion_regulation"
+    if "tolerancia" in c:
+        return "distress_tolerance"
     return "general"
 
+def normalize_ficha_number(num: str, suffix: Optional[str]) -> str:
+    if suffix:
+        return f"{num}{suffix.lower()}"
+    return num
 
-def detect_skill_tag(title_line: str, unit_text: str) -> str:
-    hay = (title_line + "\n" + unit_text[:3000])
-    for tag, pat in SKILL_TAG_PATTERNS:
-        if pat.search(hay):
-            return tag
-    return _slugify(title_line)[:60].upper()
+def safe_filename(s: str) -> str:
+    # Minimal safe filename mapping
+    s = s.strip()
+    s = re.sub(r"\s+", "_", s)
+    s = re.sub(r"[^A-Za-z0-9_\-\.]+", "", s)
+    return s
 
-
-def iter_lines_by_page(pages: List[str]) -> Iterable[Tuple[int, List[str]]]:
-    for idx, page_text in enumerate(pages, start=1):
-        lines = _normalize_lines(page_text)
-        yield idx, lines
-
-
-# ----------------------------
-# Header detection (fix)
-# ----------------------------
-
-def _try_parse_unit_header(lines: List[str], i: int) -> Optional[Tuple[int, str, str, str, str]]:
+def build_line_stream(pages: List[str]) -> List[Tuple[int, str]]:
     """
-    Try to parse a unit header starting at lines[i].
-    Returns (consumed_lines, unit_type, category, number, raw_title_line)
+    Returns list of (page_number_1indexed, line_text) after normalization/joining.
     """
-    if i >= len(lines):
-        return None
+    stream: List[Tuple[int, str]] = []
+    for i, page_text in enumerate(pages):
+        raw_lines = page_text.split("\n")
+        raw_lines = [l.rstrip("\n") for l in raw_lines]
+        joined = join_wrapped_lines(raw_lines)
+        for line in joined:
+            if line.strip() == "":
+                stream.append((i + 1, ""))
+            else:
+                stream.append((i + 1, line))
+    return stream
 
-    l0 = lines[i].strip()
-    if not l0:
-        return None
-
-    # Candidate combinations: header might be split across lines.
-    candidates: List[Tuple[int, str]] = [(1, l0)]
-
-    if i + 1 < len(lines) and lines[i + 1].strip():
-        candidates.append((2, f"{l0} {lines[i+1].strip()}"))
-
-    if i + 2 < len(lines) and lines[i + 1].strip() and lines[i + 2].strip():
-        candidates.append((3, f"{l0} {lines[i+1].strip()} {lines[i+2].strip()}"))
-
-    for consumed, cand in candidates:
-        # Normalize multiple spaces
-        cand_norm = re.sub(r"\s+", " ", cand).strip()
-
-        # Some PDFs include "HOJA DE TRABAJO ... 13 (Fichas ...)" on one line
-        # We accept suffix and ignore it.
-        m = UNIT_HEADER_CORE_RE.match(cand_norm)
-        if not m:
-            continue
-
-        prefix = m.group("prefix").strip().upper()
-        category = m.group("category").strip()
-        number = m.group("number").strip()
-
-        # Clean category: remove stray parentheses if they got absorbed
-        category = re.sub(r"\s*\(.*$", "", category).strip()
-
-        if prefix.startswith("HOJA"):
-            unit_type = "HOJA DE TRABAJO"
-        else:
-            unit_type = "FICHA"
-
-        raw_title = f"{unit_type} {category} {number}".strip()
-        return (consumed, unit_type, category, number, raw_title)
-
-    return None
-
-
-def _maybe_grab_subtitle(lines: List[str], start_i: int) -> str:
+def extract_fichas(stream: List[Tuple[int, str]]) -> Tuple[List[DocMeta], Dict[str, str], Dict[str, Tuple[int,int,int,int]]]:
     """
-    Grab one descriptive subtitle line after a header, if present.
-    Deterministic rules:
-      - Skip blank lines
-      - Skip parenthetical reference lines "(Hojas de trabajo ...)"
-      - Stop if next is another header
-      - Take first remaining line as subtitle if it looks like prose (not all-caps heading)
+    Scans the line stream to segment ficha docs.
+
+    Returns:
+      - metas: list of DocMeta
+      - docs: doc_id -> text
+      - spans: doc_id -> (start_idx, end_idx, start_page, end_page)
     """
-    j = start_i
-    while j < len(lines):
-        nxt = lines[j].strip()
-        if not nxt:
-            j += 1
-            continue
-        if nxt.startswith("(") and nxt.endswith(")"):
-            j += 1
-            continue
-        # stop if a new unit header begins
-        if _try_parse_unit_header(lines, j) is not None:
-            return ""
-        # avoid taking another major section heading as subtitle
-        if SECTION_HEADING_RE.match(nxt):
-            return ""
-        # avoid all-caps short headings (often noise)
-        if len(nxt) <= 80 and nxt.upper() == nxt and sum(ch.isalpha() for ch in nxt) >= 8:
-            return ""
-        return nxt
-    return ""
+    metas: List[DocMeta] = []
+    docs: Dict[str, str] = {}
+    spans: Dict[str, Tuple[int,int,int,int]] = {}
 
+    current_id: Optional[str] = None
+    current_lines: List[str] = []
+    current_meta: Optional[Tuple[str, str, str, int]] = None  # (module, number, title, start_page)
+    start_idx: Optional[int] = None
+    start_page: Optional[int] = None
 
-# ----------------------------
-# Unit parsing
-# ----------------------------
+    def flush(end_idx: int, end_page: int):
+        nonlocal current_id, current_lines, current_meta, start_idx, start_page
+        if not current_id or not current_meta:
+            return
+        module, number, title, spage = current_meta
+        # Clean up extra blank lines
+        text = "\n".join(current_lines).strip()
+        if not text:
+            # Drop empty docs
+            current_id = None
+            current_lines = []
+            current_meta = None
+            start_idx = None
+            start_page = None
+            return
 
-def parse_units(pages: List[str], source_pdf_name: str) -> List[Unit]:
-    """
-    Parse units per page (not a fully flattened stream), so we can handle
-    multi-line headers within a page deterministically.
-    """
-    units_raw: List[dict] = []
-    current_section = "Unknown section"
+        docs[current_id] = text
+        spans[current_id] = (start_idx if start_idx is not None else 0, end_idx, spage, end_page)
+        metas.append(
+            DocMeta(
+                doc_id=current_id,
+                module=module,
+                number=number,
+                title=title,
+                start_page=spage,
+                end_page=end_page,
+                out_path="",  # filled later
+            )
+        )
+        current_id = None
+        current_lines = []
+        current_meta = None
+        start_idx = None
+        start_page = None
 
-    current_unit: Optional[dict] = None
-    current_start_page = 1
-    current_end_page = 1
-
-    for page_no, page_lines in iter_lines_by_page(pages):
-        i = 0
-        while i < len(page_lines):
-            line = page_lines[i].strip()
-
-            # Update major section context
-            if line and SECTION_HEADING_RE.match(line):
-                current_section = line.strip()
+    i = 0
+    while i < len(stream):
+        pageno, line = stream[i]
+        m = FICHA_HEADER_RE.match(line)
+        if m:
+            # If it's actually a worksheet line masquerading, skip (extra safety)
+            if HOJA_RE.match(line):
                 i += 1
                 continue
 
-            hdr = _try_parse_unit_header(page_lines, i)
-            if hdr is not None:
-                consumed, unit_type, category, number, raw_title = hdr
+            # Start of new ficha: flush previous
+            if current_id is not None:
+                flush(end_idx=i - 1, end_page=stream[i - 1][0])
 
-                # close previous unit
-                if current_unit is not None:
-                    current_unit["end_page"] = current_end_page
-                    units_raw.append(current_unit)
+            category = (m.group("category") or "").strip()
+            num = (m.group("num") or "").strip()
+            suffix = m.group("suffix")
+            title = (m.group("title") or "").strip()
 
-                subtitle = _maybe_grab_subtitle(page_lines, i + consumed)
-                title_line = raw_title if not subtitle else f"{raw_title} — {subtitle}"
+            module = classify_category_to_module(category)
+            number = normalize_ficha_number(num, suffix)
 
-                current_unit = {
-                    "unit_type": unit_type,
-                    "category": category,
-                    "number": number,
-                    "title_line": title_line,
-                    "major_section": current_section,
-                    "start_page": page_no,
-                    "end_page": page_no,
-                    "text_lines": [],
-                }
-                current_start_page = page_no
-                current_end_page = page_no
+            # Title may be on next line if empty / truncated
+            if not title:
+                j = i + 1
+                while j < len(stream):
+                    _, nxt = stream[j]
+                    if nxt.strip() == "":
+                        j += 1
+                        continue
+                    if FICHA_HEADER_RE.match(nxt) or looks_like_heading(nxt) or HOJA_RE.match(nxt):
+                        break
+                    title = nxt.strip()
+                    break
 
-                i += consumed
-                continue
+            title = title.strip() if title else f"Ficha {number}"
 
-            # regular content
-            if current_unit is not None:
-                current_unit["text_lines"].append(page_lines[i])
-                current_end_page = page_no
+            current_id = f"{module}.ficha.{number}"
+            current_lines = [line.strip()]
+            current_meta = (module, number, title, pageno)
+            start_idx = i
+            start_page = pageno
 
             i += 1
+            continue
 
-    # close last
-    if current_unit is not None:
-        current_unit["end_page"] = current_end_page
-        units_raw.append(current_unit)
+        # If inside a ficha, keep collecting lines until next ficha header
+        if current_id is not None:
+            # Drop obvious worksheet section markers inside text (rare but helps)
+            if HOJA_RE.match(line) and looks_like_heading(line):
+                i += 1
+                continue
+            if should_drop_line(line):
+                i += 1
+                continue
+            current_lines.append(line)
+        i += 1
 
-    # materialize
-    units: List[Unit] = []
-    for idx, u in enumerate(units_raw, start=1):
-        unit_text = _join_wrapped_lines(u["text_lines"]).strip()
+    # Flush last
+    if current_id is not None:
+        flush(end_idx=len(stream) - 1, end_page=stream[-1][0])
 
-        module = detect_module(u["major_section"], u["category"], u["title_line"], unit_text)
-        skill_tag = detect_skill_tag(u["title_line"], unit_text)
+    return metas, docs, spans
 
-        units.append(
-            Unit(
-                unit_id=f"{idx:05d}",
-                unit_type=u["unit_type"],
-                category=u["category"],
-                number=u["number"],
-                title_line=u["title_line"],
-                major_section=u["major_section"],
-                module=module,
-                skill_tag=skill_tag,
-                start_page=int(u["start_page"]),
-                end_page=int(u["end_page"]),
-                source_pdf=source_pdf_name,
-                text=unit_text,
-            )
-        )
-
-    return units
-
-
-# ----------------------------
-# Chunking (V1)
-# ----------------------------
-
-def _split_preserve_lists(text: str) -> List[str]:
-    blocks: List[str] = []
-    paras = [p.strip() for p in text.split("\n\n") if p.strip()]
-
-    for p in paras:
-        if re.search(r"(^|\n)\d+\.\s", p) or "••" in p:
-            lines = [ln.strip() for ln in p.splitlines() if ln.strip()]
-            buf: List[str] = []
-            for ln in lines:
-                is_new_item = bool(re.match(r"^\d+\.\s+", ln)) or ln.startswith("••")
-                if is_new_item and buf:
-                    blocks.append("\n".join(buf).strip())
-                    buf = [ln]
-                else:
-                    buf.append(ln)
-            if buf:
-                blocks.append("\n".join(buf).strip())
-        else:
-            blocks.append(p)
-
-    return blocks
-
-
-def make_chunks(
-    unit: Unit,
-    *,
-    max_chars: int = 1200,
-    overlap_chars: int = 200,
-) -> List[Chunk]:
+def find_module_heading_positions(stream: List[Tuple[int, str]]) -> Dict[str, int]:
     """
-    Deterministic chunking:
-      - split into stable blocks (paragraphs / list items)
-      - pack blocks up to max_chars
-      - overlap by reusing last blocks until overlap_chars target is met (block-based, not raw char slice)
+    Returns module_slug -> first line index where the module heading appears.
+    Note: general skills heading is treated as "general".
     """
-    blocks = _split_preserve_lists(unit.text)
-    chunks: List[Chunk] = []
+    pos: Dict[str, int] = {}
+    for i, (_p, line) in enumerate(stream):
+        s = line.strip()
+        if not s:
+            continue
+        if "general" not in pos and GENERAL_SKILLS_HEADING_RE.match(s):
+            pos["general"] = i
+            continue
+        for slug, pat in MODULE_HEADING_RES.items():
+            if slug in pos:
+                continue
+            if pat.match(s):
+                pos[slug] = i
+    return pos
 
-    current_blocks: List[str] = []
-    current_len = 0
+def extract_module_intro(
+    stream: List[Tuple[int, str]],
+    module_slug: str,
+    module_pos: Dict[str, int],
+    ficha_spans: Dict[str, Tuple[int,int,int,int]],
+) -> str:
+    """
+    Intro = text from module heading until first ficha of that module.
+    Filters out TOC-like lines and "Fichas de ..." / "Hojas de trabajo ..." headings.
+    """
+    if module_slug not in module_pos:
+        return ""
 
-    def finalize(blocks_for_chunk: List[str]):
-        text = "\n\n".join(blocks_for_chunk).strip()
-        chunk_id = f"{unit.unit_id}-{len(chunks)+1:03d}"
-        chunks.append(
-            Chunk(
-                chunk_id=chunk_id,
-                unit_id=unit.unit_id,
-                module=unit.module,
-                skill_tag=unit.skill_tag,
-                title_line=unit.title_line,
-                source_pdf=unit.source_pdf,
-                start_page=unit.start_page,
-                end_page=unit.end_page,
-                text=text,
-            )
-        )
-        return text
+    start_i = module_pos[module_slug] + 1
 
-    def overlap_from(prev_blocks: List[str]) -> List[str]:
-        if overlap_chars <= 0:
-            return []
-        out: List[str] = []
-        total = 0
-        # take from the end, whole blocks only
-        for b in reversed(prev_blocks):
-            out.insert(0, b)
-            total += len(b) + 2
-            if total >= overlap_chars:
-                break
-        return out
+    # Find first ficha start index for this module
+    first_ficha_start: Optional[int] = None
+    for doc_id, (si, _ei, _sp, _ep) in ficha_spans.items():
+        if doc_id.startswith(f"{module_slug}.ficha."):
+            if first_ficha_start is None or si < first_ficha_start:
+                first_ficha_start = si
 
-    for b in blocks:
-        b = b.strip()
-        if not b:
+    end_i = first_ficha_start if first_ficha_start is not None else len(stream)
+
+    lines: List[str] = []
+    for i in range(start_i, end_i):
+        _p, line = stream[i]
+        s = line.strip()
+        if not s:
+            lines.append("")
+            continue
+        if should_drop_line(s):
+            continue
+        if FICHAS_SECTION_RE.match(s):
+            continue
+        if HOJA_RE.match(s):
+            continue
+        # Skip list-y index noise inside intro
+        if s.lower().startswith("ficha ") or s.lower().startswith("hoja de trabajo"):
+            continue
+        lines.append(s)
+
+    # Clean blank runs
+    cleaned: List[str] = []
+    prev_blank = False
+    for l in lines:
+        b = (l.strip() == "")
+        if b and prev_blank:
+            continue
+        cleaned.append(l)
+        prev_blank = b
+
+    return "\n".join(cleaned).strip()
+
+def build_book_overview(stream: List[Tuple[int, str]], module_pos: Dict[str, int]) -> str:
+    """
+    Book overview = from start up to first of the 4 core module headings
+    (mindfulness/interpersonal/emotion_regulation/distress_tolerance),
+    with a heuristic to skip most TOC listing noise.
+    """
+    # Find earliest core module heading
+    core = [m for m in ["mindfulness", "interpersonal_effectiveness", "emotion_regulation", "distress_tolerance"] if m in module_pos]
+    cut = min((module_pos[m] for m in core), default=len(stream))
+
+    # Heuristic: skip TOC region if we see "Índice" until an exit hint
+    in_toc = False
+    out_lines: List[str] = []
+    for i in range(0, cut):
+        _p, line = stream[i]
+        s = line.strip()
+        if not s:
+            out_lines.append("")
             continue
 
-        if not current_blocks:
-            current_blocks = [b]
-            current_len = len(b)
+        if TOC_START_RE.match(s):
+            in_toc = True
+            continue
+        if in_toc and TOC_EXIT_HINT_RE.match(s):
+            in_toc = False
+            # include the exit hint line
+            out_lines.append(s)
+            continue
+        if in_toc:
+            # drop most TOC lines
             continue
 
-        if current_len + len(b) + 4 <= max_chars:
-            current_blocks.append(b)
-            current_len += len(b) + 4
+        if should_drop_line(s):
             continue
 
-        # finalize current chunk
-        prev_text = finalize(current_blocks)
+        out_lines.append(s)
 
-        # start next with overlap blocks + new block
-        ov = overlap_from(current_blocks)
-        current_blocks = ov + [b] if ov else [b]
-        current_len = sum(len(x) for x in current_blocks) + 4 * max(0, len(current_blocks) - 1)
+    # Collapse blank lines
+    cleaned: List[str] = []
+    prev_blank = False
+    for l in out_lines:
+        b = (l.strip() == "")
+        if b and prev_blank:
+            continue
+        cleaned.append(l)
+        prev_blank = b
 
-    if current_blocks:
-        finalize(current_blocks)
-
-    return chunks
-
-
-# ----------------------------
-# IO
-# ----------------------------
-
-def write_units(units: List[Unit], out_dir: Path) -> Path:
-    out_dir.mkdir(parents=True, exist_ok=True)
-    manifest_path = out_dir / "manifest_units.jsonl"
-    with manifest_path.open("w", encoding="utf-8") as mf:
-        for u in units:
-            fname = f"{u.unit_id}_{_slugify(u.title_line)[:90]}.txt"
-            path = out_dir / fname
-            path.write_text(u.text.strip() + "\n", encoding="utf-8")
-
-            rec = asdict(u).copy()
-            rec["path"] = str(path.resolve())
-            rec.pop("text", None)
-            mf.write(json.dumps(rec, ensure_ascii=False) + "\n")
-    return manifest_path
-
-
-def write_chunks(chunks: List[Chunk], out_dir: Path) -> Path:
-    out_dir.mkdir(parents=True, exist_ok=True)
-    manifest_path = out_dir / "manifest_chunks.jsonl"
-    with manifest_path.open("w", encoding="utf-8") as mf:
-        for c in chunks:
-            fname = f"{c.chunk_id}_{_slugify(c.title_line)[:70]}.txt"
-            path = out_dir / fname
-
-            header = (
-                f"TITLE: {c.title_line}\n"
-                f"MODULE: {c.module}\n"
-                f"SKILL_TAG: {c.skill_tag}\n"
-                f"SOURCE_PDF: {c.source_pdf}\n"
-                f"PAGES: {c.start_page}-{c.end_page}\n"
-                f"CHUNK_ID: {c.chunk_id}\n"
-                f"UNIT_ID: {c.unit_id}\n"
-                "\n"
-            )
-            path.write_text(header + c.text.strip() + "\n", encoding="utf-8")
-
-            rec = asdict(c).copy()
-            rec["path"] = str(path.resolve())
-            rec.pop("text", None)
-            mf.write(json.dumps(rec, ensure_ascii=False) + "\n")
-    return manifest_path
+    return "\n".join(cleaned).strip()
 
 
 # ----------------------------
-# Main
+# Writing outputs
 # ----------------------------
 
-def main():
+def ensure_dir(p: Path) -> None:
+    p.mkdir(parents=True, exist_ok=True)
+
+def write_text(path: Path, text: str) -> None:
+    ensure_dir(path.parent)
+    path.write_text(text.strip() + "\n", encoding="utf-8")
+
+def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--pdf", required=True, type=str, help="Path to DBT manual PDF")
-    ap.add_argument(
-        "--out-root",
-        default="DBT-RAG-documents/processed",
-        type=str,
-        help="Output root directory (relative to current working dir by default)",
-    )
-    ap.add_argument("--max-chars", default=1200, type=int)
-    ap.add_argument("--overlap-chars", default=200, type=int)
+    ap.add_argument("--pdf", required=True, help="Path to the DBT manual PDF")
+    ap.add_argument("--out", default="DBT-RAG-documents/processed", help="Output directory")
     args = ap.parse_args()
 
     pdf_path = Path(args.pdf).expanduser().resolve()
+    out_dir = Path(args.out).expanduser().resolve()
 
-    # IMPORTANT: out-root is relative to *current directory*
-    out_root = Path(args.out_root).expanduser()
-    if not out_root.is_absolute():
-        out_root = (Path.cwd() / out_root).resolve()
+    if not pdf_path.exists():
+        raise SystemExit(f"PDF not found: {pdf_path}")
 
     pages = extract_pages(pdf_path)
-    units = parse_units(pages, source_pdf_name=pdf_path.name)
+    stream = build_line_stream(pages)
 
-    units_dir = out_root / "units"
-    chunks_dir = out_root / "chunks"
+    module_pos = find_module_heading_positions(stream)
 
-    units_manifest = write_units(units, units_dir)
+    metas, docs, spans = extract_fichas(stream)
 
-    all_chunks: List[Chunk] = []
-    for u in units:
-        all_chunks.extend(make_chunks(u, max_chars=args.max_chars, overlap_chars=args.overlap_chars))
+    # Prepare output directories
+    ensure_dir(out_dir)
+    ensure_dir(out_dir / "overview" / "fichas")
 
-    chunks_manifest = write_chunks(all_chunks, chunks_dir)
+    for m in ["mindfulness", "interpersonal_effectiveness", "emotion_regulation", "distress_tolerance"]:
+        ensure_dir(out_dir / m / "fichas")
 
-    print(f"✅ Extracted {len(units)} units")
-    print(f"✅ Wrote units to: {units_dir}")
-    print(f"✅ Units manifest: {units_manifest}")
-    print(f"✅ Produced {len(all_chunks)} chunks")
-    print(f"✅ Wrote chunks to: {chunks_dir}")
-    print(f"✅ Chunks manifest: {chunks_manifest}")
+    # Write module intros (only for the 4 core modules)
+    for m in ["mindfulness", "interpersonal_effectiveness", "emotion_regulation", "distress_tolerance"]:
+        intro = extract_module_intro(stream, m, module_pos, spans)
+        if intro:
+            write_text(out_dir / m / "intro.txt", intro)
+        else:
+            # Still create file so structure is predictable
+            write_text(out_dir / m / "intro.txt", "")
 
-    if len(units) < 50:
-        print(
-            "⚠️  Very few units detected. This usually means header detection is missing the PDF’s real header patterns.\n"
-            "    Open a few extracted pages and check whether headers are broken across lines or include extra suffix text."
-        )
+    # Write overview file
+    overview_text = build_book_overview(stream, module_pos)
+    write_text(out_dir / "overview" / "book_overview.txt", overview_text)
+
+    # Write fichas
+    # - general fichas go to overview/fichas/
+    # - module fichas go to module/fichas/
+    index_payload = {
+        "source": {"pdf": pdf_path.name},
+        "docs": [],
+    }
+
+    for meta in sorted(metas, key=lambda m: (m.module, m.number)):
+        text = docs.get(meta.doc_id, "").strip()
+        if not text:
+            continue
+
+        if meta.module == "general":
+            rel = Path("overview") / "fichas" / f"ficha_general_{safe_filename(meta.number).zfill(2) if meta.number.isdigit() else safe_filename(meta.number)}.txt"
+        else:
+            rel = Path(meta.module) / "fichas" / f"ficha_{safe_filename(meta.number).zfill(2) if meta.number.isdigit() else safe_filename(meta.number)}.txt"
+
+        abs_path = out_dir / rel
+        write_text(abs_path, text)
+
+        meta.out_path = str(rel.as_posix())
+        index_payload["docs"].append(asdict(meta))
+
+    # Write index.json
+    (out_dir / "index.json").write_text(json.dumps(index_payload, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    # Summary
+    counts = {}
+    for d in index_payload["docs"]:
+        counts[d["module"]] = counts.get(d["module"], 0) + 1
+
+    print(f"✅ PDF: {pdf_path.name}")
+    print(f"✅ Output: {out_dir}")
+    print("✅ Fichas written:")
+    for k in ["general", "mindfulness", "interpersonal_effectiveness", "emotion_regulation", "distress_tolerance"]:
+        if k in counts:
+            print(f"   - {k}: {counts[k]}")
+    print(f"✅ Index: {out_dir / 'index.json'}")
+    print(f"✅ Overview: {out_dir / 'overview' / 'book_overview.txt'}")
+    for m in ["mindfulness", "interpersonal_effectiveness", "emotion_regulation", "distress_tolerance"]:
+        print(f"✅ Intro: {out_dir / m / 'intro.txt'}")
 
 
 if __name__ == "__main__":

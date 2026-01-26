@@ -1,9 +1,0 @@
-TITLE: FICHA DE REGULACIÓN EMOCIONAL 6 — Formas de describir emociones: Palabras de enojo
-MODULE: mindfulness
-SKILL_TAG: WISE_MIND
-SOURCE_PDF: Manual-2023-enumerado-.pdf
-PAGES: 387-412
-CHUNK_ID: 00107-001
-UNIT_ID: 00107
-
-(Hojas de trabajo de regulación emocional 4, 4a) Formas de describir emociones: Palabras de enojo

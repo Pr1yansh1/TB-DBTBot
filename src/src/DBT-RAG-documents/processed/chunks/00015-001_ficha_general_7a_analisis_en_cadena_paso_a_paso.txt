@@ -1,9 +1,0 @@
-TITLE: FICHA GENERAL 7A — Análisis en cadena, paso a paso
-MODULE: interpersonal_effectiveness
-SKILL_TAG: FICHA_GENERAL_7A_ANALISIS_EN_CADENA_PASO_A_PASO
-SOURCE_PDF: Manual-2023-enumerado-.pdf
-PAGES: 75-79
-CHUNK_ID: 00015-001
-UNIT_ID: 00015
-
-(Hojas de trabajo generales 2, 2a) (p. 1 de 2) Análisis en cadena, paso a paso

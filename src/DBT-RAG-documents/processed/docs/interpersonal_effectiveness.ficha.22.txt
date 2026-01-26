@@ -1,0 +1,20 @@
+DOC_ID: interpersonal_effectiveness.ficha.22
+TYPE: ficha
+MODULE: interpersonal_effectiveness
+NUMBER: 22
+TITLE: Consejos para usar estrategias de cambio conductual
+PAGES: 315-317
+MAJOR_SECTION: Fichas de efectividad interpersonal
+REFS_OUT: 
+
+(Hojas de trabajo de E.I. 14, 15) Consejos para usar estrategias de cambio conductual de forma efectiva
+
+Resumen: Objetivo Consecuencia Aumenta la conducta (Refuerzo) •• Agregar consecuencias positivas •• Eliminar consecuencias aversivas Debilitar la conducta (Extinción) •• Retirar el refuerzo •• Brindar alivio ante conductas no deseadas Eliminar la conducta (Castigo) •• Agregar consecuencias aversivas •• Eliminar consecuencias positivas No todas las consecuencias son iguales. “La pasión de una persona puede ser algo que detesta otra” El contexto importa. Un refuerzo en una situación puede ser un castigo en otra.
+
+La cantidad importa. Si un refuerzo es escaso o demasiado, no funcionará.
+
+Las consecuencias naturales funcionan mejor. Déjalas que hagan el trabajo cuando sea posible.
+
+Pregunta qué consecuencias la persona trabajaría para obtener (refuerzo) o trabajaría para evitar (castigo).
+
+Observa cambios en la conducta cuando se aplica la consecuencia. Una conducta aprendida en una situación puede darse en otra

@@ -1,0 +1,10 @@
+DOC_ID: distress_tolerance.ficha.18
+TYPE: ficha
+MODULE: distress_tolerance
+NUMBER: 18
+TITLE: Mente clara
+PAGES: 633-635
+MAJOR_SECTION: Hojas de trabajo de tolerancia al malestar 8–15a)
+REFS_OUT: distress_tolerance.hoja.15
+
+(Hoja de trabajo de tolerancia al malestar 15) Mente clara

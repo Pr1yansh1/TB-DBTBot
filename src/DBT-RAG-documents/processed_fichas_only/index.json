@@ -1,0 +1,2293 @@
+{
+  "source": {
+    "pdf": "Manual-2023-enumerado-.pdf"
+  },
+  "docs": [
+    {
+      "doc_id": "distress_tolerance.ficha.1",
+      "module": "distress_tolerance",
+      "number": "1",
+      "title": "Objetivos de tolerancia",
+      "start_page": 37,
+      "end_page": 37,
+      "out_path": "distress_tolerance/fichas/ficha_01.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.1",
+      "module": "distress_tolerance",
+      "number": "1",
+      "title": "Objetivos de tolerancia al malestar",
+      "start_page": 560,
+      "end_page": 561,
+      "out_path": "distress_tolerance/fichas/ficha_01.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.10",
+      "module": "distress_tolerance",
+      "number": "10",
+      "title": "Descripción general:",
+      "start_page": 38,
+      "end_page": 38,
+      "out_path": "distress_tolerance/fichas/ficha_10.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.10",
+      "module": "distress_tolerance",
+      "number": "10",
+      "title": "Ficha 10",
+      "start_page": 599,
+      "end_page": 599,
+      "out_path": "distress_tolerance/fichas/ficha_10.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.11",
+      "module": "distress_tolerance",
+      "number": "11",
+      "title": "Aceptación radical",
+      "start_page": 38,
+      "end_page": 38,
+      "out_path": "distress_tolerance/fichas/ficha_11.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.11",
+      "module": "distress_tolerance",
+      "number": "11",
+      "title": "(Hojas de trabajo de tolerancia al malestar 8–9a)",
+      "start_page": 600,
+      "end_page": 601,
+      "out_path": "distress_tolerance/fichas/ficha_11.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.11a",
+      "module": "distress_tolerance",
+      "number": "11a",
+      "title": "Aceptación radical:",
+      "start_page": 38,
+      "end_page": 38,
+      "out_path": "distress_tolerance/fichas/ficha_11a.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.11a",
+      "module": "distress_tolerance",
+      "number": "11a",
+      "title": "Aceptación radical: factores que interfieren",
+      "start_page": 602,
+      "end_page": 602,
+      "out_path": "distress_tolerance/fichas/ficha_11a.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.11b",
+      "module": "distress_tolerance",
+      "number": "11b",
+      "title": "Práctica de",
+      "start_page": 38,
+      "end_page": 38,
+      "out_path": "distress_tolerance/fichas/ficha_11b.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.11b",
+      "module": "distress_tolerance",
+      "number": "11b",
+      "title": "(Hojas de trabajo de tolerancia al malestar 9, 9a)",
+      "start_page": 603,
+      "end_page": 604,
+      "out_path": "distress_tolerance/fichas/ficha_11b.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.12",
+      "module": "distress_tolerance",
+      "number": "12",
+      "title": "Redireccionar la",
+      "start_page": 38,
+      "end_page": 38,
+      "out_path": "distress_tolerance/fichas/ficha_12.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.12",
+      "module": "distress_tolerance",
+      "number": "12",
+      "title": "(Hojas de trabajo de tolerancia al malestar 8, 8a, 10)",
+      "start_page": 605,
+      "end_page": 606,
+      "out_path": "distress_tolerance/fichas/ficha_12.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.13",
+      "module": "distress_tolerance",
+      "number": "13",
+      "title": "Disposición abierta",
+      "start_page": 38,
+      "end_page": 38,
+      "out_path": "distress_tolerance/fichas/ficha_13.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.13",
+      "module": "distress_tolerance",
+      "number": "13",
+      "title": "(Hojas de trabajo de tolerancia al malestar 8, 8a, 10)",
+      "start_page": 607,
+      "end_page": 609,
+      "out_path": "distress_tolerance/fichas/ficha_13.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.14",
+      "module": "distress_tolerance",
+      "number": "14",
+      "title": "Media sonrisa y",
+      "start_page": 38,
+      "end_page": 38,
+      "out_path": "distress_tolerance/fichas/ficha_14.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.14",
+      "module": "distress_tolerance",
+      "number": "14",
+      "title": "(Hojas de trabajo de tolerancia al malestar 8, 8a, 11)",
+      "start_page": 610,
+      "end_page": 611,
+      "out_path": "distress_tolerance/fichas/ficha_14.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.14a",
+      "module": "distress_tolerance",
+      "number": "14a",
+      "title": "Practicar media",
+      "start_page": 39,
+      "end_page": 39,
+      "out_path": "distress_tolerance/fichas/ficha_14a.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.14a",
+      "module": "distress_tolerance",
+      "number": "14a",
+      "title": "(Hoja de trabajo de tolerancia al malestar 10)",
+      "start_page": 612,
+      "end_page": 615,
+      "out_path": "distress_tolerance/fichas/ficha_14a.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.15",
+      "module": "distress_tolerance",
+      "number": "15",
+      "title": "Mindfulness de los",
+      "start_page": 39,
+      "end_page": 39,
+      "out_path": "distress_tolerance/fichas/ficha_15.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.15",
+      "module": "distress_tolerance",
+      "number": "15",
+      "title": "(Hojas de trabajo de tolerancia al malestar 8, 8a, 12)",
+      "start_page": 616,
+      "end_page": 618,
+      "out_path": "distress_tolerance/fichas/ficha_15.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.15a",
+      "module": "distress_tolerance",
+      "number": "15a",
+      "title": "Practicar",
+      "start_page": 39,
+      "end_page": 39,
+      "out_path": "distress_tolerance/fichas/ficha_15a.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.15a",
+      "module": "distress_tolerance",
+      "number": "15a",
+      "title": "(Hojas de trabajo de tolerancia al malestar 8, 8a, 12)",
+      "start_page": 619,
+      "end_page": 623,
+      "out_path": "distress_tolerance/fichas/ficha_15a.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.16",
+      "module": "distress_tolerance",
+      "number": "16",
+      "title": "Descripción general:",
+      "start_page": 39,
+      "end_page": 39,
+      "out_path": "distress_tolerance/fichas/ficha_16.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.16",
+      "module": "distress_tolerance",
+      "number": "16",
+      "title": "(Hojas de trabajo de tolerancia al malestar 13–18)",
+      "start_page": 624,
+      "end_page": 624,
+      "out_path": "distress_tolerance/fichas/ficha_16.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.16a",
+      "module": "distress_tolerance",
+      "number": "16a",
+      "title": "Adicciones comunes",
+      "start_page": 39,
+      "end_page": 39,
+      "out_path": "distress_tolerance/fichas/ficha_16a.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.16a",
+      "module": "distress_tolerance",
+      "number": "16a",
+      "title": "Adicciones comunes",
+      "start_page": 625,
+      "end_page": 627,
+      "out_path": "distress_tolerance/fichas/ficha_16a.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.17",
+      "module": "distress_tolerance",
+      "number": "17",
+      "title": "Abstinencia dialéctica",
+      "start_page": 39,
+      "end_page": 39,
+      "out_path": "distress_tolerance/fichas/ficha_17.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.17",
+      "module": "distress_tolerance",
+      "number": "17",
+      "title": "(Hoja de trabajo de tolerancia al malestar 14)",
+      "start_page": 628,
+      "end_page": 629,
+      "out_path": "distress_tolerance/fichas/ficha_17.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.17a",
+      "module": "distress_tolerance",
+      "number": "17a",
+      "title": "Planificar para la",
+      "start_page": 39,
+      "end_page": 39,
+      "out_path": "distress_tolerance/fichas/ficha_17a.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.17a",
+      "module": "distress_tolerance",
+      "number": "17a",
+      "title": "(Hoja de trabajo de tolerancia al malestar 14)",
+      "start_page": 630,
+      "end_page": 632,
+      "out_path": "distress_tolerance/fichas/ficha_17a.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.18",
+      "module": "distress_tolerance",
+      "number": "18",
+      "title": "Mente clara (Hoja de",
+      "start_page": 39,
+      "end_page": 39,
+      "out_path": "distress_tolerance/fichas/ficha_18.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.18",
+      "module": "distress_tolerance",
+      "number": "18",
+      "title": "(Hoja de trabajo de tolerancia al malestar 15)",
+      "start_page": 633,
+      "end_page": 634,
+      "out_path": "distress_tolerance/fichas/ficha_18.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.18a",
+      "module": "distress_tolerance",
+      "number": "18a",
+      "title": "Patrones de",
+      "start_page": 39,
+      "end_page": 39,
+      "out_path": "distress_tolerance/fichas/ficha_18a.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.18a",
+      "module": "distress_tolerance",
+      "number": "18a",
+      "title": "(Hoja de trabajo de tolerancia al malestar 16)",
+      "start_page": 635,
+      "end_page": 637,
+      "out_path": "distress_tolerance/fichas/ficha_18a.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.19",
+      "module": "distress_tolerance",
+      "number": "19",
+      "title": "Refuerzo comunitario",
+      "start_page": 39,
+      "end_page": 39,
+      "out_path": "distress_tolerance/fichas/ficha_19.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.19",
+      "module": "distress_tolerance",
+      "number": "19",
+      "title": "(Hoja de trabajo de tolerancia al malestar 16)",
+      "start_page": 638,
+      "end_page": 640,
+      "out_path": "distress_tolerance/fichas/ficha_19.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.2",
+      "module": "distress_tolerance",
+      "number": "2",
+      "title": "Descripción general:",
+      "start_page": 37,
+      "end_page": 37,
+      "out_path": "distress_tolerance/fichas/ficha_02.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.2",
+      "module": "distress_tolerance",
+      "number": "2",
+      "title": "(Hojas de trabajo de tolerancia al malestar 1–7b)",
+      "start_page": 562,
+      "end_page": 563,
+      "out_path": "distress_tolerance/fichas/ficha_02.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.20",
+      "module": "distress_tolerance",
+      "number": "20",
+      "title": "Quemando puentes y",
+      "start_page": 40,
+      "end_page": 40,
+      "out_path": "distress_tolerance/fichas/ficha_20.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.20",
+      "module": "distress_tolerance",
+      "number": "20",
+      "title": "(Hoja de trabajo de tolerancia al malestar 17)",
+      "start_page": 641,
+      "end_page": 642,
+      "out_path": "distress_tolerance/fichas/ficha_20.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.21",
+      "module": "distress_tolerance",
+      "number": "21",
+      "title": "Rebelión alternativa y",
+      "start_page": 40,
+      "end_page": 56,
+      "out_path": "distress_tolerance/fichas/ficha_21.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.21",
+      "module": "distress_tolerance",
+      "number": "21",
+      "title": "(Hoja de trabajo de tolerancia al malestar 18)",
+      "start_page": 643,
+      "end_page": 731,
+      "out_path": "distress_tolerance/fichas/ficha_21.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.3",
+      "module": "distress_tolerance",
+      "number": "3",
+      "title": "Cuándo usar",
+      "start_page": 37,
+      "end_page": 37,
+      "out_path": "distress_tolerance/fichas/ficha_03.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.3",
+      "module": "distress_tolerance",
+      "number": "3",
+      "title": "Cuándo usar habilidades de supervivencia a la crisis",
+      "start_page": 564,
+      "end_page": 565,
+      "out_path": "distress_tolerance/fichas/ficha_03.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.4",
+      "module": "distress_tolerance",
+      "number": "4",
+      "title": "Habilidad STOP (Hojas",
+      "start_page": 37,
+      "end_page": 37,
+      "out_path": "distress_tolerance/fichas/ficha_04.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.4",
+      "module": "distress_tolerance",
+      "number": "4",
+      "title": "(Hojas de trabajo de tolerancia al malestar 2, 2a)",
+      "start_page": 566,
+      "end_page": 566,
+      "out_path": "distress_tolerance/fichas/ficha_04.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.5",
+      "module": "distress_tolerance",
+      "number": "5",
+      "title": "Pros y contras (Hojas",
+      "start_page": 37,
+      "end_page": 37,
+      "out_path": "distress_tolerance/fichas/ficha_05.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.5",
+      "module": "distress_tolerance",
+      "number": "5",
+      "title": "(Hojas de trabajo de tolerancia al malestar 3, 3a)",
+      "start_page": 567,
+      "end_page": 569,
+      "out_path": "distress_tolerance/fichas/ficha_05.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.6",
+      "module": "distress_tolerance",
+      "number": "6",
+      "title": "Habilidades TIP:",
+      "start_page": 37,
+      "end_page": 37,
+      "out_path": "distress_tolerance/fichas/ficha_06.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.6",
+      "module": "distress_tolerance",
+      "number": "6",
+      "title": "(Hoja de trabajo de tolerancia al malestar 4)",
+      "start_page": 570,
+      "end_page": 571,
+      "out_path": "distress_tolerance/fichas/ficha_06.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.6a",
+      "module": "distress_tolerance",
+      "number": "6a",
+      "title": "Usar agua fría, paso a",
+      "start_page": 37,
+      "end_page": 37,
+      "out_path": "distress_tolerance/fichas/ficha_6a.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.6a",
+      "module": "distress_tolerance",
+      "number": "6a",
+      "title": "(Hoja de trabajo de tolerancia al malestar 4)",
+      "start_page": 572,
+      "end_page": 573,
+      "out_path": "distress_tolerance/fichas/ficha_6a.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.6b",
+      "module": "distress_tolerance",
+      "number": "6b",
+      "title": "Relajación muscular",
+      "start_page": 37,
+      "end_page": 37,
+      "out_path": "distress_tolerance/fichas/ficha_6b.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.6b",
+      "module": "distress_tolerance",
+      "number": "6b",
+      "title": "(Hoja de trabajo de tolerancia al malestar 4a)",
+      "start_page": 574,
+      "end_page": 577,
+      "out_path": "distress_tolerance/fichas/ficha_6b.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.6c",
+      "module": "distress_tolerance",
+      "number": "6c",
+      "title": "Pensando de forma",
+      "start_page": 37,
+      "end_page": 37,
+      "out_path": "distress_tolerance/fichas/ficha_6c.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.6c",
+      "module": "distress_tolerance",
+      "number": "6c",
+      "title": "(Hoja de trabajo de tolerancia al malestar 4b)",
+      "start_page": 578,
+      "end_page": 579,
+      "out_path": "distress_tolerance/fichas/ficha_6c.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.7",
+      "module": "distress_tolerance",
+      "number": "7",
+      "title": "Distráete (Hojas de",
+      "start_page": 37,
+      "end_page": 37,
+      "out_path": "distress_tolerance/fichas/ficha_07.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.7",
+      "module": "distress_tolerance",
+      "number": "7",
+      "title": "(Hojas de trabajo de tolerancia al malestar 5–5b)",
+      "start_page": 580,
+      "end_page": 583,
+      "out_path": "distress_tolerance/fichas/ficha_07.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.8",
+      "module": "distress_tolerance",
+      "number": "8",
+      "title": "Cálmate con los cinco",
+      "start_page": 37,
+      "end_page": 38,
+      "out_path": "distress_tolerance/fichas/ficha_08.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.8",
+      "module": "distress_tolerance",
+      "number": "8",
+      "title": "(Hoja de trabajo de tolerancia al malestar 6–6b)",
+      "start_page": 584,
+      "end_page": 587,
+      "out_path": "distress_tolerance/fichas/ficha_08.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.8a",
+      "module": "distress_tolerance",
+      "number": "8a",
+      "title": "Meditación de",
+      "start_page": 38,
+      "end_page": 38,
+      "out_path": "distress_tolerance/fichas/ficha_8a.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.8a",
+      "module": "distress_tolerance",
+      "number": "8a",
+      "title": "(Hoja de trabajo de tolerancia al malestar 6c)",
+      "start_page": 588,
+      "end_page": 590,
+      "out_path": "distress_tolerance/fichas/ficha_8a.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.9",
+      "module": "distress_tolerance",
+      "number": "9",
+      "title": "Mejorar el momento",
+      "start_page": 38,
+      "end_page": 38,
+      "out_path": "distress_tolerance/fichas/ficha_09.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.9",
+      "module": "distress_tolerance",
+      "number": "9",
+      "title": "(Hojas de trabajo de tolerancia al malestar 7–7b)",
+      "start_page": 591,
+      "end_page": 594,
+      "out_path": "distress_tolerance/fichas/ficha_09.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.9a",
+      "module": "distress_tolerance",
+      "number": "9a",
+      "title": "Conciencia sensorial,",
+      "start_page": 38,
+      "end_page": 38,
+      "out_path": "distress_tolerance/fichas/ficha_9a.txt"
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.9a",
+      "module": "distress_tolerance",
+      "number": "9a",
+      "title": "Conciencia sensorial, paso a paso",
+      "start_page": 595,
+      "end_page": 598,
+      "out_path": "distress_tolerance/fichas/ficha_9a.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.1",
+      "module": "emotion_regulation",
+      "number": "1",
+      "title": "Objetivos de regulación",
+      "start_page": 31,
+      "end_page": 31,
+      "out_path": "emotion_regulation/fichas/ficha_01.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.1",
+      "module": "emotion_regulation",
+      "number": "1",
+      "title": "Ficha 1",
+      "start_page": 374,
+      "end_page": 376,
+      "out_path": "emotion_regulation/fichas/ficha_01.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.10",
+      "module": "emotion_regulation",
+      "number": "10",
+      "title": "Acción opuesta (Hoja",
+      "start_page": 32,
+      "end_page": 32,
+      "out_path": "emotion_regulation/fichas/ficha_10.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.10",
+      "module": "emotion_regulation",
+      "number": "10",
+      "title": "(Hoja de trabajo de regulación emocional 7)",
+      "start_page": 422,
+      "end_page": 423,
+      "out_path": "emotion_regulation/fichas/ficha_10.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.11",
+      "module": "emotion_regulation",
+      "number": "11",
+      "title": "Descifrar acciones",
+      "start_page": 32,
+      "end_page": 32,
+      "out_path": "emotion_regulation/fichas/ficha_11.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.11",
+      "module": "emotion_regulation",
+      "number": "11",
+      "title": "(Hoja de trabajo de regulación emocional 7)",
+      "start_page": 424,
+      "end_page": 441,
+      "out_path": "emotion_regulation/fichas/ficha_11.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.12",
+      "module": "emotion_regulation",
+      "number": "12",
+      "title": "Resolución de",
+      "start_page": 32,
+      "end_page": 32,
+      "out_path": "emotion_regulation/fichas/ficha_12.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.12",
+      "module": "emotion_regulation",
+      "number": "12",
+      "title": "(Hoja de trabajo de regulación emocional 8)",
+      "start_page": 442,
+      "end_page": 443,
+      "out_path": "emotion_regulation/fichas/ficha_12.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.13",
+      "module": "emotion_regulation",
+      "number": "13",
+      "title": "Revisión de acción",
+      "start_page": 32,
+      "end_page": 32,
+      "out_path": "emotion_regulation/fichas/ficha_13.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.13",
+      "module": "emotion_regulation",
+      "number": "13",
+      "title": "(Hojas de trabajo de regulación emocional 6–8)",
+      "start_page": 444,
+      "end_page": 449,
+      "out_path": "emotion_regulation/fichas/ficha_13.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.14",
+      "module": "emotion_regulation",
+      "number": "14",
+      "title": "Descripción general:",
+      "start_page": 32,
+      "end_page": 32,
+      "out_path": "emotion_regulation/fichas/ficha_14.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.14",
+      "module": "emotion_regulation",
+      "number": "14",
+      "title": "(Hojas de trabajo de regulación emocional 9–14b)",
+      "start_page": 450,
+      "end_page": 450,
+      "out_path": "emotion_regulation/fichas/ficha_14.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.15",
+      "module": "emotion_regulation",
+      "number": "15",
+      "title": "Acumular",
+      "start_page": 32,
+      "end_page": 32,
+      "out_path": "emotion_regulation/fichas/ficha_15.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.15",
+      "module": "emotion_regulation",
+      "number": "15",
+      "title": "(Hojas de trabajo de regulación emocional 9, 10, 13)",
+      "start_page": 451,
+      "end_page": 452,
+      "out_path": "emotion_regulation/fichas/ficha_15.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.16",
+      "module": "emotion_regulation",
+      "number": "16",
+      "title": "Lista de actividades",
+      "start_page": 32,
+      "end_page": 32,
+      "out_path": "emotion_regulation/fichas/ficha_16.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.16",
+      "module": "emotion_regulation",
+      "number": "16",
+      "title": "(Hojas de trabajo de regulación emocional 9, 10, 13)",
+      "start_page": 453,
+      "end_page": 462,
+      "out_path": "emotion_regulation/fichas/ficha_16.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.17",
+      "module": "emotion_regulation",
+      "number": "17",
+      "title": "Acumular emociones",
+      "start_page": 33,
+      "end_page": 33,
+      "out_path": "emotion_regulation/fichas/ficha_17.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.17",
+      "module": "emotion_regulation",
+      "number": "17",
+      "title": "(Hojas de trabajo de regulación emocional 9, 11–11b, 13)",
+      "start_page": 463,
+      "end_page": 465,
+      "out_path": "emotion_regulation/fichas/ficha_17.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.18",
+      "module": "emotion_regulation",
+      "number": "18",
+      "title": "Lista de valores y",
+      "start_page": 33,
+      "end_page": 33,
+      "out_path": "emotion_regulation/fichas/ficha_18.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.18",
+      "module": "emotion_regulation",
+      "number": "18",
+      "title": "(Hojas de trabajo de regulación emocional 10, 12, 13)",
+      "start_page": 466,
+      "end_page": 471,
+      "out_path": "emotion_regulation/fichas/ficha_18.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.19",
+      "module": "emotion_regulation",
+      "number": "19",
+      "title": "Anticípate y construye",
+      "start_page": 33,
+      "end_page": 33,
+      "out_path": "emotion_regulation/fichas/ficha_19.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.19",
+      "module": "emotion_regulation",
+      "number": "19",
+      "title": "(Hojas de trabajo de regulación emocional 12, 13)",
+      "start_page": 472,
+      "end_page": 473,
+      "out_path": "emotion_regulation/fichas/ficha_19.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.2",
+      "module": "emotion_regulation",
+      "number": "2",
+      "title": "Descripción general:",
+      "start_page": 31,
+      "end_page": 31,
+      "out_path": "emotion_regulation/fichas/ficha_02.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.2",
+      "module": "emotion_regulation",
+      "number": "2",
+      "title": "(Hojas de trabajo de regulación emocional 2–4a, 16)",
+      "start_page": 377,
+      "end_page": 378,
+      "out_path": "emotion_regulation/fichas/ficha_02.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.20",
+      "module": "emotion_regulation",
+      "number": "20",
+      "title": "Cuidar tu mente",
+      "start_page": 33,
+      "end_page": 33,
+      "out_path": "emotion_regulation/fichas/ficha_20.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.20",
+      "module": "emotion_regulation",
+      "number": "20",
+      "title": "(Hojas de trabajo de regulación emocional 9, 14)",
+      "start_page": 474,
+      "end_page": 474,
+      "out_path": "emotion_regulation/fichas/ficha_20.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.20a",
+      "module": "emotion_regulation",
+      "number": "20a",
+      "title": "Protocolo de",
+      "start_page": 33,
+      "end_page": 33,
+      "out_path": "emotion_regulation/fichas/ficha_20a.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.20a",
+      "module": "emotion_regulation",
+      "number": "20a",
+      "title": "(Hoja de trabajo de regulación emocional 14a)",
+      "start_page": 475,
+      "end_page": 476,
+      "out_path": "emotion_regulation/fichas/ficha_20a.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.20b",
+      "module": "emotion_regulation",
+      "number": "20b",
+      "title": "Protocolo de higiene",
+      "start_page": 33,
+      "end_page": 33,
+      "out_path": "emotion_regulation/fichas/ficha_20b.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.20b",
+      "module": "emotion_regulation",
+      "number": "20b",
+      "title": "(Hoja de trabajo de regulación emocional 14b)",
+      "start_page": 477,
+      "end_page": 480,
+      "out_path": "emotion_regulation/fichas/ficha_20b.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.21",
+      "module": "emotion_regulation",
+      "number": "21",
+      "title": "Descripción general:",
+      "start_page": 33,
+      "end_page": 33,
+      "out_path": "emotion_regulation/fichas/ficha_21.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.21",
+      "module": "emotion_regulation",
+      "number": "21",
+      "title": "(Hojas de trabajo de regulación emocional 15–16)",
+      "start_page": 481,
+      "end_page": 482,
+      "out_path": "emotion_regulation/fichas/ficha_21.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.22",
+      "module": "emotion_regulation",
+      "number": "22",
+      "title": "Mindfulness de las",
+      "start_page": 33,
+      "end_page": 33,
+      "out_path": "emotion_regulation/fichas/ficha_22.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.22",
+      "module": "emotion_regulation",
+      "number": "22",
+      "title": "(Hoja de trabajo de regulación emocional 15)",
+      "start_page": 483,
+      "end_page": 484,
+      "out_path": "emotion_regulation/fichas/ficha_22.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.23",
+      "module": "emotion_regulation",
+      "number": "23",
+      "title": "Cómo manejar las",
+      "start_page": 33,
+      "end_page": 33,
+      "out_path": "emotion_regulation/fichas/ficha_23.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.23",
+      "module": "emotion_regulation",
+      "number": "23",
+      "title": "Cómo manejar las emociones extremas",
+      "start_page": 485,
+      "end_page": 486,
+      "out_path": "emotion_regulation/fichas/ficha_23.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.24",
+      "module": "emotion_regulation",
+      "number": "24",
+      "title": "Resolución de",
+      "start_page": 34,
+      "end_page": 34,
+      "out_path": "emotion_regulation/fichas/ficha_24.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.24",
+      "module": "emotion_regulation",
+      "number": "24",
+      "title": "(Hoja de trabajo de regulación emocional 16)",
+      "start_page": 487,
+      "end_page": 489,
+      "out_path": "emotion_regulation/fichas/ficha_24.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.25",
+      "module": "emotion_regulation",
+      "number": "25",
+      "title": "Revisión de",
+      "start_page": 34,
+      "end_page": 37,
+      "out_path": "emotion_regulation/fichas/ficha_25.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.25",
+      "module": "emotion_regulation",
+      "number": "25",
+      "title": "Ficha 25",
+      "start_page": 490,
+      "end_page": 559,
+      "out_path": "emotion_regulation/fichas/ficha_25.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.3",
+      "module": "emotion_regulation",
+      "number": "3",
+      "title": "Lo que las emociones",
+      "start_page": 31,
+      "end_page": 31,
+      "out_path": "emotion_regulation/fichas/ficha_03.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.3",
+      "module": "emotion_regulation",
+      "number": "3",
+      "title": "(Hojas de trabajo de regulación emocional 2, 2a-c)",
+      "start_page": 379,
+      "end_page": 381,
+      "out_path": "emotion_regulation/fichas/ficha_03.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.4",
+      "module": "emotion_regulation",
+      "number": "4",
+      "title": "Qué hace que sea",
+      "start_page": 31,
+      "end_page": 31,
+      "out_path": "emotion_regulation/fichas/ficha_04.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.4",
+      "module": "emotion_regulation",
+      "number": "4",
+      "title": "(Hojas de trabajo de regulación emocional 3, 16)",
+      "start_page": 382,
+      "end_page": 383,
+      "out_path": "emotion_regulation/fichas/ficha_04.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.4a",
+      "module": "emotion_regulation",
+      "number": "4a",
+      "title": "Mitos sobre las",
+      "start_page": 31,
+      "end_page": 31,
+      "out_path": "emotion_regulation/fichas/ficha_4a.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.4a",
+      "module": "emotion_regulation",
+      "number": "4a",
+      "title": "(Hoja de trabajo de regulación emocional 3)",
+      "start_page": 384,
+      "end_page": 385,
+      "out_path": "emotion_regulation/fichas/ficha_4a.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.5",
+      "module": "emotion_regulation",
+      "number": "5",
+      "title": "Modelo para describir",
+      "start_page": 31,
+      "end_page": 31,
+      "out_path": "emotion_regulation/fichas/ficha_05.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.5",
+      "module": "emotion_regulation",
+      "number": "5",
+      "title": "(Hojas de trabajo de regulación emocional 4, 4a)",
+      "start_page": 386,
+      "end_page": 386,
+      "out_path": "emotion_regulation/fichas/ficha_05.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.6",
+      "module": "emotion_regulation",
+      "number": "6",
+      "title": "Formas de describir",
+      "start_page": 31,
+      "end_page": 31,
+      "out_path": "emotion_regulation/fichas/ficha_06.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.6",
+      "module": "emotion_regulation",
+      "number": "6",
+      "title": "(Hojas de trabajo de regulación emocional 4, 4a)",
+      "start_page": 387,
+      "end_page": 412,
+      "out_path": "emotion_regulation/fichas/ficha_06.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.7",
+      "module": "emotion_regulation",
+      "number": "7",
+      "title": "Descripción general:",
+      "start_page": 31,
+      "end_page": 31,
+      "out_path": "emotion_regulation/fichas/ficha_07.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.7",
+      "module": "emotion_regulation",
+      "number": "7",
+      "title": "(Hojas de trabajo de regulación emocional 5–8)",
+      "start_page": 413,
+      "end_page": 414,
+      "out_path": "emotion_regulation/fichas/ficha_07.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.8",
+      "module": "emotion_regulation",
+      "number": "8",
+      "title": "Verificar los hechos",
+      "start_page": 32,
+      "end_page": 32,
+      "out_path": "emotion_regulation/fichas/ficha_08.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.8",
+      "module": "emotion_regulation",
+      "number": "8",
+      "title": "(Hoja de trabajo de regulación emocional 5)",
+      "start_page": 415,
+      "end_page": 417,
+      "out_path": "emotion_regulation/fichas/ficha_08.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.8a",
+      "module": "emotion_regulation",
+      "number": "8a",
+      "title": "Ejemplos de",
+      "start_page": 32,
+      "end_page": 32,
+      "out_path": "emotion_regulation/fichas/ficha_8a.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.8a",
+      "module": "emotion_regulation",
+      "number": "8a",
+      "title": "(Hoja de trabajo de regulación emocional 5)",
+      "start_page": 418,
+      "end_page": 419,
+      "out_path": "emotion_regulation/fichas/ficha_8a.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.9",
+      "module": "emotion_regulation",
+      "number": "9",
+      "title": "Acción opuesta y",
+      "start_page": 32,
+      "end_page": 32,
+      "out_path": "emotion_regulation/fichas/ficha_09.txt"
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.9",
+      "module": "emotion_regulation",
+      "number": "9",
+      "title": "(Hoja de trabajo de regulación emocional 6)",
+      "start_page": 420,
+      "end_page": 421,
+      "out_path": "emotion_regulation/fichas/ficha_09.txt"
+    },
+    {
+      "doc_id": "general.ficha.1",
+      "module": "general",
+      "number": "1",
+      "title": "Objetivos del entrenamiento en",
+      "start_page": 19,
+      "end_page": 19,
+      "out_path": "overview/fichas/ficha_general_01.txt"
+    },
+    {
+      "doc_id": "general.ficha.1",
+      "module": "general",
+      "number": "1",
+      "title": "Ficha 1",
+      "start_page": 57,
+      "end_page": 58,
+      "out_path": "overview/fichas/ficha_general_01.txt"
+    },
+    {
+      "doc_id": "general.ficha.1a",
+      "module": "general",
+      "number": "1a",
+      "title": "Opciones para resolver cualquier",
+      "start_page": 19,
+      "end_page": 19,
+      "out_path": "overview/fichas/ficha_general_1a.txt"
+    },
+    {
+      "doc_id": "general.ficha.1a",
+      "module": "general",
+      "number": "1a",
+      "title": "Opciones para resolver cualquier problema",
+      "start_page": 59,
+      "end_page": 60,
+      "out_path": "overview/fichas/ficha_general_1a.txt"
+    },
+    {
+      "doc_id": "general.ficha.2",
+      "module": "general",
+      "number": "2",
+      "title": "Descripción general: introducción al",
+      "start_page": 20,
+      "end_page": 20,
+      "out_path": "overview/fichas/ficha_general_02.txt"
+    },
+    {
+      "doc_id": "general.ficha.2",
+      "module": "general",
+      "number": "2",
+      "title": "Descripción general:",
+      "start_page": 61,
+      "end_page": 62,
+      "out_path": "overview/fichas/ficha_general_02.txt"
+    },
+    {
+      "doc_id": "general.ficha.3",
+      "module": "general",
+      "number": "3",
+      "title": "Pautas para el entrenamiento en",
+      "start_page": 20,
+      "end_page": 20,
+      "out_path": "overview/fichas/ficha_general_03.txt"
+    },
+    {
+      "doc_id": "general.ficha.3",
+      "module": "general",
+      "number": "3",
+      "title": "Pautas para el entrenamiento en habilidades",
+      "start_page": 63,
+      "end_page": 64,
+      "out_path": "overview/fichas/ficha_general_03.txt"
+    },
+    {
+      "doc_id": "general.ficha.4",
+      "module": "general",
+      "number": "4",
+      "title": "Supuestos del entrenamiento",
+      "start_page": 20,
+      "end_page": 20,
+      "out_path": "overview/fichas/ficha_general_04.txt"
+    },
+    {
+      "doc_id": "general.ficha.4",
+      "module": "general",
+      "number": "4",
+      "title": "Supuestos del entrenamiento",
+      "start_page": 65,
+      "end_page": 66,
+      "out_path": "overview/fichas/ficha_general_04.txt"
+    },
+    {
+      "doc_id": "general.ficha.5",
+      "module": "general",
+      "number": "5",
+      "title": "Teoría biosocial",
+      "start_page": 20,
+      "end_page": 20,
+      "out_path": "overview/fichas/ficha_general_05.txt"
+    },
+    {
+      "doc_id": "general.ficha.5",
+      "module": "general",
+      "number": "5",
+      "title": "Teoría biosocial",
+      "start_page": 67,
+      "end_page": 70,
+      "out_path": "overview/fichas/ficha_general_05.txt"
+    },
+    {
+      "doc_id": "general.ficha.6",
+      "module": "general",
+      "number": "6",
+      "title": "Descripción general: analizar la",
+      "start_page": 20,
+      "end_page": 20,
+      "out_path": "overview/fichas/ficha_general_06.txt"
+    },
+    {
+      "doc_id": "general.ficha.6",
+      "module": "general",
+      "number": "6",
+      "title": "(Hojas de trabajo generales 2, 3)",
+      "start_page": 71,
+      "end_page": 72,
+      "out_path": "overview/fichas/ficha_general_06.txt"
+    },
+    {
+      "doc_id": "general.ficha.7",
+      "module": "general",
+      "number": "7",
+      "title": "Análisis en cadena (Hojas de trabajo",
+      "start_page": 20,
+      "end_page": 20,
+      "out_path": "overview/fichas/ficha_general_07.txt"
+    },
+    {
+      "doc_id": "general.ficha.7",
+      "module": "general",
+      "number": "7",
+      "title": "(Hojas de trabajo generales 2, 2a)",
+      "start_page": 73,
+      "end_page": 74,
+      "out_path": "overview/fichas/ficha_general_07.txt"
+    },
+    {
+      "doc_id": "general.ficha.7a",
+      "module": "general",
+      "number": "7a",
+      "title": "Análisis en cadena, paso a paso",
+      "start_page": 20,
+      "end_page": 20,
+      "out_path": "overview/fichas/ficha_general_7a.txt"
+    },
+    {
+      "doc_id": "general.ficha.7a",
+      "module": "general",
+      "number": "7a",
+      "title": "(Hojas de trabajo generales 2, 2a) (p. 1 de 2)",
+      "start_page": 75,
+      "end_page": 79,
+      "out_path": "overview/fichas/ficha_general_7a.txt"
+    },
+    {
+      "doc_id": "general.ficha.8",
+      "module": "general",
+      "number": "8",
+      "title": "Análisis de los enlaces perdidos (Hoja",
+      "start_page": 20,
+      "end_page": 21,
+      "out_path": "overview/fichas/ficha_general_08.txt"
+    },
+    {
+      "doc_id": "general.ficha.8",
+      "module": "general",
+      "number": "8",
+      "title": "(Hoja de trabajo general 3)",
+      "start_page": 80,
+      "end_page": 102,
+      "out_path": "overview/fichas/ficha_general_08.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.1",
+      "module": "interpersonal_effectiveness",
+      "number": "1",
+      "title": "Objetivos de",
+      "start_page": 25,
+      "end_page": 25,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_01.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.1",
+      "module": "interpersonal_effectiveness",
+      "number": "1",
+      "title": "(Hoja de trabajo de E.I. 1)",
+      "start_page": 230,
+      "end_page": 231,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_01.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.10",
+      "module": "interpersonal_effectiveness",
+      "number": "10",
+      "title": "Descripción",
+      "start_page": 26,
+      "end_page": 26,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_10.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.10",
+      "module": "interpersonal_effectiveness",
+      "number": "10",
+      "title": "Descripción general:",
+      "start_page": 269,
+      "end_page": 269,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_10.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.11",
+      "module": "interpersonal_effectiveness",
+      "number": "11",
+      "title": "Conocer gente y",
+      "start_page": 26,
+      "end_page": 26,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_11.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.11",
+      "module": "interpersonal_effectiveness",
+      "number": "11",
+      "title": "(Hoja de trabajo de E.I. 8)",
+      "start_page": 270,
+      "end_page": 274,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_11.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.11a",
+      "module": "interpersonal_effectiveness",
+      "number": "11a",
+      "title": "Identificar",
+      "start_page": 26,
+      "end_page": 26,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_11a.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.11a",
+      "module": "interpersonal_effectiveness",
+      "number": "11a",
+      "title": "Identificar habilidades para conocer personas y agradarles",
+      "start_page": 275,
+      "end_page": 276,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_11a.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.12",
+      "module": "interpersonal_effectiveness",
+      "number": "12",
+      "title": "Mindfulness de los",
+      "start_page": 27,
+      "end_page": 27,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_12.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.12",
+      "module": "interpersonal_effectiveness",
+      "number": "12",
+      "title": "(Hoja de trabajo de E.I. 9)",
+      "start_page": 277,
+      "end_page": 278,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_12.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.12a",
+      "module": "interpersonal_effectiveness",
+      "number": "12a",
+      "title": "Identificar",
+      "start_page": 27,
+      "end_page": 27,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_12a.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.12a",
+      "module": "interpersonal_effectiveness",
+      "number": "12a",
+      "title": "Identificar mindfulness de los otros",
+      "start_page": 279,
+      "end_page": 280,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_12a.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.13",
+      "module": "interpersonal_effectiveness",
+      "number": "13",
+      "title": "Terminar",
+      "start_page": 27,
+      "end_page": 27,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_13.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.13",
+      "module": "interpersonal_effectiveness",
+      "number": "13",
+      "title": "(Hoja de trabajo de E.I. 10)",
+      "start_page": 281,
+      "end_page": 282,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_13.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.13a",
+      "module": "interpersonal_effectiveness",
+      "number": "13a",
+      "title": "Identificar cómo",
+      "start_page": 27,
+      "end_page": 27,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_13a.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.13a",
+      "module": "interpersonal_effectiveness",
+      "number": "13a",
+      "title": "Identificar cómo terminar relaciones",
+      "start_page": 283,
+      "end_page": 285,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_13a.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.14",
+      "module": "interpersonal_effectiveness",
+      "number": "14",
+      "title": "Descripción",
+      "start_page": 27,
+      "end_page": 27,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_14.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.14",
+      "module": "interpersonal_effectiveness",
+      "number": "14",
+      "title": "(Hojas de trabajo de E.I. 11–15c)",
+      "start_page": 286,
+      "end_page": 287,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_14.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.15",
+      "module": "interpersonal_effectiveness",
+      "number": "15",
+      "title": "Dialéctica (Hojas",
+      "start_page": 27,
+      "end_page": 27,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_15.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.15",
+      "module": "interpersonal_effectiveness",
+      "number": "15",
+      "title": "(Hojas de trabajo de E.I. 11–11b)",
+      "start_page": 288,
+      "end_page": 289,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_15.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.16",
+      "module": "interpersonal_effectiveness",
+      "number": "16",
+      "title": "Cómo pensar y",
+      "start_page": 27,
+      "end_page": 27,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_16.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.16",
+      "module": "interpersonal_effectiveness",
+      "number": "16",
+      "title": "(Hojas de trabajo de E.I. 11–11b)",
+      "start_page": 290,
+      "end_page": 291,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_16.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.16a",
+      "module": "interpersonal_effectiveness",
+      "number": "16a",
+      "title": "Ejemplos de",
+      "start_page": 27,
+      "end_page": 27,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_16a.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.16a",
+      "module": "interpersonal_effectiveness",
+      "number": "16a",
+      "title": "Ejemplos de oposiciones donde ambos puntos de vista pueden ser verdaderos",
+      "start_page": 292,
+      "end_page": 293,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_16a.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.16b",
+      "module": "interpersonal_effectiveness",
+      "number": "16b",
+      "title": "Opuestos",
+      "start_page": 27,
+      "end_page": 27,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_16b.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.16b",
+      "module": "interpersonal_effectiveness",
+      "number": "16b",
+      "title": "Opuestos importantes que hay que equilibrar",
+      "start_page": 294,
+      "end_page": 294,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_16b.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.16c",
+      "module": "interpersonal_effectiveness",
+      "number": "16c",
+      "title": "Identificar",
+      "start_page": 27,
+      "end_page": 27,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_16c.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.16c",
+      "module": "interpersonal_effectiveness",
+      "number": "16c",
+      "title": "Identificar dialécticas",
+      "start_page": 295,
+      "end_page": 296,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_16c.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.17",
+      "module": "interpersonal_effectiveness",
+      "number": "17",
+      "title": "Validación (Hoja de",
+      "start_page": 27,
+      "end_page": 27,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_17.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.17",
+      "module": "interpersonal_effectiveness",
+      "number": "17",
+      "title": "(Hoja de trabajo de E.I. 12)",
+      "start_page": 297,
+      "end_page": 299,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_17.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.18",
+      "module": "interpersonal_effectiveness",
+      "number": "18",
+      "title": "Guía de cómo",
+      "start_page": 28,
+      "end_page": 28,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_18.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.18",
+      "module": "interpersonal_effectiveness",
+      "number": "18",
+      "title": "(Hoja de trabajo de E.I. 12)",
+      "start_page": 300,
+      "end_page": 302,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_18.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.18a",
+      "module": "interpersonal_effectiveness",
+      "number": "18a",
+      "title": "Identificar la",
+      "start_page": 28,
+      "end_page": 28,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_18a.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.18a",
+      "module": "interpersonal_effectiveness",
+      "number": "18a",
+      "title": "Identificar la validación",
+      "start_page": 303,
+      "end_page": 304,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_18a.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.19",
+      "module": "interpersonal_effectiveness",
+      "number": "19",
+      "title": "Recuperarse de la",
+      "start_page": 28,
+      "end_page": 28,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_19.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.19",
+      "module": "interpersonal_effectiveness",
+      "number": "19",
+      "title": "(P.",
+      "start_page": 305,
+      "end_page": 307,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_19.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.19a",
+      "module": "interpersonal_effectiveness",
+      "number": "19a",
+      "title": "Identificar la",
+      "start_page": 28,
+      "end_page": 28,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_19a.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.19a",
+      "module": "interpersonal_effectiveness",
+      "number": "19a",
+      "title": "Identificar la autovalidación",
+      "start_page": 308,
+      "end_page": 308,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_19a.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.2",
+      "module": "interpersonal_effectiveness",
+      "number": "2",
+      "title": "Factores que se",
+      "start_page": 25,
+      "end_page": 25,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_02.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.2",
+      "module": "interpersonal_effectiveness",
+      "number": "2",
+      "title": "Factores que se interponen en el camino de la efectividad interpersonal",
+      "start_page": 232,
+      "end_page": 234,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_02.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.20",
+      "module": "interpersonal_effectiveness",
+      "number": "20",
+      "title": "Estrategias para",
+      "start_page": 28,
+      "end_page": 28,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_20.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.20",
+      "module": "interpersonal_effectiveness",
+      "number": "20",
+      "title": "(Hoja de trabajo de E.I. 14)",
+      "start_page": 309,
+      "end_page": 311,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_20.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.21",
+      "module": "interpersonal_effectiveness",
+      "number": "21",
+      "title": "Estrategias para",
+      "start_page": 28,
+      "end_page": 28,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_21.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.21",
+      "module": "interpersonal_effectiveness",
+      "number": "21",
+      "title": "(Hoja de trabajo de E.I. 15)",
+      "start_page": 312,
+      "end_page": 314,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_21.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.22",
+      "module": "interpersonal_effectiveness",
+      "number": "22",
+      "title": "Consejos para",
+      "start_page": 28,
+      "end_page": 28,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_22.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.22",
+      "module": "interpersonal_effectiveness",
+      "number": "22",
+      "title": "(Hojas de trabajo de E.I. 14, 15)",
+      "start_page": 315,
+      "end_page": 316,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_22.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.22a",
+      "module": "interpersonal_effectiveness",
+      "number": "22a",
+      "title": "Identificar",
+      "start_page": 28,
+      "end_page": 31,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_22a.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.22a",
+      "module": "interpersonal_effectiveness",
+      "number": "22a",
+      "title": "Identificar estrategias efectivas de cambio conductual",
+      "start_page": 317,
+      "end_page": 373,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_22a.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.2a",
+      "module": "interpersonal_effectiveness",
+      "number": "2a",
+      "title": "Mitos que se",
+      "start_page": 25,
+      "end_page": 25,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_2a.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.2a",
+      "module": "interpersonal_effectiveness",
+      "number": "2a",
+      "title": "(Hoja de trabajo de E.I. 2)",
+      "start_page": 235,
+      "end_page": 237,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_2a.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.3",
+      "module": "interpersonal_effectiveness",
+      "number": "3",
+      "title": "Descripción general:",
+      "start_page": 25,
+      "end_page": 25,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_03.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.3",
+      "module": "interpersonal_effectiveness",
+      "number": "3",
+      "title": "Descripción general: alcanzar tus objetivos habilidosamente",
+      "start_page": 238,
+      "end_page": 239,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_03.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.4",
+      "module": "interpersonal_effectiveness",
+      "number": "4",
+      "title": "Clarificando",
+      "start_page": 25,
+      "end_page": 25,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_04.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.4",
+      "module": "interpersonal_effectiveness",
+      "number": "4",
+      "title": "(Hoja de trabajo de E.I. 3)",
+      "start_page": 240,
+      "end_page": 242,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_04.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.5",
+      "module": "interpersonal_effectiveness",
+      "number": "5",
+      "title": "Pautas para",
+      "start_page": 25,
+      "end_page": 25,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_05.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.5",
+      "module": "interpersonal_effectiveness",
+      "number": "5",
+      "title": "(Hojas de trabajo de E.I. 4, 5) (p. 1 de 2)",
+      "start_page": 243,
+      "end_page": 247,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_05.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.5a",
+      "module": "interpersonal_effectiveness",
+      "number": "5a",
+      "title": "Aplicar las",
+      "start_page": 25,
+      "end_page": 25,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_5a.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.5a",
+      "module": "interpersonal_effectiveness",
+      "number": "5a",
+      "title": "Aplicar las habilidades DEAR MAN a una interacción difícil",
+      "start_page": 248,
+      "end_page": 250,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_5a.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.6",
+      "module": "interpersonal_effectiveness",
+      "number": "6",
+      "title": "Pautas para",
+      "start_page": 26,
+      "end_page": 26,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_06.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.6",
+      "module": "interpersonal_effectiveness",
+      "number": "6",
+      "title": "(Hojas de trabajo de E.I. 4, 5)",
+      "start_page": 251,
+      "end_page": 254,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_06.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.6a",
+      "module": "interpersonal_effectiveness",
+      "number": "6a",
+      "title": "Ampliando la V en",
+      "start_page": 26,
+      "end_page": 26,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_6a.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.6a",
+      "module": "interpersonal_effectiveness",
+      "number": "6a",
+      "title": "Ampliando la V en AVES: niveles de validación",
+      "start_page": 255,
+      "end_page": 255,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_6a.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.7",
+      "module": "interpersonal_effectiveness",
+      "number": "7",
+      "title": "Pautas para la",
+      "start_page": 26,
+      "end_page": 26,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_07.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.7",
+      "module": "interpersonal_effectiveness",
+      "number": "7",
+      "title": "(Hojas de trabajo de E.I. 4, 5)",
+      "start_page": 256,
+      "end_page": 257,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_07.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.8",
+      "module": "interpersonal_effectiveness",
+      "number": "8",
+      "title": "Cómo evaluar tus",
+      "start_page": 26,
+      "end_page": 26,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_08.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.8",
+      "module": "interpersonal_effectiveness",
+      "number": "8",
+      "title": "(Hoja de trabajo de E.I. 6) (p. 1 de 3)",
+      "start_page": 258,
+      "end_page": 262,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_08.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.9",
+      "module": "interpersonal_effectiveness",
+      "number": "9",
+      "title": "Solución de",
+      "start_page": 26,
+      "end_page": 26,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_09.txt"
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.9",
+      "module": "interpersonal_effectiveness",
+      "number": "9",
+      "title": "(Hoja de trabajo de E.I. 7) (p. 1 de 2)",
+      "start_page": 263,
+      "end_page": 268,
+      "out_path": "interpersonal_effectiveness/fichas/ficha_09.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.1",
+      "module": "mindfulness",
+      "number": "1",
+      "title": "Objetivos de la práctica de",
+      "start_page": 21,
+      "end_page": 21,
+      "out_path": "mindfulness/fichas/ficha_01.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.1",
+      "module": "mindfulness",
+      "number": "1",
+      "title": "(Hoja de trabajo de mindfulness 1)",
+      "start_page": 108,
+      "end_page": 109,
+      "out_path": "mindfulness/fichas/ficha_01.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.10",
+      "module": "mindfulness",
+      "number": "10",
+      "title": "Analizándote por el sendero del",
+      "start_page": 23,
+      "end_page": 25,
+      "out_path": "mindfulness/fichas/ficha_10.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.10",
+      "module": "mindfulness",
+      "number": "10",
+      "title": "(Hojas de trabajo de mindfulness 10–10b)",
+      "start_page": 161,
+      "end_page": 229,
+      "out_path": "mindfulness/fichas/ficha_10.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.1a",
+      "module": "mindfulness",
+      "number": "1a",
+      "title": "Definiciones de mindfulness",
+      "start_page": 21,
+      "end_page": 21,
+      "out_path": "mindfulness/fichas/ficha_1a.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.1a",
+      "module": "mindfulness",
+      "number": "1a",
+      "title": "Definiciones de mindfulness",
+      "start_page": 110,
+      "end_page": 112,
+      "out_path": "mindfulness/fichas/ficha_1a.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.2",
+      "module": "mindfulness",
+      "number": "2",
+      "title": "Descripción general: habilidades",
+      "start_page": 21,
+      "end_page": 21,
+      "out_path": "mindfulness/fichas/ficha_02.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.2",
+      "module": "mindfulness",
+      "number": "2",
+      "title": "(Hojas de trabajo de mindfulness 2–2c, 3)",
+      "start_page": 113,
+      "end_page": 114,
+      "out_path": "mindfulness/fichas/ficha_02.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.3",
+      "module": "mindfulness",
+      "number": "3",
+      "title": "Mente sabia: estados de la",
+      "start_page": 21,
+      "end_page": 21,
+      "out_path": "mindfulness/fichas/ficha_03.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.3",
+      "module": "mindfulness",
+      "number": "3",
+      "title": "(Hoja de trabajo de mindfulness 3)",
+      "start_page": 115,
+      "end_page": 116,
+      "out_path": "mindfulness/fichas/ficha_03.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.3a",
+      "module": "mindfulness",
+      "number": "3a",
+      "title": "Ideas para la práctica de mente",
+      "start_page": 21,
+      "end_page": 21,
+      "out_path": "mindfulness/fichas/ficha_3a.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.3a",
+      "module": "mindfulness",
+      "number": "3a",
+      "title": "(Hoja de trabajo de mindfulness 3) (p. 1 de 2)",
+      "start_page": 117,
+      "end_page": 120,
+      "out_path": "mindfulness/fichas/ficha_3a.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.4",
+      "module": "mindfulness",
+      "number": "4",
+      "title": "Tomar control de tu mente:",
+      "start_page": 21,
+      "end_page": 21,
+      "out_path": "mindfulness/fichas/ficha_04.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.4",
+      "module": "mindfulness",
+      "number": "4",
+      "title": "(Hojas de trabajo de mindfulness 2–2c, 4–4b)",
+      "start_page": 121,
+      "end_page": 122,
+      "out_path": "mindfulness/fichas/ficha_04.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.4a",
+      "module": "mindfulness",
+      "number": "4a",
+      "title": "Ideas para practicar observar",
+      "start_page": 21,
+      "end_page": 21,
+      "out_path": "mindfulness/fichas/ficha_4a.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.4a",
+      "module": "mindfulness",
+      "number": "4a",
+      "title": "Ideas para practicar observar",
+      "start_page": 123,
+      "end_page": 132,
+      "out_path": "mindfulness/fichas/ficha_4a.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.4b",
+      "module": "mindfulness",
+      "number": "4b",
+      "title": "Ideas para practicar describir",
+      "start_page": 21,
+      "end_page": 21,
+      "out_path": "mindfulness/fichas/ficha_4b.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.4b",
+      "module": "mindfulness",
+      "number": "4b",
+      "title": "ideas para practicar describir, y ficha",
+      "start_page": 102,
+      "end_page": 102,
+      "out_path": "mindfulness/fichas/ficha_4b.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.4b",
+      "module": "mindfulness",
+      "number": "4b",
+      "title": "(Hojas de trabajo de mindfulness 2–2c, 4–4b)",
+      "start_page": 133,
+      "end_page": 135,
+      "out_path": "mindfulness/fichas/ficha_4b.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.4c",
+      "module": "mindfulness",
+      "number": "4c",
+      "title": "Ideas para practicar participar",
+      "start_page": 22,
+      "end_page": 22,
+      "out_path": "mindfulness/fichas/ficha_4c.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.4c",
+      "module": "mindfulness",
+      "number": "4c",
+      "title": "(Hojas de trabajo de mindfulness 2–2c, 4–4b)",
+      "start_page": 136,
+      "end_page": 137,
+      "out_path": "mindfulness/fichas/ficha_4c.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.5",
+      "module": "mindfulness",
+      "number": "5",
+      "title": "Tomar control de tu mente:",
+      "start_page": 22,
+      "end_page": 22,
+      "out_path": "mindfulness/fichas/ficha_05.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.5",
+      "module": "mindfulness",
+      "number": "5",
+      "title": "(Hojas de trabajo de mindfulness 2–2c, 5–5c)",
+      "start_page": 138,
+      "end_page": 139,
+      "out_path": "mindfulness/fichas/ficha_05.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.5a",
+      "module": "mindfulness",
+      "number": "5a",
+      "title": "Ideas para practicar no juzgar",
+      "start_page": 22,
+      "end_page": 22,
+      "out_path": "mindfulness/fichas/ficha_5a.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.5a",
+      "module": "mindfulness",
+      "number": "5a",
+      "title": "(Hojas de trabajo de mindfulness 2–2c, 5–5c)",
+      "start_page": 140,
+      "end_page": 141,
+      "out_path": "mindfulness/fichas/ficha_5a.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.5b",
+      "module": "mindfulness",
+      "number": "5b",
+      "title": "Ideas para practicar una cosa a",
+      "start_page": 22,
+      "end_page": 22,
+      "out_path": "mindfulness/fichas/ficha_5b.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.5b",
+      "module": "mindfulness",
+      "number": "5b",
+      "title": "ideas para practicar una cosa a la vez,",
+      "start_page": 102,
+      "end_page": 107,
+      "out_path": "mindfulness/fichas/ficha_5b.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.5b",
+      "module": "mindfulness",
+      "number": "5b",
+      "title": "(Hojas de trabajo de mindfulness 2–2c, 5–5c)",
+      "start_page": 142,
+      "end_page": 144,
+      "out_path": "mindfulness/fichas/ficha_5b.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.5c",
+      "module": "mindfulness",
+      "number": "5c",
+      "title": "Ideas para practicar siendo",
+      "start_page": 22,
+      "end_page": 22,
+      "out_path": "mindfulness/fichas/ficha_5c.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.5c",
+      "module": "mindfulness",
+      "number": "5c",
+      "title": "(Hojas de trabajo de mindfulness 2–2c, 5–5c)",
+      "start_page": 145,
+      "end_page": 146,
+      "out_path": "mindfulness/fichas/ficha_5c.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.6",
+      "module": "mindfulness",
+      "number": "6",
+      "title": "Descripción general: otras",
+      "start_page": 22,
+      "end_page": 22,
+      "out_path": "mindfulness/fichas/ficha_06.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.6",
+      "module": "mindfulness",
+      "number": "6",
+      "title": "(Hojas de trabajo de mindfulness 6–10b)",
+      "start_page": 147,
+      "end_page": 147,
+      "out_path": "mindfulness/fichas/ficha_06.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.7",
+      "module": "mindfulness",
+      "number": "7",
+      "title": "Objetivos de la práctica de",
+      "start_page": 22,
+      "end_page": 22,
+      "out_path": "mindfulness/fichas/ficha_07.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.7",
+      "module": "mindfulness",
+      "number": "7",
+      "title": "(Hoja de trabajo de mindfulness 1)",
+      "start_page": 148,
+      "end_page": 149,
+      "out_path": "mindfulness/fichas/ficha_07.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.7a",
+      "module": "mindfulness",
+      "number": "7a",
+      "title": "Mente sabia desde una",
+      "start_page": 22,
+      "end_page": 22,
+      "out_path": "mindfulness/fichas/ficha_7a.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.7a",
+      "module": "mindfulness",
+      "number": "7a",
+      "title": "Mente sabia desde una perspectiva espiritual",
+      "start_page": 150,
+      "end_page": 151,
+      "out_path": "mindfulness/fichas/ficha_7a.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.8",
+      "module": "mindfulness",
+      "number": "8",
+      "title": "Práctica del amor compasivo",
+      "start_page": 22,
+      "end_page": 22,
+      "out_path": "mindfulness/fichas/ficha_08.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.8",
+      "module": "mindfulness",
+      "number": "8",
+      "title": "(Hoja de trabajo de mindfulness 6)",
+      "start_page": 152,
+      "end_page": 154,
+      "out_path": "mindfulness/fichas/ficha_08.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.9",
+      "module": "mindfulness",
+      "number": "9",
+      "title": "Medios hábiles: equilibrar",
+      "start_page": 22,
+      "end_page": 22,
+      "out_path": "mindfulness/fichas/ficha_09.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.9",
+      "module": "mindfulness",
+      "number": "9",
+      "title": "(Hojas de trabajo de mindfulness 7–9)",
+      "start_page": 155,
+      "end_page": 156,
+      "out_path": "mindfulness/fichas/ficha_09.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.9a",
+      "module": "mindfulness",
+      "number": "9a",
+      "title": "Ideas para practicar equilibrar",
+      "start_page": 23,
+      "end_page": 23,
+      "out_path": "mindfulness/fichas/ficha_9a.txt"
+    },
+    {
+      "doc_id": "mindfulness.ficha.9a",
+      "module": "mindfulness",
+      "number": "9a",
+      "title": "(Hojas de trabajo de mindfulness 7–9) (p. 1 de 2)",
+      "start_page": 157,
+      "end_page": 160,
+      "out_path": "mindfulness/fichas/ficha_9a.txt"
+    }
+  ]
+}

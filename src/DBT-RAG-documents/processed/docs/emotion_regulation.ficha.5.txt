@@ -1,0 +1,10 @@
+DOC_ID: emotion_regulation.ficha.5
+TYPE: ficha
+MODULE: emotion_regulation
+NUMBER: 5
+TITLE: Modelo para describir las emociones
+PAGES: 386-387
+MAJOR_SECTION: Fichas de regulación emocional
+REFS_OUT: 
+
+(Hojas de trabajo de regulación emocional 4, 4a) Modelo para describir las emociones

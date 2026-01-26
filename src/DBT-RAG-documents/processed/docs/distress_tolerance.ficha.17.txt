@@ -1,0 +1,10 @@
+DOC_ID: distress_tolerance.ficha.17
+TYPE: ficha
+MODULE: distress_tolerance
+NUMBER: 17
+TITLE: Abstinencia dialéctica
+PAGES: 628-630
+MAJOR_SECTION: Hojas de trabajo de tolerancia al malestar 8–15a)
+REFS_OUT: distress_tolerance.hoja.14
+
+(Hoja de trabajo de tolerancia al malestar 14) Abstinencia dialéctica El objetivo es no volver a comportarse de manera adictiva, en otras palabras, lograr la abstinencia completa. Sin embargo, si hay un desliz, el objetivo es minimizar el daño y volver a la abstinencia lo antes posible. Pros: ¡funciona! Contras: requiere trabajo. No tienes vacaciones. (Siempre estás abstinente o trabajando para volver a la abstinencia) Un ejemplo de esperar lo mejor y planificar para momentos problemáticos: los atletas olímpicos deben creer y comportarse como si pudieran ganar todas las carreras, a pesar de que han perdido antes y volverán a perder.

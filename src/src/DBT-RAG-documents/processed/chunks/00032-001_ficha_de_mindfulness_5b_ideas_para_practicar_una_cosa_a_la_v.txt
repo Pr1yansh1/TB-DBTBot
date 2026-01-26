@@ -1,9 +1,0 @@
-TITLE: FICHA DE MINDFULNESS 5B — Ideas para practicar una cosa a la vez
-MODULE: mindfulness
-SKILL_TAG: FICHA_DE_MINDFULNESS_5B_IDEAS_PARA_PRACTICAR_UNA_COSA_A_LA_V
-SOURCE_PDF: Manual-2023-enumerado-.pdf
-PAGES: 142-144
-CHUNK_ID: 00032-001
-UNIT_ID: 00032
-
-(Hojas de trabajo de mindfulness 2–2c, 5–5c) Ideas para practicar una cosa a la vez

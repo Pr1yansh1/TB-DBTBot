@@ -1,0 +1,263 @@
+Marsha M. Linehan
+Manual de entrenamiento en habilidades DBT
+PARA EL/LA CONSULTANTE
+SEGUNDA EDICIÓN
+
+Linehan, Marsha M.
+Manual de entrenamiento en habilidades DBT® :
+para el/la consultante / Marsha M. Linehan ; Pablo
+Gagliesi. - 1a ed - La Plata : EDULP, 2020.
+Libro digital, EPUB
+Archivo Digital: descarga y online
+ISBN 978-987-8348-62-9
+1. Salud Mental. 2. Psicología. I. Gagliesi, Pablo II.
+Título
+CDD 150
+MANUAL DE ENTRENAMIENTO EN HABILIDADES DBT ®
+Para el/la consultante
+Segunda Edición
+MARSHA M. LINEHAN
+EDITORIAL DE LA UNIVERSIDAD NACIONAL DE LA PLATA (EDULP)
+47 N.º 380 / La Plata B1900AJP / Buenos Aires, Argentina
++54 221 427 3992 / 427 4898 edulp.editorial@gmail.com
+www.editorial.unlp.edu.ar
+Edulp integra la Red de Editoriales de las Universidades Nacionales (REUN)
+© 2020 - Edulp
+Primera edición, 2020
+Edición en formato digital: septiembre de 2020
+Conversión a formato digital: Libresque
+
+EL LIBRO MUERE CUANDO LO FOTOCOPIAS O LO DISTRIBUYES DIGITALMENTE
+Amigo lector:
+La obra que usted tiene en sus manos posee un gran valor. En ella, su autor ha vertido conocimientos, experiencia y mucho trabajo. El editor ha procurado una presentación digna
+de su contenido y está poniendo todo su empeño y recursos para que sea ampliamente difundida, a través de su red de comercialización.
+Al fotocopiar o distribuir digitalmente este libro, el autor y el editor dejan de percibir lo que corresponde a la inversión que han realizado y se desalienta la creación de nuevas obras.
+Rechace cualquier ejemplar “pirata” o fotocopia ilegal de este libro, pues de lo contrario estará contribuyendo al lucro de quienes se aprovechan ilegítimamente del esfuerzo del
+autor y del editor.
+La reproducción no autorizada de obras protegidas por el derecho de autor no solo es un delito, sino que atenta contra la creatividad y la difusión de la lectura.
+
+¡Forma parte de nuestra comunidad!
+Facebook: @tresolasediciones
+Instagram: @tresolasediciones
+Web: www.tresolasediciones.com
+
+Durante los retiros de mindfulness, en las caminatas, ando apretando los puños, diciéndoles en mi mente a todos aquellos que,
+en cualquier lugar del mundo, son pacientes de salud mental: “No tienes que apretar las manos hoy. Lo estoy haciendo por ti”. A
+veces, cuando bailo, hago algo parecido: invito en mi cabeza a todos los pacientes a que vengan a bailar conmigo.
+
+Este libro está dedicado a ti y a todos los pacientes del mundo que piensan que nadie está pensando en ellos. Iba a decirte que
+practicaría habilidades por ti, para que no tengas que practicarlas tú mismo. Pero luego me di cuenta de que, si lo hacía, no aprenderías
+a ser habilidoso.
+
+Por eso mismo te deseo el mejor de los deseos: que este libro te sea útil y tú seas lo más hábil posible.
+
+Sobre la autora
+Marsha M. Linehan, PhD, ABPP, es la creadora de la Terapia
+Dialéctico Conductual (de ahora en adelante nos referiremos a esta terapia por sus siglas en inglés, DBT), profesora emérita de
+psicología en la Universidad de Washington y directora emérita de
+Behavioral Research and Therapy Clinics (BRTC).
+Su interés principal en la investigación es el desarrollo y evaluación de tratamientos −basados en la evidencia− para
+poblaciones con alto riesgo de suicidio y trastornos mentales múltiples y graves.
+Las contribuciones de la Dra. Linehan a la investigación del suicidio y la investigación en psicología clínica han sido reconocidas
+con numerosos premios, entre ellos el Premio Medalla de Oro al
+Logro en Vida en la Aplicación de Psicología de la Fundación
+Psicológica Americana (American Psychological Foundation) y el
+Premio James McKeen Cattell de la Asociación de la Ciencia
+Psicológica (Association for Psychological Science). En su honor, la
+Asociación Americana de Suicidología (American Association of
+Suicidology) creó el Premio Marsha Linehan a la investigación sobresaliente en el tratamiento del comportamiento suicida.
+Es maestra Zen y enseña prácticas de mindfulness a través de talleres y retiros para proveedores de atención médica.
+
+Prólogo
+Desde la publicación del manual original de entrenamiento en habilidades de la terapia dialéctico conductual (DBT por sus siglas
+en inglés) en 1993, ha habido una explosión en la investigación sobre las aplicaciones de DBT en diferentes trastornos. Mi estudio
+piloto y primer estudio de DBT se centró en el tratamiento de adultos altamente suicidas. Ahora, tenemos investigaciones que demuestran
+la eficacia del entrenamiento con adolescentes suicidas, así como con adultos con trastorno límite de personalidad, trastornos
+alimentarios, depresión resistente al tratamiento, abuso de sustancias y una variedad de otros trastornos. Sin embargo, no se
+requiere el diagnóstico de un trastorno mental para beneficiarse de las habilidades DBT. Los amigos y familiares de personas con
+dificultades encontrarán útiles estas habilidades al igual que los niños de las escuelas primarias y secundarias. También las
+empresas se beneficiarán de las habilidades DBT para crear mejores entornos de trabajo. Todos los terapeutas DBT que conozco
+practican dichas habilidades en sus propias vidas de forma rutinaria y yo misma les estoy agradecida porque me han hecho la vida
+mucho más fácil. Como alguien me dijo una vez: “¿No son estas habilidades lo que se suponía que tu madre debía enseñarte?”.
+
+Siempre digo que sí, pero para muchas personas su madre simplemente no lo hizo o no pudo hacerlo.
+Desarrollé muchas de las habilidades leyendo manuales y literatura sobre tratamientos en intervenciones conductuales
+basadas en evidencia. Revisé lo que los terapeutas les dijeron a sus pacientes que hicieran y luego reempaqué esas instrucciones en
+fichas y hojas de trabajo y escribí notas orientadas a la enseñanza para los terapeutas. Por ejemplo, la habilidad acción opuesta es un
+conjunto de instrucciones fundadas en tratamientos, basados en la exposición, para trastornos de ansiedad. El cambio principal fue
+generalizar las estrategias para adaptarse al tratamiento de las emociones además de la ansiedad. Verificar los hechos es una
+estrategia central en las intervenciones de terapia cognitiva. Las habilidades de mindfulness fueron producto de mis 19 años en
+escuelas católicas, mi entrenamiento en prácticas de oración contemplativa a través del programa de orientación espiritual del
+Instituto Shalem y mis 35 años como estudiante, y ahora maestra,
+Zen. A su vez Mindfulness de los pensamientos actuales se basa en la terapia de aceptación y compromiso. En general, las habilidades
+DBT son lo que los terapeutas conductuales les dicen a los consultantes que hagan a través de diversos tratamientos efectivos.
+Algunas de las habilidades reutilizan programas de tratamiento completos ahora formulados como una serie de pasos. Tal es el
+caso del nuevo protocolo de pesadillas. Otras habilidades provienen de la investigación en psicología cognitiva y social. Algunas otras
+vinieron de colegas que las desarrollaron para nuevas poblaciones.
+Como puedes ver, estas habilidades provienen de numerosas fuentes y disciplinas diferentes.
+
+Me complace presentar este manual de entrenamiento para consultantes, que incluye todas las fichas y hojas de trabajo que he
+desarrollado hasta ahora en DBT. (Estén atentos para más información). No es probable que necesites usar todas las
+habilidades que he incluido. Cada una funciona para alguien y ninguna funciona para todos. Las habilidades en este libro han sido
+probadas con
+una gran
+variedad de
+personas:
+adultos, adolescentes, padres, amigos y familias, tanto de alto riesgo como
+de bajo riesgo. Espero que sean justo lo que necesitas. Usa tus habilidades interpersonales (consulta aquellas denominadas DEAR
+MAN AVES VIDA en el módulo de efectividad interpersonal) para hablar con tu entrenador u otro maestro para que te enseñe
+habilidades que
+normalmente no
+están cubiertas
+en el
+entrenamiento si deseas aprenderlas. Si decides aventurarte por tu cuenta, debo decirte que no tenemos ninguna investigación sobre la
+efectividad de este manual como un libro de autoayuda o manual de auto-tratamiento. Espero escribir un libro sobre este tema en el
+futuro, así que mantén los ojos abiertos. Mientras tanto, pueden interesarte los videos de habilidades disponibles en YouTube. Ellos
+mismos no constituyen un tratamiento, pero sabemos que muchas personas los han encontrado útiles, a pesar de que no hemos
+recopilado datos sobre ellos. Por su cuenta o con la ayuda de un entrenador, te deseo medios hábiles.
+
+Prólogo a la edición en castellano
+Finalmente, llegó el libro que esperábamos.
+En el medio de estos festejos, tenemos que hacer un par de aclaraciones que funcionen también como disculpas frente a la
+incomodidad que pueden generar algunos temas.
+Primero, este manual está pensado para servir a una extensa y diversa población que pertenece a diferentes culturas que tienen al
+castellano como lenguaje principal. Las diferencias a veces enriquecen la conversación entre colegas y consultantes, por
+ejemplo, cómo llamar más precisamente en nuestro contexto una emoción, pero por el otro lado, podrían distraernos de la función
+principal que es el aprendizaje de una habilidad. Hablar un mismo idioma puede ser una ventaja o un escollo.
+Hablamos de muchas maneras el castellano, podríamos decir que hablamos distintos castellanos. Intentamos aquí reflejar, a través de
+numerosas consultas con colegas que viven en diferentes países, nuestras diferencias, pero por el otro lado, establecer algunas reglas
+o formas que permitan la comunicación, la investigación y la diseminación. Espero que puedan entender que estas soluciones de
+compromiso han tenido este noble propósito.
+Segundo, este manual aparece en el medio de un profundo y maravilloso cambio social en relación al debate sobre el género.
+
+Lamentablemente no hemos logrado, por diversos motivos –incluso administrativos y financieros– , adoptar plenamente un lenguaje
+moderno y no atado a la normativa de género. Hemos mantenido o/a como terminaciones generales y la o en los plurales. Nuestra
+preocupación está fundada en que está dirigido a una población para la cual un lenguaje inclusivo es, en definitiva, curativo.
+Asumimos ese compromiso en futuras ediciones.
+Tercero, DBT tiene muchos términos para los cuales no hay una traducción adecuada o exacta al castellano y no hay una tradición
+de traducciones de la que podamos servirnos. Hemos considerado opiniones de colegas de varios países para llegar a algunos
+acuerdos o modificando algunos elementos comunes a las traducciones caseras que muchos equipos han trabajosamente
+desarrollado para sus consultantes. También tuvimos que incluir las sugerencias y lineamientos de los editores de la versión en inglés y
+los entrenadores Behavioral Tech. Como verán, hay muchas personas que están detrás de esta traducción y ajuste clínico.
+Cuarto, debido a la difusión extendida de algunos anglicismos como mindfulness hasta en los medios de comunicación, preferimos
+un uso más bilingüe, donde podamos ir y volver de esos términos con flexibilidad antes que atarnos a un estricto manejo del lenguaje
+en el manual.
+Agradecimientos de la edición en castellano
+El presente manual ha sido posible con la ayuda de colaboradores del equipo de DBT de la Fundación Foro en Buenos Aires. Ese
+
+equipo, al que tengo el orgullo de pertenecer, ha compartido sus propias traducciones caseras para el establecimiento de grupos en
+diescisiete países en los últimos diez años. Ese equipo no ha dudado en entregar con generosidad su trabajo de hormiga a quien
+lo solicite, sin otro interés que el de lograr que DBT esté al alcance de las personas que lo necesitan. Han recibido comentarios y
+agredecimientos de esos primeros manuales hechos a fuerza de fotocopias y con el temor de infringir los derechos de autoría. Desde
+entonces han llegado mensajes de reconocimiento desde lugares insólitos como un grupo de inmigrantes hispanos en Alaska, una
+colega que trabaja en cárceles en una ciudad del interior de
+Argentina, una ex consultante que defiende los derechos de los pacientes y difunde DBT en Punta Arenas en Chile, un grupo de
+colegas que hace DBT en un hospital en Los Ángeles, un equipo de
+DBT en Barcelona, consultantes que nos mandan fotos de sus tareas de habilidades desde Colombia, México e incluso Filipinas.
+Este equipo es testigo de que mostrar vulnerabilidad, correr riesgos, ser compasivo y generoso nos acerca.
+Los colegas involucrados de alguna u otra manera en el desarrollo de esta traducción han sido Juan Pablo Boggiano, Paula José
+Quintero, Corrine Stoewsand, Laura Ottone, Carola Pechon, Carla
+Lamaletto, Florencia Rebaudi, Javier Abraham, Melina Weinstein y
+Florencia Duthu. También han estado involucradas personas que trabajan en Fundación Foro como Javier Camacho y el equipo de
+secretaría y administración de la Fundación.
+Por otro lado los aportes incondicionales de los siguientes colegas han sido relevantes para el presente trabajo Paolo Perez Luna y
+Lucía Dodero de Lima, Perú; Diana Melissa Quant y todo el equipo
+
+de DBT Bogotá, Colombia; Michel Reyes y Nathalia Vargas de DBT
+México; el equipo de DBT Chile dirigido por Cecilia Brahms –una compañera de este viaje de diseminación– y por el equipo de
+entrenadores de DBT Latinoamérica, entre ellos Ricardo Aguayo,
+Jael Cahmi, Vicente del Solar, Suhadee Enriquez –que ha representado las relaciones con la población Latina en Estados
+Unidos– y Mairiví Navarro Haro de España. La traducción y revisión clínica al portugués de este manual dirigida por Vinicius Dornelles
+nos ha permitido revisar algunos parámetros que fueron centrales en este trabajo.
+Este manual no habría sido posible sin el trabajo de Facundo
+Abalo, los editores Marcos Bruzzoni y Ana Manasanch, las diseñadoras Julieta Lloret, Andrea López Osornio y María Reboredo,
+asistente de traducción Agustina Pozzo y Eugenia Olavide de DBT
+Latinoamérica.
+El apoyo incondicional de Behavioral Tech de Tony DuBose,
+André Ivanoff-Kahn y la propia Marsha Linehan y su hija Geraldine
+Rodríguez fue también imprescindible para su publicación.
+
+Si en el uso de este manual consigues acercarte a una vida valiosa, recuerda que ha sido construído en un arduo y largo trabajo
+con consultantes desde hace 20 años. Miles de personas han estado involucradas en la creación de este libro, son parte de la
+arquitectura de este cuerpo de herramientas.
+Los hierros y el hormigón que sostienen esta obra tienen mucho sudor, y muchas lágrimas, de consultantes, familiares, allegados, y
+terapeutas, que han ayudado a la construcción de este puente. Un
+
+puente que acorta y hace posible el camino hacia una vida que valga la pena ser vivida.
+
+Reconocimientos
+Desarrollar, investigar, evaluar y organizar las habilidades conductuales en este libro ha sido un proceso que se ha
+desarrollado durante muchos años. A lo largo de estos años, muchas personas hicieron contribuciones importantes a lo que
+finalmente se convirtió en este conjunto de fichas y hojas de trabajo.
+Aquí quiero agradecer a una larga lista de maestros, colegas, estudiantes, becarios posdoctorales y consultantes, que durante
+muchos años han estado en diálogo conmigo sobre cómo desarrollar, organizar, explicar y difundir mejor las habilidades de
+comportamiento para aquellos que necesitan medios hábiles.
+Quiero agradecer a los reverendos Pat Hawk y Willigis Yaeger, quienes fueron mis maestros de oración contemplativa y Zen, y
+Anselm Romb, mi guía espiritual franciscano, que me enseñó a dejar ir las palabras. Cada uno de ellos me escuchó durante horas
+mientras resolvía cómo practicar y cómo enseñar mindfulness. Mis mentores, Gerald Davison y Marvin Goldfried, me enseñaron terapia
+conductual, y me presentaron los tratamientos basados en evidencia, donde encontré la mayoría de los medios hábiles que
+condensé en este libro. Extiendo mi gratitud a Jon Kabat-Zinn, John
+Teasdale, Mark Williams y Zindel Segal por la inspiración. Quiero agradecer especialmente a mis alumnos (en orden alfabético),
+
+Milton Brown, Anita Lungu, Andrada Neacsiu, Shireen Rizvi,
+Stephanie Thompson, Chelsey Wilks, Brianna Woods; y mis compañeros y excompañeros, Alex Chapman, Eunice Chen,
+Melanie Harned, Erin Miga, Marivi Navarro y Nick Salsman. Muchos otros han ayudado cuando se les pidió, mis colegas Seth Axelrod,
+Kate Comtois y todo su equipo DBT, Sona Dimidjian, Anthony
+Dubose, Thomas Lynch y Suzanne Witterholt, así como el comité asesor científico del Instituto Linehan (Martin Bohus, Alan Fruzzetti,
+André Ivanoff, Kathryn Korslund y Shelley McMain). No podría haber escrito este libro sin la ayuda de Elaine Franks, mi fabulosa
+asistente administrativa, y Thao Truong, nuestro office manager y gerente financiero, quienes se aseguraron de que nuestra clínica de
+investigación no se desmoronara mientras todos esperaban que terminara esta obra. Mi familia, Geraldine, Nate, Catalina y Aline,
+hicieron la vida fácil a cada paso sin importar el estrés, una contribución no menor para escribir un libro.
+Mucho de lo que está en este manual lo aprendí de los muchos consultantes que participaron en los grupos de entrenamientos que
+he llevado a cabo a lo largo de los años. Estoy agradecida a todos aquellos que soportaron las muchas versiones que no funcionaron o
+no fueron útiles, y a aquellos que me dieron el suficiente feedback para que yo hiciera las revisiones necesarias en las habilidades que
+aquí se enseñan.
+Los consultantes realizaron aportes fueron, en su mayor parte, personas con alto riesgo de suicidio. Agradezco a la División de
+Sujetos Humanos de la Universidad de Washington, que nunca ha impedido mi investigación al tratar a personas con un riesgo
+extremadamente alto de suicidio. Su disposición a permitir tales
+
+investigaciones, a diferencia de otras universidades, ha hecho posible este libro.
+Por último, pero no menos importante, quiero agradecer a mi redactora, Marie Sprayberry, a la editora senior Barbara Watkins, a
+la editora ejecutiva Kathyrn Moore y al personal de The Guilford
+Press. Al publicar este manual cada uno de ellos tuvo la oportunidad de practicar todas las habilidades de tolerancia al malestar
+descriptas en este libro. Su preocupación por este libro y por esta forma de tratamiento fue evidente a cada paso.
+Por desgracia, es probable que haya olvidado o dejado fuera accidentalmente a una o más personas que han contribuido a este
+libro. Si es así, hágamelo saber para que pueda incluirlos en futuras ediciones.
+
+Introducción a este libro
+Cómo está organizado este libro
+Habilidades generales: orientación y análisis conductual
+Introducción a las fichas y hojas de trabajo
+Fichas generales. Fichas de orientación
+Fichas de orientación
+Ficha general 1: Objetivos del entrenamiento en
+habilidades (Hoja de trabajo general 1)
+Ficha general 1A. Opciones para resolver cualquier
+problema
+
+Ficha general 2: Descripción general: introducción al
+entrenamiento en habilidades
+Ficha general 3. Pautas para el entrenamiento en
+habilidades
+Ficha general 4. Supuestos del entrenamiento
+Ficha general 5. Teoría biosocial
+Fichas para analizar la conducta
+Ficha general 6. Descripción general: analizar la
+conducta (Hojas de trabajo generales 2, 3)
+Ficha general 7. Análisis en cadena (Hojas de trabajo
+generales 2, 2a)
+Ficha general 7A. Análisis en cadena, paso a paso
+(Hojas de trabajo generales 2, 2a)
+Ficha general 8. Análisis de los enlaces perdidos (Hoja
+de trabajo general 3)
+Hojas de trabajo generales
+Hoja de trabajo de orientación
+Hoja de trabajo general 1. Pros y contras de usar
+habilidades (Ficha general 1)
+Hojas de trabajo de análisis conductual
+Hoja de trabajo general 2: Análisis en cadena de
+conductas problema (Fichas generales 7, 7a)
+Hoja de trabajo general 2a: Ejemplo: análisis en cadena
+de conductas problema (Fichas generales 7, 7a)
+Hoja de trabajo general 3: Análisis de los eslabones
+perdidos (Ficha general 8)

@@ -1,9 +1,0 @@
-TITLE: HOJA DE TRABAJO DE MINDFULNESS 5B — Inventario de las habilidades no juzgar, una cosa a la vez, siendo
-MODULE: mindfulness
-SKILL_TAG: HOJA_DE_TRABAJO_DE_MINDFULNESS_5B_INVENTARIO_DE_LAS_HABILIDA
-SOURCE_PDF: Manual-2023-enumerado-.pdf
-PAGES: 194-195
-CHUNK_ID: 00052-001
-UNIT_ID: 00052
-
-(Fichas de mindfulness 5-5c) Inventario de las habilidades no juzgar, una cosa a la vez, siendo efectivo Fecha de entrega: Nombre: Fecha de comienzo:

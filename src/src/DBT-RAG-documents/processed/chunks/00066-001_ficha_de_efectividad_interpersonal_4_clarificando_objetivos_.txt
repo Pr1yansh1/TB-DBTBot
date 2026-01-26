@@ -1,9 +1,0 @@
-TITLE: FICHA DE EFECTIVIDAD INTERPERSONAL 4 — Clarificando objetivos en situaciones interpersonales
-MODULE: interpersonal_effectiveness
-SKILL_TAG: FICHA_DE_EFECTIVIDAD_INTERPERSONAL_4_CLARIFICANDO_OBJETIVOS_
-SOURCE_PDF: Manual-2023-enumerado-.pdf
-PAGES: 240-242
-CHUNK_ID: 00066-001
-UNIT_ID: 00066
-
-(Hoja de trabajo de E.I. 3) Clarificando objetivos en situaciones interpersonales

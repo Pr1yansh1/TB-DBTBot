@@ -1,9 +1,0 @@
-TITLE: FICHA DE EFECTIVIDAD INTERPERSONAL 16A — Ejemplos de oposiciones donde ambos puntos de vista
-MODULE: interpersonal_effectiveness
-SKILL_TAG: FICHA_DE_EFECTIVIDAD_INTERPERSONAL_16A_EJEMPLOS_DE_OPOSICION
-SOURCE_PDF: Manual-2023-enumerado-.pdf
-PAGES: 292-293
-CHUNK_ID: 00084-001
-UNIT_ID: 00084
-
-Ejemplos de oposiciones donde ambos puntos de vista pueden ser verdaderos

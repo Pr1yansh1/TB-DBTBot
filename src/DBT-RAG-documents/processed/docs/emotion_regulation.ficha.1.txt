@@ -1,0 +1,10 @@
+DOC_ID: emotion_regulation.ficha.1
+TYPE: ficha
+MODULE: emotion_regulation
+NUMBER: 1
+TITLE: 
+PAGES: 374-374
+MAJOR_SECTION: Fichas de regulación emocional
+REFS_OUT: 
+
+

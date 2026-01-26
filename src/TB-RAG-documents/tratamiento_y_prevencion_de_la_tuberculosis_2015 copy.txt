@@ -1,0 +1,2773 @@
+      enfermedades infecciosas
+
+ tuberculosis
+             Diagnóstico de Tuberculosis
+
+
+GUIA PARA EL EQUIPO DE SALUD
+
+
+
+
+                           2da. edición
+Autoridades
+Presidenta de la Nación
+Dra. Cristina E. FERNÁNDEZ DE KIRCHNER
+Ministro de Salud
+Dr. Juan Luis MANZUR
+Secretario de Programas Sanitarios
+Dr. Jaime LAZOVSKI
+Subsecretaria de Prevención y Control de Riesgos
+Dra. Marina KOSACOFF
+Director Nacional de Prevención de Enfermedades y Riesgos
+Dr. Alejandro KROLEWIECKI
+Director de Epidemiología
+Dr. Juan HERRMANN
+Coordinadora del Programa Nacional de Tuberculosis y Lepra
+Lic. Soledad Beltrame
+
+
+
+
+     enfermedades infecciosas | tuberculosis
+                              GUIA PARA EL EQUIPO DE SALUD
+
+
+Pág 3. Información para el equipo de salud
+
+Pág 37. Recomendaciones para la organización de las actividades en
+        el Equipo de Salud
+
+Pág 45. Información para la población
+
+Pág 49. Anexos
+Esta guía está basada en la Normas Técnicas 2013 del Programa Nacional de Control de la
+Tuberculosis, y en la Guía para el Equipo de Salud de Tuberculosis, 1ra. Edición, 2009.
+
+La adaptación de la presente guía fué realizada por la Lic. Soledad Beltrame y la Dra. Mariana
+Latorraca (Programa Nacional de Control de la Tuberculosis) y la Dra. Mabel Moral (Dirección de
+Epidemiología).
+
+
+
+
+Guía para el equipo de salud Nro. 3 (2da. edición)
+ISSN 1852-1819 / ISSN 1852-219X (en línea)
+
+Dirección de Epidemiología - Ministerio de Salud de la Nación
+Av. 9 de Julio 1925 (C1073ABA), Cdad. Autónoma de Bs. As., República Argentina
+Teléfono: (54-11) 4379-9000 / Web: www.msal.gov.ar
+
+Reimpresión: Diciembre /2014
+Distribución gratuita
+INFORMACIÓN
+PARA EL EQUIPO DE
+SALUD
+
+
+1. Introducción
+2. Manifestaciones Clínicas
+3. ¿Cuándo sospechar tuberculosis?
+4. ¿Cómo se confirma la tuberculosis?
+5. ¿Qué medicamentos están disponibles para tratar la TB?
+6. ¿Cómo se trata al paciente con tuberculosis?
+7. ¿Cómo se clasifican los casos de TB para su tratamiento?
+8. ¿Cómo se controla el tratamiento de la tuberculosis?
+9. ¿Qué hacer si se confirma caso sospechoso de TB?
+10. Tuberculosis farmacorresistente
+11. Tratamiento de la tuberculosis en situaciones especiales
+12. Tuberculosis infantil (menores de 15 años)
+13. Manejo de las reacciones adversas a los fármacos 		
+    antituberculosos (RAFAs)
+14. Estudio de contactos
+15. Control de infecciones y bioseguridad
+16. Flujograma de manejo de caso sospechoso de TB
+17. Prevención de TB en la familia y la comunidad
+                                                          3
+                                                            Información para el equipo de salud
+                                                               GUIA PARA EL EQUIPO DE SALUD
+
+
+
+1. Introducción
+
+La tuberculosis (TB) es una enfermedad infectocontagiosa granulomatosa crónica producida
+por el Mycobacterium Tuberculosis o bacilo de Koch, que se localiza generalmente en el pulmón,
+aunque puede afectar otros órganos.
+Se transmite de persona a persona por inhalación de aerosoles contaminados por el bacilo, que
+han sido eliminados por los individuos enfermos al toser, estornudar o hablar.
+
+A pesar de que el diagnóstico precoz y el tratamiento adecuado lograría la curación en la ma-
+yoría de los pacientes, con la consiguiente disminución de las fuentes de infección y el riesgo
+de contraer la enfermedad en la población, la falta de detección de casos, los abandonos del
+tratamiento y, más recientemente, la aparición de resistencia a los fármacos antituberculosos
+tradicionales, generan que la tuberculosis en la actualidad siga siendo un importante problema
+de salud pública, por el daño que provoca, principalmente como causa de enfermedad y tam-
+bién como causa de muerte.
+
+Se calcula que la tercera parte de la población mundial está infectada por el bacilo que causa la
+TB. Esta patología es la segunda principal causa de muerte por enfermedades infecciosas en el
+mundo después del VIH. La Organización Mundial de la Salud (OMS) estima que en el año 2012
+se produjeron 8,6 millones de casos y 1,3 a 1,5 millones de muertes. En Argentina, durante el
+año 2012 se notificaron 10.244 casos nuevos y 703 muertes por TB.
+
+En nuestro país, aproximadamente 4 de cada 100 personas que consultan por síntomas res-
+piratorios tienen tuberculosis. Este porcentaje varía entre 1,1% y 8% según zonas de menor o
+mayor incidencia.
+
+
+   Es esencial que todo el equipo de salud participe en las acciones de control de la tuber-
+   culosis, mediante:
+
+   • La detección precoz realizando la búsqueda de sintomáticos respiratorios y personas
+   con riesgo de padecer la TB.
+   • El tratamiento/ curación de los casos detectados.
+   • La evaluación de los contactos de los casos.
+   • La notificación de los casos.
+   • La vacunación BCG de los recién nacidos, antes del alta de la maternidad.
+
+
+Transmisión
+El reservorio de la tuberculosis es el hombre enfermo. Cuando se localiza en el pulmón, los
+individuos enfermos podrán diseminar el bacilo, ya que al toser, expectorar, estornudar o hablar
+eliminarán pequeñas gotas de saliva (gotas de Flugge) que contienen bacilos, que podrán ser
+aspirados por individuos susceptibles.
+El riesgo de infección está en relación con la exposición al bacilo de la TB y depende de: la locali-
+
+ISSN 1852-1819 / ISSN 1852-219X (en línea)                                                              5
+    enfermedades infecciosas | tuberculosis
+
+
+
+
+    zación de la tuberculosis (mayor transmisión en TB pulmonar o laríngea), la baciloscopía (mayor
+    transmisión si la baciloscopía de esputo es positiva), la duración y frecuencia del contacto entre
+    la persona sana y la enferma, las características del ambiente en que ocurre (inadecuada ven-
+    tilación) y las condiciones del individuo expuesto (nutrición, enfermedades concomitantes). El
+    50% de los contactos cercanos de casos de tuberculosis pulmonar con baciloscopías positivas
+    (pacientes baciliferos) podrían infectarse, mientras que solo se infectarían el 6% de los contac-
+    tos cercanos de los enfermos con baciloscopías negativas.
+
+    Patogenia
+    La aspiración de M. tuberculosis hasta los alvéolos, cuando un individuo entra en contacto por
+    primera vez, desencadena una serie de respuestas tisulares e inmunológicas conocidas como
+    primoinfección tuberculosa. Si el ingreso de M. tuberculosis no ha sido masivo, muchas veces
+    no se pasa esta fase local. Cuando la infección se propaga por las vías linfáticas intrapulmonares
+    hasta los ganglios regionales paratraqueales o mediastínicos da lugar al llamado complejo
+    bipolar (foco pulmonar y adenopatías).
+
+    Si fracasan los mecanismos inmunitarios, a continuación de dicha infección puede desarrollarse
+    la enfermedad (TB primaria), presentándose como forma neumoganglionar sin complicacio-
+    nes o con progresión y complicación de lesión pulmonar o con diseminación extrapulmonar.
+
+
+      La mayoría de las personas que se infectan con el bacilo tuberculoso, podrán contro-
+      larlo y no desarrollarán la enfermedad. Entre los que se enfermarán de tuberculosis,
+      el 80% manifestará la enfermedad durante los dos primeros años posteriores a la pri-
+      moinfección.
+
+
+    Período de transmisibilidad
+    El paciente con tuberculosis pulmonar permanece infectante mientras no se comience el
+    tratamiento específico.
+
+    Una vez comenzado el tratamiento el paciente disminuirá la tos y la cantidad de bacilos en su
+    expectoración (esputo), con lo que disminuirá la posibilidad de contagio: alrededor de termina-
+    da la segunda semana de tratamiento, la cantidad de bacilos baja al 1% de la población original.
+
+
+    2. Manifestaciones clínicas
+
+    Si bien la mayoría de los casos de la tuberculosis se producen en el pulmón (tuberculosis pul-
+    monar), hay casos en los que la tuberculosis se produce en otros órganos (tuberculosis extra-
+    pulmonar)
+
+    Tuberculosis pulmonar
+    Es la más frecuente y la más contagiosa de las formas de tuberculosis, representa alrededor del
+
+
+6
+                                                           Información para el equipo de salud
+                                                              GUIA PARA EL EQUIPO DE SALUD
+
+
+
+80 al 85% del total de los casos.
+
+La presencia de alguno de los siguientes síntomas, debe hacer sospechar que una persona
+puede tener TB pulmonar:
+• Tos y expectoración por más de 15 días (la casi totalidad de los enfermos pulmonares bacilí-
+feros presentan estos síntomas).
+• Expectoración con sangre (hemoptisis), con o sin dolor torácico y dificultad para respirar.
+• Síntomas generales como pérdida de peso o de apetito, fiebre, sudoración nocturna, cansan-
+cio, decaimiento.
+
+El examen del aparato respiratorio de los pacientes con tuberculosis suele ser normal, a pesar
+de lo extensa que pueda ser la afección a nivel radiológico.
+
+Tuberculosis extrapulmonar
+Se calcula que las localizaciones extrapulmonares constituyen entre el 15% y el 20% de todas
+formas de TB, aunque en la asociación TB/Sida la proporción es mayor. Las formas extrapul-
+monares más frecuentes en nuestro país son las pleurales, ganglionares y, en menor medida,
+genitourinarias, osteoarticulares y gastrointestinales.
+
+Los síntomas generales de la TB extrapulmonar son similares a los de la pulmonar: fiebre, aste-
+nia, decaimiento, sudoración nocturna, pérdida de peso, disminución del apetito entre otros. A
+estos síntomas y signos se agregan los específicos para cada localización.
+
+A diferencia de las formas pulmonares, las localizaciones extrapulmonares tienen poblaciones
+bacterianas de escaso número; por esta razón, la proporción de confirmación bacteriológica en
+estas formas no es tan alta como en las de localización pulmonar. La bacteriología, principal-
+mente el cultivo, confirma entre un 20% y 80% de las formas extrapulmonares, dependiendo
+de su localización.
+Siempre debe solicitarse bacteriología (examen directo y cultivo) de líquidos y muestras de
+tejidos relacionados con el sitio de localización sospechoso.
+
+
+3. ¿Cuándo sospechar tuberculosis?
+
+La tos y el catarro persistentes por más de 15 días son los signos de mayor valor para sos-
+pechar tuberculosis.
+
+Otros síntomas que deben hacer pensar en tuberculosis son:
+• Expectoración con sangre (hemoptisis), con o sin dolor torácico, y dificultad para respirar.
+• Pérdida de peso y de apetito, fatiga, sudoración nocturna, fiebre, cansancio.
+
+
+
+
+ISSN 1852-1819 / ISSN 1852-219X (en línea)                                                        7
+    enfermedades infecciosas | tuberculosis
+
+
+
+
+    4. ¿Cómo se confirma la tuberculosis?
+
+    El diagnóstico de certeza de tuberculosis implica la identificación del agente causal en mues-
+    tras de secreciones orgánicas ó en muestras de tejidos. La sospecha clínica debe tratar de con-
+    firmarse con la bacteriología; en primera instancia con la baciloscopía y, si esta es persistente-
+    mente negativa, con el cultivo.
+
+
+      En los pacientes con sospecha clínica de TB, sin confirmación bacteriológica, se deben
+      agotar las medidas de diagnóstico diferencial para descartar otras patologías pulmo-
+      nares, antes de indicar el tratamiento.
+
+
+    Las técnicas disponibles para el diagnóstico de tuberculosis son:
+
+       • La bacteriología
+       • La radiología
+       • La prueba tuberculínica
+       • La histopatología
+    		
+    Bacteriología
+
+    El examen microscópico directo del esputo (baciloscopía) es la técnica de confirmación
+    más práctica, sencilla y rápida. Puede ser realizada en la mayoría de los servicios de salud y
+    detecta a los pacientes que expectoran gran cantidad de bacilos y diseminan la infección en
+    la comunidad.
+
+    Con esta técnica se puede confirmar entre el 65% y el 80% de los casos pulmonares adultos.
+    Con la baciloscopía (BK) el laboratorio puede confirmar tuberculosis, detectar y evaluar la evo-
+    lución de los casos infecciosos, confirmar la curación de los que completan el esquema exito-
+    samente e identificar los que fracasan con su tratamiento
+
+                   Se debe solicitar baciloscopía a todo sintomático respiratorio.
+
+
+    Dado que la frecuencia de otras micobacteriosis pulmonares es muy baja en nuestro país, la
+    observación microscópica de BAAR en el esputo es diagnóstico de TB en más del 99% de
+    los casos no asociados al Sida.
+
+    El cultivo es una técnica de mayor sensibilidad que la baciloscopía, aunque también requiere
+    más tiempo y es más compleja, por lo que necesita ser realizada en laboratorios de mayor nivel
+    con condiciones de infraestructura y equipamiento más exigentes y a costos más elevados.
+
+    El cultivo permite poner en evidencia bacilos viables presentes en escasa cantidad, por lo que
+
+8
+                                                          Información para el equipo de salud
+                                                             GUIA PARA EL EQUIPO DE SALUD
+
+
+
+permite detectar los casos antes de que lleguen a ser infecciosos y realizar el diagnóstico dife-
+rencial con otras patologías pulmonares crónicas, certificando que sea el bacilo de la tuberculo-
+sis. También juega un rol muy importante en el seguimiento de los pacientes con TB resistente
+a fármacos, ya que permite detectar tempranamente el fracaso al tratamiento y conocer la
+sensibilidad a las drogas antituberculosas.
+
+
+   Según la situación epidemiológica, si se agrega el cultivo a la baciloscopía, se incre-
+   menta la confirmación del diagnóstico de TB en aproximadamente 15-20% del total
+   de casos y en 20-30% de los casos de TB pulmonar.
+
+
+Se debe solicitar cultivo para las muestras de pacientes con síntomas o signos de TB y alguna
+de las siguientes características:
+
+    • Cuando hay imágenes radiológicas compatibles con TB pulmonar y baciloscopía negativa
+    de dos muestras respiratorias.
+    • Cuando hay sospecha de tuberculosis extrapulmonar ya que en general son lesiones con
+    pocos bacilos.
+    • En niños con sospecha clínica y epidemiológica de tuberculosis.
+    • En pacientes inmunocomprometidos, especialmente personas infectadas con el Virus de
+    Inmunodeficiencia Humana (VIH) o diabéticos, ya que suelen hacer tuberculosis atípicas,
+    con escaso número de bacilos.
+    • En pacientes con antecedentes de tratamiento antituberculoso (fracasos, o abandonos
+    parciales y recaídas).
+    • En personal de salud.
+    • En personas privadas de libertad independientemente de si tuvieron contacto con TB
+    multirresistente (TB MDR).
+    • En inmigrantes de zonas con alta tasa de TB MDR (Perú, Ecuador, África, ex Repúblicas
+    Socialistas).
+    • En usuarios de alcohol y otras drogas.
+    • En pacientes con baciloscopía de esputo positiva después de finalizado el segundo mes
+    de tratamiento.
+    • En pacientes con antecedentes de exposición a bacilos resistentes a fármacos.
+    • En baciloscopías positivas de lavado gástrico, lavado bronquial o hisopados.
+    • Para monitorear el tratamiento de los pacientes con TB multirresistente. En este caso, se
+    debe solicitar la realización de cultivo mensualmente para detectar, lo más tempranamente
+    posible, los fracasos al tratamiento.
+
+La prueba de sensibilidad a los antibióticos permite identificar a los casos que necesitan una
+reformulación del tratamiento y orientar el nuevo esquema. Para ello, es necesario cultivar en
+el momento de diagnóstico las muestras de pacientes que tienen riesgo de estar afectados por
+TB resistente a fármacos ya sea porque se han contagiado con una cepa resistente o porque
+han realizado un tratamiento irregular, así como a los casos en los que una eventual falla de
+
+
+ISSN 1852-1819 / ISSN 1852-219X (en línea)                                                          9
+     enfermedades infecciosas | tuberculosis
+
+
+
+
+     tratamiento podría determinar una evolución muy tórpida, los que demoran en negativizar la
+     BK, y aquéllos que no toleran los fármacos de primera línea.
+     Se debe indicar la realización de cultivo y prueba de sensibilidad, o prueba de sensibilidad
+     directa (en el caso en que se cuente con una muestra pulmonar con BK positiva), en las siguien-
+     tes situaciones:
+
+     En el momento de diagnóstico a los pacientes:
+
+     • Con antecedentes de tratamiento para la TB (recaídas, fracasos, abandonos), especialmente si
+     ha habido irregularidad en el tratamiento.
+     • Con contacto con casos de TB resistente a fármacos.
+     • Trabajadores de instituciones de salud o provenientes de prisiones.
+     • Con antecedentes de abuso de sustancias (alcohol y/o a otras drogas).
+     • Con antecedentes de residencia anterior en países con alto nivel de resistencia a fármacos
+     (Ecuador, Perú, algunos países asiáticos y de Europa del Este).
+     • Inmunocomprometidos (VIH positivos y diabéticos).
+     • Niños.
+
+     Durante el control de tratamiento de casos de TB:
+
+     • Con BK de esputo positiva al finalizar el segundo mes de tratamiento o posteriormente.
+     • Diagnosticados con BK negativa y que convierten a positiva su BK durante el tratamiento.
+     • Con mala adherencia al tratamiento.
+     • Con intolerancia a los fármacos antituberculosos.
+
+     Radiología
+
+     La placa de tórax es un elemento complementario para el diagnóstico de tuberculosis, porque
+     la interpretación correcta de las imágenes radiológicas requiere experiencia, especialmente si
+     las lesiones son mínimas o moderadas y porque es poco específica, ya que las imágenes radio-
+     lógicas que produce la tuberculosis pueden ser producidas por otras patologías respiratorias y
+     enfermedades sistémicas.
+     Radiológicamente la tuberculosis puede producir: infiltrados, nódulos, cavidades, fibrosis y re-
+     tracciones.
+
+
+       La presencia de imágenes radiológicas sospechosas de TB, indica la necesidad de rea-
+       lizar estudios bacteriológicos.
+
+
+     Prueba tuberculínica
+
+     La prueba tuberculínica (PT) o de Mantoux pone en evidencia una infección con micobacterias
+     reciente o antigua. Dado que sólo diagnostica infección y no enfermedad, nunca constitu-
+
+
+10
+                                                                 Información para el equipo de salud
+                                                                    GUIA PARA EL EQUIPO DE SALUD
+
+
+
+ye un elemento diagnóstico en sí mismo sino un criterio más a considerar.
+Una reacción positiva a la tuberculina no indica enfermedad sino haber estado en con-
+tacto en algún momento de la vida con una micobacteria y estar sensibilizado a sus antígenos,
+ya sea un bacilo tuberculoso de tipo humano, como de una micobacteria no tuberculosa del
+ambiente o del bacilo de la vacuna BCG.
+
+Se considera positiva una induración de 10 mm o más. En personas infectadas con el VIH se
+considera positiva si la induración es de 5 mm o más. Sin embargo, un resultado de 15 o 20mm
+o aún mas no significa enfermedad, sino mayor probabilidad de que la infección se deba real-
+mente a M. tuberculosis, por lo que en ningún caso es indicación de tratamiento.
+
+La prueba tuberculínica puede presentar reacciones falsas negativas o falsas positivas. Las fal-
+sas negativas pueden estar relacionadas con la calidad del producto, la administración, la lec-
+tura o situaciones relacionadas con el paciente como infección por VIH, desnutrición, antece-
+dentes de haber recibido recientemente vacunas virales, infecciones bacterianas, tratamientos
+inmunosupresores, edades extremas de la vida, período de ventana de los recién infectados
+y la presencia de TB activa. Las reacciones falsas positivas pueden estar relacionadas con la
+administración y lectura de la PT o a reacciones cruzadas (micobacterias ambientales o vacu-
+nación BCG).
+
+La prueba tuberculínica se utiliza como índice epidemiológico de infección con M. tuberculosis
+en una población, como ayuda diagnóstica de la enfermedad y para detectar personas infec-
+tadas con alto riesgo de enfermar de TB. En consecuencia las únicas indicaciones actuales de
+realizar prueba tuberculinica son:
+
+    • personal de salud que ingresa a trabajar y su seguimiento en el tiempo;
+    • grupos de alta prevalencia de infección con VIH y
+    • niños con sospecha de TB con el fin de detectar viraje tuberculinico.1
+
+Histopatología
+
+Se pueden realizar estudios anatomopatológicos de cualquier tejido del organismo sospecho-
+so de estar afectado por TB. En estos casos es conveniente obtener siempre dos fragmentos del
+material; uno para estudio anatomopatológico y otro para estudio bacteriológico.
+
+
+5. ¿Qué medicamentos están disponibles para tratar la tuberculosis?
+
+El Programa Nacional de Control de la Tuberculosis garantiza los tratamientos gratuitos
+
+
+1
+  Se considera viraje tuberculínico cuando una persona tuberculino negativo se convierte en positivo o una di-
+ferencia de más de 10 mm entre una y otra lectura en un lapso menor a dos años. Esto, en general, indica una
+infección reciente con el M. tuberculosis.
+
+ISSN 1852-1819 / ISSN 1852-219X (en línea)                                                                       11
+     enfermedades infecciosas | tuberculosis
+
+
+
+
+     en todo el país.
+
+     Se cuenta con medicamentos de primera línea y de segunda línea:
+     • Los medicamentos de primera línea, principales, o esenciales son: Isoniacida (H), Rifampi-
+     cina (R), Pirazinamida (Z), Estreptomicina (S) y Etambutol (E). Estos fármacos son efectivos en la
+     mayoría de los casos.
+     • Los medicamentos de segunda línea que se utilizan en caso de reacciones adversas y resis-
+     tencia a fármacos tradicionales. Los tratamientos con estos fármacos deben ser indicados en
+     centros de referencia.
+
+     Las dosis de los medicamentos de primera línea se detallan en el siguiente cuadro:
+
+     Fármaco        Dosis             Presentación       Efectos adversos
+                    Diaria            Comp. de 100 y     Presenta baja frecuencia de efectos adversos. Puede
+                    5 mg/kg/d         300 mg             observarse una reacción de hipersensibilidad como
+                    adultos                              fiebre, erupción cutánea, anemia hemolítica, vasculitis
+                    10 mg/kg/ peso                       y neutropenia.
+                    niños                                Las reacciones tóxicas son muy raras: neuritis periféri-
+     Isoniacida     Dosis máxima:                        ca, hepatitis, excitación del sistema nervioso central,
+     (H)            300 mg/d                             somnolencia y letargia; pueden estar asociadas a
+                                                         sobredosificación en personas desnutridas, diabéticas,
+                    Trisemanal                           alcohólicas o con hepatopatias.
+                    10 mg/kg/d                           Contraindicaciones: hipersensibilidad conocida a la
+                    Máximo 600 mg/                       droga y enfermedad hepática activa descompensada.
+                    toma
+                    Diaria            Cápsulas 300 mg Puede causar síntomas gastrointestinales: anorexia,
+                    10 mg/kg/d (600                   náuseas, dolor abdominal y vómitos. De manera
+                    mg/d)             Jarabe 20 mg/ml excepcional aparecen reacciones adversas graves
+                                      (5 ml = 100 mg) como púrpura, trombocitopenia, anemia hemolítica
+                    En pacientes de                   o anuria, que requieren su supresión definitiva. Puede
+                    menos de 50 kg:                   producir una coloración rojiza en la orina, las lágrimas,
+                    450 mg                            la saliva, el esputo, y las lentes de contacto.
+                                                         La hepatitis tóxica es rara; en el 80% de los casos se
+                    Trisemanal
+                                                         puede retomar el tratamiento. Se recomienda realizar
+                    10 mg/kg/d
+                                                         pruebas de función hepática antes y durante el
+     Rifampicina                                         tratamiento.
+     (R)                                                 Puede incrementar la metabolización hepática de
+                                                         drogas como corticoides, anticonceptivos, esteroides,
+                                                         hipoglucemiantes orales (sulfonilureas), ciclosporina,
+                                                         anticonvulsivantes (fenitoína), antibióticos macrólidos
+                                                         (claritromicina, eritromicina) e inhibidores de proteasa
+                                                         (antirretrovirales) entre otros.
+                                                         Las pacientes que utilizan métodos anticonceptivos
+                                                         hormonales deben cambiarlo.
+                                                         Contraindicaciones: hipersensibilidad conocida a las
+                                                         rifamicinas y enfermedad hepática activa descom-
+                                                         pensada.
+
+
+
+12
+                                                              Información para el equipo de salud
+                                                                 GUIA PARA EL EQUIPO DE SALUD
+
+
+
+                 Diaria             Comp de 250     Es la droga que más reacciones adversas presenta. La
+                 25-30 mg/kg/d      mg y 500 mg     toxicidad hepática puede ser muy grave, especial-
+                 Dosis máxima:                      mente en personas alcohólicas o con enfermedad
+                 2 g/día                            hepática crónica. Si aparece hepatitis grave, debe
+                                                    suspenderse en forma definitiva.
+                                                    Se deben realizar pruebas de función hepática, en
+                                                    pacientes con enfermedad hepática preexistente.
+Pirazinamida                                        La hiperuricemia asintomática es frecuente, gene-
+(Z)                                                 ralmente sin consecuencias adversas, no estando
+                                                    indicada la suspensión de la droga. Las artralgias se
+                                                    tratan con facilidad y raramente requieren ajustar la
+                                                    dosis o discontinuar la administración del fármaco.
+                                                    También puede producir fotosensibilidad.
+                                                    Contraindicaciones: hipersensibilidad conocida,
+                                                    enfermedad hepática activa descompensada, porfiria
+                                                    e hiperuricemia.
+                 Diaria             Comp. 400 mg    Su efecto tóxico más importante es la neuritis óptica
+                 15-20 mg/kg/d                      con disminución de la agudeza visual, dificultad para
+                                                    discriminar los colores rojo y verde y ceguera que
+Etambutol (E)                                       ceden con el cese de la droga. Este efecto depende
+                                                    de la dosis, con 15 mg/kg el riesgo es mínimo.
+                                                    Contraindicaciones: hipersensibilidad conocida, neuri-
+                                                    tis óptica preexistente de cualquier causa.
+                 Diaria             Ampollas 1 gr   Los efectos colaterales más frecuentes son ototoxici-
+                 15 mg/kg/d                         dad (disturbios vestibulares y acústicos), y nefrotoxi-
+                 Dosis máxima:                      cidad. Otras manifestaciones inusuales son: anafilaxia,
+                 1000 mg                            fiebre por hipersensibilidad y erupción cutánea.
+Estreptomici-
+                                                    Contraindicaciones: embarazo, deterioro del nervio
+na (S)           En mayores de 65                   auditivo, miastenia gravis e hipersensibilidad conoci-
+                 años 10 g/kg/día                   da. Relativa: insuficiencia renal grave.
+                 Dosis máxima:                      En los enfermos con coinfección TB-VIH se desaconse-
+                 750 mg/día                         ja su uso para evitar riesgos al personal de salud.
+
+
+
+Medicamentos combinados
+Existen asociaciones de medicamentos en un solo preparado farmacéutico.
+La utilización de estas asociaciones se ha defendido como una forma de prevenir la aparición
+de resistencia a los medicamentos atribuible a la toma inadecuada. La resistencia en la mayoría
+de pacientes de tuberculosis surge como resultado de múltiples interrupciones del tratamien-
+to. Cuando se utilizan formulaciones monofármaco es más probable que el paciente interrum-
+pa la terapia con algunos de los fármacos y no con otros, creando riesgo de monoterapia y
+selección de mutantes resistentes. La administración de presentaciones asociaciadas simplifica
+la prescripción al disminuir el riesgo de dosificación incorrecta, simplifica la adquisición de me-
+dicamentos, y ayuda a asegurar la adherencia al tratamiento por necesitar sólo tres o cuatro
+comprimidos por día para cumplir con el mismo.
+
+
+
+ISSN 1852-1819 / ISSN 1852-219X (en línea)                                                                    13
+     enfermedades infecciosas | tuberculosis
+
+
+
+
+     Las formas combinadas disponibles son:
+
+         • Isoniazida/rifampicina (HR): cada tableta contiene 150 mg de H y 300 mg de R.
+         • Isoniacida/rifampicina/pirazinamida (HRZ): cada tableta contiene H: 75 mg, R: 150 mg
+         y Z: 400 mg.
+         • Isoniacida/rifampicina/pirazinamida/etambutol (HRZE): cada tableta contiene H: 75
+         mg, R: 150 mg, Z: 400 mg y E: 275 mg.
+
+
+     Codificación de los tratamientos
+     Los distintos regímenes de tratamientos pueden identificarse con un código estándar, que in-
+     cluye la abreviatura del medicamento y la duración de la fase del mismo en meses. Además, en
+     caso de que el tratamiento no fuera diario, se incluye un número subíndice después de la letra,
+     que indica el número de dosis por semana.
+
+     Ejemplos:
+         • 2HRZE / 4HR: fase inicial de 2 meses con H, R, Z y E, en forma diaria. Fase de continuación
+         de 4 meses con H y R, en forma diaria.
+
+         • 2HRZE / 4H3R3: fase inicial de 2 meses con H, R, Z y E, en forma diaria. Fase de continua-
+         ción de 4 meses con H y R, tres veces por semana.
+
+
+     6. ¿Cómo se trata al paciente con tuberculosis?
+
+       La mayoría de los pacientes con tuberculosis se curarán si se les indica y se cumple el
+       tratamiento adecuado.
+
+     El tratamiento de la TB consiste en una fase inicial diaria y una fase de continuación:
+
+     Primer parte o fase inicial: en la que se administran los medicamentos en forma diaria para
+     eliminar la mayor parte de la población bacilar rápidamente y obtener la conversión bacterio-
+     lógica en el plazo más breve posible.
+
+     Segunda parte o fase de consolidación: cuyo objetivo es reducir el número de bacilos per-
+     sistentes a fin de evitar recaídas después de finalizado el tratamiento. Si bien se recomienda
+     administrar los medicamentos en forma diaria, como opción se puede hacer una fase de conti-
+     nuación trisemanal en días no consecutivos, siempre y cuando el tratamiento sea directamente
+     observado (TDO).
+
+
+       Ambas fases deben ser totalmente supervisadas a fin de garantizar el cumplimiento
+       del mismo.
+
+
+14
+                                                         Información para el equipo de salud
+                                                            GUIA PARA EL EQUIPO DE SALUD
+
+
+
+             Los requerimientos para un tratamiento exitoso son:
+
+             • Prescripción de medicamentos adecuados.
+             • Regularidad en la toma de los medicamentos.
+             • Administración supervisada.
+
+En la mayoría de los casos, la tuberculosis se puede tratar en forma ambulatoria en el pri-
+mer nivel de atención. Se deben derivar a centros de referencia los pacientes que presenten
+las siguientes características:
+
+• Sean de difícil diagnóstico.
+• Presenten reacciones adversas consideradas “mayores”.
+• Presenten comorbilidades (trasplantados, inmunodeprimidos, con hepatopatías o insuficien-
+cia renal crónica).
+• Presenten fracasos de tratamiento.
+• Presenten cualquier tipo de resistencia a fármacos.
+• Presenten tuberculosis graves o complicadas: meningitis, hemoptisis graves, neumotórax es-
+pontáneo, empiema.
+
+En relación a la modalidad de tratamiento, el mismo puede ser directamente observado o au-
+toadministrado:
+
+Tratamiento directamente observado (TDO): en este caso el paciente toma los medicamen-
+tos en presencia del personal u otro agente de salud. Para esto es recomendable que el trata-
+miento se descentralice, es decir que el enfermo concurra a un servicio de salud cercano a su
+domicilio o lugar de trabajo.
+Esta estrategia de tratamiento mejora la adherencia al tratamiento y baja el riesgo de aparición
+de resistencia a fármacos debida a la toma irregular de los medicamentos y el abandono.
+
+Tratamiento autoadministrado: en este caso el paciente toma los medicamentos sin super-
+visión, y es el único responsable de su correcta ingestión. En esta modalidad de tratamiento,
+la administración es diaria, nunca es intermitente, e incluye los fines de semana. Este régimen
+terapéutico genera una falta de cumplimiento elevada con el consecuente aumento de la re-
+sistencia.
+
+
+   La forma más eficiente de garantizar el tratamiento correcto de la tuberculosis es la
+   administración supervisada de los medicamentos por algún integrante del equipo de
+   salud, durante todo el tiempo que dure el mismo.
+
+
+Para poder llevar a cabo el TDO, el servicio de salud debe tener organizada la manera en la que
+el paciente reciba los medicamentos y el registro de la toma de la medicación, definiendo:
+
+
+
+ISSN 1852-1819 / ISSN 1852-219X (en línea)                                                         15
+     enfermedades infecciosas | tuberculosis
+
+
+
+
+     • Quién administrará la medicación.
+     • Quién controlará si el paciente no concurre, o no recibe la medicación.
+     • Quién será el encargado de localizar al paciente, en el caso de que el mismo no concurra y que
+     se hará con los pacientes que no concurren a tomar la medicación.
+
+
+       El abandono de la medicación para la tuberculosis, genera no solo la persistencia de
+       la tuberculosis en el enfermo con la consiguiente posibilidad de seguir transmitiendo
+       la misma, sino que es una de las causas de aparición de resistencia de los bacilos a los
+       fármacos, tanto para el paciente que abandone, como para todos sus contactos.
+
+       Por eso el tratamiento SIEMPRE debe ser supervisado por un integrante del equipo de
+       salud.
+
+
+
+     7. ¿Cómo se clasifican los casos de TB para su tratamiento?
+
+     El tratamiento será diferente si el paciente tiene o no antecedentes de tratamiento previo.
+
+     • Casos nuevos
+     Son aquellos pacientes que no han recibido previamente tratamiento para TB o lo han recibido
+     por menos de un mes (sin importar si la baciloscopía o el cultivo son positivos o no).
+
+     • Casos previamente tratados
+     Son aquellos pacientes que han recibido tratamiento para TB anteriormente, por más de un
+     mes, y son diagnosticados de nuevo como enfermos de TB activa. El riesgo de que sean por-
+     tadores de cepas con farmacorresistencia es mayor que en casos nuevos. Dentro de los casos
+     previamente tratados existen 4 grupos:
+
+     - Recaída: paciente con TB en cualquiera de sus formas, quien en el pasado ha sido notificado
+     con tratamiento completo o curado por un médico, y ha vuelto con baciloscopía y/o cultivo
+     de esputo positivo.
+
+     - Abandono: paciente que realizó tratamiento por más de un mes y lo retoma luego de ha-
+     berlo interrumpido por dos meses consecutivos o más, con baciloscopía de esputo positiva o
+     negativa que clínica y radiológicamente tiene evidencia de TB activa.
+
+     - Fracaso: paciente en tratamiento que presenta bacteriología positiva (baciloscopía y/o culti-
+     vo de esputo) al final del cuarto mes de iniciado un primer tratamiento.
+
+     - TB con resistencia probada a drogas: estos pacientes serán analizados en el capítulo de TB
+     fármacorresistente.
+
+
+
+
+16
+                                                                 Información para el equipo de salud
+                                                                    GUIA PARA EL EQUIPO DE SALUD
+
+
+
+El tratamiento de los casos nuevos se resume como:
+					                                              2 HRZE / 4 HR
+
+• Fase inicial
+La fase inicial consta de dos meses de tratamiento con cuatro drogas en forma diaria: H + R +
+Z + E. (el E puede ser reemplazado por S).
+
+Si el resultado de la baciloscopía de esputo al final del segundo mes es positivo, se debe realizar
+cultivo y prueba de sensibilidad. Con estos resultados se tomará la determinación de reformular
+o no el esquema de tratamiento.
+
+• Fase de continuación
+La fase de continuación consta de cuatro meses de tratamiento con dos drogas: H + R.
+
+La fase de continuación puede realizarse en forma diaria o en forma intermitente (3 veces por
+semana en días no consecutivos siempre que se pueda garantizar la supervisión).
+
+La fase de continuación puede extenderse a 7 meses con HR diario para los casos afectados
+por TB meníngea, miliar, osteoarticular y la TB asociada a inmunodepresión (VIH/Sida, diabetes).
+
+En pacientes embarazadas, VIH positivos, alcohólicos, desnutridos, con enfermedad hepática
+crónica y/o falla renal, se aconseja prescribir piridoxina 25 mg/día para prevenir la neuropatía
+periférica inducida por H. Para tratar una polineuritis ya constituida, se aconsejan 100 a 200 mg/
+día de piridoxina.
+
+Resumen del tratamiento de los casos nuevos.
+
+                                                                           Fase de continuación
+                                    Fase inicial
+                                                                     (uno de los siguientes esquemas)
+                      Triple Asociación      Cuádruple            Doble Asociación:     Doble Asociación:
+                      Rifampicina 150 mg/    Asociación           Rifampicina 300 mg/   Rifampicina 300 mg/
+   CASO NUEVO         Isoniacida 75mg/       Rifampicina 150 mg/ Isoniacida 150 mg      Isoniacida 150 mg
+                      Pirazinamida 400mg     Isoniazida 75 mg/                          +
+                      +                      Pirazinamida 400 mg/                       Isoniacida 300 mg
+                      Etambutol 400mg *      Etambutol 275 mg
+                                                                  Tratamiento diario    Tratamiento
+                                                                                        trisemanal
+ Duración             2 meses                2 meses              4 meses               4 meses
+                      2 comprimidos TA                                                  1 comprimido DA
+            < 40 Kg                          2 comprimidos        1 comprimido DA
+                      + 2 comprimidos E                                                 + 1 comprimido H
+            40-55     3 comprimidos TA                                                  2 comprimidos DA
+ Peso                                        3 comprimidos        2 comprimidos DA
+            Kg        + 3 comprimidos E                                                 + 1 comprimido H
+                      4 comprimidos TA                                                  2 comprimidos DA
+            > 55 Kg                          4 comprimidos        2 comprimidos DA
+                      + 4 comprimidos E                                                 + 1 comprimido H
+* Se puede usar S en lugar de E.
+
+
+ISSN 1852-1819 / ISSN 1852-219X (en línea)                                                                    17
+     enfermedades infecciosas | tuberculosis
+
+
+
+
+     Tratamiento de casos previamente tratados
+
+       A todos los pacientes previamente tratados se les debe solicitar cultivo y antibiograma
+       al inicio del tratamiento.
+       La prueba de sensibilidad resulta necesaria al menos para H y R.
+
+
+     La obtención de la muestra para cultivos y prueba de sensibilidad no debe retrasar el
+     inicio del tratamiento. La terapia empírica debe iniciarse de inmediato, especialmente si el
+     paciente está gravemente enfermo o si la enfermedad evoluciona rápidamente.
+
+     • En los casos de recaídas o abandonos
+
+     Comenzar con un esquema de 2HRZE/4HR, hasta tener el resultado del cultivo y antibiograma.
+     De acuerdo al mismo, ver si es necesario modificar el esquema.
+
+     • En los casos con fracaso terapéutico o con TB con resistencia probada a fármacos
+
+     Los pacientes cuyo tratamiento ha fracasado u otros grupos con alta probabilidad de TB mul-
+     tirresistente deben comenzar un régimen para TB MDR empírico, que se ajustara al conocer
+     los resultados de la prueba de sensibilidad. Estos pacientes deben ser tratados en centros de
+     referencia. Consideraciones de TB fármaco resistente se desarrollan en el anexo.
+
+     Efectos adversos a la medicación antituberculosa
+
+     La mayoría de los pacientes con tuberculosis completa su tratamiento sin presentar ningún
+     efecto adverso significativo. Sin embargo, se debe realizar un seguimiento clínico con el fin de
+     detectar y manejar en forma oportuna efectos adversos a la medicación.
+
+     Los efectos adversos deben ser notificados al Sistema Nacional de Farmacovigilancia
+     (SNFVG). En el anexo se describen los más frecuentes, su tratamiento y cómo notificarlos.
+
+
+       Todos los pacientes deben recibir información para identificar posibles efectos adver-
+       sos una vez que inician el tratamiento, para detectar precozmente y manejarlos ade-
+       cuadamente en caso de que aparezcan.
+
+
+
+
+     8. ¿Como se controla el tratamiento de la tuberculosis?
+
+     A todos los pacientes con tuberculosis que se encuentran en tratamiento se les debe realizar:
+
+     • Seguimiento clínico control mensual del tratamiento, con el fin de incentivar la toma de me-
+
+
+18
+                                                                   Información para el equipo de salud
+                                                                      GUIA PARA EL EQUIPO DE SALUD
+
+
+
+dicamentos, evaluar toxicidad a las drogas, ajustar la medicación al peso del paciente y solicitar
+los controles bacteriológicos según corresponda.
+
+• Estudios radiológicos al inicio, al finalizar la primera etapa y al completar el tratamiento.
+
+• Controles bacteriológicos en los casos de tuberculosis pulmonar, como se muestran a con-
+tinuación:
+
+Si el paciente es clasificado como:   Examen de esputo (controles mínimos)
+
+               Pulmonar con           • Baciloscopía al final del 2do mes y 4to mes. En cada caso si la baci-
+               baciloscopía           loscopía es positiva se debe solicitar cultivo y prueba de sensibilidad.
+               positiva.
+                                      • Baciloscopía al final del 6to mes o final del tratamiento (si es posible
+                                      realizar cultivo).
+Caso nuevo     Con                    • Baciloscopía al final del 2do mes (si el resultado es positivo solicitar
+               baciloscopía           cultivo y prueba de sensibilidad).
+               negativa
+                                      • Si las baciloscopías de inicio y de control al final del 2º mes son
+                                      negativas no es necesario realizar más controles bacteriológicos. Debe
+                                      continuarse un control clínico del tratamiento.
+
+Caso pre-      Recaída o              • Baciloscopía, cultivo y y prueba de sensibilidad al inicio.
+viamente       abandono
+tratado                               • Baciloscopía al final del 2do mes y 4to mes. En cada caso si la baci-
+                                      loscopía es positiva se debe solicitar cultivo y prueba de sensibilidad.
+
+                                      • Baciloscopía y cultivo al final del 6to mes o final del tratamiento.
+
+
+
+
+9. ¿Qué hacer si se confirma el caso sospechoso de tuberculosis?
+
+   Las acciones más importantes a tomar por el equipo de salud, una vez confirmado un
+   caso de tuberculosis son:
+   • Iniciar inmediatamente el tratamiento y garantizar que se cumpla hasta la curación.
+    • Realizar acciones dirigidas a controlar la transmisión de la enfermedad.
+
+
+Para eso se debe:
+
+Evaluar los contactos
+
+• Solicitar al paciente enfermo de tuberculosis la información sobre los contactos.
+
+• Registrar los datos de identificación de los contactos: apellido, nombres, edad y direcciones.
+
+• Citar a los contactos para que concurran al centro de salud, antes del mes de diagnosticado
+
+ISSN 1852-1819 / ISSN 1852-219X (en línea)                                                                         19
+     enfermedades infecciosas | tuberculosis
+
+
+
+
+     el caso.
+
+     • Descartar el diagnóstico de tuberculosis en todos los contactos.
+
+     • Tratar todos los casos de tuberculosis identificados.
+
+     • Iniciar quimioprofilaxis en los casos que corresponda.
+
+
+     Indicar quimioprofilaxis (tratamiento de la infección tuberculosa latente).
+
+     Si por la evaluación de los contactos se descarta que se trata de un caso de tuberculosis, se
+     indicará quimioprofilaxis en las siguientes situaciones:
+
+         • Todos los menores de 15 años contactos de enfermos bacilíferos. Esta es la indica-
+         ción prioritaria.
+
+         • Todos los niños menores de 5 años contactos íntimos de enfermos no bacilíferos, con
+         prueba tuberculínica (PT) positiva.
+
+         • Todos los niños menores de 5 años, no vacunados con BCG, con primoinfección tuber-
+         culosa, detectado por PT positiva, viraje tuberculínico o nódulo precoz de BCG (antes de
+         los 14 días).
+
+         • Personas con lesiones radiológicas sugestivas de tuberculosis residual inactivas (con
+         bacteriología negativa) nunca tratadas con quimioterapia.
+
+         • Trabajadores de la salud e integrantes de comunidades cerradas infectados recientemente
+         (viraje tuberculínico).
+
+         • Personas con PT positiva en situaciones clínicas especiales: silicosis, diabetes, trata-
+         miento prolongado con corticosteroides o inmunosupresores, pacientes en lista de espera
+         de transplante de órganos, neoplasias de cabeza y cuello, hemodiálisis, neoplasias hemato-
+         lógicas, gastrectomía, cortocircuito yeyunoileal, según indicación médica individual.
+
+     En personas con VIH/SIDA, la quimioprofilaxis se recomienda:
+
+     • Cuando presentan una PT positiva (5 mm o más).
+     • Cuando tienen contacto íntimo con enfermos de TB, especialmente bacilíferos, independien-
+     temente de los resultados de la PT, la edad o quimioprofilaxis previa.
+
+     La quimioprofilaxis está contraindicada en:
+
+     • Enfermos con TB activa.
+
+
+20
+                                                          Información para el equipo de salud
+                                                             GUIA PARA EL EQUIPO DE SALUD
+
+
+
+• Personas con antecedentes de toxicidad grave a la isoniacida (H).
+• Personas con insuficiencia hepática.
+
+
+   La profilaxis consiste en administración de Isoniacida a razón de 10 mg/k/día en niños
+   y de 5 mg/k/día en adultos (máximo 300 mg/día) en una sola toma diaria durante 6
+   meses o en forma trisemanal, a razón de 10 mg/k/día (dosis máxima 900 mg/día), en
+   una sola toma durante 6 meses.
+   La quimioprofilaxis SIEMPRE debe ser estrictamente supervisada.
+
+
+
+El esquema alternativo en caso de toxicidad o de caso índice resistente a H consiste en rifampi-
+cina 10 mg/kg/día (dosis máxima 600 mg/día) durante 4 meses.
+
+En caso de que el contacto sea con pacientes con TB multirresistente, no se ha demos-
+trado eficacia de ningún esquema preventivo, por lo que debe efectuarse un seguimiento
+clínico - radiológico - bacteriológico estrecho durante por lo menos cinco años. En contactos
+de mayor riesgo de progresión a enfermedad consultar con los centros de referencia.
+
+A todos los pacientes que se encuentren recibiendo quimioprofilaxis, se les debe realizar un
+seguimiento periódico sobre la aparición de RAFAs (vómitos, ictericia, coluria, dolor abdominal,
+fiebre, rash cutáneo y parestesias). La presencia de alguna de estas manifestaciones puede ser
+motivo de suspensión del fármaco.
+
+En los contactos lactantes no deberá suspenderse la lactancia materna.
+
+
+10. Tuberculosis fármacorresistente
+
+La fármacorresistencia, es aquella condición en la que in vitro se confirma la presencia de cepas
+infectantes de Mycobacterium tuberculosis resistentes a los medicamentos de primera y/o se-
+gunda línea. Este hecho representa un grave problema para quien padece la enfermedad, para
+su ámbito inmediato y para la sociedad en su conjunto. Si bien la mayoría de casos de tubercu-
+losis son sensibles a medicamentos, la TB fármacorresistente (TB-FR) representa una amenaza
+para el control mundial de la enfermedad.
+Entre las causas que seleccionan cepas resistentes se encuentran los tratamientos erróneamen-
+te prescriptos, la falta de supervisión terapéutica y los fármacos de calidad inadecuada.
+
+La fármacorresistencia puede clasificarse según:
+
+• El antecedente de tratamiento previo en:
+
+    - Fármacorresistencia en casos nuevos de TB o
+    - Fármacorresistencia en casos previamente tratados.
+
+
+ISSN 1852-1819 / ISSN 1852-219X (en línea)                                                          21
+     enfermedades infecciosas | tuberculosis
+
+
+
+
+     • El grado y perfil de resistencia
+
+         - Tuberculosis monorresistente: es la enfermedad provocada por M. tuberculosis resistente a
+         un solo fármaco, generalmente a isoniacida o estreptomicina.
+         - Tuberculosis polirresistente: la resistencia se manifiesta a más de un medicamento antitu-
+         berculoso, pero sin comprender simultáneamente a H y R.
+         - Tuberculosis multirresistente (TB-MR): es aquella en la cual se presenta resistencia al me-
+         nos a H y R con o sin el agregado de resistencia a otros fármacos.
+         - Tuberculosis extensamente resistente (TB-XDR): es aquella que presenta resistencia a fár-
+         macos de primera línea (H+R como mínimo) más algún inyectable de segunda línea como
+         Kanamicina (Km), Amikacina (Am) o Capreomicina (Cm) y una fluoroquinolona con acción
+         antituberculosa, como mínimo. Esta forma de TB tiene mayor gravedad clínica y epidemio-
+         lógica por las dificultades diagnósticas y terapéuticas que plantea.
+         - Tuberculosis totalmente resistente (TB-TR) o panresistente: se refiere a la TB que presenta
+         resistencia a todos los fármacos de primera y segunda línea (fluoroquinolonas, inyectables,
+         tioamidas, cicloserina (Cs) y PAS).
+
+
+       El diagnóstico de fármacorresistencia se logra con una adecuada historia clínica y las
+       pruebas de sensibilidad (PS) in vitro a los fármacos antituberculosos.
+
+
+     El diagnóstico presuntivo de TB-FR comienza con una cuidadosa evaluación de los antece-
+     dentes epidemiológicos, investigando la historia de tratamientos previos, el antecedente de
+     contacto intra o extradomiciliario con un caso probable o confirmado de TB-FR, haber estado
+     internado en algún en hospitales generales en contacto con pacientes con TB, ser un profe-
+     sional de la salud y trabajar en contacto con pacientes con TB o encontrarse en instituciones
+     cerradas tales como cárceles, hogares de ancianos, albergues, hospitales psiquiátricos.
+
+       Todos los casos de tuberculosis multiresistentes deben ser consultados con centros de
+       referencia.
+
+
+
+     11. Tratamiento de la tuberculosis en situaciones especiales
+
+     VIH/SIDA
+
+     La infección por VIH es actualmente el factor que genera mayor riesgo de padecer la enferme-
+     dad tuberculosa, y a su vez, la TB impacta negativamente a la infección por VIH provocando
+     elevación de la carga viral y progresión más rápida, por lo que se recomienda realizar el test
+     de VIH a todo paciente con diagnóstico de TB y descartar TB en todo paciente con VIH.
+
+     La expresión clínica de la TB varía de acuerdo al deterioro inmunitario del paciente. Los sínto-
+
+
+22
+                                                          Información para el equipo de salud
+                                                             GUIA PARA EL EQUIPO DE SALUD
+
+
+
+mas más importantes en una persona con VIH pueden limitarse a fiebre, tos reciente, pérdida
+de peso y sudoración nocturna; la tos crónica y la hemoptisis son menos frecuentes porque hay
+menos cavitación. Si el recuento de linfocitos T CD4 es inferior a 200 células/ml, predominan las
+manifestaciones sistémicas sobre los síntomas respiratorios. Las presentaciones extrapulmona-
+res son más frecuentes y pueden estar asociadas a las formas pulmonares.
+
+La presentación de la Rx de tórax también variará de acuerdo al grado de inmunodeficiencia:
+si la misma es leve se pueden observar cavitaciones o infiltrados en los vértices, mientras que
+en los casos con inmunodeficiencia grave puede presentarse un infiltrado intersticial difuso o
+un patrón miliar.
+
+El tratamiento de la tuberculosis en pacientes con VIH, tiene mayor tasa de complicaciones,
+de interacciones medicamentosas y de aparición de resistencias bacterianas. Por lo tanto, los
+pacientes con asociación TB-VIH, deben diagnosticarse con cultivo y pruebas de sensi-
+bilidad a las drogas.
+Aunque los pacientes con TB/VIH responden a los esquemas habituales y logran la curación, se
+prefiere en ellos aplicar una fase de mantenimiento más prolongada que la recomendada para
+las personas VIH negativas para disminuir la probabilidad de recaídas.
+
+Estos pacientes deben ser referidos a centros de referencia para su tratamiento.
+
+
+   Frente a un paciente con TB activa es importante descartar la asociación con VIH.
+
+
+Embarazo y lactancia
+
+Antes de iniciar el tratamiento antituberculoso en una mujer en edad fértil, se debería descar-
+tar embarazo, ya que la estreptomicina puede provocar sordera congénita, por lo que estaría
+contraindicado su uso.
+En el embarazo se recomienda el esquema estándar de tratamiento, de acuerdo a la forma de
+tuberculosis. Además, se debe descartar TB activa en el recién nacido, vacunarlo con BCG, vigi-
+lando nódulo precoz y comenzar quimioprofilaxis o tratamiento según corresponda.
+Los fármacos antituberculosos pueden estar presentes en pequeñas concentraciones en la le-
+che materna, sin embargo estos niveles son bien tolerados por los lactantes, por lo que el bebé
+no debe ser separado de la madre y puede seguir recibiendo lactancia materna.
+En todas las mujeres embarazadas o en periodo de lactancia que están tomando isoniacida se
+recomienda un suplemento de piridoxina (25 mg/día).
+
+La rifampicina interfiere con los anticonceptivos orales, por lo que disminuye la eficacia anti-
+conceptiva, por lo que debe recomendarse el uso de otros métodos anticonceptivos (de barre-
+ra, Dispositivos intrauterinos)
+
+
+
+
+ISSN 1852-1819 / ISSN 1852-219X (en línea)                                                          23
+     enfermedades infecciosas | tuberculosis
+
+
+
+
+     Antecedentes de trastornos hepáticos o hepatopatía crónica estable
+
+     En este grupo se incluyen los pacientes con ausencia de manifestaciones clínicas y/o alteracio-
+     nes de la función hepática portadores del virus de hepatitis, antecedentes de hepatitis aguda o
+     consumidores de cantidades excesivas de alcohol con reserva hepática conservada.
+     Estos pacientes pueden recibir regímenes habituales de quimioterapia, realizando monitoreo
+     clínico y de función hepática más frecuentemente para detectar injuria hepática inducida por
+     fármacos.
+
+     Enfermedad hepática avanzada o inestable
+
+     Estos casos deben referirse a centros de referencia para su tratamiento.
+
+     Insuficiencia renal
+
+     A todos los pacientes con enfermedad renal se les debe solicitar un clearance de creatinina de
+     24 horas.
+     Aquellos pacientes que se encuentren en diálisis, deben recibir el tratamiento al terminar cada
+     sesión de diálisis.
+
+
+     12. Tuberculosis infantil (menores de 15 años)
+
+     La tuberculosis del niño tiene características propias en cuanto al comportamiento epidemio-
+     lógico, presentación clínica y utilidad de los métodos de diagnóstico. Los niños que desarrollan
+     enfermedad generalmente lo hacen en los dos años que siguen a la primoinfección.
+     Cuando la primoinfección ocurre antes de la adolescencia, el riesgo de progresar a enfermedad
+     aumenta y puede ser grave, especialmente en los niños menores de 5 años y en los inmuno-
+     comprometidos. Una pequeña proporción de niños -generalmente mayores- manifiestan la TB
+     luego de un período de latencia, por reactivación endógena de una primoinfección pasada, o
+     por una reinfección exógena al exponerse a un nuevo contacto.
+
+     Diagnóstico
+     El diagnóstico de TB infantil debe basarse en una fuerte presunción que surge de la suma de
+     dos o más de los siguientes elementos:
+         • Manifestaciones clínicas compatibles con la enfermedad.
+         • Antecedentes de contacto con un foco tuberculoso.
+         • Prueba tuberculínica positiva.
+         • Rx de tórax anormal.
+
+     El diagnóstico de certeza lo constituye el hallazgo de M. tuberculosis en secreciones o tejidos,
+     aunque es poco frecuente en pacientes pediátricos.
+
+
+
+
+24
+                                                          Información para el equipo de salud
+                                                             GUIA PARA EL EQUIPO DE SALUD
+
+
+
+Manifestaciones clínicas
+
+Los niños enfermos con TB pulmonar pueden presentarse asintomáticos o con sintomatología
+leve. Las manifestaciones comunes son fiebre, pérdida o progreso inadecuado de peso, de-
+caimiento y síntomas respiratorios. En TB primaria, los síntomas respiratorios inicialmente son
+escasos, pero con el agrandamiento de los ganglios mediastínicos pueden hallarse signos de
+compresión de la vía aérea (tos y sibilancias).
+
+Los niños mayores y adolescentes pueden presentar cuadros clínicos similares al adulto, con
+tos, astenia, anorexia, sudoración nocturna, pérdida de peso y fiebre, presencia de cavitación
+a nivel pulmonar y, excepcionalmente, hemoptisis. Suelen tener BK de esputo positiva. La pre-
+sencia de eritema nudoso o queratoconjuntivitis flictenular orientan hacia el diagnóstico de TB.
+También pueden presentarse localizaciones extrapulmonares, cuyo cuadro clínico dependerá
+de cuál sea el órgano afectado. En estos casos, se debe evaluar siempre el compromiso pulmo-
+nar.
+
+           Antecedentes de contacto
+
+El hallazgo del foco de contagio es de gran ayuda para el diagnóstico en casos pediátricos.
+Cuanto más pequeño es el niño -lactante, preescolar-, mayor es la posibilidad de encontrar la
+fuente contagiante en el núcleo familiar; sin embargo, la pesquisa del foco bacilífero debe ex-
+tenderse a todo contacto habitual u ocasional, especialmente en los dos últimos años.
+
+           Prueba tuberculínica
+
+La infección reciente con el M. tuberculosis se evidencia con el viraje tuberculinico (sea que un
+niño tuberculino negativo se convierte en tuberculino positivo o si hay una diferencia de más
+de 10 mm entre una y otra lectura, en un lapso menor de dos años). Sin embargo, en las formas
+graves la PT puede resultar positiva o negativa.
+
+           Radiología
+
+En niños con sospecha clínica o epidemiológica de tuberculosis, debe solicitarse Rx de tórax
+de frente y perfil.
+En la primoinfección tuberculosa puede observarse el complejo primario compuesto por
+chancro de inoculación, linfangitis y adenopatía satélite. Su tamaño es variable y su localización
+más frecuente es en los campos medios, la periferia y el pulmón derecho, pero puede localizar-
+se en cualquier parte del territorio pulmonar.
+
+Con la progresión del foco ganglionar o parenquimatoso de la TB primaria pueden observar-
+se atelectasia, neumonía, derrame pleural, diseminación intrabronquial o bronconeumonía y
+diseminación hematógena (miliar). Si bien es poco frecuente, las lesiones pulmonares de la TB
+primaria progresiva también pueden cavitarse.
+
+
+
+ISSN 1852-1819 / ISSN 1852-219X (en línea)                                                           25
+     enfermedades infecciosas | tuberculosis
+
+
+
+
+     La TB post-primaria, tipo adulto, se caracteriza por la presencia de infiltrados que suelen pre-
+     dominar en los lóbulos superiores con diseminación endobronquial y cavitación.
+
+                Diagnóstico microbiológico
+
+     Las muestras pueden ser esputo en niños mayores, contenido gástrico en niños menores u
+     otras muestras según la localización de la TB.
+
+     Todas las muestras pediátricas deben ser cultivadas.
+
+     Formas clínicas
+     Las formas clínicas pueden ser moderadas o graves.
+
+     Se consideran formas moderadas de TB:
+         - TB pulmonar, con BK negativa y complejo primario no complicado y
+         - TB extrapulmonar no grave (pleural unilateral, cutánea, ganglionar periférica).
+
+     Se consideran formas graves de TB:
+         - TB pulmonar con BK positiva.
+         - TB pulmonar con BK negativa con lesiones radiológicas extensas (miliar, opacidad de un
+         segmento o de un lóbulo, bronconeumonía) y/o cavernas.
+         - TB extrapulmonar grave (pericarditis, pleuresía bilateral o empiema, genitourinaria, os-
+         teoarticular, abdominal, meníngea)
+         - TB asociada al VIH/Sida u otras alteraciones inmunológicas.
+
+     Tratamiento
+     La fase inicial de dos meses, debe ser de administración diaria con tres fármacos como mínimo
+     y la fase de continuación dura al menos 4 meses, administrándose la medicación en forma
+     diaria o trisemanal.
+
+     Esquemas de tratamiento para casos nuevos recomendados para la tuberculosis infantil
+
+                                                    TB moderada
+     Fase Inicial              Fase de continuación
+     2 HRZ                     Intermitente                                 Diaria
+                               (trisemanal en días no consecutivos)
+                               4 H3R3                                       4 HR
+                                                       TB Grave
+     Fase Inicial              Fase de continuación*
+     2 HRZE                    Intermitente                                 Diaria
+                               (trisemanal en días no consecutivos)
+                               4 H3R3                                       4 HR
+     * La fase de continuación intermitente trisemanal se puede emplear solamente en poblaciones sin VIH, y bajo
+     supervisión estricta del tratamiento
+26
+                                                                 Información para el equipo de salud
+                                                                    GUIA PARA EL EQUIPO DE SALUD
+
+
+
+
+    El tratamiento debe ser supervisado. Cuando el tratamiento no pueda ser supervisado
+    por personal de salud, se deberá identificar alguna persona del entorno del paciente
+    que se responsabilice de supervisar el tratamiento.
+
+
+En pacientes con lesiones pulmonares extensas y de mala evolución, TB miliar, meníngea
+u osteoarticular y enfermos con VIH/Sida u otra inmunodeficiencia, se recomienda una fase
+de continuación de 7 a 10 meses con HR diaria.
+
+Si no hay mejoría clínica ni radiológica en un régimen de tratamiento supervisado y sin haber
+tenido confirmación bacteriológica, investigar otras posibilidades diagnósticas.
+
+Para el manejo de los pacientes coinfectados con VIH, alteraciones inmunológicas o fallas tera-
+péuticas deberá consultarse con centros de referencia.
+
+Fármacos asociados. Dosificación diaria según peso del paciente.
+
+Fármacos Asociados                           Peso del Paciente           Cantidad de Comprimidos/ día
+
+                                                  7,5 kg                              ½
+                                                  15 kg                               1
+                                                  22,5 kg                            1½
+TRIPLE ASOCIACIÓN
+H 75                                              30 kg                               2
+R 150                                             37,5 kg                            2½
+Z 400
+                                                  45 kg                               3
+                                                  52,5 kg                            3½
+                                               60 kg y más                            4
+                                                  15 kg                               ½
+DOBLE ASOCIACIÓN                                  30 kg                               1
+H 150
+R 300                                             45 kg                              1½
+                                               60 kg y más                            2
+
+Fármacos individuales. Dosificación diaria según peso del paciente.
+
+Peso del         H             H                R                             P            E
+paciente en      Compr. de     Compr. de        Jarabe y cápsulas             Compr. de    Compr. de
+kg               100 mg        300 mg                                         250 mg       400 mg
+
+5                ½                              2,5 ml jarabe                 ½            ¼
+10               1                              5 ml jarabe                   1            ½
+15               1½            ½                7.5 ml jarabe                 1½           ¾
+20               2             ½                10 ml jarabe                  2            1
+25               2½            ½                12,5 ml jarabe                2½           1¼
+30               3             1                1 cápsula                     3            1½
+
+ISSN 1852-1819 / ISSN 1852-219X (en línea)                                                              27
+     enfermedades infecciosas | tuberculosis
+
+
+
+
+     35               3              1                    1 cápsula                             3½       1¾
+     40               3              1                    1 cápsula días pares,                 4        2
+                                                          2 cápsulas días impares
+     45               3              1                    1 cápsula días pares,                 4½       2¼
+                                                          2 cápsulas días impares
+     50               3              1                    1 cápsula días pares,                 5        2½
+                                                          2 cápsulas días impares
+     55               3              1                    2 cápsulas                            5½       2½
+     60               3              1                    2 cápsulas                            6        2½
+     Dosis máxima     300 mg         300 mg               600 mg                                1,5 gr   1gr
+
+     En ayuno de 2 hs, con agua o jugo, esperar 15 a 20 minutos para comer, 1 dosis diaria
+
+
+
+     Control de Tratamiento
+
+     A los niños con tuberculosis que se encuentran en tratamiento se les debe realizar:
+
+          • Seguimiento clínico todos los meses. Incluye:
+     - Examen físico (incluido control de peso).
+     - Monitoreo de los signos clínicos de RAFAs.
+     - Interrogatorio a los padres y/o familiares adultos responsables del niño acerca del estado ge-
+     neral del niño, la tolerancia a los medicamentos y el cumplimiento del tratamiento.
+
+     Explicar la importancia de cumplir con el tratamiento hasta su finalización. Se debe motivar e
+     incentivar al niño y/o adultos responsables del mismo para que complete el tratamiento co-
+     rrecto.
+
+     El laboratorio no es necesario de rutina en ausencia de RAFAs. En caso de TB grave, debe
+     realizarse monitoreo hepático en los primeros meses de tratamiento.
+
+         • Estudios radiológicos al inicio, otra de control a los 2 meses y al finalizar el tratamiento.
+     Las imágenes radiológicas pueden tardar varios meses en resolverse y algunas persisten como
+     secuelas. Una vez que se haya completado el esquema terapéutico con recuperación clínica y
+     bacteriológica, no es imprescindible realizar otro estudio radiológico.
+
+          • Controles bacteriológicos. En los niños con TB pulmonar BK positiva o pulmonar grave con BK
+          negativa, se deben realizar los siguientes estudios bacteriológicos de esputo:
+
+     Clasificación              Controles bacteriológicos mínimos (TB pulmonar)
+
+     Caso con BK positiva o     BK y cultivo al inicio.
+     pulmonar grave con BK      BK al final del 2º mes y 4º mes. En caso de obtener un resultado positivo, se debe
+     negativa.                  realizar cultivo y prueba de sensibilidad.
+                                BK al final del tratamiento (si es posible realizar cultivo).
+
+28
+                                                            Información para el equipo de salud
+                                                               GUIA PARA EL EQUIPO DE SALUD
+
+
+
+Los niños con BK positiva de lavados gástricos o broncoalveolares no deberían someterse a
+nuevos procedimientos para realizar estudios microbiológicos si tienen buena evolución clínica
+y radiológica.
+
+
+   También en los niños se debe descartar la coinfección con VIH en todo paciente con
+   diagnóstico de TB e investigar exhaustivamente la presencia de TB en todo niño con
+   infección VIH.
+
+
+
+
+13. Manejo de las reacciones adversas a los fármacos antituberculosos
+(RAFAs)
+Cuando durante un tratamiento antituberculoso aparece alguna manifestación adversa, lo pri-
+mero que hay que descartar es que ésta se deba a algún cuadro intercurrente.
+Las reacciones se clasifican en: menores, en las que normalmente no es necesario suspender
+el tratamiento antiTB y mayores, que generalmente requieren la suspensión del tratamiento
+antiTB.
+
+Manejo de RAFAs menores
+
+Efectos Adversos                 Fármaco/s probablemente Conducta
+                                 responsable/s
+Anorexia, náuseas, dolor         Z, R, H, E                Dar las drogas con comidas o antes de
+abdominal                                                  acostarse.
+                                                           Si los síntomas persisten o empeoran, o tiene
+                                                           vómitos persistentes o cualquier signo de
+                                                           sangrado, considerar efecto adverso mayor.
+Dolores articulares              Z, H                      Dar aspirina, AINES o paracetamol.
+
+Neuropatía periférica            H                         Dar piridoxina 100-200 mg/día.
+
+Somnolencia o insomnio,          H                         Tranquilizar al paciente.
+cefalea, ansiedad, euforia                                 Dar la medicación antes de acostarse.
+Orina anaranjada/colorada        R                         Tranquilizar al paciente. Explicar.
+
+Síndrome seudogripal (fiebre,    R en dosis intermitente   Administrar R en forma diaria.
+malestar, temblores, cefalea,    (trisemanal)
+mialgias)
+Hiperuricemia sin síntomas       Z                         Dar dieta hipopurínica.
+
+Hiperuricemia con síntomas       Z                         Suspender la Z. Reiniciar esquema sin Z.
+                                                           Dar tratamiento específico de gota.
+
+
+
+
+ISSN 1852-1819 / ISSN 1852-219X (en línea)                                                                 29
+     enfermedades infecciosas | tuberculosis
+
+
+
+
+     Manejo de RAFAs mayores
+     Se debe consultar a centros de referencia para el manejo de estos casos, así como también ante
+     situaciones que requieran regímenes alternativos.
+
+     Efectos Adversos                     Fármaco/s probablemente Conducta
+                                          responsable/s
+     Exantema cutáneo o hipersen-         R, H, Z, E, S          Suspender tratamiento; reintroducir medica-
+     sibilidad moderada a grave                                  mentos de a uno una vez resuelto el cuadro.
+                                                                 Cambiar el esquema en casos reincidentes
+                                                                 o graves.
+     Hipoacusia, acúfenos, vértigo,       S                      Suspender S, reiniciar esquema sin S.
+     nistagmus
+
+     Hepatotoxicidad                      Z, H, R                Suspender tratamiento.
+                                                                 Una vez resuelto el cuadro, reintroducir los
+                                                                 fármacos de a uno por vez, controlando la
+                                                                 función hepática.
+     Psicosis, crisis convulsiva, ence- H                        Suspender H, reiniciar esquema sin H.
+     falopatía tóxica o coma
+
+     Neuritis óptica                      E                      Suspender E, reiniciar esquema sin E.
+
+     Trombocitopenia, leucopenia,         R                      Suspender R, reiniciar esquema sin R.
+     eosinofilia, anemia hemolítica,
+     agranulocitosis, vasculitis
+
+     Nefritis intersticial. Insuficien-   R                      Suspender R, reiniciar esquema sin R.
+     cia renal aguda
+
+
+
+     Los efectos adversos deben ser notificados al Sistema Nacional de Farmacovigilancia
+     (SNFVG).
+     Dicha notificación puede realizarse por correo postal, a Av. de Mayo 869, piso 11º (CP AAD1084)
+     Buenos Aires, por fax, al número 4340-0866 o a través de la pagina web: http://www.anmat.gov.
+     ar/farmacovigilancia/Notificar.asp
+
+
+     14. Estudio de contactos
+
+     Se entiende por contactos a las personas que comparten temporalmente un espacio común
+     con un paciente con TB, cualquiera sea la localización de la enfermedad (pulmonar o extrapul-
+     monar) y categoría diagnóstica (confirmada o no bacteriológicamente). A efectos prácticos se
+     considerarán contactos a las personas próximas al enfermo durante el período sintomático de
+     éste o durante los 3 meses precedentes al diagnóstico.
+
+     Si bien se han descrito situaciones en las que el contacto durante pocas horas ha producido
+     casos de infección tuberculosa y eventualmente de enfermedad activa, en general para que
+     esto ocurra, el contacto debe ser estrecho y prolongado. Las personas que han estado en con-
+
+30
+                                                                   Información para el equipo de salud
+                                                                      GUIA PARA EL EQUIPO DE SALUD
+
+
+
+tacto con pacientes con tuberculosis laríngea y/o pulmonar con baciloscopia positiva o que
+presentan lesiones extensas y/o cavitadas, tienen mayor riesgo de tener una infección latente
+y eventualmente desarrollar una TB activa. Las lesiones pulmonares con BK negativa, los casos
+que no se confirman por bacteriología y las lesiones extrapulmonares (excepto la laríngea) tie-
+nen un potencial infectante significativamente menor. Esto NO significa que los contactos de
+estos grupos de pacientes no deban ser estudiados.
+
+Si el caso índice es bacilífero, la entrevista y el estudio de los contactos deben realizarse
+antes del mes de diagnosticado el caso (preferentemente en un lapso no mayor a 15
+días)
+
+Categoría de Contactos
+
+A los efectos epidemiológicos y operativos, los contactos pueden dividirse en tres categorías:
+
+    - Contactos íntimos: son las personas que pernoctan bajo el mismo techo de un enfermo
+    con diagnóstico de TB o aquellas que tienen un contacto diario con el enfermo igual o
+    mayor de 6 horas. Este grupo tiene mayor riesgo de infectarse y de desarrollar una TB activa.
+    - Contactos frecuentes: son las personas que tienen un contacto diario menor de 6 horas
+    con un enfermo con diagnóstico de TB. Generalmente son aquellos que no conviven pero
+    tienen una relación con el paciente de tipo personal, laboral o de otra índole que favorece
+    la transmisión de la infección tuberculosa.
+    - Contactos esporádicos u ocasionales: son aquellos que tienen contacto con un enfermo
+    con diagnóstico de TB pero no en forma diaria.
+
+Una vez identificado un caso con TB las actividades que deben realizarse para estudiar
+los contactos son:
+
+    1. Valorar y clasificar el caso índice2
+
+Determinar el estado bacteriológico del paciente, las características radiológicas de la enferme-
+dad, los síntomas y tiempo transcurrido desde la aparición de los mismos, tipo de relación man-
+tenida con los contactos, antecedentes de tratamiento antiTB y factores de riesgo asociados.
+
+    2. Identificar los contactos
+
+Los contactos deben ser identificados, entrevistados y estudiados según el nivel de exposición.
+Se debe comenzar siempre el estudio por los contactos íntimos. Cuando entre ellos se haya
+detectado algún caso, o bien un número elevado de infectados o de conversiones a la tubercu-
+lina, se pasará a hacer el estudio de los contactos frecuentes.
+
+
+2
+ Caso índice (CI): es la persona que cumple con las condiciones de caso de TB y a partir de la cual se origina el
+estudio de contactos que podrían haber estado expuestos al mismo
+
+ISSN 1852-1819 / ISSN 1852-219X (en línea)                                                                          31
+     enfermedades infecciosas | tuberculosis
+
+
+
+
+     Se deben estudiar prioritariamente los contactos frecuentes cuando se den situaciones de ma-
+     yor riesgo: caso índice altamente bacilífero o contactos con alta susceptibilidad (inmunocom-
+     prometidos, niños pequeños, malnutrición, alcoholismo, embarazo).
+
+         3. Investigar en los contactos
+
+     - Antecedentes familiares y personales de TB.
+     - Antecedentes de vacuna con BCG (se puede comprobar la cicatriz, habitualmente en el hom-
+     bro izquierdo).
+     - Resultados de pruebas de tuberculina (PT) previas, y las fechas de realización.
+     - Tratamiento o quimioprofilaxis previa de TB.
+     - Síntomas sospechosos de TB (sintomático respiratorio (SR), astenia, fiebre).
+     - Antecedentes personales de enfermedad hepática o insuficiencia renal.
+     - Enfermedades que conlleven estado de inmunodepresión o tratamiento inmunosupresor.
+
+         4. Realizar la prueba tuberculínica (PT)
+
+     A los contactos íntimos y frecuentes, salvo constancia documentada de una prueba positiva an-
+     terior o tratamiento previo. Según su resultado se clasifican en: tuberculino-positivos, si la prue-
+     ba es ≥ 10mm y en tuberculino-negativos si la prueba es menor a 10 mm. En caso de contactos
+     inmunocomprometidos, se considera tuberculino-positivo al que presenta una PT ≥ 5 mm.
+
+         5. Indicar radiografía de tórax a los contactos íntimos, y eventualmente a los frecuentes,
+         para descartar la enfermedad
+
+     Se debe priorizar los contactos de enfermos con BK de esputo positiva.
+     En pacientes inmunocomprometidos, una Rx de tórax normal no descarta una TB, por lo que
+     se les debe realizar estudio bacteriológico cuando sea posible, para tener un diagnóstico de
+     certeza.
+
+         6. Descartar enfermedad y decidir quimioprofilaxis (QP)
+
+         7. Realizar el seguimiento de los contactos
+
+     - Los contactos que tienen indicada quimioprofilaxis deben tener un control médico mensual
+     hasta los 2 años.
+
+     En aquellos contactos cuya PT fue negativa al inicio, se debe repetir a los tres meses de la última
+     exposición. Esto permitirá decidir la continuidad o suspensión de la quimioprofilaxis, descartan-
+     do conversión tuberculínica.
+
+     - En aquellos contactos que no tienen indicada quimioprofilaxis se debe realizar un control mé-
+     dico trimestral durante dos años y en el caso de que el caso índice presente TB MDR, cinco años.
+
+
+
+32
+                                                           Información para el equipo de salud
+                                                              GUIA PARA EL EQUIPO DE SALUD
+
+
+
+
+   En todos los controles médicos descartar la enfermedad y, si el contacto presenta ex-
+   pectoración, solicitar examen bacteriológico de esputo.
+
+
+
+    8. Finalización de quimioprofilaxis
+
+Al finalizar la quimioprofilaxis, se debe entrevistar y evaluar clínicamente al contacto, indicando,
+si lo considera necesario, estudios complementarios.
+
+    9. Cierre del estudio y evaluación global del mismo
+
+El cierre del estudio se efectúa si se ha concluido el examen de todos los contactos íntimos.
+
+Estudio de contactos en situaciones especiales
+
+- Instituciones escolares
+
+Si el caso índice es un profesor, educador o auxiliar docente, se debe tener en cuenta que:
+
+- Los contactos de niños con un profesor con TB durante seis o más horas por día de clase, se
+consideran dentro del grupo de contactos íntimos.
+- En general, los contactos entre profesores son esporádicos u ocasionales.
+
+Si el caso índice es un alumno:
+
+- Si presenta BK positiva, se estudiarán los contactos por orden de prioridades: 1º los íntimos,
+2º los frecuentes y, en base a los resultados de esos estudios, se decidirá si se estudian o no los
+contactos ocasionales.
+
+- Si presenta BK negativa, se estudiarán sólo los contactos íntimos. Si entre ellos hay un alto
+porcentaje de infectados y/o algún enfermo, se estudiarán el resto de los contactos.
+
+- Otras instituciones cerradas
+
+En prisiones o institutos destinados a menores en situación de riesgo o a personas ancianas,
+para la evaluación de contactos se procederá de acuerdo a las etapas ya descriptas, pudiendo
+ser el CI una persona privada de libertad, un menor, un anciano o un empleado de la institución.
+
+
+   La prioridad de estudio la tienen:
+       • Los contactos de casos de TB pulmonar con BK positiva o TB laríngea.
+       • Los contactos íntimos, luego los frecuentes y, por último, los ocasionales con cri-
+       terios de riesgo.
+
+
+ISSN 1852-1819 / ISSN 1852-219X (en línea)                                                             33
+     enfermedades infecciosas | tuberculosis
+
+
+
+
+     15. Control de infecciones y bioseguridad
+     La tasa de TB y TB fármacorresistente en los establecimientos de salud puede llegar a ser entre
+     10 a 50 veces superior a la de la población general, no sólo por la transmisión por las partículas
+     en suspensión generadas por las personas enfermas, sino también porque se puede transmitir
+     cuando se manipula material infeccioso en los laboratorios, quirófanos o salas de autopsias.
+
+     Las medidas que los servicios de salud deben lleva a cabo para el control de infecciones incluyen:
+
+     Medidas administrativas: constituyen el primer nivel de control y el más importante Son
+     prioritarias frente a cualquier otra intervención para reducir la transmisión nosocomial de
+     M. tuberculosis. Incluyen:
+
+     ü Elaboración de un plan de control de infecciones.
+
+     ü Capacitación del personal de salud, pacientes y familiares.
+
+     ü Diagnóstico precoz y tratamiento oportuno del paciente con TB.
+
+     ü Separación o aislamiento de pacientes con otras patologías de los casos sospechosos o con-
+     firmados de TB.
+
+     ü Monitoreo de la infección y enfermedad tuberculosa en el personal de salud.
+
+     Medidas de control ambiental: son la segunda línea de defensa para la prevención de la trans-
+     misión nosocomial de M. tuberculosis al personal de salud. Incluyen:
+
+     ü Métodos para maximizar la ventilación natural.
+
+     ü Uso de ventilación mecánica u otros métodos alternativos para disminuir la concentración
+     de partículas infecciosas en áreas o habitaciones seleccionadas.
+
+     Medidas de protección respiratoria personal: para proteger al personal de salud en áreas don-
+     de la concentración de M. tuberculosis no puede ser reducida adecuadamente por medidas de
+     control administrativo y ambiental. Incluyen:
+
+     ü Uso de máscaras quirúrgicas para los pacientes que se trasladan en el interior del hospital.
+
+     ü Uso de máscaras N-95 para el personal de salud que trabaja en contacto con ellos.
+
+     Información más detallada acerca del control de infecciones y bioseguridad puede consultarse
+     en la “Normas Técnicas del Programa Nacional de Control de la Tuberculosis, 2013”, disponibles
+     en http://www.msal.gov.ar/images/stories/bes/graficos/0000000278cnt-normas-tecnicas-2013-
+     tuberculosis.pdf
+
+34
+                                                                     Información para el equipo de salud
+                                                                        GUIA PARA EL EQUIPO DE SALUD
+
+
+
+16. Flujograma de manejo de casos sospechosos de tuberculosis
+
+                                      Tuberculosis: caso sospechoso
+                       • Tos y expectoración por más de 15 días (sintomático respiratorio)
+             • Otros síntomas como: pérdida de peso, fiebre vespertina, expectoración con sangre,
+                                anorexia, astenia, adinamia, sudoración nocturna.
+
+
+                             Solicite baciloscopía (2 muestras) y Radiología
+                                 Entregue y coloque barbijo al paciente
+
+
+            BACILOSCOPIA POSITIVA                                         BACILOSCOPIA NEGATIVA
+
+
+                TUBERCULOSIS                                                Ex. Complementarios
+                                                                                   - Cultivo
+                                                                              - Criterio medico
+       CASO NUEVO               CASO PREVIAMENTE
+  Descartar factores de riesgo: TRATADO O CON RIESGO DE                     NO TUBERCULOSIS
+  diabetes, VIH, alcoholismo.   MULTIRRESISTENCIA
+                                Solicite cultivo antes de
+                                comenzar el tratamiento.
+                                                                             CONSIDERAR
+                                                                          OTROS DIAGNÓSTICOS
+   TRATAMIENTO
+   • Notiﬁque el caso de tuberculosis.
+   • Decida el esquema de tratamiento.
+   • Indique tratamiento supervisado.
+   • Inicie el tratamiento.
+   • Evalúe los contactos.
+   • Realice quimioproﬁlaxis a los contactos cuando corresponda.
+   • Evalúe al paciente por lo menos una vez por mes.
+   • Solicite baciloscopía o cultivo para control del tratamiento.
+   • Redeﬁna el tratamiento de acuerdo al resultado del cultivo si
+   corresponde.
+
+
+
+
+17. Prevención de tuberculosis en la familia y la comunidad
+
+   El grado de transmisión en una comunidad determinada está relacionado con la canti-
+   dad de enfermos pulmonares bacilíferos que viven en dicha población. Estos enfermos
+   son las principales fuentes de infección.
+
+
+La mejor manera de prevenir la tuberculosis es detectar precozmente los pacientes enfer-
+mos, iniciar rápidamente el tratamiento y verificar que se cumpla y controlar los contactos,
+
+
+ISSN 1852-1819 / ISSN 1852-219X (en línea)                                                                 35
+     enfermedades infecciosas | tuberculosis
+
+
+
+
+     para descartar la presencia de tuberculosis en ellos.
+
+     Las medidas que contribuyen a la prevención de la TB son:
+
+     • Iniciar el tratamiento de los pacientes con tuberculosis tan pronto se confirme la enfer-
+     medad y coordinar con el paciente para que el tratamiento sea supervisado.
+
+     • Evaluar los contactos del paciente y realizar quimioprofilaxis si corresponde, una vez
+     descartada la tuberculosis en los contactos.
+
+     • Captar a los pacientes sintomáticos respiratorios
+
+
+       Los equipos de salud deben estar atentos a los pacientes mayores de 15 años que con-
+       sultan por tos o que consultan por otra patología pero tienen tos, y debe examinarse
+       el esputo de toda persona que tosa por más de 15 días, o con síntomas importantes y
+       expectoración cualquiera sea su duración.
+
+
+
+     • Vacunar a los niños antes del alta de la maternidad, para prevenir las formas graves de
+     tuberculosis
+
+     Controlar el esquema de vacunación de los niños en su primer control luego del nacimiento
+     verificando la presencia de vacunación BCG, y en caso negativo aplicarla.
+
+       El diagnóstico oportuno y el tratamiento supervisado, junto con la vacuna BCG, son la
+       tríada indispensable para el control de la tuberculosis.
+
+
+
+
+36
+RECOMENDACIONES
+PARA LA
+ORGANIZACIÓN DE
+LAS ACTIVIDADES
+
+
+1. ¿Qué pueden Ud y su equipo de salud hacer para 		
+   contribuir al control de la tuberculosis en su área?
+
+
+
+
+                                                          37
+                                        Recomendaciones para la organización de las actividades
+                                                              GUIA PARA EL EQUIPO DE SALUD
+
+
+
+1. ¿Qué pueden Ud y su equipo de salud hacer para contribuir al con-
+trol de la tuberculosis en su área?
+Garantizar la cobertura de la vacuna BCG
+
+üCoordinar con todas las maternidades del área para asegurar que todos los recién nacidos
+reciban la vacuna BCG antes del alta.
+
+üEn el primer control de salud del recién nacido verificar que se haya colocado la BCG, y en
+caso negativo colocarla a menos que tenga alguna contraindicación.
+
+En relación a la vacuna BCG:
+
+La vacuna BCG es eficaz para prevenir la diseminación hematógena de la primoinfección con
+el M. tuberculosis, pero no evita la infección por M. tuberculosis. Es una estrategia de prevención
+de las formas graves de tuberculosis (meningitis, miliar), que pueden ocurrir tras una infección
+primaria, especialmente en niños.
+
+Edad para la vacunación
+
+   La vacunación del recién nacido antes del egreso de la maternidad es fundamental
+   para que este bacilo atenuado (BCG) sea el primero en ingresar al organismo del niño,
+   antes de cualquier posible contacto con un enfermo bacilifero.
+
+
+Debe aplicarse en el recién nacido, antes de que le den el alta en la maternidad o, en su defecto,
+durante la primera semana de vida. Los niños no vacunados en la maternidad, con esquemas
+atrasados, recibirán una dosis hasta la edad de 6 años inclusive. No es necesario administrar
+esta vacuna en niños mayores de 6 años que no hubieran sido vacunados oportunamente.
+
+Es común que se forme un nódulo en el sitio de aplicación, generalmente a las 2 o 3 semanas
+de aplicada, y llegue a su máximo desarrollo alrededor del mes. Este nódulo puede ulcerarse,
+supurar y transformarse luego en una cicatriz, proceso que dura habitualmente alrededor de
+tres meses. Si bien esta es la evolución más frecuente, el nódulo y la cicatriz no se forman en
+todos los niños vacunados. Está demostrado que hay una pobre correlación entre la falta de
+escara o cicatriz con la falta de protección. Que la vacuna no deje cicatriz no significa que el
+niño no esté protegido.
+
+El efecto adverso más frecuente es la prolongación de la ulceración en el lugar donde se apli-
+có la vacuna, que se resuelve sin ningún tipo de tratamiento específico; solo debe limpiarse la
+zona con agua y jabón. Otros efectos adversos pueden ser las adenopatías locales, que suelen
+evolucionar favorablemente en forma espontánea, la formación de un absceso en el lugar de
+la inyección o la formación de una cicatriz queloide.
+La complicación más grave de la vacunación es la infección diseminada por BCG que aparece
+
+ISSN 1852-1819 / ISSN 1852-219X (en línea)                                                            39
+     enfermedades infecciosas | tuberculosis
+
+
+
+
+     entre 1 a 12 meses posteriores a la vacunación, con una incidencia de 0,19- 1,56/1.000.000 de
+     dosis aplicadas. Esta complicación ocurre casi exclusivamente cuando se vacuna en forma in-
+     advertida a personas con grave compromiso de la inmunidad celular.
+
+     Realizar búsqueda de Casos
+
+     Desde el punto de vista epidemiológico los casos que representan el mayor riesgo para la trans-
+     misión de la tuberculosis son los pacientes baciliferos, porque son los que transmiten la infec-
+     ción a la población sana.
+
+     Los servicios de salud deben estar organizados para poder realizar el examen baciloscó-
+     pico de esputo a toda persona que tenga tos y expectoración por más de 15 días inde-
+     pendientemente del motivo de consulta, con el fin de detectar precozmente los enfer-
+     mos para comenzar el tratamiento.
+
+       La búsqueda de casos no debe ser restringida a los pacientes que consultan POR sín-
+       tomas respiratorios sino que debe ampliarse a aquellos que lo hacen CON síntomas
+       respiratorios.
+
+
+     Si es posible, y si el equipo cuenta con trabajadores en terreno, estos deben investigar en la
+     población la presencia de síntomas respiratorios para captar aquellos que no consultan a los
+     centros de salud. En toda persona en la que se encuentren síntomas sospechosos de tuber-
+     culosis hay que realizar una baciloscopia de esputo para confirmar o descartar la enfermedad
+
+     Recolección de muestras de esputo
+
+     Como la eliminación de los bacilos por el esputo no es regular y permanente, es conveniente
+     analizar obtener dos muestras de esputo para el diagnóstico de la TB en los pacientes sinto-
+     máticos respiratorios y en el caso de que ambas muestras fueran negativas y la sospecha de TB
+     sea alta, se debe pedir una tercera muestra y cultivo.
+
+     La primera muestra debe tomarse siempre en el momento de la consulta al identificar al pa-
+     ciente sintomático respiratorio (muestra inmediata), mientras que la segunda muestra debe ser
+     obtenida por la mañana al despertar (muestra matinal).
+
+     El envase para recolectar la muestra debe ser descartable, de boca ancha, de material plástico,
+     transparente y de de cierre hermético.
+
+     Organizar la modalidad de tratamiento y de control del tratamiento de los pacientes con TB
+
+
+       Los servicios de salud también son responsables de los fracasos del tratamiento, por
+       fallas en la organización de los servicios.
+
+
+40
+                                        Recomendaciones para la organización de las actividades
+                                                              GUIA PARA EL EQUIPO DE SALUD
+
+
+
+Al iniciar el tratamiento para la tuberculosis, el equipo de salud debe evaluar:
+
+ü Aspectos clínicos del enfermo y los posibles tratamientos.
+
+ü Condiciones que puedan favorecer o interferir con el buen cumplimiento del tratamiento.
+
+ü Las familias y redes con las que cuenta el paciente, para trabajar más en aquellos pacien-
+tes con mas riesgo de abandono del tratamiento, implementando medidas de prevención del
+abandono, y de rescate de dichos pacientes en forma precoz, con la ayuda de agentes sanita-
+rios o referentes barriales.
+
+ü Evaluar en la indicación de la estrategia de tratamiento supervisado, ya sea en el centro de
+salud o en el domicilio o trabajo del paciente:
+
+    • distancias que deberá recorrer para conseguir la medicación y para su seguimiento,
+    • horarios de trabajo,
+    • posibilidad de contar con agente de salud o referente comunitario que administre la me-
+    dicación.
+
+Además el equipo de salud debe:
+
+ü Informar a la familia de los enfermos de tuberculosis y a la población en general sobre el
+problema.
+
+ü Explicar las causas y consecuencias de esta enfermedad para el paciente y su familia.
+
+ü Dar una guía anticipatoria de los síntomas secundarios a los efectos adversos de la medica-
+ción, para que el paciente se encuentre informado y consulte precozmente.
+
+Realizar tareas de comunicación social
+
+ü Informar a la población sobre la importancia de la consulta temprana en aquellos pacientes
+que presentan tos y/o expectoración.
+
+ü Promover actividades educativas para informar sobre la importancia de la consulta por sín-
+tomas respiratorios, de completar el tratamiento en aquellos pacientes enfermos y de controlar
+los contactos.
+
+Tareas de notificación
+
+ü Ante casos de tuberculosis se debe notificar de acuerdo a la modalidad indicada.
+
+
+
+
+ISSN 1852-1819 / ISSN 1852-219X (en línea)                                                        41
+     enfermedades infecciosas | tuberculosis
+
+
+
+
+     2. Adherencia al Tratamiento
+     Tratamiento Acortado Estrictamente Supervisado (DOT/TAES):
+
+     Este es un método de administración de medicamentos en el cual un agente de salud observa
+     a medida que una persona toma cada dosis de la medicación. El Tratamiento Directamente
+     Observado (TDO) se usa para asegurar que la persona enferma reciba y tome todos los me-
+     dicamentos de la forma en que se han recetado, y además, vigilar la respuesta al tratamiento.
+     Esta metodología mejora la adherencia de la persona al tratamiento y disminuye el riesgo de
+     aparición de multirresistencia a los fármacos antituberculosos debido a la toma irregular de los
+     medicamentos y el abandono del mismo.
+
+     ¿Por qué supervisar el tratamiento?
+
+     • Asegura que el paciente está tomando los medicamentos.
+     • Garantiza la curación del paciente.
+     • Es una buena forma de evitar y prevenir el abandono del tratamiento.
+     • Fortalece la relación del personal de salud y comunitario, con el enfermo.
+     • Permite detectar de manera oportuna los efectos secundarios de los medicamentos.
+     • Previene la futura resistencia a los medicamentos.
+     • Se puede derivar oportunamente a la persona enferma al médico especialista en caso de
+     presentarse alguna complicación.
+
+     ¿Qué es la adherencia?
+
+     Según la OMS (2003) la adherencia es: “el grado en que el comportamiento de una persona —tomar
+     el medicamento, seguir un régimen alimentario y ejecutar cambios del modo de vida— se corres-
+     ponde con las recomendaciones acordadas de un prestador de asistencia sanitaria.
+
+     La adherencia al tratamiento es de gran importancia no sólo para la persona enferma sino
+     para el conjunto de la comunidad.
+     El éxito del tratamiento depende directamente del cumplimiento adecuado de la toma de
+     medicación.
+     Esto significa: no saltarse ninguna dosis y respetar el horario de las mismas. De lo contrario,
+     se corre el riesgo de que el tratamiento deje de ser eficaz.
+
+     La adecuada adherencia implica:
+
+         • Evitar el fracaso del tratamiento.
+         • Garantizar la curación del paciente.
+         • Incrementar las tasas de curación.
+
+     Por otra parte, no adherir al tratamiento del modo acordado con el médico aumenta el
+     riesgo y la aparición de la resistencia a los medicamentos antituberculosos.
+
+42
+                                        Recomendaciones para la organización de las actividades
+                                                              GUIA PARA EL EQUIPO DE SALUD
+
+
+
+Supervisión y apoyo al paciente
+
+Los servicios de salud deben identificar y resolver los factores que pueden hacer que el pacien-
+te interrumpa o abandone el tratamiento.
+
+La supervisión debe ser adaptada al contexto y a las necesidades del paciente, y tiene por ob-
+jetivo garantizar la observancia por parte tanto de los profesionales sanitarios (quienes deben
+prestar una asistencia y un apoyo adecuados) como de los pacientes (quienes deben tomar el
+tratamiento con regularidad).
+Dependiendo de las condiciones locales, la supervisión puede efectuarse en un centro de sa-
+lud, en el lugar de trabajo, en la comunidad o en el domicilio del paciente, y debe ser llevada a
+cabo por alguien que sea aceptable para el paciente, esté formado para ello y sea supervisado
+por los servicios de salud.
+
+
+
+
+ISSN 1852-1819 / ISSN 1852-219X (en línea)                                                          43
+INFORMACIÓN PARA
+LA POBLACIÓN
+
+
+
+1.		
+   ¿Qué es la tuberculosis?
+2. ¿Cómo se contagia?
+3. ¿Qué puedo hacer para prevenir la tuberculosis?
+4. ¿Cómo puedo saber si tengo tuberculosis?
+5. ¿Hay algún tratamiento para la tuberculosis?
+6. ¿Qué puede hacer si Ud. o alguien en su familia
+   están enfermos de tuberculosis o creen que 		
+   pueden estarlo?
+7. ¿Qué puede hacer Ud.?
+
+
+
+
+                                                     45
+                                                               Información para la población
+                                                             GUIA PARA EL EQUIPO DE SALUD
+
+
+
+1. ¿Qué es la tuberculosis?
+
+La tuberculosis es una enfermedad contagiosa, producida por una bacteria, que afecta princi-
+palmente a los pulmones, pero que también puede afectar a otras partes del cuerpo.
+
+
+2. ¿Cómo se contagia?
+
+La tuberculosis se contagia cuando una persona sana tiene contacto cercano diario durante
+mucho tiempo con otra persona que tiene la enfermedad y no está en tratamiento. Si esa per-
+sona tiene una tuberculosis en sus pulmones, al toser, estornudar o hablar, elimina las bacterias
+de la tuberculosis, que quedan suspendidas en el aire y al ser inhaladas por otra persona, esta
+puede contagiarse.
+La tuberculosis no se contagia a través del contacto con objetos.
+
+
+3. ¿Qué puedo hacer para prevenir la tuberculosis?
+
+La mejor manera de prevenir la tuberculosis, es que todos aquellos que están enfermos to-
+men la medicación antituberculosa en forma adecuada y hasta completar la duración del trata-
+miento.
+Una persona que presente tuberculosis y realiza el tratamiento deja de contagiar a partir de las
+dos semanas de empezado el mismo.
+La vacuna BCG solo previene las formas graves de tuberculosis como la meningitis tuberculosa,
+pero no se ha demostrado que sea eficaz para prevenir la tuberculosis pulmonar.
+Si Ud o alguien en su familia están en contacto cercano, varias horas por día, con un paciente
+que tiene tuberculosis, consulte en un centro de salud, donde le informaran si es necesario que
+realicen algún tipo de control.
+
+
+
+4. ¿Cómo puedo saber si tengo tuberculosis?
+
+SI Ud padece tos o catarro que duran más de dos semanas, fiebre de muchos días de duración,
+sudoración nocturna, cansancio frecuente, pérdida de peso sin causa que lo justifique y/o falta
+de apetito debe consultar al centro de salud, para que se identifique la causa, sea o no tubercu-
+losis y se indique el tratamiento que corresponda.
+
+
+5. ¿Hay algún tratamiento para la tuberculosis?
+
+Si. La tuberculosis se cura si el paciente se diagnostica oportunamente y toma los medicamen-
+tos regularmente durante todo el tiempo indicado, que generalmente es de 6 meses, aunque
+según el tipo de caso, puede requerirse un tratamiento mas largo.
+
+
+ISSN 1852-1819 / ISSN 1852-219X (en línea)                                                          47
+     enfermedades infecciosas | tuberculosis
+
+
+
+
+     Tanto el diagnóstico como el tratamiento son gratuitos en toda la República Argentina.
+
+
+     6. ¿Qué puede hacer si usted o alguien en su familia están enfermos de
+     tuberculosis o creen que pueden estarlo?
+     Consultar tan pronto como sea posible a un servicio de salud, cuando se tengan signos sospe-
+     chosos de la enfermedad: tos y catarro por más de dos semanas.
+
+     Si esta en tratamiento, debe tomar la medicación de la manera, y durante todo el tiempo, que
+     le han indicado en el centro de salud.
+
+     El tratamiento de la tuberculosis se realiza durante al menos seis meses, ya que las bacterias
+     que causan la tuberculosis se mueren muy lentamente. Aunque el enfermo de tuberculosis co-
+     menzará probablemente a sentirse bien a las pocas semanas del tratamiento, si el tratamiento
+     se interrumpe antes de terminarlo, las bacterias que quedaron todavía vivas pueden volver a
+     enfermar y, además, pueden hacerse resistentes a los medicamentos que se tomaban, y estos
+     ya no serán efectivos para curar al paciente.
+
+
+     7. ¿Qué puede hacer Ud.?
+
+     ü Asegúrese que los niños pequeños tienen aplicada la vacuna BCG antes de salir de la ma-
+     ternidad.
+
+     ü Consulte inmediatamente al centro de salud si usted o alguien de su familia tiene tos y cata-
+     rro por más de dos semanas.
+
+     ü Si a usted o a alguno de su familia le diagnostican tuberculosis, siga las instrucciones del
+     personal de salud. Haga el tratamiento tal como se lo indican y continúelo hasta finalizar.
+
+     ü Difunda estas recomendaciones entre sus allegados y en la comunidad.
+
+
+
+
+48
+ANEXOS
+
+
+1. Tarjeta de control de tratamiento de pacientes con TB
+2. Solicitud de estudios bacteriológicos de TB
+3. Sistemas de Información: Normativa y tutorial para
+   la vigilancia a través del SIVILA-SNVS
+
+
+
+
+                                                           49
+                                                                                                             Anexos
+                                                                                       GUIA PARA EL EQUIPO DE SALUD
+
+
+
+1. Tarjeta de Control de Tratamiento de Pacientes con Tuberculosis
+
+
+                                      1. Tarjeta de control de tratamiento de pacientes con tuberculosis
+
+
+
+
+ISSN 1852-1819 / ISSN 1852-219X (en línea)                                                                            51
+     enfermedades infecciosas | tuberculosis
+
+
+
+
+     2. Solicitud de estudios bacteriológicos de tuberculosis
+
+
+
+
+52
+                                                                                    Anexos
+                                                              GUIA PARA EL EQUIPO DE SALUD
+
+
+
+3. Sistemas de información
+
+¿Cómo notificar el caso de tuberculosis?
+
+El objetivo de la vigilancia de tuberculosis es alertar en forma temprana acerca de la ocurrencia
+de casos e identificar posibles fuentes de contagio, para implementar acciones de control.
+
+La tuberculosis es una enfermedad de la categoría TRANSMISIBLE. Las ESTRATEGIAS que se uti-
+lizan para su vigilancia son de orden clínico y laboratorial.
+
+Procedimiento para la notificación de los casos de Tuberculosis en SNVS y SIVILA
+
+• SNVS C2 Vigilancia clínica
+
+La notificación de los casos de tuberculosis se realiza actualmente a través de una aplicación
+Web alojada en el Sistema Nacional de Vigilancia de la Salud (SNVS) a la cual se accede desde
+cualquier PC conectada a internet.
+Este sistema puede ser utilizado en todos los servicios de salud del país para informar los casos
+diagnosticados de tuberculosis para lo cual se deben solicitar los datos de acceso al “Instituto
+Nacional de Enfermedades Respiratorias Dr. Emilio Coni”, previa autorización de los Programas
+Provinciales de Tuberculosis.
+El ingreso al sistema se realiza por medio de la autenticación del usuario utilizando los datos de
+acceso proporcionados.
+Al ingresar al sistema, en el panel izquierdo, se ofrece un menú de opciones agrupadas por
+categoría.
+
+
+
+
+En la categoría <Notificación Tuberculosis> están disponibles tres secciones bien definidas.
+Notificación: Permite el ingreso de toda la información del paciente correspondiente a la notifi-
+cación, datos de control bacteriológico, tratamientos previos y/o cambios en los esquemas de
+tratamiento y resultado final del tratamiento.
+Procesamiento: Obtención de informes tabulados sobre diversos indicadores que se generan
+automáticamente a partir de los datos ingresados al sistema por los usuarios.
+
+ISSN 1852-1819 / ISSN 1852-219X (en línea)                                                           53
+     enfermedades infecciosas | tuberculosis
+
+
+
+
+                                               Herramientas: Conjunto de aplicaciones que per-
+                                               miten la administración de la información conte-
+                                               nida en el sistema. Se incluye el cruce de informa-
+                                               ción entre el sistema de tuberculosis y el sistema
+                                               de vigilancia de laboratorios (SIVILA).
+
+                                               Notificación de casos (ver Programa Nacional de
+                                               Control de la Tuberculosis: Normas Técnicas 2013)
+                                               Para comenzar con la notificación de los casos
+                                               se selecciona, en la pantalla principal, la opción
+                                               <Notificación>. Esto habilita un cuadro de opcio-
+                                               nes donde se escoge <Notificación de Casos>.
+
+
+
+
+54
+                                                                                   Anexos
+                                                             GUIA PARA EL EQUIPO DE SALUD
+
+
+
+Esta selección permite generar un formulario de notificación que recaba toda la información
+personal y médica del paciente diagnosticado con tuberculosis y del servicio notificador.
+
+Instrucciones para completar el formulario:
+
+Centro Notificador: Si está ingresando al sistema con un usuario de nivel local aparecerá el
+nombre del servicio de salud al que pertenece. Si está ingresando al sistema desde los niveles
+provincial, regional o nacional deberá seleccionar el centro de salud que notifica en la ventana
+disponible donde se le solicitarán los datos de provincia, departamento y localidad a la que
+pertenece el centro.
+Tiene la opción de tildar el casillero <Recordar temporalmente> en el caso que deba notificar
+más de un caso por el mismo establecimiento. El establecimiento quedará seleccionado hasta
+que usted vuelva a deshabilitar la casilla.
+Fecha de Diagnóstico o Notificación: Ingresar el día, mes y año de la notificación o elegirlo del
+almanaque.
+Apellido y Nombres: Según consta en el documento de identidad.
+Sexo: Seleccionar Masculino, Femenino o Sin Información según corresponda.
+Fecha de Nacimiento y Edad: El sistema le da la opción de introducir la fecha de nacimiento
+por medio del almanaque o colocándola en el formato <dd/mm/aaaa> con lo cual la edad se
+calculará automáticamente. Si no se dispone del dato se completa el campo con la edad y si no
+se dispone de ninguno de los datos tildar el casillero <Sin Inf.> El sistema completará el campo
+con <-1>.
+Tipo y Número de Documento: Seleccionar el tipo de documento que posee el paciente y
+escribir el número del mismo. Si no se dispone de la información seleccionar la opción <Des-
+conocido>.
+
+
+         Datos de residencia del paciente:
+         Completar los campos <País>, <Provincia>, <Departamento o Partido> y <Lo-
+         calidad> utilizando el menú desplegable correspondiente.
+         Los datos correspondientes al <Domicilio: Calle y Número>, <Teléfono Fijo>,
+         <Teléfono Celular> y <Zona o Región de Salud> se establecen manualmente
+         con la información disponible.
+         Si el paciente se encuentra preso puede seleccionar la opción <SI> lo que ha-
+         bilita el campo <Establecimiento Carcelario> permitiendo luego elegir el esta-
+         blecimiento en el cual se encuentra alojado el paciente.
+
+
+País de origen: Seleccionar en la lista disponible la nacionalidad del paciente.
+Centro en el que recibe tratamiento: Para seleccionar el servicio de salud donde el paciente
+realiza el tratamiento clickear en la herramienta de búsqueda para abrir la ventana donde se
+seleccionan los datos de <País>, <Provincia>, <Departamento o Partido>, <Localidad> y <Ser-
+vicio de Salud>
+Razón del examen: Seleccionar la opción que corresponda del listado disponible.
+
+
+ISSN 1852-1819 / ISSN 1852-219X (en línea)                                                          55
+     enfermedades infecciosas | tuberculosis
+
+
+
+
+     - Sintomático respiratorio
+     - Contacto
+     - Examen de salud
+     - Otros
+     - Sin información
+
+     Localización de la enfermedad: Según la enfermedad sea pulmonar y/o extrapulmonar se
+     selecciona la localización en los campos correspondientes. El sistema no permite colocar en
+     ambos campos la opción <Sin Información> o <No>. Si es extra-pulmonar seleccionar la loca-
+     lización de la tuberculosis en el cuadro desplegable.
+     Clasificación Radiológica: Seleccionar la opción que corresponda del listado disponible para
+     formas pleuropulmonares.
+     - USC - Tuberculosis pulmonar unilateral sin caverna
+     - BSC - Tuberculosis pulmonar bilateral sin caverna
+     - UCC - Tuberculosis pulmonar unilateral con caverna
+     - BCC - Tuberculosis pulmonar bilateral con caverna
+     - Pleur - Pleuresía
+     - PI - Primoinfección
+     - NR - No tiene realizado examen radiológico
+     - S/I- Sin información del resultado o se ignora si se ha realizado examen radiológico.
+     - S/L - Sin lesiones: El resultado del examen radiológico es normal
+     - MIL- Miliar
+
+
+             Clasificación bacteriológica:
+             <Examen Directo>: Seleccionar la opción que corresponda según el resultado
+             del examen.
+             - Sin información: Se desconoce el resultado.
+             - No realizado: Cuando no se ha realizado el examen.
+             - Negativo: El resultado del examen es negativo.
+             - Positivo: El resultado del examen es positivo pero se desconoce la cantidad
+             de BAAR por campo.
+             - Positivo (+): Se observan entre 10 y 99 BAAR en 100 campos observados.
+             - Positivo (++): Se observan de 1 a 10 BAAR por campo, en 50 campos obser-
+             vados.
+             - Positivo (+++): Se observan más de 10 BAAR por campo, en 20 campos ob-
+             servados.
+
+             <Muestra Analizada>: Señalar en la lista desplegable el tipo de muestra analizada.
+             <Cultivo>: Seleccionar de la lista la opción que corresponda.
+             - Sin información: Se desconoce el resultado
+             - No realizado: Cuando no se ha realizado el examen
+             - Negativo: El examen arroja un resultado negativo
+             - Positivo: El examen arroja un resultado positivo
+             - En Estudio
+56
+                                                                                  Anexos
+                                                            GUIA PARA EL EQUIPO DE SALUD
+
+
+
+
+         <Otro Examen Positivo>: Seleccionar en la lista desplegable el examen realiza-
+         do cuyo resultado fue positivo.
+         - ADA – Adenosín Deaminasa
+         - ELISA – ELISA
+         - ANPT – Anatomía Patológica
+         - PCR – Reacción de la Polimerasa en cadena
+         - S/I – Sin Información
+         - N/R – No Realizado
+         - OTROS – Sin Especificar
+
+
+<Prueba de Sensibilidad>: Este campo se habilita cuando se ha realizado un cultivo y el resul-
+tado del mismo es positivo. Esto permite seleccionar de las opciones predeterminadas la que
+corresponda.
+- Sin Información
+- No realizada
+- Sensible
+- Resistente: En caso de seleccionar esta opción se deben informar las drogas a las cuales el
+paciente presenta resistencia. Para esto clickear en el botón <A:è> y seleccionar las drogas
+correspondientes en la ventana emergente.
+
+<Caso Multirresistente>: Si no tiene prueba de sensibilidad pero considera que el paciente es
+MDR marque el casillero para poder ingresar los datos adicionales.
+
+
+         Información Adicional Multirresistente: Esta sección se habilita al declarar
+         que el paciente es MDR y se solicita información adicional del mismo.
+         <Fecha en que se realizó cultivo>: Colocar la fecha con formato “dd/mm/aaaa”.
+         <Laboratorio que realizó el análisis>: Seleccionar de la lista desplegable.
+         <Médico Responsable>: Nombre y apellido del médico responsable de la aten-
+         ción del paciente.
+         <Paciente Internado>: Puede optar por SI o No según corresponda.
+         <Peso actual (Kg)>: Colocar el peso del paciente en kilogramos.
+         <Talla (cm)>: Colocar la talla del paciente en centímetros.
+         <Observaciones>: Cualquier dato de interés.
+
+
+<Esquema de tratamiento>: Elegir de la lista el esquema de tratamiento completo adecuado a
+cada paciente. Si el esquema necesario no figura en la lista debe presionar el botón <Otros> lo
+que permite seleccionar las drogas que se utilizarán en la primera y segunda fase y los meses
+de duración de cada fase. En caso de no poder configurar el tratamiento por este último medio
+optar por la opción <Otros> que se encuentra en la lista desplegable.
+<Modalidad del tratamiento>: Seleccionar de la lista desplegable la opción que corresponda.
+
+ISSN 1852-1819 / ISSN 1852-219X (en línea)                                                        57
+     enfermedades infecciosas | tuberculosis
+
+
+
+
+     - Sin información
+     - Auto-administrado
+     - Supervisado
+     - Mixto
+
+     Clasificación del caso: Seleccionar de la lista desplegable la opción que corresponda.
+     - Nuevo: Sin tratamiento previo o que ha tomado medicamentos por menos de un mes.
+     - Recaída: Paciente declarado curado por el médico y vuelve con baciloscopía y/o cultivo po-
+     sitivo.
+     - Traslado: Paciente derivado de otro servicio para continuar con el tratamiento.
+     - Reingreso de abandono: Paciente que interrumpe el tratamiento por dos meses o más y vuel-
+     ve con baciloscopía positiva, o negativa con clínica y radiología de TB activa.
+     - Fracaso: Paciente que comienza tratamiento tras ser evaluado como fracaso en un tratamiento
+     anterior.
+     - Otros: Cuando se trata de alguna no contemplada en la lista desplegable como pueden ser
+     caso crónico, caso de TB multirresistente, etc.
+     - Sin información: No se dispone de datos suficientes para clasificar al paciente.
+
+     Factores de riesgo: Seleccionar de la lista desplegable la opción que corresponda.
+     - Trabajador de la salud
+     - Alcohólico
+     - Desnutrición
+     - Diabético
+     - Embarazada
+     - Insuficiencia renal
+     - Tabaquismo
+     - Abuso de drogas
+     - Información
+     - Ninguno de los listados
+
+     Examen VIH: Seleccionar de la lista desplegable la opción que corresponda.
+     - Negativo
+     - No realizado
+     - Sin información
+     - Positivo: En este caso el sistema aplicará un procedimiento de codificación adoptado del Pro-
+     grama Nacional de Sida para proteger la identidad del paciente con VIH. Adicionalmente se
+     habilitará la opción de informar sobre Tratamiento Retroviral tildando el casillero.
+
+     Una vez ingresados los datos solicitados, pulse el botón <Guardar>.
+     NOTA: Si en los datos hay errores el sistema los resaltará para que sean corregidos antes de
+     guardar.
+
+     Seguimiento del caso y Resultado final del tratamiento:
+     La información que corresponde al seguimiento del caso y resultado final del tratamiento se
+
+
+58
+                                                                                  Anexos
+                                                            GUIA PARA EL EQUIPO DE SALUD
+
+
+
+ingresa a través de la ventana de notificación utilizada en el primer paso. En esta ventana se
+selecciona según corresponda <Seguimiento de casos> o <Resultado final del tratamiento>.
+
+
+
+
+En ambos casos se abre un formulario por medio del cual, al ingresar criterios de búsqueda,
+genera el listado de pacientes que cumplen con los requisitos buscados.
+
+Una vez identificado en el listado los datos del paciente se selecciona la herramienta <Ver/
+Agregar estudios> ubicada a la derecha.
+Esto permite ingresar en la ficha del paciente la cual consta de las secciones destinadas al in-
+greso del seguimiento, tratamientos previos o intermedios, y resultado final del tratamiento.
+Veremos los datos requeridos únicamente para ingresar el resultado del tratamiento. Para am-
+pliar este tema se puede solicitar el Manual de Usuario del Módulo de Tuberculosis en el INER
+“Dr. Emilio Coni”.
+
+
+
+
+Instrucciones para completar el formulario:
+Fecha de Inicio: Se completa con la fecha en que comienza el tratamiento en el formato <dd/
+mm/aaaa>.
+Fecha de Finalización: Se completa con la fecha en que termina el tratamiento en el formato
+<dd/mm/aaaa>.
+Estado Final del caso:
+Seleccionar de la lista des-
+plegable la opción que
+corresponda.
+- Abandono
+- Curado
+- Fallecido
+- Fracaso
+
+
+ISSN 1852-1819 / ISSN 1852-219X (en línea)                                                         59
+     enfermedades infecciosas | tuberculosis
+
+
+
+
+     - Traslado
+     - Tratamiento completo
+
+     El SNVS a su vez permite:
+
+     Listar Casos que se encuentran en SIVILA y no en TB
+     Listar Casos que se encuentran en SIVILA y difieren el resultado con TB
+
+     SNVS C2 Vigilancia Laboratorial
+
+     Procedimiento para notificación por SIVILA
+
+     NOTIFICACIÓN AGRUPADA/NUMÉRICA
+
+     En la Notificación Agrupada/Numérica, los grupos de eventos correspondientes a Tuberculosis
+     son:
+     - Tuberculosis Pulmonar
+     - Tuberculosis Extrapulmonar
+
+
+     TUBERCULOSIS PULMONAR:
+
+     Los eventos a notificar en Tuberculosis Pulmonar son:
+
+     1. Sintomáticos investigados por baciloscopía
+     2. Baciloscopías de diagnóstico
+     3. Baciloscopías de control de tratamiento
+
+     En estos casos, en la columna de Totales se debe consignar el total de MUESTRAS o PACIEN-
+     TES investigados y en el casillero de Positivos las MUESTRAS o PACIENTES investigados con
+     resultado positivo (P+)
+
+     4. Sintomáticos con baciloscopía negativa investigados por cultivo
+     5. Cultivos de pacientes con baciloscopía negativa
+
+     En este caso, en la columna de Totales se deberá consignar el total de MUESTRAS o PACIENTES
+     con baciloscopía negativa que fueron investigados y en la columna de Positivos las MUESTRAS
+     o PACIENTES con baciloscopía negativa investigadas por cultivo con resultado positivo (P+)
+
+
+       Todo sintomático respiratorio, con tos por más de 15 días, debe ser investigado por
+       baciloscopía de al menos dos muestras de esputo. De manera que la relación total
+       de “Baciloscopías de Diagnóstico”/ total “Sintomáticos investigados por Baciloscopía”
+       deberá ser cercano a 2.
+
+
+60
+                                                                                            Anexos
+                                                                      GUIA PARA EL EQUIPO DE SALUD
+
+
+
+TUBERCULOSIS EXTRAPULMONAR
+Los eventos a notificar en Tuberculosis extrapulmonar son:
+
+1. Sintomáticos investigados por baciloscopía
+2. Baciloscopías de diagnóstico
+En la columna de Totales se deberá consignar el total de MUESTRAS o PACIENTES investiga-
+das por baciloscopía para diagnóstico y en el casillero de Positivos las MUESTRAS o PACIEN-
+TES investigadas por baciloscopía para diagnóstico con resultado positivo (P+)
+
+3. Sintomáticos con baciloscopías negativas investigados por cultivo
+4. Cultivos de pacientes con baciloscopías negativas
+
+En la columna de Totales se deberá consignar el total de MUESTRAS o PACIENTES con bacilos-
+copía negativa que fueron investigados por cultivo y en la columna de Positivos las MUESTRAS
+o PACIENTES con baciloscopía negativa investigadas por cultivo con resultado positivo (P+)
+
+
+    Todas las muestras de pacientes con signos de Tuberculosis Extrapulmonar deben ser
+    cultivadas.
+
+
+
+PERIODICIDAD:
+
+La Notificación Agrupada de Tuberculosis PULMONAR/ Extrapulmonar deberá realizarse al me-
+nos en forma cuatrimestral3, consignándose toda la información del cuatrimestre notificado en
+la SE correspondiente a la última del período a notificar del período notificado:
+
+     • Primer cuatrimestre (1ro de enero al 30 de Abril): Notificar en la semana epidemiológica
+     (SE) 17 de cada año todos los pacientes y muestra procesadas correspondientes al periodo
+     notificado;
+     • Segundo cuatrimestre (1ro de Mayo al 31 de Agosto): Notificar en la semana epidemio-
+     lógica (SE) 35 de cada año todos los pacientes y muestra procesadas correspondientes al
+     periodo notificado.
+     • Tercer cuatrimestre (1ro de Septiembre al 31 de Diciembre): Notificar en la semana epi-
+     demiológica (SE) 52 o 53 -dependiendo de la cantidad de SE que tenga el año- todos los
+     pacientes y muestra procesadas correspondientes al periodo notificado
+
+Toda vez que se realice la notificación por períodos mayores a una semana, deberán grabarse
+en “0” las restantes semanas contenidas dentro del período notificado.
+
+
+
+
+3
+ Todo aquel laboratorio que pueda y le resulte más operativo, podrá realizar la notificación de manera semanal,
+mensual u otros períodos menores al pautado como mínimo.
+
+ISSN 1852-1819 / ISSN 1852-219X (en línea)                                                                        61
+     enfermedades infecciosas | tuberculosis
+
+
+
+
+     Cuando el reporte de la información no fuera semanal, los pacientes y muestras “sólo cultivo
+     positivo” serán notificados en la modalidad Agrupada luego de la obtención del resultado po-
+     sitivo detectado por el laboratorio, en la última SE del periodo de notificación elegido (cuatri-
+     mestre, trimestre, mes) en el que fue procesada la muestra.
+
+     NOTIFICACIÓN INDIVIDUAL:
+
+     En la Notificación Agrupada/Numérica, los grupos de eventos correspondientes a Tuberculosis
+     son:
+     - Tuberculosis (diagnóstico)
+     - Tuberculosis (control de tratamiento)
+     - Tuberculosis multiresistente (diagnóstico)
+     - Tuberculosis multiresistente (control de tratamiento)
+     - Micobacteriosis (diagnóstico)
+     - Micobacteriosis (control de tratamiento)
+     - Meningitis tuberculosa
+
+
+     TUBERCULOSIS (Diagnóstico)
+
+     De acuerdo con las Normas de Vigilancia Nacional, todo caso positivo de Tuberculosis diag-
+     nosticado por baciloscopía y/o cultivo deberá ser notificado en Ficha Individual Semanal.
+
+     • Se abrirá una ficha individual ante TODO CASO POSITIVO diagnosticado por baciloscopía
+     y/o cultivo DE TUBERCULOSIS PULMONAR O EXTRAPULMONAR en el Grupo de Eventos TU-
+     BERCULOSIS/ Evento TUBERCULOSIS (Diagnóstico).
+
+     Deberán registrarse en este evento todos los estudios realizados con fines de diagnóstico etio-
+     lógico.
+     Importante: Toda vez que nuevos estudios realizados no modifiquen la interpretación diag-
+     nóstica hasta el momento, deberá consignarse en “Interpretación de Resultados”, el resultado
+     que corresponda al mayor avance conseguido hasta el momento en el algoritmo diagnóstico
+     (ejemplo, cultivo contaminado y baciloscopía positiva previa, se consigna como Interpretación
+     de Resultados: Baciloscopía positiva)
+
+     • Los estudios que sean realizados posteriormente sin fines de diagnóstico sino para el control
+     del tratamiento de un determinado caso, se notificará a través de “Nuevo Estudio” en la Ficha
+     Individual del SIVILA previamente registrada en el Grupo de Eventos TUBERCULOSIS/ Evento
+     TUBERCULOSIS (Control de tratamiento). Las derivaciones o sucesivos estudios dentro del mis-
+     mo laboratorio quedarán así registrados como un historial de estudios dentro del mismo Caso.
+
+
+
+
+62
+                                                                                              Anexos
+                                                                        GUIA PARA EL EQUIPO DE SALUD
+
+
+
+a. Seleccione el Grupo de Eventos “TUBERCULOSIS” y Evento “TUBERCULOSIS (Diagnóstico)”4
+b. Consigne los Datos epidemiológicos que se conozcan del caso.
+Es muy importante consignar las siguientes variables de corresponder con el caso que se está
+notificando:
+
+1. Inmunocomprometido
+2. Tratamiento específico previo
+    sólo en las siguientes circunstancias:
+• Si el paciente realizó tratamiento antituberculoso por más de un mes, lo abandonó y nueva-
+mente acude al servicio de salud
+• Si el paciente presentó un episodio de tuberculosis en el pasado, fue dado de alta y recae.
+
+En el caso en que tenga información acerca del tratamiento previo (año, duración, esquema
+empleado) deberá consignarse en Comentarios de Datos Epidemiológicos.
+
+3. Contacto
+En el caso en que se conozca que el paciente es “Contacto” de un caso de tuberculosis anterior-
+mente diagnosticado cuyo nombre y apellido se conozca, coloque el nombre del Contacto en
+Identificador 2 y consígnelo en Datos Epidemiológicos “Contacto”.
+
+4. Aunque menos frecuentes, también son antecedentes de interés:
+Exposición Laboral y Accidente (para el caso de personal de salud); Sospecha de infec-
+ción nosocomial.
+
+La categoría caso nuevo (sin tratamiento previo), las subcategorías de retratamiento (abando-
+no, recaída o fracaso), la identificación de diabético o adicto a alcohol y la residencia anterior en
+países alta carga de tuberculosis resistente a drogas (Ecuador, Perú, países del Asia Central y de
+Europa del Este) y menores de 15 años serán ingresados en el campo “Observaciones”.
+
+Interpretación de resultados:
+
+    Nunca debe retrocederse en la interpretación de resultados del proceso de diagnós-
+    tico. Si los nuevos estudios no modifican la información anterior, debe conservarse la
+    interpretación de resultados que haya llegado más lejos en el proceso de diagnóstico.
+
+
+
+
+4
+ Seleccione este evento tanto ante el primer estudio positivo para baciloscopía como ante el resultado positivo de
+Mycobacterium tuberculosis por cultivo. En el caso en que se hubiera registrado ante una baciloscopía positiva
+y se llegara luego a un diagnóstico final de Micobacteriosis por cultivo e identificación o prueba molecular, de-
+berá precisarse el mismo a través de Interpretación de Resultados. El evento Micobacteriosis de la ficha individual
+queda reservado para aquellos casos en que la baciloscopía fue inicialmente negativa y del cultivo se aisló una
+micobacteria ambiental o atípica considerada como el agente causante de la enfermedad.
+
+ISSN 1852-1819 / ISSN 1852-219X (en línea)                                                                            63
+     enfermedades infecciosas | tuberculosis
+
+
+
+
+     TUBERCULOSIS (Control de tratamiento)
+
+     Este evento NO ES DE NOTIFICACIÓN OBLIGATORIA y está contemplado para ser utilizado por
+     las jurisdicciones y laboratorios que pretendan tener el registro laboratorial de los controles y
+     la interpretación correcta de sus resultados en el SIVILA. Sin embargo, este evento deberá ser
+     utilizado para la derivación de toda muestra de esputo que recogida después del segundo mes
+     de tratamiento resultara positiva a la baciloscopía y por tanto debiera encaminarse para cultivo,
+     identificación de especie y/o prueba de sensibilidad.
+
+     TUBERCULOSIS MULTIRRESISTENTE (Diagnóstico)
+
+     Se deberá notificar TODO CASO POSITIVO que cumpla con la definición de caso de TUBER-
+     CULOSIS PULMONAR O EXTRAPULMONAR Multirresistente y los posteriores controles de tra-
+     tamiento.
+
+     Es muy importante consignar las siguientes variables de corresponder con el caso que se está
+     notificando:
+
+     1. Inmunocomprometido
+     2. Tratamiento específico previo
+     sólo en las siguientes circunstancias:
+     • Si el paciente realizó tratamiento antituberculoso por más de un mes, lo abandonó y nueva-
+     mente acude al servicio de salud
+     • Si el paciente presentó un episodio de tuberculosis en el pasado, fue dado de alta y recae. En
+     el caso en que tenga información acerca del tratamiento previo (año, duración, esquema em-
+     pleado) deberá consignarse en Comentarios de Datos Epidemiológicos.
+     3. Contacto
+     • En el caso en que se conozca que es “Contacto” de un caso de tuberculosis anteriormente
+     diagnosticado cuyo nombre y apellido se conozca, coloque el nombre del Contacto en Identi-
+     ficador 2 y consígnelo en Datos Epidemiológicos “Contacto”.
+
+     Aunque menos frecuentes, también son antecedentes de interés:
+     Exposición Laboral y Accidente (para el caso de personal de salud); Sospecha de infec-
+     ción nosocomial.
+
+     La categoría caso nuevo (sin tratamiento previo), las subcategorías de retratamiento (abando-
+     no, recaída o fracaso), la identificación de diabético o adicto a alcohol y la residencia anterior en
+     países alta carga de tuberculosis resistente a drogas (Ecuador, Perú, países del Asia Central y de
+     Europa del Este) y menores de 15 años serán ingresados en el campo “Observaciones”.
+
+       Todos los casos con TB multirresistente o extremadamente resistente deben ser moni-
+       toreados con baciloscopia y cultivo mensual.
+
+
+
+64
+                                                                                          Anexos
+                                                                    GUIA PARA EL EQUIPO DE SALUD
+
+
+
+TUBERCULOSIS MULTIRRESISTENTE (Control de tratamiento)
+
+En este evento son registrados todos los estudios que sean realizados posteriores al diagnóstico
+cuyo fin sea el control del tratamiento.
+
+
+MICOBACTERIOSIS (Diagnóstico)
+
+Todos aquellos casos en los que la baciloscopía fue inicialmente negativa y del cultivo se aisló
+una Micobacteria no tuberculosa considerada como el agente causante de la enfermedad5
+deberán ser notificados en Ficha Individual Semana.
+
+MICOBACTERIOSIS (Control de tratamiento)
+
+En este evento son registrados todos los estudios que sean realizados posteriores al diagnóstico
+cuyo fin sea el control del tratamiento.
+
+MENINGITIS TB en < 5 años
+
+De acuerdo con las Normas de Vigilancia Nacional, ante todo caso positivo por cualquier prue-
+ba para MENINGITIS TUBERCULOSA en < de 5 años se abrirá una ficha individual en SIVILA
+Notificación Individual en forma INMEDIATA.
+
+
+
+
+5
+ Se considera que una micobacteria ambiental o atípica causa patología cuando es aislada:
+a) De al menos una muestra normalmente estéril
+b) De dos o más muestras no estériles.
+
+ISSN 1852-1819 / ISSN 1852-219X (en línea)                                                         65
+NOTAS:
+Para más información: 0-800-222-1002
+
+Dirección de Epidemiología
+e-mail: notifica@msal.gov.ar
+
+Ministerio de Salud de la Nación
+Av. 9 de Julio 1925 (C1073ABA), Cdad. Autónoma de Bs. As., República Argentina
+Teléfono: (54-11) 4379-9000 / Web: www.msal.gov.ar
+
+ISSN 1852-1819 / ISSN 1852-219X (en línea)
+

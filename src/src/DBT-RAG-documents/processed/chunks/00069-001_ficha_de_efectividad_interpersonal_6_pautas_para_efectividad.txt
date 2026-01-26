@@ -1,9 +1,0 @@
-TITLE: FICHA DE EFECTIVIDAD INTERPERSONAL 6 — Pautas para efectividad en las relaciones: mantener la relación
-MODULE: mindfulness
-SKILL_TAG: FICHA_DE_EFECTIVIDAD_INTERPERSONAL_6_PAUTAS_PARA_EFECTIVIDAD
-SOURCE_PDF: Manual-2023-enumerado-.pdf
-PAGES: 251-254
-CHUNK_ID: 00069-001
-UNIT_ID: 00069
-
-(Hojas de trabajo de E.I. 4, 5)

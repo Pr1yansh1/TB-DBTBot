@@ -1,0 +1,14 @@
+DOC_ID: interpersonal_effectiveness.ficha.20
+TYPE: ficha
+MODULE: interpersonal_effectiveness
+NUMBER: 20
+TITLE: Estrategias para aumentar la probabilidad de conductas
+PAGES: 309-312
+MAJOR_SECTION: Fichas de efectividad interpersonal
+REFS_OUT: 
+
+(Hoja de trabajo de E.I. 14) Estrategias para aumentar la probabilidad de conductas deseadas Describe conductas en ti o en los otros que te gustaría aumentar o disminuir:
+
+Refuerzo = una consecuencia que aumenta la frecuencia de una conducta. Refuerzo positivo = consecuencias positivas (es decir, recompensa). La frecuencia de la conducta se incrementa porque las consecuencias son algo que una persona quiere, le gusta o trabajará para obtener. Ejemplos: Refuerzo negativo = eliminación de eventos negativos (es decir, alivio). La frecuencia de la conducta se incrementa porque las consecuencias detienen o reducen algo negativo. Ejemplos: Moldeado = reforzar pequeños pasos hacia la conducta que deseas. •• Reforzar pequeños pasos que conducen hacia el objetivo. •• A medida que se estabiliza la nueva conducta, pide un poco más antes de reforzar. •• Continúa hasta alcanzar la conducta objetivo. Ejemplos de pasos para una conducta objetivo: El momento importa. •• Refuerza la conducta inmediatamente después de que ocurra. •• Al moldear una nueva conducta, refuerza al inicio cada una de sus instancias. •• Una vez que la conducta se establece, gradualmente comienza a reforzarla solo algunas veces.
+
+Precaución: cuando modificas el refuerzo, se vuelve muy difícil detener la conducta.

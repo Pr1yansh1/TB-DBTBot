@@ -1,9 +1,0 @@
-TITLE: FICHA DE EFECTIVIDAD INTERPERSONAL 6A — Ampliando la V en AVES: niveles de validación
-MODULE: interpersonal_effectiveness
-SKILL_TAG: VALIDATION
-SOURCE_PDF: Manual-2023-enumerado-.pdf
-PAGES: 255-255
-CHUNK_ID: 00070-001
-UNIT_ID: 00070
-
-Ampliando la V en AVES: niveles de validación

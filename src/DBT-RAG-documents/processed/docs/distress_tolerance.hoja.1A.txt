@@ -1,0 +1,18 @@
+DOC_ID: distress_tolerance.hoja.1A
+TYPE: hoja
+MODULE: distress_tolerance
+NUMBER: 1A
+TITLE: Habilidades de supervivencia a la crisis
+PAGES: 650-652
+MAJOR_SECTION: Hojas de trabajo de tolerancia al malestar 8–15a)
+REFS_OUT: distress_tolerance.ficha.2, distress_tolerance.ficha.3, distress_tolerance.ficha.4, distress_tolerance.ficha.5, distress_tolerance.ficha.6, distress_tolerance.ficha.7, distress_tolerance.ficha.8, distress_tolerance.ficha.9, distress_tolerance.ficha.9a
+
+(Fichas de tolerancia al malestar 2-9a) Habilidades de supervivencia a la crisis
+
+Practica cada habilidad de supervivencia a la crisis dos veces y describe tu experiencia de la siguiente manera:
+
+¿Cuándo practicaste la habilidad y qué hiciste para practicarla? ¿Cuál fue la crisis? (¿Qué desencadenó la necesidad de utilizar la habilidad?) ¿Cantidad de tiempo que utilizaste la habilidad? Califica antes/después de utilizarla Conclusiones o consultas sobre la práctica de esta habilidad Tu nivel de tolerancia al malestar (0 = no lo tolero; 5 = definitivamente puedo sobrevivirlo) Emoción Intensidad de emoción negativa (0-100) Intensidad de emoción positiva (0-100) STOP:
+
+TIP:
+
+Nota. Adaptada de una hoja de trabajo no publicada de Seth Axelrod, con su permiso.

@@ -1,0 +1,18 @@
+DOC_ID: distress_tolerance.ficha.16
+TYPE: ficha
+MODULE: distress_tolerance
+NUMBER: 16
+TITLE: Descripción general:
+PAGES: 624-625
+MAJOR_SECTION: Hojas de trabajo de tolerancia al malestar 8–15a)
+REFS_OUT: distress_tolerance.hoja.13, distress_tolerance.hoja.14, distress_tolerance.hoja.15, distress_tolerance.hoja.16, distress_tolerance.hoja.17, distress_tolerance.hoja.18
+
+(Hojas de trabajo de tolerancia al malestar 13–18) Descripción general: cuando la crisis es una adicción
+
+Abstinencia dialéctica
+
+Mente clara Refuerzo comunitario
+
+Quemando puentes y construyendo nuevos
+
+Rebelión alternativa Negación adaptativa

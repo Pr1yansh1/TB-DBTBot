@@ -1,0 +1,12 @@
+DOC_ID: distress_tolerance.ficha.2
+TYPE: ficha
+MODULE: distress_tolerance
+NUMBER: 2
+TITLE: Descripción general:
+PAGES: 562-564
+MAJOR_SECTION: Fichas de tolerancia al malestar
+REFS_OUT: distress_tolerance.hoja.1, distress_tolerance.hoja.2, distress_tolerance.hoja.3, distress_tolerance.hoja.4, distress_tolerance.hoja.5, distress_tolerance.hoja.6, distress_tolerance.hoja.7, distress_tolerance.hoja.7b
+
+(Hojas de trabajo de tolerancia al malestar 1–7b) Descripción general: habilidades de supervivencia a la crisis
+
+Estas son habilidades para tolerar eventos dolorosos, impulsos y emociones cuando no puedes mejorar las cosas de inmediato. Habilidad STOP Pros y contras Habilidades TIP: cambia tu química corporal Distráete con mente sabia: ACEPTAS Cálmate con los cinco sentidos Mejora el momento

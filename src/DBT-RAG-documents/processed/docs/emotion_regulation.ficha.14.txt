@@ -1,0 +1,22 @@
+DOC_ID: emotion_regulation.ficha.14
+TYPE: ficha
+MODULE: emotion_regulation
+NUMBER: 14
+TITLE: Descripción general:
+PAGES: 450-451
+MAJOR_SECTION: Fichas de regulación emocional
+REFS_OUT: emotion_regulation.hoja.9, emotion_regulation.hoja.10, emotion_regulation.hoja.11, emotion_regulation.hoja.12, emotion_regulation.hoja.13, emotion_regulation.hoja.14, emotion_regulation.hoja.14b
+
+(Hojas de trabajo de regulación emocional 9–14b) Descripción general: reducir la vulnerabilidad ante la mente emocional - Construir una vida que valga la pena vivir
+
+A Acumula experiencias positivas
+
+Corto plazo: haz cosas agradables que sean posibles ahora.
+
+Largo plazo: haz cambios en tu vida para que los eventos positivos sucedan con más frecuencia en el futuro. Construye una “vida que valga la pena vivir”.
+
+C Construye Competencia Haz cosas que te hagan sentir competente y efectivo/a para combatir la impotencia y la desesperanza.
+
+A Anticípate a situaciones emocionales Ensaya un plan con anticipación para estar preparado/a para hacer frente hábilmente a situaciones emocionales.
+
+CUIDA Cuida tu mente cuidando tu cuerpo Cuida tu Cuerpo, no Uses drogas, Intenta ejercitarte, Duerme en forma equilibrada, Aliméntate bien.

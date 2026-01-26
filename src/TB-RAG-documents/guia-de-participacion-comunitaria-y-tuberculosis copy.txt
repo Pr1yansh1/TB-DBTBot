@@ -1,0 +1,2844 @@
+                                                SEGUNDA PARTE: PAUTAS PARA REALIZAR UN PROYECTO COMUNITARIO
+
+
+
+
+                                      Participación Comunitaria
+                                                y TUBERCULOSIS
+
+                                              Guía para el Equipo de Salud
+                                              del Primer Nivel de Atención
+                                    Programa Nacional de Control de la Tuberculosis
+
+
+
+
+                                                                      Argentina 2012
+
+
+
+
+En esta guía presentamos los conceptos fundamentales sobre la importancia de la participación
+comunitaria y el rol del equipo de salud en la prevención y control de la tuberculosis, así como también
+los pasos orientadores para realizar un proyecto comunitario para ser aplicado en tuberculosis como
+en cualquier otra problemática u oportunidad sanitaria local.
+Autoridades
+
+
+Presidencia de la Nación
+Dra. Cristina Fernández de Kirchner
+
+Ministerio de Salud de la Nación
+Dr. Juan Luis Manzur
+
+Secretario de Promoción y Programas Sanitarios
+Dr. Máximo Andrés Diosque
+
+Subsecretaria de Prevención y Control de Riesgos
+Dra. Marina Kosacoff
+
+Coordinador del Programa Nacional de Control de la Tuberculosis (PNCTB)
+Dr. Raúl Álvarez
+Staff
+
+Director General: Dr. Raúl Álvarez
+
+
+Directora: Mariana Inés Cocuzza (Consultora PNCTB)
+
+
+Coordinador: Martín Olcese (INER “Dr. Emilio Coni”)
+
+
+Comité de Redacción:
+Lucio Capalbo, Horacio Russo (ONG UNIDA)
+Martin Olcese (INER “Dr. Emilio Coni”)
+Adriana Greco, Mariana Cocuzza (consultoras del PNCTB)
+
+
+Asesores: ONG Unida: Lucio Capalbo, Horacio Russo.
+
+
+Consultores externos:
+Ezequiel Ander Egg (sociólogo argentino, especialista en participación comunitaria).
+Programa Nacional de Médicos Comunitarios (PMC).
+Organización Panamericana de la Salud (OPS).
+
+
+Agradecemos la participación especial de:
+Marcia Moreira (OPS); Carlos Colombo (Formosa); Rubén Falcone (La Matanza, Buenos Aires); Sebastián
+Bertucelli (Córdoba); Analía Coitinho (Santa Fe); María Laura Fontana (Santa Fe); Adriana Nedel (Buenos
+Aires); Luis Gutiérrez (OPS); Alejandra Beatriz Perez (PMC); Rodolfo Rodríguez (OPS); Clara López (Salta);
+Laura Alonso (La Matanza).
+
+
+Agradecemos el envío de las experiencias comunitarias que enriquecieron la construcción de la guía:
+Provincias de Catamarca, Salta (Barrios Ferroviario y Rosario de la Frontera), Córdoba (Barrio Ciudad de
+Mis Sueños), San Luis (experiencia en Cárceles), Buenos Aires (Partidos de Avellaneda y La Matanza),
+Formosa (Zonas Rurales y Barrio Nam Qom), Jujuy (Barrio La Loma, Calilegua), Entre Ríos (La Paz, Barrio
+Los Toldos).
+
+
+Edición: Ministerio de Salud de la Nación, República Argentina, año 2012.
+
+
+Financiado con fondos FESP (Proyecto de Funciones Esenciales y Programas de Salud Pública).
+INDICE
+
+
+
+
+9 | Presentación
+
+11 | Primera Parte: Pautas para el trabajo comunitario
+
+12 | 1. Conceptos fundamentales
+12 | 1.a Introducción
+15 | 1.b. Desarrollo
+17 | 1.c. Conceptos en participación comunitaria
+19 | 1.d. Tipos de participación
+19 | 1.e. La consulta como modalidad de participación comunitaria
+22 | 1.f. Otras definiciones de participación
+
+
+23 | 2. Rol, liderazgo, sensibilización y compromiso
+24 | 2.a. Liderazgo orientado a la cooperación
+25 | 2.b. La interfase entre el equipo y la comunidad
+27 | 2.c. Sensibilizar y generar confianza
+30 | 2.d. Compromiso
+
+
+32 | 3. Problemas frecuentes en participación comunitaria y tuberculosis
+32 | 3.a. Prejuicios, discriminación y/o estigmatización
+33 | 3.b. Pobreza
+33 | 3.c. Educación, interculturalidad
+34 | 3.d. Liderazgo como amenaza
+35 | 3.e. Falta de apoyo político e institucional
+36 | 3.f. Adherencia
+
+
+36 | Conclusiones de la primera parte
+37 | Segunda Parte: Pautas para realizar un Proyecto comunitario
+
+39 | 1. El ciclo de gestión en territorio
+39 | 1.a. Etapas del ciclo del proyecto.
+41 | 1.b. Génesis del proyecto
+
+
+41 | 2. Identificación del proyecto,Comunidad y Redes
+46 | 2.a. Análisis de la Comunidad
+46 | 2.b. Sistemas de Información Geográficas (SIG)
+50 | 2.c. Redes comunitarias
+
+
+51 | 3. El Diagnóstico participativo
+
+
+55 | 4. Formulación del proyecto comunitario
+55 | 4.a. El enlace entre identificación y formulación
+56 | 4.b. El método de marco lógico
+62 | 4.c. La matriz de marco lógico
+64 | 4.d. Evaluación
+
+
+65 | 5. La participación en las distintas etapas de las acciones comunitarias
+
+
+68 | Anexo 1. Un caso para pensar en equipo con la comunidad
+71 | Anexo 2. Artículo de interés
+
+73 | Bibliografía
+ PRESENTACIÓN                             Capítulo 1                                         9
+
+
+
+
+La historia en Salud fue marcando un recorrido que cuestionó el concepto de las relaciones
+y saberes, fue atravesada por el paternalismo, luego se inspiró en la búsqueda del bien
+de la persona enferma, “primum non nocere”, considerando a mediados de la Edad
+Moderna otro tipo de relación más horizontal. Ya en la segunda mitad del siglo XX surgió
+la Bioética (autonomía, no maleficencia, beneficencia y justicia) como disciplina. Con
+el concepto de autonomía se procuró respetar las preferencias del paciente en lo que
+respecta a su enfermedad, contemplando las implicancias personales y socio-familiares
+de sus problemas de salud. Paralelamente, en la década de los años 60 se comenzó a
+entender la participación social como derecho y responsabilidad ciudadana, en pos de
+autonomía y poder de decisión a nivel local. Es así como el concepto de participación
+comunitaria fue adentrándose en el campo de la salud.
+
+Sin embargo y aún hoy, la tuberculosis ha sido abordada, como la gran mayoría de
+los problemas de salud, de una manera más bien tecnocrática, sin tener en cuenta
+los aspectos sociales, económicos, culturales y emocionales involucrados en los
+padecimientos de las personas.
+
+Si observamos la coincidencia de las características de la transmisión del bacilo de
+Koch y la aparición de la enfermedad en las personas, con el posicionamiento que
+tenemos que generar para interrumpirla y evitar su aparición, entenderemos que es
+en el contexto de los contactos cotidianos donde debemos plantear las acciones, por
+lo que necesitamos familiarizarnos con la participación comunitaria como estrategia
+para generar el cambio de una situación definida como problema, de un riesgo de
+enfermar o morir, y de uno más trascendente que será acompañar al desarrollo de una
+comunidad saludable.
+
+Resulta por lo tanto esencial promover -en el marco de una metodología participativa
+y desde una perspectiva intercultural- un proceso de producción de conocimientos que
+le permita a cada comunidad recuperar la autonomía en la toma de decisiones sobre
+su salud y el poder de transformar las condiciones sociales adversas, generando los
+cambios acordes a sus necesidades y aspiraciones.
+
+En este marco, el Programa Nacional de Control de la Tuberculosis se ha propuesto reforzar
+la estrategia de abordaje comunitario de la tuberculosis, convocando para ello a los Jefes
+de Programa de todas las jurisdicciones para asumir -en conjunto- el compromiso de
+llevar adelante este renovado esfuerzo en pos de reducir significativamente la morbi-
+mortalidad de esta enfermedad en nuestro país.
+Por ello, se convocó a profesionales del Instituto de Enfermedades Respiratoria
+“Dr. Emilio Coni”, la ONG Unida, el Programa Nacional de Médicos Comunitarios, asesores
+especializados de OPS, entre otros, que nos acompañaron en el desarrollo de este material
+impreso que tuvo por objetivo principal fomentar, incentivar y reforzar las acciones de
+participación comunitaria en los niveles locales de Atención Primaria del país.
+
+Asimismo, agradecemos muy especialmente la participación de todos aquellos Centros
+de Atención Primaria de la Salud que nos enviaron sus experiencias locales, en las que
+se evidencian la iniciativa y el entusiasmo puestos en el trabajo comunitario.
+
+
+
+
+                                                         Coordinador Dr. Raúl Álvarez
+                                       Programa Nacional de Control de la Tuberculosis
+                                                                 República Argentina
+           SEGUNDA PARTE: PAUTAS PARA REALIZAR UN PROYECTO COMUNITARIO
+
+
+
+
+    I M E R A PA RT                                     E
+P R                              ARIO
+               TR   ABAJO COMUNIT
+PAUTAS PARA EL
+12   Participación Comunitaria y Tuberculosis | Guía para el Equipo de Salud del Primer Nivel de Atención |
+
+
+
+
+       1. Conceptos fundamentales
+       1.a. Introducción
+
+       Habida cuenta que en este documento proponemos analizar las relaciones entre el
+       sector salud, y en particular el Programa Nacional de Control de la Tuberculosis (PNCTB),
+       con la participación comunitaria o popular, en este primer capítulo pretendemos explicar
+       los supuestos en que se apoya nuestro trabajo.
+
+       La Tuberculosis continúa siendo un problema de salud pública en todo el mundo.
+       La tercera parte de la población mundial está infectada por el bacilo que causa la
+       tuberculosis. Si bien esta enfermedad es de diagnóstico sencillo y se cuenta con un
+       tratamiento eficaz en la mayoría de los casos, continúa produciendo alta tasas de
+       morbi-mortalidad, puesto que mata a 5000 personas por día en el mundo y a 2,2 en
+       la Argentina (es decir, 800 por año). En el caso de nuestro país, es importante tener
+       en cuenta que se han notificado 9.393 casos nuevos en el 2010, constituyendo una
+       considerable fuente de diseminación y propagación de la epidemia.
+       Factores demográficos y socioeconómicos (como los grandes conglomerados de
+       poblaciones periurbanas, el hacinamiento, la pobreza, etc.) y la epidemia causada por
+       el VIH, han complicado el control de la enfermedad en este país.
+
+       Según investigaciones antropológicas y sociales de la OPS, la tuberculosis estuvo
+       presente en las culturas latinoamericanas antes del contacto con los primeros europeos.
+       No obstante, la dinámica de la enfermedad estaba mediada por las condiciones de vida
+       de las comunidades. Las transformaciones políticas y económicas que fueron surgiendo,
+       forzaron nuevas formas de vida y generaron en las poblaciones indígenas, de aquel
+       entonces, la formación de asentamientos con precarias condiciones sanitarias.
+
+       Hoy en día esta situación se replica en las grandes urbes, donde la tuberculosis pasa a
+       ser un problema de salud consecuente del hacinamiento, la pobreza, la malnutrición, la
+       desocupación, la desesperanza, la migración (interna y externa), y tantos otros factores
+       reconocidos y acoplados, en la gran mayoría de casos, a esta enfermedad.
+
+       Otro ítem a considerar es la implicancia de la cultura en las decisiones de la salud
+       de una comunidad. Muchas veces la visión de algunos líderes barriales o chamanes,
+       como para dar algún ejemplo, son de alto impacto, sobre todo en lugares donde las
+       organizaciones políticas y sanitarias son poco representativas o están ausentes. Conocer
+       la interpretación que las comunidades puedan darle a la dinámica salud-enfermedad es
+       prioritario para el equipo de salud que irá a abordar esta problemática, ya que afectará,
+       directamente, cada instancia de contacto con el paciente y su familia.
+                                                    PRIMERA PARTE: PAUTAS PARA EL TRABAJO COMUNITARIO   13
+
+
+Asimismo, el abordaje de la tuberculosis en cada comunidad constituye una prioridad a
+nivel de salud pública, debiendo considerarse las condiciones sociales y políticas críticas
+de cada región, que se manifiestan a través del desempleo, la falta de escolaridad, la
+desnutrición, la falta de acceso al servicio de salud, la falta de respuesta de los servicios
+de salud en base a las características de cada población, las migraciones forzadas, la
+violencia, la discriminación, entre otras.
+
+Para abordar este problema el Programa Nacional de Control de la Tuberculosis (PNCTB)
+adhiere a la propuesta de la OMS, denominada STOP TB (Alto a la Tuberculosis) que
+se ha propuesto reducir la carga de la tuberculosis en el mundo para el año 2015,
+apoyando la estrategia de Tratamiento Abreviado Estrictamente Supervisado (TAES) de
+bajo costo y de alta eficacia, y destacando asimismo la importancia del compromiso
+de la comunidad para apoyar al paciente en su tratamiento y alcanzar así, junto a un
+mejoramiento constante de la calidad de la atención, un impacto inmediato y positivo
+en todos los indicadores epidemiológicos y programáticos.
+
+Para que esta estrategia sea efectiva se debe lograr que toda la población tenga acceso
+a la misma y que sea utilizada. En Argentina la entrega de medicamentos es gratuita y
+universal y depende del PNCTB que distribuye al resto del país.
+Según la guía de Manejo Internacional de la Tuberculosis, “Los servicios de salud buscan
+reducir el número de casos nuevos de tuberculosis que aparecen cada año hasta el
+punto en que la enfermedad deje de ser un problema grave de salud pública en un
+país determinado. La diferencia entre los objetivos de la salud pública y los objetivos
+de la medicina clínica radica en que los esfuerzos se centran en comunidades en lugar
+de individuos. Además, la salud pública también implica la obligación de obtener y
+documentar resultados: los pacientes deben ser curados. La salud pública es un esfuerzo
+organizado y combinado, que es asumido por equipos de trabajadores de salud”.
+
+Si consideramos que todo cambio sanitario implica el compromiso de toda una
+comunidad padeciente o no de una problemática de salud, debemos saber que las
+poblaciones participan a condición de que el problema se resuelva en concordancia con
+sus necesidades y principios de colaboración, por ello en la cuestión de la tuberculosis
+podemos imbricar estos conceptos de manera relevante para conceptualizar a la
+participación comunitaria como una herramienta fundamental y complementaria para
+el abordaje exitoso de esta situación sanitaria que aún nos genera preocupación.
+
+Emerge desde aquí una reflexión propia de los dispositivos de gestión, en políticas
+sociales y de salud específicamente: ver cómo aprender a integrarnos a movimientos
+de búsqueda de salud ya existentes en las poblaciones, que en forma reiterada y
+cotidiana dan muestra de ser eficaces, eficientes y efectivos.
+14   Participación Comunitaria y Tuberculosis | Guía para el Equipo de Salud del Primer Nivel de Atención |
+
+
+
+
+       Por ello, consideramos que los equipos de salud que trabajan en el Primer Nivel de
+       Atención del país presentan fortalezas para trabajar con la comunidad, en primer lugar
+       el trabajo se desarrolla en poblaciones definidas por un área programática lo que permite
+       un mejor abordaje sanitario. Por otro lado en los equipos de salud hay personas que
+       viven en el mismo barrio donde trabajan, como algunos enfermeros, administrativos,
+       agentes sanitarios, entre otros. Otra de las fortalezas es la continuidad del trabajo
+       a lo largo del tiempo y el conocimiento que este equipo tiene de las características
+       epidemiológicas de esa población, sus características geográficas definidas, incluso de
+       las condiciones de accesibilidad, la calidad de atención que el mismo Centro de Salud
+       ofrece, la identificación de instituciones y organizaciones barriales, etc. También es
+       importante el desarrollo de vínculos estables de los equipos con los líderes comunitarios
+       como delegados políticos, representantes de ONGs, comedores, y personal de otras
+       instituciones locales, como iglesias, escuelas, etc.
+
+       La población general, incluyendo los pacientes, las organizaciones comunitarias y
+       los grupos de profesionales de salud, debe ser sensibilizada para participar en estas
+       actividades. Tengamos en cuenta que la población no siempre prioriza como problemas
+       principales los relacionados a la salud, en muchos casos la falta de vivienda, de trabajo,
+       de agua potable e incluso el hambre, como sucede en poblaciones extremadamente
+       vulnerables, no permite incluir a una patología como la tuberculosis como problema
+       local principal, pero es aquí donde los equipos tienen que contar con herramientas
+       útiles para poder trabajar estratégicamente y lograr dicho objetivo.
+
+       Muchas veces, los servicios de salud públicos tienen dificultad para llegar a las
+       poblaciones que están en situación de mayor riesgo de enfermar, como los que viven en
+       condiciones socio-económicas más desventajosas y por lo tanto con viviendas inseguras
+       y precarias, las personas privadas de libertad y/o que viven en contextos de encierro,
+       las poblaciones migrantes y de frontera, entre los grupos que están en mayor situación
+       de marginalidad. Por ello, desde el Programa, consideramos pertinente continuar y
+       sostener los modos de operar articuladamente con la comunidad, teniendo la misma un
+       rol participativo activo, y en aquellos casos donde aún no se trabaja bajo esta premisa
+       es conveniente iniciar la inclusión de la comunidad toda, con las instituciones y ONGs,
+       en el centro de la escena, ya que es una patología de gran impronta social.
+
+       Los equipos de salud tienen que considerar importante establecer la formación de
+       redes participativas que les brinde información y los acerque a los escenarios donde
+       ocurren los problemas y así generar soluciones sustentables a la problemática nacional
+       de la tuberculosis.
+                                                   PRIMERA PARTE: PAUTAS PARA EL TRABAJO COMUNITARIO   15
+
+
+Si tenemos en cuenta que la participación comunitaria es un proceso mediante el
+cual los individuos se transforman de acuerdo a sus propias necesidades y las de su
+comunidad, adquiriendo y/o desplegando un sentido de responsabilidad con respecto
+a su propio bienestar y el del grupo, contribuyendo así consciente y constructivamente
+con su proceso de desarrollo, podemos considerarla como la base estratégica esencial
+para un abordaje integral de la problemática de la tuberculosis en nuestro país.
+
+Desde la participación comunitaria, en efecto, no solo podremos realizar un diagnóstico
+más preciso y efectivo de la situación de cada comunidad sino también intercambiar
+saberes, lo cual nos permitirá reforzar las medidas de prevención, realizar el diagnóstico
+temprano y garantizar el tratamiento completo, con la consecuente disminución de
+abandonos y de casos de multi-drogo resistencia (MDR-TB), que tanto nos preocupa en
+la actualidad, transcendiendo hacia la promoción de mejor calidad de vida en toda la
+población.
+
+1.b. Desarrollo
+El concepto de desarrollo, antes de que fuese formulado en los términos actuales, fue
+relacionado con conceptos como riqueza, crecimiento de la economía, progreso y otros
+similares, todos ellos vinculados al acrecentamiento de los bienes materiales que se
+sitúa en el mismo centro de esta problemática.
+
+Frecuentemente, el término desarrollo suele ser entendido como un proceso por el cual
+determinados actores (gobiernos, empresas, ONGs) son los que generalmente poseen
+los recursos económicos, la decisión política o la capacidad técnica para resolver los
+problemas económicos o infraestructurales de las poblaciones consideradas vulnerables,
+pretendiendo incluirlas, aún cuando estas comunidades no participan en el proceso de
+decisión de estas intervenciones.
+
+Frente a esta y otras concepciones similares, hemos buscado conceptos alternativos ya
+que, si el desarrollo sigue siendo entendido como una mera resolución de los problemas
+económicos esto no tendrá incidencia significativa en el desarrollo humano. Nuestra
+propuesta es apoyarnos en un modelo que tiende a generar un proceso endógeno
+del desarrollo, según el cual las comunidades tengan participación en las respuestas,
+soluciones y proyectos.
+Desde nuestra perspectiva, el Desarrollo a Escala Humana (DEH) brinda la oportunidad
+de integrar la realización armónica de las necesidades humanas, para poder alcanzar un
+desarrollo sano, auto-sustentable y participativo, conciliando el crecimiento económico,
+el crecimiento personal y la solidaridad social. Este proceso se dirige a las personas y
+no a los objetos; y las necesidades humanas, a diferencia de lo que propone el modelo
+16   Participación Comunitaria y Tuberculosis | Guía para el Equipo de Salud del Primer Nivel de Atención |
+
+
+
+
+       económico de mercado, no son crecientes e ilimitadas, sino que son constantes en todo
+       tiempo y cultura.
+
+       Según esos nuevos modelos de desarrollo, las distintas culturas reconocen, con distintos
+       nombres, las siguientes necesidades (también llamadas potencialidades):
+
+
+                                         SUBSISTENCIA – PROTECCIÓN – AFECTO – OCIO
+                                      CREACIÓN – IDENTIDAD – ENTENDIMIENTO – LIBERTAD
+                                              PARTICIPACIÓN – TRASCENDENCIA
+
+
+
+
+      Tipo de satisfactores en el Desarrollo a Escala Humana
+
+             TIPO de
+                                              CARACTERÍSTICA                             ORIGEN Y EJEMPLO         CARÁCTER
+          SATISFACTORES
+                                        No sólo no satisfacen la
+                                          necesidad a la que se                       Violencia, autoritarismo.
+              Destructor              dirigen sino que destruye la                  Ej: Armamentismo nuclear,     Exógeno
+                                       posibilidad de satisfacción                       drogadependencia.
+                                          de otras necesidades
+                                                                                    Moda, publicidad, medios
+                                       Dejan siempre insatisfecha
+                                                                                      masivos Ej: Perseguir
+         Pseudosatisfactor              la necesidad a la que se                                                  Exógeno
+                                                                                   “identidad” por el consumo
+                                                 dirigen
+                                                                                          de una marca
+                                          Sobresatisface una
+                                                                                      Costumbres arraigadas
+               Inhibidor              necesidad a costa de inhibir                                                Exógeno
+                                                                                     Ej: Educación Paternalista
+                                                 otras
+                                                                                     Planes de organizaciones
+               Singular               Satisface solo una necesidad                     técnicas Ej: Campaña       Exógeno
+                                                                                            vacunación
+
+                                       Al dirigirse a una necesidad                 Participación genuina de la
+               Sinérgico                                                                                          Endógeno
+                                        satisface muchas o todas                             comunidad
+
+
+       Los bienes o artefactos (elementos materiales con valor en el mercado) pueden o no
+       estar presentes en un satisfactor. Muchas veces su presencia es paradojal y merma la
+       potencia del satisfactor. Así, no es más desarrollado quien posee más objetos materiales
+       o artefactos, o tiene mejor poder adquisitivo, sino quien mejor satisface sus necesidades
+       (mejor actualiza sus potencialidades).
+
+       Cuando las comunidades participan genuinamente en la búsqueda de sus propios
+                                                      PRIMERA PARTE: PAUTAS PARA EL TRABAJO COMUNITARIO   17
+
+
+proyectos y soluciones, crean satisfactores sinérgicos, que son los que promueven la más
+plena satisfacción de todo el sistema de necesidades/potencialidades humanas. Estos
+satisfactores, a diferencia de los impuestos por el mercado, son accesibles, livianos (con
+bajo costo en uso de recursos materiales) y por ende compatibles con el ambiente.
+
+El rol de un equipo técnico, en nuestro caso de salud, no es entonces el brindar respuestas
+concebidas afuera de la comunidad (satisfactores singulares) sino facilitar la participación
+comunitaria y poner a disposición sus conocimientos técnicos a fin de que, combinados
+con los saberes locales, permitan el surgimiento de satisfactores sinérgicos.
+
+1.c. Conceptos en participación comunitaria
+
+Por participación comúnmente se entiende “actuar, junto con otras personas, en un
+suceso, acto o actividad generalmente con el mismo nivel de implicación” y también
+“colaborar, contribuir, cooperar, tomar parte, intervenir”.
+
+
+      Desde una visión más integral la participación podría definirse como: “ser parte
+      activa en una construcción colectiva o toma de decisión, expresándose, siendo
+      escuchado y escuchar”; y aún más: “ser miembro, parte de un grupo o comunidad,
+      cobrando significado en él, dando paso a una construcción colectiva que trasciende
+      la suma de las partes”
+
+
+
+
+Respecto del concepto de comunidad, el enfoque convencional nos remite a un conjunto
+de individuos pertenecientes a un mismo ámbito o territorio.
+
+
+      En nuestra propuesta, la comunidad es concebida como un movimiento participativo
+      vinculado por lazos significativos y vitales, que emerge en una micro-población
+      como modalidad de colaboración solidaria, ya sea durante el proceso de abordaje y
+      resolución de una situación problemática, o bien ante la visualización de opor-
+      tunidades para el encuentro, y que puede articular redes de familiares, vecinos,
+      integrantes de instituciones y ocasionalmente de expertos, comprometidos entre
+      ellos y unidos en su diversidad.
+
+
+
+Desde este enfoque, la participación tiene las características de los trayectos recorridos
+con los allegados, arraigados a los saberes locales que han sido transferidos a través de
+sus redes sociales (particularmente sobre las prácticas familiares de protección y apoyo),
+18   Participación Comunitaria y Tuberculosis | Guía para el Equipo de Salud del Primer Nivel de Atención |
+
+
+
+
+       en el intento de achicar la brecha existente entre la comunidad y las instituciones, en
+       los que solo se ve la dimensión enferma y vulnerable de las poblaciones.
+
+       Las planificaciones en salud que seleccionan sus objetivos y acciones prioritariamente
+       a partir del modelo biomédico de historia natural de la enfermedad, intentan bajar a
+       la comunidad comportamientos normativos que muchas veces son efectivos pero no
+       siempre son sustentables en el tiempo.
+
+       El siguiente cuadro ilustra algunas características de los diferentes niveles de desarrollo
+       de la participación con los que se puede identificar cada equipo de salud, aclarando
+       que dichos niveles no son fases sucesivas o progresivas en forma lineal sino que son
+       momentos que visibilizan algunos rasgos de la misma:
+
+
+                                                                      Identificación                                      Monitoreo
+                       Nivel Participación                           (aproximación             Formulación    Ejecución       &
+                                                                       diagnóstica)                                       Evaluación
+         Se hace un sondeo no vinculante con
+         la comunidad. La decisión final es de la
+         Organización Ejecutora. Eventualmente se
+         hace también algún tipo de devolución.
+         Ejemplo: “charla” de tuberculosis en sala
+         de espera
+
+         Se invita a la Comunidad a tomar parte de
+         actividades ya planificadas. Ejemplo: “cine
+         debate” en comedor comunitario siguiendo
+         temario del CAPS.
+
+         La comunidad propone diferentes
+         modos de alcanzar un propósito
+         decidido por otros. Ejemplo: la
+         comunidad diseña folletos con mensaje
+         orientados a la prevención de la
+         tuberculosis.
+
+         La comunidad participa plenamente de
+         todas las etapas del proceso, partiendo
+         de sus prioridades e incluyendo la
+         propia concepción de la idea de
+         proyecto. Ejemplo: la comunidad se
+         auto-convoca a una asamblea de la
+         que participan diferentes referentes
+         (institucionales, ONGs, líderes de
+         base) para colaborar en la detección
+         temprana de personas con síntomas
+         respiratorios.
+                                                        PRIMERA PARTE: PAUTAS PARA EL TRABAJO COMUNITARIO   19
+
+
+1.d. Tipos de participación
+
+a- Conflictiva. Es la que se da entre partidos o sectores, gremios, empresas. Cada
+parte lucha por su interés sin importarle el beneficio del conjunto. En la medida que uno
+obtiene el poder o la ganancia, el otro debe ceder.
+b- Democrática convencional. Se presentan las opciones aportadas por los distintos
+integrantes. Con o sin debate, se pasa a votación y se adopta la opción más votada.
+
+
+
+
+        c- Consultiva. El patrón de conflicto deja paso a un patrón de “Unidad en Diversidad”.
+        De acuerdo con él, el beneficio de uno sólo se da dentro del beneficio del colectivo.
+        Las partes deponen su interés parcial, para contribuir a una construcción colectiva,
+        superadora, a un todo que es mucho más que la suma de las partes, trascendiendo
+        las miradas particulares y expresando la realidad organizacional más allá de sus
+        miembros.
+
+
+
+
+1.e. La Consulta como modalidad de participación comunitaria
+
+Cuando decimos consulta, la primera idea que puede aparecer en nuestra mente, y con
+la que estamos familiarizados es “pedir opinión sobre un tema al especialista”. Nosotros
+no utilizaremos la palabra consulta en ese sentido. Por consulta entenderemos ante
+todo un espíritu, una actitud, una manera de sentir y ver las cosas y, por sobre todo, de
+relacionarse con los demás.
+
+El espíritu consultivo requiere de base participativa y comunitaria. A su vez, la consulta
+es una de las modalidades de participación comunitaria, y aunque no es la única, es la
+que permite maximizar la sinergia colectiva del grupo. A través de la consulta se logra
+construir la visión colectiva del grupo, comunidad u organización, a partir de los aportes
+de las partes constitutivas, surgiendo así la voz de una “nueva entidad colectiva” por
+sobre las voces y las opiniones particulares de los miembros.
+
+La consulta procura la construcción de la unidad, no a pesar de, sino gracias a la diversidad
+de los integrantes. Permite a su vez una mejor comprensión de la verdad a través del
+proceso participativo. Sin embargo, por difícil que pueda parecer para nuestra lógica
+moderna que ha privilegiado la racionalidad y la “verdad” objetiva en todos los asuntos,
+la consulta reconoce un valor aún superior al de la verdad, y este es la unidad.
+20   Participación Comunitaria y Tuberculosis | Guía para el Equipo de Salud del Primer Nivel de Atención |
+
+
+
+
+       El marco conceptual
+
+       En las instituciones convencionales, predomina lo que puede denominarse “patrón
+       de conflicto”. Los distintos actores luchan por sus intereses particulares, partiendo del
+       supuesto tautológico de que “el beneficio de la parte se logra buscando el beneficio de
+       la parte”.
+
+       Así, cada actor ejerce su poder, buscando lograr la situación que más convenga a sus
+       intereses particulares, en detrimento de los intereses de la otra parte. La visión es la de
+       un juego de suma cero: en la medida que un actor logra mayor beneficio, el otro (o los
+       otros) habrán cedido parte de sus intereses.
+
+       Este patrón de conflicto puede expresarse, en extremo, a través de la lucha abierta, pero
+       en una versión más suave, aparece a través de lo que se denomina negociación, la
+       cual lleva a la búsqueda de una “solución de compromiso”.
+
+       La consulta, a diferencia de la negociación, y tal como ya fue dicho, se basa en el patrón
+       de unidad en diversidad cuya hipótesis fundamental es que “el beneficio de la parte
+       solo se logra procurando el beneficio del conjunto”.
+
+       Esto implica una visión sistémica, en la que las partes se ven como elementos
+       constitutivos de un sistema mayor, cuyo beneficio redunda en el beneficio de sus
+       elementos constitutivos.
+
+       La metodología
+       Un grupo consultivo, sigue algunas pautas metodológicas concretas, pero además sus
+       miembros deberán cultivar ciertas actitudes que favorecen el funcionamiento. Algunas
+       de ellas son:
+
+                       No constituirse a partir de sectores o banderías. Todos los miembros están al
+                        servicio del conjunto y no participan representando facción alguna.
+                       Presentar sus ideas con claridad y sencillez. Una vez expresadas, ya no le
+                        pertenecen al miembro, sino al conjunto.
+                       Lo anterior implica la “no insistencia en la idea propia”.
+                       Escucha activa, procurar estar tan o más interesados en la opinión de otros
+                        que en expresar la propia.
+                       No ofender al expresarse, ni sentirse ofendido durante el proceso
+                        participativo.
+
+       Para facilitar esto, suele ser conveniente elegir un/a coordinador/a que asegure que
+                                                   PRIMERA PARTE: PAUTAS PARA EL TRABAJO COMUNITARIO   21
+
+
+todos participen en modo tan equitativo como sea posible, que se ajusten al tema (para
+ello es muy conveniente contar con una agenda previa) y que llame a tomar decisión
+cuando un tema ha sido suficientemente tratado.
+
+Aunque normalmente los grupos consultivos logran consensos unánimes, puede ocurrir
+que la decisión deba tomarse por votación. La decisión será adoptada por mayoría
+simple.
+
+También es recomendable que un/a secretario/a tome nota de la decisión lograda y la
+lea para ver si refleja el sentir colectivo.
+
+Una de los aspectos más difíciles e importantes del acuerdo y del método consultivos
+es que: “una vez que se toma una decisión, quienes hayan estado en minoría no solo
+se comprometen a aceptarla, sino a apoyarla entusiastamente”.
+
+La consulta implica así un importante compromiso valórico con la unidad: si la unidad
+se mantiene, aún cuando una decisión luego resulte equivocada, el grupo tendrá
+oportunidad de modificarla (proceso de aprendizaje colectivo), mientras que si cada
+miembro se aferra a “su” verdad el grupo se dividirá y dejará de existir como sujeto
+colectivo.
+
+En definitiva, la consulta implica un cambio cultural profundo: priorizar el “nosotros” por
+sobre el yo.
+
+Un ejemplo
+
+Si pensamos en un ejemplo cotidiano, como sucede en muchas zonas rurales o de
+pueblos originarios, el “yuyero” tiene un saber y lo transmitirá a su comunidad, pero
+si nosotros trabajamos en forma participativa consultiva con él, podemos acordar que
+además de indicar sus recetas, les sugiera a las personas acercarse al centro de salud
+y realizarse una prueba de esputo, ante un estado de tos y catarro de más de 15 días.
+Es decir, habremos construido una solución que integra y trasciende los saberes de las
+partes.
+
+Limitaciones
+
+No siempre los distintos actores involucrados en un proceso participativo estarán
+dispuestos a acordar el patrón de unidad en diversidad y aplicar el método consultivo.
+En esos casos, nos encontraremos con situaciones de negociación.
+22   Participación Comunitaria y Tuberculosis | Guía para el Equipo de Salud del Primer Nivel de Atención |
+
+
+
+
+       Por ejemplo, podrá existir conflicto entre los “intereses” de una parte (el centro de
+       salud) y los intereses sanitarios y sociales de la población. Como también podrá aparecer
+       conflicto al interior de cada institución u organización.
+
+       Sin embargo, si el equipo de salud acuerda aplicar a su interior y cuando sea posible
+       con otros actores de la comunidad el método consultivo, logrará en general mayores
+       sinergias sociales y un mejor logro y sostenimiento de objetivos que a través del
+       conflicto e inclusive del método democrático convencional. Es un cambio cultural en las
+       organizaciones que admite grados crecientes y progresivos de aplicación.
+
+
+
+       1.f. Otras definiciones de participación
+
+
+                       Participación social: se la considera como el vínculo que sostiene
+                       diferentes modos de protección y colaboración entre los actores de una
+                       comunidad, a través de:
+                       1-Procesos de transformación estructural de los modos de vida más
+                       saludable (mejora del ambiente, la vivienda, entre otros).
+                       2-Organizaciones de base (de base comunitaria, ONGs, comedores,
+                       instituciones eclesiásticas, escolares, entre otros).
+                       3-Diseño e implementación de propuestas o dispositivos estratégicos
+                       promovidos desde los programa de salud vinculándose a la cooperación
+                       desplegada en esa micropoblación.
+
+
+
+                      Participación, Familia y Salud: algunos puntos importantes a considerar
+                      en la inclusión de las familias a las iniciativas de salud en la comunidad
+                      son:
+                      1. La familia es una de las principales fuentes de creencias y pautas de
+                      comportamiento relacionadas con la salud.
+                      2. Las tensiones que sufre la familia en las etapas de transición del ciclo
+                      evolutivo de cada integrante pueden manifestarse en forma de síntomas.
+                      3. Los síntomas somáticos pueden cumplir una función adaptativa en
+                      el interior de la familia y ser mantenidos por los patrones de conducta
+                      familiares.
+                      4. Las familias son un recurso valioso y una fuente de apoyo para el
+                      adecuado tratamiento de la enfermedad.
+                                                   PRIMERA PARTE: PAUTAS PARA EL TRABAJO COMUNITARIO   23
+
+
+Varios estudios destacan la importancia del apoyo familiar del paciente con tuberculosis
+en su adherencia al tratamiento.
+
+
+
+          Alcances de la participación comunitaria
+
+          1. Reúne enseñanza y aprendizaje. Produce intercambio y generación de
+          conocimiento
+          2. Tiene efectos socializantes, crea conciencia y fortalece la comunidad
+          3. Desarrolla colaboración, solidaridad y compromiso
+          4. Moviliza, facilita y estimula recursos
+          5. Permite el desarrollo de la capacidad reflexiva y crítica
+          6. Puede introducir diversidad, diálogo, igualdad de relaciones.
+
+
+
+
+2. Roles, Liderazgo, Sensibilización y Compromiso
+
+El enfoque que proponemos implica que los equipos de salud no se vean a sí mismos
+como actores externos que vienen a traer soluciones a una población local carenciada.
+De lo que se trata es que actúen como facilitadores de procesos endógenos de la propia
+comunidad. Esto nos permite acercarnos y comprender la complejidad de la comunidad
+y definir, en particular, sus problemas en forma articulada con los saberes y las visiones
+locales, a través de un proceso de aproximación sucesiva al conocimiento de estos
+problemas.
+
+Desde una mirada de Desarrollo a Escala Humana, se estará promoviendo la participación
+genuina en la medida en que se promueven satisfactores sinérgicos. Si esto se logra
+no sólo brindarán protección en materia de tuberculosis en particular o de salud en
+general, sino que impactarán favorablemente en todas las dimensiones de la vida
+comunitaria. Por ello estimamos oportuno hacer foco en la visión profesional de los
+modos de relacionarse con la comunidad al momento de acercarnos con esta iniciativa,
+promoviendo la participación comunitaria como eje de colaboración hacia el logro de
+los objetivos del PNCTB.
+
+Es decir que en el caso, por ejemplo, de procesos terapéuticos de larga duración como
+son los tratamientos directamente observados para la tuberculosis, es importante tener
+en cuenta la posibilidad de construir relaciones basadas en acuerdos entre la gestión
+de los equipos de salud y los modos de operar de las poblaciones en su vida cotidiana,
+24   Participación Comunitaria y Tuberculosis | Guía para el Equipo de Salud del Primer Nivel de Atención |
+
+
+
+
+       reconociendo las formas de cooperación comunitaria, familiar y relacional para la cura,
+       los cuidados y la protección ante esta enfermedad.
+
+       2.a. Liderazgo orientado a la cooperación
+
+       Este nuevo enfoque, según el cual el Equipo de Salud debe considerarse a sí mismo
+       como parte de la comunidad, requiere un proceso para llegar a plasmarse. En un primer
+       momento habrá que partir de las personas más comprometidas y motivadas, que
+       serán las que iniciarán el proceso de conexión con la comunidad. En ese camino, será
+       necesario que todo el Equipo de Salud vaya involucrándose con pleno protagonismo y
+       que, a su vez, vaya logrando que la Comunidad, a través de los lazos con sus referentes
+       naturales, también se vaya involucrando y potenciando.
+
+       Se propone aquí un nuevo concepto de liderazgo, basado en una ética de la colaboración,
+       que por su propia definición promueve socialización. No necesita del desnivel entre
+       líder y liderado para existir, pues su esencia no es la competencia, sino la cooperación.
+       Acepta las diferencias, la diversidad de roles y funciones y, aún más, se enriquece
+       gracias a ellas, pero estas diferencias jamás darán lugar a la aparición de rangos o
+       jerarquías personales. Se trata de ponerse al servicio de los demás, con humildad, y no
+       de obtener prerrogativas. Este estilo y dinámica de liderazgo estimula la implicación del
+       grupo en la tarea y permite la integración de sus miembros.
+
+       Al principio es natural que exista una concentración de capacidades en algunos de los
+       miembros del sistema, quienes actuarán tan sólo, y nada menos que, como facilitadores
+       de un proceso que lleva, necesariamente, a la apropiación de estas capacidades por
+       parte del colectivo.
+
+       A medida que los procesos de Participación Comunitaria se ponen en marcha, este
+       liderazgo se va distribuyendo entre un número cada vez mayor de actores, que
+       desarrolla armónicamente sus capacidades para desdibujar todo resabio de autoritarismo,
+       paternalismo, burocracia profesional o manipulación. Se trata, en definitiva, de un liderazgo
+       comunitario, que apunta a que la comunidad, potenciada, se lidere a sí misma.
+
+       Este liderazgo orientado al servicio, participativo, y sobre todo consultivo, ya anima
+       a miles y miles de organizaciones comunitarias. Los equipos de salud pueden así
+       convertirse en nodos facilitadores de este nuevo liderazgo.
+
+       Se debe tener en cuenta, sin embargo, que este nuevo concepto de liderazgo no nace
+       de meras medidas prácticas y metodologías de trabajo grupal. Requiere un cambio
+       actitudinal. Se produce así un círculo virtuoso: a medida que las personas (en nuestro
+       caso del equipo de salud) cambian actitudes, mejor funciona el proceso colectivo, y
+                                                            PRIMERA PARTE: PAUTAS PARA EL TRABAJO COMUNITARIO   25
+
+
+éste, a su vez, mejora las capacidades de las personas. Se produce así una relación de
+recursividad entre transformación individual y colectiva.
+Como experiencia relacionada podemos mencionar la de la Provincia de Buenos
+Aires, Barrio Villa Luján, Partido de Avellaneda, denominada “Tuberculosis en Villa
+Luján”, destinada a personas con antecedentes de tuberculosis, a familias en contacto
+con pacientes y a sintomáticos respiratorios. Comenzó en abril de 2011 y a partir de
+junio está en una segunda etapa. El objetivo es evaluar los casos de tuberculosis y los
+contactos en la zona, que por distintas razones no obtuvieron la atención adecuada,
+trabajando en terreno con promotores capacitados para tal fin, quienes fueron el nexo
+entre la comunidad y la Unidad Sanitaria
+
+Es de considerar que las capacitaciones de los promotores sobre la problemática de la
+tuberculosis han sido una oportunidad para establecer y consolidar vínculos entre el
+CAPS y la comunidad. Es por lo tanto fundamental trabajar en forma conjunta con los
+líderes comunitarios como paso esencial para iniciar una acción de tipo participativa,
+fomentando además la interdisciplinariedad del equipo (en dicha experiencia trabajaron,
+además del personal médico, una antropóloga y una trabajadora social).
+
+2.b. La interfase entre el equipo y la comunidad
+
+Para que un equipo de salud comience a insertarse plenamente en la comunidad, será
+de suma importancia partir del conocimiento directo del ámbito o campo donde se va
+actuar, y no manejarse exclusivamente con estadísticas y datos desencarnados de una
+realidad concreta. Para ello tendrá gran utilidad la “georreferencia”.1
+
+Otro concepto relevante es llegar a la comunidad “desde” la tuberculosis, para poder
+ingresar a otras problemáticas complejas de una comunidad o viceversa, poniéndonos
+así al servicio de ella en su multidimensionalidad. Esto significa que nuestro problema
+(tuberculosis) es sólo el punto de partida para un abordaje sistémico, integrador.
+
+Una cuestión de importancia será descubrir las dinámicas reales de funcionamiento
+tanto dentro del equipo de salud como en la comunidad Local.
+
+En una primera instancia, y hasta que no se logre la situación deseada de un equipo de
+salud plenamente comprometido e integrado con su comunidad local, será importante
+identificar a los actores claves que existen dentro del equipo (los cuales no siempre
+coinciden con las jerarquías o los roles formales) y aquellos referentes de la comunidad
+que, con un espíritu orientado a la cooperación2, podrán ser grandes aliados en el
+
+1. En la segunda parte de la Guía veremos algunos modelos de Sistemas de Información Geográfica (SIG)
+2. Ver similitud con los gráficos de mapeo de Redes de confianza en la Segunda Parte.
+26   Participación Comunitaria y Tuberculosis | Guía para el Equipo de Salud del Primer Nivel de Atención |
+
+
+
+
+       cometido de lograr una comunidad plenamente participativa y comprometida con su
+       salud y con su desarrollo.
+
+
+
+       Situación inicial
+
+
+
+
+                                     Un actor motivado del Equipo de Salud, el “líder” orientado al servicio,
+                                     identifica y contacta, estableciendo un puente, con uno o más referentes
+                                     clave de la comunidad local.
+
+
+
+       Situación deseada
+
+
+
+
+                               Un Equipo de Salud con todos sus miembros activos y comprometidos formando
+                               parte de una comunidad con múltiples actores participativos y comprometidos
+                               en el proceso de su propia salud. Tanto equipo como comunidad se han
+                               integrado y desarrollado.
+
+
+
+       Si bien hemos enfatizado la importancia de identificar la dinámica de los vínculos
+       naturales y espontáneos tanto en el equipo de salud como en la comunidad, no podemos
+       soslayar el hecho de que posee una estructura institucional y responde a ella.
+                                                   PRIMERA PARTE: PAUTAS PARA EL TRABAJO COMUNITARIO   27
+
+
+Para promover el compromiso del equipo algunas estrategias son:
+
+I.        Compartir los objetivos, metas y valores que son la razón de ser del equipo.
+          Diversos estudios han puesto de manifiesto que el empleado que realiza una
+          labor mecánica y fragmentada, sin comprender claramente a qué objetivo último
+          contribuye, tiene una muy mala calidad de trabajo y una baja o nula empatía con
+          los miembros de la comunidad a cuyo servicio se supone que está.
+
+II.       Democratizar las decisiones en el equipo. Aunque la decisión formal por
+          estructura y procedimiento recaiga sobre el coordinador, los temas y las tareas
+          deben ser socializados, consultados y determinados participativamente.
+
+III.      Pasar de una administración por instrucción (donde lo que importa es el
+          procedimiento, el modo único de hacer las cosas, por ejemplo el horario, el
+          protocolo, la normativa) a una Administración por Objetivos (APO). La APO
+          implica un alto grado de delegación y confianza en los miembros del equipo.
+          Cada miembro, según su rol, tendrá mayor flexibilidad para decidir cómo
+          realizar las tareas, dentro de unas metas fijadas participativamente por ellos
+          mismos, con la articulación del coordinador.
+
+¿Cómo identificar a los actores claves?
+
+La tuberculosis es una enfermedad que se transmite a través de las relaciones de
+proximidad y familiaridad; por eso es necesario conocer estos vínculos de proximidad
+socio-afectiva. Por lo tanto, el referente más apropiado será el que tenga mayor acceso
+a tales vínculos y logre mayor cobertura.
+
+Habrá que estudiar detenidamente la participación de todos los actores, y a su vez
+respetarla ya que no todos tendrán igual impacto en la comunidad. Por ejemplo, no
+es lo mismo una persona autodefinida como referente interesado solo en su rédito
+político individual, que aquel que tiene un vínculo genuinamente comprometido con
+el bienestar de su comunidad, pudiendo actuar como promotor y multiplicador de los
+conocimientos y cuidados sobre la tuberculosis.
+
+2.c. Sensibilizar y generar confianza
+
+En muchos casos la comunidad no está familiarizada, ni siquiera está advertida del
+problema tuberculosis en el cual queremos trabajar participativa y conjuntamente. Cuando
+se da esa circunstancia es necesario, entonces, realizar actividades de sensibilización de
+la comunidad, es decir, realizar acciones previas al proyecto participativo, las que nos
+permitan familiarizar a la comunidad con el tema y contar con un número “significativo”
+28   Participación Comunitaria y Tuberculosis | Guía para el Equipo de Salud del Primer Nivel de Atención |
+
+
+
+
+       de participantes en la iniciativa que empieza. Para ello debemos tener presente lo ya
+       dicho: no acercarnos con la tuberculosis sino desde la tuberculosis a una problemática
+       mucho más compleja y sistémica.
+       Nunca sensibilización significa empujar, forzar o presionar, muchos menos manipular,
+       diferenciándose de algunas iniciativas como las publicitarias. No se sensibiliza en
+       abstracto. Siempre se parte de la visión de las personas y cómo ellas generan sentido
+       para integrar o construir una mirada sobre un problema de salud.
+       El proceso de sensibilización permitirá, por un lado, identificar los referentes naturales
+       de una comunidad, y por el otro irá generando relaciones de confianza entre el equipo
+       de salud y la comunidad.
+
+       Mucho se ha hablado, por ejemplo, de la reticencia de las personas a consultar ante
+       la presencia de tos que persiste por más de 15 días. Esta conducta suele atribuirse al
+       estigma social, que ante el diagnóstico de tuberculosis podrá generar discriminación
+       en la comunidad y hasta la eventual pérdida del empleo. Aunque esto no deja de
+       ser cierto en varios casos, en diversas experiencias se ha observado que uno de los
+       obstáculos para la detección, así como para la adhesión al tratamiento, radica en el
+       hecho de que no se han logrado aún las necesarias relaciones de confianza. De hecho,
+       se ha observado asimismo que, una vez que la confianza se establece, el temor a la
+       discriminación y el estigma disminuyen notablemente.
+
+
+       La campaña de sensibilización
+
+       Un proyecto participativo sobre tuberculosis no implica que la comunidad haya elegido
+       trabajar con ese tema, o que lo reconozca como prioritario en el corto plazo. El personal
+       sanitario lo identifica como prioritario por muchos motivos, por ejemplo políticas
+       locales, nacionales o la simple observación de prevalencia de casos. Si bien esto es
+       muy importante no necesariamente parte del cotidiano de las personas.
+
+       La sensibilización es un proceso relacional porque requiere distintas miradas de una
+       misma realidad a favor de una iniciativa de cambio. Implica conocer cómo y cuáles
+       satisfactores elige la comunidad para atender sus necesidades y desarrollar sus
+       capacidades. Dependiendo de cada situación problemática, se definirá la estructura de
+       la campaña, la cual puede ser, simplemente, un conjunto de pequeña acciones.
+                                                 PRIMERA PARTE: PAUTAS PARA EL TRABAJO COMUNITARIO   29
+
+
+Antes de comenzar con este trabajo es importante conocer:
+
+
+
+        - los procesos históricos culturales del barrio o población;
+        - la historia de las familias y de las personas a la cual queremos inte-
+        grar a los futuros proyectos;
+        - cuáles son los intereses mediatos e inmediatos de ellas;
+        - otras problemáticas sociales relevantes como la ambiental, la falta de
+        recursos socio-económicos, la problemática de género, por mencionar
+        solo algunas;
+        - los datos epidemiológicos y sanitarios propios de nuestra población
+        objetivo o al menos referencias parciales;
+        - contar con habilidades de comunicación social en el equipo de salud
+
+
+Para finalizar, es importante aclarar que los procesos de sensibilización pueden no ser
+altamente convocantes, no debemos esperar respuestas masivas. El proceso apenas
+comienza y cuando transcurra el tiempo y las acciones comunitarias sean sistemáticas
+se acercará un mayor número de personas.
+
+
+
+¿Qué metodología podemos emplear?
+
+Los dispositivos son variados según nos dirijamos a grupos específicos o a toda la
+comunidad. Entre ellas citamos algunas:
+
+
+
+             • Visitas domiciliarias
+             • Charlas y reuniones participativas
+             • Cine, teatro debate
+             • Seminarios
+             • Talleres Comunitarios
+             • Acciones de divulgación e información (afiches, volantes, etc.)
+             • Espacios en los medios de comunicación masivos
+             • Testimonios
+             • Puntos de información (stands)
+30   Participación Comunitaria y Tuberculosis | Guía para el Equipo de Salud del Primer Nivel de Atención |
+
+
+
+
+       Aquí podemos mencionar la experiencia de la Provincia de Jujuy, CIC 2, titulada
+       “Prevención en Tuberculosis”, dirigida a niños, maestros, pueblo en general del área
+       Nº12 de la Localidad Calilegua, zona Av. Sarmiento, B. Belencito y Lomas aledañas, y
+       que se realizó durante los meses de marzo, mayo y agosto del año 2011. El objetivo
+       fue lograr que la comunidad se concientice en la prevención y la promoción sobre
+       tuberculosis, aplicando una campaña de sensibilización.
+
+       Según se infiere de las palabras de sus protagonistas, el trabajo en equipo ha permitido
+       la articulación interinstitucional, en este caso con la escuela. El aprovechamiento de
+       esos espacios ha permitido que los CAPS lleguen a las familias del barrio a través de los
+       niños. Se considera que el fortalecimiento de estas relaciones (CAPS e Instituciones de la
+       comunidad) generará las condiciones para que los niños se conviertan en multiplicadores
+       dentro de sus familias y, a su vez, estas en promotores de salud.
+
+       2.d. Compromiso
+
+       Sensibilizar y convocar a la comunidad, y crear objetivos a largo plazo implica la
+       necesidad de contar con un componente fundamental: “el compromiso”. Es muy difícil
+       pensar en un grupo de personas que acuerden metas de forma participativa, sin que
+       esto se acompañe con el compromiso indispensable para obtenerlas.
+
+       El compromiso se pude definir como “la conciencia que genera responsabilidad con respecto
+       a la acción de un grupo de personas dentro de un proyecto de acción comunitaria”.
+
+       Ayuda a construir motivación, da impulso para llegar a los propósitos propuestos,
+       permite saltar obstáculos, se asienta en metas que son significativas, en valores que
+       sustentan esa fuerza como por ejemplo: “el derecho a la salud, la equidad, el acceso a
+       la educación, la igualdad de género, el respecto por la diversidad, el valor de los afectos
+       en la relaciones, el valor de la palabra, entre otros”.
+
+       Si queremos aumentar el compromiso respecto de un proyecto sobre tuberculosis, no
+       alcanza con realizar uno que apunte exclusivamente a la enfermedad en forma aislada,
+       por ejemplo, en algunas ocasiones se podrá trabajar la tuberculosis en el contexto de
+       la falta de una vivienda digna y, por lo tanto, los valores son expresados por igualdad
+       social. En otros casos, la tuberculosis podrá estar asociada con la falta de acceso al
+       sistema de salud y, en consecuencia, se podrá trabajar sobre el derecho a la salud.
+       La conciencia que genera compromiso se logra a partir de la internalización de estos
+       valores y su consecuente expresión a través de acciones. El compromiso tiene entonces
+       un componente valorativo, axiológico, que le da dirección, sentido y permanencia en
+       el tiempo.
+                                                    PRIMERA PARTE: PAUTAS PARA EL TRABAJO COMUNITARIO   31
+
+
+A esta altura, es posible advertir la estrecha relación que existe entre compromiso y
+participación. La relación de estos dos conceptos es muy cercana y se retroalimentan
+uno a otro.
+
+El compromiso de las personas afectadas con tuberculosis puede expandirse a sus
+familiares y vecinos. A partir de la experiencia, el encuentro con el otro y la acción-
+reflexión en la comunidad, se logra conciencia colectiva.
+
+Algunas características sobre el compromiso:
+
+
+
+                                                  6- Se desarrolla dentro de la acción y
+1- Es vital para el éxito de un proyecto
+                                                  reflexión.
+2- Construye motivación. Da fuerzas
+                                                  7- Necesita de relaciones de grupo y
+3- Ayuda a saltar obstáculos
+                                                  comunitarias
+4- Se vincula a valores, como por ejemplo
+                                                  8- Tiene niveles de evolución.
+el derecho a la salud, la equidad etc.
+                                                  9- Se transmite de personas a grupos o de
+5- El carácter valorativo le da dirección y
+                                                  grupos a grupos
+crecimiento
+                                                  10- Mejora la calidad de la participación
+
+
+
+
+En este punto podemos nombrar la presentada por la Provincia de Entre Ríos, CAPS
+Belgrano, denominada “Conocer para defender nuestra salud”, en el Barrio Los Toldos
+(La Paz, Entre Ríos), dirigido a 36 familias, durante 1 mes. Según sus protagonistas el
+objetivo fue concientizar a la comunidad sobre el concepto que la tuberculosis es curable,
+mediante el diagnóstico precoz y el tratamiento oportuno y completo. La metodología
+fue “el taller”. Esta comunidad pudo disipar sus dudas y desterrar tabúes, perdió el
+miedo adquiriendo conocimientos de cómo cuidarse, y un aspecto muy importante ha
+sido la responsabilidad con la que asumieron el compromiso ante los tratamientos que
+debían realizar. La evaluación de los resultados del taller fue realizada por los agentes
+sanitarios, mediante la visita casa por casa, llegando a la conclusión que la instancia
+del taller fue positiva por el impacto que produjo en esta población, ya que por propia
+demanda se acercaban al CAPS para consultar.
+
+Estimamos que aquí primaron la confianza y el compromiso logrado por la comunidad, a partir
+de un proceso de sensibilización. La gente se sintió escuchada y respondió a la convocatoria,
+participando del taller y abriendo la puerta de su casa en las visitas domiciliarias.
+32   Participación Comunitaria y Tuberculosis | Guía para el Equipo de Salud del Primer Nivel de Atención |
+
+
+
+
+       3. Problemas frecuentes en participación comunitaria y
+       tuberculosis
+
+       Abordaremos aquí algunos problemas que los equipos de salud pueden encontrar en
+       las instancias iniciales de acercamiento a la comunidad y formación de la comunidad
+       de proyecto (equipo de salud + referentes locales participativamente integrados), a
+       los que es importante estar atentos, para abordarlos oportuna y adecuadamente. Este
+       listado no pretende agotar la problemática sino enunciar alguna de las situaciones más
+       frecuentes.
+
+       3.a. Prejuicios, discriminación y/o estigmatización:
+
+       Un problema clásico en materia de tuberculosis, es que la persona que la padece podría
+       ser prejuzgada, discriminada y estigmatizada, tanto por la comunidad donde vive como
+       por el equipo de salud. Básicamente un tosedor crónico podría evitar un examen
+       clínico que pudiera desembocar eventualmente en un diagnóstico de tuberculosis,
+       principalmente por los siguientes motivos:
+
+               a)       En términos generales, podría ser visto como una persona “pobre” (en términos
+                        de acceso a bienes materiales), que vive en condiciones de hacinamiento y
+                        de poca higiene.
+               b)       En directa relación con esto, está el temor al contagio por parte de los otros.
+                        Personas poco informadas de su comunidad podrían llegar a verlo como
+                        alguien que, por esa condición, debe ser mantenido a distancia y puede ser
+                        rechazado.
+               c)       Otro factor está constituido por las consecuencias laborales, como el alejamiento
+                        de su puesto de trabajo, lo que traería como consecuencia la pérdida de ingresos
+                        económicos.
+
+       Por estos motivos, la persona enferma de tuberculosis, en muchos casos oculta su
+       situación y es reacia a ser examinada por personal de los equipos de salud. Como es
+       lógico, esto dificulta enormemente la detección oportuna de los casos.
+
+       Algunas consideraciones fundamentales a este fin, serán también el llegar a la comunidad
+       no “con” la Tuberculosis, sino “desde” la Tuberculosis, y plantearse el rol del Equipo de
+       Salud (ver Capítulo 2) no como portador externo de un saber dominante, sino como un
+       actor más de la comunidad, que a su vez la vincula y contribuye a facilitar los procesos
+       de salud de la misma. Múltiples experiencias muestran que cuando tal confianza logra
+                                                  PRIMERA PARTE: PAUTAS PARA EL TRABAJO COMUNITARIO   33
+
+
+establecerse, las resistencias originadas por temor al prejuicio, la discriminación y la
+estigmatización disminuyen notablemente.
+
+3.b. Pobreza
+
+Por lo general, la mirada más común del equipo de salud podría estar relacionada con
+las Necesidades Básicas Insatisfechas (NBI) de dicha comunidad, y lo primero que se
+sugiere es generar, mediante ayuda externa, mínimas condiciones de vida caracterizadas
+por el acceso a bienes materiales y servicios básicos. Si bien esto es fundamental,
+cambiando nuestro marco de abordaje al de DEH (ver capítulo 1) veremos que no hay
+una sola pobreza ni una sola riqueza.
+
+Así, se puede ser pobre en materia de subsistencia y protección, pero ser rico en
+creatividad, afecto, participación, identidad o entendimiento. De hecho, abundan las
+experiencias de equipos técnicos que, llegando a una determinada comunidad, se
+encuentran con que las prioridades de ésta, cuando son libremente expresadas, suelen
+diferir mucho de las que el técnico hubiera considerado prioritarias. Por ejemplo, alguna
+comunidad podría elegir comenzar por tener su Salón de Usos Múltiples, como lugar de
+encuentro a partir del cual pueden surgir las diversas sinergias, o reforzar su identidad
+cultural.
+
+Por lo tanto, el abordaje de los técnicos del equipo de salud debe ser abierto y
+desprejuiciado. Esto no implica renunciar a los objetivos de nuestro programa, sino
+vincularlos a los procesos priorizados por la propia comunidad.
+
+Cuando los técnicos actúan en forma rígida y aislada al apreciar la realidad, y no son
+permeables al sentir y el pensar de las comunidades, generan una distancia que
+constituye uno de los más serios obstáculos a la generación de confianza, dificultando
+el logro de los propios objetivos del programa.
+
+3.c. Educación e interculturalidad
+
+Diferentes tipos y niveles de educación entre la comunidad local (y sus distintos
+subgrupos y actores) y los equipos de salud, al igual que las eventuales diferencias
+culturales, podrían ofrecer nuevos obstáculos. Si comenzáramos a visualizar la realidad
+social desde el concepto de “unidad en diversidad”, nos protegeríamos de recaer en el
+error de la uniformidad de pensamiento y cultura.
+
+Esto requiere, digámoslo una vez más, de un cambio actitudinal por parte de los
+técnicos y profesionales de los Equipos de Salud, no considerando su saber o su rol como
+34   Participación Comunitaria y Tuberculosis | Guía para el Equipo de Salud del Primer Nivel de Atención |
+
+
+
+
+       dominante, sino que se complementará con los saberes locales en pie de igualdad, y
+       un rol de servicio y de facilitación del proceso de desarrollo, conforme a los valores y
+       prioridades locales.
+
+       3.d. Liderazgos como amenaza
+
+       Otro problema que suele suscitarse es la preexistencia o el surgimiento, en una
+       comunidad local dada, de liderazgos adversos al proceso de salud y de desarrollo
+       endógeno que deseamos promover. Mientras que este proceso está orientado por
+       definición hacia el bien común, existen liderazgos interesados en su propio beneficio,
+       sea éste económico o proselitista.
+
+       El análisis de implicados (ubicado dentro del análisis de la comunidad) se basa en
+       identificar, en nuestra comunidad, a aquellos actores, sean unipersonales o colectivos,
+       que no serán neutros a nuestro programa y proyectos, específicamente, a nuestros
+       procesos de promoción de la salud y del control de la tuberculosis. Así, hallaremos
+       actores favorables, dispuestos a colaborar con nuestra tarea, y otros que eventualmente
+       se opondrán. Mientras que los primeros se incorporarán seguramente a nuestra
+       comunidad de proyecto, los segundos podrán ofrecer serias dificultades a nuestra
+       acción.
+
+
+
+                                Recordemos que existen distintos tipos de liderazgo:
+                                -Un liderazgo autoritario
+                                -Un liderazgo paternalista u omnisciente
+                                -Un liderazgo manipulador
+                                -Un liderazgo democrático convencional
+
+
+
+
+       Los tres primeros estilos, y en menor medida el cuarto, son sesgados hacia el “beneficio”
+       particular del actor, grupo o partido que los detenta, y si bien pueden ser concomitantes
+       al bien común en determinadas circunstancias de mutuo provecho, a la larga o incluso
+       en el breve plazo mostrarán su divergencia con los intereses generales de la comunidad.
+       Con estos líderes algunas veces se podrá negociar, raramente consultar3 , sin que esto
+       implique la pérdida de nuestro posicionamiento.
+
+
+
+
+       3. Ver Consulta y Negociación en el capítulo 1.
+                                                       PRIMERA PARTE: PAUTAS PARA EL TRABAJO COMUNITARIO   35
+
+
+3.e. Falta de apoyo político e institucional
+Dado que nuestras acciones se desenvuelven en un territorio con una administración
+política concreta, que puede simpatizar o no con el programa nacional (con diversas
+prioridades, urgencias y limitaciones presupuestarias y de recursos), es primordial
+planificar la incidencia de estos actores, entendidos como “factores externos”4.
+
+Frente a esto podríamos pensar nuestros proyectos como independientes, autogestivos,
+aunque esto no siempre sea posible, ya que vamos a necesitar contar con recursos
+locales y con permisos explícitos o tácitos, por lo que deberíamos considerar el espacio
+gubernamental y político como un factor de alta influencia en nuestras acciones.
+
+Por lo que nuestros equipos de salud deberían interactuar con otras instituciones oficiales
+y gubernamentales, comenzando por el gobierno local, más allá del Programa Nacional
+de Control de la Tuberculosis.
+
+Algunos criterios para maximizar el apoyo, o al menos para minimizar los obstáculos son:
+
+
+        - Presentarnos y explicar a las autoridades locales claramente nuestros objetivos y
+        planes, mostrando que los mismos son beneficiosos para la comunidad y desarrollo
+        locales, y que por lo tanto el apoyo será no sólo necesario para el bien común, sino
+        políticamente conveniente para las autoridades.
+
+        - Invitar e involucrar a las autoridades locales a tomar parte en todo el proceso,
+        como miembros de la comunidad de proyecto, mostrando transparencia y apertura.
+
+        - Mostrar cómo el Equipo de Salud y la comunidad local aportan con su esfuerzo,
+        trabajo e insumos del programa, una cantidad significativa de recursos, de tal modo
+        que lo que se pide a la autoridad local es sólo un complemento.
+
+        - Permitir hasta donde sea posible y conveniente que las acciones emprendidas en
+        bien de la comunidad local, sean publicitadas y difundidas por la autoridad local
+        como logros dados dentro de su gestión.
+
+        - En casos de dificultad para obtener apoyo, recurrir a los procedimientos y niveles
+        de comunicación formales, desde el Ministerio de Salud y el PNCT como autoridad
+        nacional, hacia las instituciones y autoridades locales.
+
+        - En general el logro de una amplia base participativa, y una extendida y
+        diversificada comunidad de proyecto, será un factor de peso para decidir la
+        colaboración de la autoridad local, puesto que a la misma le será conveniente
+        apoyar un proceso con amplias bases de participación ciudadana.
+
+
+
+4. Ver Segunda Parte de la Guía.
+36   Participación Comunitaria y Tuberculosis | Guía para el Equipo de Salud del Primer Nivel de Atención |
+
+
+
+
+       3.f. Adherencia
+
+       Una consideración especial merece el tema de la no adherencia al tratamiento, es decir,
+       el abandono o la interrupción del proceso terapéutico, que constituye actualmente una
+       de las principales problemáticas para el control de la tuberculosis, generando fracasos
+       terapéuticos, recaídas y multirresistencia a los fármacos anti-tuberculosos.
+
+       A partir de los diversos estudios realizados en relación con esta problemática, es posible
+       establecer que en la falta de adherencia al tratamiento intervienen diversos y múltiples
+       factores referidos a las características del entorno familiar, social, económico y cultural
+       del paciente, debiendo tener en cuenta asimismo -en ese entorno- las características de
+       los sistemas de salud en cuanto a accesibilidad, oferta y calidad de la atención.
+
+       Por ello es que es importante fortalecer el compromiso del equipo de salud y trabajar
+       en la sensibilización y participación de la comunidad, para que justamente sea esta
+       última, no sólo la destinataria, sino fundamentalmente la protagonista de los cambios
+       necesarios para el abordaje de dicha problemática, elaborando las herramientas más
+       adecuadas y acordes a sus propias necesidades y expectativas.
+
+
+                                           CONCLUSIONES DE LA PRIMERA PARTE
+
+           Para un abordaje adecuado de la tuberculosis es fundamental que todo el
+           equipo de salud del Primer Nivel de Atención esté sensibilizado, capacitado y
+           comprometido con la atención de esta problemática. Para ello, cada equipo de los
+           CAPS debe considerar a todo paciente con síntomas de tos y catarro por más de
+           15 días (sintomático respiratorio) como el primer paso para facilitar un diagnóstico
+           temprano, siendo el paso siguiente el inicio del tratamiento adecuado que, para
+           ser efectivo, debe ser completo y supervisado.
+
+           Esto es posible sólo en un contexto en el que se revalorice el trabajo en
+           equipo, articulado con otras instituciones y abierto al trabajo con la comunidad,
+           promoviendo que el intercambio de conocimientos y la desmitificación contribuyan
+           a la disminución de problemas tales como la falta de adherencia y el consecuente
+           fracaso del tratamiento.
+
+           En este contexto, una comunidad que tiene el espacio para la opinión y la
+           participación activa, podrá acompañar al equipo del centro de salud y así fortalecer
+           la estrategia TAES, como bases para el éxito del abordaje de la tuberculosis a nivel
+           local y, en consecuencia, regional y nacional.
+                 PRIMERA PARTE: PAUTAS PARA EL TRABAJO COMUNITARIO   37
+
+
+
+
+  EG U N DA PA RTE
+S                                     MUNITARIO
+               ALIZAR   UN PROYECTO CO
+PAUTAS PARA RE
+38   Participación Comunitaria y Tuberculosis | Guía para el Equipo de Salud del Primer Nivel de Atención |
+
+
+
+
+       Desde el primer nivel de atención, el equipo de salud puede visualizar, junto a la
+       comunidad, la necesidad de abordar una problemática determinada (por ejemplo, una
+       elevada cantidad de casos de tuberculosis detectados), que demande la creación de un
+       proyecto comunitario a ser presentado ante las autoridades competentes (en este caso
+       la Secretaría de Salud Municipal).
+
+       Para ello, puede ser de utilidad para el equipo contar con algunas herramientas teóricas
+       que le posibiliten planificar adecuadamente las intervenciones a implementar a nivel
+       local. Si bien hay que tener siempre en cuenta que -como se ha desarrollado en la
+       primera parte- las soluciones suelen encontrarse en la misma comunidad, también
+       suele suceder muchas otras veces que se requiera de apoyo político y/o financiero, de
+       capacitación, y de provisión de recursos materiales o humanos específicos, que pueden
+       ser externos a la comunidad que padece el problema.
+
+       Por eso brindamos, a continuación, algunas pautas que consideramos fundamentales
+       para elaborar e implementar un proyecto participativo.
+                                             SEGUNDA PARTE: PAUTAS PARA REALIZAR UN PROYECTO COMUNITARIO   39
+
+
+1. El ciclo de gestión en Territorio
+Cuando se plantea la necesidad de una intervención o acción en terreno, la misma
+puede analizarse a través de su ciclo de gestión.
+
+Saltear alguna de las etapas del ciclo, ya sea elaborar un plan de acción sin una previa
+identificación y diagnóstico, o bien pasar a la acción sin un plan formulado, o no evaluar
+lo realizado, redundará en un menor impacto en cuanto a los objetivos perseguidos,
+como asimismo en un menor aprendizaje colectivo.
+
+Para la mayoría de los autores el ciclo de un proyecto consta de un ciclo de cuatro
+estaciones principales o etapas:
+
+
+
+
+                                       Identificación
+
+
+
+                                                                 Formulación
+      Reflexión de la                        CICLO DE              Plan de
+     conceptualización                       GESTION                Acción
+
+                         Evaluación
+
+
+
+                                              Ejecución
+                                                                              Movilización de
+                                                                            Personas y Recursos
+
+                                             Monitoreo
+
+
+Desde el Programa Nacional de Control de la Tuberculosis, proponemos que cada CAPS
+desarrolle su propio proyecto, según la situación local de cada zona, dentro del marco de
+la estrategia TAES/DOT, cuyo desarrollo como plan de acción comunitario local permitirá
+obtener mejores resultados.
+
+1.a. Etapas del ciclo del proyecto
+
+I. Identificación: Es la etapa centrada en el diagnóstico participativo con el
+involucramiento de la comunidad, que permite pasar de un conocimiento inicial a
+otro más aproximado, siendo este último el que resulta más apropiado, entre diversas
+40   Participación Comunitaria y Tuberculosis | Guía para el Equipo de Salud del Primer Nivel de Atención |
+
+
+
+
+       alternativas, conforme no solo a criterios técnicos, sino también a los intereses y
+       prioridades de la comunidad, lo que permitirá comprender los problemas o situaciones
+       a mejorar y sus causas.
+
+       II. Formulación del Plan de Acción: Es la etapa que, una vez identificada la
+       intervención a realizar, permite diseñar el plan de acción que, a partir de determinados
+       recursos organizados según actividades, garantice los resultados.
+
+       III. Ejecución de la Intervención: Es la etapa de realización de las actividades según
+       el plan formulado
+
+       IV. Evaluación: Es la etapa en la que se evalúan los logros obtenidos así como también
+       el proceso desarrollado.
+
+       Alrededor de estas cuatro etapas principales, podemos considerar algunas instancias
+       adicionales:
+
+       Idea del proyecto: Es la primera apreciación (intuitiva, presuntiva) de un problema o
+       situación inicial, que surge de cualquiera de los actores; a partir de aquí si existe consenso
+       se pasa a la etapa de identificación. En el caso de tuberculosis una idea presuntiva del
+       problema sería por ejemplo: que la gente no consulta en forma temprana porque no
+       tiene información suficiente sobre la enfermedad, pero tal vez, podría ser que sí conoce
+       esta patología y no consulta por barreras de acceso. Como en este ejemplo, también
+       en muchos otros casos el equipo de salud se maneja en base a supuestos, que, sin
+       embargo, deberán ser revisados.
+
+       Movilización de Personas y Recursos: A lo largo de todo el ciclo, interactúan personas
+       y recursos que serán indispensables para la adecuada ejecución de dicha intervención.
+       El aspecto fundamental es movilizar, interesar, incorporar personas con sus capacidades
+       al proyecto, formando y fortaleciendo lo que llamaremos comunidad de proyecto.
+
+       Monitoreo: El proceso evaluativo no sólo se realiza al finalizar la ejecución, sino que
+       existen actividades de evaluación durante la misma, llamadas monitoreo. Es simultáneo
+       con la etapa de ejecución, pero pertenece, conceptualmente a la fase evaluativa.
+
+       Reflexión y conceptualización: Algunos autores entienden que luego de la evaluación
+       hay una instancia de reflexión y conceptualización, es decir, una etapa en la que más allá
+       de la evaluación de los logros directos en cuanto a objetivos y resultados, se reflexiona a
+       nivel de principios, y es entonces cuando se refuerza el aprendizaje colectivo.
+                                            SEGUNDA PARTE: PAUTAS PARA REALIZAR UN PROYECTO COMUNITARIO   41
+
+
+1.b. Génesis del proyecto
+El siguiente diagrama muestra los cuatro actores típicos que se articulan para la
+realización de una intervención.
+
+
+
+
+              Estructura                          Financiador
+            Gubernamental
+
+
+
+
+              Organizaciones
+             De apoyo técnico
+              (CAPS y otros)
+                                                          COMUNIDAD
+
+
+
+
+En el diagrama la idea de problematización ha sido colocada próxima a la organización de
+apoyo técnico (el CAPS) y la estructura gubernamental (Programa Nacional, Provincial,
+Secretaría de Salud Municipal o Jurisdiccional) ya que efectivamente es allí de donde
+surge.
+
+En un caso ideal, la idea surge de la propia comunidad, lo que hace que ella sea la
+gestora integral del ciclo, desde la propia concepción de la idea. Por otra parte, en
+nuestro caso la organización de apoyo, el financiador y la estructura gubernamental son
+entidades muy próximas que podrán llegar a coincidir en gran medida.
+
+Dado que la idea de intervención procede de un actor que en principio no es,
+necesariamente, la propia comunidad, nuestra tarea de identificación consistirá en
+lograr que la comunidad asuma la idea y la haga propia, o visto desde otra perspectiva
+(y mejor aún) que el CAPS se integre a la comunidad a la que sirve, pasando a formar
+parte de la misma.
+42   Participación Comunitaria y Tuberculosis | Guía para el Equipo de Salud del Primer Nivel de Atención |
+
+
+
+
+       El siguiente gráfico ilustra el Escenario de la Intervención (MAPA ACTORAL)
+
+
+
+                               Otros actores
+                                influyentes
+                                                                                             Comunidad Local
+
+
+
+
+                                        Municipio                                                              Otras organizaciones
+                                                                                                                   comunitarias
+                                                                       Org. De Base
+
+                  Gobierno
+
+                                               COMUNIDAD
+                                              DEL PROYECTO                                                    Población
+            Financiadores                                                    INTERVENCIÓN                      Objetivo
+
+
+
+                Otras organizaciones                                                   Org. De Base
+                      técnicas
+
+
+
+
+       Las definiciones que aparecerán en el escenario de la intervención son:
+
+       Ámbito de Aplicación: Es el espacio, tanto geográfico como vincular, en el que se
+       desarrollará la intervención: el barrio, la localidad o el área rural.
+
+       Escenario de Intervención: Si bien es un concepto similar al anterior, es más dinámico
+       e inclusivo, ya que remite no sólo al soporte geográfico, físico o territorial, sino que
+       incluye al conjunto de actores que tendrán relaciones con la intervención, habiten o no
+       dicho territorio.
+
+       Comunidad: También puede llamarse “comunidad local”. Es la población humana que
+       habita el ámbito de aplicación. No debe confundirse con la “comunidad de proyecto”. La
+       visualizamos como sujeto activo y no como mero receptor de las propuestas.
+
+       Comunidad de Proyecto: Comunidad formada por todas aquellas personas que
+                                             SEGUNDA PARTE: PAUTAS PARA REALIZAR UN PROYECTO COMUNITARIO   43
+
+
+comparten la visión que sustenta la intervención y que en distintos grados lo sienten
+propio y participan en diversas fases de su ciclo.
+
+A diferencia de “Comunidad Local” en cuanto personas que cohabitan en un ámbito,
+la Comunidad de Proyecto remite a vínculos significativos, relaciones vitales,
+comprometidas, en torno a una causa común, con alta cooperación y generación de
+sinergia.
+
+Población objetivo (PO): Es el conjunto de personas, normalmente un subconjunto
+de la comunidad, a los que se aplicarán directa o indirectamente los satisfactores que
+generará el proyecto de intervención participativo.
+
+Con el tema que nos ocupa, la comunidad y la población objetivo pueden coincidir, ya
+que la tuberculosis afecta potencialmente a todos los miembros de la comunidad y
+no solo a las personas que la padecen. En efecto, si no participamos todos será muy
+difícil disminuir el número de casos con las consecuencias sanitarias que esto trae
+aparejado.
+
+No obstante, también podrá ser efectivamente un subconjunto, en aquellas comunidades
+donde la incidencia de la tuberculosis es más significativa (norte del país o provincia
+de Buenos Aires, o comunidades de riesgo como las personas privadas de libertad, o
+la población que padece co-morbilidades), debiendo realizar intervenciones específicas
+y estratégicas con cada subgrupo en particular. A estos subgrupos también se los
+denomina micro poblaciones estratégicas.
+En relación, vamos a nombrar la experiencia de la Provincia de Salta, Rosario de la
+Frontera, Hospital Melchora F. Cornejo “Proyecto TBC: Buscando el bacilo”, dirigido
+a la población escolar de áreas urbanas y periurbanas del municipio de Rosario de la
+Frontera, comenzó en Julio de 2010 y continúa en el año 2012. El objetivo fue transmitir
+e instruir al personal del Hospital y a la población sobre la importancia de la enfermedad.
+La metodología ha incluido: capacitación de los agentes de salud, taller de títeres en las
+escuelas urbanas y rurales del área programática y video educativo. Como resultado de
+la experiencia se ha logrado: la motivación del personal del Hospital Melchora F. Cornejo
+para abordar esta problemática, el aumento del número de muestras, el aumento de los
+tratamientos supervisados, la disminución de los abandonos. Según los protagonistas un
+punto a destacar aquí ha sido el proceso de socialización del proyecto con los docentes
+como primera práctica comunitaria, partiendo de la premisa que el niño es el educando
+más sensible, y por otro lado la formación de redes.
+
+Aquí tenemos un caso muy interesante de planificación de un proyecto. El planteo
+de idea para la intervención surge claramente de un equipo reducido que define el
+44   Participación Comunitaria y Tuberculosis | Guía para el Equipo de Salud del Primer Nivel de Atención |
+
+
+
+
+       problema. Luego de un diagnóstico inicial se plantean los objetivos y actividades
+       para concretar los mismos. Se destaca también el rol de los agentes sanitarios como
+       motivadores y emprendedores de varias de las actividades dirigidas a la comunidad.
+
+       Otra experiencia relacionada es la de la Provincia de Córdoba, CAPS “Dr. Navarro”-
+       Subsecretaría de Programas- Ministerio de Salud de la Provincia de Córdoba,
+       denominada “Promoción de la lucha contra la tuberculosis”, dirigida a 2700 personas
+       que residen en el Barrio Ciudad de Mis Sueños. Según los autores se comenzó trabajando
+       con seis grupos familiares en donde se detectaron casos de tuberculosis. Este proceso
+       se inició a partir de la detección del primer caso, septiembre de 2007 y continúa en
+       el 2012. El objetivo es contribuir a la reducción de casos de tuberculosis a través de la
+       detección, abordaje y prevención a nivel barrial.
+
+       En este caso observamos que aquí ha sido definida la idea del problema, la población
+       objetivo (los habitantes del Barrio Ciudad de Mis Sueños), y la comunidad del proyecto
+       que estaría conformada por algunos integrantes del CAPS y las seis familias. Por otro
+       lado, se plantean los objetivos y se realizan actividades.
+
+
+
+       2. Identificación del proyecto, comunidad y redes
+       La fase de identificación de un proyecto participativo, puede ser definida como:
+
+        “La primera fase del ciclo del proyecto, que, partiendo del análisis de la comunidad,
+       permite arribar a un diagnóstico participativo a la adopción de una idea consolidada de
+       la intervención a realizar, y es confirmada no sólo por la información sanitaria recabada
+       y su interpretación, sino también por las prioridades de la comunidad puestas de
+       manifiesto a través del proceso participativo”.
+
+       Por eso, si bien en nuestro caso se tenderá a focalizar el problema sobre la tuberculosis,
+       deberá también tenerse en cuenta que puede surgir como relevante un conjunto de
+       otros problemas de la comunidad.
+
+       La identificación es así un proceso de conocimiento del problema o los problemas,
+       sus causas, el análisis de objetivos, el análisis de alternativas y la definición clara de
+       la situación objetivo buscada; pero, por sobre todo, será un proceso de integración de
+       miembros de la comunidad a la comunidad de proyecto y de la integración del centro
+       de salud a la comunidad
+
+       Al final del proceso de identificación, se espera contar no solamente con una idea clara
+       de la intervención a realizar y la situación a lograr, sino también con un equipo de salud
+                                                        SEGUNDA PARTE: PAUTAS PARA REALIZAR UN PROYECTO COMUNITARIO   45
+
+
+incorporado en una comunidad que se preocupa y se compromete con su salud, y en
+este caso puntualmente con el control de la tuberculosis6.
+
+El siguiente esquema muestra los pasos clásicos en un proceso de identificación aunque
+no siempre podrá mantenerse en una secuencia lineal.
+
+
+
+
+                                            iDEA DE INTERVENCIÓN
+
+
+
+                               Análisis General de la Comunidad
+
+                                         Análisis institucional
+                                        Idea de Intervención
+                                                                                       Sistemas de
+                                                                                       Información
+                                        Análisis de implicados                       Geográfica (SIG)
+
+
+
+            Conformando                  Análisis de problemas
+            la Comunidad
+             de Proyecto
+
+
+                                              Análisis de
+                                              alternativas                   Diagnóstico
+                                                                             Participativo
+
+
+
+
+                                   Definición de la Situación Objetivo
+
+
+                          Intervención identificada para formulación de la acción
+
+
+
+6. Aunque en este aspecto se circunscribe a un problema bien delimitado, conviene tener en cuenta la multidi-
+mensionalidad de las necesidades sociales, que involucra distintos componentes de la promoción, preser-
+vación, conservación y recuperación de la salud.
+46   Participación Comunitaria y Tuberculosis | Guía para el Equipo de Salud del Primer Nivel de Atención |
+
+
+
+
+       2.a. Análisis de la comunidad
+
+       Análisis general de la comunidad: Es el proceso que permite el conocimiento
+       necesario del escenario de intervención. En esta instancia el equipo de salud recaba
+       información en cuanto a población (comunidad local), aspectos geográficos, ambientales,
+       sociales, culturales y, por supuesto, sanitarios en general y tuberculosis en particular.
+
+       Análisis institucional y actoral: Direcciona el análisis de la comunidad hacia
+       el conocimiento de las instituciones y los actores clave que existen en ella, y sus
+       interrelaciones. Permite conocer las capacidades locales. Por ejemplo el FODA (Fortalezas,
+       Oportunidades, Debilidades y Amenazas) es una herramienta útil y conocida.
+
+       Análisis de implicados: De todo el universo de actores identificados, selecciona
+       aquellos que no serán indiferentes o que se verán afectados por la intervención,
+       discriminando los que se presume serán favorables y de los que se supone serán
+       adversos a la misma.
+
+       Algunos elementos metodológicos a los que se puede recurrir en esta instancia son:
+
+               -        Mapas del escenario de la intervención
+
+               -        Mapas de relaciones socioafectivas y allegados de confianza
+
+               -        Listas de instituciones y de actores referentes
+
+               -        Acceso a la documentación
+
+               -        Visitas a campo
+
+
+       2.b. Sistemas de Información Geográficos (SIG)
+       Varios de los elementos metodológicos mencionados pueden incluirse dentro de los SIG.
+
+       Se denomina SIG a un conjunto de herramientas integradas en un sistema capaz de
+       recolectar, almacenar, analizar y visualizar información referenciada geográficamente.
+       Permite ver la evolución de las redes, la distribución de los casos de tuberculosis y de
+       otras problemáticas, permitiendo mejores estrategias de abordaje.
+
+       En el siguiente gráfico podemos observar el diseño de un mapa barrial realizado por
+       los mismos integrantes de la comunidad, en el cual se marcaron con distintos tonos el
+                                            SEGUNDA PARTE: PAUTAS PARA REALIZAR UN PROYECTO COMUNITARIO   47
+
+
+registro de los casos, los pacientes en tratamiento, los fallecidos, los abandonos, etc.
+pudiendo evidenciar la zona más crítica. De esta manera, se obtiene un mejor diagnóstico
+situacional para poder planificar las intervenciones comunitarias más adecuadas.
+
+
+
+
+Otro aspecto que se puede abordar es el mapa de las áreas de responsabilidad de una
+región sanitaria, para desconcentrar servicios centralizados.
+
+En el siguiente gráfico podemos observar un mapa del Partido de La Matanza, provincia
+de Buenos Aires, donde se señalan con puntos las georreferencias de los domicilios
+de los personas que realizaron tratamiento para tuberculosis; y con flechas se indica
+la posición de las unidades sanitarias periféricas: Monseñor Bufano, María Elena,
+Laferrere, San Jose Obrero. De esta manera, se pueden distribuir las acciones según
+areas programáticas, sobre todo para realizar la búsqueda de contactos, y trabajar con
+un orden y una responsabilidad acordes con los equipos de cada lugar, gestionados por
+los referentes del programa municipal y regional.
+48   Participación Comunitaria y Tuberculosis | Guía para el Equipo de Salud del Primer Nivel de Atención |
+
+
+
+
+       Tambien es importante establecer las redes de confianza, que en el caso de la
+       tuberculosis pueden ser los contactos socioafectivos que generan colaboración ante el
+       problema en la comunidad. Los vinculos pueden marcarse con flechas y grosores en
+       base a la representatividad de dichos contactos.
+
+
+
+
+       Es importante tener en cuenta que los mapeos forman parte de un proceso
+       dinámico presentando modificaciones acorde a la dimensión cotidiana de la vida
+       de las poblaciones que la comunidad del proyecto va identificando. En el mapa que
+       presentamos a continuación se puede observar como la misma familia extendió las
+       redes y se complejizó en un periodo de 14 meses.
+                                             SEGUNDA PARTE: PAUTAS PARA REALIZAR UN PROYECTO COMUNITARIO   49
+
+
+
+
+Los modos de graficar son numerosos y varían en orden a los sistemas de información
+y registro; por ejemplo, se puede contar con un sencillo plano de calles y localizaciones
+geográficas, construidos entre los actores de la red social de allegados, o bien desde los
+mapas que los CAPS tienen en orden a las estratégicas intervenciones de los agentes
+comunitarios y los trabajadores sociales. Asimismo, si existen los recursos, se puede
+disponer de sofisticados sistemas de información para mapear; como por ejemplo lo
+que aporta la tecnología informática en diferentes versiones, ya sean los sistemas
+que operan con soporte en línea o los más reducidos que operan en forma local o
+institucional.
+Para que un SIG sirva a la estrategia de la Atención Primaria en Salud en micropoblaciones,
+el sistema de gestión de información debe activarse cotidianamente con la captación
+comunitaria de la información, pasar por la institución para su procesamiento y volver
+a la población para la construcción de la intervención y evaluación comunitaria de las
+problemáticas detectadas.
+
+Como experiencia local podemos nombrar la realizada en la Provincia de Formosa,
+Programa Provincial, INER Coni, CAPS Barrio Nam Qom. Denominada “Experiencia
+en Participación Comunitaria”, ha sido dirigida a la población toba durante los años
+2004-2005. El objetivo fue reforzar el control de la tuberculosis, en un área seleccionada,
+en base a la elevada magnitud epidemiológica y operacional, con la participación de las
+redes de confianza en la comunidad.
+50   Participación Comunitaria y Tuberculosis | Guía para el Equipo de Salud del Primer Nivel de Atención |
+
+
+
+
+       Es de destacar que aquí utilizaron el mapeo como herramienta de identificación de
+       casos y de redes; priorizaron el vínculo de confianza para el funcionamiento de las
+       redes en colaboración con los trabajadores de salud, en quienes también destacamos
+       el compromiso.
+
+
+       2.c. Redes comunitarias
+
+       El trabajo de redes nos posiciona para promover en los CAPS esta herramienta que está
+       instalada en las comunidades desde sus orígenes.
+
+       La operación en redes de participación comunitaria para el control de la tuberculosis en
+       áreas seleccionadas es una estrategia que construye un sistema operacional; articula
+       estructuralmente las acciones del sistema de atención de salud con los modos de
+       colaboración habituales de la población.
+
+       En las comunidades ya están desarrolladas e instaladas las capacidades de respuesta ante
+       los problemas que surgen. Las familias, los barrios, las organizaciones históricamente se
+       despliegan para resolverlos y generar sustentabilidad en el tiempo.
+
+       Si bien, en el contexto de APS, la red de atención configura una estrategia, los
+       trabajadores de salud, muchas veces, no asocian el entramado de confianza que fue
+       generando el paciente y su familia antes de llegar a la consulta, intentando resolver el
+       problema por sí mismo.
+
+       Cuando se escucha a la gente aparecen estrategias, modos cotidianos y habituales de
+       colaboración basados en la historia del barrio, sus creencias y valores, sus personas
+       y personajes.
+
+       Las redes funcionan como estructuras policéntricas configuradas por lazos y nudos que
+       entre ellos prestan funciones de sostén y otras de uniones, de fortalezas, de espacios
+       de apertura, de centros entre otros; en cada uno de ellos, funcionarán los saberes y las
+       posibilidades de participación colaborativa.
+
+       El CAPS es uno de los centros cercanos a las poblaciones y, por ello, se relaciona con los
+       intentos de resolver los problemas con la comunidad. Las acciones de los equipos hacen
+       visibles caminos y operaciones que facilitan las interacciones entre los participantes de
+       la red según las tareas, ya que, según el propósito y el lugar, se configurarían los modos
+       de relacionarse.
+                                             SEGUNDA PARTE: PAUTAS PARA REALIZAR UN PROYECTO COMUNITARIO   51
+
+
+En cada escenario existen distintos tipos de redes, a saber: redes de profesionales, redes
+de salud, redes comerciales, redes de residentes de diferentes nacionalidades, redes
+institucionales, redes vecinales, redes de servicios.
+
+Para conocer cómo se relacionan, ya hemos hablado de la utilidad de la herramienta del
+mapeo, como parte del sistema de información que se pone en juego ante los abordajes
+de situaciones problemáticas en el campo de la salud. Mapear las relaciones facilita la
+aparición de capacidades y competencias con relación a los actores y la eficacia como
+recursos disponibles.
+
+Desde el punto de vista de nuestras profesiones esto nos hace replantear nuestro poder
+de trabajo en la estrategia de la APS, ya que nos obliga a considerar en la práctica a la
+población como aquel actor capaz de intervenir y transformar las situaciones problema,
+más allá de los saberes disciplinarios.
+
+
+
+3. El Diagnóstico participativo
+Como ya se dijo, aun cuando la idea de intervención provenga de un CAPS, para que se
+torne verdaderamente participativa, se irá conformando y consolidando en la comunidad
+de proyecto desde el propio análisis de la comunidad.
+
+
+   El diagnóstico participativo (DP): Es el resultado de un proceso participativamente
+   planificado y ejecutado que, mediante técnicas de recolección de datos y su
+   procesamiento e interpretación, establece las características, las causas, las
+   posibles consecuencias, y las alternativas de solución de uno o más problemas
+   sentidos, tomando en cuenta los objetivos del programa, las prioridades de la
+   comunidad y los recursos disponibles.
+
+
+
+Un diagnóstico será verdaderamente participativo cuando:
+
+     a)   no sólo toma en cuenta el saber técnico en la materia del problema en
+          cuestión (tuberculosis), sino también los puntos de vista, las prioridades y los
+          saberes de la comunidad local;
+
+     b)   se realiza con plena participación de miembros de la comunidad local
+          integrados a la comunidad de proyecto.
+52   Participación Comunitaria y Tuberculosis | Guía para el Equipo de Salud del Primer Nivel de Atención |
+
+
+
+
+       Un primer paso en el proceso del DP será analizar el o los problemas involucrados, su
+       etiología y sus consecuencias.
+
+       Una herramienta metodológica usual es el árbol de problemas. Así, nuestro problema
+       central (o troncal), la tuberculosis, reconocerá otro conjunto de problemas que lo
+       originan, y producirá a su vez una cantidad de problemas consecuentes.
+
+
+
+                                                     Copa del árbol = CONSECUENCIAS
+
+
+
+                                           Discapacidad                        Desempleo                           Discriminación
+
+
+
+          Tronco = PROBLEMA                                               Tuberculosis
+                                                                                                                    Malnutrición
+
+          Raíces = CAUSAS
+                                                   Hacinamiento                          Inmunosupresión
+
+
+       Desde una perspectiva sistémica, un instrumento más adecuado es la red de problemas,
+       puesto que permite reconocer las retroalimentaciones y las circularidades que se
+       producen entre los diversos problemas.
+
+       El siguiente ejemplo muestra una red de problemas en una determinada comunidad
+
+                                                              Casas c/ventilación
+             Falta de información                                inapropiada                                    Discriminación
+
+
+
+                                                                 Transmisión de                               Baja cobertura
+             Consulta tardía del SR                                                                               de BCG
+                                                                     la TBC
+
+
+
+
+                     Escasa salud                          Ausencia o escaso apoyo                                Desinterés falta
+                      preventiva                               gubernamental                                      de participación
+                     comunitaria
+                                                SEGUNDA PARTE: PAUTAS PARA REALIZAR UN PROYECTO COMUNITARIO   53
+
+
+Para decidir las mejores estrategias de intervención, deberemos ponderar
+cada problema de esta red, siguiendo las siguientes categorías de análisis:
+
+
+    a)         Qué grado de prioridad tiene para la comunidad.
+
+    b)         Qué grado de coincidencia con las estrategias y las capacidades de cada
+               CAPS tienen; en nuestro caso, qué correspondencia guarda con los obje-
+               tivos del Programa de Tuberculosis.
+
+    c)         Qué grado de apoyo (político, financiero) pueden recibir en función del
+               análisis institucional y de implicados realizado.
+
+    d)         Qué grado de centralidad tiene en la red, lo cual puede ser evaluado por
+               el número de flechas salientes de cada bloque de ésta.
+
+Cada comunidad de proyecto podrá ponderar a su modo cada una de las cuatro
+perspectivas (se sugiere emplear una escala numérica del 0 al 5), utilizando una matriz
+como la siguiente, entendiéndose que es una mera herramienta de apoyo (valores
+asignados, a modo de ejemplo):
+
+
+
+                                   Vinculo con los                    Centralidad          Total
+                       Prioridad                       Apoyo
+   Problema                         objetivos del                     en la red de       (suma o
+                        sentida                       externo
+                                      programa                         problema         producto)
+
+
+   Problema1:
+  contagio de             1              5                2                 4                12
+  tuberculosis
+
+
+  Problema 2
+                          4              1                1                 1                 7
+ discriminación
+
+
+  Problema 3
+
+
+         ...
+
+
+  Problema N
+54   Participación Comunitaria y Tuberculosis | Guía para el Equipo de Salud del Primer Nivel de Atención |
+
+
+
+
+       Una vez realizado el análisis preliminar de problemas, será necesario salir a campo para
+       ampliar, profundizar y mejorar la calidad de la información.
+
+       El DP procura un conocimiento integral de una situación, para poder realizar una
+       intervención.
+
+       En líneas generales responderá a los siguientes pasos, que serán decididos y ejecutados
+       participativamente por la comunidad de proyecto (y no sólo por los técnicos de los
+       centros de salud):
+
+               1-       Definición por parte de la comunidad de proyecto, de qué se quiere investigar
+                        (cuál es el conocimiento adicional que necesitamos). Se trata de formular las
+                        preguntas de la investigación.
+
+               2-       Elaboración del plan diagnóstico, el cual se relaciona con el cómo obtendremos
+                        la información necesaria para responder dichas preguntas. Existen diversas
+                        técnicas de recolección de datos (TRD).
+
+               3-       Recolección de datos. Ésta es la parte típica del “trabajo de campo”.
+
+               4-       Sistematización de la información, es decir, su organización en términos que
+                        permitan responder a las preguntas planteadas en el punto 1. También es
+                        necesario crear instrumentos para el procesamiento de los datos (planillas).
+
+               5-       Interpretación y conclusiones.
+
+
+
+                         Existen diversas técnicas de recolección de datos:
+
+                         - Encuestas. Permiten sondear opiniones en escalas amplias,
+                         aunque no promueven en gran medida la participación.
+                         - Entrevistas personales (por ejemplo a informantes o actores
+                         claves)
+                         - Grupos focales (el equipo se reúne con un grupo clave de la
+                         comunidad)
+                         - Acceso a la documentación
+                         - Observación directa
+                         - Mediciones
+                                               SEGUNDA PARTE: PAUTAS PARA REALIZAR UN PROYECTO COMUNITARIO   55
+
+
+4. Formulación del proyecto comunitario
+4.a. El enlace entre identificación y formulación
+Hemos visto en referencia a la etapa de identificación de un proyecto que éste surge
+de las prioridades definidas con la comunidad a través de su análisis y del diagnóstico
+participativo.
+
+El producto final de esta identificación y diagnóstico es una situación objetivo deseada
+por la comunidad de proyecto; es decir, el colectivo integrado por la comunidad + el
+equipo de salud, la puede mostrar el siguiente diagrama:
+
+
+                                Proyecto
+                                                                   Situación Objetivo
+
+     Situación Inicial
+
+
+
+El proyecto es el “puente” que permitirá pasar, de una situación inicial identificada a una
+situación objetivo, también identificada.
+
+Si bien existen diversas definiciones de proyecto una definición integradora, aplicable
+a nuestros casos es:
+
+
+
+     Personas y recursos organizados según actividades orientadas al logro de un obje-
+     tivo, del cual se espera la mejora de las condiciones de vida de una población y su
+     contexto. Este objetivo se logrará en un plazo acotado, bajo una unidad de gerencia
+     y dentro de un presupuesto determinado. Es, además, un ámbito de aprendizaje de
+     todos los actores.
+
+
+
+
+Es importante analizar la factibilidad y la viabilidad del proyecto. Se dice que un
+proyecto es factible cuando es realizable y se define como viable cuando sus objetivos
+se sostienen en el tiempo luego de finalizada la intervención.
+56   Participación Comunitaria y Tuberculosis | Guía para el Equipo de Salud del Primer Nivel de Atención |
+
+
+
+
+       Algunos de los elementos que habrá que analizar son:
+
+
+
+
+                                            Apropiación por la comunidad
+                                            Existencia de políticas de apoyo
+                                            Uso de tecnologías apropiadas
+                                            Equidad de género, perspectiva de género
+                                            Sustentabilidad ambiental
+                                            Capacidades institucionales y de gestión
+                                            Sostenibilidad económica y financiera
+
+
+
+
+               Un buen diseño de un proyecto implica, además, identificar los factores externos,
+               es decir aquellos que puedan favorecer o interrumpir alguna actividad, resultados
+               o el mismo objetivo del proyecto por más que se cuente con todos los recursos
+               previstos.
+
+
+       Algunos factores externos clásicos son:
+
+               -        Continuidad de políticas y/o respeto de los acuerdos por parte de
+                        autoridades y actores implicados
+               -        Situación cambiaria y económica
+               -        Situación social o eventos que interfieren la cotidianeidad de la comunidad
+               -        Factores ambientales
+               -        Supuesto de participación
+               -        Catástrofes o siniestros
+
+
+       4.b. El método de marco lógico
+
+       Para orientar la formulación de un proyecto, seguiremos el método de marco lógico. Es
+       un método lineal, hasta cierto punto rígido, que procura asegurar, cumpliendo con la
+       secuencia lógica establecida, se logre el objetivo, tratando de minimizar el riesgo de
+       que los factores externos se den en forma desfavorable.
+                                               SEGUNDA PARTE: PAUTAS PARA REALIZAR UN PROYECTO COMUNITARIO   57
+
+
+No obstante es imprescindible recordar en todo momento que las comunidades tienen
+otras “lógicas”: procesuales, iterativas, de aprendizaje colectivo (factores internos).
+
+Objetivos del proyecto
+
+Gracias a la fase de identificación, se cuenta con una “situación objetivo” buscada. A
+partir de ella, podremos pasar a definir el objetivo del proyecto.
+
+
+
+       El objetivo es una “fotografía” de la situación que visualizamos situándonos en el
+       futuro, es decir, un tiempo después de finalizadas las actividades. Responde a la
+       pegunta “¿qué queremos lograr?”
+
+
+
+
+Un aspecto muy importante a tener en cuenta es que el objetivo debe formularse en
+referencia a la población objetivo. Debe expresar el logro o la mejora en las condiciones
+de vida de ese grupo.
+
+Muchas veces se comete el error de pensar el objetivo en términos de los logros de la
+organización ejecutora, por ejemplo “el centro de salud promoverá la consulta oportuna
+de sintomáticos respiratorios”, cuando en realidad un objetivo sería “la comunidad
+consulta en forma temprana ante síntomas respiratorios”; otro ejemplo sería “el CAPS
+promoverá campañas de vacunación BCG” cuando en realidad el objetivo sería “los
+niños recién nacidos están vacunados con BCG”.
+
+Tampoco deben, en su formulación, incluirse los medios (a través de, mediante),
+ya que quedarán claros a nivel de las siguientes etapas de formulación (resultados,
+actividades).
+
+Su forma de redacción es simple. Nos situamos, como ya se dijo, en el futuro (luego de
+finalizadas las actividades) y decimos qué vemos, en forma muy sinóptica. Una frase
+del formato “Tal cosa lograda” generalmente bastará. No se recomienda entonces
+el difundido uso de verbos (“impulsar, propender, estimular, favorecer, etc”) ya que
+introducen vaguedad en la redacción y ponen el énfasis en el hacer y no en el logro.
+
+
+Es usual en la formulación de proyectos la definición de un objetivo general. Se trata
+de un objetivo amplio, compuesto por varios aspectos. Puede desglosarse en varios
+objetivos específicos, teniendo en cuenta que debe haber total correspondencia.
+58   Participación Comunitaria y Tuberculosis | Guía para el Equipo de Salud del Primer Nivel de Atención |
+
+
+
+
+       Resultados
+
+       Los resultados, a diferencia del objetivo, se construyen o realizan dentro del plazo del
+       proyecto. Son productos finales de las actividades, que en su conjunto generarán el
+       logro del objetivo.
+
+
+
+
+                                                                           R1: Aumento de la
+                                                                         solicitud de pedidos de
+                                                                               baciloscopías                       Objetivo:
+              Conjunto de actividades del                                                                         Número de
+                       proyecto:                                                                               casos detectados
+                                                                                 R2: Aumento                  incrementado en la
+                                                                                del estudio de                   población “X”
+            1- Asamblea o capacitación de
+                                                                                  contactos
+            familiares para la interrupción
+             de la cadena de transmisión
+             2- Capacitar al personal de
+                                                                                 R3: Personal del
+            salud en búsqueda de casos y                                         CAPS capacitado
+               evaluación de contactos
+             3- Talleres en educación para
+              la salud en el marco de un                                               R4:
+                  proyecto educativo                                              Articulación
+                                                                                 del CAPS y la
+                 4-…Otras actividades…                                           escuela en los
+                                                                                  trabajos de
+                                                                                 promoción de
+                                                                                    la salud
+
+
+
+
+       Como puede observarse, el logro del objetivo puede depender de más de un
+       resultado.
+                                              SEGUNDA PARTE: PAUTAS PARA REALIZAR UN PROYECTO COMUNITARIO   59
+
+
+Los resultados pueden ser de cuatro clases:
+
+
+
+
+        En general los resultados pueden ser de cuatro clases:
+         De obra: edificios construidos, infraestructura o equipos instalados,
+        obras civiles o mecánicas realizadas
+         De capacitación: personas capacitadas (en uno u otro tema). También
+        indirectamente personas informadas, sensibilizadas, etc.
+         De servicios: insumos distribuidos o servicios brindados
+         De organización: grupos humanos organizados, asociaciones creadas,
+        instituciones formales o informales puestas en marcha por el proyecto.
+
+El siguiente cuadro muestra un ejemplo:
+
+
+
+
+    Objetivo                             Resultados                             Tipo de resultado
+
+                          Equipo de salud capacitados en TAES/DOT                  Capacitación
+
+                    Centro de Salud acondicionado, con espacio de atención
+                                                                                        Obra
+    Número de                       apropiado funcionando
+  abandonos de              Insumos presentes en forma mensual                        Servicio
+ casos disminuido
+
+                     Red de Familias cooperando para el cumplimiento del
+                                                                                   Organización
+                            tratamiento completo de los pacientes
+
+
+
+
+Actividades
+Definidos los resultados, sigue prever las actividades necesarias para producir cada
+60   Participación Comunitaria y Tuberculosis | Guía para el Equipo de Salud del Primer Nivel de Atención |
+
+
+
+
+       uno de ellos. Las actividades son conjuntos de acciones organizadas, secuencialmente
+       ordenadas por el proyecto, que permiten obtener los resultados esperados. Una vez
+       que se evalúan o listan las actividades, se las coloca sobre un cronograma de Gantt.
+
+
+
+
+                                  Mes 1           Mes 2         Mes 3         Mes 4         Mes 5         Mes 6   ...........   Mes n
+            Actividad 1
+
+            Actividad 2
+
+            Actividad 3
+
+            Actividad 4
+
+            Actividad 5
+
+                 .......
+
+            Actividad n
+
+       El proceso  no es lineal sino iterativo, se parte de un plazo tentativo para el proyecto,
+           Monitoreo
+       pero al ir colocando las actividades con sus duraciones, puede que el plazo global
+       deba extenderse o bien que haya que reducir la duración de ciertas actividades, lo que
+       implicará hacer más intensivos los recursos para ellas.
+
+       Debe tenerse en cuenta que existen actividades correlativas (hasta que no finaliza una
+       no puede comenzar la otra, tal como se muestra entre la actividad 3 y la 4) y otras que
+       son independientes o simultáneas.
+
+
+
+
+       Presupuesto
+                                            SEGUNDA PARTE: PAUTAS PARA REALIZAR UN PROYECTO COMUNITARIO   61
+
+
+Puede organizarse según cuatro grandes rubros, a saber:
+
+
+
+
+          Sueldos y honorarios (Remuneraciones del personal estable
+         afectado al proyecto, Honorarios de contratistas, El trabajo voluntario
+         valorizado, a un costo de la hora acorde a la función)
+          Administración (Alquileres, Comunicaciones como teléfono, correo,
+         fax, e-mail, etc. Viáticos, transportes, etc.).
+          Insumos (Todos los materiales que se consumen en el proyecto y
+         que no quedaran al finalizar el mismo: papelería, artículos de librería,
+         artículos de limpieza, etc.)
+          Equipo (Bienes durables que quedarán al finalizar el proyecto, por
+         ej. computadoras).
+
+Es aconsejable organizarse con una tabla presupuestaria como la que sigue:
+
+
+
+
+    Concepto        Mes 1   Mes 2   Mes 3    Mes 4     ..........   Total x rubro   Org. a cargo
+
+   Sueldos y
+                                                                                    Ej. Municipio
+  Honorarios.....
+  Administración
+
+    Insumos...
+
+    Equipo ....                                                                     Ej. Donación
+
+   Total x mes                                                          Total
+
+En la última columna de “Organización a cargo” se indica qué organización será
+referente y responsable de cada uno de los rubros. Es importante valorizar los aportes
+de la comunidad.
+
+
+
+
+Indicadores, índices, metas
+
+Dentro de la formulación del proyecto aparece también la necesidad de saber si se ha
+62
+
+
+     cumplido o si se está cumpliendo con un objetivo, resultado, actividad, etc. Surge así el
+     concepto de “indicador”. Éstos son parámetros cuantitativos o cualitativos que permiten
+     saber si un nivel del proyecto ha sido logrado o no, y en qué medida.
+
+     Los indicadores deben ser coherentes con lo que se quiere averiguar, y también ser
+     independientes. Por ejemplo, si un proyecto tiene como objetivo “Incidencia de la TBC
+     disminuida en la localidad X”, un indicador será “número de casos de TBC notificados”. A
+     su vez, necesitaremos poder cuantificar o definir cualitativamente cómo varía el indicador
+     desde antes del inicio de las actividades, hasta luego de finalizado el proyecto.
+
+     También deberemos considerar de qué modo se podrá saber el estado de un indicador
+     o valor de su índice. Esto lo brindarán los diversos medios o fuentes de verificación.
+     Entre ellos podemos recurrir a técnicas de recolección de datos.
+
+     Para considerar si el proyecto ha tenido éxito, deberemos relacionarlo con las metas;
+     éstas deben estar definidas previamente como los valores mínimos que deben alcanzar
+     los índices luego del proyecto (cuando se trata de cosas deseables) o los valores
+     máximos tolerados (cuando se trate de cosas indeseables o negativas). Por ejemplo
+     las metas del Milenio determinadas por la OMS, indican que se deberá reducir la
+     incidencia de tuberculosis a un 8% anual, y la tasa de mortalidad por tuberculosis, a
+     un 10% anual.
+
+
+
+     4.c. La matriz de marco lógico
+     Puede resultar más práctico volcar lo mencionado anteriormente en una “Matriz de
+     marco lógico”, cuadro que permite analizar sinópticamente la coherencia lógica de la
+     formulación de un proyecto:
+                                                 SEGUNDA PARTE: PAUTAS PARA REALIZAR UN PROYECTO COMUNITARIO   63
+
+
+
+                  LOGICA DE LA                             INDICES-    FUENTES DE          FACTORES
+  NIVEL                               INDICADORES
+                 INTERVENCION                               METAS     VERIFICACION         EXTERNOS
+
+
+                                                                                            Acciones,
+                                                                                          decisiones o
+                   Condición
+                                                                                           condiciones
+ Objetivo        futura a lograr
+                                                                                           externas al
+    del          que se espera
+                                                                                             proyecto
+ proyecto      permanezca luego
+                                                                                            necesarias
+               de la intervención
+                                                                                          para lograr el
+                                                                                             objetivo
+
+                                                                                            Acciones,
+                   Productos de
+                                                                                          decisiones o
+                  las actividades
+                                                                                          condiciones
+                  a lograr dentro
+                                                                                           externas al
+Resultados          del plazo de
+                                                                                            proyecto
+               intervención de los
+                                                                                           necesarias
+                 que se espera el
+                                                                                         para lograr los
+                logro de objetivos
+                                                                                           resultados
+
+                                       Cronograma
+                                                                                             Acciones,
+                      Acciones          Listado de                                        decisiones o
+                  organizadas y          Recursos                                          condiciones
+                   coordinadas          Materiales                                          externas al
+Actividades
+                   tendientes a                                                              proyecto
+                                                             NO        Presupuesto
+                    producir los       Gerencia y                                           necesarias
+                     resultados      procedimientos                                        para realizar
+                                      del proyecto                                       las actividades
+
+
+
+
+ Por condiciones previas se entiende una adecuada y
+ suficiente movilización de recursos, y previamente, una
+ adecuada planificación estratégica.
+                                                                      Condiciones Previas
+64   Participación Comunitaria y Tuberculosis | Guía para el Equipo de Salud del Primer Nivel de Atención |
+
+
+
+
+       4.d. Evaluación
+
+       El monitoreo (evaluación durante) y la evaluación, deberán ser participativamente
+       definidos durante la formulación del proyecto.
+
+       Aquí especificaremos tres tipos de evaluación:
+
+
+                   a) “Ex-ante”: Permite ver, antes de la ejecución, si la formulación re-
+                   sponde al marco lógico y el proyecto es viable
+                   b) Durante la ejecución, llamada monitoreo
+                   c) “Ex-post”, final o de impacto, en distintos momentos luego de la
+                   ejecución.
+
+
+                   El monitoreo es esencial y debe estar previsto como actividad del
+                   proyecto (figurando en el Cronograma Gantt),
+
+
+
+                   El monitoreo y la evaluación final se harán empleando los indicadores
+                   previstos.
+
+
+
+       A veces durante el monitoreo pueden hallarse desviaciones al plan original, lo cual nos
+       podrán llevar a adoptar un plan de contingencia o alternativo ya previsto.
+
+
+       La evaluación participativa
+
+       Existen diferentes criterios desde los cuales realizar la evaluación, algunos de ellos buscan
+       verificar lo logrado de acuerdo con la formulación del marco lógico. Aquí avanzaremos,
+       además, hacia una posición que nos permita respondernos las siguientes preguntas:
+       ¿qué estamos aprendiendo?, ¿cómo lo hemos aprendido?, y ¿qué consecuencias tiene
+       este aprendizaje para las condiciones de salud en la comunidad?
+
+        En un proyecto participativo, aparecerán así dos enfoques o miradas distintas y
+       complementarias:
+
+               •        La mirada orientada a resultados, guiada por indicadores de tipo cuantitativo
+                        y/o cualitativo y evaluada técnicamente, que pondrá su acento en el logro de
+                                            SEGUNDA PARTE: PAUTAS PARA REALIZAR UN PROYECTO COMUNITARIO   65
+
+
+          los objetivos y los resultados del proyecto
+
+     •    La mirada procesual u orientada a las personas, que pondrá el énfasis en el
+          proceso de aprendizaje, el fortalecimiento o la potenciación de la comunidad,
+          más allá del logro del objetivo o resultados. Recordemos que un proyecto es
+          también un “espacio de aprendizaje de todos los actores”.
+
+El documento del proyecto
+
+Es conveniente contar con un documento que plasme el proyecto formulado, lo cual
+será útil para los siguientes fines:
+
+
+
+           a) Informar a: autoridades, vecinos, organizaciones locales, a fin de que
+           se integren al proyecto o colaboren con él
+
+           b) Buscar financiamiento.
+
+           c) Brindar un documento de referencia a la comunidad del proyecto.
+
+
+
+
+5. La participación en las distintas etapas de las
+acciones comunitarias
+Lo que sigue es un ejemplo de cómo la participación puede ser incorporada en el
+ejercicio integral de nuestro trabajo comunitario. Seguramente, en base a su experiencia,
+el lector encontrará y recreará nuevas situaciones y vivencias que le permitirán nutrir
+más dicho trabajo.
+
+1 - Recolección de datos y diagnóstico comunitario
+Esta etapa es fundamental no sólo por ser la primera y, por lo tanto, empezar con
+una metodología participativa, sino también por concebir en sí misma aquello que
+“les sucede” o, mejor aún, “nos sucede”, aquello que es el problema u oportunidad
+que motiva el conjunto de acciones a ser concebidas y ejecutadas. Por lo tanto, es el
+“acto fundacional” mismo de la participación en el proyecto que acaba de comenzar.
+La actitud que motiva al trabajador de salud es auto-reflexiva, reconociendo que de
+ninguna manera podrá concebir la realidad solitariamente, sino junto con las personas
+afectadas por el problema a resolver o situación a mejorar.
+66   Participación Comunitaria y Tuberculosis | Guía para el Equipo de Salud del Primer Nivel de Atención |
+
+
+
+
+       En la primera etapa, durante la recolección de datos, se pueden elegir instrumentos que
+       por su naturaleza promuevan más la participación que otros, por ejemplo una entrevista
+       es más participativa que una encuesta. Y cuando se utiliza la técnica de grupos focales,
+       la obtención de datos puede darse a partir de distintas miradas.
+
+       Otra forma de comenzar con un enfoque participativo, en la medida de lo posible, es
+       incorporar a miembros de la comunidad de proyecto en los equipos de recolección
+       de datos. Esto puede ofrecer ventajas y dificultades según el caso particular de cada
+       acción comunitaria. En muchas ocasiones las encuestas son realizadas por los agentes
+       sanitarios que viven en la misma comunidad que se va a entrevistar, y esto genera,
+       en algunas personas, un estigma de falta de resguardo de la información. Esto genera,
+       como consecuencia, mala voluntad para contestar las preguntas o la falta de veracidad
+       en la información brindada.
+
+       2 - Participación en la formulación y ejecución de acciones
+       En las situaciones en que, por distintas circunstancias, no se ha podido comenzar con un
+       proceso participativo desde el diagnóstico, será de vital importancia tratar de hacerlo
+       en este momento, para el diseño de las acciones concretas que producirán el cambio
+       de aquello que es el problema a resolver. Debe quedar en claro, no obstante, que es el
+       propio diagnóstico el momento preciso para poner en marcha el proceso participativo,
+       por ser la génesis del proyecto, la “raíz del árbol”.
+
+       Cuando la participación comienza en esta segunda instancia, deberíamos asegurarnos
+       de que aquello que fue diagnosticado como problema o situación a mejorar, y no ha
+       sido construido colectivamente, sea apropiado y comprendido por todos. En esta etapa
+       es necesario, tanto para la formulación como para la ejecución, que los equipos de
+       trabajo estén integrados por miembros de la comunidad de proyecto.
+
+       La mirada mixta, interna y externa, sobre el problema diagnosticado nutrirá de mayor
+       riqueza la creatividad grupal para construir un diseño de acciones que procure el cambio
+       con raíces históricas y culturales propias de la comunidad. También facilitará aspectos
+       prácticos, logísticos, comunicacionales y afectivos.
+
+       3 - Seguimientos comunitarios participativos
+       La plena participación de miembros de la comunidad en el seguimiento, en el
+       acompañamiento de las acciones tiene una importancia crucial, permitiendo recrear y,
+       de ser necesario, modificar el diseño (dentro de los límites y las posibilidades acordadas
+       con otros actores, como el gobierno o eventuales financiadores externos), y brinda
+       una oportunidad de efectiva incidencia en la ejecución del proyecto para quienes no
+       estuvieron en su génesis, diagnóstico o formulación.
+                                            SEGUNDA PARTE: PAUTAS PARA REALIZAR UN PROYECTO COMUNITARIO   67
+
+
+Constituye un ejercicio de “democracia participativa” donde la comunidad posee efectivo
+control sobre unas acciones que se dirigen a la mejora de sus propias condiciones
+de salud y de vida, y un momento clave para el aprendizaje, ya que aún se está a
+tiempo de que de dicho aprendizaje surjan decisiones que modifiquen y mejoren el
+plan inicial.
+
+4-Evaluación y participación
+Tanto en el comienzo, como durante y al final del proyecto, es posible incorporar
+ampliamente la participación en la evaluación.
+
+La participación se transforma en un valor que nutre cada una de las etapas de trabajo
+de la comunidad de proyecto (equipo más miembros de la comunidad local) y la
+metodología consultiva es la mejor manera de gestionarla. Lo importante es que la
+propia comunidad se plantee qué es lo que desea saber o aprender de la experiencia.
+También podríamos evaluar el grado de apropiación del proyecto por parte de los
+participantes o el grado de involucramiento en la ejecución de las acciones.
+
+En el diseño inicial de la evaluación del proyecto, el equipo puede elegir indicadores
+accesibles y claros para la propia comunidad que requieran de fuentes de verificación
+(procedimientos para conocer el estado de los indicadores) basadas en instrumentos
+de recolección de datos más participativos y fijar metas que satisfagan tanto los niveles
+sanitariamente recomendables como el sentir comunitario.
+
+Así la construcción misma de los indicadores, respetando la naturaleza de los objetivos
+o resultados, puede incorporar distintos grados de participación. Hay indicadores
+consensuados a distintos niveles, nacional e internacional, que podrán aceptarse y
+adoptarse participativamente y otros que podrán ser diseñados en forma participativa
+por el grupo involucrado.
+
+Como ejemplo podemos tomar la evaluación de contactos, como indicador de control de
+foco de infección, usando la tarjeta de tratamiento como medio de verificación. Si está
+registrado, se notifica como que fueron evaluados y, si no, se considera que no fueron
+evaluados, por más que el profesional diga que sí. Éste sería un ejemplo de un indicador
+consensuado desde el Programa Nacional. Ahora bien, se podrá diseñar otro indicador
+para el mismo fin, como por ejemplo el número de visitas domiciliarias realizadas para
+evaluar a los contactos, pero este indicador deberá consensuarse dentro del equipo de
+trabajo y no necesariamente deberá extenderse su uso a otros CAPS.
+68
+
+        Anexo 1
+        Un caso para pensar en equipo con la comunidad
+
+
+
+
+     Ejercicio: Un drama real: un año de omisiones
+     Extraído del Curso a distancia de Tuberculosis Epidemiología y Control. INER “Dr. E
+     Coni” – ANLIS “Dr. C. G. Malbrán” 2009 Capítulo IX Comunicación en tuberculosis
+
+
+                     L. G. , tiene 18 años, vive en una villa de emergencia en Santa Fe, vino del
+                     Chaco hace 7 años. Está embarazada de 4 meses y tiene dos hijos más.
+                     Su rancho apenas si tiene puertas, de noche tiene que prender el brasero,
+                     para dar un poco de calor, se llena de humo y toda la familia tiene tos.
+                     En sus embarazos anteriores le informaron la importancia de realizarse
+                     controles periódicos.
+      Agosto
+                     La primera vez concurrió a la salita del barrio sin que la vengan a buscar.
+                     La atendió el Dr. M., que es muy joven y conversador.
+                     Le preguntó sobre su vida, los embarazos anteriores, la pesó, le midió la
+                     panza, al escucharla toser le dijo que se abrigara bien y tratara de no usar
+                     más el brasero porque era peligroso. Le pidió análisis de sangre, le dijo
+                     cuando tenía que volver y anotó todo en una ficha
+
+                     En la visita siguiente el Dr. M. la vuelve a pesar, a medir la panza,
+                     conversan. L. G. le dijo que ya no usaba el brasero porque no hacía tanto
+      Septiembre
+                     frío, que la tos continuaba y tenía un poco de catarro.
+                     El Dr. M. le indica un jarabe y comprimidos de amoxicilina cada 8hs
+
+                     Al mes siguiente, el Dr. M. comprueba que L.G. había engordado poco y
+                     seguía con tos.
+      Octubre        Le explica la importancia de alimentarse bien y como no había curado su
+                     bronquitis le cambió el antibiótico por otro más fuerte, claritromicina cada
+                     12hs. durante 5 días, asegurándole que iba a andar bien
+
+                     En el control siguiente el Dr. M. no estaba y la atiende el Dr. G. que estaba
+      Noviembre
+                     muy apurado, apenas la miró, la revisó rápido y no le habló como el otro.
+                                                                                 Anexo 1   69
+
+
+        En enero llegó el momento del parto. L. G. fue al hospital.
+        La obstetra que la atendió le pidió el carné donde figuraban los controles.
+        Comprueba que habían sido normales pero le llama la atención el poco
+        aumento de peso y la bronquitis que aún continuaba. Le explica que
+        después que tenga su bebé deberá consultar al clínico por esa tos y catarro.
+        El parto fue normal, rápido. La niña peso 3.500gr.
+        La dieron de alta, el domingo por la mañana con la indicación de regresar
+        el lunes para ser vacunada con BCG y pedir turno con el clínico.
+        Los días siguientes Laura no tuvo plata para ir al hospital, por eso una
+        se-mana después fue a la salita del barrio y la enfermera le dijo que
+Enero
+        solamente los viernes vacunan con BCG. Cuando la niña fue vacunada ya
+        tenía 12 días de vida.
+        L. G. seguía con tos, que no la dejaba tranquila, aún cuando le daba el
+        pecho a su bebé. En ese momento trataba de toser para otro lado, no
+        sobre la carita de la nena.
+        En la salita la controlaba la Dra. S., quien le indicó todas las vacunas y la
+        nena se criaba bien.
+        Una de las tantas veces que concurrió a la salita, la enfermera la escuchó
+        toser y le dijo que fuera al Hospital a hacerse un análisis de catarro y
+        radiografía de tórax.
+
+        L.G. pudo ir al Hospital recién en el mes de abril.
+        Estaba muy delgada, tosía permanentemente, a veces escupía sangre y
+        transpiraba mucho a la tarde aunque no hiciera calor.
+        La internaron, la atiende la Dra. Q. , le hicieron baciloscopía y radiografía.
+Abril
+        El resultado fue positivo, le explicaron que tenía tuberculosis y que debía ir
+        a tomar los medicamentos todos los días en la salita.
+        L.G. concurría todos los días a la salita a tomar los remedios y la
+        enfermera marcaba en una tarjeta unas cruces
+
+        Dos meses después, en uno de los controles en el hospital, le preguntaron
+Junio   si habían examinado a los niños. L.g. contestó que no y la Dra. Q. le manda
+        una nota a la Dra. S. de la salita para que realice el control de los contactos
+
+        Los niños se controlaron en julio. La bebé tenía 6 meses, la Mantoux le
+        dio 5 mm y la radiografía resultó anormal por lo cual la Dra. S. la envió al
+        Hospital de Niños.
+        L.G. consiguió el turno cinco días después, su hija tenía tos, fiebre,
+        decaimiento, comía muy poco, vomitaba y transpiraba mucho. Quedó
+        internada en el Hospital de Niños donde le empezaron tratamiento con
+Julio   suero y antibióticos. Como L.G. les dijo que ella estaba en tratamiento por
+        tuberculosis, a la nena le realizaron un lavado gástrico.
+        Después de 5 días con antibióticos comenzó con convulsiones, se sospecha
+        meningitis tuberculosa, la pasan a terapia intensiva y comienzan con el
+        tratamiento para tuberculosis con 4 drogas (H/R/Z/S). Un mes después
+        la nena regresa a su casa con una secuela neurológica, confirmada por
+        bacteriología del LCR meningitis TB
+70   Participación Comunitaria y Tuberculosis | Guía para el Equipo de Salud del Primer Nivel de Atención |
+
+
+
+
+       Cuestionario para pensar y debatir entre todos:
+       1-¿Qué observaciones haría sobre los servicios de salud que intervinieron y el personal
+       que atendió la paciente? Analice en forma cronológica cada uno de los efectores
+       intervinientes
+
+       2-¿Cuál podría ser la red de confianza de esta paciente? ¿En qué hubiese cambiado la
+       aplicación de esta estrategia?
+                                                                                                                  71
+
+Anexo 2
+Artículo de interés
+
+
+
+
+Discurso del Director General de OMS, H. Mahler. Aparecido en el primer número
+de la gaceta La Educación para la Salud en 1985 publicada por esa organización.7
+
+
+
+
+       “La salud mundial sólo mejorará cuando los propios interesados participen
+       en la planificación, aplicación y toma de decisiones acerca de su propia
+       salud y de la comunidad. No obstante, esta participación dependerá de:
+       ¿Hasta qué punto estamos realmente interesados en involucrar a los
+       individuos, a sus familias y comunidades? ¿Estamos preparados mental y
+       profesionalmente para escuchar lo que les interesa, aprender de ellos lo
+       que consideran importante y compartir la información apropiada, animarlos
+       y apoyarlos? ¿Estamos listos para ayudarles a escoger entre soluciones
+       posibles, establecer sus propios objetivos y evaluar sus esfuerzos?
+
+
+
+
+Hasta ahora, en muchos casos, la respuesta es no. Nosotros podemos seguir desarrollando
+planes, pero nada sucederá a menos que el personal de salud, y profesionales claves de
+otros sectores lleguen a darse cuenta de lo que está en juego.
+
+
+
+
+7. Extraído del Curso a distancia de Tuberculosis Epidemiología y Control. INER Dr. E Coni ANLIS Dr. C. G. Mal-
+brán 2009 Capítulo IX Comunicación en tuberculosis
+72   Participación Comunitaria y Tuberculosis | Guía para el Equipo de Salud del Primer Nivel de Atención |
+
+
+
+
+       Para obviar estos obstáculos son necesarios tres requisitos fundamentales:
+
+
+                Primero, el personal de salud debe comprender que el concepto de atención
+                de salud implica asumir un compromiso. No solo debemos estar interesados
+                en el control de enfermedades sino también en el fenómeno y atención de la
+                salud en el desarrollo en general; y por lo tanto de los individuos involucrados.
+                Nuestra tecnología de salud debe estar basada en lo que ellos mismos
+                quieren y necesitan. Debemos dejar de tratar de adaptar las comunidades a
+                sistemas y programas que proyectamos sin un sentido real y profundo de los
+                aspectos sociales, sin mencionar el hecho de la existencia de una disonancia
+                cultural que es a menudo causa de una reacción contraria a tales programas.
+                Segundo, el personal de salud debe aceptar sus nuevas funciones,
+                aún más, deben estar motivados para ensayarlas, adaptarlas,
+                ampliar sus alcances e innovar la perspectiva de trabajo en grupo. Su
+                principal preocupación debe ser el encontrar las maneras de ayudar
+                a los individuos y comunidades a llegar a ser autorresponsables.
+                Tanto profesionales como no profesionales son imprescindibles.
+                No pueden excluirse mutuamente sino que deben trabajar juntos.
+
+                Tercero, el personal de salud debe tener la capacidad necesaria para poner
+                en práctica sus nuevas funciones de una manera efectiva y hacer un uso
+                eficiente de los conocimientos ya existentes. Esto exige una capacitación
+                continua que esté al tanto de la experiencia acumulada y brinde la calidad
+                de preparación o los saberes que se requieren para un eficiente desempeño
+                de sus funciones”.
+                                                                                                                        73
+
+
+Bibliografía
+
+
+Allen Grason, Holly; Guyer, Bernard. “Resource Guide to Concepts and Methods for Community-Based and
+Collaborative Problem Solving”, Women’s and Children’s Health Policy Center. Department of Population and Family
+Health Sciences Johns Hopkins University Bloomberg School of Public Health. June 2000.
+Ander Egg, Ezequiel. Metodología y práctica del desarrollo de la comunidad. El método del desarrollo de
+la comunidad. Lumen, Buenos Aires, 33era edición, 2000.
+Ander Egg, Ezequiel. Métodos y Técnicas de Investigación Social. Lumen Humanitas, Buenos Aires, 2003.
+Anello, Eloy; Barstow de Hernandez, Joan. Participación Comunitaria. Universidad Nur - ISER. Santa Cruz
+de la Sierra, Bolivia, 1991.
+Anello, Eloy ; de Hernández, Juanita. Educación Potencializadora. Modulo 1. Universidad Nur. Santa
+Cruz, Bolivia, 1997.
+Bertucelli, Sebastián y col. “De la epidemiología a la endoepidemiología: La investigación epidemiológica
+en el trabajo comunitario.” En Modelos de Psicología Comunitaria para la Promoción de la salud y prevención
+de enfermedades en las Américas. OPS/OMS serie paltex Salud y Sociedad 200, Nº7, 2000.
+Breilh, J. “Nuevos Conceptos y Técnicas de Investigación. Guía pedagógica para un Taller de Metodología
+(Epidemiología del Trabajo). Centro de Estudios y Asesoría en Salud (CEAS). Serie “Epidemiología Crítica” Nº
+3, Ecuador, 1995.
+Capalbo, Lucio (Compilador); Jordi de Cambra; Edgar Morin et al. El Resignificado del Desarrollo.
+CICCUS - UNIDA, Buenos Aires, 2008.
+Capra, F. “La trama de la vida”. Anagrama, Barcelona, 1988.
+Darnaud, Raquel; Dato, María Isabel et al. Promoción del Control de la Tuberculosis. Guía Práctica.
+Instituto Nacional de Enfermedades Respiratorias Dr. Emilio Coni. Octubre de 2008.
+Elizalde, Antonio; Max Neef, Manfred ; Hoppenhayn, Martin. Desarrollo a Escala Humana: una Opción
+para el Futuro. Nordan - Redes, Montevideo, Uruguay 1991.
+El Troudi, Haiman; Harnecker, Marta; Bonilla-Molina, Luis. Herramientas para la Participación. FIDES /
+FONACIT / Ministerio de Participación Popular y Desarrollo Social / Universidad Bolivariana de Venezuela /
+Misión Cultura - CONAC, Venezuela, 2005.
+Gálvez, Raúl; Irazola, Jorge. El árbol de la transformación. Manual de metodologías participativas para agentes
+de salud comunitaria. Medicus Mundi, Ceiba Salud y Desarrollo y Médicos del Mundo Argentina, Abril 2006.
+Gatti, Carlos E; Villalba, Rosa S; Molina, Gabriela y col. Programa Médicos Comunitarios. Salud y
+Participación Comunitaria. Módulo 7 del Posgrado en Salud Social y Comunitaria para los equipos de salud del
+primer nivel de atención. Ministerio de Salud de la Nación, Buenos Aires, Repùblica Argentina, 2009.
+Grodos, D; de Béthune, X. “La intervenciones sanitarias selectivas: Una trampa para las políticas de salud del Tercer
+Mundo. Traducido de Soc. Sci. Med. Vol. 26, Nº 9, 1988. En Cuadernos Médicos Sociales, nº46, 1988.
+74   Participación Comunitaria y Tuberculosis | Guía para el Equipo de Salud del Primer Nivel de Atención |
+
+
+
+
+      Instituto de Enfermedades Respiratorias - INER “Dr. Emilio Coni” Normas técnicas del Programa de
+      Control de Tuberculosis”, 2006 (en prensa).
+      Kelly, J. G. et al. “Psicología Comunitaria. El enfoque ecológico-contextualista”. Centro Editor de América
+      Latina S.A. 1992.
+      Kroeger, A.; Luna, R. (comp.) “Atención Primaria de Salud. Principios y Métodos” OPS/OMS Serie Paltex
+      para Ejecutores de Programas de Salud Nº 10, 1987.
+      Mac Daniel; Campbell; Seaburn. Orientación Familiar en Atención Primaria, Manual para médicos de familia
+      y otros profesionales de la salud. Editorial Springer- Verlag Ibérica. Edición en Español, 1998.
+      Maniei, Haleh; Capalbo, Lucio. La Expresión Social de la Conciencia Planetaria. Reflexiones acerca de los
+      Procesos de las Organizaciones de la Sociedad Civil. CICCUS - UNIDA, Buenos Aires, 2007.
+      Mele, Daniela; Casullo, Carolina. Manual de promoción de la salud: experiencias provinciales. 1ª ed.
+      Ministerio de Salud de la Nación, Buenos Aires, República Argentina, 2010.
+      Mitzberg. “La estructuración de las organizaciones” Editorial Ariel Barcelona, 1991.
+      Montero, Maritza. Introducción a la Psicología Comunitaria. Desarrollo, conceptos y procesos Paidos. 1era
+      edición 2004. Buenos Aires.
+      Olcese, Martín. “Participación Comunitaria en Programas de APS”, tesis de Maestría en Salud Pública. UNR, 2004.
+      Olcese, Martín. “Participación Comunitaria en el Control de la Tuberculosis en Comunidades Aborígenes de
+      la Provincia de Formosa”. Informe técnico presentado en la XXXVIª Reunión del Consejo Confederal de Control
+      de la Tuberculosis. INER “Dr. Emilio Coni”, Santa fe, 2004.
+      Olcese, Martín. Participación comunitaria. Documento Técnico INER “Dr. E. Coni” CAP.TB. Doc. Tec. 07/06
+      OPS/OMS Documentos del “Seminario sobre Usos y Perspectivas de la Epidemiología. Buenos Aires
+      (Argentina)” Publicación Nº PNSP 84-87, 1984.
+      OPS/OMS “Investigaciones sobre servicios de salud. Una Antología” Publicación científica Nº 534, 1992.
+      OPS/OMS. “Uso de los Sistemas de Información Geográfica en Epidemiología” Boletín epidemiológico Vol.
+      17, Nº 1, 1996.
+      OPS/OMS. Planificación Local Participativa. Metodología para la Promoción de la Salud en América Latina y
+      el Caribe. Serie Paltex, Washington, DC, 1999.
+      OPS/OMS. Documento de Referencia. “Participación Comunitaria en Programas de Prevención y Control de
+      Dengue y de la FHD”, 2001.
+      Paganini, J.M.; Capote Mir, R. (comp.). “Los Sistemas Locales de Salud”. Washington. OPS. 1990.
+      Saforcada, E. “Psicología Sanitaria. Análisis crítico de los sistemas de atención de la salud” Piados. Buenos Aires, 1999.
+      Siede; Roa; Ruiz. Medicina Familiar. Hacia un nuevo modelo de atención de la salud. Principios y
+      herramientas. Akadia, Buenos Aires, 1997 Buenos Aires.
+      Watzlawick, P. (comp.) “La realidad inventada. ¿Cómo sabemos lo que creemos saber?” Gedisa Editorial, 1990.
+
