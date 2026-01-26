@@ -1,25 +1,29 @@
+# src/tbtst_bot/app.py
 from __future__ import annotations
 
 from typing import Any, Dict, Optional
 from pathlib import Path
 from datetime import datetime
 from uuid import uuid4
+import argparse
 import os
 
 from langchain_core.messages import HumanMessage
 
-# Prefer package import (works with `python -m tbtst_bot.app`)
 try:
-    from .graph import GRAPH
+    from .graph import GRAPH_DBT_MINI, GRAPH_DBT_FULL
 except Exception:  # pragma: no cover
-    # Fallback for direct execution in some setups
-    from tbtst_bot.graph import GRAPH
+    from tbtst_bot.graph import GRAPH_DBT_MINI, GRAPH_DBT_FULL
 
 
 BANNER = """TB-TST Helper (LangGraph + AWS Bedrock)
 
 Flow:
   classify (safety + route) → (crisis | RAG FAQ | DBT) → reply
+
+Variants:
+  mini  (baseline DBT node)
+  full  (DBT subgraph: brain router → DT/MIND/ER/IE)
 
 Commands:
   :graph               Save graph as PNG (default filename with timestamp)
@@ -28,15 +32,17 @@ Commands:
 """
 
 
-def save_graph_files(prefix: Optional[str] = None) -> tuple[Path, Path]:
-    """
-    Saves:
-      <prefix>.mmd  Mermaid diagram text
-      <prefix>.png  Rendered PNG (via draw_mermaid_png; uses Mermaid.ink by default)
+def select_graph(variant: str):
+    v = (variant or "mini").strip().lower()
+    if v == "full":
+        return GRAPH_DBT_FULL, "full"
+    if v == "mini":
+        return GRAPH_DBT_MINI, "mini"
+    raise ValueError(f"Unknown variant: {variant!r}. Use 'mini' or 'full'.")
 
-    Returns (mmd_path, png_path)
-    """
-    g = GRAPH.get_graph()
+
+def save_graph_files(graph, prefix: Optional[str] = None) -> tuple[Path, Path]:
+    g = graph.get_graph()
 
     if prefix is None or not prefix.strip():
         prefix = f"tbtst_graph_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
@@ -46,19 +52,34 @@ def save_graph_files(prefix: Optional[str] = None) -> tuple[Path, Path]:
     png_path = prefix_path.with_suffix(".png")
 
     mmd_path.write_text(g.draw_mermaid(), encoding="utf-8")
-
-    png_bytes = g.draw_mermaid_png()
-    png_path.write_bytes(png_bytes)
+    png_path.write_bytes(g.draw_mermaid_png())
 
     return mmd_path, png_path
 
 
 def main() -> None:
-    # Stable thread id for this CLI session
-    thread_id = os.getenv("THREAD_ID", f"cli-{uuid4().hex[:8]}")
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--variant",
+        choices=["mini", "full"],
+        default="mini",
+        help="Which DBT implementation to use.",
+    )
+    parser.add_argument(
+        "--thread-id",
+        default=None,
+        help="Optional thread id. If omitted, a new one is generated.",
+    )
+    args = parser.parse_args()
+
+    graph, variant = select_graph(args.variant)
+
+    # Separate memory per variant: suffix the thread id with :{variant}
+    base_thread = args.thread_id or os.getenv("THREAD_ID") or f"cli-{uuid4().hex[:8]}"
+    thread_id = f"{base_thread}:{variant}"
 
     print(BANNER)
-    print(f"(thread_id: {thread_id})\n")
+    print(f"(variant: {variant}, thread_id: {thread_id})\n")
 
     while True:
         try:
@@ -73,21 +94,19 @@ def main() -> None:
         if not user:
             continue
 
-        # --- graph export command ---
         if user.startswith(":graph"):
             parts = user.split(maxsplit=1)
             prefix = parts[1].strip() if len(parts) == 2 else None
             try:
-                mmd_path, png_path = save_graph_files(prefix)
+                mmd_path, png_path = save_graph_files(graph, prefix)
                 print(f"\n✅ Saved Mermaid: {mmd_path}")
                 print(f"✅ Saved PNG:    {png_path}\n")
             except Exception as e:
                 print(f"\n❌ Failed to save graph: {type(e).__name__}: {e}\n")
             continue
 
-        # --- normal chat ---
         try:
-            final: Dict[str, Any] = GRAPH.invoke(
+            final: Dict[str, Any] = graph.invoke(
                 {"messages": [HumanMessage(content=user)]},
                 config={"configurable": {"thread_id": thread_id}},
             )
