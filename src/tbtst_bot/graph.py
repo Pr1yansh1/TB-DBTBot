@@ -2,6 +2,11 @@
 from __future__ import annotations
 
 import json
+import logging
+import os
+import time
+import uuid
+from dataclasses import dataclass
 from typing import Any, Dict, List, Literal, Set, Tuple
 
 from pydantic import BaseModel, Field, ValidationError
@@ -20,6 +25,23 @@ except Exception:  # pragma: no cover
 from .config import get_llm
 from .prompts import load_prompt
 from .rag_utils import retrieve_tb_docs
+
+
+# =========================================================
+# Logging / tracing knobs (env)
+# =========================================================
+# Turn on per-call trace logs:
+#   TBTST_DEBUG_METRICS=1
+# Log prompt file token/line sizes once at startup:
+#   TBTST_LOG_PROMPT_SIZES=1
+# Choose log level:
+#   TBTST_LOG_LEVEL=INFO|DEBUG
+LOG_LEVEL = os.getenv("TBTST_LOG_LEVEL", "INFO").upper()
+logging.basicConfig(level=getattr(logging, LOG_LEVEL, logging.INFO))
+logger = logging.getLogger("tbtst.graph")
+
+DEBUG_METRICS = os.getenv("TBTST_DEBUG_METRICS", "0") == "1"
+LOG_PROMPT_SIZES = os.getenv("TBTST_LOG_PROMPT_SIZES", "0") == "1"
 
 
 # =========================================================
@@ -86,20 +108,18 @@ class State(MessagesState, total=False):
     # short-term memory management (rolling summary)
     summary: str
 
+    # optional: stored for debugging if you want it
+    last_trace_id: str
+
 
 # =========================================================
 # Memory / context management settings
 # =========================================================
-# When the thread gets longer than this (approx tokens), we update summary + delete older messages.
 MAX_TOKENS_BEFORE_SUMMARY = 2200
-
-# After summarizing, keep the last K messages verbatim
 KEEP_LAST_MESSAGES = 8
 
-# Target max tokens for what we SEND to the model (recent messages only).
-# We keep headroom for system prompts + summary by dynamically reducing this further per call.
+# Target max tokens for recent messages sent to LLM; we dynamically subtract system+summary.
 LLM_RECENT_MESSAGES_MAX_TOKENS = 1400
-
 
 SUMMARY_SYSTEM = """You maintain a compact, factual rolling summary of a multi-turn conversation for a coaching chatbot.
 Goal: preserve details that prevent repeated questions and keep continuity.
@@ -112,7 +132,104 @@ Be concise. No speculation. Output ONLY the updated summary text."""
 
 
 # =========================================================
-# Helpers
+# Trace + metrics helpers
+# =========================================================
+def _trace_id_for_state(state: State) -> str:
+    """
+    Best-effort per-turn trace id to correlate logs across nodes.
+    Uses the most recent human message id if available, otherwise a random uuid.
+    """
+    msgs: List[BaseMessage] = state.get("messages", []) or []
+    for m in reversed(msgs):
+        if isinstance(m, HumanMessage):
+            mid = getattr(m, "id", None)
+            if mid:
+                return str(mid)
+            break
+    return uuid.uuid4().hex[:10]
+
+
+def _tokens(messages: List[BaseMessage]) -> int:
+    return int(count_tokens_approximately(messages))
+
+
+@dataclass
+class CallMetrics:
+    name: str
+    trace_id: str
+    latency_ms: float
+    in_tokens: int
+    out_chars: int
+
+
+def _timed_invoke(name: str, llm: Any, messages: List[BaseMessage], *, trace_id: str) -> Tuple[Any, CallMetrics]:
+    t0 = time.perf_counter()
+    resp = llm.invoke(messages)
+    dt_ms = (time.perf_counter() - t0) * 1000.0
+
+    m = CallMetrics(
+        name=name,
+        trace_id=trace_id,
+        latency_ms=dt_ms,
+        in_tokens=_tokens(messages),
+        out_chars=len((getattr(resp, "content", "") or "")),
+    )
+
+    if DEBUG_METRICS:
+        logger.info(
+            "[TRACE %s] [LLM] %s latency=%.1fms in_tokens~%d out_chars=%d",
+            m.trace_id,
+            m.name,
+            m.latency_ms,
+            m.in_tokens,
+            m.out_chars,
+        )
+    return resp, m
+
+
+def _timed_tool(name: str, fn: Any, args: Dict[str, Any], *, trace_id: str) -> Any:
+    t0 = time.perf_counter()
+    out = fn.invoke(args)
+    dt_ms = (time.perf_counter() - t0) * 1000.0
+
+    if DEBUG_METRICS:
+        n_sources = 0
+        if isinstance(out, dict) and isinstance(out.get("sources"), list):
+            n_sources = len(out["sources"])
+        logger.info(
+            "[TRACE %s] [TOOL] %s latency=%.1fms sources=%d",
+            trace_id,
+            name,
+            dt_ms,
+            n_sources,
+        )
+    return out
+
+
+def _log_prompt_sizes_once() -> None:
+    if not LOG_PROMPT_SIZES:
+        return
+
+    prompts: Dict[str, str] = {
+        "GLOBAL_RULES": GLOBAL_RULES,
+        "CLASSIFY_SYSTEM": CLASSIFY_SYSTEM,
+        "DBT_SYSTEM": DBT_SYSTEM,
+        "DBT_BRAIN_ROUTER_SYSTEM": DBT_BRAIN_ROUTER_SYSTEM,
+        "DBT_DT_SYSTEM": DBT_DT_SYSTEM,
+        "DBT_MIND_SYSTEM": DBT_MIND_SYSTEM,
+        "DBT_ER_SYSTEM": DBT_ER_SYSTEM,
+        "DBT_IE_SYSTEM": DBT_IE_SYSTEM,
+        "TB_RAG_ANSWER_SYSTEM": TB_RAG_ANSWER_SYSTEM,
+    }
+    for name, text in prompts.items():
+        lines = len((text or "").splitlines())
+        chars = len(text or "")
+        toks = _tokens([SystemMessage(content=text or "")])
+        logger.info("[PROMPT_FILE] %s lines=%d chars=%d tokens~%d", name, lines, chars, toks)
+
+
+# =========================================================
+# Core helpers
 # =========================================================
 def _latest_user_text(messages: List[BaseMessage]) -> str:
     for m in reversed(messages or []):
@@ -135,11 +252,10 @@ class ClassifyOut(BaseModel):
 def _coerce_and_validate_classifier(data: Dict[str, Any]) -> Tuple[Dict[str, Any], bool]:
     """
     Returns (normalized_dict, parse_ok).
-    Normalization is conservative: if required fields are missing or invalid, parse_ok=False.
+    Normalization is conservative: if required fields are missing/invalid, parse_ok=False.
     """
     try:
         obj = ClassifyOut.model_validate(data)
-        # ensure triggers is list of short strings
         triggers = [t for t in (obj.safety_triggers or []) if isinstance(t, str)]
         out = {
             "safety_risk_level": obj.safety_risk_level,
@@ -183,11 +299,7 @@ def _format_sources_block(sources: List[Dict[str, Any]]) -> str:
     return "\n".join(parts).strip()
 
 
-def _render_answer_with_references(
-    answer_text: str,
-    sources: List[Dict[str, Any]],
-    citations_used: List[int],
-) -> str:
+def _render_answer_with_references(answer_text: str, sources: List[Dict[str, Any]], citations_used: List[int]) -> str:
     src_by_id: Dict[int, Dict[str, Any]] = {}
     for s in sources:
         try:
@@ -214,13 +326,8 @@ def _render_answer_with_references(
 
 
 def _trim_for_llm(messages: List[BaseMessage], *, max_tokens: int) -> List[BaseMessage]:
-    """
-    Trim what we SEND to the model (doesn't mutate graph state).
-    Keeps the most recent content and ensures we start on a human message.
-    """
     if not messages:
         return []
-
     return trim_messages(
         messages,
         strategy="last",
@@ -247,21 +354,37 @@ def _system_and_summary_messages(system_prompt: str, summary: str) -> List[BaseM
     return msgs
 
 
-def _llm_messages_with_summary(system_prompt: str, state: State) -> List[BaseMessage]:
+def _llm_messages_with_summary(system_prompt: str, state: State, *, trace_id: str, label: str) -> List[BaseMessage]:
     """
     Construct model input:
       - System (GLOBAL_RULES + module prompt)
       - Optional summary as SystemMessage
-      - Trimmed recent messages, with headroom.
+      - Trimmed recent messages, with headroom
+    Also logs token breakdown when DEBUG_METRICS=1.
     """
     summary = (state.get("summary") or "").strip()
     prefix = _system_and_summary_messages(system_prompt, summary)
 
-    # Budget headroom: compute tokens taken by system+summary, reduce budget for recent messages.
-    base_tokens = count_tokens_approximately(prefix)
+    base_tokens = _tokens(prefix)
     recent_budget = max(256, LLM_RECENT_MESSAGES_MAX_TOKENS - base_tokens)
-
     recent = _trim_for_llm(state.get("messages", []), max_tokens=recent_budget)
+
+    if DEBUG_METRICS:
+        sys_tokens = _tokens([prefix[0]])
+        summ_tokens = _tokens(prefix[1:]) if len(prefix) > 1 else 0
+        recent_tokens = _tokens(recent)
+        total = sys_tokens + summ_tokens + recent_tokens
+        logger.info(
+            "[TRACE %s] [PROMPT:%s] sys~%d summary~%d recent~%d recent_budget~%d total~%d",
+            trace_id,
+            label,
+            sys_tokens,
+            summ_tokens,
+            recent_tokens,
+            int(recent_budget),
+            total,
+        )
+
     return [*prefix, *recent]
 
 
@@ -269,8 +392,13 @@ def _llm_messages_with_summary(system_prompt: str, state: State) -> List[BaseMes
 # Nodes: classify + safety
 # =========================================================
 def classify_node(state: State) -> Dict[str, Any]:
+    trace_id = _trace_id_for_state(state)
+    state["last_trace_id"] = trace_id  # optional, helps debug in state dumps
+
     user_text = _latest_user_text(state.get("messages", []))
     if not user_text.strip():
+        if DEBUG_METRICS:
+            logger.info("[TRACE %s] classify empty input -> route=misc", trace_id)
         return {
             "safety_risk_level": "none",
             "safety_triggers": [],
@@ -283,50 +411,58 @@ def classify_node(state: State) -> Dict[str, Any]:
         }
 
     user_prompt = _safe_fill_user_text(CLASSIFY_USER_TMPL, user_text)
-
     llm = get_llm(temperature=0.0, max_tokens=220)
 
     # First attempt
-    raw_msg = llm.invoke([SystemMessage(content=CLASSIFY_SYSTEM), HumanMessage(content=user_prompt)])
+    raw_msg, _ = _timed_invoke(
+        "classify:first",
+        llm,
+        [SystemMessage(content=CLASSIFY_SYSTEM), HumanMessage(content=user_prompt)],
+        trace_id=trace_id,
+    )
     raw1 = (raw_msg.content or "").strip()
     parsed1, ok1 = _parse_classifier_json(raw1)
 
-    # Retry ONLY when:
-    # - parse failed OR
-    # - model returned "uncertain" without clear self-harm/death triggers (often a sign of confusion)
-    need_retry = (not ok1) or (
-        parsed1.get("safety_risk_level") == "uncertain" and not (parsed1.get("safety_triggers") or [])
-    )
+    # Retry when parse failed OR uncertain without triggers (often formatting/behavioral drift).
+    need_retry = (not ok1) or (parsed1.get("safety_risk_level") == "uncertain" and not (parsed1.get("safety_triggers") or []))
 
     raw = raw1
     parsed = parsed1
     ok = ok1
 
     if need_retry:
-        retry_system = (
-            CLASSIFY_SYSTEM.strip()
-            + "\n\nREMINDER: Output EXACTLY one line of STRICT JSON with only the required keys. No extra text."
+        retry_system = CLASSIFY_SYSTEM.strip() + "\n\nREMINDER: Output EXACTLY one line of STRICT JSON with only the required keys. No extra text."
+        raw_msg2, _ = _timed_invoke(
+            "classify:retry",
+            llm,
+            [SystemMessage(content=retry_system), HumanMessage(content=user_prompt)],
+            trace_id=trace_id,
         )
-        raw_msg2 = llm.invoke([SystemMessage(content=retry_system), HumanMessage(content=user_prompt)])
         raw2 = (raw_msg2.content or "").strip()
         parsed2, ok2 = _parse_classifier_json(raw2)
 
-        # Prefer a successful parse; otherwise keep the first attempt but make it non-escalatory.
         if ok2:
             raw, parsed, ok = raw2, parsed2, ok2
         else:
-            # Non-escalatory safe fallback
+            # Non-escalatory fallback: do not force crisis on parse failure.
             raw, parsed, ok = raw1, {"safety_risk_level": "none", "safety_triggers": [], "has_protective": False, "route": "misc"}, False
 
     risk: RiskLevel = parsed["safety_risk_level"]
     route: Route = parsed["route"]
 
-    # IMPORTANT FIX:
-    # crisis is only for explicit passive/active categories.
-    # "uncertain" stays "ok" and can be handled by downstream content route.
-    safety_route: Literal["ok", "crisis"] = (
-        "crisis" if risk in ("passive", "active_no_plan", "active_with_plan") else "ok"
-    )
+    # IMPORTANT: crisis only for explicit passive/active categories (not uncertain).
+    safety_route: Literal["ok", "crisis"] = "crisis" if risk in ("passive", "active_no_plan", "active_with_plan") else "ok"
+
+    if DEBUG_METRICS:
+        logger.info(
+            "[TRACE %s] classify result risk=%s safety_route=%s route=%s parse_ok=%s triggers=%s",
+            trace_id,
+            risk,
+            safety_route,
+            route,
+            ok,
+            parsed.get("safety_triggers", []),
+        )
 
     return {
         "safety_risk_level": risk,
@@ -341,7 +477,7 @@ def classify_node(state: State) -> Dict[str, Any]:
 
 
 def crisis_node(state: State) -> Dict[str, Any]:
-    # crisis.txt is already a fully-formed user-facing message.
+    # crisis.txt is already user-facing.
     return {"messages": [AIMessage(content=CRISIS_TEXT)]}
 
 
@@ -349,16 +485,20 @@ def crisis_node(state: State) -> Dict[str, Any]:
 # Memory manager node (summarize + delete)
 # =========================================================
 def memory_manager_node(state: State) -> Dict[str, Any]:
+    trace_id = state.get("last_trace_id") or _trace_id_for_state(state)
+
     messages: List[BaseMessage] = state.get("messages", [])
     if not messages:
         return {}
 
-    approx_tokens = count_tokens_approximately(messages)
+    approx_tokens = int(count_tokens_approximately(messages))
+    if DEBUG_METRICS:
+        logger.info("[TRACE %s] memory check messages=%d tokens~%d", trace_id, len(messages), approx_tokens)
+
     if approx_tokens < MAX_TOKENS_BEFORE_SUMMARY:
         return {}
 
     existing_summary = (state.get("summary") or "").strip()
-
     if existing_summary:
         summary_message = (
             f"Resumen existente:\n{existing_summary}\n\n"
@@ -369,16 +509,26 @@ def memory_manager_node(state: State) -> Dict[str, Any]:
 
     summarizer = get_llm(temperature=0.0, max_tokens=256)
     summary_input = [SystemMessage(content=SUMMARY_SYSTEM), *messages, HumanMessage(content=summary_message)]
-    resp = summarizer.invoke(summary_input)
+
+    resp, m = _timed_invoke("summarize", summarizer, summary_input, trace_id=trace_id)
     new_summary = (resp.content or "").strip()
 
-    # Delete older messages from state; keep last K verbatim.
+    # Delete older messages; keep last K verbatim.
     to_remove: List[Any] = []
     if len(messages) > KEEP_LAST_MESSAGES:
-        for m in messages[:-KEEP_LAST_MESSAGES]:
-            mid = getattr(m, "id", None)
+        for msg in messages[:-KEEP_LAST_MESSAGES]:
+            mid = getattr(msg, "id", None)
             if mid:
                 to_remove.append(RemoveMessage(id=mid))
+
+    if DEBUG_METRICS:
+        logger.info(
+            "[TRACE %s] memory summarized -> new_summary_chars=%d removed=%d (kept=%d)",
+            trace_id,
+            len(new_summary),
+            len(to_remove),
+            KEEP_LAST_MESSAGES,
+        )
 
     out: Dict[str, Any] = {"summary": new_summary}
     if to_remove:
@@ -390,8 +540,10 @@ def memory_manager_node(state: State) -> Dict[str, Any]:
 # DBT MINI node
 # =========================================================
 def dbt_mini_node(state: State) -> Dict[str, Any]:
+    trace_id = state.get("last_trace_id") or _trace_id_for_state(state)
     llm = get_llm(temperature=0.25, max_tokens=900)
-    reply = llm.invoke(_llm_messages_with_summary(DBT_SYSTEM, state))
+    msgs = _llm_messages_with_summary(DBT_SYSTEM, state, trace_id=trace_id, label="dbt_mini")
+    reply, _ = _timed_invoke("dbt:mini", llm, msgs, trace_id=trace_id)
     return {"messages": [AIMessage(content=reply.content or "")]}
 
 
@@ -404,33 +556,51 @@ class TBAnswerJSON(BaseModel):
 
 
 def tb_info_node(state: State) -> Dict[str, Any]:
+    trace_id = state.get("last_trace_id") or _trace_id_for_state(state)
+
     user_text = _latest_user_text(state.get("messages", []))
     if not user_text.strip():
         return {"messages": [AIMessage(content="")]}
 
-    tool_out = retrieve_tb_docs.invoke({"query": user_text})
+    tool_out = _timed_tool("retrieve_tb_docs", retrieve_tb_docs, {"query": user_text}, trace_id=trace_id)
     sources = tool_out.get("sources", []) if isinstance(tool_out, dict) else []
 
     sources_block = _format_sources_block(sources)
-    user_prompt = (
-        TB_RAG_ANSWER_USER_TMPL.replace("{user_text}", user_text).replace("{sources_block}", sources_block)
-    )
+    user_prompt = TB_RAG_ANSWER_USER_TMPL.replace("{user_text}", user_text).replace("{sources_block}", sources_block)
 
-    # IMPORTANT FIX: summary is a SystemMessage, not injected into HumanMessage.
+    # IMPORTANT: summary is a SystemMessage, not injected into HumanMessage.
     summary = (state.get("summary") or "").strip()
     prefix = _system_and_summary_messages(TB_RAG_ANSWER_SYSTEM, summary)
 
-    llm = get_llm(temperature=0.2, max_tokens=700)
-    result = llm.with_structured_output(TBAnswerJSON).invoke(
-        [
-            *prefix,
-            HumanMessage(content=user_prompt),
-        ]
-    )
+    if DEBUG_METRICS:
+        sys_tokens = _tokens(prefix)
+        human_tokens = _tokens([HumanMessage(content=user_prompt)])
+        logger.info(
+            "[TRACE %s] [PROMPT:tb_info] prefix~%d human~%d total~%d sources=%d",
+            trace_id,
+            sys_tokens,
+            human_tokens,
+            sys_tokens + human_tokens,
+            len(sources),
+        )
 
-    final_text = _render_answer_with_references(
-        answer_text=result.answer, sources=sources, citations_used=result.citations_used
-    )
+    llm = get_llm(temperature=0.2, max_tokens=700).with_structured_output(TBAnswerJSON)
+
+    t0 = time.perf_counter()
+    result = llm.invoke([*prefix, HumanMessage(content=user_prompt)])
+    dt_ms = (time.perf_counter() - t0) * 1000.0
+
+    if DEBUG_METRICS:
+        logger.info(
+            "[TRACE %s] [LLM] tb_info latency=%.1fms in_tokens~%d out_answer_chars=%d cited=%s",
+            trace_id,
+            dt_ms,
+            _tokens([*prefix, HumanMessage(content=user_prompt)]),
+            len((result.answer or "")),
+            result.citations_used,
+        )
+
+    final_text = _render_answer_with_references(answer_text=result.answer, sources=sources, citations_used=result.citations_used)
     return {"messages": [AIMessage(content=final_text)]}
 
 
@@ -438,8 +608,10 @@ def tb_info_node(state: State) -> Dict[str, Any]:
 # MISC node (meta, greetings, off-topic)
 # =========================================================
 def misc_node(state: State) -> Dict[str, Any]:
+    trace_id = state.get("last_trace_id") or _trace_id_for_state(state)
     llm = get_llm(temperature=0.2, max_tokens=350)
-    reply = llm.invoke(_llm_messages_with_summary(MISC_SYSTEM, state))
+    msgs = _llm_messages_with_summary(MISC_SYSTEM, state, trace_id=trace_id, label="misc")
+    reply, _ = _timed_invoke("misc", llm, msgs, trace_id=trace_id)
     return {"messages": [AIMessage(content=reply.content or "")]}
 
 
@@ -462,7 +634,8 @@ class DBTBrainOut(BaseModel):
 
 
 def dbt_brain_router_node(state: State) -> Dict[str, Any]:
-    """Classifies one DBT module. Not user-facing."""
+    trace_id = state.get("last_trace_id") or _trace_id_for_state(state)
+
     user_text = _latest_user_text(state.get("messages", []))
     if not user_text.strip():
         return {
@@ -473,10 +646,22 @@ def dbt_brain_router_node(state: State) -> Dict[str, Any]:
             "dbt_router_raw": "",
         }
 
-    llm = get_llm(temperature=0.0, max_tokens=220)
-    result = llm.with_structured_output(DBTBrainOut).invoke(
-        [SystemMessage(content=DBT_BRAIN_ROUTER_SYSTEM), HumanMessage(content=user_text)]
-    )
+    llm = get_llm(temperature=0.0, max_tokens=220).with_structured_output(DBTBrainOut)
+
+    msgs = [SystemMessage(content=DBT_BRAIN_ROUTER_SYSTEM), HumanMessage(content=user_text)]
+    t0 = time.perf_counter()
+    result = llm.invoke(msgs)
+    dt_ms = (time.perf_counter() - t0) * 1000.0
+
+    if DEBUG_METRICS:
+        logger.info(
+            "[TRACE %s] [LLM] dbt_brain latency=%.1fms in_tokens~%d module=%s conf=%.2f",
+            trace_id,
+            dt_ms,
+            _tokens(msgs),
+            result.module,
+            float(result.confidence),
+        )
 
     return {
         "dbt_module": result.module,
@@ -487,26 +672,28 @@ def dbt_brain_router_node(state: State) -> Dict[str, Any]:
     }
 
 
-def _dbt_module_agent(system_prompt: str, state: State) -> Dict[str, Any]:
+def _dbt_module_agent(system_prompt: str, state: State, *, label: str) -> Dict[str, Any]:
+    trace_id = state.get("last_trace_id") or _trace_id_for_state(state)
     llm = get_llm(temperature=0.25, max_tokens=900)
-    reply = llm.invoke(_llm_messages_with_summary(system_prompt, state))
+    msgs = _llm_messages_with_summary(system_prompt, state, trace_id=trace_id, label=label)
+    reply, _ = _timed_invoke(f"dbt:{label}", llm, msgs, trace_id=trace_id)
     return {"messages": [AIMessage(content=reply.content or "")]}
 
 
 def dbt_dt_node(state: State) -> Dict[str, Any]:
-    return _dbt_module_agent(DBT_DT_SYSTEM, state)
+    return _dbt_module_agent(DBT_DT_SYSTEM, state, label="DT")
 
 
 def dbt_mind_node(state: State) -> Dict[str, Any]:
-    return _dbt_module_agent(DBT_MIND_SYSTEM, state)
+    return _dbt_module_agent(DBT_MIND_SYSTEM, state, label="MIND")
 
 
 def dbt_er_node(state: State) -> Dict[str, Any]:
-    return _dbt_module_agent(DBT_ER_SYSTEM, state)
+    return _dbt_module_agent(DBT_ER_SYSTEM, state, label="ER")
 
 
 def dbt_ie_node(state: State) -> Dict[str, Any]:
-    return _dbt_module_agent(DBT_IE_SYSTEM, state)
+    return _dbt_module_agent(DBT_IE_SYSTEM, state, label="IE")
 
 
 def branch_after_dbt_brain(state: State) -> DBTModule:
@@ -522,11 +709,7 @@ def build_dbt_full_subgraph():
     sg.add_node("IE", dbt_ie_node)
 
     sg.add_edge(START, "dbt_brain")
-    sg.add_conditional_edges(
-        "dbt_brain",
-        branch_after_dbt_brain,
-        {"DT": "DT", "MIND": "MIND", "ER": "ER", "IE": "IE"},
-    )
+    sg.add_conditional_edges("dbt_brain", branch_after_dbt_brain, {"DT": "DT", "MIND": "MIND", "ER": "ER", "IE": "IE"})
     sg.add_edge("DT", END)
     sg.add_edge("MIND", END)
     sg.add_edge("ER", END)
@@ -566,12 +749,7 @@ def build_graph(*, dbt_node: Any):
     g.add_edge(START, "classify")
     g.add_edge("classify", "memory")
 
-    # Route AFTER memory management
-    g.add_conditional_edges(
-        "memory",
-        branch_after_classify,
-        {"crisis": "crisis", "tb_info": "tb_info", "dbt": "dbt", "misc": "misc"},
-    )
+    g.add_conditional_edges("memory", branch_after_classify, {"crisis": "crisis", "tb_info": "tb_info", "dbt": "dbt", "misc": "misc"})
 
     g.add_edge("crisis", END)
     g.add_edge("tb_info", END)
@@ -584,4 +762,8 @@ def build_graph(*, dbt_node: Any):
 # Public compiled graphs
 GRAPH_DBT_MINI = build_graph(dbt_node=dbt_mini_node)
 GRAPH_DBT_FULL = build_graph(dbt_node=DBT_FULL_SUBGRAPH)
+
+
+# Emit prompt size report once at import (if enabled)
+_log_prompt_sizes_once()
 
