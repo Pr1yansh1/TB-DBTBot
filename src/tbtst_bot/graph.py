@@ -2,7 +2,8 @@
 from __future__ import annotations
 
 import json
-import logging
+import logging 
+import random
 import os
 import time
 import uuid
@@ -115,11 +116,11 @@ class State(MessagesState, total=False):
 # =========================================================
 # Memory / context management settings
 # =========================================================
-MAX_TOKENS_BEFORE_SUMMARY = 2200
+MAX_TOKENS_BEFORE_SUMMARY = 4500
 KEEP_LAST_MESSAGES = 8
 
 # Target max tokens for recent messages sent to LLM; we dynamically subtract system+summary.
-LLM_RECENT_MESSAGES_MAX_TOKENS = 1400
+LLM_RECENT_MESSAGES_MAX_TOKENS = 1800
 
 SUMMARY_SYSTEM = """You maintain a compact, factual rolling summary of a multi-turn conversation for a coaching chatbot.
 Goal: preserve details that prevent repeated questions and keep continuity.
@@ -162,30 +163,52 @@ class CallMetrics:
     out_chars: int
 
 
+def _is_throttle_error(e: Exception) -> bool:
+    msg = str(e)
+    return ("ThrottlingException" in msg) or ("Too many requests" in msg) or ("Rate exceeded" in msg)
+
 def _timed_invoke(name: str, llm: Any, messages: List[BaseMessage], *, trace_id: str) -> Tuple[Any, CallMetrics]:
     t0 = time.perf_counter()
-    resp = llm.invoke(messages)
-    dt_ms = (time.perf_counter() - t0) * 1000.0
 
-    m = CallMetrics(
-        name=name,
-        trace_id=trace_id,
-        latency_ms=dt_ms,
-        in_tokens=_tokens(messages),
-        out_chars=len((getattr(resp, "content", "") or "")),
-    )
+    last_exc: Exception | None = None
+    for attempt in range(6):  # 1 initial + 5 retries
+        try:
+            resp = llm.invoke(messages)
+            dt_ms = (time.perf_counter() - t0) * 1000.0
 
-    if DEBUG_METRICS:
-        logger.info(
-            "[TRACE %s] [LLM] %s latency=%.1fms in_tokens~%d out_chars=%d",
-            m.trace_id,
-            m.name,
-            m.latency_ms,
-            m.in_tokens,
-            m.out_chars,
-        )
-    return resp, m
+            m = CallMetrics(
+                name=name,
+                trace_id=trace_id,
+                latency_ms=dt_ms,
+                in_tokens=_tokens(messages),
+                out_chars=len((getattr(resp, "content", "") or "")),
+            )
 
+            if DEBUG_METRICS:
+                logger.info(
+                    "[TRACE %s] [LLM] %s latency=%.1fms in_tokens~%d out_chars=%d",
+                    m.trace_id,
+                    m.name,
+                    m.latency_ms,
+                    m.in_tokens,
+                    m.out_chars,
+                )
+            return resp, m
+
+        except Exception as e:
+            last_exc = e
+            if _is_throttle_error(e) and attempt < 5:
+                # exponential backoff + jitter (smooths bursts)
+                sleep_s = min(10.0, (2 ** attempt) * 0.6) + random.uniform(0.0, 0.35)
+                logger.warning(
+                    "[TRACE %s] [LLM] %s throttled; retrying in %.2fs (attempt %d/6)",
+                    trace_id, name, sleep_s, attempt + 1
+                )
+                time.sleep(sleep_s)
+                continue
+            raise
+
+    raise last_exc or RuntimeError("LLM invoke failed")
 
 def _timed_tool(name: str, fn: Any, args: Dict[str, Any], *, trace_id: str) -> Any:
     t0 = time.perf_counter()
