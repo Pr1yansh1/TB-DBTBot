@@ -1,0 +1,15 @@
+
+
+
+1. the dbt router only has last recent user messsage 
+
+
+2. how do solve mixed queries for eg alchoholism issue where its clearly both a TB realted symptom/medication side effect problem, but also is distressful for the patient mentally ? 
+
+
+3. Changing the DBT agent strucutre to be more elegant and inteliigent in its response instead of info dumping ?? 
+
+mode + continuity,,, active skill, active skill status fields could help . 
+
+
+
