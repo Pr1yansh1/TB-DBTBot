@@ -2,13 +2,13 @@
 from __future__ import annotations
 
 import json
-import logging 
+import logging
 import random
 import os
 import time
 import uuid
 from dataclasses import dataclass
-from typing import Any, Dict, List, Literal, Set, Tuple
+from typing import Any, Dict, List, Literal, Set, Tuple, Optional
 
 from pydantic import BaseModel, Field, ValidationError
 
@@ -31,12 +31,9 @@ from .rag_utils import retrieve_tb_docs
 # =========================================================
 # Logging / tracing knobs (env)
 # =========================================================
-# Turn on per-call trace logs:
-#   TBTST_DEBUG_METRICS=1
-# Log prompt file token/line sizes once at startup:
-#   TBTST_LOG_PROMPT_SIZES=1
-# Choose log level:
-#   TBTST_LOG_LEVEL=INFO|DEBUG
+# TBTST_DEBUG_METRICS=1
+# TBTST_LOG_PROMPT_SIZES=1
+# TBTST_LOG_LEVEL=INFO|DEBUG
 LOG_LEVEL = os.getenv("TBTST_LOG_LEVEL", "INFO").upper()
 logging.basicConfig(level=getattr(logging, LOG_LEVEL, logging.INFO))
 logger = logging.getLogger("tbtst.graph")
@@ -52,7 +49,6 @@ CLASSIFY_SYSTEM = load_prompt("classify_route.txt")
 CLASSIFY_USER_TMPL = load_prompt("classify_route_user.txt")
 CRISIS_TEXT = load_prompt("crisis.txt")
 
-# Global response rules applied to all user-facing responses
 GLOBAL_RULES = load_prompt("global_response_rules.txt")
 
 # DBT mini
@@ -69,7 +65,7 @@ DBT_IE_SYSTEM = load_prompt("DBT/ie_prompt.txt")
 TB_RAG_ANSWER_SYSTEM = load_prompt("tb_rag_answer_system.txt")
 TB_RAG_ANSWER_USER_TMPL = load_prompt("tb_rag_answer_user.txt")
 
-# Misc (meta / greetings / off-topic)
+# Misc (meta / greetings / off-topic) - Spanish only
 MISC_SYSTEM = """
 Sos un asistente de apoyo para una app de TB y bienestar.
 Tu tarea acá es responder mensajes "misc": saludos, dudas sobre el sistema, o cosas fuera de TB/DBT.
@@ -84,8 +80,10 @@ Si el usuario pide algo concreto, pedí 1 pregunta breve para orientar. No uses 
 RiskLevel = Literal["none", "passive", "active_no_plan", "active_with_plan", "uncertain"]
 Route = Literal["faq", "dbt", "misc"]
 
-# For DBT full router
 DBTModule = Literal["DT", "MIND", "ER", "IE"]
+DBTMode = Literal["connect", "offer", "coach"]
+DBTContinuity = Literal["same", "new", "unclear"]
+DBTSkillStatus = Literal["none", "offered", "accepted", "declined", "paused", "completed"]
 
 
 class State(MessagesState, total=False):
@@ -99,17 +97,23 @@ class State(MessagesState, total=False):
     classifier_raw: str
     classifier_parse_ok: bool
 
-    # dbt full router outputs (only set when route == "dbt")
+    # dbt full router outputs
     dbt_module: DBTModule
     dbt_confidence: float
     dbt_rationale_brief: str
     dbt_signals: Dict[str, Any]
     dbt_router_raw: str
 
+    # DBT conversational control (minimal but sufficient)
+    dbt_mode: DBTMode
+    dbt_continuity: DBTContinuity
+    dbt_active_skill: str
+    dbt_skill_status: DBTSkillStatus
+
     # short-term memory management (rolling summary)
     summary: str
 
-    # optional: stored for debugging if you want it
+    # optional: stored for debugging
     last_trace_id: str
 
 
@@ -119,27 +123,28 @@ class State(MessagesState, total=False):
 MAX_TOKENS_BEFORE_SUMMARY = 4500
 KEEP_LAST_MESSAGES = 8
 
-# Target max tokens for recent messages sent to LLM; we dynamically subtract system+summary.
 LLM_RECENT_MESSAGES_MAX_TOKENS = 1800
 
-SUMMARY_SYSTEM = """You maintain a compact, factual rolling summary of a multi-turn conversation for a coaching chatbot.
-Goal: preserve details that prevent repeated questions and keep continuity.
-Include:
-- Stable user facts/preferences (if any)
-- Key situation/context the user shared
-- What has been tried/decided
-- Constraints or safety-relevant details (only what the user said)
-Be concise. No speculation. Output ONLY the updated summary text."""
+SUMMARY_SYSTEM = """Sos un generador de resumen compacto y factual para un chatbot de apoyo (TB/DBT).
+Objetivo: mantener continuidad y evitar preguntas repetidas.
+Incluí SOLO:
+- Hechos estables del usuario (si existen)
+- Contexto clave del problema que compartió
+- Qué se intentó/decidió
+- Restricciones o detalles relevantes de seguridad (solo lo que el usuario dijo)
+- Estado DBT (muy importante):
+  - último módulo DBT activo (DT/MIND/ER/IE)
+  - modo DBT actual (connect/offer/coach)
+  - habilidad DBT activa (si hubo) y estado (offered/accepted/declined/paused/completed)
+  - si el usuario pidió desahogarse sin habilidades
+Sé breve. No inventes. Sin especulación.
+Salida: SOLO el texto del resumen actualizado."""
 
 
 # =========================================================
 # Trace + metrics helpers
 # =========================================================
 def _trace_id_for_state(state: State) -> str:
-    """
-    Best-effort per-turn trace id to correlate logs across nodes.
-    Uses the most recent human message id if available, otherwise a random uuid.
-    """
     msgs: List[BaseMessage] = state.get("messages", []) or []
     for m in reversed(msgs):
         if isinstance(m, HumanMessage):
@@ -166,6 +171,7 @@ class CallMetrics:
 def _is_throttle_error(e: Exception) -> bool:
     msg = str(e)
     return ("ThrottlingException" in msg) or ("Too many requests" in msg) or ("Rate exceeded" in msg)
+
 
 def _timed_invoke(name: str, llm: Any, messages: List[BaseMessage], *, trace_id: str) -> Tuple[Any, CallMetrics]:
     t0 = time.perf_counter()
@@ -198,7 +204,6 @@ def _timed_invoke(name: str, llm: Any, messages: List[BaseMessage], *, trace_id:
         except Exception as e:
             last_exc = e
             if _is_throttle_error(e) and attempt < 5:
-                # exponential backoff + jitter (smooths bursts)
                 sleep_s = min(10.0, (2 ** attempt) * 0.6) + random.uniform(0.0, 0.35)
                 logger.warning(
                     "[TRACE %s] [LLM] %s throttled; retrying in %.2fs (attempt %d/6)",
@@ -209,6 +214,7 @@ def _timed_invoke(name: str, llm: Any, messages: List[BaseMessage], *, trace_id:
             raise
 
     raise last_exc or RuntimeError("LLM invoke failed")
+
 
 def _timed_tool(name: str, fn: Any, args: Dict[str, Any], *, trace_id: str) -> Any:
     t0 = time.perf_counter()
@@ -273,10 +279,6 @@ class ClassifyOut(BaseModel):
 
 
 def _coerce_and_validate_classifier(data: Dict[str, Any]) -> Tuple[Dict[str, Any], bool]:
-    """
-    Returns (normalized_dict, parse_ok).
-    Normalization is conservative: if required fields are missing/invalid, parse_ok=False.
-    """
     try:
         obj = ClassifyOut.model_validate(data)
         triggers = [t for t in (obj.safety_triggers or []) if isinstance(t, str)]
@@ -314,10 +316,10 @@ def _format_sources_block(sources: List[Dict[str, Any]]) -> str:
         filename = s.get("filename", "unknown.txt")
         excerpt = (s.get("excerpt") or "").strip()
         parts.append(
-            f"Source {sid}:\n"
-            f"Title: {title}\n"
-            f"Filename: {filename}\n"
-            f"Excerpt:\n{excerpt}\n"
+            f"Fuente {sid}:\n"
+            f"Título: {title}\n"
+            f"Archivo: {filename}\n"
+            f"Extracto:\n{excerpt}\n"
         )
     return "\n".join(parts).strip()
 
@@ -368,8 +370,7 @@ def _system_and_summary_messages(system_prompt: str, summary: str) -> List[BaseM
         msgs.append(
             SystemMessage(
                 content=(
-                    "Memoria de conversación (concisa y factual). "
-                    "Usala para mantener continuidad y no repetir preguntas:\n"
+                    "Memoria de conversación (concisa y factual). Usala para mantener continuidad:\n"
                     f"{summary.strip()}"
                 )
             )
@@ -378,13 +379,6 @@ def _system_and_summary_messages(system_prompt: str, summary: str) -> List[BaseM
 
 
 def _llm_messages_with_summary(system_prompt: str, state: State, *, trace_id: str, label: str) -> List[BaseMessage]:
-    """
-    Construct model input:
-      - System (GLOBAL_RULES + module prompt)
-      - Optional summary as SystemMessage
-      - Trimmed recent messages, with headroom
-    Also logs token breakdown when DEBUG_METRICS=1.
-    """
     summary = (state.get("summary") or "").strip()
     prefix = _system_and_summary_messages(system_prompt, summary)
 
@@ -411,12 +405,80 @@ def _llm_messages_with_summary(system_prompt: str, state: State, *, trace_id: st
     return [*prefix, *recent]
 
 
+def _dbt_state_system_note(state: State) -> SystemMessage:
+    """
+    Nota de estado interno DBT (NO visible al usuario). Esto reemplaza regex:
+    el router y el agente usan esta información para decidir modo/continuidad.
+    """
+    mode: str = state.get("dbt_mode", "connect")
+    cont: str = state.get("dbt_continuity", "new")
+    active_skill: str = (state.get("dbt_active_skill") or "").strip()
+    skill_status: str = state.get("dbt_skill_status", "none")
+    return SystemMessage(
+        content=(
+            "Estado interno DBT (para continuidad):\n"
+            f"- modo_actual: {mode}\n"
+            f"- continuidad_previa: {cont}\n"
+            f"- habilidad_activa: {active_skill or 'ninguna'}\n"
+            f"- estado_habilidad: {skill_status}\n"
+            "Reglas duras:\n"
+            "- Si estado_habilidad=declined o paused: NO ofrezcas nuevas habilidades; usá modo=connect.\n"
+            "- Si estado_habilidad=accepted y la respuesta del usuario es corta: usá modo=coach y continuidad=same.\n"
+        )
+    )
+
+
+def _dbt_mode_instructions(state: State) -> SystemMessage:
+    """
+    Instrucciones cortas y fuertes para impedir info-dumps.
+    """
+    mode: DBTMode = state.get("dbt_mode", "connect")
+    active_skill = (state.get("dbt_active_skill") or "").strip()
+
+    if mode == "connect":
+        rules = (
+            "MODO=CONNECT (conversación, sin info-dump):\n"
+            "- Validá/empathizá en 1–2 frases.\n"
+            "- Hacé EXACTAMENTE 1 pregunta breve.\n"
+            "- NO enseñes habilidades DBT, NO listes pasos, NO ofrezcas múltiples opciones.\n"
+            "- Máximo ~120–180 palabras.\n"
+        )
+    elif mode == "offer":
+        rules = (
+            "MODO=OFFER (ofrecer 1 habilidad, corto):\n"
+            "- Ofrecé UNA sola habilidad DBT (nombre + definición 1 línea).\n"
+            "- Da 2–3 pasos máximos en viñetas.\n"
+            "- Cerrá con 1 pregunta de consentimiento (si quiere probar ahora).\n"
+            "- No agregues una segunda habilidad.\n"
+            "- Máximo ~180–250 palabras.\n"
+        )
+    else:  # coach
+        rules = (
+            "MODO=COACH (continuar la misma habilidad):\n"
+            f"- Continuá SOLO con la habilidad ya activa: {active_skill or '(si no hay, elegí 1 y mantenela)'}.\n"
+            "- Da UN solo siguiente paso o mini-ejercicio (2–4 viñetas).\n"
+            "- Cerrá con 1 check-in.\n"
+            "- Máximo ~220–320 palabras.\n"
+        )
+
+    return SystemMessage(content=rules)
+
+
+def _dbt_max_tokens_for_mode(state: State) -> int:
+    mode: DBTMode = state.get("dbt_mode", "connect")
+    if mode == "connect":
+        return 260
+    if mode == "offer":
+        return 420
+    return 520
+
+
 # =========================================================
 # Nodes: classify + safety
 # =========================================================
 def classify_node(state: State) -> Dict[str, Any]:
     trace_id = _trace_id_for_state(state)
-    state["last_trace_id"] = trace_id  # optional, helps debug in state dumps
+    state["last_trace_id"] = trace_id
 
     user_text = _latest_user_text(state.get("messages", []))
     if not user_text.strip():
@@ -436,7 +498,6 @@ def classify_node(state: State) -> Dict[str, Any]:
     user_prompt = _safe_fill_user_text(CLASSIFY_USER_TMPL, user_text)
     llm = get_llm(temperature=0.0, max_tokens=220)
 
-    # First attempt
     raw_msg, _ = _timed_invoke(
         "classify:first",
         llm,
@@ -446,7 +507,6 @@ def classify_node(state: State) -> Dict[str, Any]:
     raw1 = (raw_msg.content or "").strip()
     parsed1, ok1 = _parse_classifier_json(raw1)
 
-    # Retry when parse failed OR uncertain without triggers (often formatting/behavioral drift).
     need_retry = (not ok1) or (parsed1.get("safety_risk_level") == "uncertain" and not (parsed1.get("safety_triggers") or []))
 
     raw = raw1
@@ -467,24 +527,17 @@ def classify_node(state: State) -> Dict[str, Any]:
         if ok2:
             raw, parsed, ok = raw2, parsed2, ok2
         else:
-            # Non-escalatory fallback: do not force crisis on parse failure.
             raw, parsed, ok = raw1, {"safety_risk_level": "none", "safety_triggers": [], "has_protective": False, "route": "misc"}, False
 
     risk: RiskLevel = parsed["safety_risk_level"]
     route: Route = parsed["route"]
 
-    # IMPORTANT: crisis only for explicit passive/active categories (not uncertain).
     safety_route: Literal["ok", "crisis"] = "crisis" if risk in ("passive", "active_no_plan", "active_with_plan") else "ok"
 
     if DEBUG_METRICS:
         logger.info(
             "[TRACE %s] classify result risk=%s safety_route=%s route=%s parse_ok=%s triggers=%s",
-            trace_id,
-            risk,
-            safety_route,
-            route,
-            ok,
-            parsed.get("safety_triggers", []),
+            trace_id, risk, safety_route, route, ok, parsed.get("safety_triggers", []),
         )
 
     return {
@@ -500,7 +553,6 @@ def classify_node(state: State) -> Dict[str, Any]:
 
 
 def crisis_node(state: State) -> Dict[str, Any]:
-    # crisis.txt is already user-facing.
     return {"messages": [AIMessage(content=CRISIS_TEXT)]}
 
 
@@ -530,13 +582,12 @@ def memory_manager_node(state: State) -> Dict[str, Any]:
     else:
         summary_message = "Creá un resumen conciso de la conversación anterior:"
 
-    summarizer = get_llm(temperature=0.0, max_tokens=256)
+    summarizer = get_llm(temperature=0.0, max_tokens=320)
     summary_input = [SystemMessage(content=SUMMARY_SYSTEM), *messages, HumanMessage(content=summary_message)]
 
-    resp, m = _timed_invoke("summarize", summarizer, summary_input, trace_id=trace_id)
+    resp, _ = _timed_invoke("summarize", summarizer, summary_input, trace_id=trace_id)
     new_summary = (resp.content or "").strip()
 
-    # Delete older messages; keep last K verbatim.
     to_remove: List[Any] = []
     if len(messages) > KEEP_LAST_MESSAGES:
         for msg in messages[:-KEEP_LAST_MESSAGES]:
@@ -547,10 +598,7 @@ def memory_manager_node(state: State) -> Dict[str, Any]:
     if DEBUG_METRICS:
         logger.info(
             "[TRACE %s] memory summarized -> new_summary_chars=%d removed=%d (kept=%d)",
-            trace_id,
-            len(new_summary),
-            len(to_remove),
-            KEEP_LAST_MESSAGES,
+            trace_id, len(new_summary), len(to_remove), KEEP_LAST_MESSAGES,
         )
 
     out: Dict[str, Any] = {"summary": new_summary}
@@ -564,7 +612,7 @@ def memory_manager_node(state: State) -> Dict[str, Any]:
 # =========================================================
 def dbt_mini_node(state: State) -> Dict[str, Any]:
     trace_id = state.get("last_trace_id") or _trace_id_for_state(state)
-    llm = get_llm(temperature=0.25, max_tokens=900)
+    llm = get_llm(temperature=0.25, max_tokens=600)
     msgs = _llm_messages_with_summary(DBT_SYSTEM, state, trace_id=trace_id, label="dbt_mini")
     reply, _ = _timed_invoke("dbt:mini", llm, msgs, trace_id=trace_id)
     return {"messages": [AIMessage(content=reply.content or "")]}
@@ -591,21 +639,8 @@ def tb_info_node(state: State) -> Dict[str, Any]:
     sources_block = _format_sources_block(sources)
     user_prompt = TB_RAG_ANSWER_USER_TMPL.replace("{user_text}", user_text).replace("{sources_block}", sources_block)
 
-    # IMPORTANT: summary is a SystemMessage, not injected into HumanMessage.
     summary = (state.get("summary") or "").strip()
     prefix = _system_and_summary_messages(TB_RAG_ANSWER_SYSTEM, summary)
-
-    if DEBUG_METRICS:
-        sys_tokens = _tokens(prefix)
-        human_tokens = _tokens([HumanMessage(content=user_prompt)])
-        logger.info(
-            "[TRACE %s] [PROMPT:tb_info] prefix~%d human~%d total~%d sources=%d",
-            trace_id,
-            sys_tokens,
-            human_tokens,
-            sys_tokens + human_tokens,
-            len(sources),
-        )
 
     llm = get_llm(temperature=0.2, max_tokens=700).with_structured_output(TBAnswerJSON)
 
@@ -628,7 +663,7 @@ def tb_info_node(state: State) -> Dict[str, Any]:
 
 
 # =========================================================
-# MISC node (meta, greetings, off-topic)
+# MISC node
 # =========================================================
 def misc_node(state: State) -> Dict[str, Any]:
     trace_id = state.get("last_trace_id") or _trace_id_for_state(state)
@@ -650,13 +685,26 @@ class DBTBrainSignals(BaseModel):
 
 
 class DBTBrainOut(BaseModel):
+    # Module decision
     module: DBTModule
     confidence: float = Field(ge=0.0, le=1.0)
     rationale_brief: str
     signals: DBTBrainSignals
 
+    # Conversational control decision (NO user-facing content)
+    mode: DBTMode
+    continuity: DBTContinuity
+
+    # Minimal thread memory updates (router decides; no regex)
+    active_skill: str = Field(default="")
+    skill_status: DBTSkillStatus = Field(default="none")
+
 
 def dbt_brain_router_node(state: State) -> Dict[str, Any]:
+    """
+    DBT router is now context-aware and also controls mode/continuity.
+    It sees summary + recent messages + internal DBT state note.
+    """
     trace_id = state.get("last_trace_id") or _trace_id_for_state(state)
 
     user_text = _latest_user_text(state.get("messages", []))
@@ -664,27 +712,47 @@ def dbt_brain_router_node(state: State) -> Dict[str, Any]:
         return {
             "dbt_module": "MIND",
             "dbt_confidence": 0.0,
-            "dbt_rationale_brief": "Empty input.",
+            "dbt_rationale_brief": "Entrada vacía.",
             "dbt_signals": {},
             "dbt_router_raw": "",
+            "dbt_mode": "connect",
+            "dbt_continuity": "unclear",
+            "dbt_active_skill": state.get("dbt_active_skill", ""),
+            "dbt_skill_status": state.get("dbt_skill_status", "none"),
         }
 
-    llm = get_llm(temperature=0.0, max_tokens=220).with_structured_output(DBTBrainOut)
+    llm = get_llm(temperature=0.0, max_tokens=280).with_structured_output(DBTBrainOut)
 
-    msgs = [SystemMessage(content=DBT_BRAIN_ROUTER_SYSTEM), HumanMessage(content=user_text)]
+    # Build messages like other agents: system+summary+recent, but add DBT state note.
+    base_msgs = _llm_messages_with_summary(DBT_BRAIN_ROUTER_SYSTEM, state, trace_id=trace_id, label="dbt_brain")
+    msgs = [base_msgs[0], _dbt_state_system_note(state), *base_msgs[1:]]  # keep summary+recent after note
+
     t0 = time.perf_counter()
-    result = llm.invoke(msgs)
+    result: DBTBrainOut = llm.invoke(msgs)
     dt_ms = (time.perf_counter() - t0) * 1000.0
 
     if DEBUG_METRICS:
         logger.info(
-            "[TRACE %s] [LLM] dbt_brain latency=%.1fms in_tokens~%d module=%s conf=%.2f",
+            "[TRACE %s] [LLM] dbt_brain latency=%.1fms in_tokens~%d module=%s mode=%s cont=%s status=%s skill=%s",
             trace_id,
             dt_ms,
             _tokens(msgs),
             result.module,
-            float(result.confidence),
+            result.mode,
+            result.continuity,
+            result.skill_status,
+            (result.active_skill or ""),
         )
+
+    # Hard override: if state says declined/paused, force connect to avoid pushing skills
+    prev_status: DBTSkillStatus = state.get("dbt_skill_status", "none")
+    forced_mode: Optional[DBTMode] = None
+    if prev_status in ("declined", "paused"):
+        forced_mode = "connect"
+
+    final_mode: DBTMode = forced_mode or result.mode
+    final_status: DBTSkillStatus = result.skill_status
+    final_skill: str = (result.active_skill or "").strip()
 
     return {
         "dbt_module": result.module,
@@ -692,13 +760,37 @@ def dbt_brain_router_node(state: State) -> Dict[str, Any]:
         "dbt_rationale_brief": result.rationale_brief,
         "dbt_signals": result.signals.model_dump(),
         "dbt_router_raw": result.model_dump_json(),
+        "dbt_mode": final_mode,
+        "dbt_continuity": result.continuity,
+        "dbt_active_skill": final_skill or state.get("dbt_active_skill", ""),
+        "dbt_skill_status": final_status,
     }
 
 
 def _dbt_module_agent(system_prompt: str, state: State, *, label: str) -> Dict[str, Any]:
+    """
+    Module agent gets:
+    - GLOBAL_RULES + module prompt
+    - summary
+    - DBT internal state note
+    - mode instructions (connect/offer/coach)
+    This prevents info dumping without extra nodes.
+    """
     trace_id = state.get("last_trace_id") or _trace_id_for_state(state)
-    llm = get_llm(temperature=0.25, max_tokens=900)
-    msgs = _llm_messages_with_summary(system_prompt, state, trace_id=trace_id, label=label)
+
+    max_tokens = _dbt_max_tokens_for_mode(state)
+    llm = get_llm(temperature=0.25, max_tokens=max_tokens)
+
+    base_msgs = _llm_messages_with_summary(system_prompt, state, trace_id=trace_id, label=label)
+
+    # Inject mode instructions + DBT state note right after the main system prompt
+    msgs = [
+        base_msgs[0],
+        _dbt_mode_instructions(state),
+        _dbt_state_system_note(state),
+        *base_msgs[1:],
+    ]
+
     reply, _ = _timed_invoke(f"dbt:{label}", llm, msgs, trace_id=trace_id)
     return {"messages": [AIMessage(content=reply.content or "")]}
 
@@ -772,7 +864,11 @@ def build_graph(*, dbt_node: Any):
     g.add_edge(START, "classify")
     g.add_edge("classify", "memory")
 
-    g.add_conditional_edges("memory", branch_after_classify, {"crisis": "crisis", "tb_info": "tb_info", "dbt": "dbt", "misc": "misc"})
+    g.add_conditional_edges(
+        "memory",
+        branch_after_classify,
+        {"crisis": "crisis", "tb_info": "tb_info", "dbt": "dbt", "misc": "misc"},
+    )
 
     g.add_edge("crisis", END)
     g.add_edge("tb_info", END)
@@ -787,6 +883,4 @@ GRAPH_DBT_MINI = build_graph(dbt_node=dbt_mini_node)
 GRAPH_DBT_FULL = build_graph(dbt_node=DBT_FULL_SUBGRAPH)
 
 
-# Emit prompt size report once at import (if enabled)
 _log_prompt_sizes_once()
-
