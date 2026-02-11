@@ -1,0 +1,12 @@
+DOC_ID: mindfulness.ficha.3
+TYPE: ficha
+MODULE: mindfulness
+NUMBER: 3
+TITLE: Mente sabia:
+PAGES: 115-117
+MAJOR_SECTION: Fichas de mindfulness
+REFS_OUT: mindfulness.hoja.3
+
+(Hoja de trabajo de mindfulness 3)
+
+Mente sabia: estados de la mente

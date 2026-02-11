@@ -1,0 +1,12 @@
+DOC_ID: mindfulness.ficha.9
+TYPE: ficha
+MODULE: mindfulness
+NUMBER: 9
+TITLE: Medios hábiles:
+PAGES: 155-157
+MAJOR_SECTION: Fichas de mindfulness
+REFS_OUT: mindfulness.hoja.7, mindfulness.hoja.8, mindfulness.hoja.9
+
+(Hojas de trabajo de mindfulness 7–9) Medios hábiles: equilibrar mente del hacer con mente del estar
+
+Nota. Los términos “mente del hacer”, “mente del estar” y “mente de nada que hacer” se utilizaron por primera vez por Jon Kabat-Zinn en Full Catastrophe Living (1990, 2013).

@@ -11,7 +11,7 @@ from langchain_core.documents import Document
 from langchain_community.document_loaders import DirectoryLoader, TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_community.vectorstores import Chroma
+from langchain_chroma import Chroma
 
 
 # -------------------------
@@ -111,16 +111,24 @@ def get_retriever():
     return vs.as_retriever(search_kwargs={"k": RAG_K})
 
 
+
 @tool
-def retrieve_tb_docs(query: str) -> str:
-    """Retrieve relevant TB support / guideline snippets from the local document collection."""
+def retrieve_tb_docs(query: str) -> dict:
+    """Retrieve relevant TB snippets from the local document collection."""
     retriever = get_retriever()
     docs = retriever.invoke(query)
 
-    parts: List[str] = []
+    sources = []
     for i, d in enumerate(docs, start=1):
         src = d.metadata.get("source", "unknown")
-        parts.append(f"[Doc {i} | source: {src}]\n{d.page_content}")
+        sources.append(
+            {
+                "id": i,
+                "title": src,          # you can improve later
+                "filename": src,       # keep consistent with graph.py expectations
+                "excerpt": d.page_content[:1200],  # cap to keep prompts smaller
+            }
+        )
 
-    return "\n\n".join(parts)
+    return {"sources": sources}
 

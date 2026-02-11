@@ -1,0 +1,11 @@
+TITLE: FICHA DE TOLERANCIA AL MALESTAR 9A — Conciencia sensorial, paso a paso
+MODULE: distress_tolerance
+SKILL_TAG: FICHA_DE_TOLERANCIA_AL_MALESTAR_9A_CONCIENCIA_SENSORIAL_PASO
+SOURCE_PDF: Manual-2023-enumerado-.pdf
+PAGES: 595-598
+CHUNK_ID: 00181-003
+UNIT_ID: 00181
+
+Nota. Los items 29 y 30 están adaptados de Goldfried, M. R., & Davison, G. C. (1976). Clinical behavior therapy. New York: Holt, Rinehart & Winston. Copyright 1976 por Marvin R. Goldfried y Gerald C. Davison. Adaptado con permiso de los autores.
+
+Fichas de habilidades de aceptación de la realidad

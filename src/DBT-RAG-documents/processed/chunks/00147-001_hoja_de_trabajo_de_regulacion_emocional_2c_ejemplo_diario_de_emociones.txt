@@ -1,0 +1,9 @@
+TITLE: HOJA DE TRABAJO DE REGULACIÓN EMOCIONAL 2C — Ejemplo: Diario de Emociones
+MODULE: mindfulness
+SKILL_TAG: HOJA_DE_TRABAJO_DE_REGULACION_EMOCIONAL_2C_EJEMPLO_DIARIO_DE
+SOURCE_PDF: Manual-2023-enumerado-.pdf
+PAGES: 501-502
+CHUNK_ID: 00147-001
+UNIT_ID: 00147
+
+(Ficha de regulación emocional 3) Ejemplo: Diario de Emociones

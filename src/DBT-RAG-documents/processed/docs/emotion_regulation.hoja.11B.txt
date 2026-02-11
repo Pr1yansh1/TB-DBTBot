@@ -1,0 +1,14 @@
+DOC_ID: emotion_regulation.hoja.11B
+TYPE: hoja
+MODULE: emotion_regulation
+NUMBER: 11B
+TITLE: Registro de acciones diarias sobre valores y prioridades
+PAGES: 532-533
+MAJOR_SECTION: Fichas de regulación emocional
+REFS_OUT: 
+
+(Fichas de regulación emocional 17, 18) Registro de acciones diarias sobre valores y prioridades
+
+Este diario es para hacer un seguimiento de tu progreso para alcanzar tus metas y vivir de acuerdo con tus propios valores. Puedes completar una página para cada valor en el que estés trabajando, o puedes completarlo todos los días sin importar el objetivo en el que estés trabajando ese día. Recuerda ser muy específico/a. Consulta la hoja de trabajo de regulación emocional 11 o 11a para una lista de valores y objetivos importantes.
+
+Día Valor Valor y acciones prioritarias hoy Próximo paso ¿En qué valor estoy trabajando? ¿Qué realicé hoy para alcanzar mi objetivo? (Sé específico/a) ¿Qué es lo próximo que haré para alcanzar este objetivo? (Sé específico/a)

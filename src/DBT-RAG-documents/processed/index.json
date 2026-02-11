@@ -1,0 +1,3446 @@
+{
+  "source": {
+    "pdf": "Manual-2023-enumerado-.pdf"
+  },
+  "docs": [
+    {
+      "doc_id": "distress_tolerance.ficha.1",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "GENERAL",
+      "number": "1",
+      "title": "Objetivos del entrenamiento en habilidades",
+      "major_section": "Habilidades de tolerancia al malestar",
+      "start_page": 57,
+      "end_page": 59,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "general.hoja.1"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.1",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "1",
+      "title": "Objetivos de tolerancia al malestar",
+      "major_section": "Fichas de tolerancia al malestar",
+      "start_page": 560,
+      "end_page": 562,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.10",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "10",
+      "title": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "major_section": "Fichas de tolerancia al malestar",
+      "start_page": 599,
+      "end_page": 600,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": [
+        "distress_tolerance.hoja.8",
+        "distress_tolerance.hoja.8B"
+      ]
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.11",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "11",
+      "title": "Aceptación radical",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 600,
+      "end_page": 602,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.hoja.8",
+        "distress_tolerance.hoja.9",
+        "distress_tolerance.hoja.9a"
+      ],
+      "refs_in": [
+        "distress_tolerance.hoja.8",
+        "distress_tolerance.hoja.8B",
+        "distress_tolerance.hoja.9",
+        "distress_tolerance.hoja.9A"
+      ]
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.11A",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "11A",
+      "title": "Aceptación radical: factores que interfieren",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 602,
+      "end_page": 603,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.11B",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "11B",
+      "title": "Práctica de aceptación radical, paso a paso",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 603,
+      "end_page": 605,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.12",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "12",
+      "title": "Redireccionar la mente",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 605,
+      "end_page": 607,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": [
+        "distress_tolerance.hoja.8",
+        "distress_tolerance.hoja.8B"
+      ]
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.13",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "13",
+      "title": "Disposición abierta",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 607,
+      "end_page": 610,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": [
+        "distress_tolerance.hoja.8",
+        "distress_tolerance.hoja.8B"
+      ]
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.14",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "14",
+      "title": "Media sonrisa y manos dispuestas",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 610,
+      "end_page": 612,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": [
+        "distress_tolerance.hoja.11A",
+        "distress_tolerance.hoja.8",
+        "distress_tolerance.hoja.8B"
+      ]
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.14A",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "14A",
+      "title": "Practicar media sonrisa y manos dispuestas",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 612,
+      "end_page": 616,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.hoja.10"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.15",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "15",
+      "title": "Mindfulness de los pensamientos actuales",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 616,
+      "end_page": 619,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": [
+        "distress_tolerance.hoja.12A",
+        "distress_tolerance.hoja.8",
+        "distress_tolerance.hoja.8B"
+      ]
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.15A",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "15A",
+      "title": "Practicar mindfulness de los pensamientos",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 619,
+      "end_page": 624,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.16",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "16",
+      "title": "Descripción general:",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 624,
+      "end_page": 625,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.hoja.13",
+        "distress_tolerance.hoja.14",
+        "distress_tolerance.hoja.15",
+        "distress_tolerance.hoja.16",
+        "distress_tolerance.hoja.17",
+        "distress_tolerance.hoja.18"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.16A",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "16A",
+      "title": "Adicciones comunes",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 625,
+      "end_page": 628,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.17",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "17",
+      "title": "Abstinencia dialéctica",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 628,
+      "end_page": 630,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.hoja.14"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.17A",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "17A",
+      "title": "Planificar para la abstinencia dialéctica",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 630,
+      "end_page": 633,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.hoja.14"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.18",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "18",
+      "title": "Mente clara",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 633,
+      "end_page": 635,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.hoja.15"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.18A",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "18A",
+      "title": "Patrones de conducta característicos de la mente adicta y de",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 635,
+      "end_page": 638,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.hoja.16"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.19",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "19",
+      "title": "Refuerzo comunitario",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 638,
+      "end_page": 641,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.hoja.16"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.1A",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "GENERAL",
+      "number": "1A",
+      "title": "Opciones para resolver cualquier problema",
+      "major_section": "Habilidades de tolerancia al malestar.",
+      "start_page": 59,
+      "end_page": 61,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.2",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "GENERAL",
+      "number": "2",
+      "title": "Descripción general:",
+      "major_section": "Habilidades de tolerancia al malestar.",
+      "start_page": 61,
+      "end_page": 63,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.2",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "2",
+      "title": "Descripción general:",
+      "major_section": "Fichas de tolerancia al malestar",
+      "start_page": 562,
+      "end_page": 564,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.hoja.1",
+        "distress_tolerance.hoja.2",
+        "distress_tolerance.hoja.3",
+        "distress_tolerance.hoja.4",
+        "distress_tolerance.hoja.5",
+        "distress_tolerance.hoja.6",
+        "distress_tolerance.hoja.7",
+        "distress_tolerance.hoja.7b"
+      ],
+      "refs_in": [
+        "distress_tolerance.hoja.1",
+        "distress_tolerance.hoja.1A",
+        "distress_tolerance.hoja.1B"
+      ]
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.20",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "20",
+      "title": "Quemando puentes y construyendo nuevos",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 641,
+      "end_page": 643,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.hoja.17"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.21",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "21",
+      "title": "Rebelión alternativa y negación adaptativa",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 643,
+      "end_page": 648,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.hoja.18"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.3",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "GENERAL",
+      "number": "3",
+      "title": "Pautas para el entrenamiento en habilidades",
+      "major_section": "Habilidades de tolerancia al malestar.",
+      "start_page": 63,
+      "end_page": 65,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.3",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "3",
+      "title": "Cuándo usar habilidades de supervivencia a la crisis",
+      "major_section": "Fichas de tolerancia al malestar",
+      "start_page": 564,
+      "end_page": 566,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": [
+        "distress_tolerance.hoja.1",
+        "distress_tolerance.hoja.1A",
+        "distress_tolerance.hoja.1B"
+      ]
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.4",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "GENERAL",
+      "number": "4",
+      "title": "Supuestos del entrenamiento",
+      "major_section": "Habilidades de tolerancia al malestar.",
+      "start_page": 65,
+      "end_page": 67,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.4",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "4",
+      "title": "Habilidad STOP",
+      "major_section": "Fichas de tolerancia al malestar",
+      "start_page": 566,
+      "end_page": 567,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": [
+        "distress_tolerance.hoja.1",
+        "distress_tolerance.hoja.1A",
+        "distress_tolerance.hoja.1B",
+        "distress_tolerance.hoja.2",
+        "distress_tolerance.hoja.2A"
+      ]
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.5",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "GENERAL",
+      "number": "5",
+      "title": "Teoría biosocial",
+      "major_section": "Habilidades de tolerancia al malestar.",
+      "start_page": 67,
+      "end_page": 71,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.5",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "5",
+      "title": "Pros y contras",
+      "major_section": "Fichas de tolerancia al malestar",
+      "start_page": 567,
+      "end_page": 570,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": [
+        "distress_tolerance.hoja.1",
+        "distress_tolerance.hoja.1A",
+        "distress_tolerance.hoja.1B",
+        "distress_tolerance.hoja.3",
+        "distress_tolerance.hoja.3A"
+      ]
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.6",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "GENERAL",
+      "number": "6",
+      "title": "Descripción general:",
+      "major_section": "Habilidades de tolerancia al malestar.",
+      "start_page": 71,
+      "end_page": 73,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.6",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "6",
+      "title": "Habilidades TIP: cambiar la química de tu cuerpo",
+      "major_section": "Fichas de tolerancia al malestar",
+      "start_page": 570,
+      "end_page": 572,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.hoja.4"
+      ],
+      "refs_in": [
+        "distress_tolerance.hoja.1",
+        "distress_tolerance.hoja.1A",
+        "distress_tolerance.hoja.1B",
+        "distress_tolerance.hoja.4"
+      ]
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.6A",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "6A",
+      "title": "Usar agua fría, paso a paso",
+      "major_section": "Fichas de tolerancia al malestar",
+      "start_page": 572,
+      "end_page": 574,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.hoja.4"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.6B",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "6B",
+      "title": "Relajación muscular en paralelo, paso a paso",
+      "major_section": "Fichas de tolerancia al malestar",
+      "start_page": 574,
+      "end_page": 578,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.hoja.4a"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.6C",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "6C",
+      "title": "Repensar efectivamente y relajación muscular en",
+      "major_section": "Fichas de tolerancia al malestar",
+      "start_page": 578,
+      "end_page": 580,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.hoja.4b"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.7",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "GENERAL",
+      "number": "7",
+      "title": "Análisis en cadena",
+      "major_section": "Habilidades de tolerancia al malestar.",
+      "start_page": 73,
+      "end_page": 75,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.7",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "7",
+      "title": "Distráete",
+      "major_section": "Fichas de tolerancia al malestar",
+      "start_page": 580,
+      "end_page": 584,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.hoja.5"
+      ],
+      "refs_in": [
+        "distress_tolerance.hoja.1",
+        "distress_tolerance.hoja.1A",
+        "distress_tolerance.hoja.1B",
+        "distress_tolerance.hoja.5",
+        "distress_tolerance.hoja.5A",
+        "distress_tolerance.hoja.5B"
+      ]
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.7A",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "GENERAL",
+      "number": "7A",
+      "title": "Análisis en cadena, paso a paso",
+      "major_section": "Habilidades de tolerancia al malestar.",
+      "start_page": 75,
+      "end_page": 80,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.8",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "GENERAL",
+      "number": "8",
+      "title": "Análisis de los enlaces perdidos",
+      "major_section": "Habilidades de tolerancia al malestar.",
+      "start_page": 80,
+      "end_page": 83,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "general.hoja.3"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.8",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "8",
+      "title": "Cálmate con los cinco sentidos",
+      "major_section": "Fichas de tolerancia al malestar",
+      "start_page": 584,
+      "end_page": 588,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.hoja.6"
+      ],
+      "refs_in": [
+        "distress_tolerance.hoja.1",
+        "distress_tolerance.hoja.1A",
+        "distress_tolerance.hoja.1B",
+        "distress_tolerance.hoja.6",
+        "distress_tolerance.hoja.6A",
+        "distress_tolerance.hoja.6B"
+      ]
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.8A",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "8A",
+      "title": "Meditación de escaneo corporal, paso a paso",
+      "major_section": "Fichas de tolerancia al malestar",
+      "start_page": 588,
+      "end_page": 591,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.hoja.6c"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.9",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "9",
+      "title": "Mejorar el momento",
+      "major_section": "Fichas de tolerancia al malestar",
+      "start_page": 591,
+      "end_page": 595,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.hoja.7"
+      ],
+      "refs_in": [
+        "distress_tolerance.hoja.1",
+        "distress_tolerance.hoja.1A",
+        "distress_tolerance.hoja.1B",
+        "distress_tolerance.hoja.7",
+        "distress_tolerance.hoja.7A",
+        "distress_tolerance.hoja.7B"
+      ]
+    },
+    {
+      "doc_id": "distress_tolerance.ficha.9A",
+      "doc_type": "ficha",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "9A",
+      "title": "Conciencia sensorial, paso a paso",
+      "major_section": "Fichas de tolerancia al malestar",
+      "start_page": 595,
+      "end_page": 599,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.hoja.1",
+      "doc_type": "hoja",
+      "module": "distress_tolerance",
+      "category_raw": "GENERAL",
+      "number": "1",
+      "title": "Pros y contras de usar habilidades",
+      "major_section": "Habilidades de tolerancia al malestar.",
+      "start_page": 83,
+      "end_page": 86,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "general.ficha.1"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.hoja.1",
+      "doc_type": "hoja",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "1",
+      "title": "Habilidades de supervivencia a la crisis",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 648,
+      "end_page": 650,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.ficha.2",
+        "distress_tolerance.ficha.3",
+        "distress_tolerance.ficha.4",
+        "distress_tolerance.ficha.5",
+        "distress_tolerance.ficha.6",
+        "distress_tolerance.ficha.7",
+        "distress_tolerance.ficha.8",
+        "distress_tolerance.ficha.9",
+        "distress_tolerance.ficha.9a"
+      ],
+      "refs_in": [
+        "distress_tolerance.ficha.2"
+      ]
+    },
+    {
+      "doc_id": "distress_tolerance.hoja.10",
+      "doc_type": "hoja",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "10",
+      "title": "Redireccionar la mente, disposición abierta, terquedad",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 699,
+      "end_page": 701,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": [
+        "distress_tolerance.ficha.14A"
+      ]
+    },
+    {
+      "doc_id": "distress_tolerance.hoja.11",
+      "doc_type": "hoja",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "11",
+      "title": "Media sonrisa y manos dispuestas",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 701,
+      "end_page": 703,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.hoja.11A",
+      "doc_type": "hoja",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "11A",
+      "title": "Práctica de media sonrisa y manos dispuestas",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 703,
+      "end_page": 705,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.ficha.14"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.hoja.12",
+      "doc_type": "hoja",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "12",
+      "title": "Mindfulness de los pensamientos actuales",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 705,
+      "end_page": 708,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.hoja.12A",
+      "doc_type": "hoja",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "12A",
+      "title": "Práctica de mindfulness de los pensamientos",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 708,
+      "end_page": 731,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.ficha.15"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.hoja.1A",
+      "doc_type": "hoja",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "1A",
+      "title": "Habilidades de supervivencia a la crisis",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 650,
+      "end_page": 652,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.ficha.2",
+        "distress_tolerance.ficha.3",
+        "distress_tolerance.ficha.4",
+        "distress_tolerance.ficha.5",
+        "distress_tolerance.ficha.6",
+        "distress_tolerance.ficha.7",
+        "distress_tolerance.ficha.8",
+        "distress_tolerance.ficha.9",
+        "distress_tolerance.ficha.9a"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.hoja.1B",
+      "doc_type": "hoja",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "1B",
+      "title": "Habilidades de supervivencia a la crisis",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 652,
+      "end_page": 654,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.ficha.2",
+        "distress_tolerance.ficha.3",
+        "distress_tolerance.ficha.4",
+        "distress_tolerance.ficha.5",
+        "distress_tolerance.ficha.6",
+        "distress_tolerance.ficha.7",
+        "distress_tolerance.ficha.8",
+        "distress_tolerance.ficha.9",
+        "distress_tolerance.ficha.9a"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.hoja.2",
+      "doc_type": "hoja",
+      "module": "distress_tolerance",
+      "category_raw": "GENERAL",
+      "number": "2",
+      "title": "Análisis en cadena de conductas problema",
+      "major_section": "Habilidades de tolerancia al malestar.",
+      "start_page": 86,
+      "end_page": 91,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.hoja.2",
+      "doc_type": "hoja",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "2",
+      "title": "Practicar la habilidad STOP",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 654,
+      "end_page": 656,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.ficha.4"
+      ],
+      "refs_in": [
+        "distress_tolerance.ficha.2"
+      ]
+    },
+    {
+      "doc_id": "distress_tolerance.hoja.2A",
+      "doc_type": "hoja",
+      "module": "distress_tolerance",
+      "category_raw": "GENERAL",
+      "number": "2A",
+      "title": "Ejemplo: análisis en cadena de conductas problema",
+      "major_section": "Habilidades de tolerancia al malestar.",
+      "start_page": 91,
+      "end_page": 96,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.hoja.2A",
+      "doc_type": "hoja",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "2A",
+      "title": "PRACTICAR LA HABILIDAD STOP",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 656,
+      "end_page": 658,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.ficha.4"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.hoja.3",
+      "doc_type": "hoja",
+      "module": "distress_tolerance",
+      "category_raw": "GENERAL",
+      "number": "3",
+      "title": "Análisis de los eslabones perdidos",
+      "major_section": "Habilidades de tolerancia al malestar.",
+      "start_page": 96,
+      "end_page": 108,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "general.ficha.8"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.hoja.3",
+      "doc_type": "hoja",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "3",
+      "title": "Pros y contras de actuar los impulsos de crisis",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 658,
+      "end_page": 660,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.ficha.5"
+      ],
+      "refs_in": [
+        "distress_tolerance.ficha.2"
+      ]
+    },
+    {
+      "doc_id": "distress_tolerance.hoja.3A",
+      "doc_type": "hoja",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "3A",
+      "title": "Pros y contras de actuar los impulsos de crisis",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 660,
+      "end_page": 662,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.ficha.5"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.hoja.4",
+      "doc_type": "hoja",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "4",
+      "title": "Cambiar la química corporal con las habilidades TIP",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 662,
+      "end_page": 664,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.ficha.6"
+      ],
+      "refs_in": [
+        "distress_tolerance.ficha.2",
+        "distress_tolerance.ficha.6",
+        "distress_tolerance.ficha.6A"
+      ]
+    },
+    {
+      "doc_id": "distress_tolerance.hoja.4A",
+      "doc_type": "hoja",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "4A",
+      "title": "Relajación muscular en paralelo",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 664,
+      "end_page": 666,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.ficha.6b"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.hoja.4B",
+      "doc_type": "hoja",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "4B",
+      "title": "Repensar siendo efectivo y relajación muscular en paralelo",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 666,
+      "end_page": 668,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.ficha.6c"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.hoja.5",
+      "doc_type": "hoja",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "5",
+      "title": "Distráete con mente sabia ACEPTAS",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 668,
+      "end_page": 670,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.ficha.7"
+      ],
+      "refs_in": [
+        "distress_tolerance.ficha.2",
+        "distress_tolerance.ficha.7"
+      ]
+    },
+    {
+      "doc_id": "distress_tolerance.hoja.5A",
+      "doc_type": "hoja",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "5A",
+      "title": "Distráete con mente sabia ACEPTAS",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 670,
+      "end_page": 672,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.ficha.7"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.hoja.5B",
+      "doc_type": "hoja",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "5B",
+      "title": "Distráete con mente sabia ACEPTAS",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 672,
+      "end_page": 674,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.ficha.7"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.hoja.6",
+      "doc_type": "hoja",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "6",
+      "title": "Cálmate con los cinco sentidos",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 674,
+      "end_page": 676,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.ficha.8"
+      ],
+      "refs_in": [
+        "distress_tolerance.ficha.2",
+        "distress_tolerance.ficha.8"
+      ]
+    },
+    {
+      "doc_id": "distress_tolerance.hoja.6A",
+      "doc_type": "hoja",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "6A",
+      "title": "Cálmate con los cinco sentidos",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 676,
+      "end_page": 678,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.ficha.8"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.hoja.6B",
+      "doc_type": "hoja",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "6B",
+      "title": "Cálmate con los cinco sentidos",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 678,
+      "end_page": 680,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.ficha.8"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.hoja.6C",
+      "doc_type": "hoja",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "6C",
+      "title": "Meditación de escaneo corporal, paso a paso",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 680,
+      "end_page": 682,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.ficha.8a"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.hoja.7",
+      "doc_type": "hoja",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "7",
+      "title": "SALVARA: mejorar el momento",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 682,
+      "end_page": 684,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.ficha.9"
+      ],
+      "refs_in": [
+        "distress_tolerance.ficha.2",
+        "distress_tolerance.ficha.9"
+      ]
+    },
+    {
+      "doc_id": "distress_tolerance.hoja.7A",
+      "doc_type": "hoja",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "7A",
+      "title": "SALVARA: mejorar el momento",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 684,
+      "end_page": 686,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.ficha.9"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.hoja.7B",
+      "doc_type": "hoja",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "7B",
+      "title": "SALVARA: mejorar el momento",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 686,
+      "end_page": 689,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.ficha.9"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.hoja.8",
+      "doc_type": "hoja",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "8",
+      "title": "Habilidades de aceptación de la realidad",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 689,
+      "end_page": 691,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.ficha.10",
+        "distress_tolerance.ficha.11",
+        "distress_tolerance.ficha.12",
+        "distress_tolerance.ficha.13",
+        "distress_tolerance.ficha.14",
+        "distress_tolerance.ficha.15",
+        "distress_tolerance.ficha.15a"
+      ],
+      "refs_in": [
+        "distress_tolerance.ficha.11"
+      ]
+    },
+    {
+      "doc_id": "distress_tolerance.hoja.8A",
+      "doc_type": "hoja",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "8A",
+      "title": "Habilidades de aceptación de la realidad",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 691,
+      "end_page": 693,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.hoja.8B",
+      "doc_type": "hoja",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "8B",
+      "title": "Habilidades de aceptación de la realidad",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 693,
+      "end_page": 695,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.ficha.10",
+        "distress_tolerance.ficha.11",
+        "distress_tolerance.ficha.12",
+        "distress_tolerance.ficha.13",
+        "distress_tolerance.ficha.14",
+        "distress_tolerance.ficha.15",
+        "distress_tolerance.ficha.15a"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "distress_tolerance.hoja.9",
+      "doc_type": "hoja",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "9",
+      "title": "Aceptación radical",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 695,
+      "end_page": 697,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.ficha.11"
+      ],
+      "refs_in": [
+        "distress_tolerance.ficha.11"
+      ]
+    },
+    {
+      "doc_id": "distress_tolerance.hoja.9A",
+      "doc_type": "hoja",
+      "module": "distress_tolerance",
+      "category_raw": "TOLERANCIA AL MALESTAR",
+      "number": "9A",
+      "title": "Práctica de aceptación radical",
+      "major_section": "Hojas de trabajo de tolerancia al malestar 8–15a)",
+      "start_page": 697,
+      "end_page": 699,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "distress_tolerance.ficha.11"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.1",
+      "doc_type": "ficha",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "1",
+      "title": "",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 374,
+      "end_page": 374,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": [
+        "emotion_regulation.ficha.25"
+      ]
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.10",
+      "doc_type": "ficha",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "10",
+      "title": "Acción opuesta",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 422,
+      "end_page": 424,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "emotion_regulation.hoja.7"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.11",
+      "doc_type": "ficha",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "11",
+      "title": "Descifrar acciones opuestas",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 424,
+      "end_page": 442,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "emotion_regulation.hoja.7"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.12",
+      "doc_type": "ficha",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "12",
+      "title": "Resolución de problemas",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 442,
+      "end_page": 444,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "emotion_regulation.hoja.8"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.13",
+      "doc_type": "ficha",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "13",
+      "title": "Revisión de acción opuesta y resolución de problemas",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 444,
+      "end_page": 450,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "emotion_regulation.hoja.6",
+        "emotion_regulation.hoja.7",
+        "emotion_regulation.hoja.8"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.14",
+      "doc_type": "ficha",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "14",
+      "title": "Descripción general:",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 450,
+      "end_page": 451,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "emotion_regulation.hoja.9",
+        "emotion_regulation.hoja.10",
+        "emotion_regulation.hoja.11",
+        "emotion_regulation.hoja.12",
+        "emotion_regulation.hoja.13",
+        "emotion_regulation.hoja.14",
+        "emotion_regulation.hoja.14b"
+      ],
+      "refs_in": [
+        "emotion_regulation.hoja.9"
+      ]
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.15",
+      "doc_type": "ficha",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "15",
+      "title": "Acumular experiencias positivas: a corto plazo",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 451,
+      "end_page": 453,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": [
+        "emotion_regulation.hoja.9"
+      ]
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.16",
+      "doc_type": "ficha",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "16",
+      "title": "Lista de actividades agradables",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 453,
+      "end_page": 463,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": [
+        "emotion_regulation.hoja.9"
+      ]
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.17",
+      "doc_type": "ficha",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "17",
+      "title": "Acumular emociones positivas: a largo plazo",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 463,
+      "end_page": 466,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": [
+        "emotion_regulation.hoja.11",
+        "emotion_regulation.hoja.11A",
+        "emotion_regulation.hoja.9"
+      ]
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.18",
+      "doc_type": "ficha",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "18",
+      "title": "Lista de valores y prioridades",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 466,
+      "end_page": 472,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": [
+        "emotion_regulation.hoja.11",
+        "emotion_regulation.hoja.11A",
+        "emotion_regulation.hoja.9"
+      ]
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.19",
+      "doc_type": "ficha",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "19",
+      "title": "Anticípate y construye Competencia",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 472,
+      "end_page": 474,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": [
+        "emotion_regulation.hoja.12",
+        "emotion_regulation.hoja.13",
+        "emotion_regulation.hoja.9"
+      ]
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.2",
+      "doc_type": "ficha",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "2",
+      "title": "Descripción general: entender y etiquetar emociones",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 377,
+      "end_page": 379,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.20",
+      "doc_type": "ficha",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "20",
+      "title": "Cuidar tu mente cuidando tu cuerpo",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 474,
+      "end_page": 475,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": [
+        "emotion_regulation.hoja.14",
+        "emotion_regulation.hoja.9"
+      ]
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.20A",
+      "doc_type": "ficha",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "20A",
+      "title": "Protocolo de pesadillas, paso a paso",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 475,
+      "end_page": 477,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "emotion_regulation.hoja.14a"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.20B",
+      "doc_type": "ficha",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "20B",
+      "title": "Protocolo de higiene del sueño",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 477,
+      "end_page": 481,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "emotion_regulation.hoja.14b"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.21",
+      "doc_type": "ficha",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "21",
+      "title": "Descripción general:",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 481,
+      "end_page": 483,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "emotion_regulation.hoja.15",
+        "emotion_regulation.hoja.16"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.22",
+      "doc_type": "ficha",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "22",
+      "title": "Mindfulness de las emociones actuales:",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 483,
+      "end_page": 485,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "emotion_regulation.hoja.15"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.23",
+      "doc_type": "ficha",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "23",
+      "title": "Cómo manejar las emociones extremas",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 485,
+      "end_page": 487,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.24",
+      "doc_type": "ficha",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "24",
+      "title": "Resolución de problemas de habilidades de regulación",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 487,
+      "end_page": 490,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "emotion_regulation.hoja.16"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.25",
+      "doc_type": "ficha",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "25",
+      "title": "REVISIÓN DE HABILIDADES DE REGULACIÓN EMOCIONAL",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 490,
+      "end_page": 496,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "emotion_regulation.ficha.1"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.3",
+      "doc_type": "ficha",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "3",
+      "title": "Lo que las emociones hacen por ti",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 379,
+      "end_page": 382,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": [
+        "emotion_regulation.hoja.2",
+        "emotion_regulation.hoja.2A",
+        "emotion_regulation.hoja.2B",
+        "emotion_regulation.hoja.2C"
+      ]
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.4",
+      "doc_type": "ficha",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "4",
+      "title": "Qué hace que sea difícil regular tus emociones",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 382,
+      "end_page": 384,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.4A",
+      "doc_type": "ficha",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "4A",
+      "title": "Mitos sobre las emociones",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 384,
+      "end_page": 386,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "emotion_regulation.hoja.3"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.5",
+      "doc_type": "ficha",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "5",
+      "title": "Modelo para describir las emociones",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 386,
+      "end_page": 387,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.6",
+      "doc_type": "ficha",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "6",
+      "title": "Formas de describir emociones: Palabras de enojo",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 387,
+      "end_page": 413,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.7",
+      "doc_type": "ficha",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "7",
+      "title": "Descripción general:",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 413,
+      "end_page": 415,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "emotion_regulation.hoja.5",
+        "emotion_regulation.hoja.6",
+        "emotion_regulation.hoja.7",
+        "emotion_regulation.hoja.8"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.8",
+      "doc_type": "ficha",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "8",
+      "title": "Verificar los hechos",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 415,
+      "end_page": 418,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "emotion_regulation.hoja.5"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.8A",
+      "doc_type": "ficha",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "8A",
+      "title": "Ejemplos de emociones que se ajustan a los hechos",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 418,
+      "end_page": 420,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "emotion_regulation.hoja.5"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "emotion_regulation.ficha.9",
+      "doc_type": "ficha",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "9",
+      "title": "Acción opuesta y resolución de problemas:",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 420,
+      "end_page": 422,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "emotion_regulation.hoja.6"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "emotion_regulation.hoja.1",
+      "doc_type": "hoja",
+      "module": "emotion_regulation",
+      "category_raw": "regulación emocional",
+      "number": "1",
+      "title": "Objetivos de la regulación emocional",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 374,
+      "end_page": 377,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "emotion_regulation.hoja.10",
+      "doc_type": "hoja",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "10",
+      "title": "Diario de actividades agradables (eventos)",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 525,
+      "end_page": 526,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": [
+        "emotion_regulation.ficha.14"
+      ]
+    },
+    {
+      "doc_id": "emotion_regulation.hoja.11",
+      "doc_type": "hoja",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "11",
+      "title": "Pasar de valores a pasos de acción específicos",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 526,
+      "end_page": 529,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "emotion_regulation.ficha.17",
+        "emotion_regulation.ficha.18"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "emotion_regulation.hoja.11",
+      "doc_type": "hoja",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "11",
+      "title": "Recuerda: cuida las relaciones",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 529,
+      "end_page": 530,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": [
+        "emotion_regulation.ficha.14"
+      ]
+    },
+    {
+      "doc_id": "emotion_regulation.hoja.11A",
+      "doc_type": "hoja",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "11A",
+      "title": "De valores a pasos de acción específicos",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 530,
+      "end_page": 532,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "emotion_regulation.ficha.17",
+        "emotion_regulation.ficha.18"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "emotion_regulation.hoja.11B",
+      "doc_type": "hoja",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "11B",
+      "title": "Registro de acciones diarias sobre valores y prioridades",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 532,
+      "end_page": 533,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "emotion_regulation.hoja.12",
+      "doc_type": "hoja",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "12",
+      "title": "Anticípate y construye Competencia",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 533,
+      "end_page": 534,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "emotion_regulation.ficha.19"
+      ],
+      "refs_in": [
+        "emotion_regulation.ficha.14"
+      ]
+    },
+    {
+      "doc_id": "emotion_regulation.hoja.13",
+      "doc_type": "hoja",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "13",
+      "title": "Utilizar en conjunto las habilidades ACA, día a día",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 534,
+      "end_page": 535,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "emotion_regulation.ficha.19"
+      ],
+      "refs_in": [
+        "emotion_regulation.ficha.14"
+      ]
+    },
+    {
+      "doc_id": "emotion_regulation.hoja.14",
+      "doc_type": "hoja",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "14",
+      "title": "Práctica de las habilidades CUIDA",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 535,
+      "end_page": 536,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "emotion_regulation.ficha.20"
+      ],
+      "refs_in": [
+        "emotion_regulation.ficha.14"
+      ]
+    },
+    {
+      "doc_id": "emotion_regulation.hoja.14A",
+      "doc_type": "hoja",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "14A",
+      "title": "Formularios de experiencia de pesadillas que son objetivo clínico",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 536,
+      "end_page": 540,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "emotion_regulation.ficha.20a"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "emotion_regulation.hoja.14B",
+      "doc_type": "hoja",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "14B",
+      "title": "Registro de ensayos de sueños y registro de relajación",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 540,
+      "end_page": 560,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "emotion_regulation.hoja.2",
+      "doc_type": "hoja",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "2",
+      "title": "Entender qué están haciendo las emociones por mí",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 496,
+      "end_page": 498,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "emotion_regulation.ficha.3"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "emotion_regulation.hoja.2A",
+      "doc_type": "hoja",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "2A",
+      "title": "Ejemplo: averiguar qué están haciendo mis emociones por mí",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 498,
+      "end_page": 500,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "emotion_regulation.ficha.3"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "emotion_regulation.hoja.2B",
+      "doc_type": "hoja",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "2B",
+      "title": "Diario de Emociones",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 500,
+      "end_page": 501,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "emotion_regulation.ficha.3"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "emotion_regulation.hoja.2C",
+      "doc_type": "hoja",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "2C",
+      "title": "Ejemplo: Diario de Emociones",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 501,
+      "end_page": 503,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "emotion_regulation.ficha.3"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "emotion_regulation.hoja.3",
+      "doc_type": "hoja",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "3",
+      "title": "Mitos sobre las emociones",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 503,
+      "end_page": 506,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "emotion_regulation.ficha.4a"
+      ],
+      "refs_in": [
+        "emotion_regulation.ficha.4A"
+      ]
+    },
+    {
+      "doc_id": "emotion_regulation.hoja.4",
+      "doc_type": "hoja",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "4",
+      "title": "Observar y describir emociones",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 506,
+      "end_page": 507,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "emotion_regulation.hoja.4A",
+      "doc_type": "hoja",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "4A",
+      "title": "Observar y describir emociones",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 507,
+      "end_page": 523,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "emotion_regulation.hoja.9",
+      "doc_type": "hoja",
+      "module": "emotion_regulation",
+      "category_raw": "REGULACIÓN EMOCIONAL",
+      "number": "9",
+      "title": "Pasos para reducir la vulnerabilidad ante la mente emocional",
+      "major_section": "Fichas de regulación emocional",
+      "start_page": 523,
+      "end_page": 525,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "emotion_regulation.ficha.14",
+        "emotion_regulation.ficha.15",
+        "emotion_regulation.ficha.16",
+        "emotion_regulation.ficha.17",
+        "emotion_regulation.ficha.18",
+        "emotion_regulation.ficha.19",
+        "emotion_regulation.ficha.20"
+      ],
+      "refs_in": [
+        "emotion_regulation.ficha.14"
+      ]
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.1",
+      "doc_type": "ficha",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "1",
+      "title": "Objetivos de efectividad interpersonal",
+      "major_section": "Fichas de efectividad interpersonal",
+      "start_page": 230,
+      "end_page": 232,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.10",
+      "doc_type": "ficha",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "10",
+      "title": "Descripción general:",
+      "major_section": "Fichas de efectividad interpersonal",
+      "start_page": 269,
+      "end_page": 270,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.11",
+      "doc_type": "ficha",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "11",
+      "title": "Conocer gente y agradarles",
+      "major_section": "Fichas de efectividad interpersonal",
+      "start_page": 270,
+      "end_page": 275,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.11A",
+      "doc_type": "ficha",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "11A",
+      "title": "Identificar habilidades para conocer personas y agradarles",
+      "major_section": "Fichas de efectividad interpersonal",
+      "start_page": 275,
+      "end_page": 277,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.12",
+      "doc_type": "ficha",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "12",
+      "title": "Mindfulness de los otros",
+      "major_section": "Fichas de efectividad interpersonal",
+      "start_page": 277,
+      "end_page": 279,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.12A",
+      "doc_type": "ficha",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "12A",
+      "title": "Identificar mindfulness de los otros",
+      "major_section": "Fichas de efectividad interpersonal",
+      "start_page": 279,
+      "end_page": 281,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.13",
+      "doc_type": "ficha",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "13",
+      "title": "Terminar relaciones",
+      "major_section": "Fichas de efectividad interpersonal",
+      "start_page": 281,
+      "end_page": 283,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.13A",
+      "doc_type": "ficha",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "13A",
+      "title": "Identificar cómo terminar relaciones",
+      "major_section": "Fichas de efectividad interpersonal",
+      "start_page": 283,
+      "end_page": 286,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.14",
+      "doc_type": "ficha",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "14",
+      "title": "Descripción general:",
+      "major_section": "Fichas de efectividad interpersonal",
+      "start_page": 286,
+      "end_page": 288,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.15",
+      "doc_type": "ficha",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "15",
+      "title": "Dialéctica",
+      "major_section": "Fichas de efectividad interpersonal",
+      "start_page": 288,
+      "end_page": 290,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.16",
+      "doc_type": "ficha",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "16",
+      "title": "Cómo pensar y actuar dialécticamente",
+      "major_section": "Fichas de efectividad interpersonal",
+      "start_page": 290,
+      "end_page": 292,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.16A",
+      "doc_type": "ficha",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "16A",
+      "title": "Ejemplos de oposiciones donde ambos puntos de vista",
+      "major_section": "Fichas de efectividad interpersonal",
+      "start_page": 292,
+      "end_page": 294,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.16B",
+      "doc_type": "ficha",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "16B",
+      "title": "Opuestos importantes que hay que equilibrar",
+      "major_section": "Fichas de efectividad interpersonal",
+      "start_page": 294,
+      "end_page": 295,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.16C",
+      "doc_type": "ficha",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "16C",
+      "title": "Identificar dialécticas",
+      "major_section": "Fichas de efectividad interpersonal",
+      "start_page": 295,
+      "end_page": 297,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.17",
+      "doc_type": "ficha",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "17",
+      "title": "Validación",
+      "major_section": "Fichas de efectividad interpersonal",
+      "start_page": 297,
+      "end_page": 300,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.18",
+      "doc_type": "ficha",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "18",
+      "title": "Guía de cómo validar",
+      "major_section": "Fichas de efectividad interpersonal",
+      "start_page": 300,
+      "end_page": 303,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.18A",
+      "doc_type": "ficha",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "18A",
+      "title": "Identificar la validación",
+      "major_section": "Fichas de efectividad interpersonal",
+      "start_page": 303,
+      "end_page": 308,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.19A",
+      "doc_type": "ficha",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "19A",
+      "title": "Identificar la autovalidación",
+      "major_section": "Fichas de efectividad interpersonal",
+      "start_page": 308,
+      "end_page": 309,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.2",
+      "doc_type": "ficha",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "2",
+      "title": "Factores que se interponen en el camino de la efectividad",
+      "major_section": "Fichas de efectividad interpersonal",
+      "start_page": 232,
+      "end_page": 235,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.20",
+      "doc_type": "ficha",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "20",
+      "title": "Estrategias para aumentar la probabilidad de conductas",
+      "major_section": "Fichas de efectividad interpersonal",
+      "start_page": 309,
+      "end_page": 312,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.21",
+      "doc_type": "ficha",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "21",
+      "title": "Estrategias para disminuir o detener conductas no deseadas",
+      "major_section": "Fichas de efectividad interpersonal",
+      "start_page": 312,
+      "end_page": 315,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.22",
+      "doc_type": "ficha",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "22",
+      "title": "Consejos para usar estrategias de cambio conductual",
+      "major_section": "Fichas de efectividad interpersonal",
+      "start_page": 315,
+      "end_page": 317,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.22A",
+      "doc_type": "ficha",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "22A",
+      "title": "Identificar estrategias efectivas de cambio conductual",
+      "major_section": "Fichas de efectividad interpersonal",
+      "start_page": 317,
+      "end_page": 326,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.2A",
+      "doc_type": "ficha",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "2A",
+      "title": "Mitos que se interponen en el camino de la efectividad",
+      "major_section": "Fichas de efectividad interpersonal",
+      "start_page": 235,
+      "end_page": 238,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.3",
+      "doc_type": "ficha",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "3",
+      "title": "Descripción general: alcanzar tus objetivos habilidosamente",
+      "major_section": "Fichas de efectividad interpersonal",
+      "start_page": 238,
+      "end_page": 240,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.4",
+      "doc_type": "ficha",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "4",
+      "title": "Clarificando objetivos en situaciones interpersonales",
+      "major_section": "Fichas de efectividad interpersonal",
+      "start_page": 240,
+      "end_page": 243,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.5",
+      "doc_type": "ficha",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "5",
+      "title": "Pautas para efectividad en los objetivos:",
+      "major_section": "Fichas de efectividad interpersonal",
+      "start_page": 243,
+      "end_page": 248,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.5A",
+      "doc_type": "ficha",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "5A",
+      "title": "Aplicar las habilidades DEAR MAN a una interacción difícil",
+      "major_section": "Fichas de efectividad interpersonal",
+      "start_page": 248,
+      "end_page": 251,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.6",
+      "doc_type": "ficha",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "6",
+      "title": "Pautas para efectividad en las relaciones: mantener la relación",
+      "major_section": "Fichas de efectividad interpersonal",
+      "start_page": 251,
+      "end_page": 255,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.6A",
+      "doc_type": "ficha",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "6A",
+      "title": "Ampliando la V en AVES: niveles de validación",
+      "major_section": "Fichas de efectividad interpersonal",
+      "start_page": 255,
+      "end_page": 256,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.7",
+      "doc_type": "ficha",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "7",
+      "title": "Pautas para la efectividad en el autorrespeto:",
+      "major_section": "Fichas de efectividad interpersonal",
+      "start_page": 256,
+      "end_page": 258,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.8",
+      "doc_type": "ficha",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "8",
+      "title": "Cómo evaluar tus opciones para saber con qué intensidad pedir",
+      "major_section": "Fichas de efectividad interpersonal",
+      "start_page": 258,
+      "end_page": 263,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.ficha.9",
+      "doc_type": "ficha",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "9",
+      "title": "Solución de problemas:",
+      "major_section": "Fichas de efectividad interpersonal",
+      "start_page": 263,
+      "end_page": 269,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.hoja.3",
+      "doc_type": "hoja",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "3",
+      "title": "Clarificar los objetivos en situaciones interpersonales",
+      "major_section": "habilidades de efectividad interpersonal.",
+      "start_page": 326,
+      "end_page": 327,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.hoja.4",
+      "doc_type": "hoja",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "4",
+      "title": "Escribir guiones de efectividad interpersonal",
+      "major_section": "habilidades de efectividad interpersonal.",
+      "start_page": 327,
+      "end_page": 328,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.hoja.5",
+      "doc_type": "hoja",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "5",
+      "title": "Seguimiento del uso de habilidades de efectividad interpersonal",
+      "major_section": "habilidades de efectividad interpersonal.",
+      "start_page": 328,
+      "end_page": 329,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.hoja.6",
+      "doc_type": "hoja",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "6",
+      "title": "El juego de la moneda: cuán intensamente pedir o decir no",
+      "major_section": "habilidades de efectividad interpersonal.",
+      "start_page": 329,
+      "end_page": 331,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "interpersonal_effectiveness.hoja.7",
+      "doc_type": "hoja",
+      "module": "interpersonal_effectiveness",
+      "category_raw": "EFECTIVIDAD INTERPERSONAL",
+      "number": "7",
+      "title": "Solución de problemas de habilidades de efectividad interpersonal",
+      "major_section": "habilidades de efectividad interpersonal.",
+      "start_page": 331,
+      "end_page": 374,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "mindfulness.ficha.1",
+      "doc_type": "ficha",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "1",
+      "title": "Objetivos de la práctica de mindfulness",
+      "major_section": "Fichas de mindfulness",
+      "start_page": 108,
+      "end_page": 110,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "mindfulness.hoja.1"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "mindfulness.ficha.10",
+      "doc_type": "ficha",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "10",
+      "title": "Analizándote por el sendero del medio:",
+      "major_section": "Fichas de mindfulness",
+      "start_page": 161,
+      "end_page": 165,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "mindfulness.hoja.10"
+      ],
+      "refs_in": [
+        "mindfulness.hoja.10A",
+        "mindfulness.hoja.10B"
+      ]
+    },
+    {
+      "doc_id": "mindfulness.ficha.1A",
+      "doc_type": "ficha",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "1A",
+      "title": "Definiciones de mindfulness",
+      "major_section": "Fichas de mindfulness",
+      "start_page": 110,
+      "end_page": 113,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "mindfulness.ficha.2",
+      "doc_type": "ficha",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "2",
+      "title": "Descripción general:",
+      "major_section": "Fichas de mindfulness",
+      "start_page": 113,
+      "end_page": 115,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": [
+        "mindfulness.hoja.2",
+        "mindfulness.hoja.2A",
+        "mindfulness.hoja.2B",
+        "mindfulness.hoja.2C"
+      ]
+    },
+    {
+      "doc_id": "mindfulness.ficha.3",
+      "doc_type": "ficha",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "3",
+      "title": "Mente sabia:",
+      "major_section": "Fichas de mindfulness",
+      "start_page": 115,
+      "end_page": 117,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "mindfulness.hoja.3"
+      ],
+      "refs_in": [
+        "mindfulness.hoja.2",
+        "mindfulness.hoja.2A",
+        "mindfulness.hoja.2B",
+        "mindfulness.hoja.2C"
+      ]
+    },
+    {
+      "doc_id": "mindfulness.ficha.3A",
+      "doc_type": "ficha",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "3A",
+      "title": "Ideas para la práctica de mente sabia",
+      "major_section": "Fichas de mindfulness",
+      "start_page": 117,
+      "end_page": 121,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "mindfulness.hoja.3"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "mindfulness.ficha.4",
+      "doc_type": "ficha",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "4",
+      "title": "Toma control de tu mente: habilidades “que”",
+      "major_section": "Fichas de mindfulness",
+      "start_page": 121,
+      "end_page": 123,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": [
+        "mindfulness.hoja.2",
+        "mindfulness.hoja.2A",
+        "mindfulness.hoja.2B",
+        "mindfulness.hoja.2C",
+        "mindfulness.hoja.4",
+        "mindfulness.hoja.4A",
+        "mindfulness.hoja.4B"
+      ]
+    },
+    {
+      "doc_id": "mindfulness.ficha.4A",
+      "doc_type": "ficha",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "4A",
+      "title": "Ideas para practicar observar",
+      "major_section": "Fichas de mindfulness",
+      "start_page": 123,
+      "end_page": 133,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "mindfulness.ficha.4B",
+      "doc_type": "ficha",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "4B",
+      "title": "Ideas para practicar describir",
+      "major_section": "Fichas de mindfulness",
+      "start_page": 133,
+      "end_page": 136,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "mindfulness.ficha.4C",
+      "doc_type": "ficha",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "4C",
+      "title": "Ideas para practicar participar",
+      "major_section": "Fichas de mindfulness",
+      "start_page": 136,
+      "end_page": 138,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "mindfulness.ficha.5",
+      "doc_type": "ficha",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "5",
+      "title": "Tomar control de tu mente: habilidades “cómo”",
+      "major_section": "Fichas de mindfulness",
+      "start_page": 138,
+      "end_page": 140,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": [
+        "mindfulness.hoja.2",
+        "mindfulness.hoja.2A",
+        "mindfulness.hoja.2B",
+        "mindfulness.hoja.2C",
+        "mindfulness.hoja.5",
+        "mindfulness.hoja.5A",
+        "mindfulness.hoja.5B",
+        "mindfulness.hoja.5C"
+      ]
+    },
+    {
+      "doc_id": "mindfulness.ficha.5A",
+      "doc_type": "ficha",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "5A",
+      "title": "Ideas para practicar no juzgar",
+      "major_section": "Fichas de mindfulness",
+      "start_page": 140,
+      "end_page": 142,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "mindfulness.ficha.5B",
+      "doc_type": "ficha",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "5B",
+      "title": "Ideas para practicar una cosa a la vez",
+      "major_section": "Fichas de mindfulness",
+      "start_page": 142,
+      "end_page": 145,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "mindfulness.ficha.5C",
+      "doc_type": "ficha",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "5C",
+      "title": "Ideas para practicar siendo efectivo",
+      "major_section": "Fichas de mindfulness",
+      "start_page": 145,
+      "end_page": 147,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": [
+        "mindfulness.hoja.2B",
+        "mindfulness.hoja.2C"
+      ]
+    },
+    {
+      "doc_id": "mindfulness.ficha.6",
+      "doc_type": "ficha",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "6",
+      "title": "Descripción general: otras perspectivas de mindfulness",
+      "major_section": "Fichas de mindfulness",
+      "start_page": 147,
+      "end_page": 148,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "mindfulness.hoja.6",
+        "mindfulness.hoja.7",
+        "mindfulness.hoja.8",
+        "mindfulness.hoja.9",
+        "mindfulness.hoja.10",
+        "mindfulness.hoja.10b"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "mindfulness.ficha.7",
+      "doc_type": "ficha",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "7",
+      "title": "Objetivos de la práctica de mindfulness:",
+      "major_section": "Fichas de mindfulness",
+      "start_page": 148,
+      "end_page": 150,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "mindfulness.hoja.1"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "mindfulness.ficha.7A",
+      "doc_type": "ficha",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "7A",
+      "title": "Mente sabia desde una perspectiva espiritual",
+      "major_section": "Fichas de mindfulness",
+      "start_page": 150,
+      "end_page": 152,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "mindfulness.ficha.8",
+      "doc_type": "ficha",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "8",
+      "title": "Práctica del amor compasivo para aumentar",
+      "major_section": "Fichas de mindfulness",
+      "start_page": 152,
+      "end_page": 155,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "mindfulness.hoja.6"
+      ],
+      "refs_in": [
+        "mindfulness.hoja.6"
+      ]
+    },
+    {
+      "doc_id": "mindfulness.ficha.9",
+      "doc_type": "ficha",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "9",
+      "title": "Medios hábiles:",
+      "major_section": "Fichas de mindfulness",
+      "start_page": 155,
+      "end_page": 157,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "mindfulness.hoja.7",
+        "mindfulness.hoja.8",
+        "mindfulness.hoja.9"
+      ],
+      "refs_in": [
+        "mindfulness.hoja.7A",
+        "mindfulness.hoja.8",
+        "mindfulness.hoja.9"
+      ]
+    },
+    {
+      "doc_id": "mindfulness.ficha.9A",
+      "doc_type": "ficha",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "9A",
+      "title": "Ideas para practicar equilibrar mente",
+      "major_section": "Fichas de mindfulness",
+      "start_page": 157,
+      "end_page": 161,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "mindfulness.hoja.7",
+        "mindfulness.hoja.8",
+        "mindfulness.hoja.9"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "mindfulness.hoja.1",
+      "doc_type": "hoja",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "1",
+      "title": "Pros y contras de practicar mindfulness",
+      "major_section": "Hojas de trabajo de mindfulness",
+      "start_page": 165,
+      "end_page": 168,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": [
+        "mindfulness.ficha.1",
+        "mindfulness.ficha.7"
+      ]
+    },
+    {
+      "doc_id": "mindfulness.hoja.10",
+      "doc_type": "hoja",
+      "module": "mindfulness",
+      "category_raw": "mindfulness",
+      "number": "10",
+      "title": "",
+      "major_section": "Hojas de trabajo de mindfulness",
+      "start_page": 24,
+      "end_page": 24,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "mindfulness.hoja.10",
+      "doc_type": "hoja",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "10",
+      "title": "Analizándote por el sendero del medio hacia la mente sabia",
+      "major_section": "Hojas de trabajo de mindfulness",
+      "start_page": 211,
+      "end_page": 214,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": [
+        "mindfulness.ficha.10",
+        "mindfulness.ficha.6"
+      ]
+    },
+    {
+      "doc_id": "mindfulness.hoja.10A",
+      "doc_type": "hoja",
+      "module": "mindfulness",
+      "category_raw": "mindfulness",
+      "number": "10A",
+      "title": "",
+      "major_section": "Hojas de trabajo de mindfulness",
+      "start_page": 24,
+      "end_page": 24,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "mindfulness.hoja.10A",
+      "doc_type": "hoja",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "10A",
+      "title": "Revisando para saber si andas por el sendero del medio",
+      "major_section": "Hojas de trabajo de mindfulness",
+      "start_page": 214,
+      "end_page": 216,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "mindfulness.ficha.10"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "mindfulness.hoja.10B",
+      "doc_type": "hoja",
+      "module": "mindfulness",
+      "category_raw": "mindfulness",
+      "number": "10B",
+      "title": "Habilidades de efectividad interpersonal",
+      "major_section": "Hojas de trabajo de mindfulness",
+      "start_page": 24,
+      "end_page": 57,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "mindfulness.hoja.10B",
+      "doc_type": "hoja",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "10B",
+      "title": "Inventario de caminando por el sendero del medio",
+      "major_section": "Hojas de trabajo de mindfulness",
+      "start_page": 216,
+      "end_page": 230,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "mindfulness.ficha.10"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "mindfulness.hoja.2",
+      "doc_type": "hoja",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "2",
+      "title": "Práctica de las habilidades básicas de mindfulness",
+      "major_section": "Hojas de trabajo de mindfulness",
+      "start_page": 168,
+      "end_page": 171,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "mindfulness.ficha.2",
+        "mindfulness.ficha.3",
+        "mindfulness.ficha.4",
+        "mindfulness.ficha.5",
+        "mindfulness.ficha.5c"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "mindfulness.hoja.2A",
+      "doc_type": "hoja",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "2A",
+      "title": "Práctica de las habilidades básicas de mindfulness",
+      "major_section": "Hojas de trabajo de mindfulness",
+      "start_page": 171,
+      "end_page": 173,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "mindfulness.ficha.2",
+        "mindfulness.ficha.3",
+        "mindfulness.ficha.4",
+        "mindfulness.ficha.5",
+        "mindfulness.ficha.5c"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "mindfulness.hoja.2B",
+      "doc_type": "hoja",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "2B",
+      "title": "Práctica de las habilidades básicas de mindfulness",
+      "major_section": "Hojas de trabajo de mindfulness",
+      "start_page": 173,
+      "end_page": 175,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "mindfulness.ficha.2",
+        "mindfulness.ficha.3",
+        "mindfulness.ficha.4",
+        "mindfulness.ficha.5",
+        "mindfulness.ficha.5C"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "mindfulness.hoja.2C",
+      "doc_type": "hoja",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "2C",
+      "title": "Inventario de las habilidades básicas de mindfulness",
+      "major_section": "Hojas de trabajo de mindfulness",
+      "start_page": 175,
+      "end_page": 177,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "mindfulness.ficha.2",
+        "mindfulness.ficha.3",
+        "mindfulness.ficha.4",
+        "mindfulness.ficha.5",
+        "mindfulness.ficha.5C"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "mindfulness.hoja.3",
+      "doc_type": "hoja",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "3",
+      "title": "Práctica de mente sabia",
+      "major_section": "Hojas de trabajo de mindfulness",
+      "start_page": 177,
+      "end_page": 180,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": [
+        "mindfulness.ficha.3",
+        "mindfulness.ficha.3A"
+      ]
+    },
+    {
+      "doc_id": "mindfulness.hoja.4",
+      "doc_type": "hoja",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "4",
+      "title": "Habilidades “qué” de mindfulness: observar, describir, participar",
+      "major_section": "Hojas de trabajo de mindfulness",
+      "start_page": 180,
+      "end_page": 183,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "mindfulness.ficha.4"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "mindfulness.hoja.4A",
+      "doc_type": "hoja",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "4A",
+      "title": "Lista de verificación para observar, describir, participar",
+      "major_section": "Hojas de trabajo de mindfulness",
+      "start_page": 183,
+      "end_page": 186,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "mindfulness.ficha.4"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "mindfulness.hoja.4B",
+      "doc_type": "hoja",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "4B",
+      "title": "Inventario para las habilidades observar, describir, participar",
+      "major_section": "Hojas de trabajo de mindfulness",
+      "start_page": 186,
+      "end_page": 188,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "mindfulness.ficha.4"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "mindfulness.hoja.5",
+      "doc_type": "hoja",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "5",
+      "title": "Habilidades “cómo” de mindfulness:",
+      "major_section": "Hojas de trabajo de mindfulness",
+      "start_page": 188,
+      "end_page": 191,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "mindfulness.ficha.5"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "mindfulness.hoja.5A",
+      "doc_type": "hoja",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "5A",
+      "title": "Lista de verificación para no juzgar, una cosa a la vez y siendo",
+      "major_section": "Hojas de trabajo de mindfulness",
+      "start_page": 191,
+      "end_page": 194,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "mindfulness.ficha.5"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "mindfulness.hoja.5B",
+      "doc_type": "hoja",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "5B",
+      "title": "Inventario de las habilidades no juzgar, una cosa a la vez, siendo",
+      "major_section": "Hojas de trabajo de mindfulness",
+      "start_page": 194,
+      "end_page": 196,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "mindfulness.ficha.5"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "mindfulness.hoja.5C",
+      "doc_type": "hoja",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "5C",
+      "title": "Inventario de no juzgar",
+      "major_section": "Hojas de trabajo de mindfulness",
+      "start_page": 196,
+      "end_page": 199,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "mindfulness.ficha.5"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "mindfulness.hoja.6",
+      "doc_type": "hoja",
+      "module": "mindfulness",
+      "category_raw": "mindfulness",
+      "number": "6",
+      "title": "",
+      "major_section": "Hojas de trabajo de mindfulness",
+      "start_page": 24,
+      "end_page": 24,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "mindfulness.hoja.6",
+      "doc_type": "hoja",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "6",
+      "title": "Práctica del amor compasivo",
+      "major_section": "Hojas de trabajo de mindfulness",
+      "start_page": 199,
+      "end_page": 202,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "mindfulness.ficha.8"
+      ],
+      "refs_in": [
+        "mindfulness.ficha.6",
+        "mindfulness.ficha.8"
+      ]
+    },
+    {
+      "doc_id": "mindfulness.hoja.7",
+      "doc_type": "hoja",
+      "module": "mindfulness",
+      "category_raw": "mindfulness",
+      "number": "7",
+      "title": "Hoha de trabajo de mindfullness 7A",
+      "major_section": "Hojas de trabajo de mindfulness",
+      "start_page": 24,
+      "end_page": 24,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "mindfulness.hoja.7",
+      "doc_type": "hoja",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "7",
+      "title": "Equilibrar mente del hacer con mente del estar",
+      "major_section": "Hojas de trabajo de mindfulness",
+      "start_page": 202,
+      "end_page": 205,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": [
+        "mindfulness.ficha.6",
+        "mindfulness.ficha.9",
+        "mindfulness.ficha.9A"
+      ]
+    },
+    {
+      "doc_id": "mindfulness.hoja.7A",
+      "doc_type": "hoja",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "7A",
+      "title": "Inventario de mindfulness de ser y hacer",
+      "major_section": "Hojas de trabajo de mindfulness",
+      "start_page": 205,
+      "end_page": 207,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "mindfulness.ficha.9"
+      ],
+      "refs_in": []
+    },
+    {
+      "doc_id": "mindfulness.hoja.8",
+      "doc_type": "hoja",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "8",
+      "title": "Inventario de mindfulness de actividades agradables",
+      "major_section": "Hojas de trabajo de mindfulness",
+      "start_page": 207,
+      "end_page": 209,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "mindfulness.ficha.9"
+      ],
+      "refs_in": [
+        "mindfulness.ficha.6",
+        "mindfulness.ficha.9",
+        "mindfulness.ficha.9A"
+      ]
+    },
+    {
+      "doc_id": "mindfulness.hoja.9",
+      "doc_type": "hoja",
+      "module": "mindfulness",
+      "category_raw": "mindfulness",
+      "number": "9",
+      "title": "",
+      "major_section": "Hojas de trabajo de mindfulness",
+      "start_page": 24,
+      "end_page": 24,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [],
+      "refs_in": []
+    },
+    {
+      "doc_id": "mindfulness.hoja.9",
+      "doc_type": "hoja",
+      "module": "mindfulness",
+      "category_raw": "MINDFULNESS",
+      "number": "9",
+      "title": "Inventario de mindfulness de actividades desagradables",
+      "major_section": "Hojas de trabajo de mindfulness",
+      "start_page": 209,
+      "end_page": 211,
+      "source_pdf": "Manual-2023-enumerado-.pdf",
+      "refs_out": [
+        "mindfulness.ficha.9"
+      ],
+      "refs_in": [
+        "mindfulness.ficha.6",
+        "mindfulness.ficha.9",
+        "mindfulness.ficha.9A"
+      ]
+    }
+  ]
+}

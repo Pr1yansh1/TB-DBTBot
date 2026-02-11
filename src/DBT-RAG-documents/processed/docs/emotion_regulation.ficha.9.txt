@@ -1,0 +1,10 @@
+DOC_ID: emotion_regulation.ficha.9
+TYPE: ficha
+MODULE: emotion_regulation
+NUMBER: 9
+TITLE: Acción opuesta y resolución de problemas:
+PAGES: 420-422
+MAJOR_SECTION: Fichas de regulación emocional
+REFS_OUT: emotion_regulation.hoja.6
+
+(Hoja de trabajo de regulación emocional 6) Acción opuesta y resolución de problemas: decidir cuál usar Acción opuesta = Actuar de forma opuesta al impulso de acción de una emoción Resolución de problemas = Evitar o cambiar (resolver) un evento problema

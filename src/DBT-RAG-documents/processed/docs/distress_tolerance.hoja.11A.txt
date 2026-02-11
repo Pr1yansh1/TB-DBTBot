@@ -1,0 +1,14 @@
+DOC_ID: distress_tolerance.hoja.11A
+TYPE: hoja
+MODULE: distress_tolerance
+NUMBER: 11A
+TITLE: Práctica de media sonrisa y manos dispuestas
+PAGES: 703-705
+MAJOR_SECTION: Hojas de trabajo de tolerancia al malestar 8–15a)
+REFS_OUT: distress_tolerance.ficha.14
+
+(Fichas de tolerancia al malestar 14-14a) Práctica de media sonrisa y manos dispuestas
+
+Practica cada habilidad dos veces y describe tu experiencia a continuación:
+
+Nota. Adaptada de una hoja de trabajo no publicada de Seth Axelrod, con su permiso.

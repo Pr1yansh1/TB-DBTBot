@@ -1,4 +1,18 @@
 Here’s a small, practical `README.md` you can paste in:
+## Setup
+
+Create a `.env` (or export env vars):
+
+* `AWS_REGION` (fallback: `AWS_DEFAULT_REGION`, default: `us-west-2`)
+* `BEDROCK_MODEL_ID` (default: `anthropic.claude-3-5-sonnet-20240620-v1:0`)
+* `AWS_PROFILE` (optional, for local dev if you use a named AWS profile)
+* `IS_EC2` (optional; set to `1` on EC2 to ignore `AWS_PROFILE` and use the instance role)
+
+Optional logging / debugging:
+
+* `TBTST_LOG_LEVEL` (default: `INFO`)
+* `TBTST_DEBUG_METRICS` (set `1` to log per-call latency/token metrics; default: `0`)
+* `TBTST_LOG_PROMPT_SIZES` (set `1` to log prompt file sizes at startup; default: `0`)
 
 ````md
 # TB-TST Helper (LangGraph + AWS Bedrock)

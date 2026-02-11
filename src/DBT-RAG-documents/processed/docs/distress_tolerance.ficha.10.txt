@@ -1,0 +1,12 @@
+DOC_ID: distress_tolerance.ficha.10
+TYPE: ficha
+MODULE: distress_tolerance
+NUMBER: 10
+TITLE: Hojas de trabajo de tolerancia al malestar 8–15a)
+PAGES: 599-600
+MAJOR_SECTION: Fichas de tolerancia al malestar
+REFS_OUT: 
+
+Descripción general: habilidades de aceptación de la realidad Estas son habilidades para vivir una vida que no es la vida que deseas.
+
+ACEPTACIÓN RADICAL REDIRECCIONAR LA MENTE DISPOSICIÓN ABIERTA MEDIA SONRISA Y MANOS DISPUESTAS MINDFULNESS DE LOS PENSAMIENTOS ACTUALES

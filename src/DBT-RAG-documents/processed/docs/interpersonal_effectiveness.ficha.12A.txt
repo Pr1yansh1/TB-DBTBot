@@ -1,0 +1,14 @@
+DOC_ID: interpersonal_effectiveness.ficha.12A
+TYPE: ficha
+MODULE: interpersonal_effectiveness
+NUMBER: 12A
+TITLE: Identificar mindfulness de los otros
+PAGES: 279-281
+MAJOR_SECTION: Fichas de efectividad interpersonal
+REFS_OUT: 
+
+Identificar mindfulness de los otros
+
+Marca la respuesta más efectiva entre A y B:
+
+1A. Realizar múltiples tareas a la vez y esperar que la otra persona entienda. 1B. Prestar toda tu atención a la persona con la que estás. 7A. Evaluar las conductas y pensamientos de otras personas y decirles que están equivocadas o que deberían ser diferentes cuando estás seguro de que tienes razón. 7B. Si no apruebas o estás de acuerdo con lo que otra persona está haciendo o pensando, intenta entender cómo tendría sentido si supieras las causas. 2A. Imaginar que, si ya conoces a alguien, ya no tienes que prestarle tanta atención. 2B. Reconocer que la cercanía se construye prestando atención y aprendiendo más y más sobre las personas que te importan. 8A. “Deberías dejar de hacer eso”. 8B. “Me gustaría que dejaras de hacer eso”. 3A. “Realmente me heriste con lo que hiciste, y el pensamiento ‘me odias’ pasó por mi mente. Sé que no es verdad, pero ¿cómo te hubieras sentido tú en ese momento?”. 3B. “Sé que me odias. No hay otra razón para justificar lo que me hiciste. Tampoco me digas lo contrario”. 9A. “Eres perezoso y te has rendido”. 9B. “Me preocupa que te hayas rendido”. 4A. En situaciones sociales, sumergirte en las interacciones. 10 A. “No creo que eso sea correcto”. 10B. “¿Cómo puedes pensar eso?”. 4B. Mantenerte reservado y observar las interacciones sociales para no cometer errores. 5A. Conocer gente con tus valores. 5B. Haz pequeñas cosas que van en contra de tus valores para no ser un peso para tus amistades. 11A. Mantener el control para que las relaciones resulten como tú deseas. 11B. Ir con el flujo la mayor parte del tiempo cuando estés en interacciones sociales con grupos de amigos 6A. Estar abierto a que las personas cambien de opinión acerca de las cosas, así como sus creencias o sentimientos. 6B. Suponer que cuando las personas cambian, no son confiables. 12A. Mantener una conversación hasta estar seguro de que te agrada la persona. 12B. Sumergirte en una conversación y después evaluar si te agrada el otro.

@@ -1,0 +1,20 @@
+DOC_ID: mindfulness.ficha.2
+TYPE: ficha
+MODULE: mindfulness
+NUMBER: 2
+TITLE: Descripción general:
+PAGES: 113-115
+MAJOR_SECTION: Fichas de mindfulness
+REFS_OUT: 
+
+(Hojas de trabajo de mindfulness 2–2c, 3) Descripción general: habilidades básicas de mindfulness
+
+MENTE SABIA:
+
+ESTADOS DE LA MENTE
+
+HABILIDADES “QUÉ” (qué practicas cuando practicas mindfulness): observar, describir, participar
+
+HABILIDADES “CÓMO”
+
+(cómo practicas cuando practicas mindfulness): no juzgar, una cosa a la vez, siendo efectivo

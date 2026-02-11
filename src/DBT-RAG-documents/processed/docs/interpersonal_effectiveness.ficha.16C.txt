@@ -1,0 +1,10 @@
+DOC_ID: interpersonal_effectiveness.ficha.16C
+TYPE: ficha
+MODULE: interpersonal_effectiveness
+NUMBER: 16C
+TITLE: Identificar dialécticas
+PAGES: 295-297
+MAJOR_SECTION: Fichas de efectividad interpersonal
+REFS_OUT: 
+
+Identificar dialécticas Marca la respuesta más dialéctica en cada grupo. 1A. Presta atención al efecto que causas en los demás. 1B. Asume que las reacciones de los demás no tienen que ver siempre con como los tratas. 5A. Examina una relación difícil observando cómo las interacciones a lo largo del tiempo entre tú y la otra persona pueden ser problemáticas. 5B. Supón que las dificultades en una relación son completamente tu culpa o de la otra persona. Decir: 2A. “Sé que tengo la razón”. 2B. “Puedo ver tu punto de vista, aunque no estoy de acuerdo con él”. 2C. “La forma en que piensas no tiene ningún sentido”. Decir: 6A. “Es inútil. No puedo hacerlo”. 6B. “Esto es leve como la brisa. No tengo problemas”. 6C. “Esto es muy difícil para mí, pero voy a seguir intentándolo”. Decir: 3A. “Todo el mundo me trata injustamente siempre”. 3B. “Creo que el entrenador debería reconsiderar su decisión de echarme del equipo”. 3C. “Los entrenadores saben mejor que yo a quién poner en los equipos y quién echar”. 7A. Cuando no estés de acuerdo con alguien, asegúrate de tener muy claro tu punto de vista. 7B. Cuando no estés de acuerdo con alguien, intenta ver su punto de vista. 4A. Juzga como desleales e indiferentes a tus amigos si comienzan a cambiar de una manera que no te gusta. 4B. Acepta que los intereses cambian. 8A. Exige que las relaciones sean estables y no cambien. 8B. Abraza el cambio y acéptalo como algo inevitable.

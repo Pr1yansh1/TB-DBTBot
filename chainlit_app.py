@@ -1,112 +1,99 @@
+# chainlit_app.py
 from __future__ import annotations
 
-from typing import List, Optional
-import asyncio
+from typing import Optional
 
 import chainlit as cl
-from langchain_core.messages import AIMessage, BaseMessage, HumanMessage
+from langchain_core.messages import AIMessage, HumanMessage
 
-from src.tbtst_bot.graph import GRAPH
-from baselines.sonnet_prompt import run_baseline
-from src.tbtst_bot.db import init_db, upsert_thread_meta
+from tbtst_bot.graph import GRAPH_DBT_FULL, GRAPH_DBT_MINI
 
 
-BANNER = """TB-TST Helper (Chainlit UI)
+MINI_PROFILE = "DBT Mini"
+FULL_PROFILE = "DBT Full"
 
-Modes:
-- Agentic (LangGraph + tools)
-- Baseline (single-prompt Sonnet)
 
-Everything is stored (threads, messages, feedback).
-"""
+@cl.set_chat_profiles
+async def chat_profile(current_user: Optional[cl.User] = None):
+    return [
+        cl.ChatProfile(
+            name=MINI_PROFILE,
+            markdown_description=(
+                "Uses the **mini** graph: classify → (crisis | TB FAQ RAG | DBT mini). "
+                "DBT is one baseline node."
+            ),
+        ),
+        cl.ChatProfile(
+            name=FULL_PROFILE,
+            markdown_description=(
+                "Uses the **full** graph: classify → (crisis | TB FAQ RAG | DBT full). "
+                "DBT uses brain-router → (DT/MIND/ER/IE) module coaching."
+            ),
+        ),
+    ]
+
+
+def _get_selected_graph() -> tuple[str, object]:
+    """Return (label, compiled_graph) based on the active chat profile."""
+    profile = cl.user_session.get("chat_profile") or MINI_PROFILE
+    if profile == FULL_PROFILE:
+        return "full", GRAPH_DBT_FULL
+    return "mini", GRAPH_DBT_MINI
 
 
 @cl.on_chat_start
 async def on_chat_start():
-    init_db()
+    # Chainlit docs recommend this as a stable per-chat identifier.
+    thread_id = cl.context.session.id  # type: ignore[attr-defined]
+    cl.user_session.set("thread_id", thread_id)
 
-    await cl.Message(content=BANNER).send()
-
-    # Ask for name once per thread
-    name = await cl.AskUserMessage(content="Hi — what name should I call you?", timeout=60).send()
-    user_name = (name["output"] or "").strip() if name else ""
-    if not user_name:
-        user_name = "friend"
-
-    cl.user_session.set("user_name", user_name)
-
-    thread_id = cl.context.session.id
-    upsert_thread_meta(thread_id, user_name=user_name)
-
-    actions = [
-        cl.Action(name="mode_agentic", value="agentic", label="Agentic (LangGraph)"),
-        cl.Action(name="mode_baseline", value="baseline", label="Baseline (Sonnet prompt)"),
-    ]
-    await cl.Message(content=f"Nice to meet you, {user_name}. Choose a mode:", actions=actions).send()
-
-    cl.user_session.set("mode", None)
-    cl.user_session.set("baseline_messages", [])
-
-
-@cl.action_callback("mode_agentic")
-async def on_mode_agentic(action: cl.Action):
-    cl.user_session.set("mode", "agentic")
-    thread_id = cl.context.session.id
-    upsert_thread_meta(thread_id, mode="agentic")
-    await cl.Message(content="✅ Mode set to: Agentic (LangGraph).").send()
-
-
-@cl.action_callback("mode_baseline")
-async def on_mode_baseline(action: cl.Action):
-    cl.user_session.set("mode", "baseline")
-    cl.user_session.set("baseline_messages", [])
-    thread_id = cl.context.session.id
-    upsert_thread_meta(thread_id, mode="baseline")
-    await cl.Message(content="✅ Mode set to: Baseline (Sonnet prompt).").send()
+    graph_label, _ = _get_selected_graph()
+    await cl.Message(
+        content=(
+            f"✅ TB-TST Helper started.\n"
+            f"- Chat profile: **{cl.user_session.get('chat_profile')}**\n"
+            f"- Graph: **{graph_label}**\n"
+        )
+    ).send()
 
 
 @cl.on_message
 async def on_message(message: cl.Message):
-    mode: Optional[str] = cl.user_session.get("mode")
-    if mode not in {"agentic", "baseline"}:
-        await cl.Message(content="Pick a mode first (Agentic or Baseline).").send()
-        return
+    graph_label, graph = _get_selected_graph()
+    thread_id = cl.user_session.get("thread_id") or cl.context.session.id  # type: ignore[attr-defined]
 
     user_text = (message.content or "").strip()
     if not user_text:
         return
 
-    thread_id = cl.context.session.id
-
-    msg = cl.Message(content="…")
-    await msg.send()
-
     try:
-        if mode == "agentic":
-            def _run_graph():
-                return GRAPH.invoke(
-                    {"messages": [HumanMessage(content=user_text)]},
-                    config={"configurable": {"thread_id": thread_id}},
-                )
+        # Your graphs use MemorySaver() checkpointer, so pass a thread_id.
+        result_state = await graph.ainvoke(
+            {"messages": [HumanMessage(content=user_text)]},
+            config={"configurable": {"thread_id": thread_id}},
+        )
 
-            final = await asyncio.to_thread(_run_graph)
-            reply = final["messages"][-1].content
-            msg.content = reply
-            await msg.update()
-            return
+        # Extract the latest assistant message from the returned state.
+        assistant_text = ""
+        msgs = result_state.get("messages") if isinstance(result_state, dict) else None
+        if isinstance(msgs, list):
+            for m in reversed(msgs):
+                if isinstance(m, AIMessage):
+                    assistant_text = (m.content or "").strip()
+                    break
 
-        # baseline
-        baseline_messages: List[BaseMessage] = cl.user_session.get("baseline_messages") or []
-        baseline_messages = baseline_messages + [HumanMessage(content=user_text)]
+        if not assistant_text:
+            assistant_text = "(No response produced.)"
 
-        reply_text = await asyncio.to_thread(run_baseline, baseline_messages)
-        baseline_messages = baseline_messages + [AIMessage(content=reply_text)]
-        cl.user_session.set("baseline_messages", baseline_messages)
-
-        msg.content = reply_text
-        await msg.update()
+        await cl.Message(content=assistant_text).send()
 
     except Exception as e:
-        msg.content = f"Sorry — something went wrong.\n\nError: {type(e).__name__}: {e}"
-        await msg.update()
+        # Keep UI clean; log the details server-side.
+        print(f"[chainlit_app] ERROR ({graph_label=}, {thread_id=}): {e}")
+        await cl.Message(
+            content=(
+                "⚠️ Something went wrong while running the graph.\n"
+                "Check the server logs for the full error."
+            )
+        ).send()
 
