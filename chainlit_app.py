@@ -1,99 +1,122 @@
-# chainlit_app.py
+# src/tbtst_bot/app.py
 from __future__ import annotations
 
-from typing import Optional
+from typing import Any, Dict, Optional
+from pathlib import Path
+from datetime import datetime
+from uuid import uuid4
+import argparse
+import os
 
-import chainlit as cl
-from langchain_core.messages import AIMessage, HumanMessage
+from langchain_core.messages import HumanMessage
 
-from tbtst_bot.graph import GRAPH_DBT_FULL, GRAPH_DBT_MINI
-
-
-MINI_PROFILE = "DBT Mini"
-FULL_PROFILE = "DBT Full"
-
-
-@cl.set_chat_profiles
-async def chat_profile(current_user: Optional[cl.User] = None):
-    return [
-        cl.ChatProfile(
-            name=MINI_PROFILE,
-            markdown_description=(
-                "Uses the **mini** graph: classify → (crisis | TB FAQ RAG | DBT mini). "
-                "DBT is one baseline node."
-            ),
-        ),
-        cl.ChatProfile(
-            name=FULL_PROFILE,
-            markdown_description=(
-                "Uses the **full** graph: classify → (crisis | TB FAQ RAG | DBT full). "
-                "DBT uses brain-router → (DT/MIND/ER/IE) module coaching."
-            ),
-        ),
-    ]
+try:
+    from .graph import GRAPH_DBT_MINI, GRAPH_DBT_FULL
+except Exception:  # pragma: no cover
+    from tbtst_bot.graph import GRAPH_DBT_MINI, GRAPH_DBT_FULL
 
 
-def _get_selected_graph() -> tuple[str, object]:
-    """Return (label, compiled_graph) based on the active chat profile."""
-    profile = cl.user_session.get("chat_profile") or MINI_PROFILE
-    if profile == FULL_PROFILE:
-        return "full", GRAPH_DBT_FULL
-    return "mini", GRAPH_DBT_MINI
+BANNER = """Hi! I’m TB-TST.
+
+I’m here to support you with tuberculosis (TB) questions and day-to-day coping.
+You can:
+- ask TB-related questions (treatment, side effects, routines)
+- talk about what’s been on your mind
+- tell me how you’re feeling and I’ll help you take a next step
+
+If you’re not sure what to say, try:
+- “I have a question about my meds.”
+- “I’m feeling overwhelmed today.”
+- “Can we do something to calm down right now?”
+
+Type q (or quit/exit) to leave.
+"""
 
 
-@cl.on_chat_start
-async def on_chat_start():
-    # Chainlit docs recommend this as a stable per-chat identifier.
-    thread_id = cl.context.session.id  # type: ignore[attr-defined]
-    cl.user_session.set("thread_id", thread_id)
-
-    graph_label, _ = _get_selected_graph()
-    await cl.Message(
-        content=(
-            f"✅ TB-TST Helper started.\n"
-            f"- Chat profile: **{cl.user_session.get('chat_profile')}**\n"
-            f"- Graph: **{graph_label}**\n"
-        )
-    ).send()
+def select_graph(variant: str):
+    v = (variant or "mini").strip().lower()
+    if v == "full":
+        return GRAPH_DBT_FULL, "full"
+    if v == "mini":
+        return GRAPH_DBT_MINI, "mini"
+    raise ValueError(f"Unknown variant: {variant!r}. Use 'mini' or 'full'.")
 
 
-@cl.on_message
-async def on_message(message: cl.Message):
-    graph_label, graph = _get_selected_graph()
-    thread_id = cl.user_session.get("thread_id") or cl.context.session.id  # type: ignore[attr-defined]
+def save_graph_files(graph, prefix: Optional[str] = None) -> tuple[Path, Path]:
+    g = graph.get_graph()
 
-    user_text = (message.content or "").strip()
-    if not user_text:
-        return
+    if prefix is None or not prefix.strip():
+        prefix = f"tbtst_graph_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
 
-    try:
-        # Your graphs use MemorySaver() checkpointer, so pass a thread_id.
-        result_state = await graph.ainvoke(
-            {"messages": [HumanMessage(content=user_text)]},
-            config={"configurable": {"thread_id": thread_id}},
-        )
+    prefix_path = Path(prefix)
+    mmd_path = prefix_path.with_suffix(".mmd")
+    png_path = prefix_path.with_suffix(".png")
 
-        # Extract the latest assistant message from the returned state.
-        assistant_text = ""
-        msgs = result_state.get("messages") if isinstance(result_state, dict) else None
-        if isinstance(msgs, list):
-            for m in reversed(msgs):
-                if isinstance(m, AIMessage):
-                    assistant_text = (m.content or "").strip()
-                    break
+    mmd_path.write_text(g.draw_mermaid(), encoding="utf-8")
+    png_path.write_bytes(g.draw_mermaid_png())
 
-        if not assistant_text:
-            assistant_text = "(No response produced.)"
+    return mmd_path, png_path
 
-        await cl.Message(content=assistant_text).send()
 
-    except Exception as e:
-        # Keep UI clean; log the details server-side.
-        print(f"[chainlit_app] ERROR ({graph_label=}, {thread_id=}): {e}")
-        await cl.Message(
-            content=(
-                "⚠️ Something went wrong while running the graph.\n"
-                "Check the server logs for the full error."
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--variant",
+        choices=["mini", "full"],
+        default="mini",
+        help="Which DBT implementation to use.",
+    )
+    parser.add_argument(
+        "--thread-id",
+        default=None,
+        help="Optional thread id. If omitted, a new one is generated.",
+    )
+    args = parser.parse_args()
+
+    graph, variant = select_graph(args.variant)
+
+    # Separate memory per variant: suffix the thread id with :{variant}
+    base_thread = args.thread_id or os.getenv("THREAD_ID") or f"cli-{uuid4().hex[:8]}"
+    thread_id = f"{base_thread}:{variant}"
+
+    print(BANNER)
+    print(f"(session: {thread_id})\n")
+
+    while True:
+        try:
+            user = input("you: ").strip()
+        except (EOFError, KeyboardInterrupt):
+            print("\nbye.")
+            return
+
+        if user.lower() in {"q", "quit", "exit"}:
+            print("bye.")
+            return
+        if not user:
+            continue
+
+        # Dev command (not shown in banner)
+        if user.startswith(":graph"):
+            parts = user.split(maxsplit=1)
+            prefix = parts[1].strip() if len(parts) == 2 else None
+            try:
+                mmd_path, png_path = save_graph_files(graph, prefix)
+                print(f"\n✅ Saved Mermaid: {mmd_path}")
+                print(f"✅ Saved PNG:    {png_path}\n")
+            except Exception as e:
+                print(f"\n❌ Failed to save graph: {type(e).__name__}: {e}\n")
+            continue
+
+        try:
+            final: Dict[str, Any] = graph.invoke(
+                {"messages": [HumanMessage(content=user)]},
+                config={"configurable": {"thread_id": thread_id}},
             )
-        ).send()
+            reply = final["messages"][-1].content
+            print("\nbot:", reply, "\n")
+        except Exception as e:
+            print(f"\n❌ Error: {type(e).__name__}: {e}\n")
 
+
+if __name__ == "__main__":
+    main()
