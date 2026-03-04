@@ -1,122 +1,173 @@
-# src/tbtst_bot/app.py
+# chainlit_app.py
 from __future__ import annotations
 
-from typing import Any, Dict, Optional
+from dataclasses import dataclass
 from pathlib import Path
-from datetime import datetime
-from uuid import uuid4
-import argparse
-import os
+from typing import Dict, Optional, List, Tuple
 
-from langchain_core.messages import HumanMessage
-
-try:
-    from .graph import GRAPH_DBT_MINI, GRAPH_DBT_FULL
-except Exception:  # pragma: no cover
-    from tbtst_bot.graph import GRAPH_DBT_MINI, GRAPH_DBT_FULL
+import chainlit as cl
+from chainlit.config import ChainlitConfigOverrides, UISettings
 
 
-BANNER = """Hi! I’m TB-TST.
+# UI banner copy (concise, readable; does NOT say "TB-TST")
+BANNER_INTRO_MD = (
+    "**Hi! I’m a TB treatment support bot.**\n\n"
+    "You can ask questions about TB (treatment, side effects, routines) **or** just tell me what’s bothering you.\n\n"
+    "*Persona hint:* The banner below describes a sample person. "
+    "You can use **any** details from it (or **none**) when asking questions."
+)
 
-I’m here to support you with tuberculosis (TB) questions and day-to-day coping.
-You can:
-- ask TB-related questions (treatment, side effects, routines)
-- talk about what’s been on your mind
-- tell me how you’re feeling and I’ll help you take a next step
-
-If you’re not sure what to say, try:
-- “I have a question about my meds.”
-- “I’m feeling overwhelmed today.”
-- “Can we do something to calm down right now?”
-
-Type q (or quit/exit) to leave.
-"""
+# If you still want a chat message, set this True and keep it short.
+SEND_CHAT_WELCOME_MESSAGE = False
+WELCOME_MESSAGE = "Hi! I’m a TB treatment support bot. Ask TB questions or tell me what’s bothering you."
 
 
-def select_graph(variant: str):
-    v = (variant or "mini").strip().lower()
-    if v == "full":
-        return GRAPH_DBT_FULL, "full"
-    if v == "mini":
-        return GRAPH_DBT_MINI, "mini"
-    raise ValueError(f"Unknown variant: {variant!r}. Use 'mini' or 'full'.")
+PERSONAS_DIR = Path(__file__).parent / "personas"
 
 
-def save_graph_files(graph, prefix: Optional[str] = None) -> tuple[Path, Path]:
-    g = graph.get_graph()
-
-    if prefix is None or not prefix.strip():
-        prefix = f"tbtst_graph_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
-
-    prefix_path = Path(prefix)
-    mmd_path = prefix_path.with_suffix(".mmd")
-    png_path = prefix_path.with_suffix(".png")
-
-    mmd_path.write_text(g.draw_mermaid(), encoding="utf-8")
-    png_path.write_bytes(g.draw_mermaid_png())
-
-    return mmd_path, png_path
+@dataclass(frozen=True)
+class PersonaUI:
+    profile_name: str      # shows in profile picker
+    banner_title: str      # UI banner title
+    persona_md: str        # persona content (markdown)
+    icon: Optional[str] = None
 
 
-def main() -> None:
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "--variant",
-        choices=["mini", "full"],
-        default="mini",
-        help="Which DBT implementation to use.",
+def parse_persona_txt(text: str, fallback_name: str) -> Tuple[str, str]:
+    """
+    Expected persona file style:
+
+      Daniel
+
+      Description:
+      ...
+
+      Mental Health Issues:
+      ...
+
+      Questions to ask the conversational AI:
+        ...
+
+    Parsing rules:
+      - First non-empty line => title
+      - Rest => body, with "Section:" lines turned into markdown headings
+    """
+    lines = [ln.rstrip() for ln in text.replace("\r\n", "\n").replace("\r", "\n").split("\n")]
+
+    # Title = first non-empty line
+    title = None
+    start_idx = 0
+    for i, ln in enumerate(lines):
+        if ln.strip():
+            title = ln.strip()
+            start_idx = i + 1
+            break
+    if not title:
+        title = fallback_name
+
+    # Body = rest (trim leading blank lines)
+    body_lines = lines[start_idx:]
+    while body_lines and not body_lines[0].strip():
+        body_lines.pop(0)
+
+    body_raw = "\n".join(body_lines).strip()
+    if not body_raw:
+        body_raw = "Persona details."
+
+    # Light formatting: "Something:" -> heading
+    out: List[str] = []
+    for ln in body_raw.split("\n"):
+        s = ln.strip()
+        if s.endswith(":") and len(s) <= 60:
+            out.append(f"### {s[:-1]}")
+        else:
+            out.append(ln)
+
+    body_md = "\n".join(out).strip()
+    return title, body_md
+
+
+def build_banner_description(persona_md: str) -> str:
+    """
+    Final banner description shown in the UI.
+    Includes intro + persona content (but still concise and readable).
+    """
+    return (
+        f"{BANNER_INTRO_MD}\n\n"
+        f"---\n\n"
+        f"{persona_md}"
     )
-    parser.add_argument(
-        "--thread-id",
-        default=None,
-        help="Optional thread id. If omitted, a new one is generated.",
-    )
-    args = parser.parse_args()
 
-    graph, variant = select_graph(args.variant)
 
-    # Separate memory per variant: suffix the thread id with :{variant}
-    base_thread = args.thread_id or os.getenv("THREAD_ID") or f"cli-{uuid4().hex[:8]}"
-    thread_id = f"{base_thread}:{variant}"
+def load_personas() -> Dict[str, PersonaUI]:
+    personas: Dict[str, PersonaUI] = {}
 
-    print(BANNER)
-    print(f"(session: {thread_id})\n")
+    if not PERSONAS_DIR.exists():
+        personas["Default"] = PersonaUI(
+            profile_name="Default",
+            banner_title="Persona",
+            persona_md="### Description\nNo persona files found in `./personas/`.",
+        )
+        return personas
 
-    while True:
-        try:
-            user = input("you: ").strip()
-        except (EOFError, KeyboardInterrupt):
-            print("\nbye.")
-            return
+    files = sorted(PERSONAS_DIR.glob("*.txt"))
+    if not files:
+        personas["Default"] = PersonaUI(
+            profile_name="Default",
+            banner_title="Persona",
+            persona_md="### Description\nNo persona files found in `./personas/`.",
+        )
+        return personas
 
-        if user.lower() in {"q", "quit", "exit"}:
-            print("bye.")
-            return
-        if not user:
-            continue
+    for f in files:
+        raw = f.read_text(encoding="utf-8").strip()
+        fallback_name = f.stem.replace("_", " ").title()
+        title, persona_md = parse_persona_txt(raw, fallback_name)
 
-        # Dev command (not shown in banner)
-        if user.startswith(":graph"):
-            parts = user.split(maxsplit=1)
-            prefix = parts[1].strip() if len(parts) == 2 else None
-            try:
-                mmd_path, png_path = save_graph_files(graph, prefix)
-                print(f"\n✅ Saved Mermaid: {mmd_path}")
-                print(f"✅ Saved PNG:    {png_path}\n")
-            except Exception as e:
-                print(f"\n❌ Failed to save graph: {type(e).__name__}: {e}\n")
-            continue
+        personas[title] = PersonaUI(
+            profile_name=title,
+            banner_title=title,     # banner title = persona name (e.g., Daniel)
+            persona_md=persona_md,  # persona body
+            icon=None,
+        )
 
-        try:
-            final: Dict[str, Any] = graph.invoke(
-                {"messages": [HumanMessage(content=user)]},
-                config={"configurable": {"thread_id": thread_id}},
+    return personas
+
+
+PERSONAS = load_personas()
+
+
+@cl.set_chat_profiles
+async def chat_profiles(current_user: Optional[cl.User] = None):
+    profiles: List[cl.ChatProfile] = []
+    for persona in PERSONAS.values():
+        banner_desc = build_banner_description(persona.persona_md)
+
+        profiles.append(
+            cl.ChatProfile(
+                name=persona.profile_name,
+                # Profile picker description (keep short)
+                markdown_description="Shows this persona in the banner.",
+                icon=persona.icon,
+                config_overrides=ChainlitConfigOverrides(
+                    ui=UISettings(
+                        name=persona.banner_title,
+                        description=banner_desc,  # banner includes intro + persona
+                    )
+                ),
             )
-            reply = final["messages"][-1].content
-            print("\nbot:", reply, "\n")
-        except Exception as e:
-            print(f"\n❌ Error: {type(e).__name__}: {e}\n")
+        )
+    return profiles
 
 
-if __name__ == "__main__":
-    main()
+@cl.on_chat_start
+async def on_chat_start():
+    # Persona is shown in banner; we don't force it into the chat.
+    if SEND_CHAT_WELCOME_MESSAGE:
+        await cl.Message(content=WELCOME_MESSAGE).send()
+
+
+@cl.on_message
+async def on_message(msg: cl.Message):
+    # Hook your actual bot/graph response here.
+    await cl.Message(content="(hook your existing bot response here)").send()
