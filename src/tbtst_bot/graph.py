@@ -40,6 +40,12 @@ logger = logging.getLogger("tbtst.graph")
 DEBUG_METRICS = os.getenv("TBTST_DEBUG_METRICS", "0") == "1"
 LOG_PROMPT_SIZES = os.getenv("TBTST_LOG_PROMPT_SIZES", "0") == "1"
 
+# Truncation recovery (finish cut-off replies automatically)
+# TBTST_CONTINUE_ON_TRUNCATION=1
+# TBTST_MAX_CONTINUATION_CALLS=1
+CONTINUE_ON_TRUNCATION = os.getenv("TBTST_CONTINUE_ON_TRUNCATION", "1") == "1"
+MAX_CONTINUATION_CALLS = int(os.getenv("TBTST_MAX_CONTINUATION_CALLS", "1"))
+
 # =========================================================
 # Prompts (loaded from files)
 # =========================================================
@@ -185,11 +191,32 @@ class CallMetrics:
     latency_ms: float
     in_tokens: int
     out_chars: int
+    stop_reason: str = ""
+    usage: Dict[str, Any] = None
 
 
 def _is_throttle_error(e: Exception) -> bool:
     msg = str(e)
     return ("ThrottlingException" in msg) or ("Too many requests" in msg) or ("Rate exceeded" in msg)
+
+
+def _extract_llm_meta(resp: Any) -> Tuple[str, Dict[str, Any]]:
+    """
+    Best-effort extraction of stop reason and usage across LangChain/Bedrock backends.
+    """
+    meta = getattr(resp, "response_metadata", None) or {}
+    usage = meta.get("usage") or meta.get("token_usage") or meta.get("usage_metadata") or {}
+    stop_reason = (
+        meta.get("stop_reason")
+        or meta.get("stopReason")
+        or meta.get("finish_reason")
+        or meta.get("completion_reason")
+        or meta.get("completionReason")
+        or ""
+    )
+    if not isinstance(usage, dict):
+        usage = {"usage": usage}
+    return str(stop_reason), usage
 
 
 def _timed_invoke(name: str, llm: Any, messages: List[BaseMessage], *, trace_id: str) -> Tuple[Any, CallMetrics]:
@@ -201,22 +228,28 @@ def _timed_invoke(name: str, llm: Any, messages: List[BaseMessage], *, trace_id:
             resp = llm.invoke(messages)
             dt_ms = (time.perf_counter() - t0) * 1000.0
 
+            stop_reason, usage = _extract_llm_meta(resp)
+
             m = CallMetrics(
                 name=name,
                 trace_id=trace_id,
                 latency_ms=dt_ms,
                 in_tokens=_tokens(messages),
                 out_chars=len((getattr(resp, "content", "") or "")),
+                stop_reason=stop_reason,
+                usage=usage or {},
             )
 
             if DEBUG_METRICS:
                 logger.info(
-                    "[TRACE %s] [LLM] %s latency=%.1fms in_tokens~%d out_chars=%d",
+                    "[TRACE %s] [LLM] %s latency=%.1fms in_tokens~%d out_chars=%d stop_reason=%s usage=%s",
                     m.trace_id,
                     m.name,
                     m.latency_ms,
                     m.in_tokens,
                     m.out_chars,
+                    m.stop_reason,
+                    m.usage,
                 )
             return resp, m
 
@@ -271,6 +304,79 @@ def _log_prompt_sizes_once() -> None:
         chars = len(text or "")
         toks = _tokens([SystemMessage(content=text or "")])
         logger.info("[PROMPT_FILE] %s lines=%d chars=%d tokens~%d", name, lines, chars, toks)
+
+
+# =========================================================
+# Continuation helpers (fix mid-sentence truncation permanently)
+# =========================================================
+def _looks_truncated(text: str) -> bool:
+    t = (text or "").rstrip()
+    if not t:
+        return False
+    # Ends mid-word (very common for max_tokens cutoffs)
+    if t[-1].isalnum():
+        return True
+    # Ends with an opener or ellipsis
+    if t.endswith(("¿", "¡", "(", "[", "{", "“", '"', "'", "…")):
+        return True
+    # A few real cut patterns from your transcripts (optional)
+    if t.endswith(("¿Có", "Si te", "Evita", "Mientras", "Por ahora,")):
+        return True
+    return False
+
+
+def _should_continue(stop_reason: str, text: str) -> bool:
+    sr = (stop_reason or "").lower().strip()
+    # Provider variants
+    if sr in {"length", "max_tokens", "token_limit"}:
+        return True
+    if ("max" in sr and "token" in sr) or ("length" in sr):
+        return True
+    # Fallback heuristic if metadata isn't present
+    return _looks_truncated(text)
+
+
+def _invoke_with_auto_continue(
+    name: str,
+    llm: Any,
+    messages: List[BaseMessage],
+    *,
+    trace_id: str,
+) -> AIMessage:
+    """
+    Invoke the model; if the provider stops due to length (or it looks truncated),
+    automatically ask it to continue *without repeating*.
+    """
+    resp, m = _timed_invoke(name, llm, messages, trace_id=trace_id)
+    cur_text = (getattr(resp, "content", "") or "")
+
+    if not CONTINUE_ON_TRUNCATION:
+        return AIMessage(content=cur_text)
+
+    if not _should_continue(m.stop_reason, cur_text):
+        return AIMessage(content=cur_text)
+
+    for i in range(MAX_CONTINUATION_CALLS):
+        cont_prompt = (
+            "Continuá EXACTAMENTE donde te cortaste.\n"
+            "- Empezá por terminar la última frase incompleta.\n"
+            "- NO repitas lo que ya dijiste.\n"
+            "- Mantené el mismo tono y formato.\n"
+        )
+        cont_msgs: List[BaseMessage] = [*messages, AIMessage(content=cur_text), HumanMessage(content=cont_prompt)]
+        resp2, m2 = _timed_invoke(f"{name}:cont{i+1}", llm, cont_msgs, trace_id=trace_id)
+        add = (getattr(resp2, "content", "") or "").lstrip()
+
+        if not add:
+            break
+
+        joiner = "" if cur_text.endswith(("\n", " ")) else " "
+        cur_text = f"{cur_text}{joiner}{add}"
+
+        if not _should_continue(m2.stop_reason, cur_text):
+            break
+
+    return AIMessage(content=cur_text)
 
 
 # =========================================================
@@ -447,6 +553,7 @@ def _dbt_mode_instructions(state: State) -> SystemMessage:
             "- Ask EXACTLY 1 brief question.\n"
             "- Do NOT teach DBT skills, do NOT list steps, do NOT offer multiple options.\n"
             "- Keep it short (roughly <= 120–180 words).\n"
+            "- Máximo 6 líneas cortas. Si haría falta más, pedí permiso para continuar y cortá.\n"
         )
     elif mode == "offer":
         rules = (
@@ -457,6 +564,7 @@ def _dbt_mode_instructions(state: State) -> SystemMessage:
             "- End with 1 consent question (ask if they want to try it now).\n"
             "- Do NOT add a second skill.\n"
             "- Keep it short (roughly <= 180–250 words).\n"
+            "- Máximo 10 líneas cortas. Si haría falta más, pedí permiso para continuar y cortá.\n"
         )
     else:  # coach
         rules = (
@@ -466,19 +574,21 @@ def _dbt_mode_instructions(state: State) -> SystemMessage:
             "- Provide ONE next step or mini-exercise (2–4 bullets).\n"
             "- End with 1 brief check-in question.\n"
             "- Keep it short (roughly <= 220–320 words).\n"
+            "- Máximo 10 líneas cortas. Si haría falta más, pedí permiso para continuar y cortá.\n"
         )
 
     return SystemMessage(content=rules)
 
 
 def _dbt_max_tokens_for_mode(state: State) -> int:
+    # Happy-medium caps: prevent cutoffs without forcing verbosity (prompts control brevity).
     _ensure_dbt_defaults(state)
     mode: DBTMode = state.get("dbt_mode", "connect")
     if mode == "connect":
-        return 260
+        return 360
     if mode == "offer":
-        return 420
-    return 520
+        return 600
+    return 750
 
 
 def _append_recent_skill_event(
@@ -585,7 +695,6 @@ def _invoke_structured_with_retry(
     except Exception as e2:
         if DEBUG_METRICS:
             logger.warning("[TRACE %s] structured retry failed for %s: %s", trace_id, label, str(e2))
-        # Try to capture some raw content if the underlying object has it
         raw_last = ""
         return None, raw_last
 
@@ -670,7 +779,10 @@ def classify_node(state: State) -> Dict[str, Any]:
     ok = ok1
 
     if need_retry:
-        retry_system = CLASSIFY_SYSTEM.strip() + "\n\nREMINDER: Output EXACTLY one line of STRICT JSON with only the required keys. No extra text."
+        retry_system = (
+            CLASSIFY_SYSTEM.strip()
+            + "\n\nREMINDER: Output EXACTLY one line of STRICT JSON with only the required keys. No extra text."
+        )
         raw_msg2, _ = _timed_invoke(
             "classify:retry",
             llm,
@@ -683,17 +795,23 @@ def classify_node(state: State) -> Dict[str, Any]:
         if ok2:
             raw, parsed, ok = raw2, parsed2, ok2
         else:
-            raw, parsed, ok = raw1, {
-                "safety_risk_level": "none",
-                "safety_triggers": [],
-                "has_protective": False,
-                "route": "misc",
-            }, False
+            raw, parsed, ok = (
+                raw1,
+                {
+                    "safety_risk_level": "none",
+                    "safety_triggers": [],
+                    "has_protective": False,
+                    "route": "misc",
+                },
+                False,
+            )
 
     risk: RiskLevel = parsed["safety_risk_level"]
     route: Route = parsed["route"]
 
-    safety_route: Literal["ok", "crisis"] = "crisis" if risk in ("passive", "active_no_plan", "active_with_plan") else "ok"
+    safety_route: Literal["ok", "crisis"] = (
+        "crisis" if risk in ("passive", "active_no_plan", "active_with_plan") else "ok"
+    )
 
     if DEBUG_METRICS:
         logger.info(
@@ -781,9 +899,9 @@ def memory_manager_node(state: State) -> Dict[str, Any]:
 # =========================================================
 def dbt_mini_node(state: State) -> Dict[str, Any]:
     trace_id = state.get("last_trace_id") or _trace_id_for_state(state)
-    llm = get_llm(temperature=0.25, max_tokens=600)
+    llm = get_llm(temperature=0.25, max_tokens=650)
     msgs = _llm_messages_with_summary(DBT_SYSTEM, state, trace_id=trace_id, label="dbt_mini")
-    reply, _ = _timed_invoke("dbt:mini", llm, msgs, trace_id=trace_id)
+    reply = _invoke_with_auto_continue("dbt:mini", llm, msgs, trace_id=trace_id)
     return {"messages": [AIMessage(content=reply.content or "")]}
 
 
@@ -860,13 +978,16 @@ def tb_info_node(state: State) -> Dict[str, Any]:
     dt_ms = (time.perf_counter() - t0) * 1000.0
 
     if DEBUG_METRICS:
+        stop_reason, usage = _extract_llm_meta(result)
         logger.info(
-            "[TRACE %s] [LLM] tb_info latency=%.1fms in_tokens~%d out_answer_chars=%d cited=%s",
+            "[TRACE %s] [LLM] tb_info latency=%.1fms in_tokens~%d out_answer_chars=%d cited=%s stop_reason=%s usage=%s",
             trace_id,
             dt_ms,
             _tokens([*prefix, HumanMessage(content=user_prompt)]),
             len((result.answer or "")),
             result.citations_used,
+            stop_reason,
+            usage,
         )
 
     final_text = _render_answer_with_references(
@@ -882,9 +1003,9 @@ def tb_info_node(state: State) -> Dict[str, Any]:
 # =========================================================
 def misc_node(state: State) -> Dict[str, Any]:
     trace_id = state.get("last_trace_id") or _trace_id_for_state(state)
-    llm = get_llm(temperature=0.2, max_tokens=350)
+    llm = get_llm(temperature=0.2, max_tokens=420)
     msgs = _llm_messages_with_summary(MISC_SYSTEM, state, trace_id=trace_id, label="misc")
-    reply, _ = _timed_invoke("misc", llm, msgs, trace_id=trace_id)
+    reply = _invoke_with_auto_continue("misc", llm, msgs, trace_id=trace_id)
     return {"messages": [AIMessage(content=reply.content or "")]}
 
 
@@ -1208,4 +1329,3 @@ GRAPH_DBT_FULL = build_graph(dbt_node=DBT_FULL_SUBGRAPH)
 
 # Emit prompt size report once at import (if enabled)
 _log_prompt_sizes_once()
-
