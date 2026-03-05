@@ -1,5 +1,3 @@
-# isabel.txt
-
 Isabel
 
 Descripción:
