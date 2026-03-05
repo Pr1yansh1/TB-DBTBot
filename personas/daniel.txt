@@ -1,17 +1,22 @@
+# daniel.txt
+
 Daniel
 
-Description:
-Daniel is a 45-year-old construction worker recently diagnosed with TB. He uses alcohol to cope and feels socially isolated due to stigma. He feels guilt and shame about the diagnosis and barely speaks to his family, leading to frequent arguments. Fatigue affects his work performance, and he doesn’t know how to explain it to his boss. He also feels judged by colleagues.
+Descripción:
 
-Mental Health Concerns:
-Daniel faces stress-related physical symptoms, alcohol-based coping, emotion dysregulation, self-stigma, and strained communication. This persona tests support using DBT-style skills: mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness in a complex real-world situation.
+Daniel es un obrero de la construcción de 45 años, recientemente diagnosticado con tuberculosis. Lucha contra el consumo de alcohol como mecanismo de afrontamiento y se siente socialmente aislado debido al estigma. Siente culpa y vergüenza por su diagnóstico y apenas habla con su familia, lo que provoca frecuentes discusiones. En el trabajo, el cansancio limita su rendimiento y no sabe cómo explicárselo a su jefe. Además, se siente juzgado por sus compañeros.
 
-Suggestions (example things you could ask):
-- My chest feels tight before I drink. How do I tell if it’s stress or an urge to drink?
-- I fought with my wife and now I really want a drink. What can I do instead right now?
-- Thinking about work makes me spiral. Can you help me calm down?
-- I feel dirty and ashamed about having TB. How can I work with that feeling?
-- My wife says I don’t talk. How can I tell her what I need without starting a fight?
-- How can I ask my boss to go easier on me while I finish treatment?
-- How can I cope with feeling judged by coworkers?
-- How can I track my progress and stay motivated to complete treatment?
+Preocupaciones de salud mental:
+
+Daniel se enfrenta a síntomas físicos relacionados con el estrés, afrontamiento inadaptado del alcohol, desregulación emocional, autoestigma y comunicación tensa. Su caso pone a prueba la capacidad de la IA conversacional para aplicar estrategias de la Terapia Dialéctica Conductual (TDC), como la atención plena, la tolerancia a la angustia, la regulación emocional y la eficacia interpersonal en un contexto complejo del mundo real.
+
+Preguntas para hacerle al bot:
+
+- Siento una opresión en el pecho antes de tomar algo. ¿Cómo sé si es solo estrés o si tengo muchas ganas de beber?
+- Acabo de pelearme con mi esposa y ahora tengo muchísimas ganas de tomar algo. ¿Qué puedo hacer ahora mismo?
+- Cuando pienso en volver al trabajo, me pongo nerviosa. ¿Puedes ayudarme a tranquilizarme?
+- Cada vez que pienso en tener tuberculosis, me siento sucia y avergonzada. ¿Cómo puedo dejar de sentirme así?
+- Mi esposa dice que está cansada de que no hable. ¿Cómo puedo decirle lo que necesito sin empezar una pelea?
+- ¿Cómo puedo pedirle a mi jefe que sea un poco más indulgente conmigo mientras termino mi tratamiento?
+- ¿Cómo puedo afrontar el sentimiento de ser juzgado por mis compañeros de trabajo?
+- ¿Cómo puedo seguir mi progreso? ¿Cómo puedo mantenerme motivado para completar mi tratamiento?
