@@ -1,16 +1,21 @@
+# isabel.txt
+
 Isabel
 
-Description:
-Isabel is a healthcare worker with extensive patient care experience. After her TB diagnosis, she experienced stigma—even from fellow professionals. Persistent cough, night sweats, and fatigue disrupt her work. She wants to use her experience to help others, but discrimination still weighs on her.
+Descripción:
 
-Mental Health Concerns:
-Isabel struggles with fear, uncertainty, and anxiety about her professional identity. She wants reliable information about contagiousness, recovery timelines, and what test results mean. She also needs support coping with stigma and rebuilding confidence. This persona tests psychoeducation, mindfulness strategies, and validation for health anxiety and workplace stigma.
+Isabel es una profesional de la salud con amplia experiencia en la atención al paciente que enfrentó un estigma considerable tras su diagnóstico de tuberculosis, incluso por parte de sus colegas. Síntomas como tos persistente, sudores nocturnos y fatiga interfieren en su trabajo. Isabel está motivada a usar su trayectoria para ayudar a los demás, pero aún siente el peso de la discriminación.
 
-Suggestions (example things you could ask):
-- I’m very fatigued. Could this be a medication side effect, and how long might it last?
-- I wake up drenched in sweat. What can I do to manage night sweats?
-- When can I safely return to work and be confident I’m not contagious?
-- After treatment/hospital discharge, is it safe to work with TB patients again? How can I prevent spreading TB?
-- How do I cope with stigma and discrimination since my diagnosis?
-- What can help me rebuild confidence in my professional role?
-- How can I track my progress and stay motivated to complete treatment?
+Preocupaciones de salud mental:
+
+Isabel lidia con el miedo, la incertidumbre y la ansiedad sobre su identidad profesional. Busca seguridad sobre cuánto tiempo será contagiosa y el tiempo que tardará en recuperarse. También necesita comprender el significado de los resultados de las pruebas y obtener información fiable, mientras lidia con el estigma y las dudas sobre sí misma para recuperar la confianza. Su caso pone a prueba la capacidad de la IA conversacional para proporcionar psicoeducación, estrategias de atención plena y validación para ayudar a gestionar la ansiedad relacionada con la salud y el estigma laboral.
+
+Preguntas para hacerle a la IA conversacional:
+
+- Me siento muy fatigado. ¿Es un efecto secundario de algún medicamento? ¿Cuánto durará?
+- Me despierto en mitad de la noche empapado en sudor. ¿Qué puedo hacer para solucionarlo?
+- ¿Cuándo puedo regresar de manera segura a trabajar en el hospital y estar seguro de que ya no soy contagioso?
+- Después de tener tuberculosis y recibir el alta hospitalaria, ¿es seguro volver a trabajar con pacientes con tuberculosis? ¿Cómo puedo prevenir la propagación de la tuberculosis?
+- ¿Cómo puedo afrontar el estigma y la discriminación que he enfrentado desde mi diagnóstico?
+- ¿Qué estrategias pueden ayudarme a recuperar la confianza en mi rol profesional?
+- ¿Cómo puedo seguir mi progreso? ¿Cómo puedo mantenerme motivado para completar mi tratamiento?
