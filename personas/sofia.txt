@@ -1,18 +1,24 @@
+# sofia.txt
+
 Sofia
 
-Description:
-Sofia is a university student diagnosed with TB. She feels scared and overwhelmed because she knows little about the disease. Weight loss, fatigue, and frequent coughing worry her family. Pressure to recover quickly and return to classes adds stress. She feels tension with her family about infection risk and misunderstood by classmates. Despite reassurance from her doctor, she struggles with self-blame and fear. Treatment causes mild nausea but is otherwise manageable.
+Descripción:
 
-Mental Health Concerns:
-Sofia is anxious about returning to “normal,” feels frustrated by slow recovery, and experiences stigma and disconnection from family and peers. This persona tests empathic, relational, and emotion-regulation support to rebuild confidence and re-engage with daily life.
+Sofía es una estudiante universitaria diagnosticada con tuberculosis. Se siente asustada y abrumada debido a su limitado conocimiento sobre la enfermedad. Síntomas como pérdida de peso significativa, fatiga y tos frecuente alarman a su familia. La presión por recuperarse rápidamente y regresar a clases presenciales aumenta el estrés. Enfrenta tensión con su familia por el riesgo de infección y se siente incomprendida por sus compañeros de clase. A pesar de las palabras tranquilizadoras de su médico, Sofía lucha contra la culpa y el miedo. Está decidida a recuperarse y volver a su rutina. El tratamiento le ha causado náuseas leves, pero por lo demás es manejable.
 
-Suggestions (example things you could ask):
-- When can I return to school and my normal routine safely?
-- What can I do to support recovery while following my treatment plan?
-- My nausea/upset stomach hasn’t improved. What can help with side effects?
-- How did I get TB, and what could I have done to prevent it?
-- My mom acts like I’m contagious and won’t hug me. How can I talk to her without escalating?
-- My friends stopped inviting me out. How do I start a conversation about staying connected?
-- I’m nervous about going back to class. What should I say if people ask awkward questions?
-- How can I cope with feeling pressured, judged, or misunderstood?
-- How can I track my progress and stay motivated to complete treatment?
+Preocupaciones de salud mental:
+
+Las preocupaciones de Sofía se centran en su deseo de volver a su vida anterior, la autoculpa y la desconexión social. Le preocupa su futuro, se siente frustrada por la lenta recuperación y sufre el estigma de su familia y compañeros. La IA conversacional debería brindarle apoyo empático, relacional y de regulación emocional para ayudarla a recuperar la confianza, gestionar la incomprensión y reintegrarse a la vida cotidiana.
+
+Preguntas para hacerle a la IA conversacional:
+
+- ¿Cuándo podré volver a mis estudios y a mi vida normal?
+- ¿Qué puedo hacer para acelerar mi recuperación mientras sigo mi plan de tratamiento?
+- ¿Cuándo desaparecerán los síntomas como las náuseas y el malestar estomacal? Llevo semanas tomando el medicamento sin ninguna mejoría.
+- ¿Existen formas de gestionar mejor los efectos secundarios?
+- ¿Cómo contraje tuberculosis y qué pude haber hecho para prevenirla?
+- Mi mamá se comporta como si fuera contagiosa y ni siquiera me deja abrazarla. ¿Cómo puedo hablar con ella sin enojarme ni llorar?
+- Mis amigos dejaron de invitarme a salir desde que enfermé. Quiero decirles que sigo siendo la misma persona, ¿cómo empiezo esa conversación?
+- Estoy nervioso por volver a clases. ¿Qué pasa si me tratan diferente o me hacen preguntas incómodas? ¿Qué debería decir?
+- ¿Cómo puedo afrontar el sentimiento de presión e incomprensión por parte de los demás?
+- ¿Cómo puedo seguir mi progreso? ¿Cómo puedo mantenerme motivado para completar mi tratamiento?
