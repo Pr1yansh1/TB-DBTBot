@@ -1,5 +1,3 @@
-# sofia.txt
-
 Sofia
 
 Descripción:
