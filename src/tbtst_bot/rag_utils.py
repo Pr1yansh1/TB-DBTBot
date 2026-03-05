@@ -198,7 +198,6 @@ def load_or_create_vectorstore() -> Chroma:
             embedding=embeddings,
             persist_directory=RAG_PERSIST_DIR,
         )
-        vs.persist()
         _write_saved_fingerprint(cur_fp)
         return vs
 
