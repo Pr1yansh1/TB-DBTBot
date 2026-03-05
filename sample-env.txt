@@ -1,0 +1,42 @@
+# .env.local  (local testing)
+
+# AWS / Bedrock (local uses a named profile from ~/.aws/credentials)
+AWS_REGION=us-west-2
+BEDROCK_MODEL_ID=anthropic.claude-3-5-sonnet-20240620-v1:0
+AWS_PROFILE=default
+
+# App mode
+TBTST_VARIANT=full
+
+# RAG / Vector store
+CHROMA_PERSIST_DIR=./cache/chroma
+TBTST_EMBED_MODEL=hiiamsid/sentence_similarity_spanish_es
+
+# Logging / debug (local)
+TBTST_LOG_LEVEL=INFO
+TBTST_DEBUG_METRICS=1
+TBTST_LOG_PROMPT_SIZES=1
+TBTST_CONTINUE_ON_TRUNCATION=1
+TBTST_MAX_CONTINUATION_CALLS=1 
+
+
+# .env.ec2  (EC2 deployment - quieter/faster)
+
+# AWS / Bedrock (EC2 uses instance role; no AWS_PROFILE)
+AWS_REGION=us-west-2
+BEDROCK_MODEL_ID=anthropic.claude-3-5-sonnet-20240620-v1:0
+IS_EC2=1
+
+# App mode
+TBTST_VARIANT=full
+
+# RAG / Vector store (set to a writable path on EC2)
+CHROMA_PERSIST_DIR=/home/ec2-user/TB-DBTBot/cache/chroma
+TBTST_EMBED_MODEL=hiiamsid/sentence_similarity_spanish_es
+
+# Logging / debug (quiet)
+TBTST_LOG_LEVEL=WARNING
+TBTST_DEBUG_METRICS=0
+TBTST_LOG_PROMPT_SIZES=0
+TBTST_CONTINUE_ON_TRUNCATION=1
+TBTST_MAX_CONTINUATION_CALLS=1

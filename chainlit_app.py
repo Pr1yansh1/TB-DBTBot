@@ -10,10 +10,13 @@ import anyio
 import chainlit as cl
 from langchain_core.messages import HumanMessage
 
+# Warmup should use your cached RAG objects (rag_utils.py) instead of loading SentenceTransformer here.
+from tbtst_bot.rag_utils import warmup_rag
+
 try:
     from tbtst_bot.graph import GRAPH_DBT_MINI, GRAPH_DBT_FULL
 except Exception:  # pragma: no cover
-    from .src.tbtst_bot.graph import GRAPH_DBT_MINI, GRAPH_DBT_FULL  # adjust only if needed
+    from src.tbtst_bot.graph import GRAPH_DBT_MINI, GRAPH_DBT_FULL  # type: ignore
 
 
 # -------------------------
@@ -31,11 +34,24 @@ WELCOME_MESSAGE = "Hi! I’m a TB treatment support bot. Ask TB questions or tel
 
 PERSONAS_DIR = Path(__file__).parent / "personas"
 
+
 # -------------------------
-# RAG warmup settings
+# Warmup (ONCE per process)
 # -------------------------
-CHROMA_PERSIST_DIR = Path(os.getenv("CHROMA_PERSIST_DIR", str(Path(__file__).parent / "cache" / "chroma")))
-EMBED_MODEL_NAME = os.getenv("TBTST_EMBED_MODEL", "hiiamsid/sentence_similarity_spanish_es")
+_WARMED_UP = False
+_WARMUP_LOCK = anyio.Lock()
+
+
+async def warmup_once() -> None:
+    global _WARMED_UP
+    if _WARMED_UP:
+        return
+    async with _WARMUP_LOCK:
+        if _WARMED_UP:
+            return
+        # warmup_rag() initializes cached embeddings + chroma vectorstore
+        await anyio.to_thread.run_sync(warmup_rag)
+        _WARMED_UP = True
 
 
 class PersonaUI:
@@ -99,8 +115,7 @@ def parse_persona_txt(text: str, fallback_name: str) -> Tuple[str, str]:
 
 def build_banner_message(persona_title: str, persona_md: str) -> str:
     """
-    This is the visible "banner" in Chainlit: a first message sent on chat start.
-    (Chainlit does not render ui.description as an in-chat banner.)
+    Visible "banner" in Chainlit: first message sent on chat start.
     """
     return f"{BANNER_INTRO_MD}\n\n---\n\n**Persona: {persona_title}**\n\n{persona_md}"
 
@@ -150,45 +165,8 @@ def select_graph() -> Tuple[Any, str]:
     return GRAPH_DBT_MINI, "mini"
 
 
-def _warmup_rag_sync() -> None:
-    """
-    Best-effort warmup:
-      - Ensure Chroma persist dir exists
-      - Load embedding model (SentenceTransformer) once
-      - Initialize a Chroma client/collection to force DB open
-
-    This does NOT change your RAG logic; it just preloads expensive bits.
-    """
-    try:
-        CHROMA_PERSIST_DIR.mkdir(parents=True, exist_ok=True)
-    except Exception:
-        # If the dir can't be created, we'll still try to proceed.
-        pass
-
-    # 1) Load embedding model
-    try:
-        from sentence_transformers import SentenceTransformer
-
-        _ = SentenceTransformer(EMBED_MODEL_NAME, device="cpu")
-    except Exception as e:
-        # Don't crash the app on warmup failures—log and keep going.
-        # The actual RAG path may still work if it uses a different embedder.
-        print(f"[warmup] Embedding model warmup failed: {type(e).__name__}: {e}")
-
-    # 2) Initialize Chroma persistence
-    try:
-        import chromadb
-
-        client = chromadb.PersistentClient(path=str(CHROMA_PERSIST_DIR))
-        # touching list_collections forces open/reads
-        _ = client.list_collections()
-    except Exception as e:
-        print(f"[warmup] Chroma warmup failed: {type(e).__name__}: {e}")
-
-
 @cl.set_chat_profiles
 async def chat_profiles(current_user: Optional[cl.User] = None):
-    # Profiles appear in UI; persona content is UI-only.
     return [
         cl.ChatProfile(
             name=p.profile_name,
@@ -201,7 +179,6 @@ async def chat_profiles(current_user: Optional[cl.User] = None):
 
 @cl.on_chat_start
 async def on_chat_start():
-    # 1) Store graph + thread id (separate memory per session/variant)
     graph, variant = select_graph()
 
     session = getattr(cl.context, "session", None)
@@ -212,19 +189,16 @@ async def on_chat_start():
     cl.user_session.set("variant", variant)
     cl.user_session.set("thread_id", thread_id)
 
-    # 2) Warm up RAG in a background thread (so we don't block the event loop)
-    await anyio.to_thread.run_sync(_warmup_rag_sync)
+    # Warm up RAG ONCE per process (not per chat)
+    await warmup_once()
 
-    # 3) Show persona banner as first message (Chainlit-native "banner" approach)
     chosen = cl.user_session.get("chat_profile")
     if not chosen or chosen not in PERSONAS:
         chosen = next(iter(PERSONAS.keys()))
 
     persona = PERSONAS[chosen]
-    banner_text = build_banner_message(persona.banner_title, persona.persona_md)
-    await cl.Message(content=banner_text).send()
+    await cl.Message(content=build_banner_message(persona.banner_title, persona.persona_md)).send()
 
-    # Optional extra welcome message (usually unnecessary if banner exists)
     if SEND_CHAT_WELCOME_MESSAGE:
         await cl.Message(content=WELCOME_MESSAGE).send()
 
@@ -238,8 +212,7 @@ async def on_message(msg: cl.Message):
         await cl.Message(content="Error: session not initialized. Please refresh.").send()
         return
 
-    # Run sync graph.invoke in a worker thread to avoid UI disconnects/timeouts.
-    thinking = cl.Message(content="")  # empty bubble we can update
+    thinking = cl.Message(content="")
     await thinking.send()
 
     try:

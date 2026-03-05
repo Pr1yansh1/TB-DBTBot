@@ -1,0 +1,226 @@
+2026-02-24 02:44:34 - Found credentials from IAM Role: dbt-bedrock-ec2-role
+2026-02-24 02:44:36 - Your app is available at http://0.0.0.0:8000
+2026-02-24 02:45:47 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
+2026-02-24 02:46:11 - Using Bedrock Converse API to generate response
+2026-02-24 02:46:13 - Use pytorch device_name: cpu
+2026-02-24 02:46:13 - Load pretrained SentenceTransformer: hiiamsid/sentence_similarity_spanish_es
+2026-02-24 02:46:18 - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-02-24 02:46:19 - Using Bedrock Converse API to generate response
+2026-02-24 03:04:00 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
+2026-02-24 03:04:00 - Missing custom logo. Falling back to default logo.
+2026-02-24 05:48:09 - Translation file for en-IN not found. Using default translation en-US.
+2026-02-24 05:48:09 - Translated markdown file for en-IN not found. Defaulting to chainlit.md.
+2026-02-24 05:48:09 - Missing custom logo. Falling back to default logo.
+2026-02-24 05:48:21 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
+2026-02-24 05:48:21 - Missing custom logo. Falling back to default logo.
+2026-02-24 05:48:25 - Using Bedrock Converse API to generate response
+2026-02-24 05:48:28 - Using Bedrock Converse API to generate response
+2026-02-24 07:02:28 - Translated markdown file for en-IN not found. Defaulting to chainlit.md.
+2026-02-24 07:02:28 - Translation file for en-IN not found. Using default translation en-US.
+2026-02-24 08:04:18 - Translated markdown file for en-IN not found. Defaulting to chainlit.md.
+2026-02-24 08:04:18 - Translation file for en-IN not found. Using default translation en-US.
+2026-02-24 19:27:10 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
+2026-02-24 19:27:10 - Missing custom logo. Falling back to default logo.
+2026-02-24 19:27:39 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
+2026-02-24 19:27:40 - Missing custom logo. Falling back to default logo.
+2026-02-24 19:28:42 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
+2026-02-24 19:28:42 - Missing custom logo. Falling back to default logo.
+2026-02-24 19:28:45 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
+2026-02-24 19:28:45 - Missing custom logo. Falling back to default logo.
+2026-02-24 19:28:54 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
+2026-02-24 19:31:54 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
+2026-02-25 03:16:04 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
+2026-02-25 03:16:05 - Missing custom logo. Falling back to default logo.
+2026-02-25 15:27:55 - Missing custom logo. Falling back to default logo.
+2026-02-25 15:27:55 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
+2026-02-25 15:27:55 - Missing custom logo. Falling back to default logo.
+2026-02-25 18:13:36 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
+2026-02-25 23:32:51 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
+2026-02-25 23:32:51 - Missing custom logo. Falling back to default logo.
+Invalid session fQ2gxirmoL79PkTcAABQ (further occurrences of this error will be logged with level INFO)
+2026-02-25 23:55:52 - Invalid session fQ2gxirmoL79PkTcAABQ (further occurrences of this error will be logged with level INFO)
+2026-02-26 05:43:00 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
+2026-02-26 05:43:00 - Missing custom logo. Falling back to default logo.
+2026-02-26 05:45:03 - Using Bedrock Converse API to generate response
+2026-02-26 05:45:05 - Using Bedrock Converse API to generate response
+2026-02-26 05:45:10 - Using Bedrock Converse API to generate response
+2026-02-26 05:45:44 - Using Bedrock Converse API to generate response
+2026-02-26 05:45:46 - Using Bedrock Converse API to generate response
+2026-02-26 05:47:15 - Using Bedrock Converse API to generate response
+2026-02-26 05:47:16 - Using Bedrock Converse API to generate response
+2026-02-26 05:48:20 - Using Bedrock Converse API to generate response
+2026-02-26 05:48:23 - Using Bedrock Converse API to generate response
+2026-02-26 05:48:28 - Using Bedrock Converse API to generate response
+2026-02-26 05:49:47 - Using Bedrock Converse API to generate response
+2026-02-26 05:49:49 - Using Bedrock Converse API to generate response
+2026-02-26 05:49:55 - Using Bedrock Converse API to generate response
+2026-02-26 05:51:24 - Using Bedrock Converse API to generate response
+2026-02-26 05:51:26 - Using Bedrock Converse API to generate response
+2026-02-26 05:52:39 - Using Bedrock Converse API to generate response
+2026-02-26 05:52:40 - Using Bedrock Converse API to generate response
+2026-02-26 05:53:18 - Using Bedrock Converse API to generate response
+2026-02-26 05:53:21 - Using Bedrock Converse API to generate response
+2026-02-26 05:56:49 - Using Bedrock Converse API to generate response
+2026-02-26 05:56:52 - Using Bedrock Converse API to generate response
+2026-02-26 05:58:05 - Using Bedrock Converse API to generate response
+2026-02-26 05:58:07 - Using Bedrock Converse API to generate response
+2026-02-26 05:59:37 - Using Bedrock Converse API to generate response
+2026-02-26 05:59:39 - Using Bedrock Converse API to generate response
+2026-02-26 05:59:45 - Using Bedrock Converse API to generate response
+2026-02-26 06:01:58 - Using Bedrock Converse API to generate response
+2026-02-26 06:02:01 - Using Bedrock Converse API to generate response
+2026-02-26 06:02:07 - Using Bedrock Converse API to generate response
+2026-02-26 06:04:33 - Using Bedrock Converse API to generate response
+2026-02-26 06:04:35 - Using Bedrock Converse API to generate response
+2026-02-26 06:04:40 - Using Bedrock Converse API to generate response
+2026-02-26 06:05:13 - Using Bedrock Converse API to generate response
+2026-02-26 06:05:18 - Using Bedrock Converse API to generate response
+2026-02-26 06:06:40 - Using Bedrock Converse API to generate response
+2026-02-26 06:06:41 - Using Bedrock Converse API to generate response
+2026-02-26 06:06:47 - Using Bedrock Converse API to generate response
+2026-02-26 06:07:22 - Using Bedrock Converse API to generate response
+2026-02-26 06:07:24 - Using Bedrock Converse API to generate response
+2026-02-26 06:10:13 - Using Bedrock Converse API to generate response
+2026-02-26 06:10:15 - Using Bedrock Converse API to generate response
+2026-02-26 06:10:20 - Using Bedrock Converse API to generate response
+2026-02-26 06:11:24 - Using Bedrock Converse API to generate response
+2026-02-26 06:11:26 - Using Bedrock Converse API to generate response
+2026-02-26 06:11:32 - Using Bedrock Converse API to generate response
+2026-02-26 14:33:22 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
+2026-02-26 14:33:22 - Missing custom logo. Falling back to default logo.
+2026-02-26 14:34:40 - Using Bedrock Converse API to generate response
+2026-02-26 14:34:42 - Using Bedrock Converse API to generate response
+2026-02-26 14:40:52 - Using Bedrock Converse API to generate response
+2026-02-26 14:40:53 - Using Bedrock Converse API to generate response
+2026-02-26 14:44:00 - Using Bedrock Converse API to generate response
+2026-02-26 14:44:02 - Using Bedrock Converse API to generate response
+2026-02-26 14:46:51 - Using Bedrock Converse API to generate response
+2026-02-26 14:46:53 - Using Bedrock Converse API to generate response
+2026-02-26 14:46:58 - Using Bedrock Converse API to generate response
+2026-02-26 14:48:34 - Using Bedrock Converse API to generate response
+2026-02-26 14:48:35 - Using Bedrock Converse API to generate response
+2026-02-26 14:48:40 - Using Bedrock Converse API to generate response
+2026-02-26 14:49:10 - Using Bedrock Converse API to generate response
+2026-02-26 14:49:12 - Using Bedrock Converse API to generate response
+2026-02-26 14:51:17 - Using Bedrock Converse API to generate response
+2026-02-26 14:51:18 - Using Bedrock Converse API to generate response
+2026-02-26 14:51:57 - Using Bedrock Converse API to generate response
+2026-02-26 14:51:59 - Using Bedrock Converse API to generate response
+2026-02-26 14:52:26 - Using Bedrock Converse API to generate response
+2026-02-26 14:52:28 - Using Bedrock Converse API to generate response
+2026-02-26 14:52:54 - Using Bedrock Converse API to generate response
+2026-02-26 14:52:55 - Using Bedrock Converse API to generate response
+2026-02-26 14:54:06 - Using Bedrock Converse API to generate response
+2026-02-26 14:54:08 - Using Bedrock Converse API to generate response
+2026-02-26 14:54:13 - Using Bedrock Converse API to generate response
+2026-02-26 14:54:54 - Using Bedrock Converse API to generate response
+2026-02-26 14:54:56 - Using Bedrock Converse API to generate response
+2026-02-26 14:56:52 - Using Bedrock Converse API to generate response
+2026-02-26 14:56:54 - Using Bedrock Converse API to generate response
+2026-02-26 14:56:59 - Using Bedrock Converse API to generate response
+2026-02-26 14:57:17 - Using Bedrock Converse API to generate response
+2026-02-26 14:57:18 - Using Bedrock Converse API to generate response
+2026-02-26 14:57:51 - Using Bedrock Converse API to generate response
+2026-02-26 14:57:52 - Using Bedrock Converse API to generate response
+2026-02-26 14:59:43 - Using Bedrock Converse API to generate response
+2026-02-26 14:59:45 - Using Bedrock Converse API to generate response
+2026-02-26 14:59:50 - Using Bedrock Converse API to generate response
+2026-02-26 15:00:20 - Using Bedrock Converse API to generate response
+2026-02-26 15:00:21 - Using Bedrock Converse API to generate response
+2026-02-26 15:02:13 - Using Bedrock Converse API to generate response
+2026-02-26 15:02:15 - Using Bedrock Converse API to generate response
+2026-02-26 15:02:20 - Using Bedrock Converse API to generate response
+2026-02-26 15:02:55 - Using Bedrock Converse API to generate response
+2026-02-26 15:04:26 - Using Bedrock Converse API to generate response
+2026-02-26 15:04:29 - Using Bedrock Converse API to generate response
+2026-02-26 15:05:42 - Using Bedrock Converse API to generate response
+2026-02-26 15:05:43 - Using Bedrock Converse API to generate response
+2026-02-26 15:07:35 - Using Bedrock Converse API to generate response
+2026-02-26 15:07:47 - Using Bedrock Converse API to generate response
+2026-02-26 15:08:02 - Using Bedrock Converse API to generate response
+2026-02-26 15:08:04 - Using Bedrock Converse API to generate response
+2026-02-26 15:08:30 - Using Bedrock Converse API to generate response
+2026-02-26 15:08:32 - Using Bedrock Converse API to generate response
+2026-02-26 15:08:37 - Using Bedrock Converse API to generate response
+2026-02-26 15:09:22 - Using Bedrock Converse API to generate response
+2026-02-26 15:09:24 - Using Bedrock Converse API to generate response
+2026-02-26 15:09:48 - Using Bedrock Converse API to generate response
+2026-02-26 15:09:50 - Using Bedrock Converse API to generate response
+2026-02-26 15:09:55 - Using Bedrock Converse API to generate response
+2026-02-26 16:34:40 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
+2026-02-26 16:34:40 - Missing custom logo. Falling back to default logo.
+2026-02-26 16:43:56 - Using Bedrock Converse API to generate response
+2026-02-26 16:44:00 - Using Bedrock Converse API to generate response
+2026-02-26 16:44:42 - Using Bedrock Converse API to generate response
+2026-02-26 16:44:52 - Using Bedrock Converse API to generate response
+2026-02-26 16:48:01 - Using Bedrock Converse API to generate response
+2026-02-26 16:48:04 - Using Bedrock Converse API to generate response
+2026-02-26 16:48:10 - Using Bedrock Converse API to generate response
+2026-02-26 16:49:23 - Using Bedrock Converse API to generate response
+2026-02-26 16:49:25 - Using Bedrock Converse API to generate response
+2026-02-26 16:49:31 - Using Bedrock Converse API to generate response
+2026-02-26 16:49:57 - Using Bedrock Converse API to generate response
+2026-02-26 16:49:59 - Using Bedrock Converse API to generate response
+2026-02-26 16:50:21 - Using Bedrock Converse API to generate response
+2026-02-26 16:50:24 - Using Bedrock Converse API to generate response
+2026-02-26 16:51:13 - Using Bedrock Converse API to generate response
+2026-02-26 16:51:15 - Using Bedrock Converse API to generate response
+2026-02-26 16:52:52 - Using Bedrock Converse API to generate response
+2026-02-26 16:52:54 - Using Bedrock Converse API to generate response
+2026-02-26 16:53:00 - Using Bedrock Converse API to generate response
+2026-02-26 16:54:35 - Using Bedrock Converse API to generate response
+2026-02-26 16:54:37 - Using Bedrock Converse API to generate response
+2026-02-26 16:54:42 - Using Bedrock Converse API to generate response
+2026-02-26 17:31:55 - Using Bedrock Converse API to generate response
+2026-02-26 17:31:57 - Using Bedrock Converse API to generate response
+2026-02-26 17:42:20 - Using Bedrock Converse API to generate response
+2026-02-26 17:42:22 - Using Bedrock Converse API to generate response
+2026-02-26 17:42:59 - Using Bedrock Converse API to generate response
+2026-02-26 17:43:01 - Using Bedrock Converse API to generate response
+2026-02-26 17:43:51 - Using Bedrock Converse API to generate response
+2026-02-26 17:43:52 - Using Bedrock Converse API to generate response
+2026-02-26 17:44:02 - Using Bedrock Converse API to generate response
+2026-02-26 17:44:04 - Using Bedrock Converse API to generate response
+2026-02-26 17:44:10 - Using Bedrock Converse API to generate response
+2026-02-26 17:45:40 - Using Bedrock Converse API to generate response
+2026-02-26 17:45:43 - Using Bedrock Converse API to generate response
+2026-02-26 17:46:49 - Using Bedrock Converse API to generate response
+2026-02-26 17:46:50 - Using Bedrock Converse API to generate response
+2026-02-26 18:27:28 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
+2026-02-26 18:27:28 - Missing custom logo. Falling back to default logo.
+2026-02-28 01:04:32 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
+2026-02-28 01:04:33 - Missing custom logo. Falling back to default logo.
+2026-02-28 01:05:19 - Using Bedrock Converse API to generate response
+2026-02-28 01:05:23 - Using Bedrock Converse API to generate response
+2026-02-28 01:05:28 - Using Bedrock Converse API to generate response
+2026-02-28 01:06:00 - Using Bedrock Converse API to generate response
+2026-02-28 01:06:02 - Using Bedrock Converse API to generate response
+2026-02-28 01:06:06 - Using Bedrock Converse API to generate response
+2026-02-28 01:06:37 - Using Bedrock Converse API to generate response
+2026-02-28 01:06:38 - Using Bedrock Converse API to generate response
+2026-02-28 01:06:45 - Using Bedrock Converse API to generate response
+2026-02-28 01:07:16 - Using Bedrock Converse API to generate response
+2026-02-28 01:07:18 - Using Bedrock Converse API to generate response
+2026-02-28 01:08:28 - Using Bedrock Converse API to generate response
+2026-02-28 01:08:31 - Using Bedrock Converse API to generate response
+2026-02-28 01:08:36 - Using Bedrock Converse API to generate response
+2026-02-28 01:09:15 - Using Bedrock Converse API to generate response
+2026-02-28 01:09:16 - Using Bedrock Converse API to generate response
+2026-02-28 01:09:37 - Using Bedrock Converse API to generate response
+2026-02-28 01:09:39 - Using Bedrock Converse API to generate response
+2026-02-28 01:09:45 - Using Bedrock Converse API to generate response
+2026-02-28 01:11:02 - Using Bedrock Converse API to generate response
+2026-02-28 01:11:03 - Using Bedrock Converse API to generate response
+2026-02-28 01:11:31 - Using Bedrock Converse API to generate response
+2026-02-28 01:11:34 - Using Bedrock Converse API to generate response
+2026-02-28 01:11:44 - Using Bedrock Converse API to generate response
+2026-02-28 02:23:29 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
+2026-02-28 02:23:29 - Missing custom logo. Falling back to default logo.
+2026-02-28 03:12:48 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
+2026-03-02 20:00:48 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
+2026-03-02 20:00:49 - Missing custom logo. Falling back to default logo.
+2026-03-03 05:58:33 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
+2026-03-03 05:58:33 - Missing custom logo. Falling back to default logo.
+2026-03-03 05:59:06 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
+2026-03-03 05:59:07 - Missing custom logo. Falling back to default logo.
+2026-03-03 12:20:38 - Translation file for en not found. Using default translation en-US.

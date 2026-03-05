@@ -1,0 +1,28 @@
+nohup: ignoring input
+2026-03-05 17:31:04 - Loaded .env file
+2026-03-05 17:31:10 - Found credentials from IAM Role: dbt-bedrock-ec2-role
+2026-03-05 17:31:11 - Your app is available at http://0.0.0.0:8000
+2026-03-05 17:31:24 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
+2026-03-05 17:31:24 - Missing custom logo. Falling back to default logo.
+2026-03-05 17:31:24 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
+2026-03-05 17:31:25 - Use pytorch device_name: cpu
+2026-03-05 17:31:25 - Load pretrained SentenceTransformer: hiiamsid/sentence_similarity_spanish_es
+2026-03-05 17:31:25 - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-03-05 17:31:30 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
+2026-03-05 17:31:33 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
+2026-03-05 17:31:36 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
+2026-03-05 17:32:05 - Using Bedrock Converse API to generate response
+2026-03-05 17:32:08 - Using Bedrock Converse API to generate response
+2026-03-05 17:32:15 - Using Bedrock Converse API to generate response
+2026-03-05 17:32:18 - Using Bedrock Converse API to generate response
+2026-03-05 17:34:13 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
+2026-03-05 17:34:13 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
+2026-03-05 17:34:20 - Using Bedrock Converse API to generate response
+2026-03-05 17:34:21 - Using Bedrock Converse API to generate response
+2026-03-05 17:36:04 - Using Bedrock Converse API to generate response
+2026-03-05 17:36:07 - Using Bedrock Converse API to generate response
+2026-03-05 17:36:09 - Using Bedrock Converse API to generate response
+2026-03-05 17:37:13 - Using Bedrock Converse API to generate response
+2026-03-05 17:37:15 - Using Bedrock Converse API to generate response
+2026-03-05 17:44:40 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
+2026-03-05 17:44:40 - Translated markdown file for en-US not found. Defaulting to chainlit.md.

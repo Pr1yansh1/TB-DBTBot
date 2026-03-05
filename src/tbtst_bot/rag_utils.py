@@ -26,15 +26,21 @@ DEFAULT_DOCS_DIR = os.path.join(SRC_DIR, "TB-RAG-documents")
 DEFAULT_PERSIST_DIR = os.path.abspath(os.path.join(SRC_DIR, "..", "cache", "chroma"))
 
 # -------------------------
-# Config
+# Config (env)
 # -------------------------
-DEFAULT_EMBEDDING_MODEL = os.getenv(
-    "RAG_EMBEDDING_MODEL",
-    "hiiamsid/sentence_similarity_spanish_es",
+# Back-compat:
+# - old names: RAG_EMBEDDING_MODEL, RAG_DOCS_DIR, RAG_PERSIST_DIR
+# - new names used elsewhere in your app/deploy: TBTST_EMBED_MODEL, CHROMA_PERSIST_DIR
+DEFAULT_EMBEDDING_MODEL = (
+    os.getenv("RAG_EMBEDDING_MODEL")
+    or os.getenv("TBTST_EMBED_MODEL")
+    or "hiiamsid/sentence_similarity_spanish_es"
 )
 
 RAG_DOCS_DIR = os.getenv("RAG_DOCS_DIR", DEFAULT_DOCS_DIR)
-RAG_PERSIST_DIR = os.getenv("RAG_PERSIST_DIR", DEFAULT_PERSIST_DIR)
+
+# Prefer explicit RAG_PERSIST_DIR if set; otherwise fall back to CHROMA_PERSIST_DIR; else default.
+RAG_PERSIST_DIR = os.getenv("RAG_PERSIST_DIR") or os.getenv("CHROMA_PERSIST_DIR") or DEFAULT_PERSIST_DIR
 
 RAG_K = int(os.getenv("RAG_K", "4"))
 CHUNK_SIZE = int(os.getenv("RAG_CHUNK_SIZE", "900"))
@@ -42,7 +48,6 @@ CHUNK_OVERLAP = int(os.getenv("RAG_CHUNK_OVERLAP", "150"))
 
 # Optional manual "force rebuild now"
 RAG_FORCE_REBUILD = os.getenv("RAG_FORCE_REBUILD", "0") == "1"
-
 
 # -------------------------
 # Fingerprint-based rebuild
@@ -59,11 +64,11 @@ def _iter_txt_files(root_dir: str) -> List[str]:
 
 def _docs_fingerprint() -> str:
     """
-    Computes a stable fingerprint based on:
+    Stable fingerprint based on:
       - relative path
       - file size
       - mtime
-    This is fast and good enough for "docs changed => rebuild index".
+    Fast and good enough for: "docs changed => rebuild index"
     """
     if not os.path.isdir(RAG_DOCS_DIR):
         raise FileNotFoundError(
@@ -81,7 +86,6 @@ def _docs_fingerprint() -> str:
             st = os.stat(path)
             payload = f"{rel}|{st.st_size}|{int(st.st_mtime)}"
         except FileNotFoundError:
-            # If a file disappears mid-walk, just skip; fingerprint will differ next run anyway.
             continue
         h.update(payload.encode("utf-8"))
         h.update(b"\n")
@@ -111,18 +115,18 @@ def _persist_dir_has_index() -> bool:
     return os.path.isdir(RAG_PERSIST_DIR) and bool(os.listdir(RAG_PERSIST_DIR))
 
 
-def _maybe_rebuild_needed() -> bool:
+def _maybe_rebuild_needed(cur_fp: str) -> bool:
+    """
+    Decide if we need to rebuild, using a precomputed fingerprint.
+    """
     if RAG_FORCE_REBUILD:
         return True
 
-    cur = _docs_fingerprint()
     saved = _read_saved_fingerprint()
 
-    # If no saved fingerprint OR differs -> rebuild.
-    if not saved or saved != cur:
+    if not saved or saved != cur_fp:
         return True
 
-    # If fingerprint matches but index dir missing -> rebuild.
     if not _persist_dir_has_index():
         return True
 
@@ -171,7 +175,14 @@ def _split_documents(docs: List[Document]) -> List[Document]:
     return splitter.split_documents(docs)
 
 
+# -------------------------
+# Embeddings + Vectorstore (CACHED)
+# -------------------------
+@lru_cache(maxsize=1)
 def _get_embeddings() -> HuggingFaceEmbeddings:
+    """
+    IMPORTANT: Cached so SentenceTransformer is not reloaded per request.
+    """
     return HuggingFaceEmbeddings(model_name=DEFAULT_EMBEDDING_MODEL)
 
 
@@ -179,10 +190,13 @@ def load_or_create_vectorstore() -> Chroma:
     """
     Creates/loads persisted Chroma. Rebuilds automatically if docs changed since last build.
     """
+    os.makedirs(RAG_PERSIST_DIR, exist_ok=True)
+
     embeddings = _get_embeddings()
 
-    rebuild = _maybe_rebuild_needed()
+    # Compute fingerprint ONCE
     cur_fp = _docs_fingerprint()
+    rebuild = _maybe_rebuild_needed(cur_fp)
 
     if rebuild:
         # Clean persist dir to avoid mixed indexes / stale docs.
@@ -198,10 +212,11 @@ def load_or_create_vectorstore() -> Chroma:
             embedding=embeddings,
             persist_directory=RAG_PERSIST_DIR,
         )
+        # NOTE: no vs.persist() — modern Chroma persists automatically
         _write_saved_fingerprint(cur_fp)
         return vs
 
-    # Load existing
+    # Load existing (no rebuild)
     return Chroma(
         persist_directory=RAG_PERSIST_DIR,
         embedding_function=embeddings,
@@ -210,6 +225,9 @@ def load_or_create_vectorstore() -> Chroma:
 
 @lru_cache(maxsize=1)
 def _get_vectorstore() -> Chroma:
+    """
+    Cached so we only create/open Chroma once per process.
+    """
     return load_or_create_vectorstore()
 
 
@@ -224,6 +242,15 @@ def get_retriever(*, allow_latent: bool):
     if allow_latent:
         return vs.as_retriever(search_kwargs={"k": RAG_K})
     return vs.as_retriever(search_kwargs={"k": RAG_K, "filter": {"tb_topic": "general"}})
+
+
+# Optional: explicit warmup hook you can call at server start (recommended for EC2)
+def warmup_rag() -> None:
+    """
+    Force initialization of embeddings + vectorstore at startup.
+    Safe to call multiple times (cached).
+    """
+    _ = _get_vectorstore()
 
 
 @tool
