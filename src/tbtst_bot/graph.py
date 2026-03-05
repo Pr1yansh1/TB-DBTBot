@@ -53,7 +53,7 @@ CLASSIFY_SYSTEM = load_prompt("classify_route.txt")
 CLASSIFY_USER_TMPL = load_prompt("classify_route_user.txt")
 CRISIS_TEXT = load_prompt("crisis.txt")
 
-# Global response rules applied to all user-facing responses (should enforce Spanish)
+# Global response rules applied to all user-facing responses
 GLOBAL_RULES = load_prompt("global_response_rules.txt")
 
 # DBT mini
@@ -71,11 +71,12 @@ TB_RAG_ANSWER_SYSTEM = load_prompt("tb_rag_answer_system.txt")
 TB_RAG_ANSWER_USER_TMPL = load_prompt("tb_rag_answer_user.txt")
 
 # Misc (user-facing content is Spanish)
+# IMPORTANT: Do not hardcode voseo here; GLOBAL_RULES is the global source of truth.
 MISC_SYSTEM = """
-Sos un asistente de apoyo para una app de TB y bienestar.
-Tu tarea acá es responder mensajes "misc": saludos, dudas sobre el sistema, o cosas fuera de TB/DBT.
-Respondé en español (vos), con calidez y brevedad.
-Si el usuario pide algo concreto pero es ambiguo, pedí EXACTAMENTE 1 pregunta breve para orientar.
+Eres un asistente de apoyo para una app de TB y bienestar.
+Tu tarea aquí es responder mensajes "misc": saludos, dudas sobre el sistema, o cosas fuera de TB/DBT.
+Responde en español (neutral) y con calidez y brevedad.
+Si el usuario pide algo concreto pero es ambiguo, haz EXACTAMENTE 1 pregunta breve para orientar.
 No uses jerga. No inventes datos médicos.
 """.strip()
 
@@ -363,11 +364,12 @@ def _invoke_with_auto_continue(
         return AIMessage(content=cur_text)
 
     for i in range(MAX_CONTINUATION_CALLS):
+        # IMPORTANT: do not introduce voseo here; GLOBAL_RULES is the global source of truth.
         cont_prompt = (
-            "Continuá EXACTAMENTE donde te cortaste.\n"
-            "- Empezá por terminar la última frase incompleta.\n"
+            "Continúa EXACTAMENTE donde se cortó tu respuesta.\n"
+            "- Empieza por terminar la última frase incompleta.\n"
             "- NO repitas lo que ya dijiste.\n"
-            "- Mantené el mismo tono y formato.\n"
+            "- Mantén el mismo tono y formato.\n"
         )
         cont_msgs: List[BaseMessage] = [*messages, AIMessage(content=cur_text), HumanMessage(content=cont_prompt)]
         resp2, m2 = _timed_invoke(f"{name}:cont{i+1}", llm, cont_msgs, trace_id=trace_id)
@@ -464,6 +466,8 @@ def _select_recent_messages(
 
 
 def _system_and_summary_messages(system_prompt: str, summary: str) -> List[BaseMessage]:
+    # This is the single place where GLOBAL_RULES is applied as truly global:
+    # every node that calls this helper automatically inherits the global rules.
     combined_system = f"{GLOBAL_RULES.strip()}\n\n---\n\n{system_prompt.strip()}".strip()
     msgs: List[BaseMessage] = [SystemMessage(content=combined_system)]
     if summary.strip():
@@ -979,8 +983,11 @@ def _tb_should_clarify(user_text: str, summary: str) -> TBGateOut:
     LLM-based clarify gate (no keyword heuristics):
     - If the user’s request is vague / not a real question → clarify (ONE question).
     - Otherwise → answer.
+
+    IMPORTANT:
+    - Must inherit GLOBAL_RULES so address form (tú/usted) stays consistent.
     """
-    system = (
+    gate_system = (
         "Eres un asistente de información sobre tuberculosis.\n"
         "Decide si el mensaje del usuario es lo suficientemente específico para responder ahora, "
         "o si es demasiado vago y necesitas UNA sola pregunta de aclaración.\n\n"
@@ -990,6 +997,7 @@ def _tb_should_clarify(user_text: str, summary: str) -> TBGateOut:
         "Reglas:\n"
         "- Responde SIEMPRE en español.\n"
         "- Si action=clarify: haz EXACTAMENTE 1 pregunta breve (sin listas, sin explicaciones médicas todavía).\n"
+        "- La pregunta debe respetar las reglas globales de trato (tú/usted) de este chat.\n"
         "- Si el usuario pegó texto largo pero no preguntó nada concreto: action=clarify.\n"
     )
 
@@ -998,8 +1006,11 @@ def _tb_should_clarify(user_text: str, summary: str) -> TBGateOut:
         f"Mensaje del usuario:\n{user_text.strip()}\n"
     )
 
+    # Apply GLOBAL_RULES here so this gate doesn't drift into "usted" by default.
+    combined_system = f"{GLOBAL_RULES.strip()}\n\n---\n\n{gate_system}".strip()
+
     llm = get_llm(temperature=0.0, max_tokens=100).with_structured_output(TBGateOut)
-    out = llm.invoke([SystemMessage(content=system), HumanMessage(content=human)])
+    out = llm.invoke([SystemMessage(content=combined_system), HumanMessage(content=human)])
 
     q = (out.clarifying_question or "").strip()
     if out.action == "clarify" and not q:
@@ -1016,7 +1027,7 @@ def tb_info_node(state: State) -> Dict[str, Any]:
 
     summary = (state.get("summary") or "").strip()
 
-    # --- NEW: Clarify gate (pre-RAG) ---
+    # --- Clarify gate (pre-RAG) ---
     gate = _tb_should_clarify(user_text, summary)
     if gate.action == "clarify":
         return {"messages": [AIMessage(content=gate.clarifying_question)]}
@@ -1251,9 +1262,11 @@ def _dbt_module_agent(system_prompt: str, state: State, *, label: str) -> Dict[s
     if result is None:
         if DEBUG_METRICS:
             logger.warning("[TRACE %s] dbt:%s fallback (structured failed)", trace_id, label)
+        # IMPORTANT: do not introduce voseo here; GLOBAL_RULES is the global source of truth.
         fallback_text = (
             "Entiendo. Gracias por contármelo. "
-            "¿Qué fue lo más difícil de ese momento para vos: el comentario en sí, la vergüenza, o la sensación de quedarte congelado/a?"
+            "¿Qué fue lo más difícil de ese momento para ti: el comentario en sí, la vergüenza, "
+            "o la sensación de quedarte congelado/a?"
         )
         return {"messages": [AIMessage(content=fallback_text)]}
 
