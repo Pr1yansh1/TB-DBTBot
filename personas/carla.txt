@@ -1,5 +1,3 @@
-# carla.txt
-
 Carla
 
 Descripción:
