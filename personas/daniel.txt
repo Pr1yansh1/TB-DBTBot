@@ -1,5 +1,3 @@
-# daniel.txt
-
 Daniel
 
 Descripción:
