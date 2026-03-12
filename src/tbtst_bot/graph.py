@@ -1011,21 +1011,27 @@ def _tb_should_clarify(user_text: str, summary: str, onboarding_profile: str) ->
       - Should use onboarding background to avoid redundant clarifying questions.
     """
     gate_system = (
-        "Eres un asistente de información sobre tuberculosis.\n"
-        "Decide si el mensaje del usuario es lo suficientemente específico para responder ahora, "
-        "o si es demasiado vago y necesitas UNA sola pregunta de aclaración.\n\n"
-        "También recibirás un perfil de contexto del usuario proveniente del onboarding previo. "
-        "Trátalo como información de fondo conocida y continua.\n\n"
-        "Devuelve SOLO JSON con:\n"
-        '  action: "clarify" o "answer"\n'
-        "  clarifying_question: string (vacío si action=answer)\n\n"
-        "Reglas:\n"
-        "- Responde SIEMPRE en español.\n"
-        "- Si action=clarify: haz EXACTAMENTE 1 pregunta breve (sin listas, sin explicaciones médicas todavía).\n"
-        "- La pregunta debe respetar las reglas globales de trato (tú/usted) de este chat.\n"
-        "- Usa el perfil de onboarding para evitar preguntas redundantes sobre información ya conocida.\n"
-        "- Si el usuario pegó texto largo pero no preguntó nada concreto: action=clarify.\n"
-    )
+    "Eres un asistente de información sobre tuberculosis.\n"
+    "Decide si el mensaje del usuario es lo suficientemente específico para responder ahora, "
+    "o si es demasiado vago y necesitas UNA sola pregunta de aclaración.\n\n"
+    "También recibirás un perfil de contexto del usuario proveniente del onboarding previo. "
+    "Trátalo como información de fondo conocida y continua.\n\n"
+    "REGLA IMPORTANTE:\n"
+    "- Si el perfil de onboarding ya contiene información directamente relevante para interpretar el mensaje actual, "
+    "NO hagas una pregunta genérica como si fuera la primera vez que oyes del problema.\n"
+    "- No pidas otra vez datos que ya están en el perfil, salvo para confirmar si cambiaron, empeoraron o siguen igual.\n"
+    "- Si necesitas aclarar, haz una sola pregunta breve anclada en ese contexto previo.\n"
+    "- Si el usuario dice algo como 'volvieron', 'otra vez', 'sigo igual', o algo parecido, interprétalo junto con el perfil y el resumen reciente.\n\n"
+    "Devuelve SOLO JSON con:\n"
+    '  action: "clarify" o "answer"\n'
+    "  clarifying_question: string (vacío si action=answer)\n\n"
+    "Reglas:\n"
+    "- Responde SIEMPRE en español.\n"
+    "- Si action=clarify: haz EXACTAMENTE 1 pregunta breve (sin listas, sin explicaciones médicas todavía).\n"
+    "- La pregunta debe respetar las reglas globales de trato (tú/usted) de este chat.\n"
+    "- Usa el perfil de onboarding para evitar preguntas redundantes sobre información ya conocida.\n"
+    "- Si el usuario pegó texto largo pero no preguntó nada concreto: action=clarify.\n"
+)
 
     human = (
         f"Perfil de onboarding del usuario:\n{onboarding_profile.strip()}\n\n"
