@@ -1,6 +1,8 @@
 from __future__ import annotations
 
+import json
 import os
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, Optional, List, Tuple
 from uuid import uuid4
@@ -36,6 +38,9 @@ PERSONAS_DIR_CANDIDATES = [
     Path(__file__).parent / "personas",
     Path(__file__).parent / "persona",
 ]
+
+# Per-session transcript storage
+TRANSCRIPTS_DIR = Path(__file__).parent / "transcripts"
 
 
 # -------------------------
@@ -75,6 +80,26 @@ def _resolve_personas_dir() -> Path:
 
 
 PERSONAS_DIR = _resolve_personas_dir()
+
+
+def _safe_session_filename(thread_id: str) -> str:
+    return thread_id.replace("/", "_").replace("\\", "_").replace(":", "__")
+
+
+def _transcript_path(thread_id: str) -> Path:
+    TRANSCRIPTS_DIR.mkdir(parents=True, exist_ok=True)
+    return TRANSCRIPTS_DIR / f"{_safe_session_filename(thread_id)}.jsonl"
+
+
+def log_session_event(thread_id: str, payload: Dict[str, Any]) -> None:
+    row = {
+        "ts": datetime.now(timezone.utc).isoformat(),
+        "thread_id": thread_id,
+        **payload,
+    }
+    path = _transcript_path(thread_id)
+    with path.open("a", encoding="utf-8") as f:
+        f.write(json.dumps(row, ensure_ascii=False) + "\n")
 
 
 def parse_persona_txt(text: str, fallback_name: str) -> Tuple[str, str]:
@@ -248,10 +273,48 @@ async def on_chat_start():
     cl.user_session.set("onboarding_profile", onboarding_profile)
 
     await seed_onboarding_profile(graph, thread_id, onboarding_profile)
-    await cl.Message(content=build_banner_message(persona.banner_title, persona.persona_md)).send()
-    await cl.Message(content="¿Qué te preocupa hoy?").send()
+
+    banner = build_banner_message(persona.banner_title, persona.persona_md)
+    opener = "¿Qué te preocupa hoy?"
+
+    log_session_event(
+        thread_id,
+        {
+            "event": "session_start",
+            "variant": variant,
+            "persona": persona.banner_title,
+            "onboarding_profile": onboarding_profile,
+        },
+    )
+    log_session_event(
+        thread_id,
+        {
+            "event": "message",
+            "role": "assistant",
+            "content": banner,
+        },
+    )
+    log_session_event(
+        thread_id,
+        {
+            "event": "message",
+            "role": "assistant",
+            "content": opener,
+        },
+    )
+
+    await cl.Message(content=banner).send()
+    await cl.Message(content=opener).send()
 
     if SEND_CHAT_WELCOME_MESSAGE:
+        log_session_event(
+            thread_id,
+            {
+                "event": "message",
+                "role": "assistant",
+                "content": WELCOME_MESSAGE,
+            },
+        )
         await cl.Message(content=WELCOME_MESSAGE).send()
 
 
@@ -259,10 +322,21 @@ async def on_chat_start():
 async def on_message(msg: cl.Message):
     graph = cl.user_session.get("graph")
     thread_id = cl.user_session.get("thread_id")
+    variant = cl.user_session.get("variant") or ""
 
     if graph is None or thread_id is None:
         await cl.Message(content="Error: session not initialized. Please refresh.").send()
         return
+
+    log_session_event(
+        thread_id,
+        {
+            "event": "message",
+            "role": "user",
+            "variant": variant,
+            "content": msg.content,
+        },
+    )
 
     thinking = cl.Message(content="")
     await thinking.send()
@@ -275,8 +349,31 @@ async def on_message(msg: cl.Message):
             )
         )
         reply = final["messages"][-1].content
+
+        log_session_event(
+            thread_id,
+            {
+                "event": "message",
+                "role": "assistant",
+                "variant": variant,
+                "content": reply,
+            },
+        )
+
         thinking.content = reply
         await thinking.update()
     except Exception as e:
-        thinking.content = f"❌ Error: {type(e).__name__}: {e}"
+        error_text = f"❌ Error: {type(e).__name__}: {e}"
+
+        log_session_event(
+            thread_id,
+            {
+                "event": "error",
+                "variant": variant,
+                "error_type": type(e).__name__,
+                "error": str(e),
+            },
+        )
+
+        thinking.content = error_text
         await thinking.update()
