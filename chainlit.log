@@ -1,28 +1,46 @@
 nohup: ignoring input
-2026-03-05 17:31:04 - Loaded .env file
-2026-03-05 17:31:10 - Found credentials from IAM Role: dbt-bedrock-ec2-role
-2026-03-05 17:31:11 - Your app is available at http://0.0.0.0:8000
-2026-03-05 17:31:24 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
-2026-03-05 17:31:24 - Missing custom logo. Falling back to default logo.
-2026-03-05 17:31:24 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
-2026-03-05 17:31:25 - Use pytorch device_name: cpu
-2026-03-05 17:31:25 - Load pretrained SentenceTransformer: hiiamsid/sentence_similarity_spanish_es
-2026-03-05 17:31:25 - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
-2026-03-05 17:31:30 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
-2026-03-05 17:31:33 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
-2026-03-05 17:31:36 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
-2026-03-05 17:32:05 - Using Bedrock Converse API to generate response
-2026-03-05 17:32:08 - Using Bedrock Converse API to generate response
-2026-03-05 17:32:15 - Using Bedrock Converse API to generate response
-2026-03-05 17:32:18 - Using Bedrock Converse API to generate response
-2026-03-05 17:34:13 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
-2026-03-05 17:34:13 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
-2026-03-05 17:34:20 - Using Bedrock Converse API to generate response
-2026-03-05 17:34:21 - Using Bedrock Converse API to generate response
-2026-03-05 17:36:04 - Using Bedrock Converse API to generate response
-2026-03-05 17:36:07 - Using Bedrock Converse API to generate response
-2026-03-05 17:36:09 - Using Bedrock Converse API to generate response
-2026-03-05 17:37:13 - Using Bedrock Converse API to generate response
-2026-03-05 17:37:15 - Using Bedrock Converse API to generate response
-2026-03-05 17:44:40 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
-2026-03-05 17:44:40 - Translated markdown file for en-US not found. Defaulting to chainlit.md.
+2026-03-12 03:11:31 - Loaded .env file
+Traceback (most recent call last):
+  File "/home/ec2-user/TB-DBTBot/./chainlit_app.py", line 16, in <module>
+    from tbtst_bot.graph import GRAPH_DBT_MINI, GRAPH_DBT_FULL
+  File "/home/ec2-user/TB-DBTBot/src/tbtst_bot/graph.py", line 1
+    sages import RemoveMessage  # type: ignore
+          ^^^^^^
+SyntaxError: invalid syntax
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/TB-DBTBot/.venv/bin/chainlit", line 10, in <module>
+    sys.exit(cli())
+             ^^^^^
+  File "/home/ec2-user/TB-DBTBot/.venv/lib/python3.11/site-packages/click/core.py", line 1485, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ec2-user/TB-DBTBot/.venv/lib/python3.11/site-packages/click/core.py", line 1406, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "/home/ec2-user/TB-DBTBot/.venv/lib/python3.11/site-packages/click/core.py", line 1873, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ec2-user/TB-DBTBot/.venv/lib/python3.11/site-packages/click/core.py", line 1269, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ec2-user/TB-DBTBot/.venv/lib/python3.11/site-packages/click/core.py", line 824, in invoke
+    return callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ec2-user/TB-DBTBot/.venv/lib/python3.11/site-packages/chainlit/cli/__init__.py", line 208, in chainlit_run
+    run_chainlit(target)
+  File "/home/ec2-user/TB-DBTBot/.venv/lib/python3.11/site-packages/chainlit/cli/__init__.py", line 77, in run_chainlit
+    load_module(config.run.module_name)
+  File "/home/ec2-user/TB-DBTBot/.venv/lib/python3.11/site-packages/chainlit/config.py", line 569, in load_module
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ec2-user/TB-DBTBot/./chainlit_app.py", line 18, in <module>
+    from src.tbtst_bot.graph import GRAPH_DBT_MINI, GRAPH_DBT_FULL  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ec2-user/TB-DBTBot/src/tbtst_bot/graph.py", line 1
+    sages import RemoveMessage  # type: ignore
+          ^^^^^^
+SyntaxError: invalid syntax

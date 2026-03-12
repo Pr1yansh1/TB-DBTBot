@@ -1,24 +1,4 @@
-sages import RemoveMessage  # type: ignore
-
-from .config import get_llm
-from .prompts import load_prompt
-from .rag_utils import retrieve_tb_docs
-
-# =========================================================
-# Logging / tracing knobs (env)
-# =========================================================
-# TBTST_DEBUG_METRICS=1
-# TBTST_LOG_PROMPT_SIZES=1
-# TBTST_LOG_LEVEL=INFO|DEBUG
-LOG_LEVEL = os.getenv("TBTST_LOG_LEVEL", "INFO").upper()
-logging.basicConfig(level=getattr(logging, LOG_LEVEL, logging.INFO))
-logger = logging.getLogger("tbtst.graph")
-
-DEBUG_METRICS = os.getenv("TBTST_DEBUG_METRICS", "0") == "1"
-LOG_PROMPT_SIZES = os.getenv("TBTST_LOG_PROMPT_SIZES", "0") == "1"
-
-# Truncation recovery (finish cut-off replies automatically)
-# TBTST_CONTINUE_ON_TRUNCATIfrom __future__ import annotations
+from __future__ import annotations
 
 import json
 import logging
@@ -40,7 +20,27 @@ from langgraph.graph import END, START, MessagesState, StateGraph
 try:
     from langchain_core.messages import RemoveMessage  # type: ignore
 except Exception:  # pragma: no cover
-    from langchain.ON=1
+    from langchain.messages import RemoveMessage  # type: ignore
+
+from .config import get_llm
+from .prompts import load_prompt
+from .rag_utils import retrieve_tb_docs
+
+# =========================================================
+# Logging / tracing knobs (env)
+# =========================================================
+# TBTST_DEBUG_METRICS=1
+# TBTST_LOG_PROMPT_SIZES=1
+# TBTST_LOG_LEVEL=INFO|DEBUG
+LOG_LEVEL = os.getenv("TBTST_LOG_LEVEL", "INFO").upper()
+logging.basicConfig(level=getattr(logging, LOG_LEVEL, logging.INFO))
+logger = logging.getLogger("tbtst.graph")
+
+DEBUG_METRICS = os.getenv("TBTST_DEBUG_METRICS", "0") == "1"
+LOG_PROMPT_SIZES = os.getenv("TBTST_LOG_PROMPT_SIZES", "0") == "1"
+
+# Truncation recovery (finish cut-off replies automatically)
+# TBTST_CONTINUE_ON_TRUNCATION=1
 # TBTST_MAX_CONTINUATION_CALLS=1
 CONTINUE_ON_TRUNCATION = os.getenv("TBTST_CONTINUE_ON_TRUNCATION", "1") == "1"
 MAX_CONTINUATION_CALLS = int(os.getenv("TBTST_MAX_CONTINUATION_CALLS", "1"))
