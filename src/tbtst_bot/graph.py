@@ -1,5 +1,24 @@
-# src/tbtst_bot/graph.py
-from __future__ import annotations
+sages import RemoveMessage  # type: ignore
+
+from .config import get_llm
+from .prompts import load_prompt
+from .rag_utils import retrieve_tb_docs
+
+# =========================================================
+# Logging / tracing knobs (env)
+# =========================================================
+# TBTST_DEBUG_METRICS=1
+# TBTST_LOG_PROMPT_SIZES=1
+# TBTST_LOG_LEVEL=INFO|DEBUG
+LOG_LEVEL = os.getenv("TBTST_LOG_LEVEL", "INFO").upper()
+logging.basicConfig(level=getattr(logging, LOG_LEVEL, logging.INFO))
+logger = logging.getLogger("tbtst.graph")
+
+DEBUG_METRICS = os.getenv("TBTST_DEBUG_METRICS", "0") == "1"
+LOG_PROMPT_SIZES = os.getenv("TBTST_LOG_PROMPT_SIZES", "0") == "1"
+
+# Truncation recovery (finish cut-off replies automatically)
+# TBTST_CONTINUE_ON_TRUNCATIfrom __future__ import annotations
 
 import json
 import logging
@@ -21,27 +40,7 @@ from langgraph.graph import END, START, MessagesState, StateGraph
 try:
     from langchain_core.messages import RemoveMessage  # type: ignore
 except Exception:  # pragma: no cover
-    from langchain.messages import RemoveMessage  # type: ignore
-
-from .config import get_llm
-from .prompts import load_prompt
-from .rag_utils import retrieve_tb_docs
-
-# =========================================================
-# Logging / tracing knobs (env)
-# =========================================================
-# TBTST_DEBUG_METRICS=1
-# TBTST_LOG_PROMPT_SIZES=1
-# TBTST_LOG_LEVEL=INFO|DEBUG
-LOG_LEVEL = os.getenv("TBTST_LOG_LEVEL", "INFO").upper()
-logging.basicConfig(level=getattr(logging, LOG_LEVEL, logging.INFO))
-logger = logging.getLogger("tbtst.graph")
-
-DEBUG_METRICS = os.getenv("TBTST_DEBUG_METRICS", "0") == "1"
-LOG_PROMPT_SIZES = os.getenv("TBTST_LOG_PROMPT_SIZES", "0") == "1"
-
-# Truncation recovery (finish cut-off replies automatically)
-# TBTST_CONTINUE_ON_TRUNCATION=1
+    from langchain.ON=1
 # TBTST_MAX_CONTINUATION_CALLS=1
 CONTINUE_ON_TRUNCATION = os.getenv("TBTST_CONTINUE_ON_TRUNCATION", "1") == "1"
 MAX_CONTINUATION_CALLS = int(os.getenv("TBTST_MAX_CONTINUATION_CALLS", "1"))
@@ -105,6 +104,9 @@ class RecentSkillEvent(TypedDict, total=False):
 
 
 class State(MessagesState, total=False):
+    # persistent onboarding / persona memory
+    onboarding_profile: str
+
     # main routing
     safety_risk_level: RiskLevel
     safety_triggers: List[str]
@@ -134,7 +136,7 @@ class State(MessagesState, total=False):
     dbt_skill_status: DBTSkillStatus  # status of active skill/thread
     dbt_recent_skills: List[RecentSkillEvent]  # last 3-4 skill events, capped
 
-    # short-term memory management (rolling summary of conversation only)
+    # short-term memory management (rolling summary of recent conversation only)
     summary: str
 
     # debugging / tracing
@@ -147,12 +149,10 @@ class State(MessagesState, total=False):
 MAX_TOKENS_BEFORE_SUMMARY = 4500
 KEEP_LAST_MESSAGES = 8  # what remains verbatim after summarization
 
-# Budget for "recent messages" appended after system+summary.
-# If you increase system prompts, raise this too.
+# Budget for "recent messages" appended after system+memory.
 LLM_RECENT_MESSAGES_MAX_TOKENS = 1800
 
 # This is the "hard floor" for coherence: keep at least N recent messages even under token pressure.
-# Typical: 8–14 messages (~4–7 turns).
 MIN_RECENT_MESSAGES = 10
 
 SUMMARY_SYSTEM = """You maintain a compact, factual rolling summary of a multi-turn conversation.
@@ -165,6 +165,7 @@ Include:
 - Constraints or safety-relevant details (only what the user said)
 
 IMPORTANT:
+- Do NOT rewrite or replace persistent onboarding/profile context.
 - Do NOT invent or infer internal DBT control state (mode/skill/status). Only summarize what is explicitly in user-visible messages.
 Output ONLY the updated summary text."""
 
@@ -433,10 +434,10 @@ def _select_recent_messages(
     Deterministic, role-preserving recent context selection.
 
     Key properties:
-    - Never uses start_on="human" (which can drop AI framing messages).
-    - Always keeps at least `min_messages` from the tail (or as many as exist).
-    - Expands backwards until token budget is reached.
-    - If token budget is too small, still keeps at least the last 2 messages.
+      - Never uses start_on="human" (which can drop AI framing messages).
+      - Always keeps at least `min_messages` from the tail (or as many as exist).
+      - Expands backwards until token budget is reached.
+      - If token budget is too small, still keeps at least the last 2 messages.
     """
     if not messages:
         return []
@@ -465,26 +466,47 @@ def _select_recent_messages(
     return selected
 
 
-def _system_and_summary_messages(system_prompt: str, summary: str) -> List[BaseMessage]:
+def _system_and_memory_messages(
+    system_prompt: str,
+    onboarding_profile: str,
+    summary: str,
+) -> List[BaseMessage]:
     # This is the single place where GLOBAL_RULES is applied as truly global:
     # every node that calls this helper automatically inherits the global rules.
     combined_system = f"{GLOBAL_RULES.strip()}\n\n---\n\n{system_prompt.strip()}".strip()
     msgs: List[BaseMessage] = [SystemMessage(content=combined_system)]
+
+    if onboarding_profile.strip():
+        msgs.append(
+            SystemMessage(
+                content=(
+                    "BACKGROUND USER PROFILE FOR THIS CHAT:\n"
+                    "This information comes from prior onboarding and should be treated as stable background context "
+                    "that remains true across the conversation unless the user updates or contradicts it.\n"
+                    "Use it for personalization, continuity, and interpretation of current concerns.\n\n"
+                    f"{onboarding_profile.strip()}"
+                )
+            )
+        )
+
     if summary.strip():
         msgs.append(
             SystemMessage(
                 content=(
-                    "Conversation memory (compact & factual). Use this to maintain continuity and avoid repeating questions:\n"
+                    "RECENT CONVERSATION MEMORY (compact & factual):\n"
+                    "Use this to maintain continuity, remember what was already discussed, and avoid repetition.\n\n"
                     f"{summary.strip()}"
                 )
             )
         )
+
     return msgs
 
 
-def _llm_messages_with_summary(system_prompt: str, state: State, *, trace_id: str, label: str) -> List[BaseMessage]:
+def _llm_messages_with_memory(system_prompt: str, state: State, *, trace_id: str, label: str) -> List[BaseMessage]:
+    onboarding_profile = (state.get("onboarding_profile") or "").strip()
     summary = (state.get("summary") or "").strip()
-    prefix = _system_and_summary_messages(system_prompt, summary)
+    prefix = _system_and_memory_messages(system_prompt, onboarding_profile, summary)
 
     base_tokens = _tokens(prefix)
     recent_budget = max(256, LLM_RECENT_MESSAGES_MAX_TOKENS - base_tokens)
@@ -494,15 +516,15 @@ def _llm_messages_with_summary(system_prompt: str, state: State, *, trace_id: st
 
     if DEBUG_METRICS:
         sys_tokens = _tokens([prefix[0]])
-        summ_tokens = _tokens(prefix[1:]) if len(prefix) > 1 else 0
+        memory_tokens = _tokens(prefix[1:]) if len(prefix) > 1 else 0
         recent_tokens = _tokens(recent)
-        total = sys_tokens + summ_tokens + recent_tokens
+        total = sys_tokens + memory_tokens + recent_tokens
         logger.info(
-            "[TRACE %s] [PROMPT:%s] sys~%d summary~%d recent_msgs=%d recent~%d recent_budget~%d total~%d",
+            "[TRACE %s] [PROMPT:%s] sys~%d memory~%d recent_msgs=%d recent~%d recent_budget~%d total~%d",
             trace_id,
             label,
             sys_tokens,
-            summ_tokens,
+            memory_tokens,
             len(recent),
             recent_tokens,
             int(recent_budget),
@@ -918,7 +940,7 @@ def memory_manager_node(state: State) -> Dict[str, Any]:
 def dbt_mini_node(state: State) -> Dict[str, Any]:
     trace_id = state.get("last_trace_id") or _trace_id_for_state(state)
     llm = get_llm(temperature=0.25, max_tokens=650)
-    msgs = _llm_messages_with_summary(DBT_SYSTEM, state, trace_id=trace_id, label="dbt_mini")
+    msgs = _llm_messages_with_memory(DBT_SYSTEM, state, trace_id=trace_id, label="dbt_mini")
     reply = _invoke_with_auto_continue("dbt:mini", llm, msgs, trace_id=trace_id)
     return {"messages": [AIMessage(content=reply.content or "")]}
 
@@ -978,19 +1000,22 @@ def _render_answer_with_references(answer_text: str, sources: List[Dict[str, Any
     return "\n".join(lines).strip()
 
 
-def _tb_should_clarify(user_text: str, summary: str) -> TBGateOut:
+def _tb_should_clarify(user_text: str, summary: str, onboarding_profile: str) -> TBGateOut:
     """
     LLM-based clarify gate (no keyword heuristics):
-    - If the user’s request is vague / not a real question → clarify (ONE question).
-    - Otherwise → answer.
+      - If the user’s request is vague / not a real question -> clarify (ONE question).
+      - Otherwise -> answer.
 
     IMPORTANT:
-    - Must inherit GLOBAL_RULES so address form (tú/usted) stays consistent.
+      - Must inherit GLOBAL_RULES so address form (tú/usted) stays consistent.
+      - Should use onboarding background to avoid redundant clarifying questions.
     """
     gate_system = (
         "Eres un asistente de información sobre tuberculosis.\n"
         "Decide si el mensaje del usuario es lo suficientemente específico para responder ahora, "
         "o si es demasiado vago y necesitas UNA sola pregunta de aclaración.\n\n"
+        "También recibirás un perfil de contexto del usuario proveniente del onboarding previo. "
+        "Trátalo como información de fondo conocida y continua.\n\n"
         "Devuelve SOLO JSON con:\n"
         '  action: "clarify" o "answer"\n'
         "  clarifying_question: string (vacío si action=answer)\n\n"
@@ -998,18 +1023,20 @@ def _tb_should_clarify(user_text: str, summary: str) -> TBGateOut:
         "- Responde SIEMPRE en español.\n"
         "- Si action=clarify: haz EXACTAMENTE 1 pregunta breve (sin listas, sin explicaciones médicas todavía).\n"
         "- La pregunta debe respetar las reglas globales de trato (tú/usted) de este chat.\n"
+        "- Usa el perfil de onboarding para evitar preguntas redundantes sobre información ya conocida.\n"
         "- Si el usuario pegó texto largo pero no preguntó nada concreto: action=clarify.\n"
     )
 
     human = (
-        f"Resumen (si existe):\n{summary.strip()}\n\n"
+        f"Perfil de onboarding del usuario:\n{onboarding_profile.strip()}\n\n"
+        f"Resumen reciente (si existe):\n{summary.strip()}\n\n"
         f"Mensaje del usuario:\n{user_text.strip()}\n"
     )
 
     # Apply GLOBAL_RULES here so this gate doesn't drift into "usted" by default.
     combined_system = f"{GLOBAL_RULES.strip()}\n\n---\n\n{gate_system}".strip()
 
-    llm = get_llm(temperature=0.0, max_tokens=100).with_structured_output(TBGateOut)
+    llm = get_llm(temperature=0.0, max_tokens=120).with_structured_output(TBGateOut)
     out = llm.invoke([SystemMessage(content=combined_system), HumanMessage(content=human)])
 
     q = (out.clarifying_question or "").strip()
@@ -1026,9 +1053,10 @@ def tb_info_node(state: State) -> Dict[str, Any]:
         return {"messages": [AIMessage(content="")]}
 
     summary = (state.get("summary") or "").strip()
+    onboarding_profile = (state.get("onboarding_profile") or "").strip()
 
     # --- Clarify gate (pre-RAG) ---
-    gate = _tb_should_clarify(user_text, summary)
+    gate = _tb_should_clarify(user_text, summary, onboarding_profile)
     if gate.action == "clarify":
         return {"messages": [AIMessage(content=gate.clarifying_question)]}
 
@@ -1047,7 +1075,7 @@ def tb_info_node(state: State) -> Dict[str, Any]:
     sources_block = _format_sources_block(sources)
     user_prompt = TB_RAG_ANSWER_USER_TMPL.replace("{user_text}", user_text).replace("{sources_block}", sources_block)
 
-    prefix = _system_and_summary_messages(TB_RAG_ANSWER_SYSTEM, summary)
+    prefix = _system_and_memory_messages(TB_RAG_ANSWER_SYSTEM, onboarding_profile, summary)
 
     llm = get_llm(temperature=0.2, max_tokens=700).with_structured_output(TBAnswerJSON)
 
@@ -1083,7 +1111,7 @@ def tb_info_node(state: State) -> Dict[str, Any]:
 def misc_node(state: State) -> Dict[str, Any]:
     trace_id = state.get("last_trace_id") or _trace_id_for_state(state)
     llm = get_llm(temperature=0.2, max_tokens=420)
-    msgs = _llm_messages_with_summary(MISC_SYSTEM, state, trace_id=trace_id, label="misc")
+    msgs = _llm_messages_with_memory(MISC_SYSTEM, state, trace_id=trace_id, label="misc")
     reply = _invoke_with_auto_continue("misc", llm, msgs, trace_id=trace_id)
     return {"messages": [AIMessage(content=reply.content or "")]}
 
@@ -1111,9 +1139,9 @@ class DBTBrainOut(BaseModel):
 class DBTAgentOut(BaseModel):
     """
     Structured output from the DBT module agent.
-    - message: user-facing Spanish
-    - skill: short name of the skill used/offered/coached (if applicable)
-    - skill_status: internal status update
+      - message: user-facing Spanish
+      - skill: short name of the skill used/offered/coached (if applicable)
+      - skill_status: internal status update
     """
     message: str = Field(..., description="User-facing message in Spanish.")
     skill: str = Field(default="", description="Short DBT skill name (e.g., STOP, TIP, DEAR MAN).")
@@ -1123,7 +1151,7 @@ class DBTAgentOut(BaseModel):
 def dbt_brain_router_node(state: State) -> Dict[str, Any]:
     """
     DBT router: chooses module + mode + continuity for THIS turn.
-    It sees summary + recent messages + internal DBT state note.
+    It sees onboarding profile + summary + recent messages + internal DBT state note.
     """
     trace_id = state.get("last_trace_id") or _trace_id_for_state(state)
     _ensure_dbt_defaults(state)
@@ -1142,7 +1170,7 @@ def dbt_brain_router_node(state: State) -> Dict[str, Any]:
 
     llm_structured = get_llm(temperature=0.0, max_tokens=280).with_structured_output(DBTBrainOut)
 
-    base_msgs = _llm_messages_with_summary(DBT_BRAIN_ROUTER_SYSTEM, state, trace_id=trace_id, label="dbt_brain")
+    base_msgs = _llm_messages_with_memory(DBT_BRAIN_ROUTER_SYSTEM, state, trace_id=trace_id, label="dbt_brain")
     msgs = [base_msgs[0], _dbt_state_system_note(state), *base_msgs[1:]]
 
     retry_hint = (
@@ -1202,14 +1230,15 @@ def dbt_brain_router_node(state: State) -> Dict[str, Any]:
 def _dbt_module_agent(system_prompt: str, state: State, *, label: str) -> Dict[str, Any]:
     """
     Module agent receives:
-    - GLOBAL_RULES + module prompt
-    - summary
-    - internal DBT state note
-    - mode constraints (connect/offer/coach)
+      - GLOBAL_RULES + module prompt
+      - onboarding profile
+      - summary
+      - internal DBT state note
+      - mode constraints (connect/offer/coach)
 
     Returns DBTAgentOut:
-    - message (Spanish)
-    - skill + skill_status for internal state updates
+      - message (Spanish)
+      - skill + skill_status for internal state updates
     """
     trace_id = state.get("last_trace_id") or _trace_id_for_state(state)
     _ensure_dbt_defaults(state)
@@ -1217,7 +1246,7 @@ def _dbt_module_agent(system_prompt: str, state: State, *, label: str) -> Dict[s
     max_tokens = _dbt_max_tokens_for_mode(state)
     llm_structured = get_llm(temperature=0.25, max_tokens=max_tokens).with_structured_output(DBTAgentOut)
 
-    base_msgs = _llm_messages_with_summary(system_prompt, state, trace_id=trace_id, label=label)
+    base_msgs = _llm_messages_with_memory(system_prompt, state, trace_id=trace_id, label=label)
 
     output_contract = SystemMessage(
         content=(
