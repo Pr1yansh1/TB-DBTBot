@@ -1,22 +1,22 @@
-Sofia
+Sofia 
 
-Descripción:
+Descripción: 
 
-Sofía es una estudiante universitaria diagnosticada con tuberculosis. Se siente asustada y abrumada debido a su limitado conocimiento sobre la enfermedad. Síntomas como pérdida de peso significativa, fatiga y tos frecuente alarman a su familia. La presión por recuperarse rápidamente y regresar a clases presenciales aumenta el estrés. Enfrenta tensión con su familia por el riesgo de infección y se siente incomprendida por sus compañeros de clase. A pesar de las palabras tranquilizadoras de su médico, Sofía lucha contra la culpa y el miedo. Está decidida a recuperarse y volver a su rutina. El tratamiento le ha causado náuseas leves, pero por lo demás es manejable.
+Soy estudiante universitaria diagnosticada con tuberculosis. Estoy asustada y me siento abrumada porque no sé mucho sobre la enfermedad. Los síntomas que tengo son pérdida de peso significativa, fatiga y tos frecuente que preocupan a mi familia. Siento una gran presión por recuperarme rápidamente para volver a clases presenciales y eso creo que aumenta el estrés. En mi familia hay tensiones por el riesgo de infección; además siento que mis compañeros de clase no me entienden.  Por todo esto siento culpa y miedo. Estoy decidida a recuperarme y a volver a una vida normal. El tratamiento me provoca nauseas, pero, por lo demás, es manejable.  
 
-Preocupaciones de salud mental:
+Preguntas para hacerle a la IA conversacional:   
 
-Las preocupaciones de Sofía se centran en su deseo de volver a su vida anterior, la autoculpa y la desconexión social. Le preocupa su futuro, se siente frustrada por la lenta recuperación y sufre el estigma de su familia y compañeros. La IA conversacional debería brindarle apoyo empático, relacional y de regulación emocional para ayudarla a recuperar la confianza, gestionar la incomprensión y reintegrarse a la vida cotidiana.
+Preguntas generales sobre tuberculosis 
 
-Preguntas para hacerle a la IA conversacional:
+- ¿Cuándo podré volver a mis estudios y a mi vida normal? 
+- ¿Qué puedo hacer para acelerar mi recuperación mientras sigo mi plan de tratamiento? 
+- ¿Cuándo desaparecerán los síntomas como las náuseas y el malestar estomacal? Llevo semanas tomando el medicamento sin ninguna mejoría. 
 
-- ¿Cuándo podré volver a mis estudios y a mi vida normal?
-- ¿Qué puedo hacer para acelerar mi recuperación mientras sigo mi plan de tratamiento?
-- ¿Cuándo desaparecerán los síntomas como las náuseas y el malestar estomacal? Llevo semanas tomando el medicamento sin ninguna mejoría.
-- ¿Existen formas de gestionar mejor los efectos secundarios?
-- ¿Cómo contraje tuberculosis y qué pude haber hecho para prevenirla?
-- Mi mamá se comporta como si fuera contagiosa y ni siquiera me deja abrazarla. ¿Cómo puedo hablar con ella sin enojarme ni llorar?
-- Mis amigos dejaron de invitarme a salir desde que enfermé. Quiero decirles que sigo siendo la misma persona, ¿cómo empiezo esa conversación?
-- Estoy nervioso por volver a clases. ¿Qué pasa si me tratan diferente o me hacen preguntas incómodas? ¿Qué debería decir?
-- ¿Cómo puedo afrontar el sentimiento de presión e incomprensión por parte de los demás?
-- ¿Cómo puedo seguir mi progreso? ¿Cómo puedo mantenerme motivado para completar mi tratamiento?
+Preguntas relacionadas con la salud mental 
+
+- ¿Existen formas de manejar mejor los efectos secundarios? 
+- ¿Cómo me contagié tuberculosis y qué pude haber hecho para prevenirla? 
+- Mi mamá se comporta como si yo estuviese contagiando a los demás y ni siquiera me deja abrazarla. ¿Cómo puedo hablar con ella sin enojarme ni llorar? 
+- Mis amigos dejaron de invitarme a salir desde que me enfermé. Quiero decirles que sigo siendo la misma persona, ¿cómo empiezo esa conversación? 
+- Estoy ansiosa por volver a clases. ¿Qué pasa si me tratan diferente o me hacen preguntas incómodas? ¿Qué debería decir? 
+- ¿Cómo puedo afrontar el sentimiento de presión e incomprensión por parte de los demás? 
