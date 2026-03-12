@@ -1,19 +1,21 @@
-Isabel
+Isabel 
 
-Descripción:
+Descripción: 
 
-Isabel es una profesional de la salud con amplia experiencia en la atención al paciente que enfrentó un estigma considerable tras su diagnóstico de tuberculosis, incluso por parte de sus colegas. Síntomas como tos persistente, sudores nocturnos y fatiga interfieren en su trabajo. Isabel está motivada a usar su trayectoria para ayudar a los demás, pero aún siente el peso de la discriminación.
+Soy una profesional de la salud con amplia experiencia en la atención al paciente, enfrenté un estigma considerable tras recibir el diagnóstico de tuberculosis, incluso por parte de mis colegas. Los síntomas que tengo son tos persistente, sudores nocturnos y fatiga que interfieren en mi trabajo. Siento que mi experiencia, mi trayectoria en la enfermedad y el tratamiento pueden ayudar a los demás, pero todavía siento mucha discriminación.  
 
-Preocupaciones de salud mental:
+Siento miedo, incertidumbre y ansiedad sobre mi rol en el trabajo. Necesito seguridad sobre por cuánto tiempo más podré contagiar y cuánto tardaré en recuperarme. También necesito entender el significado de los resultados de las pruebas y obtener información fiable, mientras intento manejar el estigma y las dudas sobre mí misma para recuperar la confianza.  
 
-Isabel lidia con el miedo, la incertidumbre y la ansiedad sobre su identidad profesional. Busca seguridad sobre cuánto tiempo será contagiosa y el tiempo que tardará en recuperarse. También necesita comprender el significado de los resultados de las pruebas y obtener información fiable, mientras lidia con el estigma y las dudas sobre sí misma para recuperar la confianza. Su caso pone a prueba la capacidad de la IA conversacional para proporcionar psicoeducación, estrategias de atención plena y validación para ayudar a gestionar la ansiedad relacionada con la salud y el estigma laboral.
+Preguntas para hacerle a la IA conversacional:   
 
-Preguntas para hacerle a la IA conversacional:
+Preguntas generales sobre tuberculosis 
 
-- Me siento muy fatigado. ¿Es un efecto secundario de algún medicamento? ¿Cuánto durará?
-- Me despierto en mitad de la noche empapado en sudor. ¿Qué puedo hacer para solucionarlo?
-- ¿Cuándo puedo regresar de manera segura a trabajar en el hospital y estar seguro de que ya no soy contagioso?
-- Después de tener tuberculosis y recibir el alta hospitalaria, ¿es seguro volver a trabajar con pacientes con tuberculosis? ¿Cómo puedo prevenir la propagación de la tuberculosis?
-- ¿Cómo puedo afrontar el estigma y la discriminación que he enfrentado desde mi diagnóstico?
-- ¿Qué estrategias pueden ayudarme a recuperar la confianza en mi rol profesional?
-- ¿Cómo puedo seguir mi progreso? ¿Cómo puedo mantenerme motivado para completar mi tratamiento?
+- Me siento muy fatigada. ¿Es un efecto secundario de algún medicamento? ¿Cuánto durará? 
+- Me despierto en mitad de la noche empapada en sudor. ¿Qué puedo hacer para solucionarlo? 
+
+Preguntas relacionadas con la salud mental 
+
+- ¿Cuándo puedo regresar de manera segura a trabajar en el hospital y estar segura de que ya no contagio? 
+- Después de tener tuberculosis y recibir el alta hospitalaria, ¿es seguro volver a trabajar con pacientes con tuberculosis? ¿Cómo puedo prevenir el contagio de la tuberculosis? 
+- ¿Cómo puedo afrontar el estigma y la discriminación que he enfrentado desde el diagnóstico? 
+- ¿Qué estrategias pueden ayudarme a recuperar la confianza en mi rol profesional? 
