@@ -275,10 +275,10 @@ def _sleep_seconds_for_attempt(e: Exception, attempt_index: int) -> float:
     msg = str(e)
     if "Too many connections" in msg or "ServiceUnavailableException" in msg:
         base = CHAINLIT_GRAPH_BASE_SLEEP_SECONDS
-        cap = 12.0
+        cap = 4.0
     else:
         base = 0.75
-        cap = 8.0
+        cap = 3.0
     jitter = random.uniform(0.0, 0.35)
     return min(cap, base * (2 ** attempt_index)) + jitter
 

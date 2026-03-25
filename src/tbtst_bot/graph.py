@@ -223,10 +223,10 @@ def _retry_sleep_seconds(e: Exception, attempt: int) -> float:
     msg = str(e)
     if "Too many connections" in msg or "ServiceUnavailableException" in msg:
         base = 1.0
-        cap = 5.0
+        cap = 2.0
     else:
         base = 0.5
-        cap = 4.0
+        cap = 1.5
     return min(cap, base * (2**attempt)) + random.uniform(0.0, 0.25)
 
 
@@ -253,7 +253,7 @@ def _timed_invoke(name: str, llm: Any, messages: List[BaseMessage], *, trace_id:
     t0 = time.perf_counter()
     last_exc: Exception | None = None
 
-    for attempt in range(3):  # 1 initial + 2 retries
+    for attempt in range(2):  # 1 initial + 1 retry
         try:
             resp = llm.invoke(messages)
             dt_ms = (time.perf_counter() - t0) * 1000.0
@@ -285,10 +285,10 @@ def _timed_invoke(name: str, llm: Any, messages: List[BaseMessage], *, trace_id:
 
         except Exception as e:
             last_exc = e
-            if _is_retryable_llm_error(e) and attempt < 2:
+            if _is_retryable_llm_error(e) and attempt < 1:
                 sleep_s = _retry_sleep_seconds(e, attempt)
                 logger.warning(
-                    "[TRACE %s] [LLM] %s retrying in %.2fs due to %s (attempt %d/3)",
+                    "[TRACE %s] [LLM] %s retrying in %.2fs due to %s (attempt %d/2)",
                     trace_id,
                     name,
                     sleep_s,
@@ -312,7 +312,7 @@ def _timed_invoke_structured(
     t0 = time.perf_counter()
     last_exc: Exception | None = None
 
-    for attempt in range(3):  # 1 initial + 2 retries
+    for attempt in range(2):  # 1 initial + 1 retry
         try:
             resp = llm_structured.invoke(messages)
             dt_ms = (time.perf_counter() - t0) * 1000.0
@@ -329,10 +329,10 @@ def _timed_invoke_structured(
 
         except Exception as e:
             last_exc = e
-            if _is_retryable_llm_error(e) and attempt < 2:
+            if _is_retryable_llm_error(e) and attempt < 1:
                 sleep_s = _retry_sleep_seconds(e, attempt)
                 logger.warning(
-                    "[TRACE %s] [LLM_STRUCTURED] %s retrying in %.2fs due to %s (attempt %d/3)",
+                    "[TRACE %s] [LLM_STRUCTURED] %s retrying in %.2fs due to %s (attempt %d/2)",
                     trace_id,
                     name,
                     sleep_s,
