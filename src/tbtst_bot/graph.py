@@ -34,11 +34,7 @@ from langchain_core.messages.utils import count_tokens_approximately
 from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import END, START, MessagesState, StateGraph
 
-# RemoveMessage import location varies by langchain version
-try:
-    from langchain_core.messages import RemoveMessage  # type: ignore
-except Exception:  # pragma: no cover
-    from langchain.ON=1
+from langchain_core.messages import RemoveMessage
 # TBTST_MAX_CONTINUATION_CALLS=1
 CONTINUE_ON_TRUNCATION = os.getenv("TBTST_CONTINUE_ON_TRUNCATION", "1") == "1"
 MAX_CONTINUATION_CALLS = int(os.getenv("TBTST_MAX_CONTINUATION_CALLS", "1"))
