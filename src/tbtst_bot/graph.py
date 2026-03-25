@@ -1,3 +1,14 @@
+from __future__ import annotations
+
+import json
+import logging
+import os
+import random
+import time
+import uuid
+from dataclasses import dataclass
+from typing import Any, Dict, List, Literal, Optional, Set, Tuple, TypedDict, TypeVar, cast
+
 from .config import get_llm
 from .prompts import load_prompt
 from .rag_utils import retrieve_tb_docs
@@ -16,16 +27,6 @@ DEBUG_METRICS = os.getenv("TBTST_DEBUG_METRICS", "0") == "1"
 LOG_PROMPT_SIZES = os.getenv("TBTST_LOG_PROMPT_SIZES", "0") == "1"
 
 # Truncation recovery (finish cut-off replies automatically)
-# TBTST_CONTINUE_ON_TRUNCATIfrom __future__ import annotations
-
-import json
-import logging
-import os
-import random
-import time
-import uuid
-from dataclasses import dataclass
-from typing import Any, Dict, List, Literal, Optional, Set, Tuple, TypedDict, TypeVar, cast
 
 from pydantic import BaseModel, Field, ValidationError
 
