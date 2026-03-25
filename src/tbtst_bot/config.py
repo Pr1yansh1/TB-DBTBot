@@ -10,7 +10,7 @@ from langchain_aws import ChatBedrockConverse
 load_dotenv()
 
 AWS_REGION = os.getenv("AWS_REGION") or os.getenv("AWS_DEFAULT_REGION") or "us-west-2"
-MODEL_ID = os.getenv("BEDROCK_MODEL_ID", "anthropic.claude-3-5-sonnet-20240620-v1:0")
+MODEL_ID = os.getenv("BEDROCK_MODEL_ID", "global.anthropic.claude-sonnet-4-6")
 
 # Optional: fine-grained tool streaming on newer Claude models (only if you need it)
 ANTHROPIC_BETA_FINE_GRAINED = os.getenv("ANTHROPIC_BETA_FINE_GRAINED", "").strip()
