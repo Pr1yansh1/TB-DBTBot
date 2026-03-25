@@ -1,4 +1,24 @@
-from __future__ import annotations
+sages import RemoveMessage  # type: ignore
+
+from .config import get_llm
+from .prompts import load_prompt
+from .rag_utils import retrieve_tb_docs
+
+# =========================================================
+# Logging / tracing knobs (env)
+# =========================================================
+# TBTST_DEBUG_METRICS=1
+# TBTST_LOG_PROMPT_SIZES=1
+# TBTST_LOG_LEVEL=INFO|DEBUG
+LOG_LEVEL = os.getenv("TBTST_LOG_LEVEL", "INFO").upper()
+logging.basicConfig(level=getattr(logging, LOG_LEVEL, logging.INFO))
+logger = logging.getLogger("tbtst.graph")
+
+DEBUG_METRICS = os.getenv("TBTST_DEBUG_METRICS", "0") == "1"
+LOG_PROMPT_SIZES = os.getenv("TBTST_LOG_PROMPT_SIZES", "0") == "1"
+
+# Truncation recovery (finish cut-off replies automatically)
+# TBTST_CONTINUE_ON_TRUNCATIfrom __future__ import annotations
 
 import json
 import logging
@@ -20,27 +40,7 @@ from langgraph.graph import END, START, MessagesState, StateGraph
 try:
     from langchain_core.messages import RemoveMessage  # type: ignore
 except Exception:  # pragma: no cover
-    from langchain.messages import RemoveMessage  # type: ignore
-
-from .config import get_llm
-from .prompts import load_prompt
-from .rag_utils import retrieve_tb_docs
-
-# =========================================================
-# Logging / tracing knobs (env)
-# =========================================================
-# TBTST_DEBUG_METRICS=1
-# TBTST_LOG_PROMPT_SIZES=1
-# TBTST_LOG_LEVEL=INFO|DEBUG
-LOG_LEVEL = os.getenv("TBTST_LOG_LEVEL", "INFO").upper()
-logging.basicConfig(level=getattr(logging, LOG_LEVEL, logging.INFO))
-logger = logging.getLogger("tbtst.graph")
-
-DEBUG_METRICS = os.getenv("TBTST_DEBUG_METRICS", "0") == "1"
-LOG_PROMPT_SIZES = os.getenv("TBTST_LOG_PROMPT_SIZES", "0") == "1"
-
-# Truncation recovery (finish cut-off replies automatically)
-# TBTST_CONTINUE_ON_TRUNCATION=1
+    from langchain.ON=1
 # TBTST_MAX_CONTINUATION_CALLS=1
 CONTINUE_ON_TRUNCATION = os.getenv("TBTST_CONTINUE_ON_TRUNCATION", "1") == "1"
 MAX_CONTINUATION_CALLS = int(os.getenv("TBTST_MAX_CONTINUATION_CALLS", "1"))
@@ -203,9 +203,36 @@ class CallMetrics:
     usage: Dict[str, Any] = None
 
 
-def _is_throttle_error(e: Exception) -> bool:
+def _is_retryable_llm_error(e: Exception) -> bool:
     msg = str(e)
-    return ("ThrottlingException" in msg) or ("Too many requests" in msg) or ("Rate exceeded" in msg)
+    retry_markers = [
+        "ThrottlingException",
+        "Too many requests",
+        "Rate exceeded",
+        "ServiceUnavailableException",
+        "Service Unavailable",
+        "Too many connections",
+        "InternalServerException",
+        "ModelTimeoutException",
+        "RequestTimeout",
+        "TimeoutError",
+        "timed out",
+        "ReadTimeout",
+        "Connection reset",
+        "Connection aborted",
+    ]
+    return any(marker in msg for marker in retry_markers)
+
+
+def _retry_sleep_seconds(e: Exception, attempt: int) -> float:
+    msg = str(e)
+    if "Too many connections" in msg or "ServiceUnavailableException" in msg:
+        base = 1.25
+        cap = 12.0
+    else:
+        base = 0.6
+        cap = 10.0
+    return min(cap, base * (2**attempt)) + random.uniform(0.0, 0.35)
 
 
 def _extract_llm_meta(resp: Any) -> Tuple[str, Dict[str, Any]]:
@@ -263,13 +290,14 @@ def _timed_invoke(name: str, llm: Any, messages: List[BaseMessage], *, trace_id:
 
         except Exception as e:
             last_exc = e
-            if _is_throttle_error(e) and attempt < 5:
-                sleep_s = min(10.0, (2**attempt) * 0.6) + random.uniform(0.0, 0.35)
+            if _is_retryable_llm_error(e) and attempt < 5:
+                sleep_s = _retry_sleep_seconds(e, attempt)
                 logger.warning(
-                    "[TRACE %s] [LLM] %s throttled; retrying in %.2fs (attempt %d/6)",
+                    "[TRACE %s] [LLM] %s retrying in %.2fs due to %s (attempt %d/6)",
                     trace_id,
                     name,
                     sleep_s,
+                    type(e).__name__,
                     attempt + 1,
                 )
                 time.sleep(sleep_s)
@@ -277,6 +305,50 @@ def _timed_invoke(name: str, llm: Any, messages: List[BaseMessage], *, trace_id:
             raise
 
     raise last_exc or RuntimeError("LLM invoke failed")
+
+
+def _timed_invoke_structured(
+    name: str,
+    llm_structured: Any,
+    messages: List[BaseMessage],
+    *,
+    trace_id: str,
+) -> Any:
+    t0 = time.perf_counter()
+    last_exc: Exception | None = None
+
+    for attempt in range(6):  # 1 initial + 5 retries
+        try:
+            resp = llm_structured.invoke(messages)
+            dt_ms = (time.perf_counter() - t0) * 1000.0
+
+            if DEBUG_METRICS:
+                logger.info(
+                    "[TRACE %s] [LLM_STRUCTURED] %s latency=%.1fms in_tokens~%d",
+                    trace_id,
+                    name,
+                    dt_ms,
+                    _tokens(messages),
+                )
+            return resp
+
+        except Exception as e:
+            last_exc = e
+            if _is_retryable_llm_error(e) and attempt < 5:
+                sleep_s = _retry_sleep_seconds(e, attempt)
+                logger.warning(
+                    "[TRACE %s] [LLM_STRUCTURED] %s retrying in %.2fs due to %s (attempt %d/6)",
+                    trace_id,
+                    name,
+                    sleep_s,
+                    type(e).__name__,
+                    attempt + 1,
+                )
+                time.sleep(sleep_s)
+                continue
+            raise
+
+    raise last_exc or RuntimeError("Structured LLM invoke failed")
 
 
 def _timed_tool(name: str, fn: Any, args: Dict[str, Any], *, trace_id: str) -> Any:
@@ -706,11 +778,18 @@ def _invoke_structured_with_retry(
     Best-effort structured-output invocation.
 
     Returns (result_or_none, raw_text).
+    - Retries transient backend failures automatically.
     - If structured parsing fails twice, returns (None, raw_text_last).
     """
     raw_last = ""
+
     try:
-        result = llm_structured.invoke(messages)
+        result = _timed_invoke_structured(
+            f"{label}:first",
+            llm_structured,
+            messages,
+            trace_id=trace_id,
+        )
         raw_last = getattr(result, "model_dump_json", lambda: "")()
         return cast(T, result), raw_last
     except Exception as e1:
@@ -719,7 +798,12 @@ def _invoke_structured_with_retry(
 
     stricter = [*messages, SystemMessage(content=retry_hint)]
     try:
-        result2 = llm_structured.invoke(stricter)
+        result2 = _timed_invoke_structured(
+            f"{label}:retry",
+            llm_structured,
+            stricter,
+            trace_id=trace_id,
+        )
         raw_last = getattr(result2, "model_dump_json", lambda: "")()
         return cast(T, result2), raw_last
     except Exception as e2:
@@ -1000,7 +1084,7 @@ def _render_answer_with_references(answer_text: str, sources: List[Dict[str, Any
     return "\n".join(lines).strip()
 
 
-def _tb_should_clarify(user_text: str, summary: str, onboarding_profile: str) -> TBGateOut:
+def _tb_should_clarify(user_text: str, summary: str, onboarding_profile: str, *, trace_id: str) -> TBGateOut:
     """
     LLM-based clarify gate (no keyword heuristics):
       - If the user’s request is vague / not a real question -> clarify (ONE question).
@@ -1011,27 +1095,27 @@ def _tb_should_clarify(user_text: str, summary: str, onboarding_profile: str) ->
       - Should use onboarding background to avoid redundant clarifying questions.
     """
     gate_system = (
-    "Eres un asistente de información sobre tuberculosis.\n"
-    "Decide si el mensaje del usuario es lo suficientemente específico para responder ahora, "
-    "o si es demasiado vago y necesitas UNA sola pregunta de aclaración.\n\n"
-    "También recibirás un perfil de contexto del usuario proveniente del onboarding previo. "
-    "Trátalo como información de fondo conocida y continua.\n\n"
-    "REGLA IMPORTANTE:\n"
-    "- Si el perfil de onboarding ya contiene información directamente relevante para interpretar el mensaje actual, "
-    "NO hagas una pregunta genérica como si fuera la primera vez que oyes del problema.\n"
-    "- No pidas otra vez datos que ya están en el perfil, salvo para confirmar si cambiaron, empeoraron o siguen igual.\n"
-    "- Si necesitas aclarar, haz una sola pregunta breve anclada en ese contexto previo.\n"
-    "- Si el usuario dice algo como 'volvieron', 'otra vez', 'sigo igual', o algo parecido, interprétalo junto con el perfil y el resumen reciente.\n\n"
-    "Devuelve SOLO JSON con:\n"
-    '  action: "clarify" o "answer"\n'
-    "  clarifying_question: string (vacío si action=answer)\n\n"
-    "Reglas:\n"
-    "- Responde SIEMPRE en español.\n"
-    "- Si action=clarify: haz EXACTAMENTE 1 pregunta breve (sin listas, sin explicaciones médicas todavía).\n"
-    "- La pregunta debe respetar las reglas globales de trato (tú/usted) de este chat.\n"
-    "- Usa el perfil de onboarding para evitar preguntas redundantes sobre información ya conocida.\n"
-    "- Si el usuario pegó texto largo pero no preguntó nada concreto: action=clarify.\n"
-)
+        "Eres un asistente de información sobre tuberculosis.\n"
+        "Decide si el mensaje del usuario es lo suficientemente específico para responder ahora, "
+        "o si es demasiado vago y necesitas UNA sola pregunta de aclaración.\n\n"
+        "También recibirás un perfil de contexto del usuario proveniente del onboarding previo. "
+        "Trátalo como información de fondo conocida y continua.\n\n"
+        "REGLA IMPORTANTE:\n"
+        "- Si el perfil de onboarding ya contiene información directamente relevante para interpretar el mensaje actual, "
+        "NO hagas una pregunta genérica como si fuera la primera vez que oyes del problema.\n"
+        "- No pidas otra vez datos que ya están en el perfil, salvo para confirmar si cambiaron, empeoraron o siguen igual.\n"
+        "- Si necesitas aclarar, haz una sola pregunta breve anclada en ese contexto previo.\n"
+        "- Si el usuario dice algo como 'volvieron', 'otra vez', 'sigo igual', o algo parecido, interprétalo junto con el perfil y el resumen reciente.\n\n"
+        "Devuelve SOLO JSON con:\n"
+        '  action: "clarify" o "answer"\n'
+        "  clarifying_question: string (vacío si action=answer)\n\n"
+        "Reglas:\n"
+        "- Responde SIEMPRE en español.\n"
+        "- Si action=clarify: haz EXACTAMENTE 1 pregunta breve (sin listas, sin explicaciones médicas todavía).\n"
+        "- La pregunta debe respetar las reglas globales de trato (tú/usted) de este chat.\n"
+        "- Usa el perfil de onboarding para evitar preguntas redundantes sobre información ya conocida.\n"
+        "- Si el usuario pegó texto largo pero no preguntó nada concreto: action=clarify.\n"
+    )
 
     human = (
         f"Perfil de onboarding del usuario:\n{onboarding_profile.strip()}\n\n"
@@ -1043,7 +1127,12 @@ def _tb_should_clarify(user_text: str, summary: str, onboarding_profile: str) ->
     combined_system = f"{GLOBAL_RULES.strip()}\n\n---\n\n{gate_system}".strip()
 
     llm = get_llm(temperature=0.0, max_tokens=120).with_structured_output(TBGateOut)
-    out = llm.invoke([SystemMessage(content=combined_system), HumanMessage(content=human)])
+    out = _timed_invoke_structured(
+        "tb_gate",
+        llm,
+        [SystemMessage(content=combined_system), HumanMessage(content=human)],
+        trace_id=trace_id,
+    )
 
     q = (out.clarifying_question or "").strip()
     if out.action == "clarify" and not q:
@@ -1062,7 +1151,7 @@ def tb_info_node(state: State) -> Dict[str, Any]:
     onboarding_profile = (state.get("onboarding_profile") or "").strip()
 
     # --- Clarify gate (pre-RAG) ---
-    gate = _tb_should_clarify(user_text, summary, onboarding_profile)
+    gate = _tb_should_clarify(user_text, summary, onboarding_profile, trace_id=trace_id)
     if gate.action == "clarify":
         return {"messages": [AIMessage(content=gate.clarifying_question)]}
 
@@ -1086,20 +1175,22 @@ def tb_info_node(state: State) -> Dict[str, Any]:
     llm = get_llm(temperature=0.2, max_tokens=700).with_structured_output(TBAnswerJSON)
 
     t0 = time.perf_counter()
-    result = llm.invoke([*prefix, HumanMessage(content=user_prompt)])
+    result = _timed_invoke_structured(
+        "tb_info",
+        llm,
+        [*prefix, HumanMessage(content=user_prompt)],
+        trace_id=trace_id,
+    )
     dt_ms = (time.perf_counter() - t0) * 1000.0
 
     if DEBUG_METRICS:
-        stop_reason, usage = _extract_llm_meta(result)
         logger.info(
-            "[TRACE %s] [LLM] tb_info latency=%.1fms in_tokens~%d out_answer_chars=%d cited=%s stop_reason=%s usage=%s allow_latent=%s",
+            "[TRACE %s] [LLM] tb_info latency=%.1fms in_tokens~%d out_answer_chars=%d cited=%s allow_latent=%s",
             trace_id,
             dt_ms,
             _tokens([*prefix, HumanMessage(content=user_prompt)]),
             len((result.answer or "")),
             result.citations_used,
-            stop_reason,
-            usage,
             allow_latent,
         )
 

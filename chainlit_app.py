@@ -1,7 +1,10 @@
 from __future__ import annotations
 
 import json
+import logging
 import os
+import random
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, Optional, List, Tuple
@@ -19,6 +22,8 @@ try:
 except Exception:  # pragma: no cover
     from src.tbtst_bot.graph import GRAPH_DBT_MINI, GRAPH_DBT_FULL  # type: ignore
 
+
+logger = logging.getLogger("tbtst.chainlit_app")
 
 # -------------------------
 # UI / Banner copy
@@ -41,6 +46,15 @@ PERSONAS_DIR_CANDIDATES = [
 
 # Per-session transcript storage
 TRANSCRIPTS_DIR = Path(__file__).parent / "transcripts"
+
+# Production resiliency knobs
+CHAINLIT_GRAPH_MAX_ATTEMPTS = int(os.getenv("TBTST_CHAINLIT_GRAPH_MAX_ATTEMPTS", "2"))
+CHAINLIT_GRAPH_BASE_SLEEP_SECONDS = float(os.getenv("TBTST_CHAINLIT_GRAPH_BASE_SLEEP_SECONDS", "1.25"))
+MAX_CONCURRENT_GRAPH_INVOCATIONS = int(os.getenv("TBTST_MAX_CONCURRENT_GRAPH_INVOCATIONS", "4"))
+
+# Global concurrency control and per-session serialization
+_GRAPH_INVOKE_SEMAPHORE = anyio.Semaphore(MAX_CONCURRENT_GRAPH_INVOCATIONS)
+_SESSION_LOCKS: Dict[str, anyio.Lock] = {}
 
 
 # -------------------------
@@ -236,6 +250,84 @@ async def seed_onboarding_profile(graph: Any, thread_id: str, onboarding_profile
     )
 
 
+def is_retryable_graph_error(e: Exception) -> bool:
+    msg = str(e)
+    retry_markers = [
+        "ServiceUnavailableException",
+        "Service Unavailable",
+        "Too many connections",
+        "ThrottlingException",
+        "Too many requests",
+        "Rate exceeded",
+        "InternalServerException",
+        "ModelTimeoutException",
+        "RequestTimeout",
+        "TimeoutError",
+        "timed out",
+        "ReadTimeout",
+        "Connection reset",
+        "Connection aborted",
+    ]
+    return any(marker in msg for marker in retry_markers)
+
+
+def _sleep_seconds_for_attempt(e: Exception, attempt_index: int) -> float:
+    msg = str(e)
+    if "Too many connections" in msg or "ServiceUnavailableException" in msg:
+        base = CHAINLIT_GRAPH_BASE_SLEEP_SECONDS
+        cap = 12.0
+    else:
+        base = 0.75
+        cap = 8.0
+    jitter = random.uniform(0.0, 0.35)
+    return min(cap, base * (2 ** attempt_index)) + jitter
+
+
+def invoke_graph_with_retry(graph: Any, user_text: str, thread_id: str) -> Dict[str, Any]:
+    payload = {"messages": [HumanMessage(content=user_text)]}
+    config = {"configurable": {"thread_id": thread_id}}
+
+    last_exc: Optional[Exception] = None
+
+    for attempt in range(CHAINLIT_GRAPH_MAX_ATTEMPTS):
+        try:
+            return graph.invoke(payload, config=config)
+        except Exception as e:
+            last_exc = e
+            retryable = is_retryable_graph_error(e)
+            is_last_attempt = attempt >= (CHAINLIT_GRAPH_MAX_ATTEMPTS - 1)
+
+            logger.exception(
+                "graph.invoke failed thread_id=%s attempt=%d/%d retryable=%s",
+                thread_id,
+                attempt + 1,
+                CHAINLIT_GRAPH_MAX_ATTEMPTS,
+                retryable,
+            )
+
+            if (not retryable) or is_last_attempt:
+                raise
+
+            sleep_s = _sleep_seconds_for_attempt(e, attempt)
+            logger.warning(
+                "Retrying graph.invoke thread_id=%s in %.2fs due to transient error: %s",
+                thread_id,
+                sleep_s,
+                type(e).__name__,
+            )
+            time.sleep(sleep_s)
+
+    raise last_exc or RuntimeError("graph.invoke failed without a captured exception")
+
+
+def _get_session_lock(thread_id: str) -> anyio.Lock:
+    lock = _SESSION_LOCKS.get(thread_id)
+    if lock is None:
+        lock = anyio.Lock()
+        _SESSION_LOCKS[thread_id] = lock
+    return lock
+
+
 @cl.set_chat_profiles
 async def chat_profiles(current_user: Optional[cl.User] = None):
     return [
@@ -341,13 +433,18 @@ async def on_message(msg: cl.Message):
     thinking = cl.Message(content="")
     await thinking.send()
 
+    session_lock = _get_session_lock(thread_id)
+
     try:
-        final: Dict[str, Any] = await anyio.to_thread.run_sync(
-            lambda: graph.invoke(
-                {"messages": [HumanMessage(content=msg.content)]},
-                config={"configurable": {"thread_id": thread_id}},
-            )
-        )
+        async with session_lock:
+            async with _GRAPH_INVOKE_SEMAPHORE:
+                final: Dict[str, Any] = await anyio.to_thread.run_sync(
+                    invoke_graph_with_retry,
+                    graph,
+                    msg.content,
+                    thread_id,
+                )
+
         reply = final["messages"][-1].content
 
         log_session_event(
@@ -362,18 +459,33 @@ async def on_message(msg: cl.Message):
 
         thinking.content = reply
         await thinking.update()
+
     except Exception as e:
-        error_text = f"❌ Error: {type(e).__name__}: {e}"
+        logger.exception("Final failure in Chainlit on_message thread_id=%s", thread_id)
+
+        if is_retryable_graph_error(e):
+            user_facing_error = (
+                "Lo siento, estoy teniendo un problema temporal para responder en este momento. "
+                "Por favor intenta enviar tu mensaje otra vez en unos segundos."
+            )
+            error_kind = "retryable_backend_error"
+        else:
+            user_facing_error = (
+                "Lo siento, ocurrió un error inesperado. "
+                "Por favor intenta de nuevo."
+            )
+            error_kind = "unexpected_backend_error"
 
         log_session_event(
             thread_id,
             {
                 "event": "error",
                 "variant": variant,
+                "error_kind": error_kind,
                 "error_type": type(e).__name__,
                 "error": str(e),
             },
         )
 
-        thinking.content = error_text
+        thinking.content = user_facing_error
         await thinking.update()
