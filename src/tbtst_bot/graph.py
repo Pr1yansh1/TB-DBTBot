@@ -1,5 +1,3 @@
-sages import RemoveMessage  # type: ignore
-
 from .config import get_llm
 from .prompts import load_prompt
 from .rag_utils import retrieve_tb_docs
