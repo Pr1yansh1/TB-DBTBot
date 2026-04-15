@@ -40,9 +40,12 @@ where = ["src"]
 markers = [
   "integration: calls real Bedrock; costs money; run with RUN_BEDROCK_TESTS=1"
 ]
+asyncio_mode = "auto"
+pythonpath = ["."]
 
 [dependency-groups]
 dev = [
     "pytest>=9.0.2",
+    "pytest-asyncio>=0.24",
 ]
 
