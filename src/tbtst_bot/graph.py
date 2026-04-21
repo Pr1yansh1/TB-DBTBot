@@ -32,7 +32,8 @@ from pydantic import BaseModel, Field, ValidationError
 
 from langchain_core.messages import AIMessage, BaseMessage, HumanMessage, SystemMessage
 from langchain_core.messages.utils import count_tokens_approximately
-from langgraph.checkpoint.memory import MemorySaver
+import sqlite3
+from langgraph.checkpoint.sqlite import SqliteSaver
 from langgraph.graph import END, START, MessagesState, StateGraph
 
 from langchain_core.messages import RemoveMessage
@@ -1520,8 +1521,30 @@ def build_graph(*, dbt_node: Any):
     g.add_edge("dbt", END)
     g.add_edge("misc", END)
 
-    return g.compile(checkpointer=MemorySaver())
+    return g.compile(checkpointer=_CHECKPOINTER)
 
+
+# ---------------------------------------------------------------------------
+# Shared persistent checkpointer
+#
+# A single SqliteSaver instance is shared by both graph variants so that:
+#   - state survives process restarts (unlike MemorySaver)
+#   - the mini and full variants share one backing store (thread IDs already
+#     include the variant suffix, e.g. "abc123:mini" vs "abc123:full")
+#
+# Override the DB path with TBTST_CHECKPOINT_DB if needed (e.g. for a
+# network-mounted volume in a multi-instance deployment — at that point
+# migrate to PostgresSaver instead).
+# ---------------------------------------------------------------------------
+_CHECKPOINT_DB_PATH = os.getenv("TBTST_CHECKPOINT_DB", "./data/langgraph_checkpoints.db")
+os.makedirs(os.path.dirname(os.path.abspath(_CHECKPOINT_DB_PATH)), exist_ok=True)
+# Open a long-lived SQLite connection for the process lifetime.
+# SqliteSaver.from_conn_string() is a context manager designed for short-lived
+# scripts; using it without 'with' gives a broken _GeneratorContextManager
+# object (no .put/.get). Instead, open the connection directly — SqliteSaver
+# manages its own threading.Lock() internally (check_same_thread=False is safe).
+_CHECKPOINT_CONN = sqlite3.connect(_CHECKPOINT_DB_PATH, check_same_thread=False)
+_CHECKPOINTER = SqliteSaver(_CHECKPOINT_CONN)
 
 # Public compiled graphs
 GRAPH_DBT_MINI = build_graph(dbt_node=dbt_mini_node)

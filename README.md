@@ -64,6 +64,12 @@ Scripts live under `baselines/`:
 uv run python baselines/<script_name>.py
 ```
 
+## Session state
+
+LangGraph state is persisted to `./data/langgraph_checkpoints.db` (SQLite) so sessions survive process restarts. Override the path with `TBTST_CHECKPOINT_DB`.
+
+For multi-instance deployments, point `TBTST_CHECKPOINT_DB` at a network-mounted path or migrate to `PostgresSaver` with a shared DB.
+
 ## Testing
 
 Unit tests (no Bedrock calls):
@@ -78,31 +84,35 @@ Integration tests (calls Bedrock):
 RUN_BEDROCK_TESTS=1 uv run pytest -q -m integration
 ```
 
-### Session reinit crash tests (`tests/test_session_reinit_bugs.py`)
+### Session reinit regression tests (`tests/test_session_reinit_bugs.py`)
 
-Regression tests for two crash patterns identified from production transcripts
-(40 threads, 10 confirmed mid-conversation crashes).
+Covers crash patterns from production (40 threads, 10 confirmed mid-conversation crashes):
 
-**What they test (by user scenario):**
+| Scenario | Test |
+|---|---|
+| New user sees exactly one greeting | `test_new_user_sees_exactly_one_greeting` |
+| Rapid double-connect → one greeting | `test_two_rapid_connections_show_one_greeting_not_two` |
+| Idle reconnect → no repeated greeting | `test_user_returning_after_idle_sees_no_new_greeting` |
+| Mid-conversation reconnect → no re-init | `test_user_who_was_mid_conversation_is_not_reset_by_reconnect` |
+| User context survives backend restart | `test_user_context_is_accessible_after_backend_restarts` |
+| No greeting after backend restart | `test_user_sees_no_greeting_when_reconnecting_after_backend_restart` |
+| Bedrock error → inline error, not re-init | `test_throttling_error_shows_inline_error_not_a_fresh_greeting` |
+| Long-idle resume sends no messages | `test_on_chat_resume_sends_no_messages` |
+| Long-idle resume restores session state | `test_on_chat_resume_restores_session_state` |
 
-| Scenario | Test | Status |
-|---|---|---|
-| New user opens chat, sees one greeting | `test_new_user_sees_exactly_one_greeting` | passes |
-| Two rapid connections → one greeting, not two | `test_two_rapid_connections_show_one_greeting_not_two` | **failing** |
-| User returns after idle → no repeated greeting | `test_user_returning_after_idle_sees_no_new_greeting` | **failing** |
-| Mid-conversation reconnect → no re-init | `test_user_who_was_mid_conversation_is_not_reset_by_reconnect` | **failing** |
-| User context survives backend restart | `test_user_context_is_accessible_after_backend_restarts` | **failing** |
-| No greeting shown after backend restart | `test_user_sees_no_greeting_when_reconnecting_after_backend_restart` | **failing** |
-| Bedrock error shows error message, not re-init | `test_throttling_error_shows_inline_error_not_a_fresh_greeting` | passes |
+All 9 pass. Fixes applied:
 
-**Two fixes needed to clear all failures:**
+- `SqliteSaver` replaces `MemorySaver` in `graph.py` — state survives process restart
+- Idempotency guard + per-thread lock in `on_chat_start` — covers Type A (race) and Type B short-gap reconnects
+- `@cl.data_layer` + `@cl.header_auth_callback` + `@cl.on_chat_resume` in `chainlit_app.py` — covers Type B long-gap reconnects (session expiry)
+- `session.thread_id` replaces `session.id` as the thread identifier — stable conversation ID across WebSocket reconnects
 
-1. **Persistent checkpointer** — replace `MemorySaver()` in `graph.py:1523` with a
-   checkpointer backed by a shared store (e.g. `SqliteSaver`, `PostgresSaver`).
-   Without this, all LangGraph state is lost on every worker restart, making
-   every reconnect look like a new session.
+### Chainlit DB schema (data layer)
 
-2. **Idempotency guard in `on_chat_start`** — before seeding and sending, check
-   whether the graph already has `onboarding_profile` for this `thread_id`.
-   If it does, return early. This gate needs a per-thread lock to be safe under
-   concurrent connections.
+Run once before first deploy (or after pointing at a new DB):
+
+```bash
+uv run python scripts/init_chainlit_db.py
+```
+
+Uses `TBTST_CHAINLIT_DB` (explicit async URL) → `DATABASE_URL` (Postgres, auto-upgraded to asyncpg) → SQLite fallback at `./data/chainlit.db`.

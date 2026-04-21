@@ -12,29 +12,35 @@ Real crash data that motivated these tests (from transcript analysis):
             re-init fires mid-conversation after idle (30s → 11h gaps)
   Pathological — thread 1e3e514d: 35 re-inits over 12 days
   Pathological — thread e97a9b78: 10 re-inits over 6 days, zero user messages
+
+Fix summary (all 8 tests pass):
+  - SqliteSaver replaces MemorySaver in graph.py (state survives process restart)
+  - Idempotency guard + per-thread lock in on_chat_start (Type A, Type B short-gap)
+  - @cl.data_layer + @cl.header_auth_callback + @cl.on_chat_resume (Type B long-gap)
+  - session.thread_id (stable conversation ID) replaces session.id in on_chat_start
 """
 
 from __future__ import annotations
 
 import asyncio
-from typing import Any, Dict, List
+import os
+import tempfile
+from contextlib import contextmanager
+from typing import Any, Dict, Generator, List
 from unittest.mock import AsyncMock, MagicMock, patch
 
 import pytest
 from langchain_core.messages import HumanMessage
 from langgraph.checkpoint.memory import MemorySaver
+from langgraph.checkpoint.sqlite import SqliteSaver
 
 
 # ---------------------------------------------------------------------------
 # Shared test infrastructure
 # ---------------------------------------------------------------------------
 
-def _make_graph() -> Any:
-    """
-    Minimal LangGraph graph backed by MemorySaver — same checkpointer the
-    production code uses. No Bedrock nodes needed; we only exercise
-    update_state / get_state, which is what session seeding uses.
-    """
+def _build_minimal_graph(checkpointer: Any) -> Any:
+    """Compile a minimal graph with the given checkpointer. No Bedrock needed."""
     from langgraph.graph import StateGraph, MessagesState, END, START
 
     class MinimalState(MessagesState, total=False):
@@ -44,7 +50,31 @@ def _make_graph() -> Any:
     g.add_node("noop", lambda state: {})
     g.add_edge(START, "noop")
     g.add_edge("noop", END)
-    return g.compile(checkpointer=MemorySaver())
+    return g.compile(checkpointer=checkpointer)
+
+
+def _make_graph() -> Any:
+    """
+    Graph with an isolated in-memory checkpointer.
+    Used for tests that operate on a single process lifetime (no restart simulation)
+    — idempotency, concurrent connects, mid-conversation reconnect.
+    """
+    return _build_minimal_graph(MemorySaver())
+
+
+@contextmanager
+def _shared_sqlite_checkpointer() -> Generator[str, None, None]:
+    """
+    Yield a temp-file path that two sequential graph instances can share,
+    simulating a backend restart against the same persistent store.
+    The file is deleted after the test.
+    """
+    fd, db_path = tempfile.mkstemp(suffix=".db")
+    os.close(fd)
+    try:
+        yield db_path
+    finally:
+        os.unlink(db_path)
 
 
 def _config(thread_id: str) -> Dict[str, Any]:
@@ -97,10 +127,14 @@ def _make_cl_mock(session_id: str, sent: List[str]) -> MagicMock:
     Must be passed as `new=` to patch() — Chainlit's module-level __getattr__
     raises KeyError (not AttributeError) for unknown attrs, which breaks
     mock's auto-introspection when called without `new=`.
+
+    session.thread_id = session_id simulates the data layer making the
+    conversation ID stable across reconnects (same as session.id here).
     """
     cl_mock = MagicMock()
     session = MagicMock()
     session.id = session_id
+    session.thread_id = session_id  # stable conversation ID from data layer
     cl_mock.context.session = session
     cl_mock.user_session = _FakeUserSession()
     cl_mock.Message.side_effect = lambda content="": _capture_message(content, sent)
@@ -286,27 +320,27 @@ class TestSessionAfterBackendRestart:
         a backend process restart. If it doesn't, the next on_chat_start call has
         no way to know the session was already initialized — and will re-init it.
 
-        This test operates at the graph layer only: two separate graph instances
-        with the same thread_id simulate two separate process lifetimes.
-
-        Currently FAILS — MemorySaver is per-instance, not shared across processes.
+        Two separate graph instances sharing the same SQLite file simulate two
+        separate process lifetimes against the same persistent store.
         """
         thread_id = "user-persisted:mini"
 
-        # First process lifetime: user had a session
-        graph_process_1 = _make_graph()
-        graph_process_1.update_state(_config(thread_id), {
-            "onboarding_profile": "Sofia — Sofia's full profile content here",
-        })
+        with _shared_sqlite_checkpointer() as db_path:
+            # First process lifetime: user had a session
+            with SqliteSaver.from_conn_string(db_path) as cp1:
+                graph_p1 = _build_minimal_graph(cp1)
+                graph_p1.update_state(_config(thread_id), {
+                    "onboarding_profile": "Sofia — Sofia's full profile content here",
+                })
 
-        # Backend restarts: new process, new graph instance, same thread_id
-        graph_process_2 = _make_graph()
+            # Backend restarts: new connection to the same file, new graph instance
+            with SqliteSaver.from_conn_string(db_path) as cp2:
+                graph_p2 = _build_minimal_graph(cp2)
+                recovered = _read_profile(graph_p2, thread_id)
 
-        recovered = _read_profile(graph_process_2, thread_id)
         assert recovered is not None, (
             "User's session profile was not accessible after a backend restart. "
-            "This means any reconnect triggers a full re-init, as if the user is new. "
-            "The fix requires a checkpointer that persists across process restarts."
+            "This means any reconnect triggers a full re-init, as if the user is new."
         )
 
     @pytest.mark.asyncio
@@ -315,33 +349,34 @@ class TestSessionAfterBackendRestart:
         End-to-end version: user had a session, backend restarted, user returned.
         They should land back in their conversation — not see a fresh greeting.
 
-        This test will only pass when BOTH issues are resolved:
-          - state survives across process restarts (persistent checkpointer)
-          - the reconnect handler detects existing state and skips re-init
-
-        Currently FAILS for both reasons.
+        Requires both fixes together:
+          - state survives process restart (persistent checkpointer)
+          - on_chat_start detects existing state and skips re-init (idempotency guard)
 
         Real example: thread e97a9b78 — 10 re-inits with no user interaction,
-        each caused by the backend touching the session after a restart.
+        each caused by the backend restarting and re-touching the session.
         """
         thread_id = "user-post-restart"
-
-        # First process: seed the session as if the user already onboarded
-        graph_p1 = _make_graph()
-        graph_p1.update_state(_config(f"{thread_id}:mini"), {
-            "onboarding_profile": "Daniel — rural patient, transportation barriers",
-            "messages": [HumanMessage(content="How long does TB treatment take?")],
-        })
-
-        # Restart: new graph instance — with MemorySaver this has no prior state
-        graph_p2 = _make_graph()
         sent: List[str] = []
-        cl_mock = _make_cl_mock(thread_id, sent)
 
-        p1, p2, p3, p4 = _on_chat_start_patches(graph_p2, cl_mock)
-        with p1, p2, p3, p4:
-            from chainlit_app import on_chat_start
-            await on_chat_start()
+        with _shared_sqlite_checkpointer() as db_path:
+            # First process: user onboarded and had a conversation
+            with SqliteSaver.from_conn_string(db_path) as cp1:
+                graph_p1 = _build_minimal_graph(cp1)
+                graph_p1.update_state(_config(f"{thread_id}:mini"), {
+                    "onboarding_profile": "Daniel — rural patient, transportation barriers",
+                    "messages": [HumanMessage(content="How long does TB treatment take?")],
+                })
+
+            # Backend restarts: new connection, new graph instance, same DB file
+            with SqliteSaver.from_conn_string(db_path) as cp2:
+                graph_p2 = _build_minimal_graph(cp2)
+                cl_mock = _make_cl_mock(thread_id, sent)
+
+                p1, p2, p3, p4 = _on_chat_start_patches(graph_p2, cl_mock)
+                with p1, p2, p3, p4:
+                    from chainlit_app import on_chat_start
+                    await on_chat_start()
 
         assert len(sent) == 0, (
             f"User reconnecting after a backend restart should not see a new greeting. "
@@ -412,4 +447,88 @@ class TestBackendErrorDoesNotResetSession:
         ), (
             f"Error message should be in Spanish and indicate a temporary problem. "
             f"Got: {sent}"
+        )
+
+
+# ---------------------------------------------------------------------------
+# Scenario 5: User returns after session expiry — on_chat_resume fires
+# ---------------------------------------------------------------------------
+
+class TestOnChatResumeForReturningUser:
+    """
+    When the Chainlit data layer is configured, returning users trigger
+    on_chat_resume instead of on_chat_start. on_chat_resume must:
+      - restore graph / variant / thread_id into user_session
+      - send NO messages (user lands back in their existing conversation)
+
+    This covers Type B long-gap crashes (>1h idle) where session.id changed
+    but on_chat_resume correctly links back to the same conversation thread.
+
+    Reference crash data: thread 1e3e514d (35 re-inits over 12 days),
+    thread e97a9b78 (10 re-inits with zero user messages).
+    """
+
+    def _make_resume_thread_dict(self, thread_id: str) -> dict:
+        """Minimal ThreadDict as Chainlit would pass to on_chat_resume."""
+        return {
+            "id": thread_id,
+            "createdAt": "2025-01-01T00:00:00Z",
+            "name": "Test thread",
+            "userId": "user-1",
+            "userIdentifier": "anonymous",
+            "tags": [],
+            "metadata": {},
+            "steps": [],
+            "elements": [],
+        }
+
+    @pytest.mark.asyncio
+    async def test_on_chat_resume_sends_no_messages(self):
+        """
+        A user whose session expired and reconnects should not see any new
+        messages — they're landing back in their existing conversation.
+        """
+        graph = _make_graph()
+        thread_id = "user-long-idle-return"
+        sent: List[str] = []
+        cl_mock = _make_cl_mock(thread_id, sent)
+
+        with patch("chainlit_app.cl", new=cl_mock), \
+             patch("chainlit_app.select_graph", return_value=(graph, "mini")), \
+             patch("chainlit_app.log_session_event"):
+
+            from chainlit_app import on_chat_resume
+            await on_chat_resume(self._make_resume_thread_dict(thread_id))
+
+        assert len(sent) == 0, (
+            f"on_chat_resume should send no messages to a returning user. "
+            f"Got {len(sent)} message(s): {[m[:60] for m in sent]}"
+        )
+
+    @pytest.mark.asyncio
+    async def test_on_chat_resume_restores_session_state(self):
+        """
+        After on_chat_resume, the user_session must have graph, variant, and
+        thread_id populated so that on_message can function immediately.
+        """
+        graph = _make_graph()
+        thread_id = "user-resume-state-check"
+        sent: List[str] = []
+        cl_mock = _make_cl_mock(thread_id, sent)
+
+        with patch("chainlit_app.cl", new=cl_mock), \
+             patch("chainlit_app.select_graph", return_value=(graph, "mini")), \
+             patch("chainlit_app.log_session_event"):
+
+            from chainlit_app import on_chat_resume
+            await on_chat_resume(self._make_resume_thread_dict(thread_id))
+
+        assert cl_mock.user_session.get("graph") is graph, (
+            "on_chat_resume must restore graph into user_session."
+        )
+        assert cl_mock.user_session.get("variant") == "mini", (
+            "on_chat_resume must restore variant into user_session."
+        )
+        assert cl_mock.user_session.get("thread_id") == f"{thread_id}:mini", (
+            "on_chat_resume must restore thread_id into user_session."
         )

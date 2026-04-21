@@ -12,6 +12,8 @@ from uuid import uuid4
 
 import anyio
 import chainlit as cl
+from chainlit.data.sql_alchemy import SQLAlchemyDataLayer
+from chainlit.types import ThreadDict
 from langchain_core.messages import HumanMessage
 
 # Warmup should use your cached RAG objects (rag_utils.py) instead of loading SentenceTransformer here.
@@ -229,6 +231,65 @@ def load_personas() -> Dict[str, PersonaUI]:
 PERSONAS = load_personas()
 
 
+# -------------------------
+# Chainlit data layer + auth
+#
+# The data layer makes session.thread_id stable across reconnects so that
+# on_chat_resume fires (instead of on_chat_start) when a user returns to an
+# existing conversation. This is the fix for Type B long-gap re-init crashes.
+# -------------------------
+
+def _build_async_conninfo() -> str:
+    """
+    Derive an async-driver connection string for SQLAlchemyDataLayer.
+
+    Priority:
+      1. TBTST_CHAINLIT_DB — explicit override (must already use async driver)
+      2. DATABASE_URL — reuse the app's Postgres URL, swap in asyncpg driver
+      3. Fallback — SQLite in the same ./data/ directory as the checkpointer
+
+    The sync SQLAlchemy engine in db.py is left unchanged.
+    """
+    explicit = os.getenv("TBTST_CHAINLIT_DB", "").strip()
+    if explicit:
+        return explicit
+
+    db_url = os.getenv("DATABASE_URL", "").strip()
+    if db_url:
+        # Replace sync postgres scheme with asyncpg variant
+        for sync_prefix, async_prefix in (
+            ("postgresql://", "postgresql+asyncpg://"),
+            ("postgres://", "postgresql+asyncpg://"),
+        ):
+            if db_url.startswith(sync_prefix):
+                return async_prefix + db_url[len(sync_prefix):]
+        return db_url  # already has an async driver or unknown scheme
+
+    # No Postgres configured — use SQLite so the data layer always works
+    sqlite_path = os.path.join(
+        os.path.dirname(os.path.abspath(
+            os.getenv("TBTST_CHECKPOINT_DB", "./data/langgraph_checkpoints.db")
+        )),
+        "chainlit.db",
+    )
+    return f"sqlite+aiosqlite:///{sqlite_path}"
+
+
+@cl.data_layer
+def get_data_layer() -> SQLAlchemyDataLayer:
+    return SQLAlchemyDataLayer(conninfo=_build_async_conninfo(), ssl_require=False)
+
+
+@cl.header_auth_callback
+def header_auth_callback(headers: Dict[str, str]) -> Optional[cl.User]:
+    """
+    Return an anonymous user so that session.user is populated, which is
+    required for Chainlit's resume_thread logic to fire on_chat_resume.
+    Real auth can be added here later without changing on_chat_resume.
+    """
+    return cl.User(identifier="anonymous", metadata={})
+
+
 def select_graph() -> Tuple[Any, str]:
     v = (os.getenv("TBTST_VARIANT") or "mini").strip().lower()
     if v == "full":
@@ -340,12 +401,34 @@ async def chat_profiles(current_user: Optional[cl.User] = None):
     ]
 
 
+def _thread_already_initialized(graph: Any, thread_id: str) -> bool:
+    """
+    Return True if this thread already has an onboarding profile in the graph
+    checkpointer. Used as an idempotency guard in on_chat_start so that
+    reconnects and concurrent double-fires don't re-send the intro messages.
+    Falls back to False on any error so a genuinely broken state still inits.
+    """
+    try:
+        snap = graph.get_state({"configurable": {"thread_id": thread_id}})
+        return bool(snap and snap.values.get("onboarding_profile"))
+    except Exception:
+        return False
+
+
 @cl.on_chat_start
 async def on_chat_start():
     graph, variant = select_graph()
 
     session = getattr(cl.context, "session", None)
-    base_thread = session.id if session and getattr(session, "id", None) else f"cl-{uuid4().hex[:10]}"
+    # Use session.thread_id (stable conversation ID managed by Chainlit's data
+    # layer) so that the same thread_id is used across WebSocket reconnects.
+    # Falls back to session.id (WebSocket session ID) and finally a random UUID
+    # when no data layer is configured.
+    base_thread = (
+        getattr(session, "thread_id", None)
+        or getattr(session, "id", None)
+        or f"cl-{uuid4().hex[:10]}"
+    ) if session else f"cl-{uuid4().hex[:10]}"
     thread_id = f"{base_thread}:{variant}"
 
     cl.user_session.set("graph", graph)
@@ -355,59 +438,102 @@ async def on_chat_start():
     # Warm up RAG ONCE per process (not per chat)
     await warmup_once()
 
-    chosen = cl.user_session.get("chat_profile")
-    if not chosen or chosen not in PERSONAS:
-        chosen = next(iter(PERSONAS.keys()))
+    # Guard: acquire the per-thread lock before checking state so that two
+    # concurrent on_chat_start calls (race condition at connect) don't both
+    # pass the check before either has finished seeding.
+    async with _get_session_lock(thread_id):
+        if _thread_already_initialized(graph, thread_id):
+            logger.info(
+                "on_chat_start skipped re-init for existing thread thread_id=%s", thread_id
+            )
+            return
 
-    persona = PERSONAS[chosen]
-    onboarding_profile = build_onboarding_profile(persona.banner_title, persona.persona_md)
+        chosen = cl.user_session.get("chat_profile")
+        if not chosen or chosen not in PERSONAS:
+            chosen = next(iter(PERSONAS.keys()))
 
-    cl.user_session.set("onboarding_profile", onboarding_profile)
+        persona = PERSONAS[chosen]
+        onboarding_profile = build_onboarding_profile(persona.banner_title, persona.persona_md)
 
-    await seed_onboarding_profile(graph, thread_id, onboarding_profile)
+        cl.user_session.set("onboarding_profile", onboarding_profile)
 
-    banner = build_banner_message(persona.banner_title, persona.persona_md)
-    opener = "¿Qué te preocupa hoy?"
+        await seed_onboarding_profile(graph, thread_id, onboarding_profile)
 
-    log_session_event(
-        thread_id,
-        {
-            "event": "session_start",
-            "variant": variant,
-            "persona": persona.banner_title,
-            "onboarding_profile": onboarding_profile,
-        },
-    )
-    log_session_event(
-        thread_id,
-        {
-            "event": "message",
-            "role": "assistant",
-            "content": banner,
-        },
-    )
-    log_session_event(
-        thread_id,
-        {
-            "event": "message",
-            "role": "assistant",
-            "content": opener,
-        },
-    )
+        banner = build_banner_message(persona.banner_title, persona.persona_md)
+        opener = "¿Qué te preocupa hoy?"
 
-    await cl.Message(content=banner).send()
-    await cl.Message(content=opener).send()
-
-    if SEND_CHAT_WELCOME_MESSAGE:
+        log_session_event(
+            thread_id,
+            {
+                "event": "session_start",
+                "variant": variant,
+                "persona": persona.banner_title,
+                "onboarding_profile": onboarding_profile,
+            },
+        )
         log_session_event(
             thread_id,
             {
                 "event": "message",
                 "role": "assistant",
-                "content": WELCOME_MESSAGE,
+                "content": banner,
             },
         )
-        await cl.Message(content=WELCOME_MESSAGE).send()
+        log_session_event(
+            thread_id,
+            {
+                "event": "message",
+                "role": "assistant",
+                "content": opener,
+            },
+        )
+
+        await cl.Message(content=banner).send()
+        await cl.Message(content=opener).send()
+
+        if SEND_CHAT_WELCOME_MESSAGE:
+            log_session_event(
+                thread_id,
+                {
+                    "event": "message",
+                    "role": "assistant",
+                    "content": WELCOME_MESSAGE,
+                },
+            )
+            await cl.Message(content=WELCOME_MESSAGE).send()
+
+
+@cl.on_chat_resume
+async def on_chat_resume(thread: ThreadDict):
+    """
+    Called by Chainlit when a user returns to an existing conversation (the
+    data layer + header_auth_callback make this possible). Restores the graph
+    and thread_id into user_session — no greeting is sent.
+
+    This is the complement to the idempotency guard in on_chat_start: together
+    they cover every reconnect scenario:
+      - on_chat_resume:  data layer available, returning user (Type B long-gap)
+      - on_chat_start idempotency guard: same process, state already in graph
+    """
+    graph, variant = select_graph()
+    thread_id = f"{thread['id']}:{variant}"
+
+    cl.user_session.set("graph", graph)
+    cl.user_session.set("variant", variant)
+    cl.user_session.set("thread_id", thread_id)
+
+    logger.info(
+        "on_chat_resume: restored session thread_id=%s", thread_id
+    )
+
+    log_session_event(
+        thread_id,
+        {
+            "event": "session_resume",
+            "variant": variant,
+            "thread_chainlit_id": thread["id"],
+        },
+    )
 
 
 @cl.on_message
