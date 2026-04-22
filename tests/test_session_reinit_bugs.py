@@ -101,19 +101,23 @@ class _FakeUserSession:
 def _capture_message(content: str, sent: List[str]) -> AsyncMock:
     """
     Mock for cl.Message(...) that:
-      .send()   → appends current content to `sent`
-      .update() → overwrites last entry (Chainlit sends a "" placeholder,
-                  then updates it once the reply is ready)
+      .send()   → appends current content to `sent` and records the slot index
+      .update() → overwrites the specific slot this instance owns
+
+    Slot-based update (not sent[-1]) is required for concurrent on_message
+    tests where two messages are in flight and each must update its own slot.
     """
     instance = AsyncMock()
     instance.content = content
+    _slot: List[int] = []  # mutable closure; populated on first send()
 
     async def _send():
+        _slot.append(len(sent))
         sent.append(instance.content)
 
     async def _update():
-        if sent:
-            sent[-1] = instance.content
+        if _slot:
+            sent[_slot[0]] = instance.content
 
     instance.send = _send
     instance.update = _update
@@ -531,4 +535,79 @@ class TestOnChatResumeForReturningUser:
         )
         assert cl_mock.user_session.get("thread_id") == f"{thread_id}:mini", (
             "on_chat_resume must restore thread_id into user_session."
+        )
+
+
+# ---------------------------------------------------------------------------
+# Scenario 6: Two messages sent before the first reply arrives
+# ---------------------------------------------------------------------------
+
+class TestConcurrentOnMessage:
+    """
+    A user types a follow-up message before the first reply finishes streaming
+    (slow Bedrock response, or double-tap on mobile). Both messages must complete
+    without errors. They must be serialized — not interleaved — so graph state
+    stays coherent.
+
+    The per-session lock in on_message exists for this case. This test verifies
+    it works as intended: second call waits, both succeed, no errors are swallowed.
+    """
+
+    @pytest.mark.asyncio
+    async def test_two_concurrent_messages_both_complete_without_error(self):
+        """
+        Fire two on_message calls concurrently on the same session.
+        Both should receive a reply. Neither should error or be dropped.
+        """
+        import asyncio as _asyncio
+        import time as _time
+
+        call_log: List[str] = []
+
+        def _slow_invoke(graph, text, thread_id):
+            # Runs in a real thread via anyio.to_thread.run_sync — use time.sleep,
+            # not asyncio.sleep.
+            call_log.append(f"start:{text}")
+            _time.sleep(0.05)  # simulate slow Bedrock
+            call_log.append(f"end:{text}")
+            from langchain_core.messages import AIMessage as _AI
+            return {"messages": [_AI(content=f"reply to: {text}")]}
+
+        graph = _make_graph()
+        sent: List[str] = []
+
+        user_session = _FakeUserSession({
+            "graph": graph,
+            "thread_id": "concurrent-msgs:mini",
+            "variant": "mini",
+        })
+        cl_mock = MagicMock()
+        cl_mock.user_session = user_session
+        cl_mock.Message.side_effect = lambda content="": _capture_message(content, sent)
+
+        with patch("chainlit_app.cl", new=cl_mock), \
+             patch("chainlit_app.log_session_event"), \
+             patch("chainlit_app.invoke_graph_with_retry", side_effect=_slow_invoke):
+
+            from chainlit_app import on_message
+            msg1, msg2 = MagicMock(), MagicMock()
+            msg1.content = "first message"
+            msg2.content = "second message"
+
+            await _asyncio.gather(on_message(msg1), on_message(msg2))
+
+        # Both slots must have been filled with real replies (blank "" placeholders
+        # are replaced in-place by update(), so sent should contain two reply strings)
+        assert len(sent) == 2, (
+            f"Expected 2 slots in sent (one per message). Got {len(sent)}: {sent}"
+        )
+        assert all(m.startswith("reply to:") for m in sent), (
+            f"Both slots should contain replies. Got: {sent}"
+        )
+
+        # Calls must have been serialized: one invoke fully completes before the next starts
+        assert call_log.index("end:first message") < call_log.index("start:second message") or \
+               call_log.index("end:second message") < call_log.index("start:first message"), (
+            f"Messages were interleaved — session lock did not serialize them. "
+            f"Call log: {call_log}"
         )

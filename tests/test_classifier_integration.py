@@ -9,7 +9,7 @@ from typing import Any, Dict, Iterable, List, Optional, Set
 import pytest
 from langchain_core.messages import HumanMessage, SystemMessage
 
-from tbtst_bot.config import bedrock_chat
+from tbtst_bot.config import get_llm
 from tbtst_bot.prompts import load_prompt
 
 pytestmark = pytest.mark.integration
@@ -21,7 +21,7 @@ CLASSIFY_SYSTEM = load_prompt("classify_route.txt")
 CLASSIFY_USER_TMPL = load_prompt("classify_route_user.txt")
 
 VALID_RISK = {"none", "passive", "active_no_plan", "active_with_plan", "uncertain"}
-VALID_ROUTE = {"faq", "dbt"}  # psychoed not allowed in your system right now
+VALID_ROUTE = {"faq", "dbt", "misc"}  # current schema routes
 REQUIRED_KEYS = {"safety_risk_level", "safety_triggers", "has_protective", "route"}
 
 
@@ -52,13 +52,11 @@ def classify_call(
     max_tokens: int = 220,
     temperature: float = 0.0,
 ) -> ClassifyResult:
-    user_prompt = CLASSIFY_USER_TMPL.format(user_text=user_text)
+    user_prompt = CLASSIFY_USER_TMPL.replace("{user_text}", user_text)
 
-    raw = bedrock_chat(
-        [SystemMessage(content=CLASSIFY_SYSTEM), HumanMessage(content=user_prompt)],
-        max_tokens=max_tokens,
-        temperature=temperature,
-    )
+    llm = get_llm(temperature=temperature, max_tokens=max_tokens)
+    resp = llm.invoke([SystemMessage(content=CLASSIFY_SYSTEM), HumanMessage(content=user_prompt)])
+    raw = (resp.content or "").strip()
 
     try:
         parsed = json.loads(raw)

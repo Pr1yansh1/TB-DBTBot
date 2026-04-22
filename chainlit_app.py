@@ -56,6 +56,10 @@ MAX_CONCURRENT_GRAPH_INVOCATIONS = int(os.getenv("TBTST_MAX_CONCURRENT_GRAPH_INV
 
 # Global concurrency control and per-session serialization
 _GRAPH_INVOKE_SEMAPHORE = anyio.Semaphore(MAX_CONCURRENT_GRAPH_INVOCATIONS)
+# Per-thread locks used by on_chat_start (race guard) and on_message (serialize
+# concurrent sends within a session). Grows by one entry per unique thread_id and
+# is never evicted — intentionally acceptable at research prototype scale
+# (~10–20 evaluator sessions total).
 _SESSION_LOCKS: Dict[str, anyio.Lock] = {}
 
 
@@ -239,39 +243,45 @@ PERSONAS = load_personas()
 # existing conversation. This is the fix for Type B long-gap re-init crashes.
 # -------------------------
 
+# Default Chainlit session DB. Independent of the LangGraph checkpointer path.
+# Override with TBTST_CHAINLIT_DB (any async-driver URL) or DATABASE_URL (Postgres).
+_DEFAULT_CHAINLIT_DB = "./data/chainlit.db"
+
+
 def _build_async_conninfo() -> str:
     """
-    Derive an async-driver connection string for SQLAlchemyDataLayer.
+    Return an async-driver connection string for SQLAlchemyDataLayer.
 
-    Priority:
-      1. TBTST_CHAINLIT_DB — explicit override (must already use async driver)
-      2. DATABASE_URL — reuse the app's Postgres URL, swap in asyncpg driver
-      3. Fallback — SQLite in the same ./data/ directory as the checkpointer
+    Resolution order:
+      1. TBTST_CHAINLIT_DB  — explicit override; must already use an async driver
+      2. DATABASE_URL       — swap in asyncpg driver for postgres:// / postgresql://
+      3. Default            — SQLite at ./data/chainlit.db
 
-    The sync SQLAlchemy engine in db.py is left unchanged.
+    The LangGraph checkpointer (graph.py) uses its own separate SQLite file and
+    its own env var (TBTST_CHECKPOINT_DB). The two stores are intentionally
+    independent.
     """
     explicit = os.getenv("TBTST_CHAINLIT_DB", "").strip()
     if explicit:
+        logger.info("Chainlit data layer: using TBTST_CHAINLIT_DB override")
         return explicit
 
     db_url = os.getenv("DATABASE_URL", "").strip()
     if db_url:
-        # Replace sync postgres scheme with asyncpg variant
         for sync_prefix, async_prefix in (
             ("postgresql://", "postgresql+asyncpg://"),
             ("postgres://", "postgresql+asyncpg://"),
         ):
             if db_url.startswith(sync_prefix):
-                return async_prefix + db_url[len(sync_prefix):]
-        return db_url  # already has an async driver or unknown scheme
+                conninfo = async_prefix + db_url[len(sync_prefix):]
+                logger.info("Chainlit data layer: using DATABASE_URL (asyncpg)")
+                return conninfo
+        logger.info("Chainlit data layer: using DATABASE_URL as-is")
+        return db_url
 
-    # No Postgres configured — use SQLite so the data layer always works
-    sqlite_path = os.path.join(
-        os.path.dirname(os.path.abspath(
-            os.getenv("TBTST_CHECKPOINT_DB", "./data/langgraph_checkpoints.db")
-        )),
-        "chainlit.db",
-    )
+    sqlite_path = os.path.abspath(_DEFAULT_CHAINLIT_DB)
+    os.makedirs(os.path.dirname(sqlite_path), exist_ok=True)
+    logger.info("Chainlit data layer: using default SQLite at %s", sqlite_path)
     return f"sqlite+aiosqlite:///{sqlite_path}"
 
 
@@ -543,7 +553,7 @@ async def on_message(msg: cl.Message):
     variant = cl.user_session.get("variant") or ""
 
     if graph is None or thread_id is None:
-        await cl.Message(content="Error: session not initialized. Please refresh.").send()
+        await cl.Message(content="Error: sesión no iniciada. Por favor recarga la página.").send()
         return
 
     log_session_event(

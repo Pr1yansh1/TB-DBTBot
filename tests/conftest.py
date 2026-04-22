@@ -1,102 +1,248 @@
+"""
+Shared test fixtures for graph.py unit and integration tests.
+
+The `fake_graph` fixture intercepts the two LLM call points in graph.py
+(_timed_invoke and _timed_invoke_structured) plus the RAG retrieval tool,
+so no Bedrock or vector-store calls happen during tests.
+
+Architecture notes:
+  - All LLM calls in graph.py go through _timed_invoke or _timed_invoke_structured.
+    Patching those two functions covers every node: classify, tb_info, dbt_mini,
+    dbt_brain, dbt_module_agents, misc, memory_manager.
+  - retrieve_tb_docs is a @tool with a .invoke() method; it's called via _timed_tool.
+    Patching the reference in tbtst_bot.graph is sufficient.
+  - The graph is built fresh with MemorySaver so tests don't share state or hit
+    the real SQLite checkpointer file.
+"""
+
+from __future__ import annotations
+
 import json
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional
+from unittest.mock import patch
 
 import pytest
-from langchain_core.messages import AIMessage, BaseMessage, HumanMessage, SystemMessage
+from langchain_core.messages import AIMessage, BaseMessage
 
+
+# ---------------------------------------------------------------------------
+# Call recorder
+# ---------------------------------------------------------------------------
 
 @dataclass
-class BedrockCall:
+class LLMCall:
+    name: str
     messages: List[BaseMessage]
-    max_tokens: int
-    temperature: float
 
 
-class FakeBedrock:
+# ---------------------------------------------------------------------------
+# Fake LLM controller
+# ---------------------------------------------------------------------------
+
+class FakeLLM:
     """
-    Deterministic stub for tbtst_bot.config.bedrock_chat.
+    Intercepts _timed_invoke and _timed_invoke_structured.
 
-    We detect which "kind" of call it is based on the first SystemMessage content:
-      - CLASSIFY: returns JSON routing/safety
-      - FAQ: returns a fixed FAQ answer
-      - DBT: returns a fixed DBT answer
+    Routes responses by call `name` (the label each graph node passes as the
+    first argument). Responses are deterministic and use answer strings that
+    end with '.' so the auto-continue heuristic (_looks_truncated) never fires.
     """
-    def __init__(self) -> None:
-        self.calls: List[BedrockCall] = []
-        self.next_classifier_json: Optional[Dict[str, Any]] = None
-        self.next_classifier_raw: Optional[str] = None
-        self.faq_answer: str = "FAQ_ANSWER"
-        self.dbt_answer: str = "DBT_ANSWER"
+
+    def __init__(self):
+        self.calls: List[LLMCall] = []
+        self._classifier_json: Optional[Dict[str, Any]] = None
+        self._classifier_raw: Optional[str] = None
+
+        # These are the strings nodes will produce — override in individual tests
+        self.tb_answer = "La información sobre tuberculosis está aquí."
+        self.dbt_answer = "Entiendo cómo te sientes."
+        self.misc_answer = "Claro, ¿en qué puedo ayudarte?"
+
+    # --- Controller API ---
 
     def set_classifier(self, payload: Dict[str, Any]) -> None:
-        self.next_classifier_json = payload
-        self.next_classifier_raw = None
+        self._classifier_json = payload
+        self._classifier_raw = None
 
     def set_classifier_raw(self, raw: str) -> None:
-        self.next_classifier_raw = raw
-        self.next_classifier_json = None
+        self._classifier_raw = raw
+        self._classifier_json = None
 
-    def __call__(self, messages: List[BaseMessage], max_tokens: int = 220, temperature: float = 0.0) -> str:
-        self.calls.append(BedrockCall(messages=messages, max_tokens=max_tokens, temperature=temperature))
+    @property
+    def classifier_calls(self) -> List[LLMCall]:
+        return [c for c in self.calls if c.name.startswith("classify")]
 
-        sys = messages[0].content if messages and isinstance(messages[0], SystemMessage) else ""
+    @property
+    def non_classifier_calls(self) -> List[LLMCall]:
+        return [c for c in self.calls if not c.name.startswith("classify")]
 
-        if sys == "CLASSIFY":
-            if self.next_classifier_raw is not None:
-                return self.next_classifier_raw
-            if self.next_classifier_json is None:
-                # default classifier response if test didn't set one
-                return json.dumps(
-                    {
-                        "safety_risk_level": "none",
-                        "safety_triggers": [],
-                        "has_protective": False,
-                        "route": "faq",
-                    }
-                )
-            return json.dumps(self.next_classifier_json)
+    def calls_named(self, prefix: str) -> List[LLMCall]:
+        return [c for c in self.calls if c.name.startswith(prefix)]
 
-        if sys == "FAQ":
-            return self.faq_answer
+    # --- _timed_invoke replacement ---
 
-        if sys == "DBT":
-            return self.dbt_answer
+    def timed_invoke(
+        self,
+        name: str,
+        llm: Any,
+        messages: List[BaseMessage],
+        *,
+        trace_id: str,
+    ):
+        from tbtst_bot.graph import CallMetrics
 
-        # If your code ever calls without a recognized system prompt,
-        # make it obvious in tests.
-        raise AssertionError(f"FakeBedrock got unexpected system prompt: {sys!r}")
+        self.calls.append(LLMCall(name=name, messages=list(messages)))
+
+        if name.startswith("classify"):
+            if self._classifier_raw is not None:
+                content = self._classifier_raw
+            else:
+                payload = self._classifier_json or {
+                    "safety_risk_level": "none",
+                    "safety_triggers": [],
+                    "has_protective": False,
+                    "route": "misc",
+                    "tb_topic": "general",
+                }
+                content = json.dumps(payload)
+        elif name.startswith("dbt"):
+            content = self.dbt_answer
+        elif name == "misc":
+            content = self.misc_answer
+        elif name == "summarize":
+            content = "Resumen de conversación."
+        else:
+            content = ""
+
+        resp = AIMessage(content=content)
+        metrics = CallMetrics(
+            name=name,
+            trace_id=trace_id,
+            latency_ms=0.0,
+            in_tokens=0,
+            out_chars=len(content),
+            stop_reason="end_turn",
+        )
+        return resp, metrics
+
+    # --- _timed_invoke_structured replacement ---
+
+    def timed_invoke_structured(
+        self,
+        name: str,
+        llm_structured: Any,
+        messages: List[BaseMessage],
+        *,
+        trace_id: str,
+    ) -> Any:
+        from tbtst_bot.graph import (
+            DBTAgentOut,
+            DBTBrainOut,
+            DBTBrainSignals,
+            TBAnswerJSON,
+            TBGateOut,
+        )
+
+        self.calls.append(LLMCall(name=name, messages=list(messages)))
+
+        if name == "tb_gate":
+            # Default: don't ask for clarification — proceed to answer
+            return TBGateOut(action="answer", clarifying_question="")
+
+        if name == "tb_info":
+            return TBAnswerJSON(answer=self.tb_answer, citations_used=[])
+
+        if name.startswith("dbt_brain"):
+            return DBTBrainOut(
+                module="MIND",
+                mode="connect",
+                continuity="new",
+                confidence=0.8,
+                rationale_brief="test",
+                signals=DBTBrainSignals(
+                    emotion_intensity="low",
+                    impulse_or_urge_present=False,
+                    problem_solvable_now=False,
+                    interpersonal_context=False,
+                    attention_or_judgment_issue=False,
+                ),
+            )
+
+        if name.startswith("dbt:"):
+            # Full-graph module agents (DT/MIND/ER/IE)
+            return DBTAgentOut(
+                message=self.dbt_answer,
+                skill="",
+                skill_status="none",
+            )
+
+        return None
+
+
+# ---------------------------------------------------------------------------
+# Fake RAG retrieval
+# ---------------------------------------------------------------------------
+
+class FakeRetrieve:
+    """
+    Stand-in for the retrieve_tb_docs LangChain @tool.
+    Records calls so tests can assert on allow_latent.
+    """
+
+    def __init__(self):
+        self.calls: List[Dict[str, Any]] = []
+
+    def invoke(self, args: Dict[str, Any]) -> Dict[str, Any]:
+        self.calls.append(args)
+        return {"sources": []}
+
+
+# ---------------------------------------------------------------------------
+# Fixture
+# ---------------------------------------------------------------------------
+
+@dataclass
+class GraphFixture:
+    llm: FakeLLM
+    retrieval: FakeRetrieve
+    graph: Any  # compiled LangGraph graph
 
 
 @pytest.fixture()
-def fake_bedrock(monkeypatch) -> FakeBedrock:
+def fake_graph() -> GraphFixture:
     """
-    Patch the graph module's globals so:
-      - No real Bedrock calls happen
-      - Prompts are simple stable sentinels ("CLASSIFY", "FAQ", "DBT")
-      - Crisis message is known constant
+    Yields a GraphFixture with a fresh graph (MemorySaver checkpointer) and all
+    Bedrock + RAG calls patched out.
+
+    The graph is built inside the patch context so it compiles with the
+    patched _CHECKPOINTER — tests run against an isolated in-memory store.
     """
-    from tbtst_bot import graph as g
+    from langgraph.checkpoint.memory import MemorySaver
+    from tbtst_bot.graph import build_graph, dbt_mini_node
 
-    fb = FakeBedrock()
+    llm = FakeLLM()
+    retrieval = FakeRetrieve()
 
-    # Patch the callable used by nodes
-    monkeypatch.setattr(g, "bedrock_chat", fb)
-
-    # Patch prompts to simple sentinels so FakeBedrock can route on them
-    monkeypatch.setattr(g, "CLASSIFY_SYSTEM", "CLASSIFY")
-    monkeypatch.setattr(g, "CLASSIFY_USER_TMPL", 'Latest patient message:\n"""{user_text}"""\nReturn STRICT JSON only:\n{"safety_risk_level":"none|passive|active_no_plan|active_with_plan|uncertain","safety_triggers":["..."],"has_protective":true|false,"route":"faq|dbt|psychoed"}')
-    monkeypatch.setattr(g, "FAQ_SYSTEM", "FAQ")
-    monkeypatch.setattr(g, "DBT_SYSTEM", "DBT")
-    monkeypatch.setattr(g, "CRISIS_TEXT", "CRISIS_STATIC_MESSAGE")
-
-    return fb
+    with (
+        patch("tbtst_bot.graph._timed_invoke", side_effect=llm.timed_invoke),
+        patch("tbtst_bot.graph._timed_invoke_structured", side_effect=llm.timed_invoke_structured),
+        patch("tbtst_bot.graph.retrieve_tb_docs", retrieval),
+        patch("tbtst_bot.graph._CHECKPOINTER", MemorySaver()),
+    ):
+        graph = build_graph(dbt_node=dbt_mini_node)
+        yield GraphFixture(llm=llm, retrieval=retrieval, graph=graph)
 
 
-def invoke(graph, text: str, thread_id: str) -> Dict[str, Any]:
-    """Helper to invoke your graph with a single HumanMessage."""
+# ---------------------------------------------------------------------------
+# Shared invoke helper
+# ---------------------------------------------------------------------------
+
+def invoke(graph: Any, text: str, thread_id: str) -> Dict[str, Any]:
     return graph.invoke(
         {"messages": [HumanMessage(content=text)]},
         config={"configurable": {"thread_id": thread_id}},
     )
 
+
+from langchain_core.messages import HumanMessage  # noqa: E402  (after dataclasses)
