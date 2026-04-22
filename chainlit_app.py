@@ -301,10 +301,10 @@ def header_auth_callback(headers: Dict[str, str]) -> Optional[cl.User]:
 
 
 def select_graph() -> Tuple[Any, str]:
-    v = (os.getenv("TBTST_VARIANT") or "mini").strip().lower()
-    if v == "full":
-        return GRAPH_DBT_FULL, "full"
-    return GRAPH_DBT_MINI, "mini"
+    v = (os.getenv("TBTST_VARIANT") or "full").strip().lower()
+    if v == "mini":
+        return GRAPH_DBT_MINI, "mini"
+    return GRAPH_DBT_FULL, "full"
 
 
 def seed_onboarding_profile_sync(graph: Any, thread_id: str, onboarding_profile: str) -> None:

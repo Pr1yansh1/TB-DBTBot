@@ -51,8 +51,8 @@ CRISIS_TEXT = load_prompt("crisis.txt")
 # Global response rules applied to all user-facing responses
 GLOBAL_RULES = load_prompt("global_response_rules.txt")
 
-# DBT mini
-DBT_SYSTEM = load_prompt("dbt_system.txt")
+# DBT mini (archived — prompt lives in archive/dbt-mini/prompts/)
+DBT_SYSTEM = load_prompt("../archive/dbt-mini/prompts/dbt_system.txt")
 
 # DBT full
 DBT_BRAIN_ROUTER_SYSTEM = load_prompt("dbt_brain.txt")
