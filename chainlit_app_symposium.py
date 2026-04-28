@@ -84,10 +84,11 @@ for the day-to-day challenges that come with a long treatment journey.
 You can ask in **English or Spanish** — the bot will respond in **English**.
 
 **Some examples of what you can ask:**
-- *"My urine turned orange after starting my medication — is that normal?"*
-- *"I've been feeling really isolated at work since my diagnosis. I don't know how to talk about it."*
-- *"I'm exhausted all the time and it's hard to keep taking my pills. What can I do?"*
-- *"What are the signs that my liver might be reacting badly to the treatment?"*
+- *"What are the recommended dosage adjustments for pyrazinamide and ethambutol in patients with renal failure on hemodialysis?"*
+- *"How should a school or workplace respond if someone has TB exposure, and how do recommendations differ for latent TB versus active pulmonary TB?"*
+- *"My doctor said they may need to check if my TB is resistant to some medicines — what tests would show that, and how would that change my treatment?"*
+- *"I have to tell my boss I need time off for TB treatment, but I'm terrified he'll think I'm contagious and treat me differently. I don't know how to have that conversation without getting emotional and saying the wrong thing."*
+- *"I just found out my coworker told everyone at work I have TB. People are avoiding me and I feel so humiliated and angry I can barely function. I don't even want to keep taking my medication anymore."*
 
 > **Please note:** This is a research prototype. It is not a substitute for advice from your doctor or TB care team. \
 For any urgent medical concerns, please contact your clinic directly.
