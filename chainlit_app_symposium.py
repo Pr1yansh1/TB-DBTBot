@@ -93,6 +93,8 @@ You can ask in **English or Spanish** — the bot will respond in **English**.
 > **Please note:** This is a research prototype. It is not a substitute for advice from your doctor or TB care team. \
 For any urgent medical concerns, please contact your clinic directly.
 
+**💬 Share your feedback:** After each bot response, you'll see a 👍 / 👎 button. Click it to rate the response and optionally leave a comment — your input helps us improve the bot.
+
 ---
 Questions, feedback, or just want to chat about the build? Reach out: **pgarg2@uw.edu**
 """
