@@ -7,7 +7,7 @@ Identical to chainlit_app.py except:
   - Uses a fixed generic onboarding profile (no persona context)
 
 Run with:
-    uv run chainlit run chainlit_app_symposium.py --host 0.0.0.0 --port 8001
+    uv run chainlit run chainlit_app_symposium.py --host 0.0.0.0 --port 8000
 """
 
 from __future__ import annotations
@@ -15,6 +15,8 @@ from __future__ import annotations
 import logging
 from uuid import uuid4
 
+import anyio
+import boto3
 import chainlit as cl
 
 # Re-use all shared machinery from the main app
@@ -37,6 +39,38 @@ from chainlit.types import ThreadDict
 logger = logging.getLogger("tbtst.chainlit_symposium")
 
 # -------------------------
+# Translation layer (Amazon Translate — no LLM, ~100ms)
+# -------------------------
+
+# Lazy singleton — created once, reused across requests.
+_translate_client = None
+
+
+def _get_translate_client():
+    global _translate_client
+    if _translate_client is None:
+        import os
+        _translate_client = boto3.client(
+            "translate",
+            region_name=os.getenv("AWS_REGION") or os.getenv("AWS_DEFAULT_REGION") or "us-west-2",
+        )
+    return _translate_client
+
+
+def _translate_to_english_sync(text: str) -> str:
+    client = _get_translate_client()
+    response = client.translate_text(
+        Text=text,
+        SourceLanguageCode="es",
+        TargetLanguageCode="en",
+    )
+    return response["TranslatedText"]
+
+
+async def translate_to_english(text: str) -> str:
+    return await anyio.to_thread.run_sync(_translate_to_english_sync, text)
+
+# -------------------------
 # Symposium welcome copy
 # -------------------------
 
@@ -47,7 +81,7 @@ This chatbot was developed at the University of Washington to support people nav
 It can help with questions about medications and side effects, and it also offers emotional support \
 for the day-to-day challenges that come with a long treatment journey.
 
-You can ask in **English or Spanish** — the bot will respond in **Spanish**.
+You can ask in **English or Spanish** — the bot will respond in **English**.
 
 **Some examples of what you can ask:**
 - *"My urine turned orange after starting my medication — is that normal?"*
@@ -69,8 +103,16 @@ SYMPOSIUM_PERSONA_TITLE = "TB Symposium Guest"
 SYMPOSIUM_PERSONA_MD = (
     "The user is attending a TB symposium and may be a healthcare professional, "
     "researcher, or community member with general interest in TB treatment and support. "
-    "Respond in the user's language. Be clear, concise, and avoid unnecessary jargon."
+    "Always respond in Spanish. Be clear, concise, and avoid unnecessary jargon."
 )
+
+
+# Override the chat profiles registered by chainlit_app's module-level import.
+# Without this, importing chainlit_app causes @cl.set_chat_profiles to fire and
+# the 4 persona profiles from the main app appear in the symposium UI.
+@cl.set_chat_profiles
+async def chat_profiles(current_user=None):
+    return None
 
 
 # -------------------------
@@ -84,7 +126,7 @@ def get_data_layer() -> SQLAlchemyDataLayer:
 
 @cl.header_auth_callback
 def header_auth_callback(headers: dict) -> cl.User:
-    return cl.User(identifier="symposium-guest", metadata={"role": "guest"})
+    return cl.User(identifier=f"guest-{uuid4().hex[:8]}", metadata={"role": "guest"})
 
 
 # -------------------------
@@ -185,7 +227,6 @@ async def on_message(msg: cl.Message):
     try:
         async with session_lock:
             async with _GRAPH_INVOKE_SEMAPHORE:
-                import anyio
                 final = await anyio.to_thread.run_sync(
                     invoke_graph_with_retry,
                     graph,
@@ -193,16 +234,18 @@ async def on_message(msg: cl.Message):
                     thread_id,
                 )
 
-        reply = final["messages"][-1].content
+        reply_es = final["messages"][-1].content
+        reply_en = await translate_to_english(reply_es)
 
         log_session_event(thread_id, {
             "event": "message",
             "role": "assistant",
             "variant": variant,
-            "content": reply,
+            "content_es": reply_es,
+            "content_en": reply_en,
         })
 
-        thinking.content = reply
+        thinking.content = reply_en
         await thinking.update()
 
     except Exception as e:
