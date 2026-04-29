@@ -77,23 +77,24 @@ async def translate_to_english(text: str) -> str:
 SYMPOSIUM_WELCOME = """\
 ## Welcome to the TB Treatment Support Bot
 
+**💬 Share your feedback:** After each bot response, you'll see a 👍 / 👎 button. Click it to rate the response and optionally leave a comment — your input helps us improve the bot.
+
+---
+
 This chatbot was developed at the University of Washington to support people navigating TB treatment. \
 It can help with questions about medications and side effects, and it also offers emotional support \
 for the day-to-day challenges that come with a long treatment journey.
 
-You can ask in **English or Spanish** — the bot will respond in **English**.
+You can ask in **English or Spanish** — the bot will respond in **English only**.
 
 **Some examples of what you can ask:**
-- *"What are the recommended dosage adjustments for pyrazinamide and ethambutol in patients with renal failure on hemodialysis?"*
-- *"How should a school or workplace respond if someone has TB exposure, and how do recommendations differ for latent TB versus active pulmonary TB?"*
-- *"My doctor said they may need to check if my TB is resistant to some medicines — what tests would show that, and how would that change my treatment?"*
-- *"I have to tell my boss I need time off for TB treatment, but I'm terrified he'll think I'm contagious and treat me differently. I don't know how to have that conversation without getting emotional and saying the wrong thing."*
-- *"I just found out my coworker told everyone at work I have TB. People are avoiding me and I feel so humiliated and angry I can barely function. I don't even want to keep taking my medication anymore."*
+- *"What warning signs do I watch for that mean my symptoms are getting worse or that I need to seek immediate medical attention?"*
+- *"I get so angry when the doctors don't listen. How can I manage these feelings?"*
+- *"I feel very fatigued. Is this a medication side effect? How long will it last?"*
+- *"My chest feels tight before I grab a drink. How do I know if it's just stress or if I really want to drink?"*
 
 > **Please note:** This is a research prototype. It is not a substitute for advice from your doctor or TB care team. \
 For any urgent medical concerns, please contact your clinic directly.
-
-**💬 Share your feedback:** After each bot response, you'll see a 👍 / 👎 button. Click it to rate the response and optionally leave a comment — your input helps us improve the bot.
 
 ---
 Questions, feedback, or just want to chat about the build? Reach out: **pgarg2@uw.edu**
