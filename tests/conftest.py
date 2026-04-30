@@ -219,7 +219,7 @@ def fake_graph() -> GraphFixture:
     patched _CHECKPOINTER — tests run against an isolated in-memory store.
     """
     from langgraph.checkpoint.memory import MemorySaver
-    from tbtst_bot.graph import build_graph, dbt_mini_node
+    from tbtst_bot.graph import build_graph, DBT_FULL_SUBGRAPH
 
     llm = FakeLLM()
     retrieval = FakeRetrieve()
@@ -230,7 +230,7 @@ def fake_graph() -> GraphFixture:
         patch("tbtst_bot.graph.retrieve_tb_docs", retrieval),
         patch("tbtst_bot.graph._CHECKPOINTER", MemorySaver()),
     ):
-        graph = build_graph(dbt_node=dbt_mini_node)
+        graph = build_graph(dbt_node=DBT_FULL_SUBGRAPH)
         yield GraphFixture(llm=llm, retrieval=retrieval, graph=graph)
 
 

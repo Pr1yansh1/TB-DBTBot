@@ -4522,6 +4522,7 @@ dependencies = [
     { name = "python-dotenv" },
     { name = "sentence-transformers" },
     { name = "sqlalchemy" },
+    { name = "sqlite-vec" },
     { name = "tiktoken" },
 ]
 
@@ -4554,6 +4555,7 @@ requires-dist = [
     { name = "python-dotenv", specifier = ">=1.1.1" },
     { name = "sentence-transformers", specifier = ">=5.2.0" },
     { name = "sqlalchemy", specifier = ">=2.0.45" },
+    { name = "sqlite-vec", specifier = "==0.1.9" },
     { name = "tiktoken", specifier = ">=0.12.0" },
 ]
 

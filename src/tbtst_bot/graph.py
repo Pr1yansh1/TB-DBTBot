@@ -51,9 +51,6 @@ CRISIS_TEXT = load_prompt("crisis.txt")
 # Global response rules applied to all user-facing responses
 GLOBAL_RULES = load_prompt("global_response_rules.txt")
 
-# DBT mini (archived — prompt lives in archive/dbt-mini/prompts/)
-DBT_SYSTEM = load_prompt("../archive/dbt-mini/prompts/dbt_system.txt")
-
 # DBT full
 DBT_BRAIN_ROUTER_SYSTEM = load_prompt("dbt_brain.txt")
 DBT_DT_SYSTEM = load_prompt("DBT/dt_prompt.txt")
@@ -145,10 +142,6 @@ class State(MessagesState, total=False):
 MAX_TOKENS_BEFORE_SUMMARY = 4500
 KEEP_LAST_MESSAGES = 8  # what remains verbatim after summarization
 
-# Budget for "recent messages" appended after system+memory.
-LLM_RECENT_MESSAGES_MAX_TOKENS = 1800
-
-# This is the "hard floor" for coherence: keep at least N recent messages even under token pressure.
 MIN_RECENT_MESSAGES = 10
 
 SUMMARY_SYSTEM = """You maintain a compact, factual rolling summary of a multi-turn conversation.
@@ -367,7 +360,6 @@ def _log_prompt_sizes_once() -> None:
     prompts: Dict[str, str] = {
         "GLOBAL_RULES": GLOBAL_RULES,
         "CLASSIFY_SYSTEM": CLASSIFY_SYSTEM,
-        "DBT_SYSTEM": DBT_SYSTEM,
         "DBT_BRAIN_ROUTER_SYSTEM": DBT_BRAIN_ROUTER_SYSTEM,
         "DBT_DT_SYSTEM": DBT_DT_SYSTEM,
         "DBT_MIND_SYSTEM": DBT_MIND_SYSTEM,
@@ -394,9 +386,6 @@ def _looks_truncated(text: str) -> bool:
         return True
     # Ends with an opener or ellipsis
     if t.endswith(("¿", "¡", "(", "[", "{", "“", '"', "'", "…")):
-        return True
-    # A few real cut patterns from your transcripts (optional)
-    if t.endswith(("¿Có", "Si te", "Evita", "Mientras", "Por ahora,")):
         return True
     return False
 
@@ -441,7 +430,11 @@ def _invoke_with_auto_continue(
             "- Mantén el mismo tono y formato.\n"
         )
         cont_msgs: List[BaseMessage] = [*messages, AIMessage(content=cur_text), HumanMessage(content=cont_prompt)]
-        resp2, m2 = _timed_invoke(f"{name}:cont{i+1}", llm, cont_msgs, trace_id=trace_id)
+        try:
+            resp2, m2 = _timed_invoke(f"{name}:cont{i+1}", llm, cont_msgs, trace_id=trace_id)
+        except Exception as e:
+            logger.warning("[TRACE %s] continuation call failed, returning text so far: %s", trace_id, type(e).__name__)
+            break
         add = (getattr(resp2, "content", "") or "").lstrip()
 
         if not add:
@@ -470,68 +463,6 @@ def _safe_fill_user_text(template: str, user_text: str) -> str:
     return template.replace("{user_text}", user_text)
 
 
-# --- Robust recent-context selection (fixes continuity for good) ---
-_msg_token_cache: Dict[str, int] = {}
-
-
-def _message_cache_key(m: BaseMessage) -> str:
-    # Prefer stable IDs (LangChain often sets them); otherwise fall back to object id.
-    mid = getattr(m, "id", None)
-    if mid:
-        return f"id:{mid}"
-    return f"obj:{id(m)}"
-
-
-def _message_tokens(m: BaseMessage) -> int:
-    k = _message_cache_key(m)
-    t = _msg_token_cache.get(k)
-    if t is not None:
-        return t
-    t = int(count_tokens_approximately([m]))
-    _msg_token_cache[k] = t
-    return t
-
-
-def _select_recent_messages(
-    messages: List[BaseMessage],
-    *,
-    max_tokens: int,
-    min_messages: int = MIN_RECENT_MESSAGES,
-) -> List[BaseMessage]:
-    """
-    Deterministic, role-preserving recent context selection.
-
-    Key properties:
-      - Never uses start_on="human" (which can drop AI framing messages).
-      - Always keeps at least `min_messages` from the tail (or as many as exist).
-      - Expands backwards until token budget is reached.
-      - If token budget is too small, still keeps at least the last 2 messages.
-    """
-    if not messages:
-        return []
-
-    # Always keep a small tail to preserve the immediate conversational frame.
-    hard_min = max(2, min_messages)
-    selected_rev: List[BaseMessage] = []
-    total = 0
-
-    for m in reversed(messages):
-        mt = _message_tokens(m)
-
-        # If we already satisfied the minimum and adding this would exceed budget, stop.
-        if len(selected_rev) >= hard_min and (total + mt) > max_tokens:
-            break
-
-        selected_rev.append(m)
-        total += mt
-
-        # If we crossed budget but haven't met minimum, keep going (coherence > budget),
-        # but don't go crazy: once we meet minimum, we allow early stop on next iteration.
-        if total >= max_tokens and len(selected_rev) >= hard_min:
-            break
-
-    selected = list(reversed(selected_rev))
-    return selected
 
 
 def _system_and_memory_messages(
@@ -575,12 +506,7 @@ def _llm_messages_with_memory(system_prompt: str, state: State, *, trace_id: str
     onboarding_profile = (state.get("onboarding_profile") or "").strip()
     summary = (state.get("summary") or "").strip()
     prefix = _system_and_memory_messages(system_prompt, onboarding_profile, summary)
-
-    base_tokens = _tokens(prefix)
-    recent_budget = max(256, LLM_RECENT_MESSAGES_MAX_TOKENS - base_tokens)
-
-    # Robust selection: keeps assistant+user frames together.
-    recent = _select_recent_messages(state.get("messages", []) or [], max_tokens=recent_budget)
+    recent = (state.get("messages") or [])[-MIN_RECENT_MESSAGES:]
 
     if DEBUG_METRICS:
         sys_tokens = _tokens([prefix[0]])
@@ -588,14 +514,13 @@ def _llm_messages_with_memory(system_prompt: str, state: State, *, trace_id: str
         recent_tokens = _tokens(recent)
         total = sys_tokens + memory_tokens + recent_tokens
         logger.info(
-            "[TRACE %s] [PROMPT:%s] sys~%d memory~%d recent_msgs=%d recent~%d recent_budget~%d total~%d",
+            "[TRACE %s] [PROMPT:%s] sys~%d memory~%d recent_msgs=%d recent~%d total~%d",
             trace_id,
             label,
             sys_tokens,
             memory_tokens,
             len(recent),
             recent_tokens,
-            int(recent_budget),
             total,
         )
 
@@ -768,45 +693,28 @@ def _invoke_structured_with_retry(
     messages: List[BaseMessage],
     trace_id: str,
     label: str,
-    retry_hint: str,
 ) -> Tuple[Optional[T], str]:
     """
     Best-effort structured-output invocation.
 
     Returns (result_or_none, raw_text).
-    - Retries transient backend failures automatically.
-    - If structured parsing fails twice, returns (None, raw_text_last).
+    - _timed_invoke_structured already handles one retry for genuine transient
+      errors (throttling, timeout). No additional retry is done here — an
+      immediate second call rarely recovers from either a transient failure or
+      a parse failure and only adds latency.
+    - On any failure, returns (None, "") so the caller's existing fallback runs.
     """
-    raw_last = ""
-
     try:
         result = _timed_invoke_structured(
-            f"{label}:first",
+            label,
             llm_structured,
             messages,
             trace_id=trace_id,
         )
-        raw_last = getattr(result, "model_dump_json", lambda: "")()
-        return cast(T, result), raw_last
-    except Exception as e1:
-        if DEBUG_METRICS:
-            logger.warning("[TRACE %s] structured parse failed for %s: %s", trace_id, label, str(e1))
-
-    stricter = [*messages, SystemMessage(content=retry_hint)]
-    try:
-        result2 = _timed_invoke_structured(
-            f"{label}:retry",
-            llm_structured,
-            stricter,
-            trace_id=trace_id,
-        )
-        raw_last = getattr(result2, "model_dump_json", lambda: "")()
-        return cast(T, result2), raw_last
-    except Exception as e2:
-        if DEBUG_METRICS:
-            logger.warning("[TRACE %s] structured retry failed for %s: %s", trace_id, label, str(e2))
-        raw_last = ""
-        return None, raw_last
+        return cast(T, result), getattr(result, "model_dump_json", lambda: "")()
+    except Exception as e:
+        logger.warning("[TRACE %s] structured invoke failed for %s (%s), using fallback", trace_id, label, type(e).__name__)
+        return None, ""
 
 
 # =========================================================
@@ -1014,16 +922,6 @@ def memory_manager_node(state: State) -> Dict[str, Any]:
     return out
 
 
-# =========================================================
-# DBT MINI node
-# =========================================================
-def dbt_mini_node(state: State) -> Dict[str, Any]:
-    trace_id = state.get("last_trace_id") or _trace_id_for_state(state)
-    llm = get_llm(temperature=0.25, max_tokens=650)
-    msgs = _llm_messages_with_memory(DBT_SYSTEM, state, trace_id=trace_id, label="dbt_mini")
-    reply = _invoke_with_auto_continue("dbt:mini", llm, msgs, trace_id=trace_id)
-    return {"messages": [AIMessage(content=reply.content or "")]}
-
 
 # =========================================================
 # TB-info specialist: citation-safe RAG + clarify gate
@@ -1123,12 +1021,16 @@ def _tb_should_clarify(user_text: str, summary: str, onboarding_profile: str, *,
     combined_system = f"{GLOBAL_RULES.strip()}\n\n---\n\n{gate_system}".strip()
 
     llm = get_llm(temperature=0.0, max_tokens=120).with_structured_output(TBGateOut)
-    out = _timed_invoke_structured(
-        "tb_gate",
-        llm,
-        [SystemMessage(content=combined_system), HumanMessage(content=human)],
-        trace_id=trace_id,
-    )
+    try:
+        out = _timed_invoke_structured(
+            "tb_gate",
+            llm,
+            [SystemMessage(content=combined_system), HumanMessage(content=human)],
+            trace_id=trace_id,
+        )
+    except Exception as e:
+        logger.warning("[TRACE %s] tb_gate structured parse failed, defaulting to answer: %s", trace_id, type(e).__name__)
+        return TBGateOut(action="answer", clarifying_question="")
 
     q = (out.clarifying_question or "").strip()
     if out.action == "clarify" and not q:
@@ -1171,12 +1073,20 @@ def tb_info_node(state: State) -> Dict[str, Any]:
     llm = get_llm(temperature=0.2, max_tokens=700).with_structured_output(TBAnswerJSON)
 
     t0 = time.perf_counter()
-    result = _timed_invoke_structured(
-        "tb_info",
-        llm,
-        [*prefix, HumanMessage(content=user_prompt)],
-        trace_id=trace_id,
-    )
+    try:
+        result = _timed_invoke_structured(
+            "tb_info",
+            llm,
+            [*prefix, HumanMessage(content=user_prompt)],
+            trace_id=trace_id,
+        )
+    except Exception as e:
+        logger.warning("[TRACE %s] tb_info structured parse failed, returning fallback: %s", trace_id, type(e).__name__)
+        fallback = (
+            "Lo siento, tuve un problema al preparar una respuesta sobre tuberculosis en este momento. "
+            "Por favor intenta de nuevo o contacta a tu equipo de salud si es urgente."
+        )
+        return {"messages": [AIMessage(content=fallback)]}
     dt_ms = (time.perf_counter() - t0) * 1000.0
 
     if DEBUG_METRICS:
@@ -1266,25 +1176,17 @@ def dbt_brain_router_node(state: State) -> Dict[str, Any]:
     base_msgs = _llm_messages_with_memory(DBT_BRAIN_ROUTER_SYSTEM, state, trace_id=trace_id, label="dbt_brain")
     msgs = [base_msgs[0], _dbt_state_system_note(state), *base_msgs[1:]]
 
-    retry_hint = (
-        "STRICT OUTPUT REMINDER:\n"
-        "Return ONLY valid JSON that matches the schema exactly. No extra keys. No prose.\n"
-        "If uncertain, choose the best module and set confidence low."
-    )
-
     t0 = time.perf_counter()
     result, raw_json = _invoke_structured_with_retry(
         llm_structured=llm_structured,
         messages=msgs,
         trace_id=trace_id,
         label="dbt_brain",
-        retry_hint=retry_hint,
     )
     dt_ms = (time.perf_counter() - t0) * 1000.0
 
     if result is None:
-        if DEBUG_METRICS:
-            logger.warning("[TRACE %s] dbt_brain fallback (structured failed)", trace_id)
+        logger.warning("[TRACE %s] dbt_brain fallback (structured failed)", trace_id)
         return {
             "dbt_module": "MIND",
             "dbt_confidence": 0.0,
@@ -1365,25 +1267,17 @@ def _dbt_module_agent(system_prompt: str, state: State, *, label: str) -> Dict[s
         *base_msgs[1:],
     ]
 
-    retry_hint = (
-        "STRICT OUTPUT REMINDER:\n"
-        "Return ONLY valid JSON matching the schema exactly. No prose outside JSON.\n"
-        "The 'message' field must be Spanish user-facing text."
-    )
-
     t0 = time.perf_counter()
     result, _raw = _invoke_structured_with_retry(
         llm_structured=llm_structured,
         messages=msgs,
         trace_id=trace_id,
         label=f"dbt:{label}",
-        retry_hint=retry_hint,
     )
     dt_ms = (time.perf_counter() - t0) * 1000.0
 
     if result is None:
-        if DEBUG_METRICS:
-            logger.warning("[TRACE %s] dbt:%s fallback (structured failed)", trace_id, label)
+        logger.warning("[TRACE %s] dbt:%s fallback (structured failed)", trace_id, label)
         # IMPORTANT: do not introduce voseo here; GLOBAL_RULES is the global source of truth.
         fallback_text = (
             "Entiendo. Gracias por contármelo. "
@@ -1546,8 +1440,7 @@ os.makedirs(os.path.dirname(os.path.abspath(_CHECKPOINT_DB_PATH)), exist_ok=True
 _CHECKPOINT_CONN = sqlite3.connect(_CHECKPOINT_DB_PATH, check_same_thread=False)
 _CHECKPOINTER = SqliteSaver(_CHECKPOINT_CONN)
 
-# Public compiled graphs
-GRAPH_DBT_MINI = build_graph(dbt_node=dbt_mini_node)
+# Public compiled graph
 GRAPH_DBT_FULL = build_graph(dbt_node=DBT_FULL_SUBGRAPH)
 
 # Emit prompt size report once at import (if enabled)

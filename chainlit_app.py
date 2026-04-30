@@ -20,9 +20,9 @@ from langchain_core.messages import HumanMessage
 from tbtst_bot.rag_utils import warmup_rag
 
 try:
-    from tbtst_bot.graph import GRAPH_DBT_MINI, GRAPH_DBT_FULL
+    from tbtst_bot.graph import GRAPH_DBT_FULL
 except Exception:  # pragma: no cover
-    from src.tbtst_bot.graph import GRAPH_DBT_MINI, GRAPH_DBT_FULL  # type: ignore
+    from src.tbtst_bot.graph import GRAPH_DBT_FULL  # type: ignore
 
 
 logger = logging.getLogger("tbtst.chainlit_app")
@@ -39,9 +39,6 @@ BANNER_INTRO_MD = (
     "**o** contarme qué te preocupa hoy."
 )
 
-SEND_CHAT_WELCOME_MESSAGE = False
-WELCOME_MESSAGE = "Hola, soy un bot de apoyo para el tratamiento de tuberculosis. Pregúntame sobre TB o cuéntame qué te preocupa."
-
 # Support either ./personas or ./persona
 PERSONAS_DIR_CANDIDATES = [
     Path(__file__).parent / "personas",
@@ -54,10 +51,6 @@ TRANSCRIPTS_DIR = Path(__file__).parent / "transcripts"
 # Production resiliency knobs
 CHAINLIT_GRAPH_MAX_ATTEMPTS = int(os.getenv("TBTST_CHAINLIT_GRAPH_MAX_ATTEMPTS", "1"))
 CHAINLIT_GRAPH_BASE_SLEEP_SECONDS = float(os.getenv("TBTST_CHAINLIT_GRAPH_BASE_SLEEP_SECONDS", "1.25"))
-MAX_CONCURRENT_GRAPH_INVOCATIONS = int(os.getenv("TBTST_MAX_CONCURRENT_GRAPH_INVOCATIONS", "4"))
-
-# Global concurrency control and per-session serialization
-_GRAPH_INVOKE_SEMAPHORE = anyio.Semaphore(MAX_CONCURRENT_GRAPH_INVOCATIONS)
 # Per-thread locks used by on_chat_start (race guard) and on_message (serialize
 # concurrent sends within a session). Grows by one entry per unique thread_id and
 # is never evicted — intentionally acceptable at research prototype scale
@@ -303,9 +296,6 @@ def header_auth_callback(headers: Dict[str, str]) -> Optional[cl.User]:
 
 
 def select_graph() -> Tuple[Any, str]:
-    v = (os.getenv("TBTST_VARIANT") or "full").strip().lower()
-    if v == "mini":
-        return GRAPH_DBT_MINI, "mini"
     return GRAPH_DBT_FULL, "full"
 
 
@@ -503,17 +493,6 @@ async def on_chat_start():
         await cl.Message(content=banner).send()
         await cl.Message(content=opener).send()
 
-        if SEND_CHAT_WELCOME_MESSAGE:
-            log_session_event(
-                thread_id,
-                {
-                    "event": "message",
-                    "role": "assistant",
-                    "content": WELCOME_MESSAGE,
-                },
-            )
-            await cl.Message(content=WELCOME_MESSAGE).send()
-
 
 @cl.on_chat_resume
 async def on_chat_resume(thread: ThreadDict):
@@ -575,13 +554,12 @@ async def on_message(msg: cl.Message):
 
     try:
         async with session_lock:
-            async with _GRAPH_INVOKE_SEMAPHORE:
-                final: Dict[str, Any] = await anyio.to_thread.run_sync(
-                    invoke_graph_with_retry,
-                    graph,
-                    msg.content,
-                    thread_id,
-                )
+            final: Dict[str, Any] = await anyio.to_thread.run_sync(
+                invoke_graph_with_retry,
+                graph,
+                msg.content,
+                thread_id,
+            )
 
         reply = final["messages"][-1].content
 

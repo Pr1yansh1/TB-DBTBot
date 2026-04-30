@@ -52,9 +52,9 @@ class TestRouteDispatch:
         assert "tb_gate" in structured_names
         assert "tb_info" in structured_names
 
-    def test_dbt_route_reaches_dbt_mini_node(self, fake_graph: GraphFixture):
+    def test_dbt_route_reaches_dbt_node(self, fake_graph: GraphFixture):
         """
-        Classifier says route=dbt → dbt_mini_node runs → DBT answer in messages.
+        Classifier says route=dbt → DBT full subgraph runs → DBT answer in messages.
         """
         fake_graph.llm.set_classifier({
             "safety_risk_level": "none",

@@ -277,54 +277,6 @@ class TestCoerceAgentSkillState:
 
 
 # ---------------------------------------------------------------------------
-# _select_recent_messages — token-budget-aware context selection
-# ---------------------------------------------------------------------------
-
-class TestSelectRecentMessages:
-    """
-    _select_recent_messages selects the tail of the message list within a token
-    budget. Subtle failures here cause the LLM to lose conversation context or
-    (worse) exceed the context window and fail.
-    """
-
-    def _select(self, messages, *, max_tokens: int, min_messages: int = 2) -> List:
-        from tbtst_bot.graph import _select_recent_messages
-        return _select_recent_messages(messages, max_tokens=max_tokens, min_messages=min_messages)
-
-    def test_empty_list_returns_empty(self):
-        assert self._select([], max_tokens=1000) == []
-
-    def test_all_messages_fit_in_budget_returns_all(self):
-        msgs = [HumanMessage(content="Hi"), AIMessage(content="Hello.")]
-        result = self._select(msgs, max_tokens=10000)
-        assert len(result) == 2
-
-    def test_min_messages_respected_even_over_budget(self):
-        """
-        If min_messages=4 but budget is tiny, we still return at least 4 messages.
-        Coherence matters more than strict budget when the floor isn't met.
-        """
-        msgs = [HumanMessage(content="msg " * 50) for _ in range(6)]
-        result = self._select(msgs, max_tokens=5, min_messages=4)
-        assert len(result) >= 4
-
-    def test_returns_tail_not_head(self):
-        """Recent messages matter more than old ones — the tail must be preserved."""
-        msgs = [
-            HumanMessage(content="very old message"),
-            AIMessage(content="old reply."),
-            HumanMessage(content="recent message"),
-            AIMessage(content="recent reply."),
-        ]
-        # Budget fits only 2 messages
-        result = self._select(msgs, max_tokens=30, min_messages=2)
-        contents = [m.content for m in result]
-        assert any("recent" in c for c in contents), (
-            "Recent tail messages must be preferred over old ones."
-        )
-
-
-# ---------------------------------------------------------------------------
 # parse_persona_txt (chainlit_app.py) — persona file parsing
 # ---------------------------------------------------------------------------
 
