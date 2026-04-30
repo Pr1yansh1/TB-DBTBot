@@ -31,14 +31,16 @@ logger = logging.getLogger("tbtst.chainlit_app")
 # UI / Banner copy
 # -------------------------
 BANNER_INTRO_MD = (
-    "**Hi! I’m a TB treatment support bot.**\n\n"
-    "For this chat, I already have the background profile below from prior onboarding, "
-    "and I can use it as ongoing context throughout the conversation.\n\n"
-    "You can ask questions about TB (treatment, side effects, routines) **or** tell me what’s bothering you today."
+    "**Hola, soy un bot de apoyo para personas en tratamiento de tuberculosis.**\n\n"
+    "Para esta conversación, ya cuento con el perfil de contexto que aparece abajo, "
+    "proveniente de un proceso de incorporación previo, "
+    "y lo usaré como información de fondo durante toda la conversación.\n\n"
+    "Puedes hacerme preguntas sobre tuberculosis (tratamiento, efectos secundarios, rutinas) "
+    "**o** contarme qué te preocupa hoy."
 )
 
 SEND_CHAT_WELCOME_MESSAGE = False
-WELCOME_MESSAGE = "Hi! I’m a TB treatment support bot. Ask TB questions or tell me what’s bothering you."
+WELCOME_MESSAGE = "Hola, soy un bot de apoyo para el tratamiento de tuberculosis. Pregúntame sobre TB o cuéntame qué te preocupa."
 
 # Support either ./personas or ./persona
 PERSONAS_DIR_CANDIDATES = [
