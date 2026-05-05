@@ -6,7 +6,7 @@ conn.row_factory = sqlite3.Row
 
 threads = conn.execute("SELECT * FROM threads ORDER BY createdAt").fetchall()
 
-os.makedirs("transcripts", exist_ok=True)
+os.makedirs("transcripts-sqlite", exist_ok=True)
 
 for thread in threads:
     tid = thread["id"]
@@ -16,11 +16,11 @@ for thread in threads:
     steps = conn.execute("""
         SELECT type, name, input, output, createdAt
         FROM steps
-        WHERE threadId = ? AND type IN ('user_message', 'assistant_message', 'run')
+        WHERE threadId = ? AND type IN ('user_message', 'assistant_message')
         ORDER BY createdAt
     """, (tid,)).fetchall()
 
-    filename = f"transcripts/{created[:10]}_{tid[:8]}.txt"
+    filename = f"transcripts-sqlite/{created[:10]}_{tid[:8]}.txt"
     with open(filename, "w") as f:
         f.write(f"Thread: {tid}\n")
         f.write(f"Date: {created}\n")
@@ -28,13 +28,11 @@ for thread in threads:
         f.write("=" * 60 + "\n\n")
 
         for step in steps:
-            if step["type"] == "user_message" and step["input"]:
-                f.write(f"[USER]\n{step['input']}\n\n")
+            if step["type"] == "user_message" and step["output"]:
+                f.write(f"[USER]\n{step['output']}\n\n")
             elif step["type"] == "assistant_message" and step["output"]:
                 f.write(f"[ASSISTANT]\n{step['output']}\n\n")
-            elif step["type"] == "run" and step["output"]:
-                f.write(f"[RUN: {step['name']}]\n{step['output']}\n\n")
 
-    print(f"Wrote {filename}")
+    print(f"Wrote {filename} ({len(steps)} messages)")
 
 conn.close()
